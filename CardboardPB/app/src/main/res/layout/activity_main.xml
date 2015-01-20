@@ -12,7 +12,7 @@
         android:id="@+id/rl1"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/background1"
+        android:background="@drawable/pbubb1"
         android:layout_weight="50">
 
 
@@ -22,7 +22,7 @@
         android:id="@+id/rl2"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/background1"
+        android:background="@drawable/pbubb1"
         android:layout_weight="50">
 
 

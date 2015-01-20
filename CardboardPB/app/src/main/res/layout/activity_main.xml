@@ -15,6 +15,7 @@
         android:background="@drawable/background1"
         android:layout_weight="50">
 
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -23,6 +24,7 @@
         android:layout_width="fill_parent"
         android:background="@drawable/background1"
         android:layout_weight="50">
+
 
     </RelativeLayout>
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StereoAcuityTest</string>
+    <string name="title_activity_choose_image">Choose Image</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">StereoAcuityTest</string>
+    <string name="title_activity_options">Options</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_shape_setting">Shape Setting</string>
+    <string name="action_help">Help</string>
+    <string name="title_activity_help">Help</string>
+    <string name="help_text">StereoAcuityTest is a prototype for the diagnosis of amblyopia. This app is based on clinical test for Randot stereoacuity. The left eye sees one set of dots and the right eye sees a second set of dots. The dots are identical except for the dots within the shape that have been horizontally displaced. Amblyotic people may not be able to recognize the images. You need a Google cardboard to try this test.\n
+            Home activity has four buttons:\n
+            - <b>Start Test</b> (or press <b>+</b> volume button): starts the lazy eye test. You have to find the shapes!! Press <b>+</b> volume button to choose the solution and confirm it using <b>–</b> volume button. When you decide to finish your test press back button (or <b>-</b> volume button) and it will show your score. Push headphones home button to close the dialog.\n
+            - <b>Training</b> (or press <b>-</b> volume button):  train before starts the test. The shapes are shown in red. Press <b>+</b> volume button to browse images. When you decide to finish your training press back button (or <b>-</b> volume button).\n
+            - <b>Select test level</b>: set points dimension, points density and shape offset. By changing this value the test level changes.\n
+            - <b>Shape settings</b>: change shapes dimensions (pixel).\n
+        For the test and the training you have to put your smartphone inside the cardboard.
+    </string>
+
+</resources>

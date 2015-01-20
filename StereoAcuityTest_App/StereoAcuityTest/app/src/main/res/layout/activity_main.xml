@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gamelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:background="#00ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_start"
+                android:layout_width="250dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/backbutton1"
+                android:onClick="onClick"
+                android:text="Start Test"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/button_training"
+                android:layout_width="250dp"
+                android:layout_height="90dp"
+                android:layout_below="@+id/button_start"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/backbutton2"
+                android:onClick="onClick"
+                android:text="Training"
+                android:textSize="25dp" />
+
+
+            <Button
+                android:id="@+id/button_shape"
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="400dp"
+                android:background="@drawable/backbutton3"
+                android:onClick="onClick"
+                android:text="Shapes settings"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/button_options"
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/backbutton3"
+                android:onClick="onClick"
+                android:text="Select test level"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

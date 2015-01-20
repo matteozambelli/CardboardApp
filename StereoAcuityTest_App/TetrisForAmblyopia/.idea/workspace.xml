@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="name" value="app: net.qwuke.unblyopia" />
+        <option name="packageNamePattern" value="net.qwuke.unblyopia" />
+      </filter>
+    </filters>
+  </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState />
+    </option>
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: net.qwuke.unblyopia" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e429d773-58a9-4470-b9ac-50675dd98231" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unblyopia/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Unblyopia/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="delaze.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="delaze" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73333335" vertical-offset="0" max-vertical-offset="1166">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding>
+                <element signature="e#512#530#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TetrisView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#TetrisView#0" expanded="false" />
+                <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+                <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+                <element signature="e#1072#1085#0" expanded="false" />
+                <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+                <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TetrisDrawer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="755" max-vertical-offset="1452">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding>
+                <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+                <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TetrisModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2332">
+              <caret line="588" column="7" selection-start-line="588" selection-start-column="7" selection-end-line="588" selection-end-column="7" />
+              <folding>
+                <element signature="docComment;class#TetrisModel#0" expanded="false" />
+                <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+                <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+                <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+                <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+                <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MotionSensorModule.java" />
+        <option value="$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java" />
+        <option value="$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java" />
+        <option value="$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java" />
+        <option value="$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java" />
+        <option value="$PROJECT_DIR$/Unblyopia/app/src/main/AndroidManifest.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1911" />
+    <option name="y" value="-9" />
+    <option name="width" value="1698" />
+    <option name="height" value="1020" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unblyopia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="recentsLimit" value="5" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Android Application.main">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="main" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.main" />
+    </list>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e429d773-58a9-4470-b9ac-50675dd98231" name="Default" comment="" />
+      <created>1410019181223</created>
+      <updated>1410019181223</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1911" y="-9" width="1698" height="1020" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13404508" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13404508" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1588957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22301304" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13404508" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1588957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22301304" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13404508" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2728">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1738" max-vertical-offset="1980">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TetrisView#0" expanded="false" />
+            <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="e#1072#1085#0" expanded="false" />
+            <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="4158">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10137" max-vertical-offset="15180">
+          <caret line="507" column="34" selection-start-line="507" selection-start-column="34" selection-end-line="507" selection-end-column="34" />
+          <folding>
+            <element signature="docComment;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="2728">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1738" max-vertical-offset="1980">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TetrisView#0" expanded="false" />
+            <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="e#1072#1085#0" expanded="false" />
+            <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="3982">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14496" max-vertical-offset="15180">
+          <caret line="645" column="0" selection-start-line="645" selection-start-column="0" selection-end-line="645" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="3916">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1144" max-vertical-offset="2266">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding>
+            <element signature="docComment;class#TetrisView#0" expanded="false" />
+            <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="e#1072#1085#0" expanded="false" />
+            <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12144" max-vertical-offset="17160">
+          <caret line="552" column="36" selection-start-line="552" selection-start-column="36" selection-end-line="552" selection-end-column="36" />
+          <folding>
+            <element signature="docComment;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4356" max-vertical-offset="6446">
+          <caret line="206" column="33" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
+          <folding>
+            <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="3026">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1751">
+          <caret line="72" column="24" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;class#TetrisView#0" expanded="false" />
+            <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="e#1072#1085#0" expanded="false" />
+            <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12716" max-vertical-offset="13260">
+          <caret line="748" column="0" selection-start-line="748" selection-start-column="0" selection-end-line="748" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3561" max-vertical-offset="4760">
+          <caret line="240" column="21" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+          <folding>
+            <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3026">
+          <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="2771">
+          <caret line="81" column="60" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
+          <folding>
+            <element signature="docComment;class#TetrisView#0" expanded="false" />
+            <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="e#1072#1085#0" expanded="false" />
+            <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10625" max-vertical-offset="13532">
+          <caret line="625" column="27" selection-start-line="625" selection-start-column="27" selection-end-line="625" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3187" max-vertical-offset="4862">
+          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="2074">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Unblyopia/app/libs/cardboard.jar!/com/google/vrtoolkit/cardboard/CardboardActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3488806" vertical-offset="425" max-vertical-offset="1139">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/main.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2332">
+          <caret line="588" column="7" selection-start-line="588" selection-start-column="7" selection-end-line="588" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Input#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#Block#0;class#TetrisModel#0" expanded="false" />
+            <element signature="class#GameState#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;field#defaultLagTime#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#reset#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#bottomCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#leftCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rightCollision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#collision#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#rotateBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#nextBlock#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#moveDown#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#setDifficulty#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#removeLines#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#actionButton#0;class#TetrisModel#0" expanded="false" />
+            <element signature="docComment;method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+            <element signature="method#TetrisModel#0;class#TetrisModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3982">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#eraseShapes#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#fill#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#background#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="docComment;method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawGameOverScreen#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#drawMainMenu#0;class#TetrisDrawer#0" expanded="false" />
+            <element signature="method#TetrisDrawer#0;class#TetrisDrawer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/TetrisView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#TetrisView#0" expanded="false" />
+            <element signature="docComment;method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#onDraw#0;class#TetrisView#0" expanded="false" />
+            <element signature="e#1072#1085#0" expanded="false" />
+            <element signature="docComment;method#TetrisView#0;class#TetrisView#0" expanded="false" />
+            <element signature="method#TetrisView#0;class#TetrisView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#512#530#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unblyopia/app/src/main/java/net/qwuke/unblyopia/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73333335" vertical-offset="0" max-vertical-offset="1166">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onTouchEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android API 8 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>androidTest</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Android API 19 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>cardboard</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

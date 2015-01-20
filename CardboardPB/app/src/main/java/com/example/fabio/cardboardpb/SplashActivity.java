@@ -25,7 +25,7 @@ public class SplashActivity extends Activity {
             public void run() {
                 Intent i = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(i);
-                iv=findViewById(R.id.imageView1);
+                iv= (ImageView) findViewById(R.id.imageView1);
                // iv.setAnimation()
 
 

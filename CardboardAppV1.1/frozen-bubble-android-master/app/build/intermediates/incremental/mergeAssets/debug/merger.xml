@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\fabio\Desktop\CardboardApp\frozen-bubble-android-master\app\src\main\assets"><file name="levels.txt" path="C:\Users\fabio\Desktop\CardboardApp\frozen-bubble-android-master\app\src\main\assets\levels.txt"/></source></dataSet><dataSet config="debug"><source path="C:\Users\fabio\Desktop\CardboardApp\frozen-bubble-android-master\app\src\debug\assets"/></dataSet></merger>

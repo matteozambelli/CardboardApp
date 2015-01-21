@@ -27,10 +27,6 @@ public class MainActivity extends Activity {
     private TextView t1;
     private TextView t2;
 
-
-
-
-
     private ImageView carLeft;
     private ImageView carRight;
     private int leftCarPosition;

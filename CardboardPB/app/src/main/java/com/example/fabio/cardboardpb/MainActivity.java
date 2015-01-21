@@ -7,16 +7,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 
 public class MainActivity extends Activity {
 
+
+    private ImageView carLeft;
+    private ImageView carRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        carLeft=(ImageView) findViewById(R.id.imageViewCarLeft);
+        carRight=(ImageView) findViewById(R.id.imageViewCarRight);
 
     }
 
@@ -76,7 +83,7 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_HEADSETHOOK:
                 if(action== KeyEvent.ACTION_DOWN){
                 //on key home press
-                home();
+                //home();
             }
                 return true;
             default:
@@ -90,6 +97,12 @@ public class MainActivity extends Activity {
      */
     private void volumeUp(){
 
+
+        carLeft.setTranslationX(-70);
+
+        carRight.setTranslationX(-70);
+
+        /*
         new AlertDialog.Builder(this)
                 .setTitle("test mode")
                 .setMessage("key + pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -97,7 +110,7 @@ public class MainActivity extends Activity {
                 // continue with delete
             }
         }).show();
-
+*/
     }
 
 
@@ -107,6 +120,11 @@ public class MainActivity extends Activity {
      * handle the key - press event
      */
     private void volumeDown(){
+
+        carLeft.setTranslationX(+70);
+
+        carRight.setTranslationX(+70);
+       /*
         new AlertDialog.Builder(this)
                 .setTitle("test mode")
                 .setMessage("key - pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -114,12 +132,12 @@ public class MainActivity extends Activity {
                 // continue with delete
           }
 }).show();
-        }
+*/        }
 
 /**
  * handle the home button pression
  */
-private void home(){
+/*private void home(){
 
     new AlertDialog.Builder(this)
             .setTitle("test mode")
@@ -130,5 +148,5 @@ private void home(){
     }).show();
 
     }
-
+*/
 }

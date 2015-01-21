@@ -8,12 +8,15 @@
     android:orientation="horizontal"
     android:gravity="center">
 
+
     <RelativeLayout
         android:id="@+id/rl1"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:background="@drawable/background_car"
         android:layout_weight="50">
+
+
 
 
         <ImageView
@@ -24,7 +27,11 @@
             android:background="@drawable/car"
             android:layout_marginTop="280dp"
             android:layout_centerHorizontal="true" />
+
+
     </RelativeLayout>
+
+
 
     <RelativeLayout
         android:id="@+id/rl2"
@@ -41,6 +48,9 @@
             android:background="@drawable/car"
             android:layout_marginTop="280dp"
             android:layout_centerHorizontal="true" />
+
+
     </RelativeLayout>
+
 
 </LinearLayout>

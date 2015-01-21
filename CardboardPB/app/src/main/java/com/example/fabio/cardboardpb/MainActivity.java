@@ -16,6 +16,9 @@ public class MainActivity extends Activity {
 
     private ImageView carLeft;
     private ImageView carRight;
+    private int leftCarPosition;
+    private int rightCarPosition;
+    private int absolutePosition=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,8 @@ public class MainActivity extends Activity {
 
         carLeft=(ImageView) findViewById(R.id.imageViewCarLeft);
         carRight=(ImageView) findViewById(R.id.imageViewCarRight);
-
+        leftCarPosition= carLeft.getWidth();
+        rightCarPosition= carRight.getWidth();
     }
 
 
@@ -97,11 +101,15 @@ public class MainActivity extends Activity {
      */
     private void volumeUp(){
 
-
-        carLeft.setTranslationX(-70);
-
-        carRight.setTranslationX(-70);
-
+        absolutePosition++;
+        if(absolutePosition<2) {
+            leftCarPosition -= 230;
+            rightCarPosition -= 230;
+            carLeft.setTranslationX(leftCarPosition);
+            carRight.setTranslationX(rightCarPosition);
+        }else{
+            absolutePosition=1;
+        }
         /*
         new AlertDialog.Builder(this)
                 .setTitle("test mode")
@@ -121,9 +129,15 @@ public class MainActivity extends Activity {
      */
     private void volumeDown(){
 
-        carLeft.setTranslationX(+70);
-
-        carRight.setTranslationX(+70);
+        absolutePosition--;
+        if(absolutePosition>-2) {
+            leftCarPosition += 230;
+            rightCarPosition += 230;
+            carLeft.setTranslationX(leftCarPosition);
+            carRight.setTranslationX(rightCarPosition);
+        }else{
+            absolutePosition=-1;
+        }
        /*
         new AlertDialog.Builder(this)
                 .setTitle("test mode")

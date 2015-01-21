@@ -24,10 +24,14 @@ import com.google.vrtoolkit.cardboard.Viewport;
 
 import android.content.Context;
 import android.opengl.GLES20;
+import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
+import android.view.Display;
+import android.view.MotionEvent;
+import android.view.View;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,12 +46,12 @@ import javax.microedition.khronos.egl.EGLConfig;
 /**
  * A Cardboard sample application.
  */
-public class MainActivity extends CardboardActivity implements CardboardView.StereoRenderer {
+public class MainActivity extends CardboardActivity implements CardboardView.StereoRenderer, View.OnTouchListener {
 
     private static final String TAG = "MainActivity";
 
-    private static final float Z_NEAR = 0.1f;
-    private static final float Z_FAR = 100.0f;
+    private static final float Z_NEAR = 0.01f;//distanza dal punto di vista al piano di ritaglio vicino
+    private static final float Z_FAR = 100.0f; //distanza dal punto di vista al piano di ritaglio lontano
 
     private static final float CAMERA_Z = 0.01f;
     private static final float TIME_DELTA = 0.3f;
@@ -100,9 +104,12 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     private float[] mModelView;
     private float[] mModelFloor;
 
+    private GLSurfaceView mGLView;
+
+
     private int mScore = 0;
-    private float mObjectDistance = 12f;
-    private float mFloorDepth = 20f;
+    private float mObjectDistance = 6f; //distanza cubo dal punto di visuale
+    private float mFloorDepth = 5f; //profondità pavimento
 
     private Vibrator mVibrator;
     private CardboardOverlayView mOverlayView;
@@ -159,9 +166,12 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mGLView = new MyGLSurfaceView(this);
+        //setContentView(mGLView);
+
         setContentView(R.layout.common_ui);
         CardboardView cardboardView = (CardboardView) findViewById(R.id.cardboard_view);
-        cardboardView.setRenderer(this);
+        cardboardView.setRenderer(new MyGLRenderer());
         setCardboardView(cardboardView);
 
         mModelCube = new float[16];
@@ -176,7 +186,17 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
         mOverlayView.show3DToast("Pull the magnet when you find an object.");
+        mOverlayView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Matrix.scaleM(mModelCube,4,3f,3f,3f);
+                return true;
+            }
+        });
     }
+
+
+
 
     @Override
     public void onRendererShutdown() {
@@ -506,5 +526,11 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         float yaw = (float) Math.atan2(objPositionVec[0], -objPositionVec[2]);
 
         return Math.abs(pitch) < PITCH_LIMIT && Math.abs(yaw) < YAW_LIMIT;
+    }
+
+
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return false;
     }
 }

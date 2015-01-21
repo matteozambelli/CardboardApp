@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 package com.google.vrtoolkit.cardboard.samples.treasurehunt;
 
 /**
  * Created by fabio on 21/01/2015.
  */
+=======
+>>>>>>> origin/master
 /*
  * Copyright (C) 2011 The Android Open Source Project
  *
@@ -18,6 +21,7 @@ package com.google.vrtoolkit.cardboard.samples.treasurehunt;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+<<<<<<< HEAD
 
         import java.nio.ByteBuffer;
         import java.nio.ByteOrder;
@@ -54,17 +58,40 @@ public class Triangle {
     private int mPositionHandle;
     private int mColorHandle;
     private int mMVPMatrixHandle;
+=======
+package com.google.vrtoolkit.cardboard.samples.treasurehunt;
+
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
+
+import javax.microedition.khronos.opengles.GL10;
+
+/**
+ * A two-dimensional triangle for use as a drawn object in OpenGL ES 1.0/1.1.
+ */
+public class Triangle {
+
+    private final FloatBuffer vertexBuffer;
+>>>>>>> origin/master
 
     // number of coordinates per vertex in this array
     static final int COORDS_PER_VERTEX = 3;
     static float triangleCoords[] = {
             // in counterclockwise order:
+<<<<<<< HEAD
             0.0f,  0.622008459f, 0.0f,   // top
             -0.5f, -0.311004243f, 0.0f,   // bottom left
             0.5f, -0.311004243f, 0.0f    // bottom right
     };
     private final int vertexCount = triangleCoords.length / COORDS_PER_VERTEX;
     private final int vertexStride = COORDS_PER_VERTEX * 4; // 4 bytes per vertex
+=======
+            0.0f,  0.622008459f, 0.0f,// top
+           -0.5f, -0.311004243f, 0.0f,// bottom left
+            0.5f, -0.311004243f, 0.0f // bottom right
+    };
+>>>>>>> origin/master
 
     float color[] = { 0.63671875f, 0.76953125f, 0.22265625f, 0.0f };
 
@@ -85,6 +112,7 @@ public class Triangle {
         vertexBuffer.put(triangleCoords);
         // set the buffer to read the first coordinate
         vertexBuffer.position(0);
+<<<<<<< HEAD
 
         // prepare shaders and OpenGL program
         int vertexShader = MyGLRenderer.loadShader(
@@ -97,11 +125,14 @@ public class Triangle {
         GLES20.glAttachShader(mProgram, fragmentShader); // add the fragment shader to program
         GLES20.glLinkProgram(mProgram);                  // create OpenGL program executables
 
+=======
+>>>>>>> origin/master
     }
 
     /**
      * Encapsulates the OpenGL ES instructions for drawing this shape.
      *
+<<<<<<< HEAD
      * @param mvpMatrix - The Model View Project matrix in which to draw
      * this shape.
      */
@@ -142,4 +173,27 @@ public class Triangle {
         GLES20.glDisableVertexAttribArray(mPositionHandle);
     }
 
+=======
+     * @param gl - The OpenGL ES context in which to draw this shape.
+     */
+    public void draw(GL10 gl) {
+        // Since this shape uses vertex arrays, enable them
+        gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
+
+        // draw the shape
+        gl.glColor4f(       // set color:
+                color[0], color[1],
+                color[2], color[3]);
+        gl.glVertexPointer( // point to vertex data:
+                COORDS_PER_VERTEX,
+                GL10.GL_FLOAT, 0, vertexBuffer);
+        gl.glDrawArrays(    // draw shape:
+                GL10.GL_TRIANGLES, 0,
+                triangleCoords.length / COORDS_PER_VERTEX);
+
+        // Disable vertex array drawing to avoid
+        // conflicts with shapes that don't use it
+        gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
+    }
+>>>>>>> origin/master
 }

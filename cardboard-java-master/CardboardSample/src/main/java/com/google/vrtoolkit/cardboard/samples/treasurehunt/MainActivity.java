@@ -24,7 +24,11 @@ import com.google.vrtoolkit.cardboard.Viewport;
 
 import android.content.Context;
 import android.opengl.GLES20;
+<<<<<<< HEAD
 import android.opengl.GLSurfaceView;
+=======
+import android.opengl.GLU;
+>>>>>>> origin/master
 import android.opengl.Matrix;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -42,11 +46,15 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
 
 /**
  * A Cardboard sample application.
  */
 public class MainActivity extends CardboardActivity implements CardboardView.StereoRenderer, View.OnTouchListener {
+
+
+   Triangle mTriangle;
 
     private static final String TAG = "MainActivity";
 
@@ -108,11 +116,17 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
 
     private int mScore = 0;
+<<<<<<< HEAD
     private float mObjectDistance = 6f; //distanza cubo dal punto di visuale
     private float mFloorDepth = 5f; //profondità pavimento
+=======
+    private float mObjectDistance = 6f;
+    private float mFloorDepth = 2f;
+>>>>>>> origin/master
 
     private Vibrator mVibrator;
     private CardboardOverlayView mOverlayView;
+
 
     /**
      * Converts a raw text file, saved as a resource, into an OpenGL ES shader.
@@ -185,6 +199,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
+
         mOverlayView.show3DToast("Pull the magnet when you find an object.");
         mOverlayView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -219,6 +234,9 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     @Override
     public void onSurfaceCreated(EGLConfig config) {
         Log.i(TAG, "onSurfaceCreated");
+
+        mTriangle = new Triangle();
+
         GLES20.glClearColor(0.1f, 0.1f, 0.1f, 0.5f); // Dark background so text shows up well.
 
         ByteBuffer bbVertices = ByteBuffer.allocateDirect(DATA.CUBE_COORDS.length * 4);
@@ -396,6 +414,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         Matrix.multiplyMM(mModelViewProjection, 0, perspective, 0,
             mModelView, 0);
         drawFloor();
+
     }
 
     @Override
@@ -408,6 +427,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
      * We've set all of our transformation matrices. Now we simply pass them into the shader.
      */
     public void drawCube() {
+
         GLES20.glUseProgram(mCubeProgram);
 
         GLES20.glUniform3fv(mCubeLightPosParam, 1, mLightPosInEyeSpace, 0);
@@ -444,7 +464,9 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     public void drawFloor() {
         GLES20.glUseProgram(mFloorProgram);
 
+
         // Set ModelView, MVP, position, normals, and color.
+
         GLES20.glUniform3fv(mFloorLightPosParam, 1, mLightPosInEyeSpace, 0);
         GLES20.glUniformMatrix4fv(mFloorModelParam, 1, false, mModelFloor, 0);
         GLES20.glUniformMatrix4fv(mFloorModelViewParam, 1, false, mModelView, 0);

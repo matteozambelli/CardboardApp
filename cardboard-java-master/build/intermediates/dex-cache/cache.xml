@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\matteo\Desktop\cardboard-java-master\CardboardSample\libs\cardboard.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="419a0f2b571af0b7348265ed3bbead8e8d363fe6">
-        <dex dex="C:\Users\matteo\Desktop\cardboard-java-master\CardboardSample\build\intermediates\pre-dexed\debug\cardboard-44ca9fa8efdc0c6b5b7bc7252bab6cfe9353192f.jar" />
-    </item>
-    <item
-        jar="C:\Users\matteo\Desktop\cardboard-java-master\CardboardSample\libs\libprotobuf-java-2.3-nano.jar"
+        jar="C:\Users\matteo\Documents\GitHub\CardboardApp\cardboard-java-master\CardboardSample\libs\libprotobuf-java-2.3-nano.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="c4d70e4409fdf6dc367b7db105751ab73bec766a">
-        <dex dex="C:\Users\matteo\Desktop\cardboard-java-master\CardboardSample\build\intermediates\pre-dexed\debug\libprotobuf-java-2.3-nano-dbfa7527a195ea3a7c76ed2e32d4c8286f6b3458.jar" />
+        <dex dex="C:\Users\matteo\Documents\GitHub\CardboardApp\cardboard-java-master\CardboardSample\build\intermediates\pre-dexed\debug\libprotobuf-java-2.3-nano-9be9dd139900efb2a97f6fc2a358114d0e651581.jar" />
+    </item>
+    <item
+        jar="C:\Users\matteo\Documents\GitHub\CardboardApp\cardboard-java-master\CardboardSample\libs\cardboard.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="419a0f2b571af0b7348265ed3bbead8e8d363fe6">
+        <dex dex="C:\Users\matteo\Documents\GitHub\CardboardApp\cardboard-java-master\CardboardSample\build\intermediates\pre-dexed\debug\cardboard-72938acc65507cf7ea7f91e89a16106dc0b5d8ac.jar" />
     </item>
 
 </items>

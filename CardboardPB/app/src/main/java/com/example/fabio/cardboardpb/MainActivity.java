@@ -3,6 +3,7 @@ package com.example.fabio.cardboardpb;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -46,8 +47,8 @@ public class MainActivity extends Activity {
 
         animateFrontCar( ivCarFrontLeft, ivCarFrontRight );
 
-        carLeft=(ImageView) findViewById(R.id.imageViewCarLeft);
-        carRight=(ImageView) findViewById(R.id.imageViewCarRight);
+        carLeft=(ImageView) findViewById(R.id.imageViewMyCarLeft);
+        carRight=(ImageView) findViewById(R.id.imageViewMyCarRight);
         leftCarPosition= carLeft.getWidth();
         rightCarPosition= carRight.getWidth();
     }
@@ -194,14 +195,17 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
  */
 private void home(){
 
-    new AlertDialog.Builder(this)
+    Intent restart = new Intent(MainActivity.this, MainActivity.class);
+    startActivity(restart);
+
+   /*new AlertDialog.Builder(this)
             .setTitle("test mode")
             .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
             // continue with delete
         }
     }).show();
-
+*/
     }
 
 }

@@ -29,7 +29,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/imageViewCarLeft"
+            android:id="@+id/imageViewMyCarLeft"
             android:layout_weight="25"
             android:background="@drawable/car"
             android:layout_marginTop="170dp"
@@ -59,7 +59,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/imageViewCarRight"
+            android:id="@+id/imageViewMyCarRight"
             android:layout_weight="75"
             android:background="@drawable/car"
             android:layout_marginTop="170dp"

@@ -12,9 +12,16 @@
         android:id="@+id/rl1"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/background_car"
+        android:background="@drawable/b"
         android:layout_weight="50">
 
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewCarFrontLeft"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/car_front"
+            android:layout_centerHorizontal="true" />
 
         <ImageView
             android:layout_width="50dp"
@@ -22,16 +29,27 @@
             android:id="@+id/imageViewCarLeft"
             android:layout_weight="25"
             android:background="@drawable/car"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="170dp"
             android:layout_centerHorizontal="true" />
+
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl2"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/background_car"
+        android:background="@drawable/b"
         android:layout_weight="50">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewCarFrontRight"
+            android:src="@drawable/car_front"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="118dp"
+            />
 
         <ImageView
             android:layout_width="50dp"
@@ -39,8 +57,9 @@
             android:id="@+id/imageViewCarRight"
             android:layout_weight="75"
             android:background="@drawable/car"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="170dp"
             android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
 </LinearLayout>

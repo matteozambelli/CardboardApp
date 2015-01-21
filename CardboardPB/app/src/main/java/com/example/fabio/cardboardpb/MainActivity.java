@@ -4,12 +4,28 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
+    private ImageView ivCarFrontLeft;
+    private ImageView ivCarFrontRight;
+    private TextView t1;
+    private TextView t2;
+
+
+
 
 
     @Override
@@ -17,10 +33,34 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ivCarFrontLeft= (ImageView) findViewById(R.id.imageViewCarFrontLeft);
+        ivCarFrontRight= (ImageView) findViewById(R.id.imageViewCarFrontRight);
+
+        animateFrontCar( ivCarFrontLeft, ivCarFrontRight );
 
     }
 
 
+
+private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
+    TranslateAnimation TranslateAnimation = new TranslateAnimation( 0, 0 , 0, Animation.RELATIVE_TO_SELF+30);
+    ScaleAnimation ScaleAnimation= new ScaleAnimation(1,3.5f,
+            1,3.5f,
+            Animation.RELATIVE_TO_SELF,0.5f,
+            Animation.RELATIVE_TO_SELF,0.5f
+    );
+
+    //Create AnimationSet
+    AnimationSet animationSet= new AnimationSet(false);
+    animationSet.addAnimation(TranslateAnimation);
+    animationSet.addAnimation(ScaleAnimation);
+    animationSet.setDuration(3000);
+    animationSet.setFillAfter(true);
+
+    ivLeft.startAnimation(animationSet);
+    ivRight.startAnimation(animationSet);
+
+}
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

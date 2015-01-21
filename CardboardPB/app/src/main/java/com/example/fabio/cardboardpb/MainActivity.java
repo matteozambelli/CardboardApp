@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_HEADSETHOOK:
                 if(action== KeyEvent.ACTION_DOWN){
                 //on key home press
-                //home();
+                home();
             }
                 return true;
             default:
@@ -151,16 +151,16 @@ public class MainActivity extends Activity {
 /**
  * handle the home button pression
  */
-/*private void home(){
+private void home(){
 
     new AlertDialog.Builder(this)
             .setTitle("test mode")
-            .setMessage("key home pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
             // continue with delete
         }
     }).show();
 
     }
-*/
+
 }

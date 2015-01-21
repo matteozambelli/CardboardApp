@@ -16,6 +16,8 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 
 public class MainActivity extends Activity {
@@ -28,6 +30,12 @@ public class MainActivity extends Activity {
 
 
 
+    private ImageView carLeft;
+    private ImageView carRight;
+    private int leftCarPosition;
+    private int rightCarPosition;
+    private int absolutePosition=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +46,10 @@ public class MainActivity extends Activity {
 
         animateFrontCar( ivCarFrontLeft, ivCarFrontRight );
 
+        carLeft=(ImageView) findViewById(R.id.imageViewCarLeft);
+        carRight=(ImageView) findViewById(R.id.imageViewCarRight);
+        leftCarPosition= carLeft.getWidth();
+        rightCarPosition= carRight.getWidth();
     }
 
 
@@ -130,6 +142,16 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
      */
     private void volumeUp(){
 
+        absolutePosition++;
+        if(absolutePosition<2) {
+            leftCarPosition -= 230;
+            rightCarPosition -= 230;
+            carLeft.setTranslationX(leftCarPosition);
+            carRight.setTranslationX(rightCarPosition);
+        }else{
+            absolutePosition=1;
+        }
+        /*
         new AlertDialog.Builder(this)
                 .setTitle("test mode")
                 .setMessage("key + pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -137,7 +159,7 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
                 // continue with delete
             }
         }).show();
-
+*/
     }
 
 
@@ -147,6 +169,17 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
      * handle the key - press event
      */
     private void volumeDown(){
+
+        absolutePosition--;
+        if(absolutePosition>-2) {
+            leftCarPosition += 230;
+            rightCarPosition += 230;
+            carLeft.setTranslationX(leftCarPosition);
+            carRight.setTranslationX(rightCarPosition);
+        }else{
+            absolutePosition=-1;
+        }
+       /*
         new AlertDialog.Builder(this)
                 .setTitle("test mode")
                 .setMessage("key - pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -154,7 +187,7 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
                 // continue with delete
           }
 }).show();
-        }
+*/        }
 
 /**
  * handle the home button pression
@@ -163,7 +196,7 @@ private void home(){
 
     new AlertDialog.Builder(this)
             .setTitle("test mode")
-            .setMessage("key home pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
             // continue with delete
         }

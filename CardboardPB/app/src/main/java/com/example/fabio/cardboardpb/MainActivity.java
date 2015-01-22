@@ -33,11 +33,11 @@ public class MainActivity extends Activity {
     private ImageView carLeft;
     private ImageView carRight;
     private ImageView enemyLeftLane1Id0;
-    private ImageView enemytRightLane1Id0;
+    private ImageView enemyRightLane1Id0;
     private ImageView enemyLeftLane2Id0;
-    private ImageView enemytRightLane2Id0;
+    private ImageView enemyRightLane2Id0;
     private ImageView enemyLeftLane3Id0;
-    private ImageView enemytRightLane3Id0;
+    private ImageView enemyRightLane3Id0;
     private TextView levelCounterLeft;
     private TextView levelCounterRight;
     private TextView t1; //REMOVE THIS
@@ -58,13 +58,13 @@ public class MainActivity extends Activity {
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
         enemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
-        enemytRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
+        enemyRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
 
         enemyLeftLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0);
-        enemytRightLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0);
+        enemyRightLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0);
 
         enemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
-        enemytRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
+        enemyRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
 
         levelCounterLeft= (TextView) findViewById(R.id.textViewLevelLeft);
         levelCounterRight= (TextView) findViewById(R.id.textViewLevelRight);
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
-        animateFrontCar(enemyLeftLane2Id0, enemytRightLane2Id0);
+        animateFrontCar(enemyLeftLane2Id0, enemyRightLane2Id0);
 
 
     }
@@ -331,6 +331,8 @@ public class MainActivity extends Activity {
         }
         if (absolutePosition == 2 && isEndEnemyLane2) {
             t1.setText("scontro su 2");
+            enemyLeftLane2Id0.setAlpha(0);
+            enemyRightLane2Id0.setAlpha(0);
         }
         if (absolutePosition == 3 && isEndEnemyLane3) {
             t1.setText("scontro su 3");

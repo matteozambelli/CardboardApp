@@ -13,7 +13,7 @@
         android:id="@+id/rl1"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/b"
+        android:background="@drawable/background_car1"
         android:layout_weight="50">
 
         <ImageView
@@ -78,7 +78,7 @@
         android:id="@+id/rl2"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/b"
+        android:background="@drawable/background_car1"
         android:layout_weight="50">
 
         <ImageView

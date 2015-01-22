@@ -30,67 +30,110 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-    private boolean collision=false;
-
-    private ImageView ivCarFrontLeft;
-    private ImageView ivCarFrontRight;
+    private ImageView enemyLeftLane1Id0;
+    private ImageView enemytRightLane1Id0;
+    private ImageView enemyLeftLane2Id0;
+    private ImageView enemytRightLane2Id0;
+    private ImageView enemyLeftLane3Id0;
+    private ImageView enemytRightLane3Id0;
     private TextView t1;
-    private TextView t2;
 
     private ImageView carLeft;
     private ImageView carRight;
     private int leftCarPosition;
     private int rightCarPosition;
-    private int absolutePosition=2;
+    private int absolutePosition = 2;
+    private boolean isEndEnemyLane1 = false;
+    private boolean isEndEnemyLane2 = false;
+    private boolean isEndEnemyLane3 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ivCarFrontLeft= (ImageView) findViewById(R.id.imageViewCarFrontLeft);
-        ivCarFrontRight= (ImageView) findViewById(R.id.imageViewCarFrontRight);
+        enemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
+        enemytRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
 
-        carLeft=(ImageView) findViewById(R.id.imageViewMyCarLeft);
-        carRight=(ImageView) findViewById(R.id.imageViewMyCarRight);
+        enemyLeftLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0);
+        enemytRightLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0);
 
-        t1= (TextView) findViewById(R.id.textViewProva);
+        enemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
+        enemytRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
 
-       // t1= (TextView) findViewById(R.id.textViewProva);
-        //Integer i=new Integer((int)carLeft.getY());
-        //t1.setText(i.toString());
+        carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
+        carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
-        animateFrontCar( ivCarFrontLeft, ivCarFrontRight );
-        if(carLeft.getY()==ivCarFrontLeft.getY()) {
-            ivCarFrontLeft.setVisibility(View.INVISIBLE);
-        }
+        t1 = (TextView) findViewById(R.id.textViewProva);
 
-        scontro();
+        animateFrontCar(enemyLeftLane2Id0, enemytRightLane2Id0);
 
 
     }
 
 
+    private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
 
-private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
-    TranslateAnimation TranslateAnimation = new TranslateAnimation( 0, 0 , 0, Animation.RELATIVE_TO_SELF+30);
-    ScaleAnimation ScaleAnimation= new ScaleAnimation(1,3.5f,
-            1,3.5f,
-            Animation.RELATIVE_TO_SELF,0.5f,
-            Animation.RELATIVE_TO_SELF,0.5f
-    );
+        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
 
-    //Create AnimationSet
-    AnimationSet animationSet= new AnimationSet(false);
-    animationSet.addAnimation(TranslateAnimation);
-    animationSet.addAnimation(ScaleAnimation);
-    animationSet.setDuration(3000);
-    animationSet.setFillAfter(true);
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
 
-    ivLeft.startAnimation(animationSet);
-    ivRight.startAnimation(animationSet);
+        //Create AnimationSet Lane 1
+       /* AnimationSet animationSetLane1 = new AnimationSet(false);
+        animationSetLane1.addAnimation(TranslateAnimation1);
+        animationSetLane1.addAnimation(ScaleAnimation1);
+        animationSetLane1.setDuration(3000);
+        animationSetLane1.setFillAfter(true);
 
-    animationSet.setAnimationListener(new Animation.AnimationListener() {
+        ivLeft.startAnimation(animationSetLane1);
+        ivRight.startAnimation(animationSetLane1);
+
+        animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isEndEnemyLane1 = true;
+                detectCollision();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });*/
+
+
+    //Create AnimationSet Lane 2
+    AnimationSet animationSetLane2 = new AnimationSet(false);
+    animationSetLane2.addAnimation(TranslateAnimation2);
+    animationSetLane2.addAnimation(ScaleAnimation2);
+    animationSetLane2.setDuration(3000);
+    animationSetLane2.setFillAfter(true);
+
+    ivLeft.startAnimation(animationSetLane2);
+    ivRight.startAnimation(animationSetLane2);
+
+    animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
         @Override
         public void onAnimationStart(Animation animation) {
 
@@ -98,8 +141,8 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
 
         @Override
         public void onAnimationEnd(Animation animation) {
-
-            collision=true;
+            isEndEnemyLane2 = true;
+            detectCollision();
         }
 
         @Override
@@ -107,7 +150,35 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
 
         }
     });
+        //Create AnimationSet Lane 3
+       /* AnimationSet animationSetLane3 = new AnimationSet(false);
+        animationSetLane3.addAnimation(TranslateAnimation3);
+        animationSetLane3.addAnimation(ScaleAnimation3);
+        animationSetLane3.setDuration(3000);
+        animationSetLane3.setFillAfter(true);
+
+        ivLeft.startAnimation(animationSetLane3);
+        ivRight.startAnimation(animationSetLane3);
+
+        animationSetLane3.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isEndEnemyLane3 = true;
+                detectCollision();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });*/
 }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -161,10 +232,10 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
                 }
                 return true;
             case KeyEvent.KEYCODE_HEADSETHOOK:
-                if(action== KeyEvent.ACTION_DOWN){
-                //on key home press
-                playAgain();
-            }
+                if (action == KeyEvent.ACTION_DOWN) {
+                    //on key home press
+                    playAgain();
+                }
                 return true;
             default:
                 return super.dispatchKeyEvent(event);
@@ -175,16 +246,16 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
     /**
      * handle the key + press event
      */
-    private void volumeUp(){
+    private void volumeUp() {
 
         absolutePosition--;
-        if(absolutePosition>=1) {
+        if (absolutePosition >= 1) {
             leftCarPosition -= 230;
             rightCarPosition -= 230;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
-        }else{
-            absolutePosition=1;
+        } else {
+            absolutePosition = 1;
         }
         /*
         new AlertDialog.Builder(this)
@@ -203,16 +274,16 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
     /**
      * handle the key - press event
      */
-    private void volumeDown(){
+    private void volumeDown() {
 
         absolutePosition++;
-        if(absolutePosition<=3) {
+        if (absolutePosition <= 3) {
             leftCarPosition += 230;
             rightCarPosition += 230;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
-        }else{
-            absolutePosition=3;
+        } else {
+            absolutePosition = 3;
         }
        /*
         new AlertDialog.Builder(this)
@@ -222,15 +293,16 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
                 // continue with delete
           }
 }).show();
-*/        }
+*/
+    }
 
-/**
- * handle the home button pression
- */
-private void playAgain(){
+    /**
+     * handle the home button pression
+     */
+    private void playAgain() {
 
-    Intent restart = new Intent(MainActivity.this, MainActivity.class);
-    startActivity(restart);
+        Intent restart = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(restart);
 
    /*new AlertDialog.Builder(this)
             .setTitle("test mode")
@@ -242,18 +314,18 @@ private void playAgain(){
 */
     }
 
-    private void scontro(){
-        GameManager g= new GameManager();
-        g.generateGameData();
-        ArrayList<EnemiesManager> e= new ArrayList<EnemiesManager>();
-        e=g.getIdEnemy();
-        EnemiesManager temp= e.get(0);
-        int corsia=temp.getSelectedLane();
-        if(corsia==absolutePosition && collision){
-            t1.setText("scontro");
+    private void detectCollision() {
+
+        if (absolutePosition == 1 && isEndEnemyLane1) {
+            t1.setText("scontro su 1");
+        }
+        if (absolutePosition == 2 && isEndEnemyLane2) {
+            t1.setText("scontro su 2");
+        }
+        if (absolutePosition == 3 && isEndEnemyLane3) {
+            t1.setText("scontro su 3");
         }
 
 
     }
-
 }

@@ -8,7 +8,7 @@
     android:orientation="horizontal"
     android:gravity="center">
 
-
+    <!-- left eye view-->
     <RelativeLayout
         android:id="@+id/rl1"
         android:layout_height="match_parent"
@@ -19,10 +19,25 @@
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:id="@+id/imageViewCarFrontLeft"
+            android:id="@+id/imageViewEnemyLeftLane1Id0"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/car_front"
+            android:layout_marginLeft="80dp" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginTop="118dp"
             android:src="@drawable/car_front"
             android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id0"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/car_front"
+            android:layout_marginLeft="160dp" />
 
 
 
@@ -47,7 +62,7 @@
 
     </RelativeLayout>
 
-
+<!-- right eye view-->
 
     <RelativeLayout
         android:id="@+id/rl2"
@@ -59,9 +74,27 @@
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:id="@+id/imageViewCarFrontRight"
+            android:id="@+id/imageViewEnemyRightLane1Id0"
+            android:src="@drawable/car_front"
+            android:layout_marginLeft="80dp"
+            android:layout_alignTop="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyRightLane2Id0"
             android:src="@drawable/car_front"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="118dp"
+            />
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyRightLane3Id0"
+            android:src="@drawable/car_front"
+            android:layout_marginLeft="160dp"
             android:layout_marginTop="118dp"
             />
 

@@ -9,6 +9,7 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
@@ -41,10 +42,17 @@ public class MainActivity extends Activity {
         ivCarFrontLeft= (ImageView) findViewById(R.id.imageViewCarFrontLeft);
         ivCarFrontRight= (ImageView) findViewById(R.id.imageViewCarFrontRight);
 
-        animateFrontCar( ivCarFrontLeft, ivCarFrontRight );
-
         carLeft=(ImageView) findViewById(R.id.imageViewMyCarLeft);
         carRight=(ImageView) findViewById(R.id.imageViewMyCarRight);
+
+       // t1= (TextView) findViewById(R.id.textViewProva);
+        //Integer i=new Integer((int)carLeft.getY());
+        //t1.setText(i.toString());
+
+        animateFrontCar( ivCarFrontLeft, ivCarFrontRight );
+        if(carLeft.getY()==ivCarFrontLeft.getY()) {
+            ivCarFrontLeft.setVisibility(View.INVISIBLE);
+        }
         leftCarPosition= carLeft.getWidth();
         rightCarPosition= carRight.getWidth();
     }

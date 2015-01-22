@@ -31,6 +31,7 @@ public class LevelManager{
     //(int)(Range*Math.random())+Inf
 
     //Level generator , set the parameters of the level
+
     public void generateLevel(){
         timeRange=startIntervalTime-minIntervalTime+1;
         enemiesRange=startNumEnemies-minNumEnemies+1;
@@ -45,15 +46,27 @@ public class LevelManager{
         idLevel++;
     }
 
+    /**
+     *
+     * @return idLevel
+     */
     public int getIdLevel() {
         return idLevel;
     }
 
+    /**
+     *
+     * @return timeInterval level
+     */
     public int getTimeInterval() {
         return timeInterval;
     }
 
-    public int getNumNumEnemies() {
+    /**
+     *
+     * @return total number of Enemies
+     */
+    public int getNumEnemies() {
         return numEnemies;
 }
 

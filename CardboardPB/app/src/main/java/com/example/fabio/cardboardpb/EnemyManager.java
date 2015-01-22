@@ -5,11 +5,11 @@ package com.example.fabio.cardboardpb;
  */
 public class EnemyManager {
 
-    private final int lane=3;
-    private final int numberOfCar=10;
+    private final int lane=3;  //we have 3 lane
+    private final int numberOfCar=10; //we have 10 different picture of car
 
-    private int selectedLane;
-    private int selectedCar;
+    private int selectedLane; //what's the selected lane
+    private int selectedCar; //what's the enemy
 
     /**
      * chooses lane and enemy

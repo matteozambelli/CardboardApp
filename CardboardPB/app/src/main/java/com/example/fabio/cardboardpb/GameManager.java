@@ -5,6 +5,7 @@ package com.example.fabio.cardboardpb;
  */
 public class GameManager {
 
-    private EnemyManager enemyManager;
+    private EnemiesManager enemiesManager;
+
 
 }

@@ -44,7 +44,7 @@ public class SettingsActivity extends ActionBarActivity {
         int keyCode = event.getKeyCode();
         switch (keyCode) {
 
-            case KeyEvent.KEYCODE_HEADSETHOOK:
+            case KeyEvent.KEYCODE_VOLUME_UP:
                 if(action== KeyEvent.ACTION_DOWN){
                     //on key home press
                     goToMain();

@@ -46,7 +46,7 @@ public class SplashActivity extends Activity {
         ivLeft.startAnimation(animationSet);
         ivRight.startAnimation(animationSet);
 
-        new Handler().postDelayed(new Runnable() {
+        boolean b = new Handler().postDelayed(new Runnable() {
 
             /*
              * Showing splash screen with a timer. This will be useful when you
@@ -57,7 +57,7 @@ public class SplashActivity extends Activity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashActivity.this, SettingsActivity.class);
                 startActivity(i);
 
                 // close this activity

@@ -125,7 +125,7 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
             case KeyEvent.KEYCODE_HEADSETHOOK:
                 if(action== KeyEvent.ACTION_DOWN){
                 //on key home press
-                home();
+                playAgain();
             }
                 return true;
             default:
@@ -189,7 +189,7 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
 /**
  * handle the home button pression
  */
-private void home(){
+private void playAgain(){
 
     Intent restart = new Intent(MainActivity.this, MainActivity.class);
     startActivity(restart);

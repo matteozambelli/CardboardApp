@@ -1,26 +1,19 @@
 package com.example.fabio.cardboardpb;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 
-public class SettingsActivity extends Activity {
-
-    private TextView textStartLeft;
-    private TextView textStartRight;
+public class SettingsActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-        textStartLeft=(TextView) findViewById(R.id.textStartLeft);
-        textStartRight=(TextView) findViewById(R.id.textStartRight);
     }
 
 
@@ -54,17 +47,26 @@ public class SettingsActivity extends Activity {
             case KeyEvent.KEYCODE_HEADSETHOOK:
                 if(action== KeyEvent.ACTION_DOWN){
                     //on key home press
-                    home();
+                    goToMain();
                 }
                 return true;
             default:
                 return super.dispatchKeyEvent(event);
         }
     }
-    private void home(){
 
-        Intent start = new Intent(SettingsActivity.this, MainActivity.class);
-        startActivity(start);
+    private void goToMain(){
+
+        Intent restart = new Intent(SettingsActivity.this, MainActivity.class);
+        startActivity(restart);
+
+   /*new AlertDialog.Builder(this)
+            .setTitle("test mode")
+            .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+            // continue with delete
+        }
+    }).show();
+*/
     }
-
 }

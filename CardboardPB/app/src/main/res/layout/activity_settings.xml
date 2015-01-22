@@ -1,49 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/primary_dark_material_dark"
-    tools:context=".MainActivity"
-    android:weightSum="100"
-    android:orientation="horizontal"
-    android:gravity="center">
-
-
-    <RelativeLayout
-        android:id="@+id/rl1"
-        android:layout_height="match_parent"
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
-        android:background="@drawable/settings_background"
-        android:layout_weight="50">
+        android:layout_height="fill_parent"
+        android:background="@color/primary_dark_material_dark"
+        tools:context="com.example.fabio.cardboardpb.SettingsActivity"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:gravity="center">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="press home to start"
-            android:id="@+id/textStartLeft"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+          
+            android:layout_weight="50">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PRESS HOME TO START"
+                android:id="@+id/textView"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
 
 
 
-    <RelativeLayout
-        android:id="@+id/rl2"
-        android:layout_height="match_parent"
-        android:layout_width="fill_parent"
-        android:background="@drawable/settings_background"
-        android:layout_weight="50">
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+
+            android:layout_weight="50">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="press home to start"
-            android:id="@+id/textStartRight"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PRESS HOME TO START"
+                android:id="@+id/textView2"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
 
 
-</LinearLayout>
+    </LinearLayout>
+

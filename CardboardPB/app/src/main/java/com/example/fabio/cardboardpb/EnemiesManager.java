@@ -15,8 +15,11 @@ public class EnemiesManager {
      * chooses lane and enemy
      */
     public void randomFunction(){
-        this.selectedLane=(int)(lane*Math.random())+1;
-        this.selectedCar=(int)(numberOfCar*Math.random())+1;
+        selectedLane=2;//(int)(lane*Math.random())+1;
+        selectedCar=(int)(numberOfCar*Math.random())+1;
+    }
+    public void setLane(){
+        selectedLane=2;
     }
 
     /**
@@ -32,7 +35,7 @@ public class EnemiesManager {
      * @return the selected enemies
      */
     public int getNumberOfCar(){
-        return selectedCar;
+        return  selectedCar;
     }
 
     /* FOR TEST ONLY

@@ -1,11 +1,13 @@
 package com.example.fabio.cardboardpb;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
@@ -16,13 +18,20 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends Activity {
+
+    private boolean collision=false;
+
     private ImageView ivCarFrontLeft;
     private ImageView ivCarFrontRight;
     private TextView t1;
@@ -32,7 +41,7 @@ public class MainActivity extends Activity {
     private ImageView carRight;
     private int leftCarPosition;
     private int rightCarPosition;
-    private int absolutePosition=0;
+    private int absolutePosition=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +54,8 @@ public class MainActivity extends Activity {
         carLeft=(ImageView) findViewById(R.id.imageViewMyCarLeft);
         carRight=(ImageView) findViewById(R.id.imageViewMyCarRight);
 
+        t1= (TextView) findViewById(R.id.textViewProva);
+
        // t1= (TextView) findViewById(R.id.textViewProva);
         //Integer i=new Integer((int)carLeft.getY());
         //t1.setText(i.toString());
@@ -53,8 +64,10 @@ public class MainActivity extends Activity {
         if(carLeft.getY()==ivCarFrontLeft.getY()) {
             ivCarFrontLeft.setVisibility(View.INVISIBLE);
         }
-        leftCarPosition= carLeft.getWidth();
-        rightCarPosition= carRight.getWidth();
+
+        scontro();
+
+
     }
 
 
@@ -77,6 +90,23 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
     ivLeft.startAnimation(animationSet);
     ivRight.startAnimation(animationSet);
 
+    animationSet.setAnimationListener(new Animation.AnimationListener() {
+        @Override
+        public void onAnimationStart(Animation animation) {
+
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+
+            collision=true;
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+
+        }
+    });
 }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -147,8 +177,8 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
      */
     private void volumeUp(){
 
-        absolutePosition++;
-        if(absolutePosition<2) {
+        absolutePosition--;
+        if(absolutePosition>=1) {
             leftCarPosition -= 230;
             rightCarPosition -= 230;
             carLeft.setTranslationX(leftCarPosition);
@@ -175,14 +205,14 @@ private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
      */
     private void volumeDown(){
 
-        absolutePosition--;
-        if(absolutePosition>-2) {
+        absolutePosition++;
+        if(absolutePosition<=3) {
             leftCarPosition += 230;
             rightCarPosition += 230;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
         }else{
-            absolutePosition=-1;
+            absolutePosition=3;
         }
        /*
         new AlertDialog.Builder(this)
@@ -210,6 +240,20 @@ private void playAgain(){
         }
     }).show();
 */
+    }
+
+    private void scontro(){
+        GameManager g= new GameManager();
+        g.generateGameData();
+        ArrayList<EnemiesManager> e= new ArrayList<EnemiesManager>();
+        e=g.getIdEnemy();
+        EnemiesManager temp= e.get(0);
+        int corsia=temp.getSelectedLane();
+        if(corsia==absolutePosition && collision){
+            t1.setText("scontro");
+        }
+
+
     }
 
 }

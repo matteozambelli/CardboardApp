@@ -1,16 +1,16 @@
 package com.example.fabio.cardboardpb;
 
+import java.util.ArrayList;
+
 /**
  * Created by matteo on 22/01/2015.
  */
 public class GameManager {
 
-    private EnemiesManager enemiesManager;
-    private LevelManager levelManager;
+    private LevelManager levelManager= new LevelManager();
 
     //game data
-    private int lane;
-    private int idEnemy;
+    private ArrayList<EnemiesManager> enemiesManager= new ArrayList<EnemiesManager>();
     private int idLevel;
     private int numEnemies;
     private int interval;
@@ -19,31 +19,30 @@ public class GameManager {
      * this function merge the random data from EnemiesManager and
      * LevelManager
      */
-    public void GenerateGameData(){
-        enemiesManager.randomFunction();
+    public void generateGameData(){
         levelManager.generateLevel();
-        lane=enemiesManager.getSelectedLane();
-        idEnemy=enemiesManager.getNumberOfCar();
+
         idLevel=levelManager.getIdLevel();
-        numEnemies=levelManager.getNumNumEnemies();
+        numEnemies=levelManager.getNumEnemies();
         interval=levelManager.getTimeInterval();
+
+
+        for(int i=0;i<numEnemies;i++) {
+            EnemiesManager temp= new EnemiesManager();
+            temp.randomFunction();
+            enemiesManager.add(temp);
+        }
+        //we need this for setup the next level
         levelManager.onLevelEnd();
     }
 
-    /**
-     *
-     * @return the selected lane
-     */
-     public int getLane() {
-        return lane;
-    }
 
     /**
      *
-     * @return the selected enemy
+     * @return the selected enemy and the selected lane
      */
-    public int getIdEnemy(){
-        return idEnemy;
+    public ArrayList<EnemiesManager> getIdEnemy(){
+        return enemiesManager;
     }
 
     /**
@@ -62,7 +61,50 @@ public class GameManager {
         return numEnemies;
     }
 
+    /**
+     *
+     * @return the interval between two enemies car
+     */
     public int getInterval(){
         return interval;
     }
+
+ /* FOR TEST ONLY
+
+    public void printIdEnemy(){
+        EnemiesManager print= new EnemiesManager();
+        for(int i=0;i<numEnemies;i++){
+            System.out.println("corsia: "+enemiesManager.get(i).getSelectedLane());
+            System.out.println("id nemico: "+enemiesManager.get(i).getNumberOfCar());
+        }
+    }
+
+
+    public static void main(String [ ] args)
+    {
+        GameManager g= new GameManager();
+        g.generateGameData();
+        System.out.println("Livello: " + g.getIdLevel());
+        System.out.println("numero nemici: "+ g.getNumEnemies());
+        System.out.println("intervallo nemici: "+ g.getInterval());
+        g.printIdEnemy();
+        g.generateGameData();
+        System.out.println("Livello: " + g.getIdLevel());
+        System.out.println("numero nemici: "+ g.getNumEnemies());
+        System.out.println("intervallo nemici: "+ g.getInterval());
+        g.printIdEnemy();
+        g.generateGameData();
+        System.out.println("Livello: " + g.getIdLevel());
+        System.out.println("numero nemici: "+ g.getNumEnemies());
+        System.out.println("intervallo nemici: "+ g.getInterval());
+        g.printIdEnemy();
+        g.generateGameData();
+        System.out.println("Livello: " + g.getIdLevel());
+        System.out.println("numero nemici: "+ g.getNumEnemies());
+        System.out.println("intervallo nemici: "+ g.getInterval());
+        g.printIdEnemy();
+
+
+    }*/
+
 }

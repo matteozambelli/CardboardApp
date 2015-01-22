@@ -31,7 +31,6 @@ public class LevelManager{
     //(int)(Range*Math.random())+Inf
 
     //Level generator , set the parameters of the level
-
     public void generateLevel(){
         timeRange=startIntervalTime-minIntervalTime+1;
         enemiesRange=startNumEnemies-minNumEnemies+1;

@@ -30,16 +30,18 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
+    private ImageView carLeft;
+    private ImageView carRight;
     private ImageView enemyLeftLane1Id0;
     private ImageView enemytRightLane1Id0;
     private ImageView enemyLeftLane2Id0;
     private ImageView enemytRightLane2Id0;
     private ImageView enemyLeftLane3Id0;
     private ImageView enemytRightLane3Id0;
-    private TextView t1;
+    private TextView levelCounterLeft;
+    private TextView levelCounterRight;
+    private TextView t1; //REMOVE THIS
 
-    private ImageView carLeft;
-    private ImageView carRight;
     private int leftCarPosition;
     private int rightCarPosition;
     private int absolutePosition = 2;
@@ -52,6 +54,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
+        carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
+
         enemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
         enemytRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
 
@@ -61,8 +66,13 @@ public class MainActivity extends Activity {
         enemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
         enemytRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
 
-        carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
-        carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
+        levelCounterLeft= (TextView) findViewById(R.id.textViewLevelLeft);
+        levelCounterRight= (TextView) findViewById(R.id.textViewLevelRight);
+        levelCounterLeft.setText("1");
+        levelCounterRight.setText("1");
+
+
+
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 

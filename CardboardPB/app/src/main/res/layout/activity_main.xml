@@ -49,7 +49,7 @@
             android:background="@drawable/car"
             android:layout_marginTop="170dp"
             android:layout_centerHorizontal="true" />
-
+<!--REMOVE THIS-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +58,16 @@
             android:id="@+id/textViewProva"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
+<!---->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewLevelLeft"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginBottom="51dp" />
 
 
     </RelativeLayout>
@@ -106,6 +116,15 @@
             android:background="@drawable/car"
             android:layout_marginTop="170dp"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewLevelRight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="51dp" />
 
     </RelativeLayout>
 

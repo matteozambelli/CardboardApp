@@ -15,7 +15,7 @@ public class EnemiesManager {
      * chooses lane and enemy
      */
     public void randomFunction(){
-        selectedLane=2;//(int)(lane*Math.random())+1;
+        selectedLane=(int)(lane*Math.random())+1;
         selectedCar=(int)(numberOfCar*Math.random())+1;
     }
     public void setLane(){

@@ -130,9 +130,9 @@ public class MainActivity extends Activity {
         panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
 
         gameManager.generateGameData();
-        int pick;
+        int pick=3;
        // for(int i=0;i<temp.size();i++){
-            pick=gameManager.getIdEnemy().remove(0).getSelectedLane();
+           // pick=gameManager.getIdEnemy().remove(0).getSelectedLane();
 
             if(pick==1){
                 showEnemy(enemyLeftLane1Id0);

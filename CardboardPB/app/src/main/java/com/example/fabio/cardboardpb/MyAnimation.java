@@ -86,7 +86,7 @@ public class MyAnimation {
     //end panorama animation
 
 
-    public void hidePanorama(ImageView img){
+    private void hidePanorama(ImageView img){
         img.setAlpha(0f);
     }
 

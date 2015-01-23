@@ -148,7 +148,32 @@ public class MainActivity extends Activity {
             }else{
                     //TODO catturare eccezzione
             }
-       // }
+
+    
+        /*try {
+            wait(gameManager.getIntervall());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+        pick=gameManager.getIdEnemy().remove(1).getSelectedLane();
+
+        if(pick==1){
+            showEnemy(enemyLeftLane1Id0);
+
+            animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+        }
+        else if(pick==2){
+            showEnemy(enemyLeftLane2Id0);
+            animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
+        }else if(pick==3){
+            showEnemy(enemyLeftLane3Id0);
+            animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+        }else{
+            //TODO catturare eccezzione
+        }
+
+
+        // }
 
 
 

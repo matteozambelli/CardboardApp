@@ -124,27 +124,31 @@ public class MainActivity extends Activity {
         hideEnemy(enemyRightLane2Id0);
         hideEnemy(enemyRightLane3Id0);
 
+
         MyAnimation panoramaAnimation= new MyAnimation();
         panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
         panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
-        
+
         gameManager.generateGameData();
-        ArrayList<EnemiesManager> temp = new ArrayList<EnemiesManager>();
         int pick;
-        for(int i=0;i<temp.size();i++){
-            pick=temp.get(i).getSelectedLane();
+       // for(int i=0;i<temp.size();i++){
+            pick=gameManager.getIdEnemy().remove(0).getSelectedLane();
 
             if(pick==1){
+                showEnemy(enemyLeftLane1Id0);
+
                 animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
             }
             else if(pick==2){
+                showEnemy(enemyLeftLane2Id0);
                 animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
             }else if(pick==3){
+                showEnemy(enemyLeftLane3Id0);
                 animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
             }else{
                     //TODO catturare eccezzione
             }
-        }
+       // }
 
 
 

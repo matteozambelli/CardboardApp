@@ -92,40 +92,28 @@ public class MainActivity extends Activity {
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
-        animateFrontCar(enemyLeftLane2Id0, enemyRightLane2Id0);
+        animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+        animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
+        animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
 
 
     }
 
-
-    private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
-        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f
-        );
-
-        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
-        ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f
-        );
-
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
-        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
+    private void animateFrontCarLane1(ImageView ivLeft, ImageView ivRight) {
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-28, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3f,
+                1, 3f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
 
         //Create AnimationSet Lane 1
-       /* AnimationSet animationSetLane1 = new AnimationSet(false);
+        AnimationSet animationSetLane1 = new AnimationSet(false);
         animationSetLane1.addAnimation(TranslateAnimation1);
         animationSetLane1.addAnimation(ScaleAnimation1);
         animationSetLane1.setDuration(3000);
         animationSetLane1.setFillAfter(true);
+        animationSetLane1.setStartOffset(5000);
 
         ivLeft.startAnimation(animationSetLane1);
         ivRight.startAnimation(animationSetLane1);
@@ -146,42 +134,62 @@ public class MainActivity extends Activity {
             public void onAnimationRepeat(Animation animation) {
 
             }
-        });*/
+        });
+    }
 
+    private void animateFrontCarLane2(ImageView ivLeft, ImageView ivRight) {
 
-    //Create AnimationSet Lane 2
-    AnimationSet animationSetLane2 = new AnimationSet(false);
-    animationSetLane2.addAnimation(TranslateAnimation2);
-    animationSetLane2.addAnimation(ScaleAnimation2);
-    animationSetLane2.setDuration(3000);
-    animationSetLane2.setFillAfter(true);
+        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
 
-    ivLeft.startAnimation(animationSetLane2);
-    ivRight.startAnimation(animationSetLane2);
+        //Create AnimationSet Lane 2
+        AnimationSet animationSetLane2 = new AnimationSet(false);
+        animationSetLane2.addAnimation(TranslateAnimation2);
+        animationSetLane2.addAnimation(ScaleAnimation2);
+        animationSetLane2.setDuration(3000);
+        animationSetLane2.setFillAfter(true);
 
-    animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
-        @Override
-        public void onAnimationStart(Animation animation) {
+        ivLeft.startAnimation(animationSetLane2);
+        ivRight.startAnimation(animationSetLane2);
 
-        }
+        animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-        @Override
-        public void onAnimationEnd(Animation animation) {
-            isEndEnemyLane2 = true;
-            detectCollision();
-        }
+            }
 
-        @Override
-        public void onAnimationRepeat(Animation animation) {
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isEndEnemyLane2 = true;
+                detectCollision();
+            }
 
-        }
-    });
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    private void animateFrontCarLane3(ImageView ivLeft, ImageView ivRight) {
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+28, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3f,
+                1, 3f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
+
         //Create AnimationSet Lane 3
-       /* AnimationSet animationSetLane3 = new AnimationSet(false);
+        AnimationSet animationSetLane3 = new AnimationSet(false);
         animationSetLane3.addAnimation(TranslateAnimation3);
         animationSetLane3.addAnimation(ScaleAnimation3);
         animationSetLane3.setDuration(3000);
         animationSetLane3.setFillAfter(true);
+        animationSetLane3.setStartOffset(2000);
 
         ivLeft.startAnimation(animationSetLane3);
         ivRight.startAnimation(animationSetLane3);
@@ -202,8 +210,9 @@ public class MainActivity extends Activity {
             public void onAnimationRepeat(Animation animation) {
 
             }
-        });*/
-}
+        });
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -342,18 +351,35 @@ public class MainActivity extends Activity {
 
     private void detectCollision() {
 
-        if (absolutePosition == 1 && isEndEnemyLane1) {
-            t1.setText("scontro su 1");
+        //Detect collision on Line 1
+        if (isEndEnemyLane1){
+            enemyLeftLane1Id0.setAlpha(0);
+            enemyRightLane1Id0.setAlpha(0);
+            if(absolutePosition==1){
+                t1.setText("scontro su 1");
+                //TODO Explosion animation on Line 1
+            }
         }
-        if (absolutePosition == 2 && isEndEnemyLane2) {
-            t1.setText("scontro su 2");
+
+        //Detect collision on Line 2
+        if (isEndEnemyLane2){
             enemyLeftLane2Id0.setAlpha(0);
             enemyRightLane2Id0.setAlpha(0);
-        }
-        if (absolutePosition == 3 && isEndEnemyLane3) {
-            t1.setText("scontro su 3");
+            if(absolutePosition==2){
+                t1.setText("scontro su 2");
+                //TODO Explosion animation on Line 2
+            }
         }
 
-
+        //Detect collision on Line 3
+        if (isEndEnemyLane3){
+            enemyLeftLane3Id0.setAlpha(0);
+            enemyRightLane3Id0.setAlpha(0);
+            if(absolutePosition==3){
+                t1.setText("scontro su 3");
+                //TODO Explosion animation on Line 3
+            }
+        }
     }
 }
+

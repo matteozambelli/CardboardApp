@@ -87,25 +87,63 @@ public class MainActivity extends Activity {
 
         //Left eye panorama
         panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
+        panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
+        panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
+        panoramaLeftSideRightId1= (ImageView) findViewById(R.id.imageViewLeftSideRightId1);
 
+        //Right eye panorama
+        panoramaRightSideLeftId0= (ImageView) findViewById(R.id.imageViewRightSideLeftId0);
+        panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
+        panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
+        panoramaRightSideRightId1= (ImageView) findViewById(R.id.imageViewRightSideRightId1);
 
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
+<<<<<<< HEAD
         animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
         animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
         animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+=======
+        animateFrontCar(enemyLeftLane2Id0, enemyRightLane2Id0);
+        MyAnimation m= new MyAnimation();
+        m.animatePanoramaLeftLeftView(panoramaLeftSideLeftId0,panoramaRightSideLeftId0);
+>>>>>>> origin/master
 
 
     }
 
+<<<<<<< HEAD
     private void animateFrontCarLane1(ImageView ivLeft, ImageView ivRight) {
         TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-28, 0, Animation.RELATIVE_TO_SELF + 30);
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3f,
                 1, 3f,
+=======
+
+
+    private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
+
+        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
+
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
+        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
+>>>>>>> origin/master
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
+
 
         //Create AnimationSet Lane 1
         AnimationSet animationSetLane1 = new AnimationSet(false);

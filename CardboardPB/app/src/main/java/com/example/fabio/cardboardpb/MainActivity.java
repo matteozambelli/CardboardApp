@@ -30,6 +30,20 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
+    //Left eye panorama
+    private ImageView panoramaLeftSideLeftId0;
+    private ImageView panoramaLeftSideLeftId1;
+    private ImageView panoramaLeftSideRightId0;
+    private ImageView panoramaLeftSideRightId1;
+
+    //Right eye panorama
+    private ImageView panoramaRightSideLeftId0;
+    private ImageView panoramaRightSideLeftId1;
+    private ImageView panoramaRightSideRightId0;
+    private ImageView panoramaRightSideRightId1;
+
+
+
     private ImageView carLeft;
     private ImageView carRight;
     private ImageView enemyLeftLane1Id0;
@@ -71,6 +85,8 @@ public class MainActivity extends Activity {
         levelCounterLeft.setText("1");
         levelCounterRight.setText("1");
 
+        //Left eye panorama
+        panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
 
 
 

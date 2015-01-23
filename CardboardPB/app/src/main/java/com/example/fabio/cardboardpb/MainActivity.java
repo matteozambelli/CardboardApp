@@ -25,10 +25,14 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.example.fabio.cardboardpb.Exception.NoLaneException;
+
 import java.util.ArrayList;
 
 
 public class MainActivity extends Activity {
+
+    private GameManager gameManager;
 
     //Left eye panorama
     private ImageView panoramaLeftSideLeftId0;
@@ -68,6 +72,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        gameManager= new GameManager();
+
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
@@ -84,6 +90,8 @@ public class MainActivity extends Activity {
         levelCounterRight= (TextView) findViewById(R.id.textViewLevelRight);
         levelCounterLeft.setText("1");
         levelCounterRight.setText("1");
+
+
 
         //Left eye panorama
         panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
@@ -108,16 +116,45 @@ public class MainActivity extends Activity {
         t1 = (TextView) findViewById(R.id.textViewProva);
 
 
-        MyAnimation panoramaAnimation= new MyAnimation();
-        panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0,panoramaRightSideLeftId0);
-        panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1,panoramaRightSideRightId1);
+        // MOVE THIS
+        hideEnemy(enemyLeftLane1Id0);
+        hideEnemy(enemyLeftLane2Id0);
+        hideEnemy(enemyLeftLane3Id0);
+        hideEnemy(enemyRightLane1Id0);
+        hideEnemy(enemyRightLane2Id0);
+        hideEnemy(enemyRightLane3Id0);
 
-        animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
-        animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
-        animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+        MyAnimation panoramaAnimation= new MyAnimation();
+        panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
+        panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
+        
+        gameManager.generateGameData();
+        ArrayList<EnemiesManager> temp = new ArrayList<EnemiesManager>();
+        int pick;
+        for(int i=0;i<temp.size();i++){
+            pick=temp.get(i).getSelectedLane();
+
+            if(pick==1){
+                animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+            }
+            else if(pick==2){
+                animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
+            }else if(pick==3){
+                animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+            }else{
+                    //TODO catturare eccezzione
+            }
+        }
+
+
+
+
+
+
+
     }
 
-    private void animateFrontCarLane1(ImageView ivLeft, ImageView ivRight) {
+    private void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
         TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-28, 0, Animation.RELATIVE_TO_SELF + 30);
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3f,
                 1, 3f,
@@ -139,7 +176,8 @@ public class MainActivity extends Activity {
         animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
+                showEnemy(ivLeft);
+                showEnemy(ivRight);
             }
 
             @Override
@@ -155,7 +193,7 @@ public class MainActivity extends Activity {
         });
     }
 
-    private void animateFrontCarLane2(ImageView ivLeft, ImageView ivRight) {
+    private void animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight) {
 
         TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
         ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 3.5f,
@@ -177,7 +215,8 @@ public class MainActivity extends Activity {
         animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
+                     showEnemy(ivLeft);
+                     showEnemy(ivRight);
             }
 
             @Override
@@ -193,7 +232,7 @@ public class MainActivity extends Activity {
         });
     }
 
-    private void animateFrontCarLane3(ImageView ivLeft, ImageView ivRight) {
+    private void animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight) {
         TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+28, 0, Animation.RELATIVE_TO_SELF + 30);
         ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3f,
                 1, 3f,
@@ -215,7 +254,8 @@ public class MainActivity extends Activity {
         animationSetLane3.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
+                showEnemy(ivLeft);
+                showEnemy(ivRight);
             }
 
             @Override
@@ -398,6 +438,14 @@ public class MainActivity extends Activity {
                 //TODO Explosion animation on Line 3
             }
         }
+    }
+
+    private void hideEnemy(ImageView img){
+        img.setAlpha(0f);
+    }
+
+    private void showEnemy(ImageView img){
+        img.setAlpha(255f);
     }
 }
 

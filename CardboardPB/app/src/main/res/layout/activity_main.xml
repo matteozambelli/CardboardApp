@@ -22,7 +22,8 @@
             android:id="@+id/imageViewEnemyLeftLane1Id0"
             android:layout_marginTop="118dp"
             android:src="@drawable/car_front"
-            android:layout_marginLeft="80dp" />
+            android:layout_marginLeft="80dp"
+           />
 
         <ImageView
             android:layout_width="55dp"

@@ -1,12 +1,12 @@
 package com.example.fabio.cardboardpb;
 
-import android.view.View;
+
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 /**
  * Created by matteo on 23/01/2015.
@@ -16,6 +16,8 @@ public class MyAnimation {
     private boolean isEndEnemyLane1 = false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
+
+
 
 
     //start enemies animation

@@ -1,6 +1,6 @@
 package com.example.fabio.cardboardpb;
 
-import android.widget.TextView;
+
 
 /**
  * Created by matteo on 23/01/2015.

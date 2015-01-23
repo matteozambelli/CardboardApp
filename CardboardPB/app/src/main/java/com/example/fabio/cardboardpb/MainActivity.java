@@ -117,20 +117,25 @@ public class MainActivity extends Activity {
 
 
         // MOVE THIS
-        hideEnemy(enemyLeftLane1Id0);
+        /*hideEnemy(enemyLeftLane1Id0);
         hideEnemy(enemyLeftLane2Id0);
         hideEnemy(enemyLeftLane3Id0);
         hideEnemy(enemyRightLane1Id0);
         hideEnemy(enemyRightLane2Id0);
-        hideEnemy(enemyRightLane3Id0);
+        hideEnemy(enemyRightLane3Id0);*/
 
 
         MyAnimation panoramaAnimation= new MyAnimation();
         panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
         panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
 
+        animateFrontCarLane1(enemyLeftLane1Id0,enemyRightLane1Id0);
+        animateFrontCarLane2(enemyLeftLane2Id0,enemyRightLane2Id0);
+        animateFrontCarLane3(enemyLeftLane3Id0,enemyRightLane3Id0);
+
+
         gameManager.generateGameData();
-        int pick;
+        /*int pick;
        // for(int i=0;i<temp.size();i++){
            pick=gameManager.getIdEnemy().remove(0).getSelectedLane();
 
@@ -146,7 +151,7 @@ public class MainActivity extends Activity {
                 showEnemy(enemyLeftLane3Id0);
                 animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
             }else{
-                    //TODO catturare eccezzione
+                    //TODO catturare eccezione
             }
 
 
@@ -175,7 +180,7 @@ public class MainActivity extends Activity {
 
         // }
 
-
+*/
 
 
 
@@ -184,10 +189,10 @@ public class MainActivity extends Activity {
     }
 
     private void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-28, 0, Animation.RELATIVE_TO_SELF + 30);
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-38, 0, Animation.RELATIVE_TO_SELF + 38);
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3f,
                 1, 3f,
-                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.9f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
 
 
@@ -205,8 +210,8 @@ public class MainActivity extends Activity {
         animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                showEnemy(ivLeft);
-                showEnemy(ivRight);
+               /* showEnemy(ivLeft);
+                showEnemy(ivRight);*/
             }
 
             @Override
@@ -244,8 +249,8 @@ public class MainActivity extends Activity {
         animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                     showEnemy(ivLeft);
-                     showEnemy(ivRight);
+                     /*showEnemy(ivLeft);
+                     showEnemy(ivRight);*/
             }
 
             @Override
@@ -262,10 +267,10 @@ public class MainActivity extends Activity {
     }
 
     private void animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+28, 0, Animation.RELATIVE_TO_SELF + 30);
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+38, 0, Animation.RELATIVE_TO_SELF + 38);
         ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3f,
                 1, 3f,
-                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.1f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
 
@@ -283,8 +288,8 @@ public class MainActivity extends Activity {
         animationSetLane3.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                showEnemy(ivLeft);
-                showEnemy(ivRight);
+               /* showEnemy(ivLeft);
+                showEnemy(ivRight);*/
             }
 
             @Override

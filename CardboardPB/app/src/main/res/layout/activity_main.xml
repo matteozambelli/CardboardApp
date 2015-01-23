@@ -16,29 +16,74 @@
         android:background="@drawable/background_car1"
         android:layout_weight="50">
 
+        <!--Panorama-->
+
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageViewLeftSideLeftId0"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="65dp"
+            android:src="@drawable/tree_rid" />
+        <!--
+                 <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewLeftSideLeftId1"
+                android:background="@drawable/house"
+                android:layout_alignBottom="@+id/imageViewEnemyLeftLane1Id0"
+                android:layout_toLeftOf="@+id/textViewProva"
+                android:layout_toStartOf="@+id/textViewProva" />
+
+                <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewLeftSideRightId1"
+                android:background="@drawable/house"
+                android:layout_alignBottom="@+id/imageViewLeftSideRightId0"
+                android:layout_toRightOf="@+id/textViewProva"
+                android:layout_toEndOf="@+id/textViewProva" />
+
+                  <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewLeftSideRightId0"
+                android:background="@drawable/tree"
+                android:layout_alignTop="@+id/imageViewEnemyLeftLane3Id0"-->
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageViewLeftSideRightId1"
+            android:background="@drawable/house"
+            android:layout_alignBottom="@+id/imageViewLeftSideLeftId0"
+            android:layout_marginLeft="200dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane1Id0"
-            android:layout_marginTop="118dp"
-            android:src="@drawable/car_front"
-            android:layout_marginLeft="80dp"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/prova_rid"
+            android:layout_marginLeft="101dp"
            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id0"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/prova_right_rid"
+            android:layout_marginLeft="163dp" />
 
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:id="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginTop="118dp"
-            android:src="@drawable/car_front"
+            android:src="@drawable/car_front_rid"
             android:layout_centerHorizontal="true" />
-        <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:id="@+id/imageViewEnemyLeftLane3Id0"
-            android:layout_marginTop="118dp"
-            android:src="@drawable/car_front"
-            android:layout_marginLeft="160dp" />
 
 
 
@@ -47,9 +92,9 @@
             android:layout_height="55dp"
             android:id="@+id/imageViewMyCarLeft"
             android:layout_weight="25"
-            android:background="@drawable/car"
-            android:layout_marginTop="170dp"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="172dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
 <!--REMOVE THIS-->
         <TextView
             android:layout_width="wrap_content"
@@ -69,53 +114,6 @@
             android:layout_marginLeft="120dp"
             android:layout_marginBottom="90dp" />
 
-        <!--Panorama-->
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:id="@+id/imageViewLeftSideLeftId0"
-            android:background="@drawable/tree"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="65dp"
-             />
-    <!--
-             <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageViewLeftSideLeftId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewEnemyLeftLane1Id0"
-            android:layout_toLeftOf="@+id/textViewProva"
-            android:layout_toStartOf="@+id/textViewProva" />
-
-            <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageViewLeftSideRightId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewLeftSideRightId0"
-            android:layout_toRightOf="@+id/textViewProva"
-            android:layout_toEndOf="@+id/textViewProva" />
-
-              <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageViewLeftSideRightId0"
-            android:background="@drawable/tree"
-            android:layout_alignTop="@+id/imageViewEnemyLeftLane3Id0"-->
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageViewLeftSideRightId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewLeftSideLeftId0"
-            android:layout_marginLeft="200dp"
-           />
-
-
-
 
     </RelativeLayout>
 
@@ -128,41 +126,91 @@
         android:background="@drawable/background_car1"
         android:layout_weight="50">
 
+        <!--Panorama-->
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/tree"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="65dp"
+            android:id="@+id/imageViewRightSideLeftId0"
+            android:src="@drawable/tree_rid" />
+
+        <!--   <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageViewRightSideLeftId1"
+               android:background="@drawable/house"
+               android:layout_toLeftOf="@+id/imageViewMyCarRight"
+               android:layout_toStartOf="@+id/imageViewMyCarRight"
+               android:layout_marginLeft="5dp"
+               android:layout_marginTop="127dp"
+              />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageViewRightSideRightId0"
+               android:background="@drawable/tree"
+               android:layout_alignBottom="@+id/imageViewEnemyRightLane1Id0"
+               android:layout_alignRight="@+id/imageViewRightSideRightId1"
+               android:layout_alignEnd="@+id/imageViewRightSideRightId1" />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageViewRightSideRightId1"
+               android:background="@drawable/house"
+               android:layout_alignBottom="@+id/imageViewEnemyRightLane3Id0"
+               android:layout_toRightOf="@+id/imageViewMyCarRight"
+               android:layout_toEndOf="@+id/imageViewMyCarRight"
+               android:layout_marginLeft="23dp"
+               android:layout_marginStart="23dp" />-->
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageViewRightSideRightId1"
+            android:src="@drawable/house"
+            android:layout_alignBottom="@+id/imageViewRightSideLeftId0"
+            android:layout_marginLeft="200dp"
+            />
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane1Id0"
-            android:src="@drawable/car_front"
-            android:layout_marginLeft="80dp"
-            android:layout_alignTop="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:src="@drawable/prova_rid"
+            android:layout_marginLeft="101dp"
+            android:layout_marginTop="127dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane3Id0"
+            android:src="@drawable/prova_right_rid"
+            android:layout_marginLeft="163dp"
+            android:layout_marginTop="127dp"
+            />
 
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:id="@+id/imageViewEnemyRightLane2Id0"
-            android:src="@drawable/car_front"
+            android:src="@drawable/car_front_rid"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="118dp"
+            android:adjustViewBounds="true"
             />
-        <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:id="@+id/imageViewEnemyRightLane3Id0"
-            android:src="@drawable/car_front"
-            android:layout_marginLeft="160dp"
-            android:layout_marginTop="118dp"
-            />
+
 
         <ImageView
             android:layout_width="65dp"
             android:layout_height="55dp"
             android:id="@+id/imageViewMyCarRight"
             android:layout_weight="75"
-            android:background="@drawable/car"
-            android:layout_marginTop="170dp"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="172dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -174,54 +222,6 @@
             android:layout_marginBottom="90dp" />
 
 
-        <!--Panorama-->
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-
-            android:background="@drawable/tree"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="65dp"
-            android:id="@+id/imageViewRightSideLeftId0"
-
-             />
-     <!--   <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageViewRightSideLeftId1"
-            android:background="@drawable/house"
-            android:layout_toLeftOf="@+id/imageViewMyCarRight"
-            android:layout_toStartOf="@+id/imageViewMyCarRight"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="127dp"
-           />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageViewRightSideRightId0"
-            android:background="@drawable/tree"
-            android:layout_alignBottom="@+id/imageViewEnemyRightLane1Id0"
-            android:layout_alignRight="@+id/imageViewRightSideRightId1"
-            android:layout_alignEnd="@+id/imageViewRightSideRightId1" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageViewRightSideRightId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewEnemyRightLane3Id0"
-            android:layout_toRightOf="@+id/imageViewMyCarRight"
-            android:layout_toEndOf="@+id/imageViewMyCarRight"
-            android:layout_marginLeft="23dp"
-            android:layout_marginStart="23dp" />-->
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageViewRightSideRightId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewRightSideLeftId0"
-            android:layout_marginLeft="200dp"
-            />
     </RelativeLayout>
 
 

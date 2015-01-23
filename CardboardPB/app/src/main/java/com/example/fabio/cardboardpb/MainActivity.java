@@ -149,12 +149,12 @@ public class MainActivity extends Activity {
                     //TODO catturare eccezzione
             }
 
-    
+
         /*try {
             wait(gameManager.getIntervall());
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
         pick=gameManager.getIdEnemy().remove(1).getSelectedLane();
 
         if(pick==1){
@@ -171,7 +171,7 @@ public class MainActivity extends Activity {
         }else{
             //TODO catturare eccezzione
         }
-
+*/
 
         // }
 

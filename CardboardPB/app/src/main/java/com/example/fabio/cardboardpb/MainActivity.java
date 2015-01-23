@@ -46,8 +46,6 @@ public class MainActivity extends Activity {
     private ImageView panoramaRightSideRightId0;
     private ImageView panoramaRightSideRightId1;
 
-
-
     private ImageView carLeft;
     private ImageView carRight;
     private ImageView enemyLeftLane1Id0;
@@ -63,9 +61,6 @@ public class MainActivity extends Activity {
     private int leftCarPosition;
     private int rightCarPosition;
     private int absolutePosition = 2;
-    private boolean isEndEnemyLane1 = false;
-    private boolean isEndEnemyLane2 = false;
-    private boolean isEndEnemyLane3 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,13 +120,32 @@ public class MainActivity extends Activity {
         hideEnemy(enemyRightLane3Id0);*/
 
 
-        MyAnimation panoramaAnimation= new MyAnimation();
+        MyAnimationPanorama panoramaAnimation= new MyAnimationPanorama();
+        MyAnimation a= new MyAnimation();
         panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
         panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
 
-        animateFrontCarLane1(enemyLeftLane1Id0,enemyRightLane1Id0);
-        animateFrontCarLane2(enemyLeftLane2Id0,enemyRightLane2Id0);
-        animateFrontCarLane3(enemyLeftLane3Id0,enemyRightLane3Id0);
+        a.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+        a.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
+        a.animateFrontCarLane3(enemyLeftLane3Id0,enemyRightLane3Id0);
+
+
+        CollisionManager c= new CollisionManager(absolutePosition,a.getIsEndEnemyLane1(),a.getIsEndEnemyLane2(),a.getIsEndEnemyLane3());
+
+        if(c.detectCollision()==1){
+            t1.setText("scontro su 1");
+
+        }
+        if(c.detectCollision()==2){
+            t1.setText("scontro su 2");
+
+        }
+
+        if(c.detectCollision()==3){
+            t1.setText("scontro su 3");
+
+        }
+
 
 
         gameManager.generateGameData();
@@ -180,7 +194,7 @@ public class MainActivity extends Activity {
 
         // }
 
-*/
+
 
 
 
@@ -188,7 +202,7 @@ public class MainActivity extends Activity {
 
     }
 
-    private void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
+    /*private void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
         TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-38, 0, Animation.RELATIVE_TO_SELF + 38);
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3f,
                 1, 3f,
@@ -212,7 +226,7 @@ public class MainActivity extends Activity {
             public void onAnimationStart(Animation animation) {
                /* showEnemy(ivLeft);
                 showEnemy(ivRight);*/
-            }
+     /*       }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -251,7 +265,7 @@ public class MainActivity extends Activity {
             public void onAnimationStart(Animation animation) {
                      /*showEnemy(ivLeft);
                      showEnemy(ivRight);*/
-            }
+    /*        }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -290,7 +304,7 @@ public class MainActivity extends Activity {
             public void onAnimationStart(Animation animation) {
                /* showEnemy(ivLeft);
                 showEnemy(ivRight);*/
-            }
+       /*     }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -304,7 +318,7 @@ public class MainActivity extends Activity {
             }
         });
     }
-
+*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -326,6 +340,16 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * we want to kill the activity when it go on pause
+     */
+    @Override
+    protected void onPause() {
+
+        super.onPause();
+        finish();
     }
 
 
@@ -368,6 +392,7 @@ public class MainActivity extends Activity {
                 return super.dispatchKeyEvent(event);
         }
     }
+
 
 
     /**
@@ -440,7 +465,7 @@ public class MainActivity extends Activity {
     }).show();
 */
     }
-
+/*
     private void detectCollision() {
 
         //Detect collision on Line 1
@@ -480,6 +505,6 @@ public class MainActivity extends Activity {
 
     private void showEnemy(ImageView img){
         img.setAlpha(255f);
-    }
+    }*/
 }
 

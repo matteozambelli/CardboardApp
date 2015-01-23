@@ -69,4 +69,12 @@ public class SettingsActivity extends ActionBarActivity {
     }).show();
 */
     }
+
+
+    @Override
+    protected void onPause() {
+
+        super.onPause();
+        finish();
+    }
 }

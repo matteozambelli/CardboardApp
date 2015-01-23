@@ -87,26 +87,34 @@ public class MainActivity extends Activity {
 
         //Left eye panorama
         panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
-        panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
-        panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
+
+    //   panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
+
+      //  panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
+
         panoramaLeftSideRightId1= (ImageView) findViewById(R.id.imageViewLeftSideRightId1);
+
 
         //Right eye panorama
         panoramaRightSideLeftId0= (ImageView) findViewById(R.id.imageViewRightSideLeftId0);
-        panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
-        panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
+
+       //panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
+       // panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
+
         panoramaRightSideRightId1= (ImageView) findViewById(R.id.imageViewRightSideRightId1);
+
 
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
+
+        MyAnimation panoramaAnimation= new MyAnimation();
+        panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0,panoramaRightSideLeftId0);
+        panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1,panoramaRightSideRightId1);
+
         animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
         animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
         animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
-        MyAnimation m= new MyAnimation();
-        m.animatePanoramaLeftLeftView(panoramaLeftSideLeftId0,panoramaRightSideLeftId0);
-
-
     }
 
     private void animateFrontCarLane1(ImageView ivLeft, ImageView ivRight) {

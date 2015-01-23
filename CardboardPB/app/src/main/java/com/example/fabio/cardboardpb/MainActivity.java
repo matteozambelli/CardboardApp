@@ -87,15 +87,26 @@ public class MainActivity extends Activity {
 
         //Left eye panorama
         panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
+        panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
+        panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
+        panoramaLeftSideRightId1= (ImageView) findViewById(R.id.imageViewLeftSideRightId1);
 
+        //Right eye panorama
+        panoramaRightSideLeftId0= (ImageView) findViewById(R.id.imageViewRightSideLeftId0);
+        panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
+        panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
+        panoramaRightSideRightId1= (ImageView) findViewById(R.id.imageViewRightSideRightId1);
 
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
         animateFrontCar(enemyLeftLane2Id0, enemyRightLane2Id0);
+        MyAnimation m= new MyAnimation();
+        m.animatePanoramaLeftLeftView(panoramaLeftSideLeftId0,panoramaRightSideLeftId0);
 
 
     }
+
 
 
     private void animateFrontCar(ImageView ivLeft, ImageView ivRight) {
@@ -119,6 +130,7 @@ public class MainActivity extends Activity {
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
+
 
         //Create AnimationSet Lane 1
        /* AnimationSet animationSetLane1 = new AnimationSet(false);

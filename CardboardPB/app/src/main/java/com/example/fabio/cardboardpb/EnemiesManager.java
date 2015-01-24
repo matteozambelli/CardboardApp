@@ -19,7 +19,7 @@ public class EnemiesManager {
         selectedCar=(int)(numberOfCar*Math.random())+1;
     }
     public void setLane(){
-        selectedLane=2;
+        selectedLane=2; //at first the car is on the center lane
     }
 
     /**

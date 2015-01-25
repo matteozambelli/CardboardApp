@@ -1,32 +1,19 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Activity;
 
-import android.animation.Animator;
-import android.app.ActionBar;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.RotateAnimation;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import com.example.fabio.cardboardpb.Exception.NoLaneException;
-import java.util.ArrayList;
-import static android.animation.Animator.*;
+
+import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
+import com.example.fabio.cardboardpb.Animation.MyAnimationPanorama;
+import com.example.fabio.cardboardpb.Manager.GameManager;
+import com.example.fabio.cardboardpb.R;
 
 
 public class MainActivity extends Activity {

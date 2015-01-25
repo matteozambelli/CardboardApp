@@ -1,15 +1,16 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+
+import com.example.fabio.cardboardpb.R;
 
 /**
  * Created by fabio on 20/01/2015.

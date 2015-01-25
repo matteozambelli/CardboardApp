@@ -1,4 +1,4 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Animation;
 
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;

@@ -1,4 +1,4 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.fabio.cardboardpb.R;
 
 
 public class SettingsActivity extends ActionBarActivity {

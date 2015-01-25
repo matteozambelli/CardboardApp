@@ -1,4 +1,4 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Manager;
 
 import java.util.ArrayList;
 

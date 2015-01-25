@@ -3,7 +3,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/primary_dark_material_dark"
-        tools:context="com.example.fabio.cardboardpb.SettingsActivity"
+        tools:context="com.example.fabio.cardboardpb.Activity.SettingsActivity"
         android:weightSum="100"
         android:orientation="horizontal"
         android:gravity="center">

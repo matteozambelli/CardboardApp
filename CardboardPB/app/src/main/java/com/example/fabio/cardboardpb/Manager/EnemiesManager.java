@@ -1,4 +1,4 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Manager;
 
 /**
  * Created by matteo on 22/01/2015.

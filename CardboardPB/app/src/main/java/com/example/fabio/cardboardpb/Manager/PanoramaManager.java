@@ -1,4 +1,6 @@
-package com.example.fabio.cardboardpb;
+package com.example.fabio.cardboardpb.Manager;
+
+import com.example.fabio.cardboardpb.Manager.Side;
 
 import java.util.Random;
 

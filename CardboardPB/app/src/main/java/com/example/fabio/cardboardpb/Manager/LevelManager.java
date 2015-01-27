@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 
-public class LevelManager{
+public class LevelManager implements LevelManagerInterface{
 
     private int startIntervalTime=10000;
     private int startNumEnemies=3;

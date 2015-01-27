@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by matteo on 22/01/2015.
  */
-public class GameManager {
+public class GameManager implements GameManagerInterface{
 
     private LevelManager levelManager= new LevelManager();
 

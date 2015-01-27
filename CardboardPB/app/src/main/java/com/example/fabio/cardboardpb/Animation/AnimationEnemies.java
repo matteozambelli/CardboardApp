@@ -9,7 +9,7 @@ import android.widget.ImageView;
 /**
  * Created by fabio on 24/01/2015.
  */
-public class AnimationEnemies extends Animation{
+public class AnimationEnemies extends Animation implements AnimationEnemiesInterface{
 
     public AnimationSet animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
         TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-38, 0, Animation.RELATIVE_TO_SELF + 38);

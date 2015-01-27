@@ -7,7 +7,8 @@ import java.util.Random;
 /**
  * Created by matteo on 23/01/2015.
  */
-public class PanoramaManager {
+public class PanoramaManager implements PanoramaManagerInterface
+{
 
 
     private Side selectedSide;
@@ -18,7 +19,7 @@ public class PanoramaManager {
     /**
      * chooses the side and what subject send
      */
-    private void randomPanorama() {
+    public void randomPanorama() {
         int pick = new Random().nextInt(Side.values().length);
         selectedSide= Side.values()[pick];
         idSubject=(int)(numberOfSubject*Math.random())+1;

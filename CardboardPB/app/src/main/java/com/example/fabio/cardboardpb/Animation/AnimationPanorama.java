@@ -9,7 +9,7 @@ import android.widget.ImageView;
 /**
  * Created by matteo on 27/01/2015.
  */
-public class AnimationPanorama {
+public class AnimationPanorama implements AnimationPanoramaInterface{
 
     //start panorama animation
     public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight) {
@@ -87,11 +87,11 @@ public class AnimationPanorama {
     }
     //end panorama animation
 
-    private void hideImage(ImageView img){
+    public void hideImage(ImageView img){
         img.setAlpha(0f);
     }
 
-    private void showImage(ImageView img){
+    public void showImage(ImageView img){
         img.setAlpha(255f);
     }
 }

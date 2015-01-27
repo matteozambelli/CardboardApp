@@ -24,7 +24,7 @@ public class AnimationEnemies extends Animation{
         animationSetLane1.addAnimation(ScaleAnimation1);
         animationSetLane1.setDuration(3000);
         animationSetLane1.setFillAfter(true);
-        animationSetLane1.setStartOffset(5000);
+
 
         ivLeft.startAnimation(animationSetLane1);
         ivRight.startAnimation(animationSetLane1);
@@ -69,11 +69,19 @@ public class AnimationEnemies extends Animation{
         animationSetLane3.addAnimation(ScaleAnimation3);
         animationSetLane3.setDuration(3000);
         animationSetLane3.setFillAfter(true);
-        animationSetLane3.setStartOffset(2000);
+
 
         ivLeft.startAnimation(animationSetLane3);
         ivRight.startAnimation(animationSetLane3);
 
         return animationSetLane3;
+    }
+
+    public void hideImage(ImageView img){
+        img.setAlpha(0f);
+    }
+
+    public void showImage(ImageView img){
+        img.setAlpha(255f);
     }
 }

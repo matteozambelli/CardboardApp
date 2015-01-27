@@ -7,9 +7,9 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
 /**
- * Created by matteo on 23/01/2015.
+ * Created by matteo on 27/01/2015.
  */
-public class MyAnimationPanorama {
+public class AnimationPanorama {
 
     //start panorama animation
     public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight) {

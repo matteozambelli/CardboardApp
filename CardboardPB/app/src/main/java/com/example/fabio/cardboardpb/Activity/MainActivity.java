@@ -11,14 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
-import com.example.fabio.cardboardpb.Animation.MyAnimationPanorama;
-import com.example.fabio.cardboardpb.Manager.GameManager;
+import com.example.fabio.cardboardpb.Animation.AnimationPanorama;
+
+
+import com.example.fabio.cardboardpb.Manager.GameThread;
 import com.example.fabio.cardboardpb.R;
 
 
 public class MainActivity extends Activity {
 
-    private GameManager gameManager;
+   // private GameManager gameManager;
+    private GameThread g;
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
@@ -62,7 +65,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gameManager= new GameManager();
+        //gameManager= new GameManager();
 
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
@@ -103,17 +106,20 @@ public class MainActivity extends Activity {
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
-
+        
         // MOVE THIS
-        /*hideEnemy(enemyLeftLane1Id0);
+        hideEnemy(enemyLeftLane1Id0);
         hideEnemy(enemyLeftLane2Id0);
         hideEnemy(enemyLeftLane3Id0);
         hideEnemy(enemyRightLane1Id0);
         hideEnemy(enemyRightLane2Id0);
-        hideEnemy(enemyRightLane3Id0);*/
+        hideEnemy(enemyRightLane3Id0);
+
+        g=new GameThread(enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0);
 
 
-        MyAnimationPanorama panoramaAnimation= new MyAnimationPanorama();
+
+        AnimationPanorama panoramaAnimation= new AnimationPanorama();
 
         panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
         panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
@@ -121,9 +127,10 @@ public class MainActivity extends Activity {
         animationEnemies=new AnimationEnemies();
 
         //set the animation listener
-        getCollision(animationEnemies);
+        //getCollision(animationEnemies);
+        g.gioca();
 
-        gameManager.generateGameData();
+        //gameManager.generateGameData();
         /*int pick;
        // for(int i=0;i<temp.size();i++){
            pick=gameManager.getIdEnemy().remove(0).getSelectedLane();

@@ -3,7 +3,7 @@ package com.example.fabio.cardboardpb.Manager;
 /**
  * Created by matteo on 22/01/2015.
  */
-public class EnemiesManager {
+public class EnemiesManager implements EnemiesManagerInterface{
 
     private final int lane=3;  //we have 3 lane
     private final int numberOfCar=10; //we have 10 different picture of car

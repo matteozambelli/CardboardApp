@@ -12,9 +12,9 @@ import android.widget.ImageView;
 public class AnimationEnemies extends Animation implements AnimationEnemiesInterface{
 
     public AnimationSet animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-80, 0, Animation.RELATIVE_TO_SELF + 80);
-        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-70, 0, Animation.RELATIVE_TO_SELF + 70);
+        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 5.2f,
+                1, 5.2f,
                 Animation.RELATIVE_TO_SELF, 0.9f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
 
@@ -56,9 +56,9 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
     }
 
     public AnimationSet animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+80, 0, Animation.RELATIVE_TO_SELF + 80);
-        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+70, 0, Animation.RELATIVE_TO_SELF + 70);
+        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 5.2f,
+                1, 5.2f,
                 Animation.RELATIVE_TO_SELF, 0.1f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );

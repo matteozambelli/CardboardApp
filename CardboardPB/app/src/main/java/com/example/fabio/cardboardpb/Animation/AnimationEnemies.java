@@ -12,9 +12,9 @@ import android.widget.ImageView;
 public class AnimationEnemies extends Animation implements AnimationEnemiesInterface{
 
     public AnimationSet animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-38, 0, Animation.RELATIVE_TO_SELF + 38);
-        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3f,
-                1, 3f,
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-80, 0, Animation.RELATIVE_TO_SELF + 80);
+        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
                 Animation.RELATIVE_TO_SELF, 0.9f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
 
@@ -22,7 +22,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         AnimationSet animationSetLane1 = new AnimationSet(false);
         animationSetLane1.addAnimation(TranslateAnimation1);
         animationSetLane1.addAnimation(ScaleAnimation1);
-        animationSetLane1.setDuration(3000);
+        animationSetLane1.setDuration(4600);
         animationSetLane1.setFillAfter(true);
 
 
@@ -56,9 +56,9 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
     }
 
     public AnimationSet animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+38, 0, Animation.RELATIVE_TO_SELF + 38);
-        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3f,
-                1, 3f,
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+80, 0, Animation.RELATIVE_TO_SELF + 80);
+        ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 3.5f,
+                1, 3.5f,
                 Animation.RELATIVE_TO_SELF, 0.1f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
@@ -67,7 +67,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         AnimationSet animationSetLane3 = new AnimationSet(false);
         animationSetLane3.addAnimation(TranslateAnimation3);
         animationSetLane3.addAnimation(ScaleAnimation3);
-        animationSetLane3.setDuration(3000);
+        animationSetLane3.setDuration(4600);
         animationSetLane3.setFillAfter(true);
 
 

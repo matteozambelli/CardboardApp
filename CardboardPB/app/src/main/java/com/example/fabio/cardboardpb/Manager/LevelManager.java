@@ -12,7 +12,6 @@ import java.util.ArrayList;
  */
 
 
-
 public class LevelManager implements LevelManagerInterface{
 
     private int startIntervalTime=10000;

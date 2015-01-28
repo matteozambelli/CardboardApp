@@ -247,6 +247,7 @@ public class MainActivity extends Activity {
         });
 
         threadEnemies.start();
+
         //threadPanorama.start();
 
     }

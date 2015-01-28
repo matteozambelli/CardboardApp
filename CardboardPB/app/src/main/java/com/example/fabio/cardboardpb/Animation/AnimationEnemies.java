@@ -29,6 +29,23 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         ivLeft.startAnimation(animationSetLane1);
         ivRight.startAnimation(animationSetLane1);
 
+        animationSetLane1.setAnimationListener(new AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
         return animationSetLane1;
     }
 
@@ -52,6 +69,8 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
 
         ivLeft.startAnimation(animationSetLane2);
         ivRight.startAnimation(animationSetLane2);
+
+
         return animationSetLane2;
     }
 

@@ -140,7 +140,13 @@ public class MainActivity extends Activity {
         //getCollision(animationEnemies);
         g.gioca();
 
+<<<<<<< HEAD
+        threadEnemies.start();
+
+        //threadPanorama.start();
+=======
         RelativeLayout rlsx=(RelativeLayout)findViewById(R.id.rl1);
+>>>>>>> origin/master
 
 
         //gameManager.generateGameData();

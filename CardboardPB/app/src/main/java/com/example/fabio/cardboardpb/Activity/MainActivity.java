@@ -132,7 +132,6 @@ public class MainActivity extends Activity {
         animationEnemies.hideImage(enemyRightLane2Id0);
         animationEnemies.hideImage(enemyRightLane3Id0);
 
-<<<<<<< HEAD
         //g=new GameThread(this,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0);
 
         //g.gioca();
@@ -141,7 +140,7 @@ public class MainActivity extends Activity {
         gameManager.generateGameData();
         panoramaManager.randomPanorama();
 
-        Thread thread = new Thread(new Runnable() {
+        Thread threadEnemies = new Thread(new Runnable() {
             boolean state;
 
             @Override
@@ -165,31 +164,31 @@ public class MainActivity extends Activity {
                                 panoramaSide=panoramaManager.getSelectedSide();
                                 idPanorama=panoramaManager.getIdSubject();
 
-                                if(panoramaSide.equals(Side.LEFT) && idPanorama==0){
+                                if(panoramaSide.equals(Side.LEFT) && idPanorama==1){
                                     panoramaAnimation.showImage(panoramaLeftSideLeftId0);
                                     panoramaAnimation.showImage(panoramaRightSideLeftId0);
                                    // t1.setText("left 0");
                                     panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
                                 }
 
-                                if(panoramaSide.equals(Side.LEFT) && idPanorama==1){
+                                if(panoramaSide.equals(Side.LEFT) && idPanorama==2){
                                     panoramaAnimation.showImage(panoramaLeftSideLeftId1);
                                     panoramaAnimation.showImage(panoramaRightSideLeftId1);
                                     //t1.setText("left 1");
                                     panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId1, panoramaRightSideLeftId1);
                                 }
 
-                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==0){
+                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==1){
                                     panoramaAnimation.showImage(panoramaLeftSideRightId0);
                                     panoramaAnimation.showImage(panoramaRightSideRightId0);
                                     //t1.setText("right 0");
-                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideRightId0, panoramaRightSideRightId0);
+                                    panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId0, panoramaRightSideRightId0);
                                 }
-                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==1){
+                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==2){
                                     panoramaAnimation.showImage(panoramaLeftSideRightId1);
                                     panoramaAnimation.showImage(panoramaRightSideRightId1);
                                     //t1.setText("right 1");
-                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
+                                    panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
                                 }
 
                                 if(pick==1) {
@@ -231,15 +230,15 @@ public class MainActivity extends Activity {
     }
 
 
-=======
+
         //set the animation listener
 
-        g.gioca();
+        // g.gioca();
         //getCollision(animationEnemies);
 
 
-    }
->>>>>>> origin/master
+
+
 
     private void getCollision(AnimationEnemies animationEnemies) {
 

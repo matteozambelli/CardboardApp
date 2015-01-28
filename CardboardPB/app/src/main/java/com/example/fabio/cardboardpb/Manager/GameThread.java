@@ -1,13 +1,11 @@
 package com.example.fabio.cardboardpb.Manager;
 
-<<<<<<< HEAD
 
 import android.app.Activity;
 import android.os.CountDownTimer;
 import android.util.Log;
-=======
-import android.os.CountDownTimer;
->>>>>>> origin/master
+
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +19,7 @@ import java.util.Timer;
  * Created by matteo on 27/01/2015.
  */
 public class GameThread {
-
+    /*
     private GameManager gameManager;
     private AnimationEnemies animationEnemies;
     private ImageView img1;
@@ -48,19 +46,10 @@ public class GameThread {
     }
 
 
-<<<<<<< HEAD
-    int[] vett = {1, 2, 3};
-    int i = 0;
-=======
-    int min=0;
-    int sec=5;
-    int []vett={1,2,3};
->>>>>>> origin/master
+
 
     int pick;
 
-
-<<<<<<< HEAD
     public void gioca() {
 
 
@@ -82,7 +71,7 @@ public class GameThread {
                             @Override
                             public void run() {
 
-                                if(vett[i]==0) {
+                                if(i==0) {
                                     animationEnemies.showImage(img1);
                                     animationEnemies.animateFrontCarLane1(img1, img1);
                                 }
@@ -94,7 +83,7 @@ public class GameThread {
                                         animationEnemies.showImage(img3);
                                         animationEnemies.animateFrontCarLane3(img3, img3);
                                     }*/
-                                }
+                            /*    }
 
                         });
 
@@ -107,10 +96,10 @@ public class GameThread {
             }
         });
         thread.start();
-=======
-            pick = vett[i];/*gameManager.getIdEnemy().get(i).getSelectedLane();*/
 
-            if (pick == 1) {
+            pick = 0;/*gameManager.getIdEnemy().get(i).getSelectedLane();*/
+
+            /*if (pick == 1) {
                 animationEnemies.showImage(img1);
                 animationEnemies.animateFrontCarLane1(img1, img1);
             }
@@ -147,10 +136,10 @@ public class GameThread {
                 }
             });
             thread.start();
->>>>>>> origin/master
 
 
-    }
+
+    }*/
 
 
 }

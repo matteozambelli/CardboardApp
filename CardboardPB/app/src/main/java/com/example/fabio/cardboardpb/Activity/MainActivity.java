@@ -1,27 +1,20 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Animation.AnimationPanorama;
 
 
-import com.example.fabio.cardboardpb.Manager.GameLoopThread;
 import com.example.fabio.cardboardpb.Manager.GameThread;
-import com.example.fabio.cardboardpb.Manager.GameView;
 import com.example.fabio.cardboardpb.R;
 
 
@@ -29,8 +22,6 @@ public class MainActivity extends Activity {
 
    // private GameManager gameManager;
     private GameThread g;
-    private GameLoopThread glt;
-    private GameView gv;
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
@@ -135,13 +126,9 @@ public class MainActivity extends Activity {
 
         animationEnemies=new AnimationEnemies();
 
-
         //set the animation listener
         //getCollision(animationEnemies);
         g.gioca();
-
-        RelativeLayout rlsx=(RelativeLayout)findViewById(R.id.rl1);
-
 
         //gameManager.generateGameData();
         /*int pick;
@@ -203,7 +190,6 @@ public class MainActivity extends Activity {
                     public void onAnimationEnd(Animation animation) {
                         isEndEnemyLane1 = true;
                         detectCollision();
-
                     }
 
                     @Override
@@ -389,6 +375,7 @@ public class MainActivity extends Activity {
                 !(absolutePosition==2 && isEndEnemyLane2) &&
                 !(absolutePosition==3 && isEndEnemyLane3)){
             t1.setText("no collision");
+
         }
 
         if(absolutePosition==1 && isEndEnemyLane1){

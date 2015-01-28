@@ -10,7 +10,6 @@
 
     <!-- left eye view-->
     <RelativeLayout
-
         android:id="@+id/rl1"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"

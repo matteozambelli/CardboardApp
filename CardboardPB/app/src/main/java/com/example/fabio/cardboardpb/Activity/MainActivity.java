@@ -32,8 +32,6 @@ import com.example.fabio.cardboardpb.R;
 public class MainActivity extends Activity {
 
 
-    private AnimationPanorama animationPanorama;
-    private AnimationEnemies animationEnemies;
     private PanoramaThread panoramaThread;
     private GameThread gameThread;
     private GameLoopThread glt;
@@ -114,40 +112,15 @@ public class MainActivity extends Activity {
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
-        animationPanorama= new AnimationPanorama();
-        animationPanorama.hideImage(panoramaLeftSideLeftId0);
-        animationPanorama.hideImage(panoramaLeftSideLeftId1);
-        animationPanorama.hideImage(panoramaLeftSideRightId0);
-        animationPanorama.hideImage(panoramaLeftSideRightId1);
-        animationPanorama.hideImage(panoramaRightSideLeftId0);
-        animationPanorama.hideImage(panoramaRightSideLeftId1);
-        animationPanorama.hideImage(panoramaRightSideRightId0);
-        animationPanorama.hideImage(panoramaRightSideRightId1);
-
-        animationEnemies=new AnimationEnemies();
-        animationEnemies.hideImage(enemyLeftLane1Id0);
-        animationEnemies.hideImage(enemyLeftLane2Id0);
-        animationEnemies.hideImage(enemyLeftLane3Id0);
-        animationEnemies.hideImage(enemyRightLane1Id0);
-        animationEnemies.hideImage(enemyRightLane2Id0);
-        animationEnemies.hideImage(enemyRightLane3Id0);
 
         //getCollision(animationEnemies);
-
 
         gameThread=new GameThread(this,t1,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,enemyRightLane2Id0,enemyRightLane3Id0);
         panoramaThread=new PanoramaThread(this,panoramaLeftSideLeftId0,panoramaLeftSideLeftId1,panoramaLeftSideRightId0,panoramaLeftSideRightId1,panoramaRightSideLeftId0,panoramaRightSideLeftId1,panoramaRightSideRightId0,panoramaRightSideRightId1);
         gameThread.start();
         //panoramaThread.start();
 
-
-
-
-
        // RelativeLayout rlsx=(RelativeLayout)findViewById(R.id.rl1);
-
-
-
 
     }
 

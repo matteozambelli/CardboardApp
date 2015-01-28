@@ -53,6 +53,14 @@ public class PanoramaThread extends Thread{
         this.panoramaRightSideLeftId1 = panoramaRightSideLeftId1;
         this.panoramaRightSideRightId0 = panoramaRightSideRightId0;
         this.panoramaRightSideRightId1 = panoramaRightSideRightId1;
+        animationPanorama.hideImage(panoramaLeftSideLeftId0);
+        animationPanorama.hideImage(panoramaLeftSideLeftId1);
+        animationPanorama.hideImage(panoramaLeftSideRightId0);
+        animationPanorama.hideImage(panoramaLeftSideRightId1);
+        animationPanorama.hideImage(panoramaRightSideLeftId0);
+        animationPanorama.hideImage(panoramaRightSideLeftId1);
+        animationPanorama.hideImage(panoramaRightSideRightId0);
+        animationPanorama.hideImage(panoramaRightSideRightId1);
     }
 
     @Override

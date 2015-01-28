@@ -56,6 +56,12 @@ public class GameThread extends Thread{
         enemyRightLane1Id0=i4;
         enemyRightLane2Id0=i5;
         enemyRightLane3Id0=i6;
+        animationEnemies.hideImage(enemyLeftLane1Id0);
+        animationEnemies.hideImage(enemyLeftLane2Id0);
+        animationEnemies.hideImage(enemyLeftLane3Id0);
+        animationEnemies.hideImage(enemyRightLane1Id0);
+        animationEnemies.hideImage(enemyRightLane2Id0);
+        animationEnemies.hideImage(enemyRightLane3Id0);
     }
 
 

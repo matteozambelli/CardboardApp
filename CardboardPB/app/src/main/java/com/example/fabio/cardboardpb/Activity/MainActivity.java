@@ -71,9 +71,6 @@ public class MainActivity extends Activity {
     private int rightCarPosition;
     private int absolutePosition = 2;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -161,62 +158,31 @@ public class MainActivity extends Activity {
                                 textLevel.setText("LEVEL "+gameManager.getIdLevel());
                                 pick=gameManager.getIdEnemy().get(i).getSelectedLane();
                                 size=gameManager.getIdEnemy().size();
-                                panoramaSide=panoramaManager.getSelectedSide();
-                                idPanorama=panoramaManager.getIdSubject();
-
-                                if(panoramaSide.equals(Side.LEFT) && idPanorama==1){
-                                    panoramaAnimation.showImage(panoramaLeftSideLeftId0);
-                                    panoramaAnimation.showImage(panoramaRightSideLeftId0);
-                                   // t1.setText("left 0");
-                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
-                                }
-
-                                if(panoramaSide.equals(Side.LEFT) && idPanorama==2){
-                                    panoramaAnimation.showImage(panoramaLeftSideLeftId1);
-                                    panoramaAnimation.showImage(panoramaRightSideLeftId1);
-                                    //t1.setText("left 1");
-                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId1, panoramaRightSideLeftId1);
-                                }
-
-                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==1){
-                                    panoramaAnimation.showImage(panoramaLeftSideRightId0);
-                                    panoramaAnimation.showImage(panoramaRightSideRightId0);
-                                    //t1.setText("right 0");
-                                    panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId0, panoramaRightSideRightId0);
-                                }
-                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==2){
-                                    panoramaAnimation.showImage(panoramaLeftSideRightId1);
-                                    panoramaAnimation.showImage(panoramaRightSideRightId1);
-                                    //t1.setText("right 1");
-                                    panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
-                                }
 
                                 if(pick==1) {
                                     animationEnemies.showImage(enemyLeftLane1Id0);
                                     animationEnemies.showImage(enemyRightLane1Id0);
                                     animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
-                                   // t1.setText("lane 1");
+                                    t1.setText("lane 1");
                                 }
                                 if(pick==2){
                                     animationEnemies.showImage(enemyLeftLane2Id0);
                                     animationEnemies.showImage(enemyRightLane2Id0);
                                     animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0,enemyRightLane2Id0);
-                                    //t1.setText("lane 2");
+                                    t1.setText("lane 2");
                                 }
                                 if(pick==3){
                                     animationEnemies.showImage(enemyLeftLane3Id0);
                                     animationEnemies.showImage(enemyRightLane3Id0);
                                     animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0,enemyRightLane3Id0);
-                                    //t1.setText("lane 3");
+                                    t1.setText("lane 3");
                                 }
 
                             }
                         });
-
                         Thread.sleep(gameManager.getInterval());
                         i++;
                         if(i==size) {
-
                             gameManager.generateGameData();
                             i=0;}
                     }
@@ -225,7 +191,63 @@ public class MainActivity extends Activity {
                 }
             }
         });
-        thread.start();
+
+
+        Thread threadPanorama = new Thread(new Runnable() {
+            boolean state;
+
+            @Override
+            public void run() {
+                while(true){
+                    if(state){
+                        // Se è vero fai questo
+                    }else{
+                        // Se non è vero fai altro
+                    }
+                    state = !state;
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            panoramaSide=panoramaManager.getSelectedSide();
+                            idPanorama=panoramaManager.getIdSubject();
+
+                            if(panoramaSide.equals(Side.LEFT) && idPanorama==1){
+                                panoramaAnimation.showImage(panoramaLeftSideLeftId0);
+                                panoramaAnimation.showImage(panoramaRightSideLeftId0);
+                                // t1.setText("left 0");
+                                panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
+                            }
+
+                            if(panoramaSide.equals(Side.LEFT) && idPanorama==2){
+                                panoramaAnimation.showImage(panoramaLeftSideLeftId1);
+                                panoramaAnimation.showImage(panoramaRightSideLeftId1);
+                                //t1.setText("left 1");
+                                panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId1, panoramaRightSideLeftId1);
+                            }
+
+                            if(panoramaSide.equals(Side.RIGHT) && idPanorama==1){
+                                panoramaAnimation.showImage(panoramaLeftSideRightId0);
+                                panoramaAnimation.showImage(panoramaRightSideRightId0);
+                                //t1.setText("right 0");
+                                panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId0, panoramaRightSideRightId0);
+                            }
+                            if(panoramaSide.equals(Side.RIGHT) && idPanorama==2){
+                                panoramaAnimation.showImage(panoramaLeftSideRightId1);
+                                panoramaAnimation.showImage(panoramaRightSideRightId1);
+                                //t1.setText("right 1");
+                                panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
+                            }
+
+
+                        }
+                    });
+                }
+            }
+        });
+
+        threadEnemies.start();
+        //threadPanorama.start();
 
     }
 
@@ -449,4 +471,3 @@ public class MainActivity extends Activity {
     }
 
 }
-

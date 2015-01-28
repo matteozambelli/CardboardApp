@@ -14,14 +14,27 @@ import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Animation.AnimationPanorama;
 
 
+import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GameThread;
+import com.example.fabio.cardboardpb.Manager.PanoramaManager;
+import com.example.fabio.cardboardpb.Manager.Side;
 import com.example.fabio.cardboardpb.R;
 
 
 public class MainActivity extends Activity {
 
-   // private GameManager gameManager;
-    private GameThread g;
+
+    private int i=0;
+    private TextView textLevel;
+    private GameManager gameManager=new GameManager();
+    private PanoramaManager panoramaManager=new PanoramaManager();
+    private AnimationEnemies animationEnemies;
+    private AnimationPanorama panoramaAnimation;
+    private int pick;
+    private int size;
+    private Side panoramaSide;
+    private int idPanorama;
+    //private GameThread g;
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
@@ -58,14 +71,13 @@ public class MainActivity extends Activity {
     private int rightCarPosition;
     private int absolutePosition = 2;
 
-    private AnimationEnemies animationEnemies;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //gameManager= new GameManager();
 
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
@@ -83,99 +95,141 @@ public class MainActivity extends Activity {
         levelCounterRight= (TextView) findViewById(R.id.textViewLevelRight);
         levelCounterLeft.setText("1");
         levelCounterRight.setText("1");
-
-
+        textLevel= (TextView) findViewById(R.id.textLevel);
 
         //Left eye panorama
         panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
-
-        //panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
-
-        //panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
-
+        panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
+        panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
         panoramaLeftSideRightId1= (ImageView) findViewById(R.id.imageViewLeftSideRightId1);
 
 
         //Right eye panorama
         panoramaRightSideLeftId0= (ImageView) findViewById(R.id.imageViewRightSideLeftId0);
-
-        //panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
-        // panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
-
+        panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
+        panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
         panoramaRightSideRightId1= (ImageView) findViewById(R.id.imageViewRightSideRightId1);
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
-        
-        // MOVE THIS
-        hideEnemy(enemyLeftLane1Id0);
-        hideEnemy(enemyLeftLane2Id0);
-        hideEnemy(enemyLeftLane3Id0);
-        hideEnemy(enemyRightLane1Id0);
-        hideEnemy(enemyRightLane2Id0);
-        hideEnemy(enemyRightLane3Id0);
+        panoramaAnimation= new AnimationPanorama();
 
-        g=new GameThread(enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0);
-
-
-
-        AnimationPanorama panoramaAnimation= new AnimationPanorama();
-
-        panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
         panoramaAnimation.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
+        panoramaAnimation.hideImage(panoramaLeftSideLeftId0);
+        panoramaAnimation.hideImage(panoramaLeftSideLeftId1);
+        panoramaAnimation.hideImage(panoramaLeftSideRightId0);
+        panoramaAnimation.hideImage(panoramaLeftSideRightId1);
+        panoramaAnimation.hideImage(panoramaRightSideLeftId0);
+        panoramaAnimation.hideImage(panoramaRightSideLeftId1);
+        panoramaAnimation.hideImage(panoramaRightSideRightId0);
+        panoramaAnimation.hideImage(panoramaRightSideRightId1);
 
         animationEnemies=new AnimationEnemies();
+        animationEnemies.hideImage(enemyLeftLane1Id0);
+        animationEnemies.hideImage(enemyLeftLane2Id0);
+        animationEnemies.hideImage(enemyLeftLane3Id0);
+        animationEnemies.hideImage(enemyRightLane1Id0);
+        animationEnemies.hideImage(enemyRightLane2Id0);
+        animationEnemies.hideImage(enemyRightLane3Id0);
 
-        //set the animation listener
+        //g=new GameThread(this,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0);
+
+        //g.gioca();
         //getCollision(animationEnemies);
-        g.gioca();
 
-        //gameManager.generateGameData();
-        /*int pick;
-       // for(int i=0;i<temp.size();i++){
-           pick=gameManager.getIdEnemy().remove(0).getSelectedLane();
+        gameManager.generateGameData();
+        panoramaManager.randomPanorama();
 
-            if(pick==1){
-                showEnemy(enemyLeftLane1Id0);
+        Thread thread = new Thread(new Runnable() {
+            boolean state;
 
-                animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+            @Override
+            public void run() {
+                try {
+                    while(true){
+                        if(state){
+                            // Se è vero fai questo
+                        }else{
+                            // Se non è vero fai altro
+                        }
+                        state = !state;
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                textLevel.setText("LEVEL "+gameManager.getIdLevel());
+                                pick=gameManager.getIdEnemy().get(i).getSelectedLane();
+                                size=gameManager.getIdEnemy().size();
+                                panoramaSide=panoramaManager.getSelectedSide();
+                                idPanorama=panoramaManager.getIdSubject();
+
+                                if(panoramaSide.equals(Side.LEFT) && idPanorama==0){
+                                    panoramaAnimation.showImage(panoramaLeftSideLeftId0);
+                                    panoramaAnimation.showImage(panoramaRightSideLeftId0);
+                                   // t1.setText("left 0");
+                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
+                                }
+
+                                if(panoramaSide.equals(Side.LEFT) && idPanorama==1){
+                                    panoramaAnimation.showImage(panoramaLeftSideLeftId1);
+                                    panoramaAnimation.showImage(panoramaRightSideLeftId1);
+                                    //t1.setText("left 1");
+                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideLeftId1, panoramaRightSideLeftId1);
+                                }
+
+                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==0){
+                                    panoramaAnimation.showImage(panoramaLeftSideRightId0);
+                                    panoramaAnimation.showImage(panoramaRightSideRightId0);
+                                    //t1.setText("right 0");
+                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideRightId0, panoramaRightSideRightId0);
+                                }
+                                if(panoramaSide.equals(Side.RIGHT) && idPanorama==1){
+                                    panoramaAnimation.showImage(panoramaLeftSideRightId1);
+                                    panoramaAnimation.showImage(panoramaRightSideRightId1);
+                                    //t1.setText("right 1");
+                                    panoramaAnimation.animatePanoramaLeftView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
+                                }
+
+                                if(pick==1) {
+                                    animationEnemies.showImage(enemyLeftLane1Id0);
+                                    animationEnemies.showImage(enemyRightLane1Id0);
+                                    animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+                                   // t1.setText("lane 1");
+                                }
+                                if(pick==2){
+                                    animationEnemies.showImage(enemyLeftLane2Id0);
+                                    animationEnemies.showImage(enemyRightLane2Id0);
+                                    animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0,enemyRightLane2Id0);
+                                    //t1.setText("lane 2");
+                                }
+                                if(pick==3){
+                                    animationEnemies.showImage(enemyLeftLane3Id0);
+                                    animationEnemies.showImage(enemyRightLane3Id0);
+                                    animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0,enemyRightLane3Id0);
+                                    //t1.setText("lane 3");
+                                }
+
+                            }
+                        });
+
+                        Thread.sleep(gameManager.getInterval());
+                        i++;
+                        if(i==size) {
+
+                            gameManager.generateGameData();
+                            i=0;}
+                    }
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
             }
-            else if(pick==2){
-                showEnemy(enemyLeftLane2Id0);
-                animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
-            }else if(pick==3){
-                showEnemy(enemyLeftLane3Id0);
-                animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
-            }else{
-                    //TODO catturare eccezione
-            }
+        });
+        thread.start();
 
-
-        /*try {
-            wait(gameManager.getIntervall());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        pick=gameManager.getIdEnemy().remove(1).getSelectedLane();
-
-        if(pick==1){
-            showEnemy(enemyLeftLane1Id0);
-
-            animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
-        }
-        else if(pick==2){
-            showEnemy(enemyLeftLane2Id0);
-            animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
-        }else if(pick==3){
-            showEnemy(enemyLeftLane3Id0);
-            animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
-        }else{
-            //TODO catturare eccezzione
-        }
-*/
-
-        // }
     }
+
+
 
     private void getCollision(AnimationEnemies animationEnemies) {
 
@@ -326,19 +380,8 @@ public class MainActivity extends Activity {
             absolutePosition = 1;
         }
         detectCollision();
-        /*
-        new AlertDialog.Builder(this)
-                .setTitle("test mode")
-                .setMessage("key + pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                // continue with delete
-            }
-        }).show();
-*/
     }
 
-
-    //this method will be modify soon
 
     /**
      * handle the key - press event
@@ -356,15 +399,6 @@ public class MainActivity extends Activity {
         }
         detectCollision();
 
-       /*
-        new AlertDialog.Builder(this)
-                .setTitle("test mode")
-                .setMessage("key - pressed").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                // continue with delete
-          }
-}).show();
-*/
     }
 
     private void detectCollision() {
@@ -402,24 +436,8 @@ public class MainActivity extends Activity {
         Intent restart = new Intent(MainActivity.this, MainActivity.class);
         startActivity(restart);
 
-   /*new AlertDialog.Builder(this)
-            .setTitle("test mode")
-            .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-            // continue with delete
-        }
-    }).show();
-*/
+
     }
 
-
-
-    private void hideEnemy(ImageView img){
-        img.setAlpha(0f);
-    }
-
-    private void showEnemy(ImageView img){
-        img.setAlpha(255f);
-    }
 }
 

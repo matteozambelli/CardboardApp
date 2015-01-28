@@ -18,13 +18,7 @@
 
         <!--Panorama-->
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:id="@+id/imageViewLeftSideLeftId0"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="65dp"
-            android:src="@drawable/tree_rid" />
+
         <!--
                  <ImageView
                 android:layout_width="wrap_content"
@@ -50,14 +44,38 @@
                 android:id="@+id/imageViewLeftSideRightId0"
                 android:background="@drawable/tree"
                 android:layout_alignTop="@+id/imageViewEnemyLeftLane3Id0"-->
+        <ImageView
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageViewLeftSideLeftId0"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="65dp"
+        android:src="@drawable/tree_rid" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageViewLeftSideRightId0"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="200dp"
+            android:src="@drawable/tree_rid" />
+
+        <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageViewLeftSideRightId1"
+        android:background="@drawable/house"
+        android:layout_alignBottom="@+id/imageViewLeftSideLeftId0"
+        android:layout_marginLeft="200dp"
+        />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/imageViewLeftSideRightId1"
+            android:id="@+id/imageViewLeftSideLeftId1"
             android:background="@drawable/house"
             android:layout_alignBottom="@+id/imageViewLeftSideLeftId0"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="70dp"
             />
 
         <ImageView
@@ -95,16 +113,7 @@
             android:layout_marginTop="172dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/car_rid" />
-<!--REMOVE THIS-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textViewProva"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-<!---->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,6 +132,26 @@
             android:layout_centerHorizontal="true" />
 
 
+        <!--REMOVE THIS-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textViewProva"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLevel"
+            android:layout_alignTop="@+id/textViewLevelLeft"
+            android:layout_centerHorizontal="true" />
+
+        <!---->
+
+
     </RelativeLayout>
 
 <!-- right eye view-->
@@ -136,14 +165,22 @@
 
         <!--Panorama-->
         <ImageView
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:background="@drawable/tree"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="65dp"
+        android:id="@+id/imageViewRightSideLeftId0"
+        android:src="@drawable/tree_rid" />
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:background="@drawable/tree"
             android:layout_marginTop="120dp"
-            android:layout_marginLeft="65dp"
-            android:id="@+id/imageViewRightSideLeftId0"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/imageViewRightSideRightId0"
             android:src="@drawable/tree_rid" />
-
         <!--   <ImageView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -180,6 +217,16 @@
             android:src="@drawable/house"
             android:layout_alignBottom="@+id/imageViewRightSideLeftId0"
             android:layout_marginLeft="200dp"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageViewRightSideLeftId1"
+            android:src="@drawable/house"
+            android:layout_alignBottom="@+id/imageViewRightSideLeftId0"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="65dp"
             />
 
 
@@ -223,7 +270,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+
             android:id="@+id/textViewLevelRight"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="120dp"

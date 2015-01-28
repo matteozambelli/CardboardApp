@@ -132,6 +132,7 @@ public class MainActivity extends Activity {
         animationEnemies.hideImage(enemyRightLane2Id0);
         animationEnemies.hideImage(enemyRightLane3Id0);
 
+<<<<<<< HEAD
         //g=new GameThread(this,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0);
 
         //g.gioca();
@@ -230,6 +231,15 @@ public class MainActivity extends Activity {
     }
 
 
+=======
+        //set the animation listener
+
+        g.gioca();
+        //getCollision(animationEnemies);
+
+
+    }
+>>>>>>> origin/master
 
     private void getCollision(AnimationEnemies animationEnemies) {
 

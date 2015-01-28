@@ -11,25 +11,32 @@ import android.widget.ImageView;
  */
 public class AnimationEnemies extends Animation implements AnimationEnemiesInterface{
 
-    public AnimationSet animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-70, 0, Animation.RELATIVE_TO_SELF + 70);
-        ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 5.2f,
-                1, 5.2f,
-                Animation.RELATIVE_TO_SELF, 0.9f,
-                Animation.RELATIVE_TO_SELF, 0.5f);
+    public AnimationSet animationSetLane1=new AnimationSet(false);
+    public AnimationSet animationSetLane2=new AnimationSet(false);
+    public AnimationSet animationSetLane3=new AnimationSet(false);
+    TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-70, 0, Animation.RELATIVE_TO_SELF+ 70);
+    ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 5.2f,
+            1, 5.2f,
+            Animation.RELATIVE_TO_SELF, 0.9f,
+            Animation.RELATIVE_TO_SELF, 0.5f);
 
-        //Create AnimationSet Lane 1
-        AnimationSet animationSetLane1 = new AnimationSet(false);
+    //Create AnimationSet Lane 1
+
+
+
+    public void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) {
+
         animationSetLane1.addAnimation(TranslateAnimation1);
         animationSetLane1.addAnimation(ScaleAnimation1);
         animationSetLane1.setDuration(4600);
         animationSetLane1.setFillAfter(true);
 
-
         ivLeft.startAnimation(animationSetLane1);
         ivRight.startAnimation(animationSetLane1);
 
-        animationSetLane1.setAnimationListener(new AnimationListener() {
+
+
+        /*animationSetLane1.setAnimationListener(new AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
 
@@ -44,14 +51,13 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
             public void onAnimationRepeat(Animation animation) {
 
             }
-        });
+        });*/
 
-        return animationSetLane1;
     }
 
 
 
-    public AnimationSet animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight) {
+    public void animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight) {
 
         TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 30);
         ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 3.5f,
@@ -61,7 +67,6 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         );
 
         //Create AnimationSet Lane 2
-        AnimationSet animationSetLane2 = new AnimationSet(false);
         animationSetLane2.addAnimation(TranslateAnimation2);
         animationSetLane2.addAnimation(ScaleAnimation2);
         animationSetLane2.setDuration(3000);
@@ -70,11 +75,9 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         ivLeft.startAnimation(animationSetLane2);
         ivRight.startAnimation(animationSetLane2);
 
-
-        return animationSetLane2;
     }
 
-    public AnimationSet animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight) {
+    public void animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight) {
         TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+70, 0, Animation.RELATIVE_TO_SELF + 70);
         ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,
@@ -83,7 +86,6 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         );
 
         //Create AnimationSet Lane 3
-        AnimationSet animationSetLane3 = new AnimationSet(false);
         animationSetLane3.addAnimation(TranslateAnimation3);
         animationSetLane3.addAnimation(ScaleAnimation3);
         animationSetLane3.setDuration(4600);
@@ -92,8 +94,6 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
 
         ivLeft.startAnimation(animationSetLane3);
         ivRight.startAnimation(animationSetLane3);
-
-        return animationSetLane3;
     }
 
     public void hideImage(ImageView img){

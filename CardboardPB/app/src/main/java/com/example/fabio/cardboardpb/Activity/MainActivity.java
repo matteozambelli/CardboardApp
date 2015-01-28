@@ -132,6 +132,9 @@ public class MainActivity extends Activity {
         animationEnemies.hideImage(enemyRightLane2Id0);
         animationEnemies.hideImage(enemyRightLane3Id0);
 
+        //getCollision(animationEnemies);
+
+
         gameThread=new GameThread(this,t1,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,enemyRightLane2Id0,enemyRightLane3Id0);
         panoramaThread=new PanoramaThread(this,panoramaLeftSideLeftId0,panoramaLeftSideLeftId1,panoramaLeftSideRightId0,panoramaLeftSideRightId1,panoramaRightSideLeftId0,panoramaRightSideLeftId1,panoramaRightSideRightId0,panoramaRightSideRightId1);
         gameThread.start();
@@ -148,63 +151,61 @@ public class MainActivity extends Activity {
 
     }
 
-    private void getCollision(AnimationEnemies animationEnemies) {
+    private void getCollision(final AnimationEnemies animationEnemies) {
 
-        animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0)
-                .setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
+        animationEnemies.animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-                    }
+            }
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        isEndEnemyLane1 = true;
-                        detectCollision();
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isEndEnemyLane1 = true;
+                detectCollision();
+                animationEnemies.animationSetLane1.reset(); //da resettare animzioni, reset non funziona
+            }
 
-                    }
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+            }
+        });
+        animationEnemies.animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-                    }
-                });
-        animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0)
-                .setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
+            }
 
-                    }
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isEndEnemyLane2 = true;
+                detectCollision();
+            }
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        isEndEnemyLane2 = true;
-                        detectCollision();
-                    }
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+            }
+        });
 
-                    }
-                });
-        animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0)
-                .setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
+        animationEnemies.animationSetLane3.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-                    }
+            }
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        isEndEnemyLane3 = true;
-                        detectCollision();
-                    }
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isEndEnemyLane3 = true;
+                detectCollision();
+            }
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
-                    }
-                });
+            }
+        });
     }
 
 

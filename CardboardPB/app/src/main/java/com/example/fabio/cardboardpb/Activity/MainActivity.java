@@ -24,20 +24,18 @@ import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GameThread;
 import com.example.fabio.cardboardpb.Manager.GameView;
 import com.example.fabio.cardboardpb.Manager.PanoramaManager;
+import com.example.fabio.cardboardpb.Manager.PanoramaThread;
 import com.example.fabio.cardboardpb.Manager.Side;
 import com.example.fabio.cardboardpb.R;
 
 
 public class MainActivity extends Activity {
 
-    private int pick,size,i;
+
     private AnimationPanorama animationPanorama;
     private AnimationEnemies animationEnemies;
-    private PanoramaManager panoramaManager=new PanoramaManager();
-    private Side panoramaSide;
-    private int idPanorama;
-    private GameManager gameManager=new GameManager();
-    private GameThread g;
+    private PanoramaThread panoramaThread;
+    private GameThread gameThread;
     private GameLoopThread glt;
     private GameView gv;
     private boolean isEndEnemyLane1 =false;
@@ -134,133 +132,13 @@ public class MainActivity extends Activity {
         animationEnemies.hideImage(enemyRightLane2Id0);
         animationEnemies.hideImage(enemyRightLane3Id0);
 
-        //  g=new GameThread(enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0);
-        //set the animation listener
-        //getCollision(animationEnemies);
-        // g.gioca();
+        gameThread=new GameThread(this,t1,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,enemyRightLane2Id0,enemyRightLane3Id0);
+        panoramaThread=new PanoramaThread(this,panoramaLeftSideLeftId0,panoramaLeftSideLeftId1,panoramaLeftSideRightId0,panoramaLeftSideRightId1,panoramaRightSideLeftId0,panoramaRightSideLeftId1,panoramaRightSideRightId0,panoramaRightSideRightId1);
+        gameThread.start();
+        //panoramaThread.start();
 
 
 
-        panoramaManager.randomPanorama();
-        gameManager.generateGameData();
-        i=0;
-
-
-
-        Thread threadEnemies = new Thread(new Runnable() {
-            boolean state;
-
-            @Override
-            public void run() {
-                while(true){
-                    if(state){
-                        // Se è vero fai questo
-                    }else{
-                        // Se non è vero fai altro
-                    }
-                    state = !state;
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            textLevel.setText("LEVEL "+gameManager.getIdLevel());
-                            pick=gameManager.getIdEnemy().get(i).getSelectedLane();
-                            size=gameManager.getIdEnemy().size();
-
-                            if(pick==1) {
-                                animationEnemies.showImage(enemyLeftLane1Id0);
-                                animationEnemies.showImage(enemyRightLane1Id0);
-                                animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
-
-                                t1.setText("lane 1");
-                            }
-                            if(pick==2){
-                                animationEnemies.showImage(enemyLeftLane2Id0);
-                                animationEnemies.showImage(enemyRightLane2Id0);
-                                animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0,enemyRightLane2Id0);
-
-                                t1.setText("lane 2");
-                            }
-                            if(pick==3){
-                                animationEnemies.showImage(enemyLeftLane3Id0);
-                                animationEnemies.showImage(enemyRightLane3Id0);
-                                animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0,enemyRightLane3Id0);
-
-                                t1.setText("lane 3");
-                            }
-
-                        }
-                    });
-                    try {
-                        Thread.sleep(gameManager.getInterval());
-                        i++;
-                        if(i==size) {
-                            gameManager.generateGameData();
-                            i=0;
-                        }
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            }
-        });
-
-        Thread threadPanorama = new Thread(new Runnable() {
-            boolean state;
-
-            @Override
-            public void run() {
-                while(true){
-                    if(state){
-                        // Se è vero fai questo
-                    }else{
-                        // Se non è vero fai altro
-                    }
-                    state = !state;
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            panoramaSide=panoramaManager.getSelectedSide();
-                            idPanorama=panoramaManager.getIdSubject();
-
-                            if(panoramaSide.equals(Side.LEFT) && idPanorama==1){
-                                animationPanorama.showImage(panoramaLeftSideLeftId0);
-                                animationPanorama.showImage(panoramaRightSideLeftId0);
-                                // t1.setText("left 0");
-                                animationPanorama.animatePanoramaLeftView(panoramaLeftSideLeftId0, panoramaRightSideLeftId0);
-                            }
-
-                            if(panoramaSide.equals(Side.LEFT) && idPanorama==2){
-                                animationPanorama.showImage(panoramaLeftSideLeftId1);
-                                animationPanorama.showImage(panoramaRightSideLeftId1);
-                                //t1.setText("left 1");
-                                animationPanorama.animatePanoramaLeftView(panoramaLeftSideLeftId1, panoramaRightSideLeftId1);
-                            }
-
-                            if(panoramaSide.equals(Side.RIGHT) && idPanorama==1){
-                                animationPanorama.showImage(panoramaLeftSideRightId0);
-                                animationPanorama.showImage(panoramaRightSideRightId0);
-                                //t1.setText("right 0");
-                                animationPanorama.animatePanoramaRightView(panoramaLeftSideRightId0, panoramaRightSideRightId0);
-                            }
-                            if(panoramaSide.equals(Side.RIGHT) && idPanorama==2){
-                                animationPanorama.showImage(panoramaLeftSideRightId1);
-                                animationPanorama.showImage(panoramaRightSideRightId1);
-                                //t1.setText("right 1");
-                                animationPanorama.animatePanoramaRightView(panoramaLeftSideRightId1, panoramaRightSideRightId1);
-                            }
-
-
-                        }
-                    });
-                }
-            }
-        });
-
-        threadEnemies.start();
-       // threadPanorama.start();
 
 
        // RelativeLayout rlsx=(RelativeLayout)findViewById(R.id.rl1);

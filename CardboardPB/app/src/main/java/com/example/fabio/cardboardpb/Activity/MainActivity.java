@@ -1,31 +1,23 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
-import com.example.fabio.cardboardpb.Animation.AnimationPanorama;
 
 
-import com.example.fabio.cardboardpb.Manager.GameLoopThread;
-import com.example.fabio.cardboardpb.Manager.GameManager;
-import com.example.fabio.cardboardpb.Manager.GameThread;
-import com.example.fabio.cardboardpb.Manager.GameView;
-import com.example.fabio.cardboardpb.Manager.PanoramaManager;
-import com.example.fabio.cardboardpb.Manager.PanoramaThread;
-import com.example.fabio.cardboardpb.Manager.Side;
+import com.example.fabio.cardboardpb.Thread.GameLoopThread;
+import com.example.fabio.cardboardpb.Thread.GameThread;
+import com.example.fabio.cardboardpb.Thread.GameAnimationView;
+import com.example.fabio.cardboardpb.Thread.PanoramaThread;
 import com.example.fabio.cardboardpb.R;
 
 
@@ -35,7 +27,9 @@ public class MainActivity extends Activity {
     private PanoramaThread panoramaThread;
     private GameThread gameThread;
     private GameLoopThread glt;
-    private GameView gv;
+    private GameAnimationView gvLeft;
+    private GameAnimationView gvRight;
+
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
@@ -80,6 +74,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
+
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
         enemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
@@ -113,14 +108,26 @@ public class MainActivity extends Activity {
         t1 = (TextView) findViewById(R.id.textViewProva);
 
 
+
         //getCollision(animationEnemies);
 
+        RelativeLayout relativeLayoutAnimationLeft=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundLeft);
+        RelativeLayout relativeLayoutAnimationRight=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundRight);
+        gvLeft=new GameAnimationView(this);
+        gvRight=new GameAnimationView(this);
+        relativeLayoutAnimationLeft.addView(gvLeft);
+        relativeLayoutAnimationRight.addView(gvRight);
+        //RelativeLayout.LayoutParams lp=new RelativeLayout.LayoutParams(600,600);
+        //lp.height=200;
+        //lp.width=200;
+        //lp.alignWithParent=true;
+        //gv.setLayoutParams(lp);
+
         gameThread=new GameThread(this,t1,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,enemyRightLane2Id0,enemyRightLane3Id0);
-        panoramaThread=new PanoramaThread(this,panoramaLeftSideLeftId0,panoramaLeftSideLeftId1,panoramaLeftSideRightId0,panoramaLeftSideRightId1,panoramaRightSideLeftId0,panoramaRightSideLeftId1,panoramaRightSideRightId0,panoramaRightSideRightId1);
+       // panoramaThread=new PanoramaThread(this,panoramaLeftSideLeftId0,panoramaLeftSideLeftId1,panoramaLeftSideRightId0,panoramaLeftSideRightId1,panoramaRightSideLeftId0,panoramaRightSideLeftId1,panoramaRightSideRightId0,panoramaRightSideRightId1);
         gameThread.start();
         //panoramaThread.start();
 
-       // RelativeLayout rlsx=(RelativeLayout)findViewById(R.id.rl1);
 
     }
 

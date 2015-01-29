@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- From: file:/C:/Users/matteo/Documents/GitHub/CardboardApp/HelloOpenGLES20/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="app_name">Hello OpenGL ES 2.0</string>
-    <string name="hello">Hello, OpenGL ES 2.0!</string>
-</resources>

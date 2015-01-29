@@ -1,1 +1,0 @@
-C:\Users\matteo\Documents\GitHub\CardboardApp\HelloOpenGLES20\app\build\intermediates\classes\debug

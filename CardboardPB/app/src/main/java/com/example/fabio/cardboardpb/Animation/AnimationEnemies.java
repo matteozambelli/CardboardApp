@@ -69,7 +69,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         //Create AnimationSet Lane 2
         animationSetLane2.addAnimation(TranslateAnimation2);
         animationSetLane2.addAnimation(ScaleAnimation2);
-        animationSetLane2.setDuration(3000);
+        animationSetLane2.setDuration(3500);
         animationSetLane2.setFillAfter(true);
 
         ivLeft.startAnimation(animationSetLane2);

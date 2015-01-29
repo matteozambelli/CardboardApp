@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/fabio/Documents/GitHub/CardboardApp/frozen-bubble-android-master_V.Base/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/matteo/Documents/GitHub/CardboardApp/frozen-bubble-android-master_V.Base/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Frozen Bubble</string>
     <string name="install_editor">Redirecting you to the Market to download the Frozen Bubble Level Editor...</string>

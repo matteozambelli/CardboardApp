@@ -10,41 +10,25 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
-
-
 import com.example.fabio.cardboardpb.Thread.GameLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.Thread.GameAnimationView;
-import com.example.fabio.cardboardpb.Thread.PanoramaThread;
 import com.example.fabio.cardboardpb.R;
 
 
 public class MainActivity extends Activity {
 
 
-    private PanoramaThread panoramaThread;
     private GameThread gameThread;
     private GameLoopThread glt;
     private GameAnimationView gvLeft;
     private GameAnimationView gvRight;
-
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
 
-    //Left eye panorama
-    private ImageView panoramaLeftSideLeftId0;
-    private ImageView panoramaLeftSideLeftId1;
-    private ImageView panoramaLeftSideRightId0;
-    private ImageView panoramaLeftSideRightId1;
 
-    //Right eye panorama
-    private ImageView panoramaRightSideLeftId0;
-    private ImageView panoramaRightSideLeftId1;
-    private ImageView panoramaRightSideRightId0;
-    private ImageView panoramaRightSideRightId1;
 
     //Our car
     private ImageView carLeft;
@@ -92,18 +76,7 @@ public class MainActivity extends Activity {
         levelCounterRight.setText("1");
         textLevel=(TextView) findViewById(R.id.textView3);
 
-        //Left eye panorama
-        panoramaLeftSideLeftId0= (ImageView) findViewById(R.id.imageViewLeftSideLeftId0);
-        panoramaLeftSideLeftId1= (ImageView) findViewById(R.id.imageViewLeftSideLeftId1);
-        panoramaLeftSideRightId0= (ImageView) findViewById(R.id.imageViewLeftSideRightId0);
-        panoramaLeftSideRightId1= (ImageView) findViewById(R.id.imageViewLeftSideRightId1);
 
-
-        //Right eye panorama
-        panoramaRightSideLeftId0= (ImageView) findViewById(R.id.imageViewRightSideLeftId0);
-        panoramaRightSideLeftId1= (ImageView) findViewById(R.id.imageViewRightSideLeftId1);
-        panoramaRightSideRightId0= (ImageView) findViewById(R.id.imageViewRightSideRightId0);
-        panoramaRightSideRightId1= (ImageView) findViewById(R.id.imageViewRightSideRightId1);
 
         t1 = (TextView) findViewById(R.id.textViewProva);
 
@@ -124,9 +97,9 @@ public class MainActivity extends Activity {
         //gv.setLayoutParams(lp);
 
         gameThread=new GameThread(this,t1,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,enemyRightLane2Id0,enemyRightLane3Id0);
-       // panoramaThread=new PanoramaThread(this,panoramaLeftSideLeftId0,panoramaLeftSideLeftId1,panoramaLeftSideRightId0,panoramaLeftSideRightId1,panoramaRightSideLeftId0,panoramaRightSideLeftId1,panoramaRightSideRightId0,panoramaRightSideRightId1);
+
         gameThread.start();
-        //panoramaThread.start();
+
 
 
     }

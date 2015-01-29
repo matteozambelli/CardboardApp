@@ -26,46 +26,6 @@
 
             </RelativeLayout>
 
-        <!--Panorama-->
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:id="@+id/imageViewLeftSideLeftId0"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="65dp"
-            android:src="@drawable/tree_rid" />
-
-
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:id="@+id/imageViewLeftSideRightId0"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="200dp"
-            android:src="@drawable/tree_rid" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageViewLeftSideRightId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewLeftSideLeftId0"
-            android:layout_marginLeft="200dp"
-            />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageViewLeftSideLeftId1"
-            android:background="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewLeftSideLeftId0"
-            android:layout_marginLeft="65dp"
-            />
-
-
-
 
         <ImageView
             android:layout_width="35dp"
@@ -150,7 +110,7 @@
         android:id="@+id/rl2"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:background="@drawable/background_car1_rid"
+
         android:layout_weight="50">
 
         <RelativeLayout
@@ -161,47 +121,6 @@
             android:layout_centerHorizontal="true">
 
         </RelativeLayout>
-
-        <!--Panorama-->
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:background="@drawable/tree_rid"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="65dp"
-            android:id="@+id/imageViewRightSideLeftId0"
-            android:src="@drawable/tree_rid" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:background="@drawable/tree_rid"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="200dp"
-            android:id="@+id/imageViewRightSideRightId0"
-            android:src="@drawable/tree_rid" />
-
-
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageViewRightSideLeftId1"
-            android:src="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewRightSideLeftId0"
-            android:layout_marginLeft="65dp"
-            />
-
-
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageViewRightSideRightId1"
-            android:src="@drawable/house"
-            android:layout_alignBottom="@+id/imageViewRightSideLeftId0"
-            android:layout_marginLeft="200dp"
-            />
 
 
         <ImageView

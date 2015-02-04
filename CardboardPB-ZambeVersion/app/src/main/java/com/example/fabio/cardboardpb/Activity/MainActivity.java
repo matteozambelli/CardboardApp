@@ -2,7 +2,6 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,9 +14,9 @@ import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
+import com.example.fabio.cardboardpb.Thread.GameAnimationView;
 import com.example.fabio.cardboardpb.Thread.GameLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
-import com.example.fabio.cardboardpb.Thread.GameAnimationView;
 import com.example.fabio.cardboardpb.R;
 
 
@@ -109,9 +108,9 @@ public class MainActivity extends Activity {
         RelativeLayout relativeLayoutAnimationLeft=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundLeft);
         RelativeLayout relativeLayoutAnimationRight=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundRight);
         gvLeft=new GameAnimationView(this);
-        gvRight=new GameAnimationView(this);
+        //gvRight=new GameAnimationView(this);
         relativeLayoutAnimationLeft.addView(gvLeft);
-        relativeLayoutAnimationRight.addView(gvRight);
+        //relativeLayoutAnimationRight.addView(gvRight);
         //RelativeLayout.LayoutParams lp=new RelativeLayout.LayoutParams(600,600);
         //lp.height=200;
         //lp.width=200;

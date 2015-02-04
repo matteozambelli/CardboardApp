@@ -53,7 +53,7 @@ public class GameAnimationView extends SurfaceView {
         });
         holder.setFormat(PixelFormat.TRANSPARENT);
         //bmpFire = BitmapFactory.decodeResource(getResources(), R.drawable.explosion_anim1);
-        bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.background_car1_ridotta);
+        bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.car_front_sprite);
         spriteBackground = new Sprite(this,bmpBackground);
 
     }

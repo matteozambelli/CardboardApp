@@ -1,0 +1,113 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/primary_dark_material_dark"
+        tools:context="com.example.fabio.cardboardpb.Activity.SettingsActivity"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:background="@color/White"
+            android:layout_weight="50">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PRESS UP TO START"
+                android:id="@+id/textView1"
+                android:textColor="@color/Black"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="104dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewBackground"
+                android:background="@drawable/background_settings"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SELECT THE EYE"
+                android:id="@+id/textViewSelectEyeLeft"
+                android:layout_marginBottom="111dp"
+                android:textColor="@color/Black"
+                android:layout_above="@+id/textView1"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageArrowMinus"
+                android:src="@drawable/arrow_minus"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textViewEye1"
+                android:layout_toStartOf="@+id/textViewEye1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Left"
+                android:id="@+id/textViewEye1"
+                android:textColor="@color/Black"
+                android:layout_alignBottom="@+id/imageArrowMinus"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageArrowPlus"
+                android:src="@drawable/arrow_plus"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textViewEye1"
+                android:layout_toEndOf="@+id/textViewEye1" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:background="@color/White"
+            android:layout_weight="50">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PRESS UP TO START"
+                android:id="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/Black"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="104dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background_settings"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+

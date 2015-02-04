@@ -1,0 +1,212 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary_dark_material_dark"
+    tools:context=".MainActivity"
+    android:weightSum="100"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- left eye view-->
+    <RelativeLayout
+
+        android:id="@+id/rl1"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutAnimationBackgroundLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane1Id0"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/prova_rid"
+            android:layout_marginLeft="101dp"
+           />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id0"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/prova_right_rid"
+            android:layout_marginLeft="163dp" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/car_front_rid"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/target1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/target"
+            android:layout_marginLeft="101dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/target3"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/target"
+            android:layout_marginLeft="163dp" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/target2"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/target"
+            android:layout_centerHorizontal="true" />
+
+
+
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewMyCarLeft"
+            android:layout_weight="25"
+            android:layout_marginTop="172dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewLevelLeft"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="90dp" />
+
+       <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewBackgroundBlackLeft"
+            android:src="@drawable/background_black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView3"
+            android:layout_alignTop="@+id/textViewLevelLeft"
+            android:layout_centerHorizontal="true" />
+
+        <!--REMOVE THIS-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+
+            android:id="@+id/textViewProva"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <!---->
+
+
+
+    </RelativeLayout>
+
+<!-- right eye view-->
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+
+        android:layout_weight="50">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutAnimationBackgroundRight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane1Id0"
+            android:src="@drawable/prova_rid"
+            android:layout_marginLeft="101dp"
+            android:layout_marginTop="127dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane3Id0"
+            android:src="@drawable/prova_right_rid"
+            android:layout_marginLeft="163dp"
+            android:layout_marginTop="127dp"
+            />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyRightLane2Id0"
+            android:src="@drawable/car_front_rid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="118dp"
+            android:adjustViewBounds="true"
+            />
+
+
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewMyCarRight"
+            android:layout_weight="75"
+            android:layout_marginTop="172dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewLevelRight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="90dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewBackgroundBlackRight"
+            android:src="@drawable/background_black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

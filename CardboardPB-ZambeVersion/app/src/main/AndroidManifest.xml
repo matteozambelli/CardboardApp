@@ -37,6 +37,11 @@
             android:label="@string/title_activity_settings"
             android:screenOrientation="landscape" >
         </activity>
+        <activity
+            android:name=".Activity.LanguageActivity"
+            android:label="@string/title_activity_language"
+            android:screenOrientation="landscape" >
+        </activity>
     </application>
 
 </manifest>

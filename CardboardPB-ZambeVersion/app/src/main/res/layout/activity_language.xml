@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary_dark_material_dark"
+    tools:context="com.example.fabio.cardboardpb.Activity.SettingsActivity"
+    android:weightSum="100"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:background="@color/White"
+        android:layout_weight="50">
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewBackground"
+            android:background="@drawable/background_settings"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="English"
+            android:id="@+id/textViewLanguageLeft"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="SELECT THE LANGUAGE"
+            android:id="@+id/textViewSelectLeft"
+            android:layout_above="@+id/textViewLanguageLeft"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="45dp"
+            android:textColor="@color/Black"/>
+
+        <ImageView
+
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageViewArrowPlus1"
+            android:src="@drawable/arrow_plus_rotate"
+            android:layout_above="@+id/textViewLanguageLeft"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageViewArrowMinus1"
+            android:src="@drawable/arrow_minus_rotate"
+            android:layout_below="@+id/textViewLanguageLeft"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PRESS HOME TO START"
+            android:id="@+id/textViewStart1"
+            android:layout_below="@+id/imageViewArrowMinus1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:textColor="@color/Black"/>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:background="@color/White"
+        android:layout_weight="50">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_settings"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="English"
+            android:id="@+id/textViewLanguageRight"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT THE LANGUAGE"
+            android:id="@+id/textViewSelectRight"
+            android:layout_above="@+id/textViewLanguageRight"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="39dp"
+            android:textColor="@color/Black"/>
+
+        <ImageView
+
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageViewArrowPlus2"
+            android:src="@drawable/arrow_plus_rotate"
+            android:layout_above="@+id/textViewLanguageRight"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageViewArrowMinus2"
+            android:src="@drawable/arrow_minus_rotate"
+            android:layout_below="@+id/textViewLanguageRight"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PRESS HOME TO START"
+            android:id="@+id/textViewStart2"
+            android:layout_below="@+id/imageViewArrowMinus2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:textColor="@color/Black"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
+

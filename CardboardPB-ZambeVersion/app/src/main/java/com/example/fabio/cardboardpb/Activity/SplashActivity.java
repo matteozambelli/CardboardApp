@@ -10,6 +10,7 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
+import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.R;
 
 /**
@@ -58,7 +59,7 @@ public class SplashActivity extends Activity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashActivity.this, SettingsActivity.class);
+                Intent i = new Intent(SplashActivity.this, LanguageActivity.class);
                 startActivity(i);
 
                 // close this activity

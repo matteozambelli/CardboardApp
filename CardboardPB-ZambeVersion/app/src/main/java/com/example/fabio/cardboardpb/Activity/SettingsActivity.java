@@ -11,24 +11,49 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.fabio.cardboardpb.Exception.MyException;
+import com.example.fabio.cardboardpb.Manager.Enum.Eye;
+import com.example.fabio.cardboardpb.Manager.Enum.Language;
+import com.example.fabio.cardboardpb.Manager.LanguageManager;
 import com.example.fabio.cardboardpb.R;
 
 
 public class SettingsActivity extends ActionBarActivity {
 
-    private TextView textEyeLeft,textEyeRight;
 
-    private String eye="Left";
+    private LanguageManager languageManager;
+    private Eye eye= Eye.LEFT_EYE;
+    private Language language=Language.ENGLISH;
+    private TextView textEyeLeft,textEyeRight,textSelectLeft,textSelectRight,textStartLeft,textStartRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        Intent intent=getIntent();
+        Bundle data = getIntent().getExtras();
+        language=(Language) intent.getSerializableExtra("language");
+        languageManager=new LanguageManager(language);
+        languageManager.suitable();
+
         textEyeLeft=(TextView) findViewById(R.id.textViewEye1);
+        textEyeLeft.setText(languageManager.getEyeLeft());
 
+        textEyeRight=(TextView) findViewById(R.id.textViewEye2);
+        textEyeRight.setText(languageManager.getEyeLeft());
 
+        textStartLeft=(TextView) findViewById(R.id.textSettingsStart1);
+        textStartLeft.setText(languageManager.getSettingsStart());
 
+        textStartRight=(TextView) findViewById(R.id.textSettingsStart2);
+        textStartRight.setText(languageManager.getSettingsStart());
+
+        textSelectLeft=(TextView) findViewById(R.id.textViewSelectEyeLeft);
+        textSelectLeft.setText(languageManager.getSettingsTitle());
+
+        textSelectRight=(TextView) findViewById(R.id.textViewSelectEyeRight);
+        textSelectRight.setText(languageManager.getSettingsTitle());
 
     }
 
@@ -100,6 +125,7 @@ public class SettingsActivity extends ActionBarActivity {
 
         Intent startGame = new Intent(SettingsActivity.this, MainActivity.class);
         startGame.putExtra("eye", eye);
+        startGame.putExtra("language", language);
         startActivity(startGame);
 
    /*new AlertDialog.Builder(this)
@@ -121,12 +147,20 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     private void changeEye(){
-        if(textEyeLeft.getText().equals("Left")){
-            textEyeLeft.setText("Right");
-            eye="Right";
+        if(textEyeLeft.getText().equals(languageManager.getEyeLeft())){
+            textEyeLeft.setText(languageManager.getEyeRight());
+            textEyeRight.setText(languageManager.getEyeRight());
+            eye=Eye.RIGHT_EYE;
+        }else if(textEyeLeft.getText().equals(languageManager.getEyeRight())){
+            textEyeLeft.setText(languageManager.getEyeLeft());
+            textEyeRight.setText(languageManager.getEyeLeft());
+            eye=Eye.LEFT_EYE;
         }else{
-            textEyeLeft.setText("Left");
-            eye="Left";
+            try {
+                throw new MyException("No eye");
+            } catch (MyException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -21,9 +21,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="PRESS UP TO START"
-                android:id="@+id/textView1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="PRESS HOME TO START"
+                android:id="@+id/textSettingsStart1"
                 android:textColor="@color/Black"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
@@ -46,13 +46,13 @@
                 android:id="@+id/textViewSelectEyeLeft"
                 android:layout_marginBottom="111dp"
                 android:textColor="@color/Black"
-                android:layout_above="@+id/textView1"
+                android:layout_above="@+id/textSettingsStart1"
                 android:layout_centerHorizontal="true" />
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:id="@+id/imageArrowMinus"
+                android:id="@+id/imageArrowMinus1"
                 android:src="@drawable/arrow_minus"
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@+id/textViewEye1"
@@ -65,12 +65,12 @@
                 android:text="Left"
                 android:id="@+id/textViewEye1"
                 android:textColor="@color/Black"
-                android:layout_alignBottom="@+id/imageArrowMinus"
+                android:layout_alignBottom="@+id/imageArrowMinus1"
                 android:layout_centerHorizontal="true" />
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:id="@+id/imageArrowPlus"
+                android:id="@+id/imageArrowPlus1"
                 android:src="@drawable/arrow_plus"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/textViewEye1"
@@ -91,9 +91,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="PRESS UP TO START"
-                android:id="@+id/textView2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="PRESS HOME TO START"
+                android:id="@+id/textSettingsStart2"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/Black"
                 android:layout_alignParentBottom="true"
@@ -106,6 +106,44 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/background_settings"
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SELECT THE EYE"
+                android:id="@+id/textViewSelectEyeRight"
+                android:layout_marginBottom="111dp"
+                android:textColor="@color/Black"
+                android:layout_above="@+id/textSettingsStart2"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageArrowMinus2"
+                android:src="@drawable/arrow_minus"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textViewEye2"
+                android:layout_toStartOf="@+id/textViewEye2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Left"
+                android:id="@+id/textViewEye2"
+                android:textColor="@color/Black"
+                android:layout_alignBottom="@+id/imageArrowMinus2"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageArrowPlus2"
+                android:src="@drawable/arrow_plus"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textViewEye2"
+                android:layout_toEndOf="@+id/textViewEye2" />
         </RelativeLayout>
 
 

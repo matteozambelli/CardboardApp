@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
+import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Thread.GameLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
@@ -23,12 +24,14 @@ import com.example.fabio.cardboardpb.R;
 public class MainActivity extends Activity {
 
 
+    private Eye eye;
+    private Language language;
     public GlobalData globalData;
     private GameThread gameThread;
     private GameLoopThread glt;
     private GameAnimationView gvLeft;
     private GameAnimationView gvRight;
-   private boolean isEndEnemyLane1 =false;
+    private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
 
@@ -63,15 +66,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent=getIntent();
 
         globalData= new GlobalData();
         Bundle data = getIntent().getExtras();
-        String eye = data.getString("eye");
-        if(eye.equals("Left")){
-            globalData.setEye(Eye.LEFT_EYE);
-        }else{
-            globalData.setEye(Eye.RIGHT_EYE);
-        }
+
+        eye=(Eye) intent.getSerializableExtra("eye");
+        language=(Language) intent.getSerializableExtra("language");
+
 
         
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
@@ -348,14 +350,7 @@ public class MainActivity extends Activity {
         Intent restart = new Intent(MainActivity.this, MainActivity.class);
         startActivity(restart);
 
-   /*new AlertDialog.Builder(this)
-            .setTitle("test mode")
-            .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-            // continue with delete
-        }
-    }).show();
-*/
+
     }
 
 

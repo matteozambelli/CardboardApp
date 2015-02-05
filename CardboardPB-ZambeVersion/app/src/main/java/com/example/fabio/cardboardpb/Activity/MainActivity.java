@@ -3,7 +3,9 @@ package com.example.fabio.cardboardpb.Activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
@@ -23,7 +25,8 @@ import com.example.fabio.cardboardpb.R;
 
 public class MainActivity extends Activity {
 
-
+    private int width;
+    private int height;
     private static MainActivity instance;
     private Eye eye;
     private Language language;
@@ -76,6 +79,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+
+        display.getSize(size);
+        width = size.x;
+        height = size.y;
+
         Intent intent=getIntent();
 
         globalData= new GlobalData();
@@ -278,8 +289,8 @@ public class MainActivity extends Activity {
 
         if (globalData.getAbsolutePosition()> 1) {
             globalData.decreaseAbosolutePosition();
-            leftCarPosition -= 230;
-            rightCarPosition -= 230;
+            leftCarPosition -= width*0.13;
+            rightCarPosition -= width*0.13;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
         } else {
@@ -307,8 +318,8 @@ public class MainActivity extends Activity {
 
         if (globalData.getAbsolutePosition() < 3) {
             globalData.increaseAbosolutePosition();
-            leftCarPosition += 230;
-            rightCarPosition += 230;
+            leftCarPosition += width*0.13;
+            rightCarPosition += width*0.13;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
         } else {

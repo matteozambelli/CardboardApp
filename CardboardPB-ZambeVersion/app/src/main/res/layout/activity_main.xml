@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/textView4"
+            android:id="@+id/textView6"
             android:layout_alignTop="@+id/textViewLevelLeft"
             android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true" />

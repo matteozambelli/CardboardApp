@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
         levelCounterRight= (TextView) findViewById(R.id.textViewLevelRight);
         levelCounterLeft.setText("1");
         levelCounterRight.setText("1");
-        textLevel=(TextView) findViewById(R.id.textView3);
+        textLevel=(TextView) findViewById(R.id.textViewLevelLeft);
         target1=(ImageView) findViewById(R.id.target1);
         target2=(ImageView) findViewById(R.id.target2);
         target3=(ImageView) findViewById(R.id.target3);
@@ -109,7 +109,7 @@ public class MainActivity extends Activity {
         globalData.setAbsolutePosition(2);
 
         t1 = (TextView) findViewById(R.id.textView3);
-        t2 = (TextView) findViewById(R.id.textView4);
+        t2 = (TextView) findViewById(R.id.textView6);
 
 
 

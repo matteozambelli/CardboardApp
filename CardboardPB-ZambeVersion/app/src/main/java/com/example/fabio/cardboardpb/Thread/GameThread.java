@@ -181,13 +181,24 @@ public class GameThread extends Thread{
                     @Override
                     public void onAnimationStart(Animation animation) {
                         t1.setText("CREATO ANIMAZIONE 1");
+                        globalData.setEnd1(false);
+                        globalData.setEnd2(false);
+                        globalData.setEnd3(false);
+                        if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
+                            t2.setText("NO COLLISIONE");
+                        }
+
                     }
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         globalData.setEnd1(true);
                         t1.setText("FINITA ANIMAZIONE 1");
-
+                        if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
+                            t2.setText("COLLISIONE SU 1");
+                            animationEnemies.hideImage(enemyLeftLane1Id0);
+                            animationEnemies.hideImage(enemyRightLane1Id0);
+                        }
                     }
 
                     @Override
@@ -198,37 +209,16 @@ public class GameThread extends Thread{
 
                 });
 
-        animationEnemies.animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-
-            /*public void onHide(Animation animation) {
-                if (globalData.isEnd1() && globalData.getAbsolutePosition() == 1) {
-                    animationEnemies.hideImage(enemyLeftLane1Id0);
-                    t1.setText("Collision on 1");
-                }
-
-            }*/
-
-
-        });
-
-
                 animationTarget.animationTarget2.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
+                        globalData.setEnd1(false);
+                        globalData.setEnd2(false);
+                        globalData.setEnd3(false);
                         t1.setText("CREATO ANIMAZIONE 2");
+                        if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
+                            t2.setText("NO COLLISIONE");
+                        }
 
 
                     }
@@ -237,6 +227,11 @@ public class GameThread extends Thread{
                     public void onAnimationEnd(Animation animation) {
                         globalData.setEnd2(true);
                         t1.setText("FINITA ANIMAZIONE 2");
+                        if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
+                            t2.setText("COLLISIONE SU 2");
+                            animationEnemies.hideImage(enemyLeftLane2Id0);
+                            animationEnemies.hideImage(enemyRightLane2Id0);
+                        }
 
                     }
 
@@ -249,7 +244,13 @@ public class GameThread extends Thread{
                 animationTarget.animationTarget3.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
+                        globalData.setEnd1(false);
+                        globalData.setEnd2(false);
+                        globalData.setEnd3(false);
                         t1.setText("CREATO ANIMAZIONE 3");
+                        if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
+                            t2.setText("NO COLLISIONE");
+                        }
 
 
                     }
@@ -258,6 +259,11 @@ public class GameThread extends Thread{
                     public void onAnimationEnd(Animation animation) {
                         globalData.setEnd3(true);
                         t1.setText("FINITA ANIMAZIONE 3");
+                        if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
+                            t2.setText("COLLISIONE SU 3");
+                            animationEnemies.hideImage(enemyLeftLane3Id0);
+                            animationEnemies.hideImage(enemyRightLane3Id0);
+                        }
 
                     }
 
@@ -266,24 +272,6 @@ public class GameThread extends Thread{
 
                     }
                 });
-                if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
-
-                    t2.setText("COLLISIONE SU 1");
-                    // animationEnemies.hideImage(enemyLeftLane1Id0);
-                }
-                if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
-                    t2.setText("COLLISIONE SU 2");
-                    //animationEnemies.hideImage(enemyLeftLane2Id0);
-                }
-                if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
-                    t2.setText("COLLISIONE SU 3");
-                    //  animationEnemies.hideImage(enemyLeftLane3Id0);
-                }
-                if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
-                    t2.setText("NO COLLISIONE");
-                }
-
-
     }
 
 

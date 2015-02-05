@@ -162,6 +162,7 @@ public class GameThread extends Thread{
                         animationTarget.animateTarget3(target3);
 
                         animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+                        animationEnemies=new AnimationEnemies();
 
                         //t1.setText("lane 3");
                     }

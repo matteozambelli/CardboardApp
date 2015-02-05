@@ -7,6 +7,7 @@ import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 /**
  * Created by matteo on 05/02/2015.
  */
+
 public class PenalizationManager implements PenalizationManagerInterface {
 
     private Eye eye;
@@ -17,6 +18,7 @@ public class PenalizationManager implements PenalizationManagerInterface {
     private ImageView enemyLeftLane3Id0;
     private ImageView enemyRightLane3Id0;
     private GlobalData globalData;
+
 
     /**
      *
@@ -39,13 +41,17 @@ public class PenalizationManager implements PenalizationManagerInterface {
         this.globalData=globalData;
     }
 
+    /**
+     *
+     * @param eye
+     */
     @Override
     public void penalize(Eye eye) {
         switch(eye){
             case LEFT_EYE:{
-                enemyLeftLane1Id0.setAlpha(50);
-                enemyLeftLane2Id0.setAlpha(50);
-                enemyLeftLane3Id0.setAlpha(50);
+                enemyLeftLane1Id0.setAlpha(getLevelPenalization());
+                enemyLeftLane2Id0.setAlpha(getLevelPenalization());
+                enemyLeftLane3Id0.setAlpha(getLevelPenalization());
 
             }break;
             case RIGHT_EYE:{
@@ -58,15 +64,35 @@ public class PenalizationManager implements PenalizationManagerInterface {
 
     }
 
+    /**
+     *
+     * @return Alpha value to penalize the image
+     */
     private int getLevelPenalization(){
         switch(globalData.getLevel()){
+
             case 1:{
-                return 50;
+                return 200;
             }
             case 2:{
-                return 50;
+                return 180;
             }
             case 3:{
+                return 160;
+            }
+            case 4:{
+                return 140;
+            }
+            case 5:{
+                return 120;
+            }
+            case 6:{
+                return 100;
+            }
+            case 7:{
+                return 80;
+            }
+            case 8:{
                 return 50;
             }
             default:{

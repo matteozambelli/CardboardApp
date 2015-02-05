@@ -34,6 +34,7 @@ public class GameThread extends Thread{
     private ImageView enemyRightLane2Id0;
     private ImageView enemyRightLane3Id0;
     private TextView t1;
+    private TextView t2;
     private ImageView target1;
     private ImageView target2;
     private ImageView target3;
@@ -69,7 +70,7 @@ public class GameThread extends Thread{
      * @param i5
      * @param i6
      */
-    public GameThread(Activity activity,TextView text1,TextView textLevel,ImageView i1,ImageView i2, ImageView i3,
+    public GameThread(Activity activity,TextView text1,TextView text2,TextView textLevel,ImageView i1,ImageView i2, ImageView i3,
                       ImageView i4,ImageView i5,
                       ImageView i6, ImageView target1,ImageView target2,ImageView target3, GlobalData globalData) {
         this.activity=activity;
@@ -78,6 +79,7 @@ public class GameThread extends Thread{
         animationEnemies = new AnimationEnemies();
 
         t1=text1;
+        t2=text2;
         this.textLevel=textLevel;
         enemyLeftLane1Id0=i1;
         enemyLeftLane2Id0=i2;
@@ -266,19 +268,19 @@ public class GameThread extends Thread{
                 });
                 if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
 
-                    t1.setText("collisione su 1");
+                    t2.setText("COLLISIONE SU 1");
                     // animationEnemies.hideImage(enemyLeftLane1Id0);
                 }
                 if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
-                    t1.setText("collisione su 2");
+                    t2.setText("COLLISIONE SU 2");
                     //animationEnemies.hideImage(enemyLeftLane2Id0);
                 }
                 if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
-                    t1.setText("collisione su 3");
+                    t2.setText("COLLISIONE SU 3");
                     //  animationEnemies.hideImage(enemyLeftLane3Id0);
                 }
                 if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
-                    t1.setText("no collisione");
+                    t2.setText("NO COLLISIONE");
                 }
 
 

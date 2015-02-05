@@ -56,6 +56,8 @@ public class MainActivity extends Activity {
     private TextView levelCounterLeft;
     private TextView levelCounterRight;
     private TextView t1; //REMOVE THIS
+    private TextView t2; //REMOVE THIS
+
     private TextView textLevel;
 
     private int leftCarPosition;
@@ -107,6 +109,8 @@ public class MainActivity extends Activity {
         globalData.setAbsolutePosition(2);
 
         t1 = (TextView) findViewById(R.id.textView3);
+        t2 = (TextView) findViewById(R.id.textView4);
+
 
 
 
@@ -125,7 +129,7 @@ public class MainActivity extends Activity {
         //lp.alignWithParent=true;
         //gv.setLayoutParams(lp);
 
-        gameThread=new GameThread(this,t1,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
+        gameThread=new GameThread(this,t1,t2,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
                 enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData);
 
         gameThread.start();
@@ -134,7 +138,7 @@ public class MainActivity extends Activity {
 
     }
 
-    private void getCollision(final AnimationEnemies animationEnemies) {
+   /* private void getCollision(final AnimationEnemies animationEnemies) {
 
         animationEnemies.animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -189,7 +193,7 @@ public class MainActivity extends Activity {
 
             }
         });
-    }
+    }*/
 
 
     @Override

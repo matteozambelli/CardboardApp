@@ -9,16 +9,15 @@ import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
+
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
-import com.example.fabio.cardboardpb.Thread.GameAnimationView;
-import com.example.fabio.cardboardpb.Thread.GameLoopThread;
+import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
+import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
 
@@ -32,9 +31,9 @@ public class MainActivity extends Activity {
     private Language language;
     public GlobalData globalData;
     private GameThread gameThread;
-    private GameLoopThread glt;
-    private GameAnimationView gvLeft;
-    private GameAnimationView gvRight;
+    private AnimationLoopThread glt;
+    private AnimationBackgroundView backgroundViewLeft;
+    private AnimationBackgroundView backgroundViewRight;
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
@@ -129,19 +128,16 @@ public class MainActivity extends Activity {
 
         RelativeLayout relativeLayoutAnimationLeft=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundLeft);
         RelativeLayout relativeLayoutAnimationRight=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundRight);
-        gvLeft=new GameAnimationView(this);
-        //gvRight=new GameAnimationView(this);
-        relativeLayoutAnimationLeft.addView(gvLeft);
-        //t1.setText(gvLeft.getOutput());
-        //relativeLayoutAnimationRight.addView(gvRight);
-        //RelativeLayout.LayoutParams lp=new RelativeLayout.LayoutParams(600,600);
-        //lp.height=200;
-        //lp.width=200;
-        //lp.alignWithParent=true;
-        //gv.setLayoutParams(lp);
+        backgroundViewLeft=new AnimationBackgroundView(this);
+        backgroundViewRight=new AnimationBackgroundView(this);
+        relativeLayoutAnimationLeft.addView(backgroundViewLeft);
+        relativeLayoutAnimationRight.addView(backgroundViewRight);
+
+
 
         gameThread=new GameThread(this,t1,t2,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
-                enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye);
+                enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye,
+                relativeLayoutAnimationLeft,relativeLayoutAnimationRight);
 
         gameThread.start();
 

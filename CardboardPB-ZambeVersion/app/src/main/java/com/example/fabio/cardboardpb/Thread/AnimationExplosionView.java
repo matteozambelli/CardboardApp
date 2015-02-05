@@ -1,33 +1,28 @@
 package com.example.fabio.cardboardpb.Thread;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * Created by fabio on 05/02/2015.
+ */
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.R;
 
-public class GameAnimationView extends SurfaceView {
+public class AnimationExplosionView extends SurfaceView {
     private SurfaceHolder holder;
-    private GameLoopThread gameLoopThread;
-    private Sprite spriteBackground;
-    private Sprite spriteCarFrontLane2;
+    private AnimationLoopThread gameLoopThread;
+    private Sprite spriteExplosion;
 
-
-
-
-    public GameAnimationView(Context context) {
+    public AnimationExplosionView(Context context) {
         super(context);
 
-        gameLoopThread = new GameLoopThread(this);
-        //setZOrderOnTop(true);
+        gameLoopThread = new AnimationLoopThread(this);
+        setZOrderOnTop(true);
         holder = getHolder();
         holder.addCallback(new SurfaceHolder.Callback() {
 
@@ -63,18 +58,14 @@ public class GameAnimationView extends SurfaceView {
 
 
     private void createSprite() {
-        //Bitmap bmpCarFrontLane2 = BitmapFactory.decodeResource(getResources(), R.drawable.car_front_sprite);
-        Bitmap bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.background_car1_ridotta);
-        spriteBackground = new Sprite(this,bmpBackground,3);
-        //spriteCarFrontLane2 = new Sprite(this,bmpCarFrontLane2,9);
-
+        Bitmap bmpExplosion = BitmapFactory.decodeResource(getResources(), R.drawable.explosion_anim);
+        spriteExplosion = new Sprite(this,bmpExplosion,12);
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
+
+    public void onDrawAnimationeExplosionView(Canvas canvas) {
         //canvas.drawColor(Color.BLACK);
-        spriteBackground.onDrawBackground(canvas);
-        //spriteCarFrontLane2.onDrawCarFrontLane2(canvas);
+        spriteExplosion.onDrawExplosion(canvas);
     }
 
 

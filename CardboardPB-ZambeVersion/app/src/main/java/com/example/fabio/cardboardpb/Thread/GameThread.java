@@ -25,7 +25,6 @@ import com.example.fabio.cardboardpb.R;
  */
 public class GameThread extends Thread{
 
-
     private GameManager gameManager;
     private AnimationEnemies animationEnemies;
     private AnimationTarget animationTarget;
@@ -49,6 +48,11 @@ public class GameThread extends Thread{
     private GlobalData globalData;
     private PenalizationManager penalizationManager;
     private Eye eye;
+    private RelativeLayout relativeLayoutAnimationLeft;
+    private RelativeLayout relativeLayoutAnimationRight;
+    private AnimationExplosionView animationExplosionViewLeft;
+    private AnimationExplosionView animationExplosionViewRight;
+
 
 
     Thread Controllo;
@@ -63,8 +67,7 @@ public class GameThread extends Thread{
 
     private long startTime = 0L;
     /**
-     *
-     * @param activity
+     *  @param activity
      * @param text1
      * @param textLevel
      * @param i1
@@ -73,15 +76,18 @@ public class GameThread extends Thread{
      * @param i4
      * @param i5
      * @param i6
+     * @param RLAnimationLeft
+     * @param RLAnimationRight
      */
-    public GameThread(Activity activity,TextView text1,TextView text2,TextView textLevel,ImageView i1,ImageView i2, ImageView i3,
-                      ImageView i4,ImageView i5,
-                      ImageView i6, ImageView target1,ImageView target2,ImageView target3, GlobalData globalData,Eye eye) {
+    public GameThread(Activity activity, TextView text1, TextView text2, TextView textLevel, ImageView i1, ImageView i2, ImageView i3,
+                      ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
+                      GlobalData globalData, Eye eye,RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight) {
         this.activity=activity;
         gameManager = new GameManager();
         gameManager.generateGameData();
         animationEnemies = new AnimationEnemies();
-
+        relativeLayoutAnimationLeft=RLAnimationLeft;
+        relativeLayoutAnimationRight=RLAnimationRight;
         t1=text1;
         t2=text2;
         this.textLevel=textLevel;
@@ -134,7 +140,6 @@ public class GameThread extends Thread{
                         onAnimationTimer();
                         animationTarget.animateTarget1(target1);
                         animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
-
                         animationEnemies=new AnimationEnemies();
                     }
                     if (pick == 2) {
@@ -183,106 +188,142 @@ public class GameThread extends Thread{
     public void onAnimationTimer(){
 
 
-                animationTarget.animationTarget1.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                        t1.setText("CREATO ANIMAZIONE 1");
-                        globalData.setEnd1(false);
-                        globalData.setEnd2(false);
-                        globalData.setEnd3(false);
-                        if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
-                            t2.setText("NO COLLISIONE");
-                        }
+        animationTarget.animationTarget1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                globalData.setEnd1(false);
+                globalData.setEnd2(false);
+                globalData.setEnd3(false);
+                t1.setText("CREATO ANIMAZIONE 1");
 
-                    }
+                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
+                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        globalData.setEnd1(true);
-                        t1.setText("FINITA ANIMAZIONE 1");
-                        if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
-                            t2.setText("COLLISIONE SU 1");
-                            animationEnemies.hideImage(enemyLeftLane1Id0);
-                            animationEnemies.hideImage(enemyRightLane1Id0);
-                        }
-                    }
+                }
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+                if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
+                    t2.setText("NO COLLISIONE");
+                }
 
-                    }
+            }
 
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                globalData.setEnd1(true);
+                t1.setText("FINITA ANIMAZIONE 1");
+                if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
+                    t2.setText("COLLISIONE SU 1");
+                    animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
+                    animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
+                    relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+                }
+                animationEnemies.hideImage(enemyLeftLane1Id0);
+                animationEnemies.hideImage(enemyRightLane1Id0);
+            }
 
-                });
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
-                animationTarget.animationTarget2.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                        globalData.setEnd1(false);
-                        globalData.setEnd2(false);
-                        globalData.setEnd3(false);
-                        t1.setText("CREATO ANIMAZIONE 2");
-                        if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
-                            t2.setText("NO COLLISIONE");
-                        }
+            }
 
 
-                    }
+        });
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        globalData.setEnd2(true);
-                        t1.setText("FINITA ANIMAZIONE 2");
-                        if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
-                            t2.setText("COLLISIONE SU 2");
-                            animationEnemies.hideImage(enemyLeftLane2Id0);
-                            animationEnemies.hideImage(enemyRightLane2Id0);
-                        }
+        animationTarget.animationTarget2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                globalData.setEnd1(false);
+                globalData.setEnd2(false);
+                globalData.setEnd3(false);
+                t1.setText("CREATO ANIMAZIONE 2");
 
-                    }
+                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
+                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+                }
 
-                    }
-                });
-
-                animationTarget.animationTarget3.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                        globalData.setEnd1(false);
-                        globalData.setEnd2(false);
-                        globalData.setEnd3(false);
-                        t1.setText("CREATO ANIMAZIONE 3");
-                        if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
-                            t2.setText("NO COLLISIONE");
-                        }
+                if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
+                    t2.setText("NO COLLISIONE");
+                }
 
 
-                    }
+            }
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        globalData.setEnd3(true);
-                        t1.setText("FINITA ANIMAZIONE 3");
-                        if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
-                            t2.setText("COLLISIONE SU 3");
-                            animationEnemies.hideImage(enemyLeftLane3Id0);
-                            animationEnemies.hideImage(enemyRightLane3Id0);
-                        }
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                globalData.setEnd2(true);
+                t1.setText("FINITA ANIMAZIONE 2");
+                if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
+                    t2.setText("COLLISIONE SU 2");
+                    animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
+                    animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
+                    animationExplosionViewLeft.setX(100);
+                    animationExplosionViewRight.setX(100);
+                    relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+                }
+                animationEnemies.hideImage(enemyLeftLane2Id0);
+                animationEnemies.hideImage(enemyRightLane2Id0);
 
-                    }
+            }
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
-                    }
-                });
+            }
+        });
+
+        animationTarget.animationTarget3.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                globalData.setEnd1(false);
+                globalData.setEnd2(false);
+                globalData.setEnd3(false);
+                t1.setText("CREATO ANIMAZIONE 3");
+
+                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
+                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
+
+                }
+
+                if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
+                    t2.setText("NO COLLISIONE");
+                }
+
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                globalData.setEnd3(true);
+                t1.setText("FINITA ANIMAZIONE 3");
+                if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
+                    t2.setText("COLLISIONE SU 3");
+                    animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
+                    animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
+                    animationExplosionViewLeft.setX(200);
+                    animationExplosionViewRight.setX(200);
+                    relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+                }
+                animationEnemies.hideImage(enemyLeftLane3Id0);
+                animationEnemies.hideImage(enemyRightLane3Id0);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 
 
     public void collision(final AnimationTarget animationTarget) {
-
 
 
 
@@ -297,13 +338,13 @@ public class GameThread extends Thread{
 
             updatedTime = timeSwapBuff + timeInMilliseconds;
 
-             secs = (int) (updatedTime / 1000);
-             mins = secs / 60;
+            secs = (int) (updatedTime / 1000);
+            mins = secs / 60;
             secs = secs % 60;
-             milliseconds = (int) (updatedTime % 1000);
+            milliseconds = (int) (updatedTime % 1000);
             //timerValue.setText("" + mins + ":"
-             //       + String.format("%02d", secs) + ":"
-               //     + String.format("%03d", milliseconds));
+            //       + String.format("%02d", secs) + ":"
+            //     + String.format("%03d", milliseconds));
             customHandler.postDelayed(this, 0);
         }
 

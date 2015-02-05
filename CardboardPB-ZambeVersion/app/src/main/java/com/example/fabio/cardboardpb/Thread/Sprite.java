@@ -30,6 +30,7 @@ public class Sprite {
     public int nColums;
 
 
+
     public Sprite(GameAnimationView gameView, Bitmap bmp,int colums) {
         nColums=colums;
         this.width = bmp.getWidth() / nColums;
@@ -66,6 +67,7 @@ public class Sprite {
 
     public void onDrawCarFrontLane2(Canvas canvas) {
         updateCarFrontLane2();
+
         //canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         int srcX = currentFrame * width;
         int srcY = 0;
@@ -75,10 +77,9 @@ public class Sprite {
         paint.setColor(Color.TRANSPARENT);
         paint.setStyle(Paint.Style.FILL);
         canvas.drawPaint(paint);
-
         paint.setColor(Color.WHITE);
-        paint.setTextSize(30);
-        canvas.drawText(getYcarValue().toString(), 200, 200, paint);
+        paint.setTextSize(50);
+        canvas.drawText(getYcarValue().toString(), 300, 300, paint);
         canvas.drawBitmap(bmp, src, dst, null);
     }
 
@@ -102,4 +103,6 @@ public class Sprite {
         int direction = (int) Math.round(dirDouble) % BMP_ROWS;
         return DIRECTION_TO_ANIMATION_MAP[direction];
     }*/
+
+
 }

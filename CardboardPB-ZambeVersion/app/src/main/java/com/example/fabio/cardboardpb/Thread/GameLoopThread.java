@@ -4,14 +4,17 @@ package com.example.fabio.cardboardpb.Thread;
  * Created by fabio on 27/01/2015.
  */
 import android.graphics.Canvas;
+import android.widget.TextView;
 
 public class GameLoopThread extends Thread {
     static final long FPS = 5;
     private GameAnimationView view;
     private boolean running = false;
 
+
     public GameLoopThread(GameAnimationView view) {
         this.view = view;
+
     }
 
     public void setRunning(boolean run) {
@@ -31,6 +34,7 @@ public class GameLoopThread extends Thread {
                 c = view.getHolder().lockCanvas();
                 synchronized (view.getHolder()) {
                     view.onDraw(c);
+
                 }
             } finally {
                 if (c != null) {
@@ -46,5 +50,6 @@ public class GameLoopThread extends Thread {
             } catch (Exception e) {}
         }
     }
+
 
 }

@@ -1,6 +1,7 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +24,7 @@ import com.example.fabio.cardboardpb.R;
 public class MainActivity extends Activity {
 
 
+    private static MainActivity instance;
     private Eye eye;
     private Language language;
     public GlobalData globalData;
@@ -61,6 +63,13 @@ public class MainActivity extends Activity {
 
 
 
+    public MainActivity(){
+        instance=this;
+    }
+    public static Context getContext() {
+        return instance;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +82,6 @@ public class MainActivity extends Activity {
         eye=(Eye) intent.getSerializableExtra("eye");
         language=(Language) intent.getSerializableExtra("language");
 
-
-        
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
 
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
@@ -99,7 +106,7 @@ public class MainActivity extends Activity {
 
         globalData.setAbsolutePosition(2);
 
-        t1 = (TextView) findViewById(R.id.textViewProva);
+        t1 = (TextView) findViewById(R.id.textView3);
 
 
 
@@ -110,6 +117,7 @@ public class MainActivity extends Activity {
         gvLeft=new GameAnimationView(this);
         //gvRight=new GameAnimationView(this);
         relativeLayoutAnimationLeft.addView(gvLeft);
+        //t1.setText(gvLeft.getOutput());
         //relativeLayoutAnimationRight.addView(gvRight);
         //RelativeLayout.LayoutParams lp=new RelativeLayout.LayoutParams(600,600);
         //lp.height=200;

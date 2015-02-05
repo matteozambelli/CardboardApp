@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.R;
 
@@ -20,8 +21,11 @@ public class GameAnimationView extends SurfaceView {
     private Sprite spriteCarFrontLane2;
 
 
+
+
     public GameAnimationView(Context context) {
         super(context);
+
         gameLoopThread = new GameLoopThread(this);
         //setZOrderOnTop(true);
         holder = getHolder();
@@ -44,6 +48,7 @@ public class GameAnimationView extends SurfaceView {
             public void surfaceCreated(SurfaceHolder holder) {
                 gameLoopThread.setRunning(true);
                 gameLoopThread.start();
+
             }
 
             @Override
@@ -71,4 +76,6 @@ public class GameAnimationView extends SurfaceView {
         spriteBackground.onDrawBackground(canvas);
         spriteCarFrontLane2.onDrawCarFrontLane2(canvas);
     }
+
+
 }

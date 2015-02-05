@@ -2,10 +2,12 @@ package com.example.fabio.cardboardpb.Thread;
 
 import android.app.Activity;
 
+import android.content.Context;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
@@ -13,16 +15,14 @@ import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Animation.AnimationTarget;
 import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
-
-
-
-
+import com.example.fabio.cardboardpb.R;
 
 
 /**
  * Created by matteo on 27/01/2015.
  */
 public class GameThread extends Thread{
+
 
     private GameManager gameManager;
     private AnimationEnemies animationEnemies;
@@ -44,6 +44,7 @@ public class GameThread extends Thread{
     private int size;
     private int i;
     private GlobalData globalData;
+
 
     Thread Controllo;
     private Handler customHandler = new Handler();
@@ -68,7 +69,8 @@ public class GameThread extends Thread{
      * @param i5
      * @param i6
      */
-    public GameThread(Activity activity,TextView text1,TextView textLevel,ImageView i1,ImageView i2, ImageView i3,ImageView i4,ImageView i5,
+    public GameThread(Activity activity,TextView text1,TextView textLevel,ImageView i1,ImageView i2, ImageView i3,
+                      ImageView i4,ImageView i5,
                       ImageView i6, ImageView target1,ImageView target2,ImageView target3, GlobalData globalData) {
         this.activity=activity;
         gameManager = new GameManager();
@@ -111,6 +113,7 @@ public class GameThread extends Thread{
             activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
+
                     textLevel.setText("LEVEL "+gameManager.getIdLevel());
                     pick = gameManager.getIdEnemy().get(i).getSelectedLane();
                     size = gameManager.getIdEnemy().size();
@@ -123,6 +126,7 @@ public class GameThread extends Thread{
                         animationTarget.animateTarget1(target1);
                         animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
 
+                        onAnimationTimer();
 
 
                         animationEnemies=new AnimationEnemies();
@@ -134,6 +138,7 @@ public class GameThread extends Thread{
 
                         animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
 
+                        onAnimationTimer();
                         animationEnemies=new AnimationEnemies();
                         Long l=new Long(animationEnemies.getStartOffset());
 
@@ -147,6 +152,7 @@ public class GameThread extends Thread{
                         animationTarget.animateTarget3(target3);
 
                         animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+                        onAnimationTimer();
                         Long l=new Long(animationEnemies.getStartOffset());
 
                         t1.setText(l.toString());
@@ -175,10 +181,6 @@ public class GameThread extends Thread{
     public void onAnimationTimer(){
 
 
-
-        Controllo= new Thread(new Runnable() {
-            @Override
-            public void run() {
                 animationTarget.animationTarget1.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
@@ -249,9 +251,7 @@ public class GameThread extends Thread{
                 if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
                     t1.setText("no collisione");
                 }
-            }
-        });
-         Controllo.start();
+
 
     }
 

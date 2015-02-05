@@ -108,7 +108,7 @@ public class GameThread extends Thread{
         this.target3=target3;
         this.globalData=globalData;
         animationTarget=new AnimationTarget();
-        penalizationManager=new PenalizationManager(enemyLeftLane1Id0,enemyLeftLane2Id0, enemyLeftLane3Id0, enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0);
+        penalizationManager=new PenalizationManager(enemyLeftLane1Id0,enemyLeftLane2Id0, enemyLeftLane3Id0, enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0, globalData);
         this.eye=eye;
     }
 
@@ -176,6 +176,7 @@ public class GameThread extends Thread{
                 i++;
                 if(i==size) {
                     gameManager.generateGameData();
+                    globalData.increaseLevel();
                     i=0;
                 }
             } catch (InterruptedException e) {

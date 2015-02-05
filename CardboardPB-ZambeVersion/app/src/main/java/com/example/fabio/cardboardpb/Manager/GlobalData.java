@@ -13,6 +13,7 @@ public class GlobalData {
     private boolean isEnd3=false;
     private int life;
     private Eye eye;
+    private int level=1;
 
     public int getAbsolutePosition() {
         return absolutePosition;
@@ -69,5 +70,17 @@ public class GlobalData {
 
     public void setEye(Eye eye) {
         this.eye = eye;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void increaseLevel(){
+        level++;
     }
 }

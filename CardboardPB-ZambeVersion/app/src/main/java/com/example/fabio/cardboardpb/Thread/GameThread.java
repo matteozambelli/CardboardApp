@@ -13,8 +13,10 @@ import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Animation.AnimationTarget;
+import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
+import com.example.fabio.cardboardpb.Manager.PenalizationManager;
 import com.example.fabio.cardboardpb.R;
 
 
@@ -45,6 +47,8 @@ public class GameThread extends Thread{
     private int size;
     private int i;
     private GlobalData globalData;
+    private PenalizationManager penalizationManager;
+    private Eye eye;
 
 
     Thread Controllo;
@@ -72,7 +76,7 @@ public class GameThread extends Thread{
      */
     public GameThread(Activity activity,TextView text1,TextView text2,TextView textLevel,ImageView i1,ImageView i2, ImageView i3,
                       ImageView i4,ImageView i5,
-                      ImageView i6, ImageView target1,ImageView target2,ImageView target3, GlobalData globalData) {
+                      ImageView i6, ImageView target1,ImageView target2,ImageView target3, GlobalData globalData,Eye eye) {
         this.activity=activity;
         gameManager = new GameManager();
         gameManager.generateGameData();
@@ -98,7 +102,8 @@ public class GameThread extends Thread{
         this.target3=target3;
         this.globalData=globalData;
         animationTarget=new AnimationTarget();
-
+        penalizationManager=new PenalizationManager(enemyLeftLane1Id0,enemyLeftLane2Id0, enemyLeftLane3Id0, enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0);
+        this.eye=eye;
     }
 
 
@@ -119,6 +124,7 @@ public class GameThread extends Thread{
                     textLevel.setText("LEVEL "+gameManager.getIdLevel());
                     pick = gameManager.getIdEnemy().get(i).getSelectedLane();
                     size = gameManager.getIdEnemy().size();
+                    penalizationManager.penalize(eye);
                     //collision(animationTarget);
                     //onAnimationTimer();
 

@@ -141,7 +141,7 @@ public class MainActivity extends Activity {
         //gv.setLayoutParams(lp);
 
         gameThread=new GameThread(this,t1,t2,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
-                enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData);
+                enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye);
 
         gameThread.start();
 

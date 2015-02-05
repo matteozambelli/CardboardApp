@@ -63,10 +63,10 @@ public class GameAnimationView extends SurfaceView {
 
 
     private void createSprite() {
-        Bitmap bmpCarFrontLane2 = BitmapFactory.decodeResource(getResources(), R.drawable.car_front_sprite);
+        //Bitmap bmpCarFrontLane2 = BitmapFactory.decodeResource(getResources(), R.drawable.car_front_sprite);
         Bitmap bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.background_car1_ridotta);
         spriteBackground = new Sprite(this,bmpBackground,3);
-        spriteCarFrontLane2 = new Sprite(this,bmpCarFrontLane2,9);
+        //spriteCarFrontLane2 = new Sprite(this,bmpCarFrontLane2,9);
 
     }
 
@@ -74,7 +74,7 @@ public class GameAnimationView extends SurfaceView {
     protected void onDraw(Canvas canvas) {
         //canvas.drawColor(Color.BLACK);
         spriteBackground.onDrawBackground(canvas);
-        spriteCarFrontLane2.onDrawCarFrontLane2(canvas);
+        //spriteCarFrontLane2.onDrawCarFrontLane2(canvas);
     }
 
 

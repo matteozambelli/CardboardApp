@@ -19,7 +19,7 @@ public class AnimationTarget {
 
 
     public void animateTarget1(final ImageView ivLeft) {
-        TranslateAnimation TranslateAnimationTarget1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-10, 0, Animation.RELATIVE_TO_SELF+ 30);
+        TranslateAnimation TranslateAnimationTarget1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-10, 0, Animation.RELATIVE_TO_SELF+ 10);
         ScaleAnimation ScaleAnimationTarget1 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,
                 Animation.RELATIVE_TO_SELF, 0.9f,
@@ -58,7 +58,7 @@ public class AnimationTarget {
     }
 
     public void animateTarget3(final ImageView ivLeft) {
-        TranslateAnimation TranslateAnimationTarget3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+20, 0, Animation.RELATIVE_TO_SELF + 30);
+        TranslateAnimation TranslateAnimationTarget3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+10, 0, Animation.RELATIVE_TO_SELF + 20);
         ScaleAnimation ScaleAnimationTarget3 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,
                 Animation.RELATIVE_TO_SELF, 0.1f,

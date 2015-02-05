@@ -123,39 +123,33 @@ public class GameThread extends Thread{
                     if (pick == 1) {
                         animationEnemies.showImage(enemyLeftLane1Id0);
                         animationEnemies.showImage(enemyRightLane1Id0);
+                        onAnimationTimer();
                         animationTarget.animateTarget1(target1);
                         animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
-
-                        onAnimationTimer();
-
 
                         animationEnemies=new AnimationEnemies();
                     }
                     if (pick == 2) {
                         animationEnemies.showImage(enemyLeftLane2Id0);
                         animationEnemies.showImage(enemyRightLane2Id0);
+                        onAnimationTimer();
                         animationTarget.animateTarget2(target2);
-
                         animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
 
-                        onAnimationTimer();
                         animationEnemies=new AnimationEnemies();
-                        Long l=new Long(animationEnemies.getStartOffset());
 
-                        t1.setText(l.toString());
 
                        // t1.setText("lane 2");
                     }
                     if (pick == 3) {
                         animationEnemies.showImage(enemyLeftLane3Id0);
                         animationEnemies.showImage(enemyRightLane3Id0);
+                        onAnimationTimer();
+
                         animationTarget.animateTarget3(target3);
 
                         animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
-                        onAnimationTimer();
-                        Long l=new Long(animationEnemies.getStartOffset());
 
-                        t1.setText(l.toString());
                         //t1.setText("lane 3");
                     }
 
@@ -184,12 +178,13 @@ public class GameThread extends Thread{
                 animationTarget.animationTarget1.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
-
+                        t1.setText("CREATO ANIMAZIONE 1");
                     }
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         globalData.setEnd1(true);
+                        t1.setText("FINITA ANIMAZIONE 1");
 
                     }
 
@@ -201,16 +196,46 @@ public class GameThread extends Thread{
 
                 });
 
+        animationEnemies.animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+
+            /*public void onHide(Animation animation) {
+                if (globalData.isEnd1() && globalData.getAbsolutePosition() == 1) {
+                    animationEnemies.hideImage(enemyLeftLane1Id0);
+                    t1.setText("Collision on 1");
+                }
+
+            }*/
+
+
+        });
+
 
                 animationTarget.animationTarget2.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
+                        t1.setText("CREATO ANIMAZIONE 2");
+
 
                     }
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         globalData.setEnd2(true);
+                        t1.setText("FINITA ANIMAZIONE 2");
+
                     }
 
                     @Override
@@ -222,12 +247,16 @@ public class GameThread extends Thread{
                 animationTarget.animationTarget3.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
+                        t1.setText("CREATO ANIMAZIONE 3");
+
 
                     }
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         globalData.setEnd3(true);
+                        t1.setText("FINITA ANIMAZIONE 3");
+
                     }
 
                     @Override

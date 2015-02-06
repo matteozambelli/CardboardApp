@@ -3,6 +3,7 @@ package com.example.fabio.cardboardpb.Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.KeyEvent;
@@ -24,16 +25,24 @@ public class LanguageActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
+        Typeface font = Typeface.createFromAsset(getAssets(), "SignPaintersGothicShaded.ttf");
 
         languageLeft= (TextView)findViewById(R.id.textViewLanguageLeft);
+        languageLeft.setTypeface(font);
         languageRight= (TextView)findViewById(R.id.textViewLanguageRight);
+        languageRight.setTypeface(font);
         titleLeft= (TextView) findViewById(R.id.textViewSelectLeft);
+        titleLeft.setTypeface(font);
         titleRight= (TextView) findViewById(R.id.textViewSelectRight);
+        titleRight.setTypeface(font);
         startLeft=(TextView) findViewById(R.id.textViewStart1);
+        startLeft.setTypeface(font);
         startRight=(TextView) findViewById(R.id.textViewStart2);
+        startRight.setTypeface(font);
 
         startLeft.setTextSize(16);
         startRight.setTextSize(16);
+
 
     }
 

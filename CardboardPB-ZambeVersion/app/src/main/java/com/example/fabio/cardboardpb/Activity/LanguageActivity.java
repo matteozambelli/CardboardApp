@@ -2,6 +2,7 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class LanguageActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
-        Typeface font = Typeface.createFromAsset(getAssets(), "SignPaintersGothicShaded.ttf");
+        Typeface font = Typeface.createFromAsset(getAssets(), "orange juice 2.0.ttf");
 
         languageLeft= (TextView)findViewById(R.id.textViewLanguageLeft);
         languageLeft.setTypeface(font);
@@ -42,6 +43,7 @@ public class LanguageActivity extends Activity {
 
         startLeft.setTextSize(16);
         startRight.setTextSize(16);
+
 
 
     }

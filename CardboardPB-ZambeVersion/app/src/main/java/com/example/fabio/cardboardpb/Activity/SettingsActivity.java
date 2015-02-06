@@ -2,6 +2,7 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ public class SettingsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        Typeface font = Typeface.createFromAsset(getAssets(), "orange juice 2.0.ttf");
 
         Intent intent=getIntent();
         Bundle data = getIntent().getExtras();
@@ -39,23 +41,29 @@ public class SettingsActivity extends ActionBarActivity {
 
         textEyeLeft=(TextView) findViewById(R.id.textViewEye1);
         textEyeLeft.setText(languageManager.getEyeLeft());
+        textEyeLeft.setTypeface(font);
 
         textEyeRight=(TextView) findViewById(R.id.textViewEye2);
         textEyeRight.setText(languageManager.getEyeLeft());
+        textEyeRight.setTypeface(font);
 
         textStartLeft=(TextView) findViewById(R.id.textSettingsStart1);
         textStartLeft.setText(languageManager.getSettingsStart());
         textStartLeft.setTextSize(16);
+        textStartLeft.setTypeface(font);
 
         textStartRight=(TextView) findViewById(R.id.textSettingsStart2);
         textStartRight.setText(languageManager.getSettingsStart());
         textStartRight.setTextSize(16);
+        textStartRight.setTypeface(font);
 
         textSelectLeft=(TextView) findViewById(R.id.textViewSelectEyeLeft);
         textSelectLeft.setText(languageManager.getSettingsTitle());
+        textSelectLeft.setTypeface(font);
 
         textSelectRight=(TextView) findViewById(R.id.textViewSelectEyeRight);
         textSelectRight.setText(languageManager.getSettingsTitle());
+        textSelectRight.setTypeface(font);
 
     }
 

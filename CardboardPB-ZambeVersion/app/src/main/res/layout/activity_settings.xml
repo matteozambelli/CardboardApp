@@ -17,6 +17,16 @@
             android:background="@color/White"
             android:layout_weight="50">
 
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageViewTrafficLight1"
+                android:src="@drawable/lighttraffic"
+
+                android:layout_above="@+id/textViewSelectEyeLeft"
+                android:layout_toLeftOf="@+id/imageArrowMinus1"
+                android:layout_toStartOf="@+id/imageArrowMinus1"
+                android:layout_marginBottom="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -26,6 +36,7 @@
                 android:textColor="@color/Black"
                 android:layout_marginTop="20dp"
                 android:layout_below="@+id/textViewEye1"
+                android:gravity="center"
                 android:layout_centerHorizontal="true"
                 />
 
@@ -76,6 +87,8 @@
                 android:layout_toRightOf="@+id/textViewEye1"
                 android:layout_toEndOf="@+id/textViewEye1" />
 
+
+
         </RelativeLayout>
 
 
@@ -87,6 +100,17 @@
             android:background="@color/White"
             android:layout_weight="50">
 
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageViewTrafficLight2"
+                android:src="@drawable/lighttraffic"
+
+                android:layout_above="@+id/textViewSelectEyeRight"
+                android:layout_toLeftOf="@+id/imageArrowMinus2"
+                android:layout_toStartOf="@+id/imageArrowMinus2"
+                android:layout_marginBottom="30dp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,6 +121,7 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/Black"
                 android:layout_below="@+id/textViewEye2"
+                android:gravity="center"
                 android:layout_marginTop="20dp"/>
 
             <ImageView

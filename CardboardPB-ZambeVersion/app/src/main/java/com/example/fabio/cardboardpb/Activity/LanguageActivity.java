@@ -20,7 +20,7 @@ public class LanguageActivity extends Activity {
 
     private TextView languageLeft,languageRight, titleLeft,titleRight,startLeft,startRight;
     private Language language= Language.ENGLISH;
-    private int width,height;
+    private int selection=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,18 +86,30 @@ public class LanguageActivity extends Activity {
             case KeyEvent.KEYCODE_VOLUME_UP:
                 //on key + press
                 if (action == KeyEvent.ACTION_DOWN) {
+                    if(selection==2){
+                        selection=0;
+                    }else{
+                    selection++;}
                    changeLanguage();
                 }
                 return true;
             case KeyEvent.KEYCODE_MEDIA_NEXT:
                 //on key + press
                 if (action == KeyEvent.ACTION_DOWN) {
+                    if(selection==2){
+                        selection=0;
+                    }else{
+                        selection++;}
                     changeLanguage();
                 }
                 return true;
             case KeyEvent.KEYCODE_VOLUME_DOWN:
                 if (action == KeyEvent.ACTION_DOWN) {
                     //on key - press
+                    if(selection==0){
+                        selection=2;
+                    }else{
+                        selection--;}
                     changeLanguage();
 
                 }
@@ -105,6 +117,10 @@ public class LanguageActivity extends Activity {
             case KeyEvent.KEYCODE_MEDIA_PREVIOUS:
                 if (action == KeyEvent.ACTION_DOWN) {
                     //on key - press
+                    if(selection==0){
+                        selection=2;
+                    }else{
+                        selection--;}
                     changeLanguage();
 
                 }
@@ -125,22 +141,32 @@ public class LanguageActivity extends Activity {
 
     private void changeLanguage(){
 
-        if(languageLeft.getText().equals("English") ){
-            languageLeft.setText("Italiano");
-            languageRight.setText("Italiano");
+        if(selection==0 ){
+            languageLeft.setText("ITALIANO");
+            languageRight.setText("ITALIANO");
             titleLeft.setText("SELEZIONA LA LINGUA");
             titleRight.setText("SELEZIONA LA LINGUA");
             startLeft.setText("PREMI HOME PER INIZIARE");
             startRight.setText("PREMI HOME PER INIZIARE");
             language=Language.ITALIANO;
-        }else if(languageLeft.getText().equals("Italiano") ){
-            languageLeft.setText("English");
-            languageRight.setText("English");
+        }
+        if(selection==1 ){
+            languageLeft.setText("ENGLISH");
+            languageRight.setText("ENGLISH");
             titleLeft.setText("SELECT THE LANGUAGE");
             titleRight.setText("SELECT THE LANGUAGE");
             startLeft.setText("PRESS HOME TO START");
             startRight.setText("PRESS HOME TO START");
             language=Language.ENGLISH;
+        }
+        if(selection==2){
+            languageLeft.setText("FRANÇAIS");
+            languageRight.setText("FRANÇAIS");
+            titleLeft.setText("choisir la langue".toUpperCase());
+            titleRight.setText("choisir la langue".toUpperCase());
+            startLeft.setText("prix maison".toUpperCase()+'\n'+" pour commencer".toUpperCase());
+            startRight.setText("prix maison".toUpperCase()+'\n'+" pour commencer".toUpperCase());
+            language=Language.FRANÇAIS;
         }else{
             try {
                 throw new MyException("No language selected");

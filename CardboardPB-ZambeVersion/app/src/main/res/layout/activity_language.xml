@@ -23,8 +23,7 @@
             android:src="@drawable/open_car"
             android:layout_alignParentBottom="true"
             android:layout_alignLeft="@+id/textViewSelectLeft"
-            android:layout_alignStart="@+id/textViewSelectLeft"
-            android:layout_below="@+id/textViewLanguageLeft" />
+            android:layout_below="@+id/textViewStart1" />
 
 
         <ImageView
@@ -80,6 +79,7 @@
             android:text="PRESS HOME TO START"
             android:id="@+id/textViewStart1"
             android:textColor="@color/Black"
+            android:gravity="center"
             android:layout_below="@+id/imageViewArrowMinus1"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true" />
@@ -103,10 +103,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageViewOpen2"
             android:src="@drawable/open_car"
-            android:layout_alignParentBottom="true"
             android:layout_alignLeft="@+id/textViewSelectRight"
-            android:layout_alignStart="@+id/textViewSelectRight"
-            android:layout_below="@+id/textViewLanguageRight" />
+            android:layout_below="@+id/textViewStart2"
+            />
 
 
 
@@ -162,6 +161,7 @@
             android:id="@+id/textViewStart2"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/imageViewArrowMinus2"
+            android:gravity="center"
             android:layout_marginTop="20dp"
             android:textColor="@color/Black"/>
     </RelativeLayout>

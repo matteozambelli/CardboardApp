@@ -23,11 +23,17 @@ public class LanguageManager implements LanguageManagerInterface{
             eyeRight="Right";
             settingsTitle="SELECT THE EYE";
             settingsStart="PRESS HOME TO START";
-        }else if(language.equals(Language.ITALIANO)){
-            eyeLeft="Sinistro";
-            eyeRight="Destro";
-            settingsTitle="SELEZIONA L'OCCHIO";
-            settingsStart="PREMI HOME PER INIZIARE";
+        }else if(language.equals(Language.ITALIANO)) {
+            eyeLeft = "Sinistro";
+            eyeRight = "Destro";
+            settingsTitle = "SELEZIONA L'OCCHIO";
+            settingsStart = "PREMI HOME PER INIZIARE";
+        }else if(language.equals(Language.FRANÇAIS)){
+            eyeLeft = "Gauche";
+            eyeRight = "Droit";
+            settingsTitle = "sélectionnez l'œil".toUpperCase();
+            settingsStart = "prix maison".toUpperCase()+'\n'+" pour commencer".toUpperCase();
+
         }else{
             try {
                 throw new MyException("No language selected");

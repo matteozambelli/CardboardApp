@@ -12,6 +12,7 @@
     <RelativeLayout
 
         android:id="@+id/rl1"
+        android:background="@drawable/background_car1"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
@@ -33,7 +34,8 @@
             android:id="@+id/imageViewEnemyLeftLane1Id0"
             android:layout_marginTop="127dp"
             android:src="@drawable/prova_rid"
-            android:layout_marginLeft="101dp"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="40dp"
            />
 
         <ImageView
@@ -42,7 +44,8 @@
             android:id="@+id/imageViewEnemyLeftLane3Id0"
             android:layout_marginTop="127dp"
             android:src="@drawable/prova_right_rid"
-            android:layout_marginLeft="163dp" />
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="40dp"/>
 
         <ImageView
             android:layout_width="55dp"
@@ -58,7 +61,8 @@
             android:id="@+id/target1"
             android:layout_marginTop="127dp"
             android:src="@drawable/target"
-            android:layout_marginLeft="101dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignRight="@+id/target2"
             />
 
         <ImageView
@@ -67,7 +71,8 @@
             android:id="@+id/target3"
             android:layout_marginTop="127dp"
             android:src="@drawable/target"
-            android:layout_marginLeft="163dp" />
+            android:layout_marginLeft="40dp"
+            android:layout_alignLeft="@+id/target2"/>
 
         <ImageView
             android:layout_width="55dp"

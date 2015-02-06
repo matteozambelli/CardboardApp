@@ -81,7 +81,6 @@ public class MainActivity extends Activity {
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
-
         display.getSize(size);
         width = size.x;
         height = size.y;

@@ -2,7 +2,9 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +18,7 @@ public class LanguageActivity extends Activity {
 
     private TextView languageLeft,languageRight, titleLeft,titleRight,startLeft,startRight;
     private Language language= Language.ENGLISH;
+    private int width,height;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,8 @@ public class LanguageActivity extends Activity {
         startLeft=(TextView) findViewById(R.id.textViewStart1);
         startRight=(TextView) findViewById(R.id.textViewStart2);
 
+        startLeft.setTextSize(16);
+        startRight.setTextSize(16);
 
     }
 

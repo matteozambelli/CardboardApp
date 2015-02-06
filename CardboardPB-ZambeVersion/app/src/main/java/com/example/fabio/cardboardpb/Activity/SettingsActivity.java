@@ -45,9 +45,11 @@ public class SettingsActivity extends ActionBarActivity {
 
         textStartLeft=(TextView) findViewById(R.id.textSettingsStart1);
         textStartLeft.setText(languageManager.getSettingsStart());
+        textStartLeft.setTextSize(16);
 
         textStartRight=(TextView) findViewById(R.id.textSettingsStart2);
         textStartRight.setText(languageManager.getSettingsStart());
+        textStartRight.setTextSize(16);
 
         textSelectLeft=(TextView) findViewById(R.id.textViewSelectEyeLeft);
         textSelectLeft.setText(languageManager.getSettingsTitle());

@@ -21,13 +21,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="PRESS HOME TO START"
                 android:id="@+id/textSettingsStart1"
                 android:textColor="@color/Black"
-                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/textViewEye1"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="104dp" />
+                />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -41,12 +41,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="SELECT THE EYE"
                 android:id="@+id/textViewSelectEyeLeft"
-                android:layout_marginBottom="111dp"
+                android:layout_above="@+id/textViewEye1"
                 android:textColor="@color/Black"
-                android:layout_above="@+id/textSettingsStart1"
+                android:layout_marginBottom="20dp"
                 android:layout_centerHorizontal="true" />
 
             <ImageView
@@ -67,6 +66,7 @@
                 android:textColor="@color/Black"
                 android:layout_alignBottom="@+id/imageArrowMinus1"
                 android:layout_centerHorizontal="true" />
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -96,8 +96,8 @@
                 android:id="@+id/textSettingsStart2"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/Black"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="104dp"/>
+                android:layout_below="@+id/textViewEye2"
+                android:layout_marginTop="20dp"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -110,12 +110,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="SELECT THE EYE"
                 android:id="@+id/textViewSelectEyeRight"
-                android:layout_marginBottom="111dp"
+                android:layout_marginBottom="20dp"
                 android:textColor="@color/Black"
-                android:layout_above="@+id/textSettingsStart2"
+                android:layout_above="@+id/textViewEye2"
                 android:layout_centerHorizontal="true" />
 
             <ImageView

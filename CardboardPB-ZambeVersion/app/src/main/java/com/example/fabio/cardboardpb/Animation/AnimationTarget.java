@@ -18,8 +18,9 @@ public class AnimationTarget {
 
 
 
-    public void animateTarget1(final ImageView ivLeft) {
-        TranslateAnimation TranslateAnimationTarget1 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-10, 0, Animation.RELATIVE_TO_SELF+ 10);
+    public void animateTarget1(final ImageView ivLeft, int displayWidth, int displayHeight) {
+        TranslateAnimation TranslateAnimationTarget1 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.008))),
+                0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.02))));
         ScaleAnimation ScaleAnimationTarget1 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,
                 Animation.RELATIVE_TO_SELF, 0.9f,
@@ -27,7 +28,7 @@ public class AnimationTarget {
 
         animationTarget1.addAnimation(TranslateAnimationTarget1);
         animationTarget1.addAnimation(ScaleAnimationTarget1);
-        animationTarget1.setDuration(3000);
+        animationTarget1.setDuration(2000);
         animationTarget1.setFillAfter(true);
 
         ivLeft.startAnimation(animationTarget1);
@@ -37,9 +38,10 @@ public class AnimationTarget {
 
 
 
-    public void animateTarget2(final ImageView ivLeft) {
+    public void animateTarget2(final ImageView ivLeft, int displayWidth, int displayHeight) {
 
-        TranslateAnimation TranslateAnimationTarget2 = new TranslateAnimation(0, 0, 0, Animation.RELATIVE_TO_SELF + 50);
+        TranslateAnimation TranslateAnimationTarget2 = new TranslateAnimation(0, 0,
+                0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.05))));
         ScaleAnimation ScaleAnimationTarget2 = new ScaleAnimation(1, 3.5f,
                 1, 3.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
@@ -57,8 +59,9 @@ public class AnimationTarget {
 
     }
 
-    public void animateTarget3(final ImageView ivLeft) {
-        TranslateAnimation TranslateAnimationTarget3 = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF+10, 0, Animation.RELATIVE_TO_SELF + 20);
+    public void animateTarget3(final ImageView ivLeft, int displayWidth, int displayHeight) {
+        TranslateAnimation TranslateAnimationTarget3 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.008))),
+                0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.02))));
         ScaleAnimation ScaleAnimationTarget3 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,
                 Animation.RELATIVE_TO_SELF, 0.1f,
@@ -68,7 +71,7 @@ public class AnimationTarget {
         //Create AnimationSet Lane 3
         animationTarget3.addAnimation(TranslateAnimationTarget3);
         animationTarget3.addAnimation(ScaleAnimationTarget3);
-        animationTarget3.setDuration(3000);
+        animationTarget3.setDuration(2000);
         animationTarget3.setFillAfter(true);
 
 

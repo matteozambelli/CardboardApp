@@ -137,7 +137,7 @@ public class MainActivity extends Activity {
 
         gameThread=new GameThread(this,t1,t2,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
                 enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye,
-                relativeLayoutAnimationLeft,relativeLayoutAnimationRight);
+                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height);
 
         gameThread.start();
 

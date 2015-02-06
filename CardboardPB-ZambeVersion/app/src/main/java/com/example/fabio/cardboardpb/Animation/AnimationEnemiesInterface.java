@@ -8,12 +8,12 @@ import android.widget.ImageView;
  */
 public interface AnimationEnemiesInterface {
 
-    public void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight) ;
+    public void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) ;
 
 
-    public void animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight);
+    public void animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight);
 
-    public void animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight);
+    public void animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight);
 
     public void hideImage(ImageView img);
 

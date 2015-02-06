@@ -52,8 +52,8 @@ public class GameThread extends Thread{
     private RelativeLayout relativeLayoutAnimationRight;
     private AnimationExplosionView animationExplosionViewLeft;
     private AnimationExplosionView animationExplosionViewRight;
-
-
+    private int displayWidth;
+    private int displayHeight;
 
     Thread Controllo;
     private Handler customHandler = new Handler();
@@ -67,7 +67,7 @@ public class GameThread extends Thread{
 
     private long startTime = 0L;
     /**
-     *  @param activity
+     * @param activity
      * @param text1
      * @param textLevel
      * @param i1
@@ -78,10 +78,12 @@ public class GameThread extends Thread{
      * @param i6
      * @param RLAnimationLeft
      * @param RLAnimationRight
+     * @param width
+     * @param height
      */
     public GameThread(Activity activity, TextView text1, TextView text2, TextView textLevel, ImageView i1, ImageView i2, ImageView i3,
                       ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
-                      GlobalData globalData, Eye eye,RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight) {
+                      GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight, int width, int height) {
         this.activity=activity;
         gameManager = new GameManager();
         gameManager.generateGameData();
@@ -90,6 +92,8 @@ public class GameThread extends Thread{
         relativeLayoutAnimationRight=RLAnimationRight;
         t1=text1;
         t2=text2;
+        displayHeight=height;
+        displayWidth=width;
         this.textLevel=textLevel;
         enemyLeftLane1Id0=i1;
         enemyLeftLane2Id0=i2;
@@ -108,7 +112,8 @@ public class GameThread extends Thread{
         this.target3=target3;
         this.globalData=globalData;
         animationTarget=new AnimationTarget();
-        penalizationManager=new PenalizationManager(enemyLeftLane1Id0,enemyLeftLane2Id0, enemyLeftLane3Id0, enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0, globalData);
+        penalizationManager=new PenalizationManager(enemyLeftLane1Id0,enemyLeftLane2Id0, enemyLeftLane3Id0,
+                enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0, globalData);
         this.eye=eye;
     }
 
@@ -138,16 +143,18 @@ public class GameThread extends Thread{
                         animationEnemies.showImage(enemyLeftLane1Id0);
                         animationEnemies.showImage(enemyRightLane1Id0);
                         onAnimationTimer();
-                        animationTarget.animateTarget1(target1);
-                        animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0);
+                        animationTarget.animateTarget1(target1,displayWidth, displayHeight);
+                        animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0,
+                                displayWidth,displayHeight);
                         animationEnemies=new AnimationEnemies();
                     }
                     if (pick == 2) {
                         animationEnemies.showImage(enemyLeftLane2Id0);
                         animationEnemies.showImage(enemyRightLane2Id0);
                         onAnimationTimer();
-                        animationTarget.animateTarget2(target2);
-                        animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0);
+                        animationTarget.animateTarget2(target2,displayWidth, displayHeight);
+                        animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0,
+                                displayWidth,displayHeight);
 
                         animationEnemies=new AnimationEnemies();
 
@@ -159,9 +166,10 @@ public class GameThread extends Thread{
                         animationEnemies.showImage(enemyRightLane3Id0);
                         onAnimationTimer();
 
-                        animationTarget.animateTarget3(target3);
+                        animationTarget.animateTarget3(target3,displayWidth, displayHeight);
 
-                        animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0);
+                        animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0,
+                                displayWidth, displayHeight);
                         animationEnemies=new AnimationEnemies();
 
                         //t1.setText("lane 3");
@@ -220,9 +228,9 @@ public class GameThread extends Thread{
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
                     relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+                    animationEnemies.hideImage(enemyLeftLane1Id0);
+                    animationEnemies.hideImage(enemyRightLane1Id0);
                 }
-                animationEnemies.hideImage(enemyLeftLane1Id0);
-                animationEnemies.hideImage(enemyRightLane1Id0);
             }
 
             @Override
@@ -266,10 +274,9 @@ public class GameThread extends Thread{
                     animationExplosionViewRight.setX(100);
                     relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+                    animationEnemies.hideImage(enemyLeftLane2Id0);
+                    animationEnemies.hideImage(enemyRightLane2Id0);
                 }
-                animationEnemies.hideImage(enemyLeftLane2Id0);
-                animationEnemies.hideImage(enemyRightLane2Id0);
-
             }
 
             @Override
@@ -311,10 +318,9 @@ public class GameThread extends Thread{
                     animationExplosionViewRight.setX(200);
                     relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+                    animationEnemies.hideImage(enemyLeftLane3Id0);
+                    animationEnemies.hideImage(enemyRightLane3Id0);
                 }
-                animationEnemies.hideImage(enemyLeftLane3Id0);
-                animationEnemies.hideImage(enemyRightLane3Id0);
-
             }
 
             @Override

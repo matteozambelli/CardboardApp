@@ -20,7 +20,7 @@ public class LanguageActivity extends Activity {
 
     private TextView languageLeft,languageRight, titleLeft,titleRight,startLeft,startRight;
     private Language language= Language.ENGLISH;
-    private int selection=0;
+    private int selection=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

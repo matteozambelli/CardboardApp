@@ -5,10 +5,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.text.Layout;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
@@ -39,7 +45,12 @@ public class GameThread extends Thread{
     private ImageView target1;
     private ImageView target2;
     private ImageView target3;
-    private TextView textLevel;
+    private TextView textLevelLeft;
+    private TextView textLifeLeft;
+    private TextView textPointsLeft;
+    private TextView textLevelRight;
+    private TextView textLifeRight;
+    private TextView textPointsRight;
     private boolean state;
     private Activity activity;
     private int pick;
@@ -54,6 +65,8 @@ public class GameThread extends Thread{
     private AnimationExplosionView animationExplosionViewRight;
     private int displayWidth;
     private int displayHeight;
+    //private Toast toastLifeLeft;
+    //private Toast toastLifeRight;
 
     Thread Controllo;
     private Handler customHandler = new Handler();
@@ -69,7 +82,6 @@ public class GameThread extends Thread{
     /**
      * @param activity
      * @param text1
-     * @param textLevel
      * @param i1
      * @param i2
      * @param i3
@@ -81,20 +93,29 @@ public class GameThread extends Thread{
      * @param width
      * @param height
      */
-    public GameThread(Activity activity, TextView text1, TextView text2, TextView textLevel, ImageView i1, ImageView i2, ImageView i3,
+    public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tPointsLeft,
+                      TextView tLevelRight, TextView tLifeRight, TextView tPointsRight, ImageView i1, ImageView i2, ImageView i3,
                       ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
-                      GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight, int width, int height) {
+                      GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
+                      int width, int height) {
         this.activity=activity;
         gameManager = new GameManager();
         gameManager.generateGameData();
         animationEnemies = new AnimationEnemies();
         relativeLayoutAnimationLeft=RLAnimationLeft;
         relativeLayoutAnimationRight=RLAnimationRight;
-        t1=text1;
+        t1 =text1;
         t2=text2;
+        textLifeLeft=tLifeLeft;
+        textLevelLeft=tLevelLeft;
+        textPointsLeft=tPointsLeft;
+        textLifeRight=tLifeRight;
+        textLevelRight=tLevelRight;
+        textPointsRight=tPointsRight;
         displayHeight=height;
         displayWidth=width;
-        this.textLevel=textLevel;
+        //toastLifeLeft=Toast.makeText(activity.getApplicationContext(),"Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
+        //toastLifeRight=Toast.makeText(activity.getApplicationContext(), "Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
         enemyLeftLane1Id0=i1;
         enemyLeftLane2Id0=i2;
         enemyLeftLane3Id0=i3;
@@ -132,7 +153,18 @@ public class GameThread extends Thread{
                 @Override
                 public void run() {
 
-                    textLevel.setText("LEVEL "+gameManager.getIdLevel());
+                   /* if (globalData.getLife() == 0){ todo GAME OVER, RICOMINCIA PARTITA? SI/NO
+
+                    }else */
+
+                    textLevelLeft.setText("LEVEL: "+ gameManager.getIdLevel());
+                    textLifeLeft.setText("LIFE: "+ globalData.getLife());
+                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
+
+                    textLevelRight.setText("LEVEL: "+ gameManager.getIdLevel());
+                    textLifeRight.setText("LIFE: "+ globalData.getLife());
+                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
+
                     pick = gameManager.getIdEnemy().get(i).getSelectedLane();
                     size = gameManager.getIdEnemy().size();
                     penalizationManager.penalize(eye);
@@ -223,6 +255,7 @@ public class GameThread extends Thread{
                 globalData.setEnd1(true);
                 t1.setText("FINITA ANIMAZIONE 1");
                 if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
+                    globalData.decreaseLife();
                     t2.setText("COLLISIONE SU 1");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
@@ -230,6 +263,11 @@ public class GameThread extends Thread{
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
                     animationEnemies.hideImage(enemyLeftLane1Id0);
                     animationEnemies.hideImage(enemyRightLane1Id0);
+                }
+                else{
+                    globalData.increasePoints();
+                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
+                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
                 }
             }
 
@@ -267,6 +305,7 @@ public class GameThread extends Thread{
                 globalData.setEnd2(true);
                 t1.setText("FINITA ANIMAZIONE 2");
                 if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
+                    globalData.decreaseLife();
                     t2.setText("COLLISIONE SU 2");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
@@ -276,6 +315,11 @@ public class GameThread extends Thread{
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
                     animationEnemies.hideImage(enemyLeftLane2Id0);
                     animationEnemies.hideImage(enemyRightLane2Id0);
+                }
+                else{
+                    globalData.increasePoints();
+                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
+                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
                 }
             }
 
@@ -311,6 +355,7 @@ public class GameThread extends Thread{
                 globalData.setEnd3(true);
                 t1.setText("FINITA ANIMAZIONE 3");
                 if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
+                    globalData.decreaseLife();
                     t2.setText("COLLISIONE SU 3");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
@@ -320,6 +365,11 @@ public class GameThread extends Thread{
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
                     animationEnemies.hideImage(enemyLeftLane3Id0);
                     animationEnemies.hideImage(enemyRightLane3Id0);
+                }
+                else{
+                    globalData.increasePoints();
+                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
+                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
                 }
             }
 
@@ -355,9 +405,5 @@ public class GameThread extends Thread{
             //     + String.format("%03d", milliseconds));
             customHandler.postDelayed(this, 0);
         }
-
     };
-
-
-
 }

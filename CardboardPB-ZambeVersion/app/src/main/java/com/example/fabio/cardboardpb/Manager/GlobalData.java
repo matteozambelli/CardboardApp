@@ -11,9 +11,10 @@ public class GlobalData {
     private boolean isEnd1=false;
     private boolean isEnd2=false;
     private boolean isEnd3=false;
-    private int life;
+    private int life=3;
     private Eye eye;
     private int level=1;
+    private int points=0;
 
     public int getAbsolutePosition() {
         return absolutePosition;
@@ -31,10 +32,6 @@ public class GlobalData {
         return isEnd3;
     }
 
-    public int getLife() {
-        return life;
-    }
-
     public Eye getEye() {
         return eye;
     }
@@ -50,7 +47,6 @@ public class GlobalData {
     public void increaseAbosolutePosition(){
         this.absolutePosition++;
     }
-
 
     public void setEnd1(boolean isEnd1) {
         this.isEnd1 = isEnd1;
@@ -76,6 +72,19 @@ public class GlobalData {
         return level;
     }
 
+    public int getLife() {
+        return life;
+    }
+
+    public void increasePoints(){
+        points+=10;
+    }
+
+    public Integer getPoints(){
+        Integer i=new Integer(points);
+        return i;
+    }
+
     public void setLevel(int level) {
         this.level = level;
     }
@@ -83,4 +92,9 @@ public class GlobalData {
     public void increaseLevel(){
         level++;
     }
+
+    public void decreaseLife(){
+        life--;
+    }
+
 }

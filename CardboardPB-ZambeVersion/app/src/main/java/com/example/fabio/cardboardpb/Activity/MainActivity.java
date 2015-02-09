@@ -6,12 +6,17 @@ import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
@@ -38,8 +43,6 @@ public class MainActivity extends Activity {
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
 
-
-
     //Our car
     private ImageView carLeft;
     private ImageView carRight;
@@ -55,17 +58,19 @@ public class MainActivity extends Activity {
     private ImageView target2;
     private ImageView target3;
 
-    private TextView levelCounterLeft;
-    private TextView levelCounterRight;
     private TextView t1; //REMOVE THIS
     private TextView t2; //REMOVE THIS
 
-    private TextView textLevel;
+    private TextView textLevelLeft;
+    private TextView textLifeLeft;
+    private TextView textPointsLeft;
+    private TextView textLevelRight;
+    private TextView textLifeRight;
+    private TextView textPointsRight;
+
 
     private int leftCarPosition;
     private int rightCarPosition;
-
-
 
     public MainActivity(){
         instance=this;
@@ -106,11 +111,15 @@ public class MainActivity extends Activity {
         enemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
         enemyRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
 
-        levelCounterLeft= (TextView) findViewById(R.id.textViewLevelLeft);
-        levelCounterRight= (TextView) findViewById(R.id.textViewLevelRight);
-        levelCounterLeft.setText("1");
-        levelCounterRight.setText("1");
-        textLevel=(TextView) findViewById(R.id.textViewLevelLeft);
+        textLevelLeft=(TextView) findViewById(R.id.textViewLevelLeft);
+        textLifeLeft = (TextView)findViewById(R.id.textViewLifeLeft);
+        textPointsLeft = (TextView)findViewById(R.id.textViewPointsLeft);
+
+        textLevelRight=(TextView) findViewById(R.id.textViewLevelRight);
+        textLifeRight = (TextView)findViewById(R.id.textViewLifeRight);
+        textPointsRight = (TextView)findViewById(R.id.textViewPointsRight);
+
+
         target1=(ImageView) findViewById(R.id.target1);
         target2=(ImageView) findViewById(R.id.target2);
         target3=(ImageView) findViewById(R.id.target3);
@@ -119,9 +128,6 @@ public class MainActivity extends Activity {
 
         t1 = (TextView) findViewById(R.id.textView3);
         t2 = (TextView) findViewById(R.id.textView6);
-
-
-
 
         //getCollision(animationEnemies);
 
@@ -132,15 +138,13 @@ public class MainActivity extends Activity {
         relativeLayoutAnimationLeft.addView(backgroundViewLeft);
         relativeLayoutAnimationRight.addView(backgroundViewRight);
 
-
-
-        gameThread=new GameThread(this,t1,t2,textLevel,enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
+        gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
+                textLevelRight,textLifeRight, textPointsRight,
+                enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
                 enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye,
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height);
 
         gameThread.start();
-
-
 
     }
 

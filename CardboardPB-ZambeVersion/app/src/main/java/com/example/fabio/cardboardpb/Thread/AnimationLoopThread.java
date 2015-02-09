@@ -10,18 +10,16 @@ public class AnimationLoopThread extends Thread {
     static final long FPS = 5;
     private SurfaceView view;
     private boolean running = false;
-    private AnimationBackgroundView view1;
-    private AnimationExplosionView view2;
-
-
+    private AnimationBackgroundView viewBackground;
+    private AnimationExplosionView viewExplosion;
 
     public AnimationLoopThread(SurfaceView view) {
         this.view = view;
         if(view instanceof AnimationBackgroundView){
-            view1= (AnimationBackgroundView) view;
+            viewBackground = (AnimationBackgroundView) view;
         }
         if(view instanceof AnimationExplosionView){
-            view2= (AnimationExplosionView) view;
+            viewExplosion = (AnimationExplosionView) view;
         }
     }
 
@@ -36,22 +34,23 @@ public class AnimationLoopThread extends Thread {
         long sleepTime;
 
         while (running) {
-            Canvas c = null;
+            Canvas canvasBackground = null;
+            Canvas canvasExplosion = null;
             startTime = System.currentTimeMillis();
 
             if (view instanceof AnimationBackgroundView) {
 
                 try {
 
-                    c = view1.getHolder().lockCanvas();
-                    synchronized (view1.getHolder()) {
+                    canvasBackground = viewBackground.getHolder().lockCanvas();
+                    synchronized (viewBackground.getHolder()) {
 
-                        view1.onDrawAnimationBackgroundView(c);
+                        viewBackground.onDrawAnimationBackgroundView(canvasBackground);
 
                     }
                 } finally {
-                    if (c != null) {
-                        view1.getHolder().unlockCanvasAndPost(c);
+                    if (canvasBackground != null) {
+                        viewBackground.getHolder().unlockCanvasAndPost(canvasBackground);
                     }
                 }
                 sleepTime = ticksPS - (System.currentTimeMillis() - startTime);
@@ -69,15 +68,16 @@ public class AnimationLoopThread extends Thread {
 
                 try {
 
-                    c = view2.getHolder().lockCanvas();
-                    synchronized (view2.getHolder()) {
-
-                        view2.onDrawAnimationeExplosionView(c);
-
+                    if(canvasExplosion==null){
+                        canvasExplosion = viewExplosion.getHolder().lockCanvas();
+                        //synchronized (viewExplosion.getHolder()) {
+                        viewExplosion.getHolder();
+                            viewExplosion.onDrawAnimationeExplosionView(canvasExplosion);
+                        //}
                     }
                 } finally {
-                    if (c != null) {
-                        view2.getHolder().unlockCanvasAndPost(c);
+                    if (canvasExplosion != null) {
+                        viewExplosion.getHolder().unlockCanvasAndPost(canvasExplosion);
                     }
                 }
                 sleepTime = ticksPS - (System.currentTimeMillis() - startTime);

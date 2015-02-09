@@ -27,7 +27,6 @@
 
         </RelativeLayout>
 
-
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -35,7 +34,7 @@
             android:layout_marginTop="127dp"
             android:src="@drawable/prova_rid"
             android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="45dp"
            />
 
         <ImageView
@@ -45,7 +44,7 @@
             android:layout_marginTop="127dp"
             android:src="@drawable/prova_right_rid"
             android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginLeft="40dp"/>
+            android:layout_marginLeft="45dp"/>
 
         <ImageView
             android:layout_width="55dp"
@@ -106,7 +105,6 @@
             android:id="@+id/textViewLevelLeft"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="240dp"/>
-
 
         <TextView
             android:layout_width="wrap_content"
@@ -180,29 +178,28 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane1Id0"
+            android:layout_marginTop="127dp"
             android:src="@drawable/prova_rid"
-            android:layout_marginLeft="101dp"
-            android:layout_marginTop="127dp"/>
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="45dp"
+            />
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane3Id0"
-            android:src="@drawable/prova_right_rid"
-            android:layout_marginLeft="163dp"
             android:layout_marginTop="127dp"
-            />
+            android:src="@drawable/prova_right_rid"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="45dp"/>
 
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:id="@+id/imageViewEnemyRightLane2Id0"
-            android:src="@drawable/car_front_rid"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="118dp"
-            android:adjustViewBounds="true"
-            />
-
+            android:src="@drawable/car_front_rid"
+            android:layout_centerHorizontal="true" />
 
 
         <ImageView

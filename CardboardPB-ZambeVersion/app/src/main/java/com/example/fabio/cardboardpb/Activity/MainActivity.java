@@ -1,6 +1,7 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
+import com.example.fabio.cardboardpb.Manager.MyDialog;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
@@ -71,6 +73,8 @@ public class MainActivity extends Activity {
 
     private int leftCarPosition;
     private int rightCarPosition;
+    private boolean running=true;
+    private MyDialog dialog;
 
     public MainActivity(){
         instance=this;
@@ -83,7 +87,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -142,7 +145,7 @@ public class MainActivity extends Activity {
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
                 enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye,
-                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height);
+                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height, running);
 
         gameThread.start();
 
@@ -373,6 +376,8 @@ public class MainActivity extends Activity {
 
 
     }
+
+
 
 
 

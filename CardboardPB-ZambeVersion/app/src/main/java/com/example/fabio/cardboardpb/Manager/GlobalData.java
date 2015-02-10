@@ -72,8 +72,9 @@ public class GlobalData {
         return level;
     }
 
-    public int getLife() {
-        return life;
+    public Integer getLife() {
+        Integer l=new Integer(life);
+        return l;
     }
 
     public void increasePoints(){
@@ -81,8 +82,8 @@ public class GlobalData {
     }
 
     public Integer getPoints(){
-        Integer i=new Integer(points);
-        return i;
+        Integer p=new Integer(points);
+        return p;
     }
 
     public void setLevel(int level) {

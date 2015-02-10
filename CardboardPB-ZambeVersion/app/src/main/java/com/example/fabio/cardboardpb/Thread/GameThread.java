@@ -2,7 +2,11 @@ package com.example.fabio.cardboardpb.Thread;
 
 import android.app.Activity;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.text.Layout;
@@ -22,6 +26,7 @@ import com.example.fabio.cardboardpb.Animation.AnimationTarget;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
+import com.example.fabio.cardboardpb.Manager.MyDialog;
 import com.example.fabio.cardboardpb.Manager.PenalizationManager;
 import com.example.fabio.cardboardpb.R;
 
@@ -79,6 +84,8 @@ public class GameThread extends Thread{
     int milliseconds;
 
     private long startTime = 0L;
+    public boolean runnable; //if life==0 runnable turn false
+
     /**
      * @param activity
      * @param text1
@@ -97,7 +104,7 @@ public class GameThread extends Thread{
                       TextView tLevelRight, TextView tLifeRight, TextView tPointsRight, ImageView i1, ImageView i2, ImageView i3,
                       ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
-                      int width, int height) {
+                      int width, int height,boolean running) {
         this.activity=activity;
         gameManager = new GameManager();
         gameManager.generateGameData();
@@ -114,6 +121,7 @@ public class GameThread extends Thread{
         textPointsRight=tPointsRight;
         displayHeight=height;
         displayWidth=width;
+        runnable=running;
         //toastLifeLeft=Toast.makeText(activity.getApplicationContext(),"Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
         //toastLifeRight=Toast.makeText(activity.getApplicationContext(), "Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
         enemyLeftLane1Id0=i1;
@@ -138,10 +146,9 @@ public class GameThread extends Thread{
         this.eye=eye;
     }
 
-
     @Override
     public void run() {
-        while(true){
+        while(runnable){
             if(state){
                 // Se è vero fai questo
             }else{
@@ -153,62 +160,66 @@ public class GameThread extends Thread{
                 @Override
                 public void run() {
 
-                   /* if (globalData.getLife() == 0){ todo GAME OVER, RICOMINCIA PARTITA? SI/NO
-
-                    }else */
-
-                    textLevelLeft.setText("LEVEL: "+ gameManager.getIdLevel());
-                    textLifeLeft.setText("LIFE: "+ globalData.getLife());
-                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
-
-                    textLevelRight.setText("LEVEL: "+ gameManager.getIdLevel());
-                    textLifeRight.setText("LIFE: "+ globalData.getLife());
-                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
-
-                    pick = gameManager.getIdEnemy().get(i).getSelectedLane();
-                    size = gameManager.getIdEnemy().size();
-                    penalizationManager.penalize(eye);
-                    //collision(animationTarget);
-                    //onAnimationTimer();
-
-                    if (pick == 1) {
-                        animationEnemies.showImage(enemyLeftLane1Id0);
-                        animationEnemies.showImage(enemyRightLane1Id0);
-                        onAnimationTimer();
-                        animationTarget.animateTarget1(target1,displayWidth, displayHeight);
-                        animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0,
-                                displayWidth,displayHeight);
-                        animationEnemies=new AnimationEnemies();
-                    }
-                    if (pick == 2) {
-                        animationEnemies.showImage(enemyLeftLane2Id0);
-                        animationEnemies.showImage(enemyRightLane2Id0);
-                        onAnimationTimer();
-                        animationTarget.animateTarget2(target2,displayWidth, displayHeight);
-                        animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0,
-                                displayWidth,displayHeight);
-
-                        animationEnemies=new AnimationEnemies();
-
-
-                       // t1.setText("lane 2");
-                    }
-                    if (pick == 3) {
-                        animationEnemies.showImage(enemyLeftLane3Id0);
-                        animationEnemies.showImage(enemyRightLane3Id0);
-                        onAnimationTimer();
-
-                        animationTarget.animateTarget3(target3,displayWidth, displayHeight);
-
-                        animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0,
-                                displayWidth, displayHeight);
-                        animationEnemies=new AnimationEnemies();
-
-                        //t1.setText("lane 3");
+                    if (globalData.getLife() == 0){
+                        runnable=false;
+                        //todo PREMI TASTO CENTRALE PER RIGIOCARE
                     }
 
-                    //animationEnemies=new AnimationEnemies();
-                    animationTarget=new AnimationTarget();
+                    else { //only if globalData.getLife() >0
+                        runnable = true;
+                        textLevelLeft.setText("LEVEL: " + gameManager.getIdLevel());
+                        textLifeLeft.setText("LIFE: " + globalData.getLife());
+                        textPointsLeft.setText("POINTS: " + globalData.getPoints().toString());
+
+                        textLevelRight.setText("LEVEL: " + gameManager.getIdLevel());
+                        textLifeRight.setText("LIFE: " + globalData.getLife());
+                        textPointsRight.setText("POINTS: " + globalData.getPoints().toString());
+
+                        pick = gameManager.getIdEnemy().get(i).getSelectedLane();
+                        size = gameManager.getIdEnemy().size();
+                        penalizationManager.penalize(eye);
+                        //collision(animationTarget);
+                        //onAnimationTimer();
+
+                        if (pick == 1) {
+                            animationEnemies.showImage(enemyLeftLane1Id0);
+                            animationEnemies.showImage(enemyRightLane1Id0);
+                            onAnimationTimer();
+                            animationTarget.animateTarget1(target1, displayWidth, displayHeight);
+                            animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0,
+                                    displayWidth, displayHeight);
+                            animationEnemies = new AnimationEnemies();
+                        }
+                        if (pick == 2) {
+                            animationEnemies.showImage(enemyLeftLane2Id0);
+                            animationEnemies.showImage(enemyRightLane2Id0);
+                            onAnimationTimer();
+                            animationTarget.animateTarget2(target2, displayWidth, displayHeight);
+                            animationEnemies.animateFrontCarLane2(enemyLeftLane2Id0, enemyRightLane2Id0,
+                                    displayWidth, displayHeight);
+
+                            animationEnemies = new AnimationEnemies();
+
+
+                            // t1.setText("lane 2");
+                        }
+                        if (pick == 3) {
+                            animationEnemies.showImage(enemyLeftLane3Id0);
+                            animationEnemies.showImage(enemyRightLane3Id0);
+                            onAnimationTimer();
+
+                            animationTarget.animateTarget3(target3, displayWidth, displayHeight);
+
+                            animationEnemies.animateFrontCarLane3(enemyLeftLane3Id0, enemyRightLane3Id0,
+                                    displayWidth, displayHeight);
+                            animationEnemies = new AnimationEnemies();
+
+                            //t1.setText("lane 3");
+                        }
+
+                        //animationEnemies=new AnimationEnemies();
+                        animationTarget = new AnimationTarget();
+                    }
 
                 }
             });
@@ -229,6 +240,68 @@ public class GameThread extends Thread{
 
     public void onAnimationTimer(){
 
+        animationEnemies.animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
+                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
+                }
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        animationEnemies.animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
+                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
+                }
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        animationEnemies.animationSetLane3.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
+                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
+                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
+                }
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
 
         animationTarget.animationTarget1.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -237,12 +310,6 @@ public class GameThread extends Thread{
                 globalData.setEnd2(false);
                 globalData.setEnd3(false);
                 t1.setText("CREATO ANIMAZIONE 1");
-
-                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
-                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
-                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
-
-                }
 
                 if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
                     t2.setText("NO COLLISIONE");
@@ -256,6 +323,8 @@ public class GameThread extends Thread{
                 t1.setText("FINITA ANIMAZIONE 1");
                 if(globalData.isEnd1() && globalData.getAbsolutePosition()==1){
                     globalData.decreaseLife();
+                    textLifeLeft.setText("LIFE: " + globalData.getLife().toString());
+                    textLifeRight.setText("LIFE: " + globalData.getLife().toString());
                     t2.setText("COLLISIONE SU 1");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
@@ -287,12 +356,6 @@ public class GameThread extends Thread{
                 globalData.setEnd3(false);
                 t1.setText("CREATO ANIMAZIONE 2");
 
-                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
-                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
-                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
-
-                }
-
                 if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
                     t2.setText("NO COLLISIONE");
                 }
@@ -306,6 +369,8 @@ public class GameThread extends Thread{
                 t1.setText("FINITA ANIMAZIONE 2");
                 if(globalData.isEnd2() && globalData.getAbsolutePosition()==2){
                     globalData.decreaseLife();
+                    textLifeLeft.setText("LIFE: " + globalData.getLife().toString());
+                    textLifeRight.setText("LIFE: " + globalData.getLife().toString());
                     t2.setText("COLLISIONE SU 2");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
@@ -337,12 +402,6 @@ public class GameThread extends Thread{
                 globalData.setEnd3(false);
                 t1.setText("CREATO ANIMAZIONE 3");
 
-                if(animationExplosionViewLeft!= null || animationExplosionViewLeft!= null) {
-                    relativeLayoutAnimationLeft.removeView(animationExplosionViewLeft);
-                    relativeLayoutAnimationRight.removeView(animationExplosionViewRight);
-
-                }
-
                 if(!(globalData.isEnd1() && globalData.getAbsolutePosition()==1) && !(globalData.isEnd2() && globalData.getAbsolutePosition()==2) && !(globalData.isEnd3() && globalData.getAbsolutePosition()==3)){
                     t2.setText("NO COLLISIONE");
                 }
@@ -357,6 +416,8 @@ public class GameThread extends Thread{
                 if(globalData.isEnd3() && globalData.getAbsolutePosition()==3){
                     globalData.decreaseLife();
                     t2.setText("COLLISIONE SU 3");
+                    textLifeLeft.setText("LIFE: " + globalData.getLife().toString());
+                    textLifeRight.setText("LIFE: " + globalData.getLife().toString());
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewLeft.setX(200);

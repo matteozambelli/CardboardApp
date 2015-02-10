@@ -67,14 +67,12 @@ public class AnimationLoopThread extends Thread {
             if (view instanceof AnimationExplosionView) {
 
                 try {
+                    canvasExplosion = viewExplosion.getHolder().lockCanvas();
 
-                    if(canvasExplosion==null){
-                        canvasExplosion = viewExplosion.getHolder().lockCanvas();
-                        //synchronized (viewExplosion.getHolder()) {
-                        viewExplosion.getHolder();
-                            viewExplosion.onDrawAnimationeExplosionView(canvasExplosion);
-                        //}
-                    }
+                    synchronized (viewExplosion.getHolder()) {
+                        viewExplosion.onDrawAnimationeExplosionView(canvasExplosion);
+                        }
+
                 } finally {
                     if (canvasExplosion != null) {
                         viewExplosion.getHolder().unlockCanvasAndPost(canvasExplosion);

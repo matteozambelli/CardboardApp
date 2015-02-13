@@ -43,9 +43,10 @@ public class AnimationLoopThread extends Thread {
                 try {
 
                     canvasBackground = viewBackground.getHolder().lockCanvas();
-                    synchronized (viewBackground.getHolder()) {
 
-                        viewBackground.onDrawAnimationBackgroundView(canvasBackground);
+                    synchronized (viewBackground.getHolder()) {
+                        if(canvasBackground!=null)
+                            viewBackground.onDrawAnimationBackgroundView(canvasBackground);
 
                     }
                 } finally {
@@ -71,7 +72,7 @@ public class AnimationLoopThread extends Thread {
 
                     synchronized (viewExplosion.getHolder()) {
                         if(canvasExplosion!=null)
-                        viewExplosion.onDrawAnimationeExplosionView(canvasExplosion);
+                            viewExplosion.onDrawAnimationeExplosionView(canvasExplosion);
                         }
 
                 } finally {

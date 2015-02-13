@@ -63,7 +63,8 @@ public class AnimationBackgroundView extends SurfaceView {
 
     public void onDrawAnimationBackgroundView(Canvas canvas) {
         //canvas.drawColor(Color.BLACK);
-        spriteBackground.onDrawBackground(canvas);
+        if(canvas!=null)
+            spriteBackground.onDrawBackground(canvas);
     }
 
 

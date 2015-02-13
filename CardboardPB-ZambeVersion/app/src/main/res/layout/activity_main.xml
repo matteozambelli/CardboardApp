@@ -79,13 +79,13 @@
             android:layout_centerHorizontal="true" />
 
         <ImageView
-            android:layout_width="65dp"
-            android:layout_height="55dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/imageViewMyCarLeft"
             android:layout_weight="25"
-            android:layout_marginTop="172dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/car_rid" />
+            android:layout_marginTop="176dp"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/wheel" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -266,7 +266,7 @@
             android:layout_weight="75"
             android:layout_marginTop="172dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/car_rid" />
+            android:src="@drawable/wheel" />
 
         <ImageView
             android:layout_width="wrap_content"

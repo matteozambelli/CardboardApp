@@ -10,7 +10,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/rl1"
+        android:id="@+id/relativeLayoutLeft"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:background="@color/White"
@@ -92,7 +92,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/rl2"
+        android:id="@+id/relativeLayoutRight"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:background="@color/White"

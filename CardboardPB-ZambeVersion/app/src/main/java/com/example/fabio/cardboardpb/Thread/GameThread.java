@@ -2,23 +2,13 @@ package com.example.fabio.cardboardpb.Thread;
 
 import android.app.Activity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.text.Layout;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
@@ -26,10 +16,8 @@ import com.example.fabio.cardboardpb.Animation.AnimationTarget;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
-import com.example.fabio.cardboardpb.Manager.MyDialog;
 import com.example.fabio.cardboardpb.Manager.PenalizationManager;
 import com.example.fabio.cardboardpb.R;
-
 
 /**
  * Created by matteo on 27/01/2015.
@@ -45,17 +33,21 @@ public class GameThread extends Thread{
     private ImageView enemyRightLane1Id0;
     private ImageView enemyRightLane2Id0;
     private ImageView enemyRightLane3Id0;
-    private TextView t1;
-    private TextView t2;
     private ImageView target1;
     private ImageView target2;
     private ImageView target3;
+    private TextView t1;
+    private TextView t2;
     private TextView textLevelLeft;
     private TextView textLifeLeft;
-    private TextView textPointsLeft;
+    private TextView textScoreLeft;
     private TextView textLevelRight;
     private TextView textLifeRight;
-    private TextView textPointsRight;
+    private TextView textScoreRight;
+    private TextView textLevelGameOverLeft;
+    private TextView textLevelGameOverRight;
+    private TextView textScoreGameOverLeft;
+    private TextView textScoreGameOverRight;
     private boolean state;
     private Activity activity;
     private int pick;
@@ -66,6 +58,10 @@ public class GameThread extends Thread{
     private Eye eye;
     private RelativeLayout relativeLayoutAnimationLeft;
     private RelativeLayout relativeLayoutAnimationRight;
+    private RelativeLayout relativeLayoutLeft;
+    private RelativeLayout relativeLayoutRight;
+    private FrameLayout frameLayoutGameOverLeft;
+    private FrameLayout frameLayoutGameOverRight;
     private AnimationExplosionView animationExplosionViewLeft;
     private AnimationExplosionView animationExplosionViewRight;
     private int displayWidth;
@@ -85,6 +81,7 @@ public class GameThread extends Thread{
 
     private long startTime = 0L;
     public boolean runnable; //if life==0 runnable turn false
+    TextView textLevelDialogLeft;
 
     /**
      * @param activity
@@ -100,12 +97,21 @@ public class GameThread extends Thread{
      * @param width
      * @param height
      */
-    public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tPointsLeft,
-                      TextView tLevelRight, TextView tLifeRight, TextView tPointsRight, ImageView i1, ImageView i2, ImageView i3,
+    public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tScoreLeft,
+                      TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ImageView i1, ImageView i2, ImageView i3,
                       ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
                       int width, int height,boolean running) {
         this.activity=activity;
+        relativeLayoutLeft=(RelativeLayout)activity.findViewById(R.id.relativeLayoutLeft);
+        relativeLayoutRight=(RelativeLayout)activity.findViewById(R.id.relativeLayoutRight);
+
+        frameLayoutGameOverLeft=(FrameLayout)activity.findViewById(R.id.frameLayoutGameOverLeft);
+        frameLayoutGameOverRight=(FrameLayout)activity.findViewById(R.id.frameLayoutGameOverRight);
+
+        relativeLayoutLeft.removeView(frameLayoutGameOverLeft);
+        relativeLayoutRight.removeView(frameLayoutGameOverRight);
+
         gameManager = new GameManager();
         gameManager.generateGameData();
         animationEnemies = new AnimationEnemies();
@@ -115,10 +121,10 @@ public class GameThread extends Thread{
         t2=text2;
         textLifeLeft=tLifeLeft;
         textLevelLeft=tLevelLeft;
-        textPointsLeft=tPointsLeft;
+        textScoreLeft =tScoreLeft;
         textLifeRight=tLifeRight;
         textLevelRight=tLevelRight;
-        textPointsRight=tPointsRight;
+        textScoreRight =tScoreRight;
         displayHeight=height;
         displayWidth=width;
         runnable=running;
@@ -162,18 +168,32 @@ public class GameThread extends Thread{
 
                     if (globalData.getLife() == 0){
                         runnable=false;
-                        //todo PREMI TASTO CENTRALE PER RIGIOCARE
+                        //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE
+
+                        textLevelGameOverLeft = (TextView) frameLayoutGameOverLeft.findViewById(R.id.textLevelGameOverLeft);
+                        textLevelGameOverLeft.setText("LEVEL: "+(globalData.getLevel().toString()));
+                        textLevelGameOverRight = (TextView) frameLayoutGameOverRight.findViewById(R.id.textLevelGameOverRight);
+                        textLevelGameOverRight.setText("LEVEL: "+(globalData.getLevel().toString()));
+                        textScoreGameOverLeft = (TextView) frameLayoutGameOverLeft.findViewById(R.id.textScoreGameOverLeft);
+                        textScoreGameOverLeft.setText("SCORE: "+(globalData.getScore().toString()));
+                        textScoreGameOverRight = (TextView) frameLayoutGameOverRight.findViewById(R.id.textScoreGameOverRight);
+                        textScoreGameOverRight.setText("SCORE: "+(globalData.getScore().toString()));
+
+                        relativeLayoutLeft.addView(frameLayoutGameOverLeft);
+                        relativeLayoutRight.addView(frameLayoutGameOverRight);
+
                     }
 
                     else { //only if globalData.getLife() >0
                         runnable = true;
+
                         textLevelLeft.setText("LEVEL: " + gameManager.getIdLevel());
                         textLifeLeft.setText("LIFE: " + globalData.getLife());
-                        textPointsLeft.setText("POINTS: " + globalData.getPoints().toString());
+                        textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
 
                         textLevelRight.setText("LEVEL: " + gameManager.getIdLevel());
                         textLifeRight.setText("LIFE: " + globalData.getLife());
-                        textPointsRight.setText("POINTS: " + globalData.getPoints().toString());
+                        textScoreRight.setText("SCORE: " + globalData.getScore().toString());
 
                         pick = gameManager.getIdEnemy().get(i).getSelectedLane();
                         size = gameManager.getIdEnemy().size();
@@ -334,9 +354,9 @@ public class GameThread extends Thread{
                     animationEnemies.hideImage(enemyRightLane1Id0);
                 }
                 else{
-                    globalData.increasePoints();
-                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
-                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
+                    globalData.increaseScore();
+                    textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
+                    textScoreRight.setText("SCORE: " + globalData.getScore().toString());
                 }
             }
 
@@ -382,9 +402,9 @@ public class GameThread extends Thread{
                     animationEnemies.hideImage(enemyRightLane2Id0);
                 }
                 else{
-                    globalData.increasePoints();
-                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
-                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
+                    globalData.increaseScore();
+                    textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
+                    textScoreRight.setText("SCORE: " + globalData.getScore().toString());
                 }
             }
 
@@ -428,9 +448,9 @@ public class GameThread extends Thread{
                     animationEnemies.hideImage(enemyRightLane3Id0);
                 }
                 else{
-                    globalData.increasePoints();
-                    textPointsLeft.setText("POINTS: "+ globalData.getPoints().toString());
-                    textPointsRight.setText("POINTS: "+ globalData.getPoints().toString());
+                    globalData.increaseScore();
+                    textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
+                    textScoreRight.setText("SCORE: " + globalData.getScore().toString());
                 }
             }
 

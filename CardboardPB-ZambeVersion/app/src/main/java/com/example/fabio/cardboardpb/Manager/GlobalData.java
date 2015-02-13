@@ -8,13 +8,13 @@ import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 public class GlobalData {
 
     private int absolutePosition;
-    private boolean isEnd1=false;
-    private boolean isEnd2=false;
-    private boolean isEnd3=false;
-    private int life=3;
+    private boolean isEnd1 = false;
+    private boolean isEnd2 = false;
+    private boolean isEnd3 = false;
+    private int life = 3;
     private Eye eye;
-    private int level=1;
-    private int points=0;
+    private int level = 1;
+    private int score = 0;
 
     public int getAbsolutePosition() {
         return absolutePosition;
@@ -68,8 +68,9 @@ public class GlobalData {
         this.eye = eye;
     }
 
-    public int getLevel() {
-        return level;
+    public Integer getLevel() {
+        Integer lev=new Integer(level);
+        return lev;
     }
 
     public Integer getLife() {
@@ -77,12 +78,12 @@ public class GlobalData {
         return l;
     }
 
-    public void increasePoints(){
-        points+=10;
+    public void increaseScore(){
+        score +=10;
     }
 
-    public Integer getPoints(){
-        Integer p=new Integer(points);
+    public Integer getScore(){
+        Integer p=new Integer(score);
         return p;
     }
 

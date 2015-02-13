@@ -70,6 +70,7 @@ public class AnimationLoopThread extends Thread {
                     canvasExplosion = viewExplosion.getHolder().lockCanvas();
 
                     synchronized (viewExplosion.getHolder()) {
+                        if(canvasExplosion!=null)
                         viewExplosion.onDrawAnimationeExplosionView(canvasExplosion);
                         }
 

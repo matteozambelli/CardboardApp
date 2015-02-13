@@ -51,12 +51,14 @@ public class Sprite {
 
     public void onDrawExplosion(Canvas canvas) {
         updateExplosion();
-        canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+        if(canvas!=null)
+            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         int srcX = currentFrame * width;
         int srcY = 0;
         Rect src = new Rect(srcX, 0, srcX + width, srcY + height);
         Rect dst = new Rect(xExplosion, yExplosion, xExplosion + width, yExplosion + height);
-        canvas.drawBitmap(bmp, src, dst, null);
+        if(canvas!=null)
+            canvas.drawBitmap(bmp, src, dst, null);
     }
 
     public void onDrawBackground(Canvas canvas) {

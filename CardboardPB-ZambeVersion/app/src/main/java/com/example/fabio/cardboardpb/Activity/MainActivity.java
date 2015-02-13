@@ -1,28 +1,21 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
-import com.example.fabio.cardboardpb.Manager.MyDialog;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
@@ -74,7 +67,6 @@ public class MainActivity extends Activity {
     private int leftCarPosition;
     private int rightCarPosition;
     private boolean running=true;
-    private MyDialog dialog;
 
     public MainActivity(){
         instance=this;
@@ -116,11 +108,11 @@ public class MainActivity extends Activity {
 
         textLevelLeft=(TextView) findViewById(R.id.textViewLevelLeft);
         textLifeLeft = (TextView)findViewById(R.id.textViewLifeLeft);
-        textPointsLeft = (TextView)findViewById(R.id.textViewPointsLeft);
+        textPointsLeft = (TextView)findViewById(R.id.textViewScoreLeft);
 
         textLevelRight=(TextView) findViewById(R.id.textViewLevelRight);
         textLifeRight = (TextView)findViewById(R.id.textViewLifeRight);
-        textPointsRight = (TextView)findViewById(R.id.textViewPointsRight);
+        textPointsRight = (TextView)findViewById(R.id.textViewScoreRight);
 
 
         target1=(ImageView) findViewById(R.id.target1);

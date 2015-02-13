@@ -10,9 +10,7 @@
 
     <!-- left eye view-->
     <RelativeLayout
-
-        android:id="@+id/rl1"
-        android:background="@drawable/background_car1"
+        android:id="@+id/relativeLayoutLeft"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
@@ -24,8 +22,7 @@
             android:layout_height="fill_parent"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
-
-        </RelativeLayout>
+            </RelativeLayout>
 
         <ImageView
             android:layout_width="35dp"
@@ -101,29 +98,38 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/textViewLevelLeft"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="240dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textViewLifeLeft"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="260dp"/>
+            android:text="LIFE: "
+            android:layout_marginTop="235dp"
+            android:layout_marginLeft="40dp"
+            android:background="#4e5154"
+            android:padding="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/textViewPointsLeft"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="280dp"/>
+            android:id="@+id/textViewLevelLeft"
+            android:text="LEVEL: "
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignTop="@+id/textViewLifeLeft"
+            android:background="#4e5154"
+            android:padding="5dp"/>
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewScoreLeft"
+            android:text="SCORE: "
+            android:layout_alignTop="@+id/textViewLifeLeft"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="120dp"
+            android:background="#4e5154"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -133,6 +139,7 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -143,6 +150,7 @@
 
         <!--REMOVE THIS-->
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -151,17 +159,66 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textColor="@color/White"/>
-        <!---->
 
+        <FrameLayout
+            android:id="@+id/frameLayoutGameOverLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/back1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEVEL: "
+                android:id="@+id/textLevelGameOverLeft"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#4e5154"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCORE: "
+                android:id="@+id/textScoreGameOverLeft"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp"
+                android:padding="5dp"
+                android:background="#4e5154"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="95dp"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:text="Press UP for insert your name"
+                android:id="@+id/editTextInsertNameLeft"
+                android:background="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press PLAY to restart"
+                android:id="@+id/textRestartGameOverLeft"
+                android:layout_marginTop="133dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/holo_orange_light"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                />
+
+        </FrameLayout>
+        <!---->
     </RelativeLayout>
 
 <!-- right eye view-->
 
     <RelativeLayout
-        android:id="@+id/rl2"
+        android:id="@+id/relativeLayoutRight"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-
         android:layout_weight="50">
 
         <RelativeLayout
@@ -222,26 +279,86 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/textViewLevelRight"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="240dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textViewLifeRight"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="260dp"/>
+            android:text="LIFE: "
+            android:layout_marginTop="235dp"
+            android:layout_marginLeft="40dp"
+            android:background="#4e5154"
+            android:padding="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/textViewPointsRight"
+            android:id="@+id/textViewLevelRight"
+            android:text="LEVEL: "
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignTop="@+id/textViewLifeRight"
+            android:background="#4e5154"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewScoreRight"
+            android:text="SCORE: "
+            android:layout_alignTop="@+id/textViewLifeRight"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="120dp"
+            android:background="#4e5154"
+            android:padding="5dp"
+            />
+
+        <FrameLayout
+            android:id="@+id/frameLayoutGameOverRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="280dp"/>
+            android:background="@drawable/back1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEVEL: "
+                android:id="@+id/textLevelGameOverRight"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#4e5154"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCORE: "
+                android:id="@+id/textScoreGameOverRight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp"
+                android:padding="5dp"
+                android:background="#4e5154"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="95dp"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:text="Press UP for insert your name"
+                android:id="@+id/editTextInsertNameRight"
+                android:background="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press PLAY to restart"
+                android:id="@+id/textRestartGameOverRight"
+                android:layout_marginTop="133dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/holo_orange_light"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                />
+
+        </FrameLayout>
 
     </RelativeLayout>
 

@@ -65,7 +65,8 @@ public class AnimationExplosionView extends SurfaceView {
 
     public void onDrawAnimationeExplosionView(Canvas canvas) {
         //canvas.drawColor(Color.BLACK);
-        spriteExplosion.onDrawExplosion(canvas);
+        if(canvas!=null)
+            spriteExplosion.onDrawExplosion(canvas);
     }
 
 

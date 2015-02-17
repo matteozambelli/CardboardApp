@@ -9,12 +9,14 @@ import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
+import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
@@ -37,6 +39,12 @@ public class MainActivity extends Activity {
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
+    RelativeLayout relativeLayoutLeft;
+    RelativeLayout relativeLayoutRight;
+    RelativeLayout relativeLayoutAnimationLeft;
+    RelativeLayout relativeLayoutAnimationRight;
+    FrameLayout frameLayoutLeft;
+    FrameLayout frameLayoutRight;
 
     //Our car
     private ImageView carLeft;
@@ -126,8 +134,14 @@ public class MainActivity extends Activity {
 
         //getCollision(animationEnemies);
 
-        RelativeLayout relativeLayoutAnimationLeft=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundLeft);
-        RelativeLayout relativeLayoutAnimationRight=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundRight);
+        relativeLayoutLeft = (RelativeLayout)findViewById(R.id.relativeLayoutLeft);
+        relativeLayoutRight = (RelativeLayout)findViewById(R.id.relativeLayoutRight);
+
+        frameLayoutLeft = (FrameLayout)findViewById(R.id.frameLayoutGameOverLeft);
+        frameLayoutRight = (FrameLayout)findViewById(R.id.frameLayoutGameOverRight);
+
+        relativeLayoutAnimationLeft=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundLeft);
+        relativeLayoutAnimationRight=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundRight);
         backgroundViewLeft=new AnimationBackgroundView(this);
         backgroundViewRight=new AnimationBackgroundView(this);
         relativeLayoutAnimationLeft.addView(backgroundViewLeft);
@@ -274,13 +288,11 @@ public class MainActivity extends Activity {
         }
     }
 
-
-
     /**
      * handle the key + press event
      */
     private void volumeUp() {
-
+        if(globalData.getLife()>0){
         if (globalData.getAbsolutePosition()> 1) {
             globalData.decreaseAbosolutePosition();
             leftCarPosition -= width*0.13;
@@ -290,6 +302,19 @@ public class MainActivity extends Activity {
         } else {
             globalData.setAbsolutePosition(1);
         }
+        }
+        else{ //only if globalData.getLife==0
+            globalData.setRunnable(true);
+            //GameManager newGame=new GameManager();
+            globalData.setLife(3);
+            globalData.setScore(0);
+
+            //todo resettare gameManager
+
+            relativeLayoutLeft.removeView(frameLayoutLeft);
+            relativeLayoutRight.removeView(frameLayoutRight);
+        }
+
         //detectCollision();
         /*
         new AlertDialog.Builder(this)
@@ -309,7 +334,7 @@ public class MainActivity extends Activity {
      * handle the key - press event
      */
     private void volumeDown() {
-
+        if(globalData.isRunnable()){
         if (globalData.getAbsolutePosition() < 3) {
             globalData.increaseAbosolutePosition();
             leftCarPosition += width*0.13;
@@ -318,6 +343,7 @@ public class MainActivity extends Activity {
             carRight.setTranslationX(rightCarPosition);
         } else {
             globalData.setAbsolutePosition(3);
+        }
         }
        // detectCollision();
 

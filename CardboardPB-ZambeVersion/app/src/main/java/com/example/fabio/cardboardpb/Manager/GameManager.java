@@ -21,11 +21,9 @@ public class GameManager implements GameManagerInterface{
      */
     public void generateGameData(){
         levelManager.generateLevel();
-
         idLevel=levelManager.getIdLevel();
         numEnemies=levelManager.getNumEnemies();
         interval=levelManager.getTimeInterval();
-
 
         for(int i=0;i<numEnemies;i++) {
             EnemiesManager temp= new EnemiesManager();
@@ -34,6 +32,11 @@ public class GameManager implements GameManagerInterface{
         }
         //we need this for setup the next level
         levelManager.onLevelEnd();
+    }
+
+    public void newGame(){
+        levelManager=new LevelManager();
+        enemiesManager= new ArrayList<EnemiesManager>();
     }
 
 

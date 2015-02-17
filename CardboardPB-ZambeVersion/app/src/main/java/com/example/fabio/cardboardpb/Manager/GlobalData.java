@@ -11,6 +11,17 @@ public class GlobalData {
     private boolean isEnd1 = false;
     private boolean isEnd2 = false;
     private boolean isEnd3 = false;
+
+    public boolean isRunnable() {
+        return runnable;
+    }
+
+    public void setRunnable(boolean runnable) {
+        this.runnable = runnable;
+    }
+
+    private boolean runnable = true;
+
     private int life = 3;
     private Eye eye;
     private int level = 1;
@@ -85,6 +96,10 @@ public class GlobalData {
     public Integer getScore(){
         Integer p=new Integer(score);
         return p;
+    }
+
+    public void setScore(int s){
+        score=s;
     }
 
     public void setLevel(int level) {

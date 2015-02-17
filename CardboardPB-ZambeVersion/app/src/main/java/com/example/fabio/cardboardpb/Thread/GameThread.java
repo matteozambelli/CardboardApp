@@ -24,7 +24,7 @@ import com.example.fabio.cardboardpb.R;
  */
 public class GameThread extends Thread{
 
-    private GameManager gameManager;
+    public GameManager gameManager;
     private AnimationEnemies animationEnemies;
     private AnimationTarget animationTarget;
     private ImageView enemyLeftLane1Id0;
@@ -80,7 +80,7 @@ public class GameThread extends Thread{
     int milliseconds;
 
     private long startTime = 0L;
-    public boolean runnable; //if life==0 runnable turn false
+    //public boolean runnable; //if life==0 runnable turn false
     TextView textLevelDialogLeft;
 
     /**
@@ -114,6 +114,7 @@ public class GameThread extends Thread{
 
         gameManager = new GameManager();
         gameManager.generateGameData();
+
         animationEnemies = new AnimationEnemies();
         relativeLayoutAnimationLeft=RLAnimationLeft;
         relativeLayoutAnimationRight=RLAnimationRight;
@@ -127,7 +128,7 @@ public class GameThread extends Thread{
         textScoreRight =tScoreRight;
         displayHeight=height;
         displayWidth=width;
-        runnable=running;
+        //runnable=running;
         //toastLifeLeft=Toast.makeText(activity.getApplicationContext(),"Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
         //toastLifeRight=Toast.makeText(activity.getApplicationContext(), "Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
         enemyLeftLane1Id0=i1;
@@ -154,7 +155,7 @@ public class GameThread extends Thread{
 
     @Override
     public void run() {
-        while(runnable){
+        while(globalData.isRunnable()){
             if(state){
                 // Se è vero fai questo
             }else{
@@ -167,7 +168,7 @@ public class GameThread extends Thread{
                 public void run() {
 
                     if (globalData.getLife() == 0){
-                        runnable=false;
+                        globalData.setRunnable(false);
                         //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE
 
                         textLevelGameOverLeft = (TextView) frameLayoutGameOverLeft.findViewById(R.id.textLevelGameOverLeft);
@@ -181,18 +182,17 @@ public class GameThread extends Thread{
 
                         relativeLayoutLeft.addView(frameLayoutGameOverLeft);
                         relativeLayoutRight.addView(frameLayoutGameOverRight);
-
                     }
 
                     else { //only if globalData.getLife() >0
-                        runnable = true;
+                        globalData.setRunnable(true);
 
                         textLevelLeft.setText("LEVEL: " + gameManager.getIdLevel());
-                        textLifeLeft.setText("LIFE: " + globalData.getLife());
+                        textLifeLeft.setText("LIFE: " + globalData.getLife().toString());
                         textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
 
                         textLevelRight.setText("LEVEL: " + gameManager.getIdLevel());
-                        textLifeRight.setText("LIFE: " + globalData.getLife());
+                        textLifeRight.setText("LIFE: " + globalData.getLife().toString());
                         textScoreRight.setText("SCORE: " + globalData.getScore().toString());
 
                         pick = gameManager.getIdEnemy().get(i).getSelectedLane();

@@ -81,6 +81,7 @@ public class GameThread extends Thread{
 
     private long startTime = 0L;
     //public boolean runnable; //if life==0 runnable turn false
+    private boolean gameOver=false;
     TextView textLevelDialogLeft;
 
     /**
@@ -171,10 +172,12 @@ public class GameThread extends Thread{
                         globalData.setRunnable(false);
                         //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE
 
+                        gameOver=true;
+
                         textLevelGameOverLeft = (TextView) frameLayoutGameOverLeft.findViewById(R.id.textLevelGameOverLeft);
-                        textLevelGameOverLeft.setText("LEVEL: "+(globalData.getLevel().toString()));
+                        textLevelGameOverLeft.setText("LEVEL: "+(gameManager.getIdLevel()));
                         textLevelGameOverRight = (TextView) frameLayoutGameOverRight.findViewById(R.id.textLevelGameOverRight);
-                        textLevelGameOverRight.setText("LEVEL: "+(globalData.getLevel().toString()));
+                        textLevelGameOverRight.setText("LEVEL: "+(gameManager.getIdLevel()));
                         textScoreGameOverLeft = (TextView) frameLayoutGameOverLeft.findViewById(R.id.textScoreGameOverLeft);
                         textScoreGameOverLeft.setText("SCORE: "+(globalData.getScore().toString()));
                         textScoreGameOverRight = (TextView) frameLayoutGameOverRight.findViewById(R.id.textScoreGameOverRight);
@@ -187,6 +190,13 @@ public class GameThread extends Thread{
                     else { //only if globalData.getLife() >0
                         globalData.setRunnable(true);
 
+                        if(gameOver){
+                            gameManager=new GameManager();
+                            gameManager.generateGameData();
+                            gameOver=false;
+                            i=0;
+                        }
+
                         textLevelLeft.setText("LEVEL: " + gameManager.getIdLevel());
                         textLifeLeft.setText("LIFE: " + globalData.getLife().toString());
                         textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
@@ -195,6 +205,7 @@ public class GameThread extends Thread{
                         textLifeRight.setText("LIFE: " + globalData.getLife().toString());
                         textScoreRight.setText("SCORE: " + globalData.getScore().toString());
 
+                        //todo da resettare GameManager
                         pick = gameManager.getIdEnemy().get(i).getSelectedLane();
                         size = gameManager.getIdEnemy().size();
                         penalizationManager.penalize(eye);

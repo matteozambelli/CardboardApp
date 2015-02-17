@@ -304,15 +304,18 @@ public class MainActivity extends Activity {
         }
         }
         else{ //only if globalData.getLife==0
-            globalData.setRunnable(true);
-            //GameManager newGame=new GameManager();
+            relativeLayoutLeft.removeView(frameLayoutLeft);
+            relativeLayoutRight.removeView(frameLayoutRight);
+
             globalData.setLife(3);
             globalData.setScore(0);
 
+            globalData.setRunnable(true);
+            //GameManager newGame=new GameManager();
+
             //todo resettare gameManager
 
-            relativeLayoutLeft.removeView(frameLayoutLeft);
-            relativeLayoutRight.removeView(frameLayoutRight);
+
         }
 
         //detectCollision();

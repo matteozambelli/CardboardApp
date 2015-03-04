@@ -48,7 +48,7 @@ public class LogInActivity extends Activity {
         logIn= (Button) findViewById(R.id.logInButton);
         signUp= (TextView) findViewById(R.id.textViewSignUp);
 
-        passwordToSend= PasswdManager.calculateHash(password.toString());
+       // passwordToSend= PasswdManager.calculateHash(password.toString());
 
 
         logIn.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +65,7 @@ public class LogInActivity extends Activity {
                     HttpClient Client = new DefaultHttpClient();
 
                     // Create URL string
-                    String URL = "http://localhost:3306/cardboard.php?email="+email.toString()+"&password="+passwordToSend;
+                    String URL = "http://localhost:3306/cardboard.php?email="+email.toString()+"&password="+password.toString();
 
 
                     //Log.i("httpget", URL);

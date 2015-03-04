@@ -1,8 +1,11 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -48,7 +51,7 @@ public class LogInActivity extends Activity {
         logIn= (Button) findViewById(R.id.logInButton);
         signUp= (TextView) findViewById(R.id.textViewSignUp);
 
-       // passwordToSend= PasswdManager.calculateHash(password.toString());
+       passwordToSend= PasswdManager.calculateHash(password.toString());
 
 
         logIn.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +68,7 @@ public class LogInActivity extends Activity {
                     HttpClient Client = new DefaultHttpClient();
 
                     // Create URL string
-                    String URL = "http://localhost:3306/cardboard.php?email="+email.toString()+"&password="+password.toString();
+                    String URL = "http://localhost:3306/cardboard.php?email="+email.toString()+"&password="+passwordToSend;
 
 
                     //Log.i("httpget", URL);
@@ -94,6 +97,14 @@ public class LogInActivity extends Activity {
 
             }
         });
+
+
+        signUp.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertSignUp();
+            }
+        });
     }
 
 
@@ -118,4 +129,29 @@ public class LogInActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void alertSignUp(){
+        
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("SIGN UP");
+        LayoutInflater inflater = this.getLayoutInflater();
+        alert.setView(inflater.inflate(R.layout.sign_up,null));
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Do something with value! <-- inserire qui l'azione
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+
+                    }
+                });
+        alert.show();
+    }
+
+
 }

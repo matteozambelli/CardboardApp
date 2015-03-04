@@ -1,6 +1,7 @@
 package com.example.fabio.cardboardpb.Manager;
 
 
+import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 
 /**
@@ -12,7 +13,9 @@ public class PasswdManager {
     private static String salt = "12ThisIsMySaltForAddedSecurity*59";
 
     public static String calculateHash(String data) {
-        return DigestUtils.sha256Hex(data + salt);
+
+        String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
+        return hash;
     }
 
    /** public static void main(String args[]) {

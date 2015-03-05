@@ -1,17 +1,22 @@
 package com.example.fabio.cardboardpb.Activity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -131,26 +136,68 @@ public class LogInActivity extends Activity {
     }
 
     private void alertSignUp(){
-        
+
+        final EditText firstName = new EditText(this);
+        final EditText lastName = new EditText(this);
+        final EditText email = new EditText(this);
+        final EditText password = new EditText(this);
+        final EditText confirmPassword = new EditText(this);
+        LinearLayout layout = new LinearLayout(this);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
         alert.setMessage("SIGN UP");
-        LayoutInflater inflater = this.getLayoutInflater();
-        alert.setView(inflater.inflate(R.layout.sign_up,null));
+        firstName.setHint("first name");
+        lastName.setHint("last name");
+        email.setHint("email");
+        password.setHint("password");
+        confirmPassword.setHint("confirm password");
+        password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        confirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        layout.addView(firstName);
+        layout.addView(lastName);
+        layout.addView(email);
+        layout.addView(password);
+        layout.addView(confirmPassword);
+        alert.setView(layout);
+
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
             @Override
-            public void onClick(DialogInterface dialog, int whichButton) {
-                // Do something with value! <-- inserire qui l'azione
+            public void onClick(DialogInterface dialog, int which) {
+
+                if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
+                    //ALERT MESSAGE
+                    Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
+
+                }
+                Toast.makeText(getBaseContext(), "Please wait", Toast.LENGTH_LONG).show();
             }
         });
-        alert.setNegativeButton("Cancel",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        // Canceled.
 
-                    }
-                });
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // TODO Auto-generated method stub
+
+            }
+        });
         alert.show();
+    }
+
+    private void alertWrongPassword(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Warning");
+        alert.setMessage("please insert the same password");
+        alert.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // continue with delete
+            }
+        });
     }
 
 

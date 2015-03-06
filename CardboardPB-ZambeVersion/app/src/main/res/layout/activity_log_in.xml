@@ -44,9 +44,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="Sign up"
         android:id="@+id/textViewSignUp"
         android:layout_below="@+id/logInButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="forgot your password?"
+        android:id="@+id/forgotPassword"
+        android:layout_below="@+id/textViewSignUp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keep me logged in"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/password"
+        android:layout_toLeftOf="@+id/textViewSignUp"
+        android:layout_toStartOf="@+id/textViewSignUp"
+        />
 </RelativeLayout>

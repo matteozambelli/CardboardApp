@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -14,6 +15,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -41,6 +44,8 @@ public class LogInActivity extends Activity {
     private Button logIn;
     private TextView signUp;
     private String passwordToSend;
+    private CheckBox keepLog;
+    private boolean isChecked;
 
     private DBConnect DBConnect;
 
@@ -55,8 +60,10 @@ public class LogInActivity extends Activity {
         password= (EditText) findViewById(R.id.password);
         logIn= (Button) findViewById(R.id.logInButton);
         signUp= (TextView) findViewById(R.id.textViewSignUp);
+        keepLog=(CheckBox) findViewById(R.id.checkBox);
+        isChecked=false;
 
-       passwordToSend= PasswdManager.calculateHash(password.toString());
+        passwordToSend= PasswdManager.calculateHash(password.toString());
 
 
         logIn.setOnClickListener(new View.OnClickListener() {
@@ -107,10 +114,33 @@ public class LogInActivity extends Activity {
         signUp.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertSignUp();
+                alertSignUp("","","");
             }
         });
+
+        keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SharedPreferences settings = getSharedPreferences("PREFS_NAME", 0);
+               
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putBoolean("isChecked", isChecked);
+                editor.commit();
+            }
+        });
+
+        SharedPreferences settings1 = getSharedPreferences("PREFS_NAME", 0);
+        isChecked = settings1.getBoolean("isChecked", false);
+
+        if (isChecked) {
+            keepLog.setChecked(true);
+        } else {
+            keepLog.setChecked(false);
+        }
+
     }
+
 
 
     @Override
@@ -135,20 +165,56 @@ public class LogInActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void alertSignUp(){
+
+
+    private void alertSignUp(String firstname,String lastname,String email){
 
         final EditText firstName = new EditText(this);
         final EditText lastName = new EditText(this);
-        final EditText email = new EditText(this);
+        final EditText eMail = new EditText(this);
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
         LinearLayout layout = new LinearLayout(this);
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
         alert.setMessage("SIGN UP");
-        firstName.setHint("first name");
-        lastName.setHint("last name");
-        email.setHint("email");
+
+        if(firstname.equals("") && lastname.equals("") && email.equals("")){
+            firstName.setHint("first name");
+            lastName.setHint("last name");
+            eMail.setHint("email");
+        }
+        if(firstname.equals("") && !lastname.equals("") && !email.equals("")){
+            firstName.setHint("first name");
+            lastName.setText(lastname);
+            eMail.setText(email);
+        }
+        if(firstname.equals("") && lastname.equals("") && !email.equals("")){
+            firstName.setHint("first name");
+            lastName.setHint("last name");
+            eMail.setText(email);
+        }
+        if(!firstname.equals("") && lastname.equals("") && !email.equals("")){
+            firstName.setText(firstname);
+            lastName.setHint("last name");
+            eMail.setText(email);
+        }
+        if(!firstname.equals("") && !lastname.equals("") && email.equals("")){
+            firstName.setText(firstname);
+            lastName.setText(lastname);
+            eMail.setHint("email");
+        }
+        if(!firstname.equals("") && lastname.equals("") && email.equals("")){
+            firstName.setText(firstname);
+            lastName.setHint("last name");
+            eMail.setHint("email");
+        }
+
+        else{
+            firstName.setText(firstname);
+            lastName.setText(lastname);
+            eMail.setText(email);
+        }
         password.setHint("password");
         confirmPassword.setHint("confirm password");
         password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -158,7 +224,7 @@ public class LogInActivity extends Activity {
 
         layout.addView(firstName);
         layout.addView(lastName);
-        layout.addView(email);
+        layout.addView(eMail);
         layout.addView(password);
         layout.addView(confirmPassword);
         alert.setView(layout);
@@ -167,13 +233,23 @@ public class LogInActivity extends Activity {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                String backUpFirstName= firstName.getText().toString();
+                String backUpLastName= lastName.getText().toString();
+                String backUpEmail= eMail.getText().toString();
 
                 if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                     //ALERT MESSAGE
                     Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
+                    alertSignUp(backUpFirstName,backUpLastName,backUpEmail);
 
+
+                }else {
+
+                    Toast.makeText(getBaseContext(), "Please wait", Toast.LENGTH_LONG).show();
+                    //Cript the password
+                    passwordToSend=PasswdManager.calculateHash(password.getText().toString());
+                    //INVIA I DATI!
                 }
-                Toast.makeText(getBaseContext(), "Please wait", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -186,19 +262,9 @@ public class LogInActivity extends Activity {
             }
         });
         alert.show();
+
     }
 
-    private void alertWrongPassword(){
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Warning");
-        alert.setMessage("please insert the same password");
-        alert.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // continue with delete
-            }
-        });
-    }
 
 
 }

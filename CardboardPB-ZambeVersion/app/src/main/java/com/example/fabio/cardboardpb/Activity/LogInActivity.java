@@ -46,6 +46,7 @@ public class LogInActivity extends Activity {
     private String passwordToSend;
     private CheckBox keepLog;
     private boolean isChecked;
+    private String memMail;
 
     private DBConnect DBConnect;
 
@@ -64,7 +65,6 @@ public class LogInActivity extends Activity {
         isChecked=false;
 
         passwordToSend= PasswdManager.calculateHash(password.toString());
-
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,9 +123,10 @@ public class LogInActivity extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 SharedPreferences settings = getSharedPreferences("PREFS_NAME", 0);
-               
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putBoolean("isChecked", isChecked);
+                editor.putString("mail",email.getText().toString());
+                editor.putString("password", passwordToSend);
                 editor.commit();
             }
         });
@@ -135,6 +136,7 @@ public class LogInActivity extends Activity {
 
         if (isChecked) {
             keepLog.setChecked(true);
+            email.setText(settings1.getString("mail","ciao"));
         } else {
             keepLog.setChecked(false);
         }

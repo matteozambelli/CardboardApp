@@ -1,40 +1,55 @@
 package com.example.fabio.cardboardpb.Activity;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.support.v7.app.ActionBarActivity;
+import android.database.CharArrayBuffer;
+import android.database.ContentObserver;
+import android.database.Cursor;
+import android.database.DataSetObserver;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.fabio.cardboardpb.DB.DBConnect;
+import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 
 public class LogInActivity extends Activity {
 
@@ -47,6 +62,7 @@ public class LogInActivity extends Activity {
     private CheckBox keepLog;
     private boolean isChecked;
     private String memMail;
+    private PostCall post;
 
     private DBConnect DBConnect;
 
@@ -55,91 +71,46 @@ public class LogInActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        DBConnect=new DBConnect();
 
+        DBConnect=new DBConnect();
         email= (EditText) findViewById(R.id.email);
         password= (EditText) findViewById(R.id.password);
         logIn= (Button) findViewById(R.id.logInButton);
         signUp= (TextView) findViewById(R.id.textViewSignUp);
         keepLog=(CheckBox) findViewById(R.id.checkBox);
         isChecked=false;
-
         passwordToSend= PasswdManager.calculateHash(password.toString());
 
+        post= new PostCall();
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //ALERT MESSAGE
-                Toast.makeText(getBaseContext(), "Please wait, connecting to server.", Toast.LENGTH_LONG).show();
 
-                try{
-
-                    // Create http cliient object to send request to server
-
-                    HttpClient Client = new DefaultHttpClient();
-
-                    // Create URL string
-                    String URL = "http://localhost:3306/cardboard.php?email="+email.toString()+"&password="+passwordToSend;
-
-
-                    //Log.i("httpget", URL);
-
-                    try
-                    {
-                        String SetServerString = "";
-
-                        // Create Request to server and get response
-
-                        HttpGet httpget = new HttpGet(URL);
-                        ResponseHandler<String> responseHandler = new BasicResponseHandler();
-                        SetServerString = Client.execute(httpget, responseHandler);
-
-
+                Thread thread = new Thread(new Runnable(){
+                    @Override
+                    public void run() {
+                        try {
+                            //Your code goes here
+                            post.myDoInBackGround();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
-                    catch(Exception ex)
-                    {
-                       ex.printStackTrace();
-                    }
-                }
-                catch(Exception ex)
-                {
-                  ex.printStackTrace();
-                }
+                });
+
+                thread.start();
+
 
             }
         });
 
-
-        signUp.setOnClickListener( new View.OnClickListener() {
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertSignUp("","","");
             }
         });
-
-        keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SharedPreferences settings = getSharedPreferences("PREFS_NAME", 0);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putBoolean("isChecked", isChecked);
-                editor.putString("mail",email.getText().toString());
-                editor.putString("password", passwordToSend);
-                editor.commit();
-            }
-        });
-
-        SharedPreferences settings1 = getSharedPreferences("PREFS_NAME", 0);
-        isChecked = settings1.getBoolean("isChecked", false);
-
-        if (isChecked) {
-            keepLog.setChecked(true);
-            email.setText(settings1.getString("mail","ciao"));
-        } else {
-            keepLog.setChecked(false);
-        }
 
     }
 
@@ -171,14 +142,20 @@ public class LogInActivity extends Activity {
 
     private void alertSignUp(String firstname,String lastname,String email){
 
+
         final EditText firstName = new EditText(this);
         final EditText lastName = new EditText(this);
         final EditText eMail = new EditText(this);
+        final EditText answare= new EditText(this);
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
+        final Spinner spinner = new Spinner(this);
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
+
+        ArrayAdapter<CharSequence> adapter_gg = ArrayAdapter.createFromResource(this, R.array.security_question, android.R.layout.simple_spinner_item);
+        spinner.setAdapter(adapter_gg);
         alert.setMessage("SIGN UP");
 
         if(firstname.equals("") && lastname.equals("") && email.equals("")){
@@ -212,11 +189,17 @@ public class LogInActivity extends Activity {
             eMail.setHint("email");
         }
 
+        if(firstname.equals("") && !lastname.equals("") && email.equals("")){
+            firstName.setHint("firstname");
+            lastName.setText(lastname);
+            eMail.setHint("email");
+        }
         else{
             firstName.setText(firstname);
             lastName.setText(lastname);
             eMail.setText(email);
         }
+        answare.setHint("your answare");
         password.setHint("password");
         confirmPassword.setHint("confirm password");
         password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -229,6 +212,8 @@ public class LogInActivity extends Activity {
         layout.addView(eMail);
         layout.addView(password);
         layout.addView(confirmPassword);
+        layout.addView(answare);
+        layout.addView(spinner);
         alert.setView(layout);
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -238,6 +223,8 @@ public class LogInActivity extends Activity {
                 String backUpFirstName= firstName.getText().toString();
                 String backUpLastName= lastName.getText().toString();
                 String backUpEmail= eMail.getText().toString();
+
+
 
                 if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                     //ALERT MESSAGE

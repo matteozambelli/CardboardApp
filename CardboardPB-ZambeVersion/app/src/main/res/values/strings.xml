@@ -9,4 +9,11 @@
     <string name="title_activity_language">Language</string>
     <string name="title_activity_log_in">LogInActivity</string>
 
+    <string-array name="security_question">
+        <item>security question</item>
+        <item>your mother name</item>
+        <item>your brother name</item>
+
+    </string-array>
+
 </resources>

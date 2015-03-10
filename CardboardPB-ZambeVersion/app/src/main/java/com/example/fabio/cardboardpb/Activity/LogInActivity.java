@@ -28,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.fabio.cardboardpb.DB.DBConnect;
 import com.example.fabio.cardboardpb.DB.PostCall;
+import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
 
@@ -45,6 +46,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -59,12 +61,14 @@ public class LogInActivity extends Activity {
     private EditText password;
     private Button logIn;
     private TextView signUp;
+    private Button play;
+    private Button forgot;
     private String passwordToSend;
     private CheckBox keepLog;
     private boolean isChecked;
     private String memMail;
     private PostCall post;
-    private TextView play;
+
 
     private DBConnect DBConnect;
 
@@ -82,37 +86,35 @@ public class LogInActivity extends Activity {
         keepLog=(CheckBox) findViewById(R.id.checkBox);
         isChecked=false;
         passwordToSend= PasswdManager.calculateHash(password.toString());
-        play=(TextView) findViewById(R.id.playWithoutReg);
+        play=(Button) findViewById(R.id.playWithoutReg);
+        forgot= (Button) findViewById(R.id.forgotPassword);
         post= new PostCall();
+
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Thread thread = new Thread(new Runnable(){
-                    @Override
-                    public void run() {
-                        try {
-                            //Your code goes here
-                            post.myDoInBackGround();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-
-                thread.start();
+                 post.myPostCall(TypeCall.LOG_IN, email.getText().toString(),password.getText().toString());
             }
         });
+
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertSignUp("","","");
             }
         });
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 warningNoRegistration();
+            }
+        });
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forgotPasswordAlert();
             }
         });
     }
@@ -264,6 +266,33 @@ public class LogInActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                 startActivity(i);
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
+        alert.show();
+    }
+
+    private void forgotPasswordAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("resert your password: ");
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        EditText mailTo= new EditText(this);
+        mailTo.setHint("insert email");
+        layout.addView(mailTo);
+        alert.setView(layout);
+        alert.setTitle("Warning");
+        alert.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
             }
         });
         alert.setNegativeButton("Cancel",

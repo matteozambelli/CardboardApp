@@ -68,4 +68,13 @@
         android:layout_toLeftOf="@+id/textViewSignUp"
         android:layout_toStartOf="@+id/textViewSignUp"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or play without registration"
+        android:id="@+id/playWithoutReg"
+        android:layout_below="@+id/forgotPassword"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"/>
 </RelativeLayout>

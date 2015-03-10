@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.CharArrayBuffer;
 import android.database.ContentObserver;
@@ -63,6 +64,7 @@ public class LogInActivity extends Activity {
     private boolean isChecked;
     private String memMail;
     private PostCall post;
+    private TextView play;
 
     private DBConnect DBConnect;
 
@@ -80,12 +82,11 @@ public class LogInActivity extends Activity {
         keepLog=(CheckBox) findViewById(R.id.checkBox);
         isChecked=false;
         passwordToSend= PasswdManager.calculateHash(password.toString());
-
+        play=(TextView) findViewById(R.id.playWithoutReg);
         post= new PostCall();
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 Thread thread = new Thread(new Runnable(){
                     @Override
@@ -100,21 +101,21 @@ public class LogInActivity extends Activity {
                 });
 
                 thread.start();
-
-
             }
         });
-
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertSignUp("","","");
             }
         });
-
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                warningNoRegistration();
+            }
+        });
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -152,7 +153,6 @@ public class LogInActivity extends Activity {
         final Spinner spinner = new Spinner(this);
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
 
         ArrayAdapter<CharSequence> adapter_gg = ArrayAdapter.createFromResource(this, R.array.security_question, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter_gg);
@@ -255,5 +255,26 @@ public class LogInActivity extends Activity {
     }
 
 
+    private void warningNoRegistration(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Warning");
+        alert.setMessage("you can play without registration, but we can't trace your improvement");
+        alert.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                startActivity(i);
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
+        alert.show();
+    }
 
 }

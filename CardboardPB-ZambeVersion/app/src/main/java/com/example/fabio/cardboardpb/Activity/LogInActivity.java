@@ -68,7 +68,7 @@ public class LogInActivity extends Activity {
     private boolean isChecked;
     private String memMail;
     private PostCall post;
-
+    private Activity logInActivity;
 
     private DBConnect DBConnect;
 
@@ -76,6 +76,8 @@ public class LogInActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
+        logInActivity=this;
 
 
         DBConnect=new DBConnect();
@@ -93,7 +95,7 @@ public class LogInActivity extends Activity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 post.myPostCall(TypeCall.LOG_IN, email.getText().toString(),password.getText().toString());
+                 post.myPostCall(TypeCall.LOG_IN, email.getText().toString(),password.getText().toString(),logInActivity);
             }
         });
 
@@ -305,5 +307,7 @@ public class LogInActivity extends Activity {
 
         alert.show();
     }
+
+
 
 }

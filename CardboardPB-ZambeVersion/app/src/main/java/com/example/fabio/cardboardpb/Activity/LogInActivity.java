@@ -2,61 +2,35 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.CharArrayBuffer;
-import android.database.ContentObserver;
-import android.database.Cursor;
-import android.database.DataSetObserver;
-import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.example.fabio.cardboardpb.DB.DBConnect;
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-import org.w3c.dom.Text;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 
 public class LogInActivity extends Activity {
 
-    private boolean logInOrRegistration=true; //false: registration; true: log in;
+    private boolean logInOrRegistration = true; //false: registration; true: log in;
     private EditText email;
     private EditText password;
     private Button logIn;
@@ -69,6 +43,7 @@ public class LogInActivity extends Activity {
     private String memMail;
     private PostCall post;
     private Activity logInActivity;
+    private String result;
 
     private DBConnect DBConnect;
 
@@ -77,32 +52,36 @@ public class LogInActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        logInActivity=this;
-
-
-        DBConnect=new DBConnect();
-        email= (EditText) findViewById(R.id.email);
-        password= (EditText) findViewById(R.id.password);
-        logIn= (Button) findViewById(R.id.logInButton);
-        signUp= (TextView) findViewById(R.id.textViewSignUp);
-        keepLog=(CheckBox) findViewById(R.id.checkBox);
-        isChecked=false;
-        passwordToSend= PasswdManager.calculateHash(password.toString());
-        play=(Button) findViewById(R.id.playWithoutReg);
-        forgot= (Button) findViewById(R.id.forgotPassword);
-        post= new PostCall();
+        logInActivity = this;
+        DBConnect = new DBConnect();
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+        logIn = (Button) findViewById(R.id.logInButton);
+        signUp = (TextView) findViewById(R.id.textViewSignUp);
+        keepLog = (CheckBox) findViewById(R.id.checkBox);
+        isChecked = false;
+        passwordToSend = PasswdManager.calculateHash(password.toString());
+        play = (Button) findViewById(R.id.playWithoutReg);
+        forgot = (Button) findViewById(R.id.forgotPassword);
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 post.myPostCall(TypeCall.LOG_IN, email.getText().toString(),password.getText().toString(),logInActivity);
+                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                post = new PostCall(email.getText().toString(), passwordToSend);
+                result= post.myPostCall(TypeCall.LOG_IN, logInActivity);
+                if(result.equals("connection")){
+                    Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                    startActivity(i);
+                }
             }
         });
+
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertSignUp("","","");
+                alertSignUp("", "", "");
             }
         });
 
@@ -144,14 +123,13 @@ public class LogInActivity extends Activity {
     }
 
 
-
-    private void alertSignUp(String firstname,String lastname,String email){
+    private void alertSignUp(String firstname, String lastname, String email) {
 
 
         final EditText firstName = new EditText(this);
         final EditText lastName = new EditText(this);
         final EditText eMail = new EditText(this);
-        final EditText answare= new EditText(this);
+        final EditText answare = new EditText(this);
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
         final Spinner spinner = new Spinner(this);
@@ -162,43 +140,42 @@ public class LogInActivity extends Activity {
         spinner.setAdapter(adapter_gg);
         alert.setMessage("SIGN UP");
 
-        if(firstname.equals("") && lastname.equals("") && email.equals("")){
+        if (firstname.equals("") && lastname.equals("") && email.equals("")) {
             firstName.setHint("first name");
             lastName.setHint("last name");
             eMail.setHint("email");
         }
-        if(firstname.equals("") && !lastname.equals("") && !email.equals("")){
+        if (firstname.equals("") && !lastname.equals("") && !email.equals("")) {
             firstName.setHint("first name");
             lastName.setText(lastname);
             eMail.setText(email);
         }
-        if(firstname.equals("") && lastname.equals("") && !email.equals("")){
+        if (firstname.equals("") && lastname.equals("") && !email.equals("")) {
             firstName.setHint("first name");
             lastName.setHint("last name");
             eMail.setText(email);
         }
-        if(!firstname.equals("") && lastname.equals("") && !email.equals("")){
+        if (!firstname.equals("") && lastname.equals("") && !email.equals("")) {
             firstName.setText(firstname);
             lastName.setHint("last name");
             eMail.setText(email);
         }
-        if(!firstname.equals("") && !lastname.equals("") && email.equals("")){
+        if (!firstname.equals("") && !lastname.equals("") && email.equals("")) {
             firstName.setText(firstname);
             lastName.setText(lastname);
             eMail.setHint("email");
         }
-        if(!firstname.equals("") && lastname.equals("") && email.equals("")){
+        if (!firstname.equals("") && lastname.equals("") && email.equals("")) {
             firstName.setText(firstname);
             lastName.setHint("last name");
             eMail.setHint("email");
         }
 
-        if(firstname.equals("") && !lastname.equals("") && email.equals("")){
+        if (firstname.equals("") && !lastname.equals("") && email.equals("")) {
             firstName.setHint("firstname");
             lastName.setText(lastname);
             eMail.setHint("email");
-        }
-        else{
+        } else {
             firstName.setText(firstname);
             lastName.setText(lastname);
             eMail.setText(email);
@@ -224,24 +201,25 @@ public class LogInActivity extends Activity {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                String backUpFirstName= firstName.getText().toString();
-                String backUpLastName= lastName.getText().toString();
-                String backUpEmail= eMail.getText().toString();
-
+                String backUpFirstName = firstName.getText().toString();
+                String backUpLastName = lastName.getText().toString();
+                String backUpEmail = eMail.getText().toString();
 
 
                 if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                     //ALERT MESSAGE
                     Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
-                    alertSignUp(backUpFirstName,backUpLastName,backUpEmail);
+                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
 
 
-                }else {
+                } else {
 
                     Toast.makeText(getBaseContext(), "Please wait", Toast.LENGTH_LONG).show();
                     //Cript the password
-                    passwordToSend=PasswdManager.calculateHash(password.getText().toString());
-                    //INVIA I DATI!
+                    passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                    //send data
+                    post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),eMail.getText().toString(),passwordToSend);
+                    post.myPostCall(TypeCall.SIGN_UP,logInActivity);
                 }
             }
         });
@@ -259,7 +237,7 @@ public class LogInActivity extends Activity {
     }
 
 
-    private void warningNoRegistration(){
+    private void warningNoRegistration() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Warning");
         alert.setMessage("you can play without registration, but we can't trace your improvement");
@@ -281,12 +259,12 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
-    private void forgotPasswordAlert(){
+    private void forgotPasswordAlert() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("resert your password: ");
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
-        EditText mailTo= new EditText(this);
+        EditText mailTo = new EditText(this);
         mailTo.setHint("insert email");
         layout.addView(mailTo);
         alert.setView(layout);
@@ -307,7 +285,6 @@ public class LogInActivity extends Activity {
 
         alert.show();
     }
-
 
 
 }

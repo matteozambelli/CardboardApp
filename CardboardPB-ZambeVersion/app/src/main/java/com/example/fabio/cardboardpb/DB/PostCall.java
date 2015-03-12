@@ -27,8 +27,38 @@ import java.util.List;
 public class PostCall {
 
     private Thread thread;
+    private String response;
+    //LOG_IN
+    private String username;
+    private String password;
+    //SIGN_UP
+    private String firstName;
+    private String lastName;
+    private String email;
 
-    public void myPostCall(TypeCall type, final String username, final String password, final Activity logInActivity) {
+    /**
+     * @param username
+     * @param password
+     */
+    public PostCall(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    /**
+     * @param firstName
+     * @param lastName
+     * @param email
+     * @param password
+     */
+    public PostCall(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+
+    public String myPostCall(final TypeCall type, final Activity logInActivity) {
         // Create a new HttpClient and Post Header
         thread = new Thread(new Runnable() {
             @Override
@@ -37,23 +67,34 @@ public class PostCall {
                 HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/tmp_provaPost.php");
 
 //This is the data to send
-                String MyName = username; //any data to send
-                String MyPassword = password; //any data to send
+
                 final Activity activity = logInActivity;
 
 
                 try {
 // Add your data
                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-                    nameValuePairs.add(new BasicNameValuePair("email", MyName));
-                    nameValuePairs.add(new BasicNameValuePair("password", MyPassword));
-
+                    if (type.equals(TypeCall.LOG_IN)) {
+                        nameValuePairs.add(new BasicNameValuePair("type", "log_in"));
+                        nameValuePairs.add(new BasicNameValuePair("email", username));
+                        nameValuePairs.add(new BasicNameValuePair("password", password));
+                    }
+                    if (type.equals(TypeCall.SIGN_UP)) {
+                        nameValuePairs.add(new BasicNameValuePair("type", "sign_up"));
+                        nameValuePairs.add(new BasicNameValuePair("first_name", firstName));
+                        nameValuePairs.add(new BasicNameValuePair("last_name", lastName));
+                        nameValuePairs.add(new BasicNameValuePair("email", email));
+                        nameValuePairs.add(new BasicNameValuePair("password", password));
+                    }
+                    if (type.equals(TypeCall.RESET)) {
+                        nameValuePairs.add(new BasicNameValuePair("type", "reset"));
+                    }
                     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
 // Execute HTTP Post Request
 
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
-                    String response = httpclient.execute(httppost, responseHandler);
+                    response = httpclient.execute(httppost, responseHandler);
 
 //This is the response from a php application
                     final String reverseString = response;
@@ -84,6 +125,7 @@ public class PostCall {
 
         });
         thread.start();
+        return response;
     }
 
 }

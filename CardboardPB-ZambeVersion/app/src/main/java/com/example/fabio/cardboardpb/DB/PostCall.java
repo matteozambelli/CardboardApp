@@ -73,23 +73,26 @@ public class PostCall {
 
                 try {
                     // Add your data
-                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                    List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
+                    List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(5);
                     if (type.equals(TypeCall.LOG_IN)) {
-                        nameValuePairs.add(new BasicNameValuePair("type", "log_in"));
-                        nameValuePairs.add(new BasicNameValuePair("email", username));
-                        nameValuePairs.add(new BasicNameValuePair("password", password));
+                        nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
+                        nameValuePairsLogIn.add(new BasicNameValuePair("email", username));
+                        nameValuePairsLogIn.add(new BasicNameValuePair("password", password));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsLogIn));
                     }
                     if (type.equals(TypeCall.SIGN_UP)) {
-                        nameValuePairs.add(new BasicNameValuePair("type", "sign_up"));
-                        nameValuePairs.add(new BasicNameValuePair("first_name", firstName));
-                        nameValuePairs.add(new BasicNameValuePair("last_name", lastName));
-                        nameValuePairs.add(new BasicNameValuePair("email", email));
-                        nameValuePairs.add(new BasicNameValuePair("password", password));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("type", "sign_up"));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("first_name", firstName));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("last_name", lastName));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("email", email));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("password", password));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsSignUp));
                     }
                     if (type.equals(TypeCall.RESET)) {
-                        nameValuePairs.add(new BasicNameValuePair("type", "reset"));
+                        //nameValuePairs.add(new BasicNameValuePair("type", "reset"));
                     }
-                    httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
                     // Execute HTTP Post Request
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
                     response = httpclient.execute(httppost, responseHandler);
@@ -101,7 +104,6 @@ public class PostCall {
                             Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
                 }
             });
-
 
                 } catch (ClientProtocolException e) {
                     activity.runOnUiThread(new Runnable() {

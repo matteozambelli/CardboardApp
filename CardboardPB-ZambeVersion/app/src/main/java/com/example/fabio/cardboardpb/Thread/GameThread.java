@@ -13,7 +13,9 @@ import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Animation.AnimationTarget;
+import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
+import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Manager.PenalizationManager;
@@ -25,6 +27,7 @@ import com.example.fabio.cardboardpb.R;
 public class GameThread extends Thread{
 
     public GameManager gameManager;
+    private PostCall postCall;
     private AnimationEnemies animationEnemies;
     private AnimationTarget animationTarget;
     private ImageView enemyLeftLane1Id0;
@@ -72,12 +75,7 @@ public class GameThread extends Thread{
     Thread Controllo;
     private Handler customHandler = new Handler();
 
-    long timeInMilliseconds = 0L;
-    long timeSwapBuff = 0L;
-    long updatedTime = 0L;
-    int secs;
-    int mins;
-    int milliseconds;
+
 
     private long startTime = 0L;
     //public boolean runnable; //if life==0 runnable turn false
@@ -169,6 +167,9 @@ public class GameThread extends Thread{
                 public void run() {
 
                     if (globalData.getLife() == 0){
+
+                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString());
+                        postCall.myPostCall(TypeCall.REPORT,activity);
                         globalData.setRunnable(false);
                         //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE
 
@@ -472,30 +473,4 @@ public class GameThread extends Thread{
         });
     }
 
-
-    public void collision(final AnimationTarget animationTarget) {
-
-
-
-    }
-
-
-    private Runnable updateTimerThread = new Runnable() {
-
-        public void run() {
-
-            timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
-
-            updatedTime = timeSwapBuff + timeInMilliseconds;
-
-            secs = (int) (updatedTime / 1000);
-            mins = secs / 60;
-            secs = secs % 60;
-            milliseconds = (int) (updatedTime % 1000);
-            //timerValue.setText("" + mins + ":"
-            //       + String.format("%02d", secs) + ":"
-            //     + String.format("%03d", milliseconds));
-            customHandler.postDelayed(this, 0);
-        }
-    };
 }

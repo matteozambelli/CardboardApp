@@ -22,7 +22,7 @@ public class GlobalData {
 
     private boolean runnable = true;
 
-    private int life = 3;
+    private int life = 1;
     private Eye eye;
     private int level = 1;
     private int score = 0;

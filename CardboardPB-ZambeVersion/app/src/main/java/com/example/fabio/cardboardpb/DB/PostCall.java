@@ -2,9 +2,12 @@ package com.example.fabio.cardboardpb.DB;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
+
+import junit.framework.Test;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -35,27 +38,49 @@ public class PostCall {
     private String firstName;
     private String lastName;
     private String email;
+    //REPORT
+    private String score;
+    private String level;
+
+    TextView status;
+
 
     /**
+     *
      * @param username
      * @param password
+     * @param status
      */
-    public PostCall(String username, String password) {
+    public PostCall(String username, String password,TextView status) {
         this.username = username;
         this.password = password;
+        this.status=status;
     }
 
     /**
+     *
      * @param firstName
      * @param lastName
      * @param email
      * @param password
+     * @param status
      */
-    public PostCall(String firstName, String lastName, String email, String password) {
+    public PostCall(String firstName, String lastName, String email, String password,TextView status) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.status=status;
+    }
+
+    /**
+     *
+     * @param score
+     * @param level
+     */
+    public PostCall(String score, String level) {
+        this.score = score;
+        this.level = level;
     }
 
     public void myPostCall(final  TypeCall type,final Activity logInActivity) {
@@ -67,14 +92,12 @@ public class PostCall {
                 HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/tmp_provaPost.php");
 
                 //This is the data to send
-
                 final Activity activity = logInActivity;
-
-
                 try {
                     // Add your data
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(5);
+                    List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(3);
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
                         nameValuePairsLogIn.add(new BasicNameValuePair("email", username));
@@ -92,6 +115,12 @@ public class PostCall {
                     if (type.equals(TypeCall.RESET)) {
                         //nameValuePairs.add(new BasicNameValuePair("type", "reset"));
                     }
+                    if(type.equals(TypeCall.REPORT)){
+                        nameValuePairsReport.add(new BasicNameValuePair("type", "report"));
+                        nameValuePairsReport.add(new BasicNameValuePair("score", score));
+                        nameValuePairsReport.add(new BasicNameValuePair("level", level));
+
+                    }
 
                     // Execute HTTP Post Request
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
@@ -101,7 +130,8 @@ public class PostCall {
 
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
+                           // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
+                            status.setText("**DEBUG: "+reverseString+" **");
                 }
             });
 

@@ -2,12 +2,11 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
+import android.os.Handler;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,8 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.fabio.cardboardpb.DB.DBConnect;
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
@@ -30,7 +27,10 @@ import com.example.fabio.cardboardpb.R;
 
 public class LogInActivity extends Activity {
 
-    private boolean logInOrRegistration = true; //false: registration; true: log in;
+    ProgressDialog barProgressDialog;
+    Handler updateBarHandler;
+
+
     private EditText email;
     private EditText password;
     private Button logIn;
@@ -40,13 +40,9 @@ public class LogInActivity extends Activity {
     private Button forgot;
     private String passwordToSend;
     private CheckBox keepLog;
-    private boolean isChecked;
-    private String memMail;
     private PostCall post;
     private Activity logInActivity;
-    private String result;
 
-    private DBConnect DBConnect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +50,13 @@ public class LogInActivity extends Activity {
         setContentView(R.layout.activity_log_in);
 
         logInActivity = this;
-        DBConnect = new DBConnect();
+
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         logIn = (Button) findViewById(R.id.logInButton);
         signUp = (TextView) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
-        isChecked = false;
+
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (Button) findViewById(R.id.forgotPassword);
@@ -69,18 +65,15 @@ public class LogInActivity extends Activity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                post = new PostCall(email.getText().toString(), password.getText().toString());
+                launchRingDialog();
+                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                post = new PostCall(email.getText().toString(), passwordToSend,status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
 
-
-
-              /* if(result.equals("connection")){
-                    Intent i = new Intent(LogInActivity.this, SplashActivity.class);
-                    startActivity(i);
-                }*/
             }
         });
+
+
 
 
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +123,6 @@ public class LogInActivity extends Activity {
 
     private void alertSignUp(String firstname, String lastname, String email) {
 
-
         final EditText firstName = new EditText(this);
         final EditText lastName = new EditText(this);
         final EditText eMail = new EditText(this);
@@ -140,7 +132,6 @@ public class LogInActivity extends Activity {
         final Spinner spinner = new Spinner(this);
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
         ArrayAdapter<CharSequence> adapter_gg = ArrayAdapter.createFromResource(this, R.array.security_question, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter_gg);
         alert.setMessage("SIGN UP");
@@ -223,7 +214,7 @@ public class LogInActivity extends Activity {
                     //Cript the password
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                     //send data
-                    post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),eMail.getText().toString(),passwordToSend);
+                    post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),eMail.getText().toString(),passwordToSend,status);
                     post.myPostCall(TypeCall.SIGN_UP,logInActivity);
                 }
             }
@@ -249,8 +240,10 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent i = new Intent(LogInActivity.this, SplashActivity.class);
-                startActivity(i);
+                launchRingDialog();
+                passwordToSend = PasswdManager.calculateHash("default_user");
+                post = new PostCall("3d4ambcardboard@gmail.com", passwordToSend,status);
+                post.myPostCall(TypeCall.LOG_IN, logInActivity);
             }
         });
         alert.setNegativeButton("Cancel",
@@ -289,6 +282,29 @@ public class LogInActivity extends Activity {
                 });
 
         alert.show();
+    }
+
+
+    public void launchRingDialog() {
+        final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...",	"contacting server ...", true);
+        ringProgressDialog.setCancelable(true);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Here you should write your time consuming task...
+                    // Let the progress ring for 10 seconds...
+                    Thread.sleep(1000);
+                    if(status.getText().toString().contains("connection")) {
+                        Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                        startActivity(i);
+                    }
+                } catch (Exception e) {
+
+                }
+                ringProgressDialog.dismiss();
+            }
+        }).start();
     }
 
 

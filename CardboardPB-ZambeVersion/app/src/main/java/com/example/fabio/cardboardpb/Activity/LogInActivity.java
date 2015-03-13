@@ -35,6 +35,7 @@ public class LogInActivity extends Activity {
     private EditText password;
     private Button logIn;
     private TextView signUp;
+    private TextView status;
     private Button play;
     private Button forgot;
     private String passwordToSend;
@@ -63,6 +64,7 @@ public class LogInActivity extends Activity {
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (Button) findViewById(R.id.forgotPassword);
+        status =(TextView) findViewById(R.id.status);
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +72,8 @@ public class LogInActivity extends Activity {
                // passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                 post = new PostCall(email.getText().toString(), password.getText().toString());
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
-                //Toast.makeText(getBaseContext(), result, Toast.LENGTH_LONG).show();
+
+
 
               /* if(result.equals("connection")){
                     Intent i = new Intent(LogInActivity.this, SplashActivity.class);

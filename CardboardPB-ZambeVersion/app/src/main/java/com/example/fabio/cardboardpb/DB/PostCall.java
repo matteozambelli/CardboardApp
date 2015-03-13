@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * Created by matteo on 09/03/2015.
  */
-public class PostCall extends Thread {
+public class PostCall {
 
     private Thread thread;
     private String response;
@@ -73,7 +73,7 @@ public class PostCall extends Thread {
 
                 try {
                     // Add your data
-                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairs.add(new BasicNameValuePair("type", "log_in"));
                         nameValuePairs.add(new BasicNameValuePair("email", username));
@@ -90,21 +90,15 @@ public class PostCall extends Thread {
                         nameValuePairs.add(new BasicNameValuePair("type", "reset"));
                     }
                     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
                     // Execute HTTP Post Request
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
-
                     response = httpclient.execute(httppost, responseHandler);
-
                      //This is the response from a php application
-                    if(response.equals("connection")){
+                    final String reverseString = response;
 
-                    }
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-
-                            //Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-
+                            Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
                 }
             });
 

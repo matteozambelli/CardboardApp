@@ -77,4 +77,12 @@
         android:layout_below="@+id/forgotPassword"
         android:layout_centerHorizontal="true"
         android:paddingTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/status"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

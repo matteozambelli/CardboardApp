@@ -81,6 +81,7 @@ public class PostCall {
     public PostCall(String score, String level) {
         this.score = score;
         this.level = level;
+        this.status=status;
     }
 
     public void myPostCall(final  TypeCall type,final Activity logInActivity) {
@@ -89,7 +90,7 @@ public class PostCall {
             @Override
             public void run() {
                 HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/tmp_provaPost.php");
+                HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/3d4ambService.php");
 
                 //This is the data to send
                 final Activity activity = logInActivity;
@@ -119,7 +120,7 @@ public class PostCall {
                         nameValuePairsReport.add(new BasicNameValuePair("type", "report"));
                         nameValuePairsReport.add(new BasicNameValuePair("score", score));
                         nameValuePairsReport.add(new BasicNameValuePair("level", level));
-
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));
                     }
 
                     // Execute HTTP Post Request
@@ -131,7 +132,7 @@ public class PostCall {
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
                            // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-                            status.setText("**DEBUG: "+reverseString+" **");
+                           if(status!=null){ status.setText("**DEBUG: "+reverseString+" **");}
                 }
             });
 

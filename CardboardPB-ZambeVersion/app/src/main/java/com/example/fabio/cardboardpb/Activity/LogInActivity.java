@@ -67,13 +67,15 @@ public class LogInActivity extends Activity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                post = new PostCall(email.getText().toString(), passwordToSend);
-                result= post.myPostCall(TypeCall.LOG_IN, logInActivity);
-                if(result.equals("connection")){
+               // passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                post = new PostCall(email.getText().toString(), password.getText().toString());
+                post.myPostCall(TypeCall.LOG_IN, logInActivity);
+                //Toast.makeText(getBaseContext(), result, Toast.LENGTH_LONG).show();
+
+              /* if(result.equals("connection")){
                     Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                     startActivity(i);
-                }
+                }*/
             }
         });
 
@@ -193,8 +195,8 @@ public class LogInActivity extends Activity {
         layout.addView(eMail);
         layout.addView(password);
         layout.addView(confirmPassword);
-        layout.addView(answare);
-        layout.addView(spinner);
+      //  layout.addView(answare);
+       // layout.addView(spinner);
         alert.setView(layout);
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

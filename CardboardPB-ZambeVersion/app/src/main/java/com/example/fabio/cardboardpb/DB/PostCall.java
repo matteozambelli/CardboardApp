@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * Created by matteo on 09/03/2015.
  */
-public class PostCall {
+public class PostCall extends Thread {
 
     private Thread thread;
     private String response;
@@ -58,7 +58,7 @@ public class PostCall {
         this.password = password;
     }
 
-    public String myPostCall(final TypeCall type, final Activity logInActivity) {
+    public void myPostCall(final  TypeCall type,final Activity logInActivity) {
         // Create a new HttpClient and Post Header
         thread = new Thread(new Runnable() {
             @Override
@@ -66,13 +66,13 @@ public class PostCall {
                 HttpClient httpclient = new DefaultHttpClient();
                 HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/tmp_provaPost.php");
 
-//This is the data to send
+                //This is the data to send
 
                 final Activity activity = logInActivity;
 
 
                 try {
-// Add your data
+                    // Add your data
                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairs.add(new BasicNameValuePair("type", "log_in"));
@@ -91,18 +91,22 @@ public class PostCall {
                     }
                     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
-// Execute HTTP Post Request
-
+                    // Execute HTTP Post Request
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
+
                     response = httpclient.execute(httppost, responseHandler);
 
-//This is the response from a php application
-                    final String reverseString = response;
+                     //This is the response from a php application
+                    if(response.equals("connection")){
+
+                    }
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-                        }
-                    });
+
+                            //Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
+
+                }
+            });
 
 
                 } catch (ClientProtocolException e) {
@@ -111,21 +115,20 @@ public class PostCall {
                             Toast.makeText(activity, "CPE response ", Toast.LENGTH_LONG).show();
                         }
                     });
-// TODO Auto-generated catch block
+
                 } catch (IOException e) {
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
                             Toast.makeText(activity, "IOE response ", Toast.LENGTH_LONG).show();
                         }
                     });
-// TODO Auto-generated catch block
+
                 }
 
             }//end postData()
 
         });
         thread.start();
-        return response;
     }
 
 }

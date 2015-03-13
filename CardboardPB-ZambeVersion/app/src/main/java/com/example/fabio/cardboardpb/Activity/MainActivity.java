@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
     private TextView textLifeRight;
     private TextView textPointsRight;
 
+    private String id_user;
 
     private int leftCarPosition;
     private int rightCarPosition;
@@ -100,6 +101,7 @@ public class MainActivity extends Activity {
 
         eye=(Eye) intent.getSerializableExtra("eye");
         language=(Language) intent.getSerializableExtra("language");
+        id_user=(String) intent.getSerializableExtra("id_user");
 
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
 
@@ -151,7 +153,7 @@ public class MainActivity extends Activity {
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
                 enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye,
-                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height, running);
+                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height, running,id_user);
 
         gameThread.start();
 

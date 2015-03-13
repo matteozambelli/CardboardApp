@@ -41,6 +41,7 @@ public class PostCall {
     //REPORT
     private String score;
     private String level;
+    private String id_user;
 
     TextView status;
 
@@ -78,10 +79,10 @@ public class PostCall {
      * @param score
      * @param level
      */
-    public PostCall(String score, String level) {
+    public PostCall(String score, String level,String id_user) {
         this.score = score;
         this.level = level;
-        this.status=status;
+        this.id_user=id_user;
     }
 
     public void myPostCall(final  TypeCall type,final Activity logInActivity) {
@@ -98,7 +99,7 @@ public class PostCall {
                     // Add your data
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(5);
-                    List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(3);
+                    List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
                         nameValuePairsLogIn.add(new BasicNameValuePair("email", username));
@@ -120,6 +121,7 @@ public class PostCall {
                         nameValuePairsReport.add(new BasicNameValuePair("type", "report"));
                         nameValuePairsReport.add(new BasicNameValuePair("score", score));
                         nameValuePairsReport.add(new BasicNameValuePair("level", level));
+                        nameValuePairsReport.add(new BasicNameValuePair("id_user", id_user));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));
                     }
 
@@ -129,10 +131,14 @@ public class PostCall {
                      //This is the response from a php application
                     final String reverseString = response;
 
+
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
                            // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-                           if(status!=null){ status.setText("**DEBUG: "+reverseString+" **");}
+                          if(type.equals(TypeCall.LOG_IN )){ status.setText("**DEBUG: "+reverseString+" **");}
+                            else if(type.equals(TypeCall.REPORT)){
+                              //TODO
+                          }
                 }
             });
 

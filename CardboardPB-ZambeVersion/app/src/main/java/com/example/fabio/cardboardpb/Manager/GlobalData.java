@@ -114,4 +114,8 @@ public class GlobalData {
         life--;
     }
 
+    public void resetLife(){
+        life=1;
+    }
+
 }

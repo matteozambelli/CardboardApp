@@ -21,11 +21,15 @@ public class LanguageActivity extends Activity {
     private TextView languageLeft,languageRight, titleLeft,titleRight,startLeft,startRight;
     private Language language= Language.ENGLISH;
     private int selection=1;
+    private String id_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
+        Intent intent=getIntent();
+        Bundle data = getIntent().getExtras();
+        id_user=(String) intent.getSerializableExtra("id_user");
         Typeface font = Typeface.createFromAsset(getAssets(), "orange juice 2.0.ttf");
 
         languageLeft= (TextView)findViewById(R.id.textViewLanguageLeft);
@@ -130,6 +134,7 @@ public class LanguageActivity extends Activity {
                     //on key home press
                     Intent startSettings = new Intent(this, SettingsActivity.class);
                     startSettings.putExtra("language", language);
+                    startSettings.putExtra("id_user", id_user);
                     startActivity(startSettings);
                 }
                 return true;

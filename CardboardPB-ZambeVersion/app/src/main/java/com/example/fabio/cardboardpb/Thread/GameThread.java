@@ -69,6 +69,7 @@ public class GameThread extends Thread{
     private AnimationExplosionView animationExplosionViewRight;
     private int displayWidth;
     private int displayHeight;
+    private String id_user;
     //private Toast toastLifeLeft;
     //private Toast toastLifeRight;
 
@@ -100,7 +101,7 @@ public class GameThread extends Thread{
                       TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ImageView i1, ImageView i2, ImageView i3,
                       ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
-                      int width, int height,boolean running) {
+                      int width, int height,boolean running,String id_user) {
         this.activity=activity;
         relativeLayoutLeft=(RelativeLayout)activity.findViewById(R.id.relativeLayoutLeft);
         relativeLayoutRight=(RelativeLayout)activity.findViewById(R.id.relativeLayoutRight);
@@ -150,6 +151,7 @@ public class GameThread extends Thread{
         penalizationManager=new PenalizationManager(enemyLeftLane1Id0,enemyLeftLane2Id0, enemyLeftLane3Id0,
                 enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0, globalData);
         this.eye=eye;
+        this.id_user=id_user;
     }
 
     @Override
@@ -168,7 +170,7 @@ public class GameThread extends Thread{
 
                     if (globalData.getLife() == 0){
 
-                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString());
+                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user.toString());
                         postCall.myPostCall(TypeCall.REPORT,activity);
                         globalData.setRunnable(false);
                         //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE
@@ -186,12 +188,14 @@ public class GameThread extends Thread{
 
                         relativeLayoutLeft.addView(frameLayoutGameOverLeft);
                         relativeLayoutRight.addView(frameLayoutGameOverRight);
+
                     }
 
                     else { //only if globalData.getLife() >0
                         globalData.setRunnable(true);
 
                         if(gameOver){
+                            globalData.resetLife();
                             gameManager=new GameManager();
                             gameManager.generateGameData();
                             gameOver=false;

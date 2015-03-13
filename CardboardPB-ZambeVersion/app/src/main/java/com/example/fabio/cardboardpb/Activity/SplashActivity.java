@@ -22,11 +22,16 @@ public class SplashActivity extends Activity {
     private static int SPLASH_TIME_OUT = 3000;
     private ImageView ivLeft;
     private ImageView ivRight;
+    private String id_user;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        Intent intent=getIntent();
+        Bundle data = getIntent().getExtras();
+        id_user=(String) intent.getSerializableExtra("id_user");
+
         ivLeft = (ImageView) findViewById(R.id.imageView1);
         ivRight = (ImageView) findViewById(R.id.imageView2);
 
@@ -60,6 +65,7 @@ public class SplashActivity extends Activity {
                 // This method will be executed once the timer is over
                 // Start your app main activity
                 Intent i = new Intent(SplashActivity.this, LanguageActivity.class);
+                i.putExtra("id_user", id_user);
                 startActivity(i);
 
                 // close this activity

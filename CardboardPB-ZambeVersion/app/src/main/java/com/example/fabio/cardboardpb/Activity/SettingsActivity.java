@@ -22,6 +22,7 @@ import com.example.fabio.cardboardpb.R;
 public class SettingsActivity extends ActionBarActivity {
 
 
+    private String id_user;
     private LanguageManager languageManager;
     private Eye eye= Eye.LEFT_EYE;
     private Language language=Language.ENGLISH;
@@ -36,6 +37,8 @@ public class SettingsActivity extends ActionBarActivity {
         Intent intent=getIntent();
         Bundle data = getIntent().getExtras();
         language=(Language) intent.getSerializableExtra("language");
+
+        id_user=(String) intent.getSerializableExtra("id_user");
         languageManager=new LanguageManager(language);
         languageManager.suitable();
 
@@ -136,6 +139,7 @@ public class SettingsActivity extends ActionBarActivity {
         Intent startGame = new Intent(SettingsActivity.this, MainActivity.class);
         startGame.putExtra("eye", eye);
         startGame.putExtra("language", language);
+        startGame.putExtra("id_user",id_user);
         startActivity(startGame);
 
    /*new AlertDialog.Builder(this)

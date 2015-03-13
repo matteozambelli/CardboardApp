@@ -27,10 +27,6 @@ import com.example.fabio.cardboardpb.R;
 
 public class LogInActivity extends Activity {
 
-    ProgressDialog barProgressDialog;
-    Handler updateBarHandler;
-
-
     private EditText email;
     private EditText password;
     private Button logIn;
@@ -42,7 +38,7 @@ public class LogInActivity extends Activity {
     private CheckBox keepLog;
     private PostCall post;
     private Activity logInActivity;
-
+    private String id_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +68,6 @@ public class LogInActivity extends Activity {
 
             }
         });
-
-
-
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,8 +182,8 @@ public class LogInActivity extends Activity {
         layout.addView(eMail);
         layout.addView(password);
         layout.addView(confirmPassword);
-      //  layout.addView(answare);
-       // layout.addView(spinner);
+        //  layout.addView(answare);
+        // layout.addView(spinner);
         alert.setView(layout);
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -295,8 +288,11 @@ public class LogInActivity extends Activity {
                     // Here you should write your time consuming task...
                     // Let the progress ring for 10 seconds...
                     Thread.sleep(1000);
+                    id_user= status.getText().toString().substring(20,21);
+
                     if(status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                        i.putExtra("id_user", id_user);
                         startActivity(i);
                     }
                 } catch (Exception e) {

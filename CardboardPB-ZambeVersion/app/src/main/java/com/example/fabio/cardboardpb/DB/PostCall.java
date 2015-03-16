@@ -135,7 +135,7 @@ public class PostCall {
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
                            // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-                          if(type.equals(TypeCall.LOG_IN )){ status.setText("**DEBUG: "+reverseString+" **");}
+                          if(type.equals(TypeCall.LOG_IN )){ status.setText(reverseString);}
                             else if(type.equals(TypeCall.REPORT)){
                               //TODO
                           }

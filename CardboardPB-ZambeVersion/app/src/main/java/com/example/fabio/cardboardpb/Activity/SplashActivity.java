@@ -9,6 +9,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Language;
 import com.example.fabio.cardboardpb.R;
@@ -24,6 +25,8 @@ public class SplashActivity extends Activity {
     private ImageView ivRight;
     private String id_user;
 
+    private TextView t;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,8 @@ public class SplashActivity extends Activity {
         Bundle data = getIntent().getExtras();
         id_user=(String) intent.getSerializableExtra("id_user");
 
+        //t=(TextView) findViewById(R.id.textView);
+        //t.setText(id_user);
         ivLeft = (ImageView) findViewById(R.id.imageView1);
         ivRight = (ImageView) findViewById(R.id.imageView2);
 

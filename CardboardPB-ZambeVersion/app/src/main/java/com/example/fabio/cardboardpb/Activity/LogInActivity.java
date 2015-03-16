@@ -44,6 +44,8 @@ public class LogInActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+        Intent intent=getIntent();
+
 
         logInActivity = this;
 
@@ -61,10 +63,14 @@ public class LogInActivity extends Activity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchRingDialog();
+
                 passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                 post = new PostCall(email.getText().toString(), passwordToSend,status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
+                if(status.getText().toString().contains("password errata")){
+                    wrongPasswordAlert();
+                }
+                launchRingDialog();
 
             }
         });
@@ -260,7 +266,7 @@ public class LogInActivity extends Activity {
         layout.addView(mailTo);
         alert.setView(layout);
         alert.setTitle("Warning");
-        alert.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -277,6 +283,26 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
+    private void wrongPasswordAlert() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Please re-enter your password");
+        alert.setTitle("Warning");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
+        alert.show();
+    }
 
     public void launchRingDialog() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...",	"contacting server ...", true);
@@ -287,14 +313,19 @@ public class LogInActivity extends Activity {
                 try {
                     // Here you should write your time consuming task...
                     // Let the progress ring for 10 seconds...
-                    Thread.sleep(1000);
-                    id_user= status.getText().toString().substring(20,21);
+
+                    Thread.sleep(2000);
+                    id_user= status.getText().toString().substring(11,12);
 
                     if(status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                         i.putExtra("id_user", id_user);
                         startActivity(i);
                     }
+                    if(status.getText().toString().contains("password errata")){
+                        forgotPasswordAlert();
+                    }
+
                 } catch (Exception e) {
 
                 }

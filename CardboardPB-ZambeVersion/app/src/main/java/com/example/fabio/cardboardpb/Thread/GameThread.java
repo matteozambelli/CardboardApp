@@ -170,7 +170,7 @@ public class GameThread extends Thread{
 
                     if (globalData.getLife() == 0){
 
-                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user.toString());
+                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user);
                         postCall.myPostCall(TypeCall.REPORT,activity);
                         globalData.setRunnable(false);
                         //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE

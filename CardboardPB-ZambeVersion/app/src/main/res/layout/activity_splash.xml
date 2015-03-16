@@ -22,6 +22,8 @@
             android:src="@drawable/splash"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
+
+
     </RelativeLayout>
 
     <RelativeLayout

@@ -43,6 +43,9 @@ public class PostCall {
     private String score;
     private String level;
     private String id_user;
+    //RESET
+    private String newPassword;
+    private String passwordCfr;
 
     TextView status;
 
@@ -56,6 +59,22 @@ public class PostCall {
     public PostCall(String username, String password,TextView status) {
         this.username = username;
         this.password = password;
+        this.status=status;
+    }
+
+    /**
+     *
+     * @param email
+     * @param myColor
+     * @param newPassword
+     * @param passwordCfr
+     * @param status
+     */
+    public PostCall(String email, String myColor, String newPassword,String passwordCfr, TextView status) {
+        this.email = email;
+        this.myColor = myColor;
+        this.newPassword=newPassword;
+        this.passwordCfr=passwordCfr;
         this.status=status;
     }
 
@@ -103,7 +122,7 @@ public class PostCall {
                 try {
                     // Add your data
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
-                    List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(4);
+                    List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(6);
                     List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
                     if (type.equals(TypeCall.LOG_IN)) {
@@ -125,7 +144,8 @@ public class PostCall {
                         nameValuePairsReset.add(new BasicNameValuePair("type", "reset"));
                         nameValuePairsReset.add(new BasicNameValuePair("email", email));
                         nameValuePairsReset.add(new BasicNameValuePair("color", myColor));
-                        //nameValuePairsReset.add(new BasicNameValuePair("newPassword",newPasswd));
+                        nameValuePairsReset.add(new BasicNameValuePair("new_password",newPassword));
+                        nameValuePairsReset.add(new BasicNameValuePair("new_passwordCfr",passwordCfr));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReset));
                     }
                     if(type.equals(TypeCall.REPORT)){
@@ -173,6 +193,8 @@ public class PostCall {
         });
         thread.start();
     }
+
+
 
 }
 

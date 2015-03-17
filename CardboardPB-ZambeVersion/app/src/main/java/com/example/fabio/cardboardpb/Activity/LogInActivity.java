@@ -29,6 +29,9 @@ import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
+
 
 public class LogInActivity extends Activity {
 
@@ -39,6 +42,7 @@ public class LogInActivity extends Activity {
     private TextView status;
     private Button play;
     private Button forgot;
+    private Button workWithUs;
     private String passwordToSend;
     private CheckBox keepLog;
     private PostCall post;
@@ -49,8 +53,6 @@ public class LogInActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        Intent intent = getIntent();
-
 
         logInActivity = this;
 
@@ -59,6 +61,7 @@ public class LogInActivity extends Activity {
         logIn = (Button) findViewById(R.id.logInButton);
         signUp = (TextView) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
+        workWithUs=(Button) findViewById(R.id.workWithUs);
 
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
@@ -98,6 +101,13 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(View v) {
                 forgotPasswordAlert();
+            }
+        });
+
+        workWithUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+workWithUsAlert();
             }
         });
     }
@@ -268,7 +278,7 @@ public class LogInActivity extends Activity {
         alert.setMessage("resert your password: ");
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
-        EditText mailTo = new EditText(this);
+        final EditText mailTo = new EditText(this);
         final EditText myColor = new EditText(this);
         mailTo.setHint("insert email");
         myColor.setHint("your favourite color");
@@ -279,8 +289,9 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                String newPasswd= "pippo";
-                post=new PostCall(email.getText().toString(),myColor.getText().toString(),status);
+                String newPasswd= generateRandom();
+                passwordToSend=PasswdManager.calculateHash(newPasswd);
+                post=new PostCall(mailTo.getText().toString(),myColor.getText().toString(),newPasswd,passwordToSend,status);
                 post.myPostCall(TypeCall.RESET,logInActivity);
                // launchRingDialog();
             }
@@ -344,6 +355,36 @@ public class LogInActivity extends Activity {
             }
         }).start();
 
+    }
+
+    private void workWithUsAlert(){
+
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children." +
+                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here ");
+        alert.setTitle("WORK WHIT US");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"3d4ambcardboard@gmail.com"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "3d4amb DOCTOR COLLABORATION");
+                i.putExtra(Intent.EXTRA_TEXT   , "");
+                try {
+                    startActivity(Intent.createChooser(i, "Send mail..."));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(LogInActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        alert.show();
+    }
+
+    private String generateRandom(){
+        SecureRandom random = new SecureRandom();
+        return new BigInteger(40, random).toString(32);
     }
 
 

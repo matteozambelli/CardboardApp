@@ -85,4 +85,21 @@
         android:id="@+id/status"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="update your info"
+        android:id="@+id/updateInfo"
+        android:layout_below="@+id/playWithoutReg"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="work with us"
+        android:id="@+id/workWithUs"
+        android:layout_below="@+id/updateInfo"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

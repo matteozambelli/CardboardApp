@@ -38,6 +38,7 @@ public class PostCall {
     private String firstName;
     private String lastName;
     private String email;
+    private String myColor;
     //REPORT
     private String score;
     private String level;
@@ -63,16 +64,20 @@ public class PostCall {
      * @param firstName
      * @param lastName
      * @param email
+     * @param myColor
      * @param password
      * @param status
      */
-    public PostCall(String firstName, String lastName, String email, String password,TextView status) {
+    public PostCall(String firstName, String lastName, String email, String myColor, String password,TextView status) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.myColor=myColor;
         this.status=status;
     }
+
+
 
     /**
      *
@@ -98,7 +103,8 @@ public class PostCall {
                 try {
                     // Add your data
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
-                    List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(5);
+                    List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(4);
+                    List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(6);
                     List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
@@ -111,11 +117,16 @@ public class PostCall {
                         nameValuePairsSignUp.add(new BasicNameValuePair("first_name", firstName));
                         nameValuePairsSignUp.add(new BasicNameValuePair("last_name", lastName));
                         nameValuePairsSignUp.add(new BasicNameValuePair("email", email));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("color", myColor));
                         nameValuePairsSignUp.add(new BasicNameValuePair("password", password));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsSignUp));
                     }
                     if (type.equals(TypeCall.RESET)) {
-                        //nameValuePairs.add(new BasicNameValuePair("type", "reset"));
+                        nameValuePairsReset.add(new BasicNameValuePair("type", "reset"));
+                        nameValuePairsReset.add(new BasicNameValuePair("email", email));
+                        nameValuePairsReset.add(new BasicNameValuePair("color", myColor));
+                        //nameValuePairsReset.add(new BasicNameValuePair("newPassword",newPasswd));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReset));
                     }
                     if(type.equals(TypeCall.REPORT)){
                         nameValuePairsReport.add(new BasicNameValuePair("type", "report"));
@@ -130,15 +141,14 @@ public class PostCall {
                     response = httpclient.execute(httppost, responseHandler);
                      //This is the response from a php application
                     final String reverseString = response;
-
-
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
+                           status.setText(reverseString);
                            // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-                          if(type.equals(TypeCall.LOG_IN )){ status.setText(reverseString);}
+                         /* if(type.equals(TypeCall.LOG_IN) || type.equals(TypeCall.RESET)){ status.setText(reverseString);}
                             else if(type.equals(TypeCall.REPORT)){
                               //TODO
-                          }
+                          }*/
                 }
             });
 

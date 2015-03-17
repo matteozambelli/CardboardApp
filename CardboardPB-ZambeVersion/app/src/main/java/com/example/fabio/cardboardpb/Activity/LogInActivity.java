@@ -83,7 +83,7 @@ public class LogInActivity extends Activity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertSignUp("", "", "");
+                alertSignUp("", "", "","");
             }
         });
 
@@ -125,12 +125,12 @@ public class LogInActivity extends Activity {
     }
 
 
-    private void alertSignUp(String firstname, String lastname, String email) {
+    private void alertSignUp(String firstname, String lastname, String email,String color) {
 
         final EditText firstName = new EditText(this);
         final EditText lastName = new EditText(this);
         final EditText eMail = new EditText(this);
-
+        final EditText myColor = new EditText(this);
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
 
@@ -144,6 +144,7 @@ public class LogInActivity extends Activity {
             firstName.setHint("first name");
             lastName.setHint("last name");
             eMail.setHint("email");
+
         }
         if (firstname.equals("") && !lastname.equals("") && !email.equals("")) {
             firstName.setHint("first name");
@@ -181,8 +182,7 @@ public class LogInActivity extends Activity {
             eMail.setText(email);
         }
 
-
-
+        myColor.setHint("your favourite color");
         password.setHint("password");
         confirmPassword.setHint("confirm password");
         password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -193,7 +193,7 @@ public class LogInActivity extends Activity {
         layout.addView(firstName);
         layout.addView(lastName);
         layout.addView(eMail);
-
+        layout.addView(myColor);
         layout.addView(password);
         layout.addView(confirmPassword);
 
@@ -207,12 +207,11 @@ public class LogInActivity extends Activity {
                 String backUpFirstName = firstName.getText().toString();
                 String backUpLastName = lastName.getText().toString();
                 String backUpEmail = eMail.getText().toString();
-
-
+                String backUpColor= myColor.getText().toString();
                 if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                     //ALERT MESSAGE
                     Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
-                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
+                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail,backUpColor);
 
 
                 } else {
@@ -221,7 +220,7 @@ public class LogInActivity extends Activity {
                     //Cript the password
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                     //send data
-                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), passwordToSend, status);
+                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), passwordToSend, status);
                     post.myPostCall(TypeCall.SIGN_UP, logInActivity);
                 }
             }
@@ -270,18 +269,20 @@ public class LogInActivity extends Activity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         EditText mailTo = new EditText(this);
+        final EditText myColor = new EditText(this);
         mailTo.setHint("insert email");
+        myColor.setHint("your favourite color");
         layout.addView(mailTo);
+        layout.addView(myColor);
         alert.setView(layout);
         alert.setTitle("Warning");
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
-
-
-
-
+                String newPasswd= "pippo";
+                post=new PostCall(email.getText().toString(),myColor.getText().toString(),status);
+                post.myPostCall(TypeCall.RESET,logInActivity);
+               // launchRingDialog();
             }
         });
         alert.setNegativeButton("Cancel",
@@ -330,6 +331,7 @@ public class LogInActivity extends Activity {
                             @Override
                             public void run() {
                                 wrongPasswordAlert();
+
                             }
                         });
 

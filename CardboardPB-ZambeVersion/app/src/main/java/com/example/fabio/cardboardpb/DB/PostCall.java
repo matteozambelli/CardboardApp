@@ -22,6 +22,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,6 +39,7 @@ public class PostCall {
     private String firstName;
     private String lastName;
     private String email;
+    private String birthday;
     private String myColor;
     //REPORT
     private String score;
@@ -46,6 +48,8 @@ public class PostCall {
     //RESET
     private String newPassword;
     private String passwordCfr;
+    //DOCTOR
+    private String id_doctor;
 
     TextView status;
 
@@ -84,19 +88,33 @@ public class PostCall {
      * @param lastName
      * @param email
      * @param myColor
+
      * @param password
      * @param status
      */
     public PostCall(String firstName, String lastName, String email, String myColor, String password,TextView status) {
         this.firstName = firstName;
         this.lastName = lastName;
+        //this.birthday=birthday;
         this.email = email;
         this.password = password;
         this.myColor=myColor;
         this.status=status;
     }
 
-
+    /**
+     *
+     * @param firstName
+     * @param lastName
+     * @param id_doctor
+     * @param birthday
+     */
+    public PostCall(String firstName, String lastName, String id_doctor, String birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.id_doctor = id_doctor;
+        this.birthday = birthday;
+    }
 
     /**
      *
@@ -124,6 +142,7 @@ public class PostCall {
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(6);
+                    List<NameValuePair> nameValuePairsDoctorCall = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
@@ -147,6 +166,14 @@ public class PostCall {
                         nameValuePairsReset.add(new BasicNameValuePair("new_password",newPassword));
                         nameValuePairsReset.add(new BasicNameValuePair("new_passwordCfr",passwordCfr));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReset));
+                    }
+                    if(type.equals(TypeCall.DOCTORCALL)){
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("type", "doctorcall"));
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("first_name", firstName));
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("last_name", lastName));
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("id_doctor",id_doctor));
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("birthday",birthday));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsDoctorCall));
                     }
                     if(type.equals(TypeCall.REPORT)){
                         nameValuePairsReport.add(new BasicNameValuePair("type", "report"));

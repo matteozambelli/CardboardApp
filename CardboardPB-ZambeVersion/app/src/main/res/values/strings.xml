@@ -13,7 +13,8 @@
         <item>security question</item>
         <item>your mother name</item>
         <item>your brother name</item>
-
     </string-array>
+
+    <string name="title_activity_doctor">DoctorActivity</string>
 
 </resources>

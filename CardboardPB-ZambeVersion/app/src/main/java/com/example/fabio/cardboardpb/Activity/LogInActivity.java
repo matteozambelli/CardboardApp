@@ -2,25 +2,22 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +28,7 @@ import com.example.fabio.cardboardpb.R;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.Calendar;
 
 
 public class LogInActivity extends Activity {
@@ -48,11 +46,15 @@ public class LogInActivity extends Activity {
     private PostCall post;
     private Activity logInActivity;
     private String id_user;
+    private String doctor;
+    private int year, month,day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
+
 
         logInActivity = this;
 
@@ -61,7 +63,7 @@ public class LogInActivity extends Activity {
         logIn = (Button) findViewById(R.id.logInButton);
         signUp = (TextView) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
-        workWithUs=(Button) findViewById(R.id.workWithUs);
+        workWithUs = (Button) findViewById(R.id.workWithUs);
 
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
@@ -86,7 +88,7 @@ public class LogInActivity extends Activity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertSignUp("", "", "","");
+                alertSignUp("", "", "", "");
             }
         });
 
@@ -107,7 +109,7 @@ public class LogInActivity extends Activity {
         workWithUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-workWithUsAlert();
+                workWithUsAlert();
             }
         });
     }
@@ -135,7 +137,8 @@ workWithUsAlert();
     }
 
 
-    private void alertSignUp(String firstname, String lastname, String email,String color) {
+    private void alertSignUp(String firstname, String lastname, String email, String color) {
+
 
         final EditText firstName = new EditText(this);
         final EditText lastName = new EditText(this);
@@ -143,6 +146,7 @@ workWithUsAlert();
         final EditText myColor = new EditText(this);
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
+        final EditText formDate= new EditText(this);
 
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -192,6 +196,7 @@ workWithUsAlert();
             eMail.setText(email);
         }
 
+        formDate.setHint("bithday");
         myColor.setHint("your favourite color");
         password.setHint("password");
         confirmPassword.setHint("confirm password");
@@ -203,12 +208,38 @@ workWithUsAlert();
         layout.addView(firstName);
         layout.addView(lastName);
         layout.addView(eMail);
+        layout.addView(formDate);
         layout.addView(myColor);
         layout.addView(password);
         layout.addView(confirmPassword);
-
-
         alert.setView(layout);
+
+        // Process to get Current Date
+        final Calendar c = Calendar.getInstance();
+        year = c.get(Calendar.YEAR);
+        month = c.get(Calendar.MONTH);
+        day = c.get(Calendar.DAY_OF_MONTH);
+
+        // Launch Date Picker Dialog
+        final DatePickerDialog dpd = new DatePickerDialog(this,new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+                // Display Selected date in textbox
+                 month+=1;
+                 formDate.setText(day + "/"+ month + "/" + year);
+            }
+
+        }
+    ,year, month, day);
+
+   formDate.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           dpd.show();
+       }
+   });
+
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
@@ -217,11 +248,11 @@ workWithUsAlert();
                 String backUpFirstName = firstName.getText().toString();
                 String backUpLastName = lastName.getText().toString();
                 String backUpEmail = eMail.getText().toString();
-                String backUpColor= myColor.getText().toString();
+                String backUpColor = myColor.getText().toString();
                 if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                     //ALERT MESSAGE
                     Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
-                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail,backUpColor);
+                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail, backUpColor);
 
 
                 } else {
@@ -289,11 +320,11 @@ workWithUsAlert();
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                String newPasswd= generateRandom();
-                passwordToSend=PasswdManager.calculateHash(newPasswd);
-                post=new PostCall(mailTo.getText().toString(),myColor.getText().toString(),newPasswd,passwordToSend,status);
-                post.myPostCall(TypeCall.RESET,logInActivity);
-               // launchRingDialog();
+                String newPasswd = generateRandom();
+                passwordToSend = PasswdManager.calculateHash(newPasswd);
+                post = new PostCall(mailTo.getText().toString(), myColor.getText().toString(), newPasswd, passwordToSend, status);
+                post.myPostCall(TypeCall.RESET, logInActivity);
+                // launchRingDialog();
             }
         });
         alert.setNegativeButton("Cancel",
@@ -320,6 +351,19 @@ workWithUsAlert();
         alert.show();
     }
 
+    private void registrationComplete() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("registration complete");
+        alert.setTitle("welcome");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.show();
+    }
+
     private void launchRingDialog() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...", "contacting server ...", true);
         ringProgressDialog.setCancelable(true);
@@ -332,21 +376,41 @@ workWithUsAlert();
 
                     Thread.sleep(2000);
                     id_user = status.getText().toString().substring(11, 12);
-
-                    if (status.getText().toString().contains("connection")) {
+                    doctor = status.getText().toString().substring(14, 15);
+                    //status.setText(doctor);
+                    if(doctor.contains("1")){
+                        Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
+                        i.putExtra("id_doctor", doctor);
+                        startActivity(i);
+                    }
+                    else if (status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                         i.putExtra("id_user", id_user);
                         startActivity(i);
                     } else if (status.getText().toString().contains("password errata")) {
                         logInActivity.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                wrongPasswordAlert();
+                                                        @Override
+                                                        public void run() {
+                                                            wrongPasswordAlert();
 
-                            }
-                        });
+                                                        }
+                                                    }
 
 
+                        );
+
+
+                    }else if(status.getText().toString().contains("emailChecked")){
+                        logInActivity.runOnUiThread(new Runnable() {
+                                                        @Override
+                                                        public void run() {
+                                                            registrationComplete();
+
+                                                        }
+                                                    }
+
+
+                        );
                     }
                 } catch (Exception e) {
 
@@ -357,20 +421,20 @@ workWithUsAlert();
 
     }
 
-    private void workWithUsAlert(){
+    private void workWithUsAlert() {
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children." +
-                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here ");
-        alert.setTitle("WORK WHIT US");
+        alert.setMessage("The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children." + '\n' + '\n' +
+                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3d4amb staff " + '\n' + '\n' + "3d4ambcardboard@gmail.com"+ '\n' + '\n' +"http://3d4amb.unibg.it");
+        alert.setTitle("COLLABORATE WITH US");
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"3d4ambcardboard@gmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"3d4ambcardboard@gmail.com"});
                 i.putExtra(Intent.EXTRA_SUBJECT, "3d4amb DOCTOR COLLABORATION");
-                i.putExtra(Intent.EXTRA_TEXT   , "");
+                i.putExtra(Intent.EXTRA_TEXT, "");
                 try {
                     startActivity(Intent.createChooser(i, "Send mail..."));
                 } catch (android.content.ActivityNotFoundException ex) {
@@ -382,7 +446,7 @@ workWithUsAlert();
         alert.show();
     }
 
-    private String generateRandom(){
+    private String generateRandom() {
         SecureRandom random = new SecureRandom();
         return new BigInteger(40, random).toString(32);
     }

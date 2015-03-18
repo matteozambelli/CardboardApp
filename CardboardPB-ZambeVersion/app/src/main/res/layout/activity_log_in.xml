@@ -65,8 +65,8 @@
         android:text="Keep me logged in"
         android:id="@+id/checkBox"
         android:layout_below="@+id/password"
-        android:layout_toLeftOf="@+id/textViewSignUp"
-        android:layout_toStartOf="@+id/textViewSignUp"
+
+        android:layout_alignParentLeft="true"
         />
 
     <Button
@@ -97,7 +97,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="work with us"
+        android:text="collaborate with us"
         android:id="@+id/workWithUs"
         android:layout_below="@+id/updateInfo"
         android:layout_centerHorizontal="true" />

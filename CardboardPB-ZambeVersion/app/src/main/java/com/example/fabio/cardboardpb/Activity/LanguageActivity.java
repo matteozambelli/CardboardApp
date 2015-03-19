@@ -10,6 +10,7 @@ import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Exception.MyException;
@@ -27,6 +28,11 @@ public class LanguageActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
+        View decorView = getWindow().getDecorView();
+
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
         Intent intent=getIntent();
         Bundle data = getIntent().getExtras();
         id_user=(String) intent.getSerializableExtra("id_user");

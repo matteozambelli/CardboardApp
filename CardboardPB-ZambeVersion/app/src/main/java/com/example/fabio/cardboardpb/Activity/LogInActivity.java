@@ -13,6 +13,7 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -70,7 +71,6 @@ public class LogInActivity extends Activity {
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (Button) findViewById(R.id.forgotPassword);
         status = (TextView) findViewById(R.id.status);
-
         SharedPreferences settings1;
 
         keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

@@ -202,7 +202,7 @@ public class LogInActivity extends Activity {
         confirmPassword.setHint("confirm password");
         password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         confirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-
+        formDate.setInputType(0);
         layout.setOrientation(LinearLayout.VERTICAL);
 
         layout.addView(firstName);

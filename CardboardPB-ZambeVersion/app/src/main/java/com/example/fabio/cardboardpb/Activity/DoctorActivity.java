@@ -62,7 +62,7 @@ public class DoctorActivity extends Activity {
         }
                 , year, month, day);
 
-
+        birthday.setInputType(0);
         birthday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

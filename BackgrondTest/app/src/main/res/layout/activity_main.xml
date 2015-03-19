@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary_dark_material_dark"
+    tools:context=".MainActivity"
+    android:weightSum="100"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- left eye view-->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutLeft"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        android:background="@drawable/prova4"
+        android:rotation="180"
+        >
+
+        <!--REMOVE THIS-->
+
+        <!---->
+    </RelativeLayout>
+
+    <!-- right eye view-->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutRight"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        android:background="@drawable/prova4"
+        android:rotation="180"
+        >
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

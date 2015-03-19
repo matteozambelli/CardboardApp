@@ -45,6 +45,7 @@ public class LogInActivity extends Activity {
     private Button play;
     private Button forgot;
     private Button workWithUs;
+    private Button updateData;
     private String passwordToSend;
     private CheckBox keepLog;
     private PostCall post;
@@ -66,7 +67,7 @@ public class LogInActivity extends Activity {
         signUp = (TextView) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
         workWithUs = (Button) findViewById(R.id.workWithUs);
-
+        updateData =(Button) findViewById(R.id.updateInfo);
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (Button) findViewById(R.id.forgotPassword);
@@ -145,6 +146,14 @@ public class LogInActivity extends Activity {
                 workWithUsAlert();
             }
         });
+
+        updateData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateInfoAlert();
+            }
+        });
+
     }
 
     @Override
@@ -417,6 +426,58 @@ public class LogInActivity extends Activity {
 
             }
         });
+        alert.show();
+    }
+
+    private void updateInfoAlert(){
+
+        final AlertDialog.Builder alert;
+        alert = new AlertDialog.Builder(LogInActivity.this);
+        String vector[]={"email","firstname","lastname","birthday","password"};
+        alert.setSingleChoiceItems(vector, 0, null)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.dismiss();
+                        int selectedPosition = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
+                        Integer i= new Integer(selectedPosition);
+                        status.setText(i.toString());
+
+                    }
+                })
+                .show();
+        updateLogInAlert();
+    }
+
+    private void updateLogInAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        final EditText email = new EditText(this);
+        final EditText password = new EditText(this);
+        email.setHint("email");
+        password.setHint("password");
+        layout.addView(email);
+        layout.addView(password);
+        alert.setView(layout);
+        alert.setTitle("log in");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                passwordToSend = PasswdManager.calculateHash( password.getText().toString());
+                post = new PostCall(email.getText().toString(),passwordToSend, status);
+                post.myPostCall(TypeCall.LOG_IN, logInActivity);
+                launchRingDialog();
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
         alert.show();
     }
 

@@ -88,14 +88,14 @@ public class PostCall {
      * @param lastName
      * @param email
      * @param myColor
-
+     * @param birthday
      * @param password
      * @param status
      */
-    public PostCall(String firstName, String lastName, String email, String myColor, String password,TextView status) {
+    public PostCall(String firstName, String lastName, String email, String myColor,String birthday, String password,TextView status) {
         this.firstName = firstName;
         this.lastName = lastName;
-        //this.birthday=birthday;
+        this.birthday=birthday;
         this.email = email;
         this.password = password;
         this.myColor=myColor;
@@ -141,7 +141,7 @@ public class PostCall {
                     // Add your data
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(5);
-                    List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(6);
+                    List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(7);
                     List<NameValuePair> nameValuePairsDoctorCall = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
                     if (type.equals(TypeCall.LOG_IN)) {
@@ -156,6 +156,7 @@ public class PostCall {
                         nameValuePairsSignUp.add(new BasicNameValuePair("last_name", lastName));
                         nameValuePairsSignUp.add(new BasicNameValuePair("email", email));
                         nameValuePairsSignUp.add(new BasicNameValuePair("color", myColor));
+                        nameValuePairsSignUp.add(new BasicNameValuePair("date", birthday));
                         nameValuePairsSignUp.add(new BasicNameValuePair("password", password));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsSignUp));
                     }

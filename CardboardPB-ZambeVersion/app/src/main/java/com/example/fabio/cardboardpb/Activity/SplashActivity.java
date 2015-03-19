@@ -32,7 +32,6 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         Intent intent=getIntent();
-        Bundle data = getIntent().getExtras();
         id_user=(String) intent.getSerializableExtra("id_user");
 
         //t=(TextView) findViewById(R.id.textView);

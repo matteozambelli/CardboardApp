@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -29,6 +30,8 @@ import com.example.fabio.cardboardpb.R;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.StringTokenizer;
 
 
 public class LogInActivity extends Activity {
@@ -47,6 +50,7 @@ public class LogInActivity extends Activity {
     private Activity logInActivity;
     private String id_user;
     private String doctor;
+    private boolean isCheck;
     private int year, month,day;
 
     @Override
@@ -54,10 +58,7 @@ public class LogInActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-
-
         logInActivity = this;
-
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         logIn = (Button) findViewById(R.id.logInButton);
@@ -69,6 +70,38 @@ public class LogInActivity extends Activity {
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (Button) findViewById(R.id.forgotPassword);
         status = (TextView) findViewById(R.id.status);
+
+        SharedPreferences settings1;
+
+        keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SharedPreferences settings = getSharedPreferences("LOG_IN", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                if(isChecked){
+                    editor.putString("email", email.getText().toString());
+                    editor.putString("password", password.getText().toString());
+                    editor.putBoolean("isCheck",true);
+                    editor.commit();
+
+                }
+                else{
+                    editor.putBoolean("isCheck",false);
+                    editor.commit();
+                }
+            }
+        });
+        if(getSharedPreferences("LOG_IN", 0)!=null) {
+            settings1= getSharedPreferences("LOG_IN",0);
+            if(settings1.getBoolean("isCheck",false)) {
+                email.setText(settings1.getString("email", ""));
+                password.setText(settings1.getString("password", ""));
+                keepLog.setChecked(settings1.getBoolean("isCheck", false));
+            }
+        }
+
+
+
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,7 +180,7 @@ public class LogInActivity extends Activity {
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
         final EditText formDate= new EditText(this);
-
+        final String date;
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -196,7 +229,7 @@ public class LogInActivity extends Activity {
             eMail.setText(email);
         }
 
-        formDate.setHint("bithday");
+        formDate.setHint("birthday");
         myColor.setHint("your favourite color");
         password.setHint("password");
         confirmPassword.setHint("confirm password");
@@ -216,10 +249,12 @@ public class LogInActivity extends Activity {
 
         // Process to get Current Date
         final Calendar c = Calendar.getInstance();
+
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH);
         day = c.get(Calendar.DAY_OF_MONTH);
 
+       final  Date currentDate= new Date(year, month, day);
         // Launch Date Picker Dialog
         final DatePickerDialog dpd = new DatePickerDialog(this,new DatePickerDialog.OnDateSetListener() {
 
@@ -227,7 +262,13 @@ public class LogInActivity extends Activity {
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 // Display Selected date in textbox
                  month+=1;
-                 formDate.setText(day + "/"+ month + "/" + year);
+                 Date sectedDate= new Date(year,month, day);
+                 if(currentDate.before(sectedDate)){
+                     Toast.makeText(getBaseContext(), "Please insert a correct date", Toast.LENGTH_LONG).show();
+
+                 }else {
+                     formDate.setText(day + "/" + month + "/" + year);
+                 }
             }
 
         }
@@ -240,7 +281,7 @@ public class LogInActivity extends Activity {
        }
    });
 
-
+        date= year+"-"+ month+"-"+day;
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
             @Override
@@ -257,12 +298,14 @@ public class LogInActivity extends Activity {
 
                 } else {
 
+
                     Toast.makeText(getBaseContext(), "Please wait", Toast.LENGTH_LONG).show();
                     //Cript the password
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                     //send data
-                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), passwordToSend, status);
+                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(),date, passwordToSend, status);
                     post.myPostCall(TypeCall.SIGN_UP, logInActivity);
+                    launchRingDialog();
                 }
             }
         });
@@ -351,6 +394,19 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
+    private void emailAlreadyExistAlert() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("email address already in use");
+        alert.setTitle("Warning");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.show();
+    }
+
     private void registrationComplete() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("registration complete");
@@ -375,13 +431,23 @@ public class LogInActivity extends Activity {
                     // Let the progress ring for 10 seconds...
 
                     Thread.sleep(2000);
-                    id_user = status.getText().toString().substring(11, 12);
-                    doctor = status.getText().toString().substring(14, 15);
-                    //status.setText(doctor);
+                    StringTokenizer token= new StringTokenizer(status.getText().toString());
+                    token.nextToken("/");
+                    id_user=token.nextToken("/");
+                    doctor=token.nextToken("/");
+                    //status.setText(id_user+" "+doctor);
                     if(doctor.contains("1")){
                         Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
                         i.putExtra("id_doctor", doctor);
                         startActivity(i);
+                    }
+                    else if (status.getText().toString().contains("emailAlreadyExist")){
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                emailAlreadyExistAlert();
+                            }
+                        });
                     }
                     else if (status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);

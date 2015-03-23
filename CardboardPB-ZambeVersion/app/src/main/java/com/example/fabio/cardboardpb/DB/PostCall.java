@@ -33,12 +33,11 @@ public class PostCall {
     private Thread thread;
     private String response;
     //LOG_IN
-    private String username;
+    private String email;
     private String password;
     //SIGN_UP
     private String firstName;
     private String lastName;
-    private String email;
     private String birthday;
     private String myColor;
     //REPORT
@@ -50,18 +49,32 @@ public class PostCall {
     private String passwordCfr;
     //DOCTOR
     private String id_doctor;
+    //UPDATE
+    private String update;
 
     TextView status;
+
+    /**
+     *
+     * @param string
+     * @param status
+     */
+    public PostCall(String string, TextView status) {
+        this.update = string;
+        this.status = status;
+    }
+
+
 
 
     /**
      *
-     * @param username
+     * @param email
      * @param password
      * @param status
      */
-    public PostCall(String username, String password,TextView status) {
-        this.username = username;
+    public PostCall(String email, String password,TextView status) {
+        this.email = email;
         this.password = password;
         this.status=status;
     }
@@ -139,6 +152,7 @@ public class PostCall {
                 final Activity activity = logInActivity;
                 try {
                     // Add your data
+                    List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(2);
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(7);
@@ -146,7 +160,7 @@ public class PostCall {
                     List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
                     if (type.equals(TypeCall.LOG_IN)) {
                         nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
-                        nameValuePairsLogIn.add(new BasicNameValuePair("email", username));
+                        nameValuePairsLogIn.add(new BasicNameValuePair("email", email));
                         nameValuePairsLogIn.add(new BasicNameValuePair("password", password));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsLogIn));
                     }
@@ -182,6 +196,24 @@ public class PostCall {
                         nameValuePairsReport.add(new BasicNameValuePair("level", level));
                         nameValuePairsReport.add(new BasicNameValuePair("id_user", id_user));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));
+                    }
+                    if(type.equals(TypeCall.UPDATE_MAIL) ){
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_email"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("email", update));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
+
+                    }
+                    if(type.equals(TypeCall.UPDATE_FIRSTNAME)) {
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_firstname"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("firstname", update));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
+
+                    }
+                    if(type.equals(TypeCall.UPDATE_LASTNAME)) {
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_lastname"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("lastname", update));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
+
                     }
 
                     // Execute HTTP Post Request

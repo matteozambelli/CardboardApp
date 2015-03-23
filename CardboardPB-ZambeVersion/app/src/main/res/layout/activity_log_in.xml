@@ -70,7 +70,6 @@
         android:layout_height="wrap_content"
         android:text="Keep me logged in"
         android:id="@+id/checkBox"
-
         android:layout_below="@+id/password"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -87,13 +86,7 @@
         android:layout_below="@+id/updateInfo"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/status"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -112,8 +105,30 @@
         android:text="collaborate with us"
         android:id="@+id/workWithUs"
         android:textColor="@color/accent_material_dark"
-        android:layout_alignTop="@+id/status"
-        android:layout_alignRight="@+id/textViewSignUp"
-        android:layout_alignEnd="@+id/textViewSignUp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:id="@+id/status"
+
+    android:layout_marginBottom="15dp"
+        android:layout_alignBottom="@+id/statusUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status update"
+        android:id="@+id/statusUpdate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
 
 </RelativeLayout>

@@ -5,5 +5,5 @@ package com.example.fabio.cardboardpb.Manager.Enum;
  */
 public enum TypeCall {
 
-    LOG_IN, SIGN_UP, RESET,REPORT,DOCTORCALL
+    LOG_IN, SIGN_UP, RESET,REPORT, DOCTORCALL, UPDATE_MAIL, UPDATE_FIRSTNAME, UPDATE_LASTNAME, UPDATE_BIRTHDAY, UPDATE_PASSWORD;
 }

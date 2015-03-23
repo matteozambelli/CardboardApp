@@ -44,6 +44,7 @@ public class LogInActivity extends Activity {
     private Button logIn;
     private Button signUp;
     private TextView status;
+    private TextView statusUpdate;
     private Button play;
     private TextView forgot;
     private TextView workWithUs;
@@ -54,8 +55,8 @@ public class LogInActivity extends Activity {
     private Activity logInActivity;
     private String id_user;
     private String doctor;
-    private boolean isCheck;
-    private int year, month,day;
+
+    private int year, month, day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,50 +66,52 @@ public class LogInActivity extends Activity {
         setContentView(R.layout.activity_log_in);
 
         logInActivity = this;
+
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         logIn = (Button) findViewById(R.id.logInButton);
         signUp = (Button) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
         workWithUs = (TextView) findViewById(R.id.workWithUs);
-        workWithUs.setPaintFlags(workWithUs.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
-        updateData =(TextView) findViewById(R.id.updateInfo);
-        updateData.setPaintFlags(updateData.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        workWithUs.setPaintFlags(workWithUs.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        updateData = (TextView) findViewById(R.id.updateInfo);
+        updateData.setPaintFlags(updateData.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (TextView) findViewById(R.id.forgotPassword);
-        forgot.setPaintFlags(forgot.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        forgot.setPaintFlags(forgot.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         status = (TextView) findViewById(R.id.status);
+        statusUpdate = (TextView) findViewById(R.id.statusUpdate);
         SharedPreferences settings1;
+
+       //status.setAlpha(0);
+       //statusUpdate.setAlpha(0);
 
         keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 SharedPreferences settings = getSharedPreferences("LOG_IN", 0);
                 SharedPreferences.Editor editor = settings.edit();
-                if(isChecked){
+                if (isChecked) {
                     editor.putString("email", email.getText().toString());
                     editor.putString("password", password.getText().toString());
-                    editor.putBoolean("isCheck",true);
+                    editor.putBoolean("isCheck", true);
                     editor.commit();
 
-                }
-                else{
-                    editor.putBoolean("isCheck",false);
+                } else {
+                    editor.putBoolean("isCheck", false);
                     editor.commit();
                 }
             }
         });
-        if(getSharedPreferences("LOG_IN", 0)!=null) {
-            settings1= getSharedPreferences("LOG_IN",0);
-            if(settings1.getBoolean("isCheck",false)) {
+        if (getSharedPreferences("LOG_IN", 0) != null) {
+            settings1 = getSharedPreferences("LOG_IN", 0);
+            if (settings1.getBoolean("isCheck", false)) {
                 email.setText(settings1.getString("email", ""));
                 password.setText(settings1.getString("password", ""));
                 keepLog.setChecked(settings1.getBoolean("isCheck", false));
             }
         }
-
-
 
 
         logIn.setOnClickListener(new View.OnClickListener() {
@@ -192,7 +195,7 @@ public class LogInActivity extends Activity {
         final EditText myColor = new EditText(this);
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
-        final EditText formDate= new EditText(this);
+        final EditText formDate = new EditText(this);
         final String date;
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -267,34 +270,34 @@ public class LogInActivity extends Activity {
         month = c.get(Calendar.MONTH);
         day = c.get(Calendar.DAY_OF_MONTH);
 
-       final  Date currentDate= new Date(year, month, day);
+        final Date currentDate = new Date(year, month, day);
         // Launch Date Picker Dialog
-        final DatePickerDialog dpd = new DatePickerDialog(this,new DatePickerDialog.OnDateSetListener() {
+        final DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 // Display Selected date in textbox
-                 month+=1;
-                 Date sectedDate= new Date(year,month, day);
-                 if(currentDate.before(sectedDate)){
-                     Toast.makeText(getBaseContext(), "Please insert a correct date", Toast.LENGTH_LONG).show();
+                month += 1;
+                Date sectedDate = new Date(year, month, day);
+                if (currentDate.before(sectedDate)) {
+                    Toast.makeText(getBaseContext(), "Please insert a correct date", Toast.LENGTH_LONG).show();
 
-                 }else {
-                     formDate.setText(day + "/" + month + "/" + year);
-                 }
+                } else {
+                    formDate.setText(day + "/" + month + "/" + year);
+                }
             }
 
         }
-    ,year, month, day);
+                , year, month, day);
 
-   formDate.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View v) {
-           dpd.show();
-       }
-   });
+        formDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dpd.show();
+            }
+        });
 
-        date= year+"-"+ month+"-"+day;
+        date = year + "-" + month + "-" + day;
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
             @Override
@@ -316,7 +319,7 @@ public class LogInActivity extends Activity {
                     //Cript the password
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                     //send data
-                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(),date, passwordToSend, status);
+                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, status);
                     post.myPostCall(TypeCall.SIGN_UP, logInActivity);
                     launchRingDialog();
                 }
@@ -335,12 +338,11 @@ public class LogInActivity extends Activity {
 
     }
 
-
     private void warningNoRegistration() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Warning");
         alert.setMessage("you can play without registration, but we can't trace your improvement");
-        alert.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+        alert.setPositiveButton("PLAY", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 launchRingDialog();
@@ -433,18 +435,18 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
-    private void updateInfoAlert(){
+    private void updateInfoAlert() {
 
         final AlertDialog.Builder alert;
         alert = new AlertDialog.Builder(LogInActivity.this);
-        String vector[]={"email","firstname","lastname","birthday","password"};
+        String vector[] = {"email", "firstname", "lastname", "birthday", "password"};
         alert.setSingleChoiceItems(vector, 0, null)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         dialog.dismiss();
                         int selectedPosition = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
-                        Integer i= new Integer(selectedPosition);
-                        status.setText(i.toString());
+                        Integer i = new Integer(selectedPosition);
+                        statusUpdate.setText(i.toString());
                         updateLogInAlert();
                     }
                 })
@@ -452,7 +454,7 @@ public class LogInActivity extends Activity {
 
     }
 
-    private void updateLogInAlert(){
+    private void updateLogInAlert() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
         LinearLayout layout = new LinearLayout(this);
@@ -461,6 +463,7 @@ public class LogInActivity extends Activity {
         final EditText password = new EditText(this);
         email.setHint("email");
         password.setHint("password");
+        password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         layout.addView(email);
         layout.addView(password);
         alert.setView(layout);
@@ -468,10 +471,10 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                passwordToSend = PasswdManager.calculateHash( password.getText().toString());
-                post = new PostCall(email.getText().toString(),passwordToSend, status);
+                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                post = new PostCall(email.getText().toString(), passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
-                launchRingDialog();
+                launchRingDialogUpdate();
             }
         });
         alert.setNegativeButton("Cancel",
@@ -485,6 +488,83 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
+    private void updateEmailFirstnameLastnameAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        final EditText newValue = new EditText(this);
+
+        if(statusUpdate.getText().toString().equals("0")){
+            newValue.setHint("insert the new email");
+            post=new PostCall(newValue.getText().toString(),statusUpdate);
+            post.myPostCall(TypeCall.UPDATE_MAIL,logInActivity);
+        }
+        if(statusUpdate.getText().toString().equals("1")){
+            newValue.setHint("insert firstname");
+            post=new PostCall(newValue.getText().toString(),statusUpdate);
+            post.myPostCall(TypeCall.UPDATE_FIRSTNAME,logInActivity);
+        }
+        if(statusUpdate.getText().toString().equals("2")){
+            newValue.setHint("insert lastname");
+            post=new PostCall(newValue.getText().toString(),statusUpdate);
+            post.myPostCall(TypeCall.UPDATE_LASTNAME,logInActivity);
+        }
+
+
+        layout.addView(newValue);
+
+        alert.setView(layout);
+        alert.setTitle("Update");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
+        alert.show();
+
+    }
+
+    private void launchRingDialogUpdate() {
+        final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...", "contacting server ...", true);
+        ringProgressDialog.setCancelable(true);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Here you should write your time consuming task...
+                    // Let the progress ring for 10 seconds...
+
+                    Thread.sleep(2000);
+
+                    if(statusUpdate.getText().toString().equals("0")||statusUpdate.getText().toString().equals("1")||statusUpdate.getText().toString().equals("2")) {
+                       logInActivity.runOnUiThread(new Runnable() {
+                           @Override
+                           public void run() {
+                               updateEmailFirstnameLastnameAlert();
+                           }
+                       });
+
+
+                    }
+
+                } catch (Exception e) {
+
+                }
+                ringProgressDialog.dismiss();
+            }
+        }).start();
+
+    }
+
     private void launchRingDialog() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...", "contacting server ...", true);
         ringProgressDialog.setCancelable(true);
@@ -496,43 +576,37 @@ public class LogInActivity extends Activity {
                     // Let the progress ring for 10 seconds...
 
                     Thread.sleep(2000);
-                    StringTokenizer token= new StringTokenizer(status.getText().toString());
+
+                    StringTokenizer token = new StringTokenizer(status.getText().toString());
                     token.nextToken("/");
-                    id_user=token.nextToken("/");
-                    doctor=token.nextToken("/");
-                    //status.setText(id_user+" "+doctor);
-                    if(doctor.contains("1")){
+                    id_user = token.nextToken("/");
+                    doctor = token.nextToken("/");
+
+                    if (doctor.contains("1")) {
                         Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
                         i.putExtra("id_doctor", doctor);
                         startActivity(i);
-                    }
-                    else if (status.getText().toString().contains("emailAlreadyExist")){
+                    } if (status.getText().toString().contains("emailAlreadyExist")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 emailAlreadyExistAlert();
                             }
                         });
-                    }
-                    else if (status.getText().toString().contains("connection")) {
+                    }  if (status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                         i.putExtra("id_user", id_user);
                         startActivity(i);
-                    } else if (status.getText().toString().contains("password errata")) {
-
+                    }  if (status.getText().toString().contains("password errata")) {
                         logInActivity.runOnUiThread(new Runnable() {
-                                                        @Override
-                                                        public void run() {
-
-                                                            wrongPasswordAlert();
-                                                        }
-                                                    }
-
-
-                        );
+                            @Override
+                            public void run() {
+                                wrongPasswordAlert();
+                            }
+                        });
 
 
-                    }else if(status.getText().toString().contains("emailChecked")){
+                    }  if (status.getText().toString().contains("emailChecked")) {
                         logInActivity.runOnUiThread(new Runnable() {
                                                         @Override
                                                         public void run() {
@@ -557,7 +631,7 @@ public class LogInActivity extends Activity {
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children." + '\n' + '\n' +
-                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3d4amb staff " + '\n' + '\n' + "3d4ambcardboard@gmail.com"+ '\n' + '\n' +"http://3d4amb.unibg.it");
+                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3d4amb staff " + '\n' + '\n' + "3d4ambcardboard@gmail.com" + '\n' + '\n' + "http://3d4amb.unibg.it");
         alert.setTitle("COLLABORATE WITH US");
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override

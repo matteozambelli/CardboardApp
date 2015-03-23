@@ -445,11 +445,11 @@ public class LogInActivity extends Activity {
                         int selectedPosition = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
                         Integer i= new Integer(selectedPosition);
                         status.setText(i.toString());
-
+                        updateLogInAlert();
                     }
                 })
                 .show();
-        updateLogInAlert();
+
     }
 
     private void updateLogInAlert(){
@@ -523,7 +523,7 @@ public class LogInActivity extends Activity {
                         logInActivity.runOnUiThread(new Runnable() {
                                                         @Override
                                                         public void run() {
-                                                            password.setText("");
+
                                                             wrongPasswordAlert();
                                                         }
                                                     }

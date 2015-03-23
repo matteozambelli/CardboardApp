@@ -13,6 +13,7 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -40,7 +41,7 @@ public class LogInActivity extends Activity {
     private EditText email;
     private EditText password;
     private Button logIn;
-    private TextView signUp;
+    private Button signUp;
     private TextView status;
     private Button play;
     private Button forgot;
@@ -58,13 +59,15 @@ public class LogInActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_log_in);
 
         logInActivity = this;
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         logIn = (Button) findViewById(R.id.logInButton);
-        signUp = (TextView) findViewById(R.id.textViewSignUp);
+        signUp = (Button) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
         workWithUs = (Button) findViewById(R.id.workWithUs);
         updateData =(Button) findViewById(R.id.updateInfo);

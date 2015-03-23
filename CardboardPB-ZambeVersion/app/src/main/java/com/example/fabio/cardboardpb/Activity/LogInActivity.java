@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Menu;
@@ -44,9 +45,9 @@ public class LogInActivity extends Activity {
     private Button signUp;
     private TextView status;
     private Button play;
-    private Button forgot;
-    private Button workWithUs;
-    private Button updateData;
+    private TextView forgot;
+    private TextView workWithUs;
+    private TextView updateData;
     private String passwordToSend;
     private CheckBox keepLog;
     private PostCall post;
@@ -69,11 +70,14 @@ public class LogInActivity extends Activity {
         logIn = (Button) findViewById(R.id.logInButton);
         signUp = (Button) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
-        workWithUs = (Button) findViewById(R.id.workWithUs);
-        updateData =(Button) findViewById(R.id.updateInfo);
+        workWithUs = (TextView) findViewById(R.id.workWithUs);
+        workWithUs.setPaintFlags(workWithUs.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        updateData =(TextView) findViewById(R.id.updateInfo);
+        updateData.setPaintFlags(updateData.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
         passwordToSend = PasswdManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
-        forgot = (Button) findViewById(R.id.forgotPassword);
+        forgot = (TextView) findViewById(R.id.forgotPassword);
+        forgot.setPaintFlags(forgot.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
         status = (TextView) findViewById(R.id.status);
         SharedPreferences settings1;
 
@@ -114,9 +118,6 @@ public class LogInActivity extends Activity {
                 passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                 post = new PostCall(email.getText().toString(), passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
-                if (status.getText().toString().contains("password errata")) {
-                    wrongPasswordAlert();
-                }
                 launchRingDialog();
 
             }
@@ -518,11 +519,12 @@ public class LogInActivity extends Activity {
                         i.putExtra("id_user", id_user);
                         startActivity(i);
                     } else if (status.getText().toString().contains("password errata")) {
+
                         logInActivity.runOnUiThread(new Runnable() {
                                                         @Override
                                                         public void run() {
+                                                            password.setText("");
                                                             wrongPasswordAlert();
-
                                                         }
                                                     }
 

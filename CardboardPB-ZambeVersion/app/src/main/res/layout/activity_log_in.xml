@@ -31,50 +31,61 @@
         android:hint="password"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="log in"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="LOG IN"
         android:id="@+id/logInButton"
-        android:layout_below="@+id/password"
+        android:background="@drawable/button_lightblue"
+        android:layout_below="@+id/checkBox"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="78dp" />
+        android:layout_marginTop="20dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="SIGN UP"
         android:id="@+id/textViewSignUp"
+        android:background="@drawable/button_light"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_below="@+id/logInButton"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="20dp"/>
+        android:layout_alignLeft="@+id/logInButton"
+        android:layout_alignStart="@+id/logInButton"
+        android:layout_marginTop="20dp"/>
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="forgot your password?"
         android:id="@+id/forgotPassword"
+        android:textColor="#007FFF"
+
         android:layout_below="@+id/textViewSignUp"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="20dp"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Keep me logged in"
         android:id="@+id/checkBox"
-        android:layout_below="@+id/password"
 
+        android:layout_below="@+id/password"
         android:layout_alignParentLeft="true"
-        />
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Or play without registration"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="PLAY WITHOUT REGISTRATION"
         android:id="@+id/playWithoutReg"
-        android:layout_below="@+id/forgotPassword"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="20dp"/>
+        android:background="@drawable/button_light"
+        android:layout_marginTop="48dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@+id/updateInfo"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,20 +95,26 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="update your info"
         android:id="@+id/updateInfo"
-        android:layout_below="@+id/playWithoutReg"
-        android:layout_centerHorizontal="true" />
+        android:textColor="#007FFF"
+        android:layout_below="@+id/forgotPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="collaborate with us"
         android:id="@+id/workWithUs"
-        android:layout_below="@+id/updateInfo"
-        android:layout_centerHorizontal="true" />
+        android:textColor="#007FFF"
+
+        android:layout_alignTop="@+id/status"
+        android:layout_alignRight="@+id/textViewSignUp"
+        android:layout_alignEnd="@+id/textViewSignUp" />
 
 </RelativeLayout>

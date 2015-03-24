@@ -129,7 +129,7 @@ public class LogInActivity extends Activity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertSignUp("", "", "", "");
+              signUpWarning();
             }
         });
 
@@ -185,6 +185,18 @@ public class LogInActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void signUpWarning() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("for the purpose of proper treatment,"+ '\n' + "enter patient data in fields firstname,lastname and birthday");
+        alert.setTitle("Attention");
+        alert.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                    alertSignUp("","","","");
+            }
+        });
+        alert.show();
+    }
 
     private void alertSignUp(String firstname, String lastname, String email, String color) {
 
@@ -200,7 +212,7 @@ public class LogInActivity extends Activity {
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
-
+        formDate.setFocusable(false);
         alert.setMessage("SIGN UP");
 
         if (firstname.equals("") && lastname.equals("") && email.equals("")) {
@@ -455,8 +467,8 @@ public class LogInActivity extends Activity {
     }
 
     private void updateLogInAlert() {
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         final EditText email = new EditText(this);
@@ -496,17 +508,17 @@ public class LogInActivity extends Activity {
 
         if(statusUpdate.getText().toString().equals("0")){
             newValue.setHint("insert the new email");
-            post=new PostCall(newValue.getText().toString(),statusUpdate);
+            post=new PostCall(id_user,newValue.getText().toString(),statusUpdate);
             post.myPostCall(TypeCall.UPDATE_MAIL,logInActivity);
         }
         if(statusUpdate.getText().toString().equals("1")){
             newValue.setHint("insert firstname");
-            post=new PostCall(newValue.getText().toString(),statusUpdate);
+            post=new PostCall(id_user,newValue.getText().toString(),statusUpdate);
             post.myPostCall(TypeCall.UPDATE_FIRSTNAME,logInActivity);
         }
         if(statusUpdate.getText().toString().equals("2")){
             newValue.setHint("insert lastname");
-            post=new PostCall(newValue.getText().toString(),statusUpdate);
+            post=new PostCall(id_user,newValue.getText().toString(),statusUpdate);
             post.myPostCall(TypeCall.UPDATE_LASTNAME,logInActivity);
         }
 
@@ -533,6 +545,105 @@ public class LogInActivity extends Activity {
 
     }
 
+    private void updateBirthdayAlert(){
+
+        final EditText formDate = new EditText(this);
+        LinearLayout layout = new LinearLayout(this);
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        formDate.setFocusable(false);
+        final String date;
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.addView(formDate);
+        alert.setView(layout);
+        // Process to get Current Date
+        final Calendar c = Calendar.getInstance();
+        formDate.setHint("Birthday");
+        alert.setTitle("Update");
+        formDate.setInputType(0);
+
+
+        year = c.get(Calendar.YEAR);
+        month = c.get(Calendar.MONTH);
+        day = c.get(Calendar.DAY_OF_MONTH);
+
+        final Date currentDate = new Date(year, month, day);
+        // Launch Date Picker Dialog
+        final DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+                // Display Selected date in textbox
+                month += 1;
+                Date sectedDate = new Date(year, month, day);
+                if (currentDate.before(sectedDate)) {
+                    Toast.makeText(getBaseContext(), "Please insert a correct date", Toast.LENGTH_LONG).show();
+
+                } else {
+                    formDate.setText(day + "/" + month + "/" + year);
+                }
+            }
+
+        }
+                , year, month, day);
+
+        formDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dpd.show();
+            }
+        });
+
+        date = year + "-" + month + "-" + day;
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                    post= new PostCall(date,statusUpdate);
+                    post.myPostCall(TypeCall.UPDATE_BIRTHDAY,logInActivity);
+            }
+        });
+        alert.show();
+
+    }
+
+    private void updatePasswordAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Update");
+        final EditText password= new EditText(this);
+        final CheckBox check = new CheckBox(this);
+        check.setText("show passord");
+        password.setHint("new password");
+        password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+
+                    password.setInputType(InputType.TYPE_TEXT_VARIATION_NORMAL);
+                }
+                else if(!isChecked){
+                    password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
+            }
+        });
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.addView(password);
+        layout.addView(check);
+        alert.setView(layout);
+
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                post = new PostCall(id_user,passwordToSend, statusUpdate);
+                post.myPostCall(TypeCall.UPDATE_PASSWORD, logInActivity);
+
+            }
+        });
+
+        alert.show();
+    }
+
     private void launchRingDialogUpdate() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...", "contacting server ...", true);
         ringProgressDialog.setCancelable(true);
@@ -543,6 +654,10 @@ public class LogInActivity extends Activity {
                     // Here you should write your time consuming task...
                     // Let the progress ring for 10 seconds...
 
+                    StringTokenizer token = new StringTokenizer(status.getText().toString());
+                    token.nextToken("/");
+                    id_user = token.nextToken("/");
+                    doctor = token.nextToken("/");
                     Thread.sleep(2000);
 
                     if(statusUpdate.getText().toString().equals("0")||statusUpdate.getText().toString().equals("1")||statusUpdate.getText().toString().equals("2")) {
@@ -554,6 +669,22 @@ public class LogInActivity extends Activity {
                        });
 
 
+                    }
+                    if(statusUpdate.getText().toString().equals("3")){
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updateBirthdayAlert();
+                            }
+                        });
+                    }
+                    if(statusUpdate.getText().toString().equals("4")){
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updatePasswordAlert();
+                            }
+                        });
                     }
 
                 } catch (Exception e) {
@@ -586,18 +717,18 @@ public class LogInActivity extends Activity {
                         Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
                         i.putExtra("id_doctor", doctor);
                         startActivity(i);
-                    } if (status.getText().toString().contains("emailAlreadyExist")) {
+                    } else if (status.getText().toString().contains("emailAlreadyExist")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 emailAlreadyExistAlert();
                             }
                         });
-                    }  if (status.getText().toString().contains("connection")) {
+                    } else if (status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                         i.putExtra("id_user", id_user);
                         startActivity(i);
-                    }  if (status.getText().toString().contains("password errata")) {
+                    } else if (status.getText().toString().contains("password errata")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -606,7 +737,7 @@ public class LogInActivity extends Activity {
                         });
 
 
-                    }  if (status.getText().toString().contains("emailChecked")) {
+                    } else if (status.getText().toString().contains("emailChecked")) {
                         logInActivity.runOnUiThread(new Runnable() {
                                                         @Override
                                                         public void run() {

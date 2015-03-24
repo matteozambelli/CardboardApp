@@ -51,6 +51,8 @@ public class DoctorActivity extends Activity {
         birthday = (EditText) findViewById(R.id.date);
         status= (TextView) findViewById(R.id.status);
 
+        birthday.setFocusable(false);
+
         // Process to get Current Date
         final Calendar c = Calendar.getInstance();
 

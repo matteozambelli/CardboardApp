@@ -152,7 +152,7 @@ public class PostCall {
                 final Activity activity = logInActivity;
                 try {
                     // Add your data
-                    List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(2);
+                    List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
                     List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(7);
@@ -199,19 +199,35 @@ public class PostCall {
                     }
                     if(type.equals(TypeCall.UPDATE_MAIL) ){
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_email"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("email", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
                     }
                     if(type.equals(TypeCall.UPDATE_FIRSTNAME)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_firstname"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("firstname", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
                     }
                     if(type.equals(TypeCall.UPDATE_LASTNAME)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_lastname"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("lastname", update));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
+
+                    }
+                    if(type.equals(TypeCall.UPDATE_BIRTHDAY)){
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_birthday"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("birthday", update));
+                        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
+                    }
+                    if(type.equals(TypeCall.UPDATE_PASSWORD)){
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_password"));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("password", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
                     }

@@ -52,14 +52,18 @@ public class PostCall {
     //UPDATE
     private String update;
 
+    private String postResult;
     TextView status;
 
     /**
      *
+     * @param id_user
      * @param string
      * @param status
+     * @param update
      */
-    public PostCall(String string, TextView status) {
+    public PostCall(String id_user,String string, TextView status,boolean update) {
+        this.id_user=id_user;
         this.update = string;
         this.status = status;
     }
@@ -206,7 +210,7 @@ public class PostCall {
                     }
                     if(type.equals(TypeCall.UPDATE_FIRSTNAME)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_firstname"));
-                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", new Integer(15).toString()));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("firstname", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
@@ -234,6 +238,7 @@ public class PostCall {
 
                     // Execute HTTP Post Request
                     ResponseHandler<String> responseHandler = new BasicResponseHandler();
+                    postResult=httpclient.execute(httppost, responseHandler);
                     response = httpclient.execute(httppost, responseHandler);
                      //This is the response from a php application
                     final String reverseString = response;
@@ -271,6 +276,9 @@ public class PostCall {
     }
 
 
+    public String getPostResult(){
+        return postResult;
+    }
 
 }
 

@@ -55,7 +55,7 @@ public class LogInActivity extends Activity {
     private Activity logInActivity;
     private String id_user;
     private String doctor;
-
+    private String date;
     private int year, month, day;
 
     @Override
@@ -80,7 +80,7 @@ public class LogInActivity extends Activity {
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (TextView) findViewById(R.id.forgotPassword);
         forgot.setPaintFlags(forgot.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        status = (TextView) findViewById(R.id.status);
+        status= (TextView) findViewById(R.id.status);
         statusUpdate = (TextView) findViewById(R.id.statusUpdate);
         SharedPreferences settings1;
 
@@ -118,11 +118,25 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                post = new PostCall(email.getText().toString(), passwordToSend, status);
-                post.myPostCall(TypeCall.LOG_IN, logInActivity);
-                launchRingDialog();
+                if(email.getText().toString().equals("") && password.getText().toString().equals("")){
+                    final AlertDialog.Builder alert = new AlertDialog.Builder(logInActivity);
+                    alert.setTitle("Warning");
+                    alert.setMessage("wrong email or password");
+                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
 
+                        }
+                    });
+                    alert.show();
+
+                }else {
+                    passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                    post = new PostCall(email.getText().toString(), passwordToSend, statusUpdate);
+                    post.myPostCall(TypeCall.LOG_IN, logInActivity);
+                    launchRingDialogUpdate();
+
+                }
             }
         });
 
@@ -208,7 +222,7 @@ public class LogInActivity extends Activity {
         final EditText password = new EditText(this);
         final EditText confirmPassword = new EditText(this);
         final EditText formDate = new EditText(this);
-        final String date;
+
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -296,6 +310,7 @@ public class LogInActivity extends Activity {
 
                 } else {
                     formDate.setText(day + "/" + month + "/" + year);
+                    date = year + "-" + month + "-" + day;
                 }
             }
 
@@ -309,7 +324,7 @@ public class LogInActivity extends Activity {
             }
         });
 
-        date = year + "-" + month + "-" + day;
+
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
             @Override
@@ -325,15 +340,12 @@ public class LogInActivity extends Activity {
 
 
                 } else {
-
-
-                    Toast.makeText(getBaseContext(), "Please wait", Toast.LENGTH_LONG).show();
                     //Cript the password
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                     //send data
-                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, status);
+                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, statusUpdate);
                     post.myPostCall(TypeCall.SIGN_UP, logInActivity);
-                    launchRingDialog();
+                    launchRingDialogUpdate();
                 }
             }
         });
@@ -357,7 +369,7 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("PLAY", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                launchRingDialog();
+                //launchRingDialog();
                 passwordToSend = PasswdManager.calculateHash("default_user");
                 post = new PostCall("3d4ambcardboard@gmail.com", passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
@@ -500,28 +512,69 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
-    private void updateEmailFirstnameLastnameAlert(){
+    private void updateEmailAlert(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         final EditText newValue = new EditText(this);
+        newValue.setHint("insert the new email");
+        layout.addView(newValue);
+        alert.setView(layout);
+        alert.setTitle("Update");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                post=new PostCall(id_user,newValue.getText().toString(),statusUpdate,true);
+                post.myPostCall(TypeCall.UPDATE_MAIL,logInActivity);
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
 
-        if(statusUpdate.getText().toString().equals("0")){
-            newValue.setHint("insert the new email");
-            post=new PostCall(id_user,newValue.getText().toString(),statusUpdate);
-            post.myPostCall(TypeCall.UPDATE_MAIL,logInActivity);
-        }
-        if(statusUpdate.getText().toString().equals("1")){
-            newValue.setHint("insert firstname");
-            post=new PostCall(id_user,newValue.getText().toString(),statusUpdate);
-            post.myPostCall(TypeCall.UPDATE_FIRSTNAME,logInActivity);
-        }
-        if(statusUpdate.getText().toString().equals("2")){
-            newValue.setHint("insert lastname");
-            post=new PostCall(id_user,newValue.getText().toString(),statusUpdate);
-            post.myPostCall(TypeCall.UPDATE_LASTNAME,logInActivity);
-        }
+        alert.show();
 
+    }
+
+    private void updateFirstnameAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        final EditText newValue = new EditText(this);
+        newValue.setHint("insert firstname");
+        layout.addView(newValue);
+        alert.setView(layout);
+        alert.setTitle("Update");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Integer i = new Integer(15);
+                post=new PostCall(i.toString(),newValue.getText().toString(),statusUpdate,true);
+                post.myPostCall(TypeCall.UPDATE_FIRSTNAME,logInActivity);
+            }
+        });
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
+        alert.show();
+
+    }
+
+    private void updateLastnameAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        final EditText newValue = new EditText(this);
+        newValue.setHint("insert lastname");
 
         layout.addView(newValue);
 
@@ -530,7 +583,8 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                post=new PostCall(id_user,newValue.getText().toString(),statusUpdate,true);
+                post.myPostCall(TypeCall.UPDATE_LASTNAME,logInActivity);
             }
         });
         alert.setNegativeButton("Cancel",
@@ -551,7 +605,7 @@ public class LogInActivity extends Activity {
         LinearLayout layout = new LinearLayout(this);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         formDate.setFocusable(false);
-        final String date;
+
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.addView(formDate);
         alert.setView(layout);
@@ -580,6 +634,7 @@ public class LogInActivity extends Activity {
 
                 } else {
                     formDate.setText(day + "/" + month + "/" + year);
+                    date = year + "-" + month + "-" + day;
                 }
             }
 
@@ -593,11 +648,11 @@ public class LogInActivity extends Activity {
             }
         });
 
-        date = year + "-" + month + "-" + day;
+
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                    post= new PostCall(date,statusUpdate);
+                    post= new PostCall(id_user,date.toString(),statusUpdate,true);
                     post.myPostCall(TypeCall.UPDATE_BIRTHDAY,logInActivity);
             }
         });
@@ -635,7 +690,7 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                post = new PostCall(id_user,passwordToSend, statusUpdate);
+                post = new PostCall(id_user,passwordToSend, statusUpdate,true);
                 post.myPostCall(TypeCall.UPDATE_PASSWORD, logInActivity);
 
             }
@@ -652,25 +707,54 @@ public class LogInActivity extends Activity {
             public void run() {
                 try {
                     // Here you should write your time consuming task...
-                    // Let the progress ring for 10 seconds...
-
+                    String temp= post.getPostResult();
+                    Thread.sleep(2000);
                     StringTokenizer token = new StringTokenizer(status.getText().toString());
                     token.nextToken("/");
                     id_user = token.nextToken("/");
                     doctor = token.nextToken("/");
-                    Thread.sleep(2000);
 
-                    if(statusUpdate.getText().toString().equals("0")||statusUpdate.getText().toString().equals("1")||statusUpdate.getText().toString().equals("2")) {
+                    if(statusUpdate.getText().toString().contains("password errata")){
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getBaseContext(), "Please insert a correct password", Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+                    }
+
+                    if(statusUpdate.getText().toString().equals("0")) {
                        logInActivity.runOnUiThread(new Runnable() {
                            @Override
                            public void run() {
-                               updateEmailFirstnameLastnameAlert();
+                               updateEmailAlert();
                            }
                        });
 
 
                     }
-                    if(statusUpdate.getText().toString().equals("3")){
+                    else if(statusUpdate.getText().toString().equals("1")) {
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updateFirstnameAlert();
+                            }
+                        });
+
+
+                    }
+                    if(statusUpdate.getText().toString().equals("2")) {
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updateLastnameAlert();
+                            }
+                        });
+
+
+                    }
+                    else if(statusUpdate.getText().toString().equals("3")){
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -678,7 +762,7 @@ public class LogInActivity extends Activity {
                             }
                         });
                     }
-                    if(statusUpdate.getText().toString().equals("4")){
+                    else if(statusUpdate.getText().toString().equals("4")){
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -695,7 +779,7 @@ public class LogInActivity extends Activity {
         }).start();
 
     }
-
+/*
     private void launchRingDialog() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...", "contacting server ...", true);
         ringProgressDialog.setCancelable(true);
@@ -704,10 +788,9 @@ public class LogInActivity extends Activity {
             public void run() {
                 try {
                     // Here you should write your time consuming task...
-                    // Let the progress ring for 10 seconds...
 
                     Thread.sleep(2000);
-
+                    String bckup=status.getText().toString();
                     StringTokenizer token = new StringTokenizer(status.getText().toString());
                     token.nextToken("/");
                     id_user = token.nextToken("/");
@@ -717,13 +800,8 @@ public class LogInActivity extends Activity {
                         Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
                         i.putExtra("id_doctor", doctor);
                         startActivity(i);
-                    } else if (status.getText().toString().contains("emailAlreadyExist")) {
-                        logInActivity.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                emailAlreadyExistAlert();
-                            }
-                        });
+                    } else if(status.getText().toString().contains("emailAlreadyExist")) {
+
                     } else if (status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                         i.putExtra("id_user", id_user);
@@ -735,8 +813,6 @@ public class LogInActivity extends Activity {
                                 wrongPasswordAlert();
                             }
                         });
-
-
                     } else if (status.getText().toString().contains("emailChecked")) {
                         logInActivity.runOnUiThread(new Runnable() {
                                                         @Override
@@ -757,19 +833,19 @@ public class LogInActivity extends Activity {
         }).start();
 
     }
-
+*/
     private void workWithUsAlert() {
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children." + '\n' + '\n' +
-                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3d4amb staff " + '\n' + '\n' + "3d4ambcardboard@gmail.com" + '\n' + '\n' + "http://3d4amb.unibg.it");
+                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3d4amb staff " + '\n' + '\n' + "3D4AmbUnibg@gmail.com" + '\n' + '\n' + "http://3d4amb.unibg.it");
         alert.setTitle("COLLABORATE WITH US");
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"3d4ambcardboard@gmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"3D4AmbUnibg@gmail.com"});
                 i.putExtra(Intent.EXTRA_SUBJECT, "3d4amb DOCTOR COLLABORATION");
                 i.putExtra(Intent.EXTRA_TEXT, "");
                 try {

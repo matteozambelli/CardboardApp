@@ -50,7 +50,7 @@ public class LogInActivity extends Activity {
 
     private CheckBox keepLog;//checkbox keep me logged in
 
-    private PostCall post;//my PostCall object
+    private PostCall post,postUpdate;//my PostCall object
 
     private String id_user;// save the id_user from server
     private String doctor;// doctor flag
@@ -474,9 +474,8 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Integer i = new Integer(15);
-                post = new PostCall(i.toString(), newValue.getText().toString(), statusUpdate, true);
-                post.myPostCall(TypeCall.UPDATE_FIRSTNAME, logInActivity);
+                postUpdate = new PostCall(id_user, newValue.getText().toString(), statusUpdate, true);
+                postUpdate.myPostCall(TypeCall.UPDATE_FIRSTNAME, logInActivity);
             }
         });
         alert.setNegativeButton("Cancel",
@@ -653,7 +652,7 @@ public class LogInActivity extends Activity {
 
 
                     }
-                    if (statusUpdate.getText().toString().equals("2")) {
+                    else if (statusUpdate.getText().toString().equals("2")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

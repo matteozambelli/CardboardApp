@@ -204,7 +204,7 @@ public class PostCall {
                     }
                     if (type.equals(TypeCall.UPDATE_FIRSTNAME)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_firstname"));
-                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", new Integer(15).toString()));
+                        nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("firstname", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
@@ -249,6 +249,14 @@ public class PostCall {
                                     }
                                 });
                             }
+                            else if(response.contains("updateOk")){
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("update","successfully updated",logInActivity);
+                                    }
+                                });
+                            }
                             else if(response.contains("emailChecked")){
                                 logInActivity.runOnUiThread(new Runnable() {
                                     @Override
@@ -283,6 +291,7 @@ public class PostCall {
                                     }
                                 });
                             }
+
                         }
                     });
 

@@ -84,8 +84,8 @@ public class LogInActivity extends Activity {
         statusUpdate = (TextView) findViewById(R.id.statusUpdate);
         SharedPreferences settings1;
 
-       //status.setAlpha(0);
-       //statusUpdate.setAlpha(0);
+        status.setAlpha(0);
+        statusUpdate.setAlpha(0);
 
         keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -132,9 +132,9 @@ public class LogInActivity extends Activity {
 
                 }else {
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                    post = new PostCall(email.getText().toString(), passwordToSend, statusUpdate);
+                    post = new PostCall(email.getText().toString(), passwordToSend, status);
                     post.myPostCall(TypeCall.LOG_IN, logInActivity);
-                    launchRingDialogUpdate();
+                    launchRingDialog();
 
                 }
             }
@@ -177,27 +177,7 @@ public class LogInActivity extends Activity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_log_in, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+    
 
     private void signUpWarning() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -345,7 +325,7 @@ public class LogInActivity extends Activity {
                     //send data
                     post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, statusUpdate);
                     post.myPostCall(TypeCall.SIGN_UP, logInActivity);
-                    launchRingDialogUpdate();
+                    launchRingDialog();
                 }
             }
         });
@@ -369,7 +349,7 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("PLAY", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //launchRingDialog();
+                launchRingDialog();
                 passwordToSend = PasswdManager.calculateHash("default_user");
                 post = new PostCall("3d4ambcardboard@gmail.com", passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
@@ -406,7 +386,7 @@ public class LogInActivity extends Activity {
                 passwordToSend = PasswdManager.calculateHash(newPasswd);
                 post = new PostCall(mailTo.getText().toString(), myColor.getText().toString(), newPasswd, passwordToSend, status);
                 post.myPostCall(TypeCall.RESET, logInActivity);
-                // launchRingDialog();
+                launchRingDialog();
             }
         });
         alert.setNegativeButton("Cancel",
@@ -417,45 +397,6 @@ public class LogInActivity extends Activity {
                     }
                 });
 
-        alert.show();
-    }
-
-    private void wrongPasswordAlert() {
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Please re-enter your password");
-        alert.setTitle("Warning");
-        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        alert.show();
-    }
-
-    private void emailAlreadyExistAlert() {
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("email address already in use");
-        alert.setTitle("Warning");
-        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        alert.show();
-    }
-
-    private void registrationComplete() {
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("registration complete");
-        alert.setTitle("welcome");
-        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
         alert.show();
     }
 
@@ -707,22 +648,12 @@ public class LogInActivity extends Activity {
             public void run() {
                 try {
                     // Here you should write your time consuming task...
-                    String temp= post.getPostResult();
+
                     Thread.sleep(2000);
                     StringTokenizer token = new StringTokenizer(status.getText().toString());
                     token.nextToken("/");
                     id_user = token.nextToken("/");
                     doctor = token.nextToken("/");
-
-                    if(statusUpdate.getText().toString().contains("password errata")){
-                        logInActivity.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(getBaseContext(), "Please insert a correct password", Toast.LENGTH_LONG).show();
-                            }
-                        });
-
-                    }
 
                     if(statusUpdate.getText().toString().equals("0")) {
                        logInActivity.runOnUiThread(new Runnable() {
@@ -779,7 +710,7 @@ public class LogInActivity extends Activity {
         }).start();
 
     }
-/*
+
     private void launchRingDialog() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(LogInActivity.this, "Please wait ...", "contacting server ...", true);
         ringProgressDialog.setCancelable(true);
@@ -790,7 +721,7 @@ public class LogInActivity extends Activity {
                     // Here you should write your time consuming task...
 
                     Thread.sleep(2000);
-                    String bckup=status.getText().toString();
+
                     StringTokenizer token = new StringTokenizer(status.getText().toString());
                     token.nextToken("/");
                     id_user = token.nextToken("/");
@@ -798,32 +729,16 @@ public class LogInActivity extends Activity {
 
                     if (doctor.contains("1")) {
                         Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
-                        i.putExtra("id_doctor", doctor);
+                        i.putExtra("id_doctor", id_user);
                         startActivity(i);
-                    } else if(status.getText().toString().contains("emailAlreadyExist")) {
-
+                        // close this activity
+                        finish();
                     } else if (status.getText().toString().contains("connection")) {
                         Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                         i.putExtra("id_user", id_user);
                         startActivity(i);
-                    } else if (status.getText().toString().contains("password errata")) {
-                        logInActivity.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                wrongPasswordAlert();
-                            }
-                        });
-                    } else if (status.getText().toString().contains("emailChecked")) {
-                        logInActivity.runOnUiThread(new Runnable() {
-                                                        @Override
-                                                        public void run() {
-                                                            registrationComplete();
-
-                                                        }
-                                                    }
-
-
-                        );
+                        // close this activity
+                        finish();
                     }
                 } catch (Exception e) {
 
@@ -833,7 +748,7 @@ public class LogInActivity extends Activity {
         }).start();
 
     }
-*/
+
     private void workWithUsAlert() {
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);

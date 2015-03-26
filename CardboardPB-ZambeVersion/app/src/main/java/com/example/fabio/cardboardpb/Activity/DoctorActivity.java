@@ -14,12 +14,14 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.R;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.StringTokenizer;
 
 
@@ -61,13 +63,21 @@ public class DoctorActivity extends Activity {
         day = c.get(Calendar.DAY_OF_MONTH);
 
         // Launch Date Picker Dialog
+        final Date currentDate = new Date(year, month, day);
         final DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 // Display Selected date in textbox
-                month+=1;
-                birthday.setText(day + "/" + month + "/" + year);
+                month += 1;
+                Date sectedDate = new Date(year, month, day);
+                if (currentDate.before(sectedDate)) {
+                    Toast.makeText(getBaseContext(), "Please insert a correct date", Toast.LENGTH_LONG).show();
+
+                } else {
+                    birthday.setText(day + "/" + month + "/" + year);
+                    date = year + "-" + month + "-" + day;
+                }
             }
 
         }
@@ -88,6 +98,11 @@ public class DoctorActivity extends Activity {
                 post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),date,id_doctor);
                 post.myPostCall(TypeCall.DOCTORCALL,doctorActivity);
                 launchRingDialog();
+                Intent i = new Intent(DoctorActivity.this, DoctorActivity.class);
+                i.putExtra("id_doctor", id_doctor);
+                startActivity(i);
+                // close this activity
+                finish();
             }
         });
 

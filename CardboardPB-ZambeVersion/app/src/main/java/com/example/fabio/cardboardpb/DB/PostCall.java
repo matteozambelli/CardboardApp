@@ -1,6 +1,8 @@
 package com.example.fabio.cardboardpb.DB;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,55 +54,49 @@ public class PostCall {
     //UPDATE
     private String update;
 
-    private String postResult;
+
     TextView status;
 
     /**
-     *
      * @param id_user
      * @param string
      * @param status
      * @param update
      */
-    public PostCall(String id_user,String string, TextView status,boolean update) {
-        this.id_user=id_user;
+    public PostCall(String id_user, String string, TextView status, boolean update) {
+        this.id_user = id_user;
         this.update = string;
         this.status = status;
     }
 
 
-
-
     /**
-     *
      * @param email
      * @param password
      * @param status
      */
-    public PostCall(String email, String password,TextView status) {
+    public PostCall(String email, String password, TextView status) {
         this.email = email;
         this.password = password;
-        this.status=status;
+        this.status = status;
     }
 
     /**
-     *
      * @param email
      * @param myColor
      * @param newPassword
      * @param passwordCfr
      * @param status
      */
-    public PostCall(String email, String myColor, String newPassword,String passwordCfr, TextView status) {
+    public PostCall(String email, String myColor, String newPassword, String passwordCfr, TextView status) {
         this.email = email;
         this.myColor = myColor;
-        this.newPassword=newPassword;
-        this.passwordCfr=passwordCfr;
-        this.status=status;
+        this.newPassword = newPassword;
+        this.passwordCfr = passwordCfr;
+        this.status = status;
     }
 
     /**
-     *
      * @param firstName
      * @param lastName
      * @param email
@@ -109,18 +105,17 @@ public class PostCall {
      * @param password
      * @param status
      */
-    public PostCall(String firstName, String lastName, String email, String myColor,String birthday, String password,TextView status) {
+    public PostCall(String firstName, String lastName, String email, String myColor, String birthday, String password, TextView status) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthday=birthday;
+        this.birthday = birthday;
         this.email = email;
         this.password = password;
-        this.myColor=myColor;
-        this.status=status;
+        this.myColor = myColor;
+        this.status = status;
     }
 
     /**
-     *
      * @param firstName
      * @param lastName
      * @param id_doctor
@@ -134,17 +129,16 @@ public class PostCall {
     }
 
     /**
-     *
      * @param score
      * @param level
      */
-    public PostCall(String score, String level,String id_user) {
+    public PostCall(String score, String level, String id_user) {
         this.score = score;
         this.level = level;
-        this.id_user=id_user;
+        this.id_user = id_user;
     }
 
-    public void myPostCall(final  TypeCall type,final Activity logInActivity) {
+    public void myPostCall(final TypeCall type, final Activity logInActivity) {
         // Create a new HttpClient and Post Header
         thread = new Thread(new Runnable() {
             @Override
@@ -182,53 +176,53 @@ public class PostCall {
                         nameValuePairsReset.add(new BasicNameValuePair("type", "reset"));
                         nameValuePairsReset.add(new BasicNameValuePair("email", email));
                         nameValuePairsReset.add(new BasicNameValuePair("color", myColor));
-                        nameValuePairsReset.add(new BasicNameValuePair("new_password",newPassword));
-                        nameValuePairsReset.add(new BasicNameValuePair("new_passwordCfr",passwordCfr));
+                        nameValuePairsReset.add(new BasicNameValuePair("new_password", newPassword));
+                        nameValuePairsReset.add(new BasicNameValuePair("new_passwordCfr", passwordCfr));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReset));
                     }
-                    if(type.equals(TypeCall.DOCTORCALL)){
+                    if (type.equals(TypeCall.DOCTORCALL)) {
                         nameValuePairsDoctorCall.add(new BasicNameValuePair("type", "doctorcall"));
                         nameValuePairsDoctorCall.add(new BasicNameValuePair("first_name", firstName));
                         nameValuePairsDoctorCall.add(new BasicNameValuePair("last_name", lastName));
-                        nameValuePairsDoctorCall.add(new BasicNameValuePair("id_doctor",id_doctor));
-                        nameValuePairsDoctorCall.add(new BasicNameValuePair("birthday",birthday));
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("id_doctor", id_doctor));
+                        nameValuePairsDoctorCall.add(new BasicNameValuePair("birthday", birthday));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsDoctorCall));
                     }
-                    if(type.equals(TypeCall.REPORT)){
+                    if (type.equals(TypeCall.REPORT)) {
                         nameValuePairsReport.add(new BasicNameValuePair("type", "report"));
                         nameValuePairsReport.add(new BasicNameValuePair("score", score));
                         nameValuePairsReport.add(new BasicNameValuePair("level", level));
                         nameValuePairsReport.add(new BasicNameValuePair("id_user", id_user));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));
                     }
-                    if(type.equals(TypeCall.UPDATE_MAIL) ){
+                    if (type.equals(TypeCall.UPDATE_MAIL)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_email"));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("email", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
                     }
-                    if(type.equals(TypeCall.UPDATE_FIRSTNAME)) {
+                    if (type.equals(TypeCall.UPDATE_FIRSTNAME)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_firstname"));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", new Integer(15).toString()));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("firstname", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
                     }
-                    if(type.equals(TypeCall.UPDATE_LASTNAME)) {
+                    if (type.equals(TypeCall.UPDATE_LASTNAME)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_lastname"));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("lastname", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
 
                     }
-                    if(type.equals(TypeCall.UPDATE_BIRTHDAY)){
+                    if (type.equals(TypeCall.UPDATE_BIRTHDAY)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_birthday"));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("birthday", update));
                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsUpdateString));
                     }
-                    if(type.equals(TypeCall.UPDATE_PASSWORD)){
+                    if (type.equals(TypeCall.UPDATE_PASSWORD)) {
                         nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_password"));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("id_user", id_user));
                         nameValuePairsUpdateString.add(new BasicNameValuePair("password", update));
@@ -237,21 +231,64 @@ public class PostCall {
                     }
 
                     // Execute HTTP Post Request
-                    ResponseHandler<String> responseHandler = new BasicResponseHandler();
-                    postResult=httpclient.execute(httppost, responseHandler);
+                    final ResponseHandler<String> responseHandler = new BasicResponseHandler();
+
                     response = httpclient.execute(httppost, responseHandler);
-                     //This is the response from a php application
+                    //This is the response from a php application
                     final String reverseString = response;
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-                           status.setText(reverseString);
-                           // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
+                             status.setText(reverseString);
+                            // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
                          /* if(type.equals(TypeCall.LOG_IN) || type.equals(TypeCall.RESET)){ status.setText(reverseString);}
                             else if(type.equals(TypeCall.REPORT)){
                               //TODO
                           }*/
-                }
-            });
+
+                            if (response.contains("password errata")) {
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Warning","Please re-enter your password", logInActivity);
+                                    }
+                                });
+                            }
+                            else if(response.contains("emailChecked")){
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Welcome to 3D4Amb","registration complete",logInActivity);
+                                    }
+                                });
+                            }
+                            else if(response.contains("emailAlreadyExist")){
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Warning","email address is already in use."+'\n'+"Sign up failed",logInActivity);
+                                    }
+                                });
+                            }
+                            else if(response.contains("colorFalse")){
+
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Warning","wrong color",logInActivity);
+                                    }
+                                });
+                            }
+                            else if(response.contains("colorTrue")){
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Reset password","Your password has been reset successfully!"+'\n' +
+                                                "Your new password has been sent to your email address."+'\n'+'\n'+"3D4Amb staff",logInActivity);
+                                    }
+                                });
+                            }
+                        }
+                    });
 
                 } catch (ClientProtocolException e) {
                     activity.runOnUiThread(new Runnable() {
@@ -276,9 +313,19 @@ public class PostCall {
     }
 
 
-    public String getPostResult(){
-        return postResult;
+    private void customAlert(String title,String message,Activity activity){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title);
+        alert.setMessage(message);
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.show();
     }
+
 
 }
 

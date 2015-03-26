@@ -239,11 +239,7 @@ public class PostCall {
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
                              status.setText(reverseString);
-                            // Toast.makeText(activity, "response: " + reverseString, Toast.LENGTH_LONG).show();
-                         /* if(type.equals(TypeCall.LOG_IN) || type.equals(TypeCall.RESET)){ status.setText(reverseString);}
-                            else if(type.equals(TypeCall.REPORT)){
-                              //TODO
-                          }*/
+
 
                             if (response.contains("password errata")) {
                                 logInActivity.runOnUiThread(new Runnable() {

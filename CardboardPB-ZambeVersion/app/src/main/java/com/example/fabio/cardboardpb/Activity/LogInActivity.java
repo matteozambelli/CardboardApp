@@ -20,10 +20,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
+
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Calendar;
@@ -75,12 +77,12 @@ public class LogInActivity extends Activity {
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (TextView) findViewById(R.id.forgotPassword);
         forgot.setPaintFlags(forgot.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        status= (TextView) findViewById(R.id.status);
+        status = (TextView) findViewById(R.id.status);
         statusUpdate = (TextView) findViewById(R.id.statusUpdate);
         SharedPreferences settings1;
 
-        status.setAlpha(0);
-        statusUpdate.setAlpha(0);
+        //status.setAlpha(0);
+        //statusUpdate.setAlpha(0);
 
         keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -113,7 +115,7 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                if(email.getText().toString().equals("") && password.getText().toString().equals("")){
+                if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
                     final AlertDialog.Builder alert = new AlertDialog.Builder(logInActivity);
                     alert.setTitle("Warning");
                     alert.setMessage("wrong email or password");
@@ -125,7 +127,7 @@ public class LogInActivity extends Activity {
                     });
                     alert.show();
 
-                }else {
+                } else {
                     passwordToSend = PasswdManager.calculateHash(password.getText().toString());
                     post = new PostCall(email.getText().toString(), passwordToSend, status);
                     post.myPostCall(TypeCall.LOG_IN, logInActivity);
@@ -138,7 +140,7 @@ public class LogInActivity extends Activity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              signUpWarning();
+                signUpWarning();
             }
         });
 
@@ -173,21 +175,20 @@ public class LogInActivity extends Activity {
     }
 
 
-
     private void signUpWarning() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("for the purpose of proper treatment,"+ '\n' + "enter patient data in fields firstname,lastname and birthday");
+        alert.setMessage("for the purpose of proper treatment," + '\n' + "enter patient data in fields firstname,lastname and birthday");
         alert.setTitle("Attention");
         alert.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                    alertSignUp("","","","");
+                alertSignUp("", "", "");
             }
         });
         alert.show();
     }
 
-    private void alertSignUp(String firstname, String lastname, String email, String color) {
+    private void alertSignUp(String firstname, String lastname, final String email) {
 
 
         final EditText firstName = new EditText(this);
@@ -204,41 +205,40 @@ public class LogInActivity extends Activity {
         formDate.setFocusable(false);
         alert.setMessage("SIGN UP");
 
-        if (firstname.equals("") && lastname.equals("") && email.equals("") && color.equals("") && date.equals("")) {
+        if (firstname.isEmpty() && lastname.isEmpty() && email.isEmpty()) {
             firstName.setHint("first name");
             lastName.setHint("last name");
             eMail.setHint("email");
-            myColor.setHint("your favourite color");
-            formDate.setHint("birthday");
+
 
         }
-        if (firstname.equals("") && !lastname.equals("") && !email.equals("")) {
+        if (firstname.isEmpty() && !lastname.isEmpty() && !email.isEmpty()) {
             firstName.setHint("first name");
             lastName.setText(lastname);
             eMail.setText(email);
         }
-        if (firstname.equals("") && lastname.equals("") && !email.equals("")) {
+        if (firstname.isEmpty() && lastname.isEmpty() && !email.isEmpty()) {
             firstName.setHint("first name");
             lastName.setHint("last name");
             eMail.setText(email);
         }
-        if (!firstname.equals("") && lastname.equals("") && !email.equals("")) {
+        if (!firstname.isEmpty() && lastname.isEmpty() && !email.isEmpty()) {
             firstName.setText(firstname);
             lastName.setHint("last name");
             eMail.setText(email);
         }
-        if (!firstname.equals("") && !lastname.equals("") && email.equals("")) {
+        if (!firstname.isEmpty() && !lastname.isEmpty() && email.isEmpty()) {
             firstName.setText(firstname);
             lastName.setText(lastname);
             eMail.setHint("email");
         }
-        if (!firstname.equals("") && lastname.equals("") && email.equals("")) {
+        if (!firstname.isEmpty() && lastname.isEmpty() && email.isEmpty()) {
             firstName.setText(firstname);
             lastName.setHint("last name");
             eMail.setHint("email");
         }
 
-        if (firstname.equals("") && !lastname.equals("") && email.equals("")) {
+        if (firstname.isEmpty() && !lastname.isEmpty() && email.isEmpty()) {
             firstName.setHint("firstname");
             lastName.setText(lastname);
             eMail.setHint("email");
@@ -310,20 +310,29 @@ public class LogInActivity extends Activity {
                 String backUpLastName = lastName.getText().toString();
                 String backUpEmail = eMail.getText().toString();
                 String backUpColor = myColor.getText().toString();
-
-                if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
-                    //ALERT MESSAGE
-                    Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
-                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail, backUpColor);
-
-
+                if (firstName.getText().toString().isEmpty() || lastName.getText().toString().isEmpty() || eMail.getText().toString().isEmpty() || myColor.getText().toString().isEmpty() || formDate.getText().toString().isEmpty()) {
+                    Toast.makeText(getBaseContext(), "some field was empty", Toast.LENGTH_LONG).show();
+                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
                 } else {
-                    //Cript the password
-                    passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                    //send data
-                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, statusUpdate);
-                    post.myPostCall(TypeCall.SIGN_UP, logInActivity);
-                    launchRingDialog();
+                    if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
+                        //ALERT MESSAGE
+                        Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
+                        alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
+
+
+                    } else {
+                        if (!password.getText().toString().isEmpty()) {
+                            //Cript the password
+                            passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                            //send data
+                            post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, statusUpdate);
+                            post.myPostCall(TypeCall.SIGN_UP, logInActivity);
+                            launchRingDialog();
+                        } else {
+                            Toast.makeText(getBaseContext(), "you must choose a password", Toast.LENGTH_LONG).show();
+                            alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
+                        }
+                    }
                 }
             }
         });
@@ -451,7 +460,7 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
-    private void updateEmailAlert(){
+    private void updateEmailAlert() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -463,8 +472,8 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                post=new PostCall(id_user,newValue.getText().toString(),statusUpdate,true);
-                post.myPostCall(TypeCall.UPDATE_MAIL,logInActivity);
+                post = new PostCall(id_user, newValue.getText().toString(), statusUpdate, true);
+                post.myPostCall(TypeCall.UPDATE_MAIL, logInActivity);
             }
         });
         alert.setNegativeButton("Cancel",
@@ -479,7 +488,7 @@ public class LogInActivity extends Activity {
 
     }
 
-    private void updateFirstnameAlert(){
+    private void updateFirstnameAlert() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -492,8 +501,8 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Integer i = new Integer(15);
-                post=new PostCall(i.toString(),newValue.getText().toString(),statusUpdate,true);
-                post.myPostCall(TypeCall.UPDATE_FIRSTNAME,logInActivity);
+                post = new PostCall(i.toString(), newValue.getText().toString(), statusUpdate, true);
+                post.myPostCall(TypeCall.UPDATE_FIRSTNAME, logInActivity);
             }
         });
         alert.setNegativeButton("Cancel",
@@ -508,7 +517,7 @@ public class LogInActivity extends Activity {
 
     }
 
-    private void updateLastnameAlert(){
+    private void updateLastnameAlert() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -522,8 +531,8 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                post=new PostCall(id_user,newValue.getText().toString(),statusUpdate,true);
-                post.myPostCall(TypeCall.UPDATE_LASTNAME,logInActivity);
+                post = new PostCall(id_user, newValue.getText().toString(), statusUpdate, true);
+                post.myPostCall(TypeCall.UPDATE_LASTNAME, logInActivity);
             }
         });
         alert.setNegativeButton("Cancel",
@@ -538,7 +547,7 @@ public class LogInActivity extends Activity {
 
     }
 
-    private void updateBirthdayAlert(){
+    private void updateBirthdayAlert() {
 
         final EditText formDate = new EditText(this);
         LinearLayout layout = new LinearLayout(this);
@@ -553,7 +562,6 @@ public class LogInActivity extends Activity {
         formDate.setHint("Birthday");
         alert.setTitle("Update");
         formDate.setInputType(0);
-
 
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH);
@@ -591,18 +599,18 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                    post= new PostCall(id_user,date.toString(),statusUpdate,true);
-                    post.myPostCall(TypeCall.UPDATE_BIRTHDAY,logInActivity);
+                post = new PostCall(id_user, date.toString(), statusUpdate, true);
+                post.myPostCall(TypeCall.UPDATE_BIRTHDAY, logInActivity);
             }
         });
         alert.show();
 
     }
 
-    private void updatePasswordAlert(){
+    private void updatePasswordAlert() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Update");
-        final EditText password= new EditText(this);
+        final EditText password = new EditText(this);
         final CheckBox check = new CheckBox(this);
         check.setText("show passord");
         password.setHint("new password");
@@ -610,11 +618,10 @@ public class LogInActivity extends Activity {
         check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
+                if (isChecked) {
 
                     password.setInputType(InputType.TYPE_TEXT_VARIATION_NORMAL);
-                }
-                else if(!isChecked){
+                } else if (!isChecked) {
                     password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
             }
@@ -629,7 +636,7 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 passwordToSend = PasswdManager.calculateHash(password.getText().toString());
-                post = new PostCall(id_user,passwordToSend, statusUpdate,true);
+                post = new PostCall(id_user, passwordToSend, statusUpdate, true);
                 post.myPostCall(TypeCall.UPDATE_PASSWORD, logInActivity);
 
             }
@@ -653,17 +660,16 @@ public class LogInActivity extends Activity {
                     id_user = token.nextToken("/");
                     doctor = token.nextToken("/");
 
-                    if(statusUpdate.getText().toString().equals("0")) {
-                       logInActivity.runOnUiThread(new Runnable() {
-                           @Override
-                           public void run() {
-                               updateEmailAlert();
-                           }
-                       });
+                    if (statusUpdate.getText().toString().equals("0")) {
+                        logInActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updateEmailAlert();
+                            }
+                        });
 
 
-                    }
-                    else if(statusUpdate.getText().toString().equals("1")) {
+                    } else if (statusUpdate.getText().toString().equals("1")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -673,7 +679,7 @@ public class LogInActivity extends Activity {
 
 
                     }
-                    if(statusUpdate.getText().toString().equals("2")) {
+                    if (statusUpdate.getText().toString().equals("2")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -682,16 +688,14 @@ public class LogInActivity extends Activity {
                         });
 
 
-                    }
-                    else if(statusUpdate.getText().toString().equals("3")){
+                    } else if (statusUpdate.getText().toString().equals("3")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 updateBirthdayAlert();
                             }
                         });
-                    }
-                    else if(statusUpdate.getText().toString().equals("4")){
+                    } else if (statusUpdate.getText().toString().equals("4")) {
                         logInActivity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

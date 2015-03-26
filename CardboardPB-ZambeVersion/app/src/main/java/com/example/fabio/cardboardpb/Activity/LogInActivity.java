@@ -20,12 +20,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
-
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Calendar;
@@ -35,23 +33,29 @@ import java.util.StringTokenizer;
 
 public class LogInActivity extends Activity {
 
-    private EditText email;
-    private EditText password;
-    private Button logIn;
-    private Button signUp;
+    private Activity logInActivity;//this activity
+
+    private EditText email;//email input field
+    private EditText password;//password input field
+
+    private Button logIn;//LOG IN button
+    private Button signUp;//SIGN UP button
+    private Button play;//PLAY WITHOUT REGISTRATION button
+
     private TextView status;
     private TextView statusUpdate;
-    private Button play;
-    private TextView forgot;
-    private TextView workWithUs;
-    private TextView updateData;
-    private String passwordToSend;
-    private CheckBox keepLog;
-    private PostCall post;
-    private Activity logInActivity;
-    private String id_user;
-    private String doctor;
-    private String date;
+    private TextView forgot;//"forgot you password?" lin
+    private TextView workWithUs;//"collaborate with us" link
+    private TextView updateData;//"update your info" link
+
+    private CheckBox keepLog;//checkbox keep me logged in
+
+    private PostCall post;//my PostCall object
+
+    private String id_user;// save the id_user from server
+    private String doctor;// doctor flag
+    private String date;//birthday
+    private String passwordToSend;// password to send to the server
     private int year, month, day;
 
 
@@ -182,13 +186,21 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                alertSignUp("", "", "");
+                alertSignUp("", "", "","","");
             }
         });
         alert.show();
     }
 
-    private void alertSignUp(String firstname, String lastname, final String email) {
+    /**
+     *
+     * @param firstname
+     * @param lastname
+     * @param email
+     * @param color
+     * @param birthday
+     */
+    private void alertSignUp(String firstname, String lastname, final String email,String color,String birthday) {
 
 
         final EditText firstName = new EditText(this);
@@ -205,49 +217,14 @@ public class LogInActivity extends Activity {
         formDate.setFocusable(false);
         alert.setMessage("SIGN UP");
 
-        if (firstname.isEmpty() && lastname.isEmpty() && email.isEmpty()) {
-            firstName.setHint("first name");
-            lastName.setHint("last name");
-            eMail.setHint("email");
-
-
-        }
-        if (firstname.isEmpty() && !lastname.isEmpty() && !email.isEmpty()) {
-            firstName.setHint("first name");
-            lastName.setText(lastname);
-            eMail.setText(email);
-        }
-        if (firstname.isEmpty() && lastname.isEmpty() && !email.isEmpty()) {
-            firstName.setHint("first name");
-            lastName.setHint("last name");
-            eMail.setText(email);
-        }
-        if (!firstname.isEmpty() && lastname.isEmpty() && !email.isEmpty()) {
-            firstName.setText(firstname);
-            lastName.setHint("last name");
-            eMail.setText(email);
-        }
-        if (!firstname.isEmpty() && !lastname.isEmpty() && email.isEmpty()) {
-            firstName.setText(firstname);
-            lastName.setText(lastname);
-            eMail.setHint("email");
-        }
-        if (!firstname.isEmpty() && lastname.isEmpty() && email.isEmpty()) {
-            firstName.setText(firstname);
-            lastName.setHint("last name");
-            eMail.setHint("email");
-        }
-
-        if (firstname.isEmpty() && !lastname.isEmpty() && email.isEmpty()) {
-            firstName.setHint("firstname");
-            lastName.setText(lastname);
-            eMail.setHint("email");
-        } else {
-            firstName.setText(firstname);
-            lastName.setText(lastname);
-            eMail.setText(email);
-        }
-
+        firstName.setText(firstname);
+        lastName.setText(lastname);
+        eMail.setText(email);
+        myColor.setText(color);
+        formDate.setText(birthday);
+        firstName.setHint("first name");
+        lastName.setHint("last name");
+        eMail.setHint("email");
         formDate.setHint("birthday");
         myColor.setHint("your favourite color");
         password.setHint("password");
@@ -256,7 +233,6 @@ public class LogInActivity extends Activity {
         confirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         formDate.setInputType(0);
         layout.setOrientation(LinearLayout.VERTICAL);
-
         layout.addView(firstName);
         layout.addView(lastName);
         layout.addView(eMail);
@@ -265,14 +241,11 @@ public class LogInActivity extends Activity {
         layout.addView(password);
         layout.addView(confirmPassword);
         alert.setView(layout);
-
         // Process to get Current Date
         final Calendar c = Calendar.getInstance();
-
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH);
         day = c.get(Calendar.DAY_OF_MONTH);
-
         final Date currentDate = new Date(year, month, day);
         // Launch Date Picker Dialog
         final DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
@@ -310,14 +283,15 @@ public class LogInActivity extends Activity {
                 String backUpLastName = lastName.getText().toString();
                 String backUpEmail = eMail.getText().toString();
                 String backUpColor = myColor.getText().toString();
+                String backUpDate= date;
                 if (firstName.getText().toString().isEmpty() || lastName.getText().toString().isEmpty() || eMail.getText().toString().isEmpty() || myColor.getText().toString().isEmpty() || formDate.getText().toString().isEmpty()) {
                     Toast.makeText(getBaseContext(), "some field was empty", Toast.LENGTH_LONG).show();
-                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
+                    alertSignUp(backUpFirstName, backUpLastName, backUpEmail,backUpColor,backUpDate);
                 } else {
                     if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                         //ALERT MESSAGE
                         Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();
-                        alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
+                        alertSignUp(backUpFirstName, backUpLastName, backUpEmail,backUpColor,backUpDate);
 
 
                     } else {
@@ -330,7 +304,7 @@ public class LogInActivity extends Activity {
                             launchRingDialog();
                         } else {
                             Toast.makeText(getBaseContext(), "you must choose a password", Toast.LENGTH_LONG).show();
-                            alertSignUp(backUpFirstName, backUpLastName, backUpEmail);
+                            alertSignUp(backUpFirstName, backUpLastName, backUpEmail,backUpColor,backUpDate);
                         }
                     }
                 }

@@ -4,18 +4,14 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.InputType;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -24,12 +20,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
-
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Calendar;
@@ -57,6 +51,7 @@ public class LogInActivity extends Activity {
     private String doctor;
     private String date;
     private int year, month, day;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,7 +172,7 @@ public class LogInActivity extends Activity {
 
     }
 
-    
+
 
     private void signUpWarning() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -209,10 +204,12 @@ public class LogInActivity extends Activity {
         formDate.setFocusable(false);
         alert.setMessage("SIGN UP");
 
-        if (firstname.equals("") && lastname.equals("") && email.equals("")) {
+        if (firstname.equals("") && lastname.equals("") && email.equals("") && color.equals("") && date.equals("")) {
             firstName.setHint("first name");
             lastName.setHint("last name");
             eMail.setHint("email");
+            myColor.setHint("your favourite color");
+            formDate.setHint("birthday");
 
         }
         if (firstname.equals("") && !lastname.equals("") && !email.equals("")) {
@@ -313,6 +310,7 @@ public class LogInActivity extends Activity {
                 String backUpLastName = lastName.getText().toString();
                 String backUpEmail = eMail.getText().toString();
                 String backUpColor = myColor.getText().toString();
+
                 if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
                     //ALERT MESSAGE
                     Toast.makeText(getBaseContext(), "Please insert the same password", Toast.LENGTH_LONG).show();

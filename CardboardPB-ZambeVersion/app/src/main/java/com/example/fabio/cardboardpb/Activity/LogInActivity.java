@@ -24,6 +24,9 @@ import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
+
+import org.w3c.dom.Text;
+
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Calendar;
@@ -44,7 +47,8 @@ public class LogInActivity extends Activity {
 
     private TextView status;
     private TextView statusUpdate;
-    private TextView forgot;//"forgot you password?" lin
+    private TextView help;//describe our app
+    private TextView forgot;//"forgot you password?" link
     private TextView workWithUs;//"collaborate with us" link
     private TextView updateData;//"update your info" link
 
@@ -74,6 +78,8 @@ public class LogInActivity extends Activity {
         signUp = (Button) findViewById(R.id.textViewSignUp);
         keepLog = (CheckBox) findViewById(R.id.checkBox);
         workWithUs = (TextView) findViewById(R.id.workWithUs);
+        help= (TextView) findViewById(R.id.help);
+        help.setText("?");
         workWithUs.setPaintFlags(workWithUs.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         updateData = (TextView) findViewById(R.id.updateInfo);
         updateData.setPaintFlags(updateData.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
@@ -85,8 +91,8 @@ public class LogInActivity extends Activity {
         statusUpdate = (TextView) findViewById(R.id.statusUpdate);
         SharedPreferences settings1;
 
-        //status.setAlpha(0);
-        //statusUpdate.setAlpha(0);
+        status.setAlpha(0);
+        statusUpdate.setAlpha(0);
 
         keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -173,6 +179,13 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(View v) {
                 updateInfoAlert();
+            }
+        });
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                helpAlert();
             }
         });
 
@@ -749,6 +762,19 @@ public class LogInActivity extends Activity {
         alert.show();
     }
 
+    private void helpAlert() {
+
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("this application goal: the player see only one part of the scene with the normal eye, while the amblyopic eye sees all the details."+'\n'+ "If you are interested to trace your child improvement, SIGNU UP! and after every game we show you your progress."+'\n'+"you can also play without registration, but we can't trace your improvement. +'\n"+ "GAME USAGE:"+'\n'+"after this screen, put your smartphone into your cardboard or VR visor, and connect a pair of earphone with +,- and confirm keys");
+        alert.setTitle("HELP");
+        alert.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.show();
+    }
     private String generateRandom() {
         SecureRandom random = new SecureRandom();
         return new BigInteger(40, random).toString(32);

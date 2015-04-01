@@ -728,14 +728,14 @@ public class LogInActivity extends Activity {
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children." + '\n' + '\n' +
-                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3d4amb staff " + '\n' + '\n' + "3D4AmbUnibg@gmail.com" + '\n' + '\n' + "http://3d4amb.unibg.it");
+                "if you are a Doctor and you want to collaborate with us, send a mail, just click ok here " + '\n' + "Best regards," + '\n' + '\n' + "3D4Amb staff " + '\n' + '\n' + "3D4AmbUnibg@gmail.com" + '\n' + '\n' + "http://3d4amb.unibg.it");
         alert.setTitle("COLLABORATE WITH US");
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"3D4AmbUnibg@gmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"3d4ambunibg@gmail.com"});
                 i.putExtra(Intent.EXTRA_SUBJECT, "3d4amb DOCTOR COLLABORATION");
                 i.putExtra(Intent.EXTRA_TEXT, "");
                 try {

@@ -117,15 +117,10 @@ public class DoctorActivity extends Activity {
             @Override
             public void run() {
                 try {
-                    // Here you should write your time consuming task...
-                    // Let the progress ring for 10 seconds...
+
 
                     Thread.sleep(2000);
-                   /* StringTokenizer token= new StringTokenizer(status.getText().toString());
-                    token.nextToken("/");
-                    id_user=token.nextToken("/");
-                    doctor=token.nextToken("/");
-*/                    //status.setText(id_user+" "+doctor);
+
                     if(true){
                         Intent i = new Intent(DoctorActivity.this, SplashActivity.class);
                         i.putExtra("id_doctor", id_doctor);

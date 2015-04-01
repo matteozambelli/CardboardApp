@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
-        android:background="@drawable/prova4"
+        android:background="@drawable/sfondo1"
         android:rotation="180"
         >
 
@@ -30,7 +30,7 @@
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
-        android:background="@drawable/prova4"
+        android:background="@drawable/sfondo1"
         android:rotation="180"
         >
 

@@ -5,8 +5,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.PixelFormat;
+import android.view.Gravity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.example.fabio.cardboardpb.R;
 
@@ -55,9 +58,8 @@ public class AnimationBackgroundView extends SurfaceView {
 
 
     private void createSprite() {
-        Bitmap bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.background_car1_ridotta);
-        spriteBackground = new Sprite(this,bmpBackground,3);
-
+        Bitmap bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.sfondo8);
+        spriteBackground = new Sprite(this,bmpBackground,1);
     }
 
 

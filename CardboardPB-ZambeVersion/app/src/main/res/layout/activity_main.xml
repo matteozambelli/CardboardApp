@@ -56,7 +56,6 @@
             android:layout_height="35dp"
             android:id="@+id/target1"
             android:layout_marginTop="127dp"
-            android:src="@drawable/target"
             android:layout_marginRight="40dp"
             android:layout_alignRight="@+id/target2"
             />
@@ -66,7 +65,6 @@
             android:layout_height="35dp"
             android:id="@+id/target3"
             android:layout_marginTop="127dp"
-            android:src="@drawable/target"
             android:layout_marginLeft="40dp"
             android:layout_alignLeft="@+id/target2"/>
 
@@ -75,7 +73,6 @@
             android:layout_height="55dp"
             android:id="@+id/target2"
             android:layout_marginTop="118dp"
-            android:src="@drawable/target"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -90,7 +87,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageViewBackgroundBlackLeft"
-            android:src="@drawable/background_black"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
@@ -99,7 +95,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textViewLifeLeft"
             android:text="LIFE: "
-            android:layout_marginTop="235dp"
+            android:layout_marginTop="255dp"
             android:layout_marginLeft="40dp"
             android:background="#4e5154"
             android:padding="5dp"/>
@@ -270,7 +266,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageViewBackgroundBlackRight"
-            android:src="@drawable/background_black"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
@@ -279,7 +274,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textViewLifeRight"
             android:text="LIFE: "
-            android:layout_marginTop="235dp"
+            android:layout_marginTop="255dp"
             android:layout_marginLeft="40dp"
             android:background="#4e5154"
             android:padding="5dp"/>

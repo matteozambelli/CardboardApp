@@ -90,19 +90,15 @@ public class DoctorActivity extends Activity {
                 dpd.show();
             }
         });
-        date=day+"/"+month+"/"+year;
+
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),date,id_doctor);
+                post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),id_doctor,date,status,true);
                 post.myPostCall(TypeCall.DOCTORCALL,doctorActivity);
                 launchRingDialog();
-                Intent i = new Intent(DoctorActivity.this, DoctorActivity.class);
-                i.putExtra("id_doctor", id_doctor);
-                startActivity(i);
-                // close this activity
-                finish();
+
             }
         });
 
@@ -121,10 +117,10 @@ public class DoctorActivity extends Activity {
 
                     Thread.sleep(2000);
 
-                    if(true){
+                    if(status.getText().toString().contains("patientInsertSuccessfully")){
                         Intent i = new Intent(DoctorActivity.this, SplashActivity.class);
                         i.putExtra("id_doctor", id_doctor);
-                        i.putExtra("id_user", 2);
+                        //i.putExtra("id_user", "2");
                         startActivity(i);
                     }
                 } catch (Exception e) {

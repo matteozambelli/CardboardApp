@@ -121,11 +121,12 @@ public class PostCall {
      * @param id_doctor
      * @param birthday
      */
-    public PostCall(String firstName, String lastName, String id_doctor, String birthday) {
+    public PostCall(String firstName, String lastName, String id_doctor, String birthday,TextView status, boolean doctorActivity) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id_doctor = id_doctor;
         this.birthday = birthday;
+        this.status=status;
     }
 
     /**

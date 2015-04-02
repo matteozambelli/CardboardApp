@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
@@ -65,13 +66,28 @@ public class AnimationBackgroundView extends SurfaceView {
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private void createSprite() {
-        Bitmap bmpBackground = BitmapFactory.decodeResource(getResources(), R.drawable.cartoonbackground1);
-        //bmpBackground.getConfig();
-        //mutableBitmap.reconfigure(400,400, mutableBitmap.getConfig());
-        //ByteArrayOutputStream out = new ByteArrayOutputStream();
-        //bmpBackground.compress(Bitmap.CompressFormat.PNG,100,out);
-        //Bitmap decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(out.toByteArray()));
-        spriteBackground = new Sprite(this,bmpBackground,1);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inMutable=true;
+        options.inScaled=true;
+        //this is the file going to use temporally to save the bytes.
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cartoonprova,options);
+        Bitmap rbitmap = getResizedBitmap(bitmap,700,700);
+        spriteBackground = new Sprite(this,rbitmap,1);
+    }
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth)
+    {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // create a matrix for the manipulation
+        Matrix matrix = new Matrix();
+        // resize the bit map
+        matrix.postScale(scaleWidth, scaleHeight);
+        // recreate the new Bitmap
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
+        return resizedBitmap;
     }
 
 

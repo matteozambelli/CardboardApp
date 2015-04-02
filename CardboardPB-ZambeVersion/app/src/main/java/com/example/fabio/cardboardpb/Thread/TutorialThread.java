@@ -45,7 +45,7 @@ public class TutorialThread extends  Thread {
             @Override
             public void run() {
 
-                text.setText("+ key move to right"+'\n'+"- key move to left");
+                text.setText("+ key move to left"+'\n'+"- key move to right");
 
             }
         });

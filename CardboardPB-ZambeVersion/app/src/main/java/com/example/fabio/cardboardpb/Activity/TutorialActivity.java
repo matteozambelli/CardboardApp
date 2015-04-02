@@ -19,7 +19,7 @@ public class TutorialActivity extends ActionBarActivity {
 
     private CheckBox checkBox;
     private TextView text;
-    private SharedPreferences settings1;
+
     private String id_user;
     private TutorialThread thread;
 
@@ -39,11 +39,12 @@ public class TutorialActivity extends ActionBarActivity {
         checkBox.setTypeface(font);
         text.setTextSize(40);
 
+
         thread= new TutorialThread(this,text,id_user);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SharedPreferences settings = getSharedPreferences("TUTORIAL", 0);
+                SharedPreferences settings = getSharedPreferences("TUTORIAL", 1);
                 SharedPreferences.Editor editor = settings.edit();
                 if(isChecked){
                     editor.putBoolean("isCheck",true);
@@ -54,14 +55,7 @@ public class TutorialActivity extends ActionBarActivity {
 
             }
         });
-        if (getSharedPreferences("LOG_IN", 0) != null) {
-            settings1 = getSharedPreferences("LOG_IN", 0);
-            if (settings1.getBoolean("isCheck", false)) {
-                Intent i = new Intent(TutorialActivity.this, SplashActivity.class);
-                i.putExtra("id_user", id_user);
-                startActivity(i);
-            }
-        }
+
 
 
         thread.start();

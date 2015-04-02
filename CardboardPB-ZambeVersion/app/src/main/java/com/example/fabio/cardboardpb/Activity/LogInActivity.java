@@ -100,7 +100,7 @@ public class LogInActivity extends Activity {
         keepLog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SharedPreferences settings = getSharedPreferences("LOG_IN", 0);
+                SharedPreferences settings = getSharedPreferences("LOG_IN",0 );
                 SharedPreferences.Editor editor = settings.edit();
                 if (isChecked) {
                     editor.putString("email", email.getText().toString());
@@ -725,9 +725,19 @@ public class LogInActivity extends Activity {
                         // close this activity
                         finish();
                     } else if (status.getText().toString().contains("connection")) {
-                        Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
-                        i.putExtra("id_user", id_user);
-                        startActivity(i);
+                        if (getSharedPreferences("TUTORIAL", 1) != null) {
+                            SharedPreferences settings1 = getSharedPreferences("TUTORIAL", 1);
+                            if (settings1.getBoolean("isCheck", false)) {
+                                Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                                i.putExtra("id_user", id_user);
+                                startActivity(i);
+                            }
+                        }
+
+                            Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
+                            i.putExtra("id_user", id_user);
+                            startActivity(i);
+
                         // close this activity
                         finish();
                     }

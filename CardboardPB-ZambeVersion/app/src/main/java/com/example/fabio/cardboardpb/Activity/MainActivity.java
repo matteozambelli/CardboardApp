@@ -22,6 +22,8 @@ import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends Activity {
 
@@ -50,12 +52,14 @@ public class MainActivity extends Activity {
     private ImageView carRight;
 
     //Enemies
-    private ImageView enemyLeftLane1Id0,enemyLeftLane1Id1;
-    private ImageView enemyRightLane1Id0;
-    private ImageView enemyLeftLane2Id0,enemyLeftLane2Id1;
-    private ImageView enemyRightLane2Id0;
-    private ImageView enemyLeftLane3Id0,enemyLeftLane3Id1;
-    private ImageView enemyRightLane3Id0;
+
+    private ArrayList<ImageView> enemyLeftLane1= new ArrayList<ImageView>();
+    private ArrayList<ImageView> enemyLeftLane2= new ArrayList<ImageView>();
+    private ArrayList<ImageView> enemyLeftLane3= new ArrayList<ImageView>();
+    private ArrayList<ImageView> enemyRightLane1= new ArrayList<ImageView>();
+    private ArrayList<ImageView> enemyRightLane2= new ArrayList<ImageView>();
+    private ArrayList<ImageView> enemyRightLane3= new ArrayList<ImageView>();
+
     private ImageView target1;
     private ImageView target2;
     private ImageView target3;
@@ -113,17 +117,21 @@ public class MainActivity extends Activity {
 
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
-        enemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
-        enemyLeftLane1Id1=(ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id1);
-        enemyRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
 
-        enemyLeftLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0);
-        enemyLeftLane2Id1 =(ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id1);
-        enemyRightLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0);
+        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0));
+        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id1));
+        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0));
+        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id1));
 
-        enemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
-        enemyLeftLane3Id1= (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id1);
-        enemyRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
+        enemyLeftLane2.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0));
+        enemyLeftLane2.add( (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id1));
+        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0));
+        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id1));
+
+        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0));
+        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id1));
+        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0));
+        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id1));
 
         textLevelLeft=(TextView) findViewById(R.id.textViewLevelLeft);
         textLifeLeft = (TextView)findViewById(R.id.textViewLifeLeft);
@@ -160,8 +168,8 @@ public class MainActivity extends Activity {
 
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,
-                enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
-                enemyRightLane2Id0,enemyRightLane3Id0,enemyLeftLane1Id1,enemyLeftLane2Id1,enemyLeftLane3Id1,target1,target2,target3,globalData,eye,
+                enemyLeftLane1,enemyLeftLane2,enemyLeftLane3,enemyRightLane1,
+                enemyRightLane2,enemyRightLane3,target1,target2,target3,globalData,eye,
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
         gameThread.start();
@@ -249,8 +257,8 @@ public class MainActivity extends Activity {
         if(globalData.getLife()>0){
         if (globalData.getAbsolutePosition()> 1) {
             globalData.decreaseAbosolutePosition();
-            leftCarPosition -= width*0.13;
-            rightCarPosition -= width*0.13;
+            leftCarPosition -= width*0.2;
+            rightCarPosition -= width*0.2;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
         } else {
@@ -294,8 +302,8 @@ public class MainActivity extends Activity {
         if(globalData.isRunnable()){
         if (globalData.getAbsolutePosition() < 3) {
             globalData.increaseAbosolutePosition();
-            leftCarPosition += width*0.13;
-            rightCarPosition += width*0.13;
+            leftCarPosition += width*0.2;
+            rightCarPosition += width*0.2;
             carLeft.setTranslationX(leftCarPosition);
             carRight.setTranslationX(rightCarPosition);
         } else {

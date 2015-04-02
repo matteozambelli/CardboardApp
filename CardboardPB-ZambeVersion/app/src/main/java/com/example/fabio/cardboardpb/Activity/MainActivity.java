@@ -50,11 +50,11 @@ public class MainActivity extends Activity {
     private ImageView carRight;
 
     //Enemies
-    private ImageView enemyLeftLane1Id0;
+    private ImageView enemyLeftLane1Id0,enemyLeftLane1Id1;
     private ImageView enemyRightLane1Id0;
-    private ImageView enemyLeftLane2Id0;
+    private ImageView enemyLeftLane2Id0,enemyLeftLane2Id1;
     private ImageView enemyRightLane2Id0;
-    private ImageView enemyLeftLane3Id0;
+    private ImageView enemyLeftLane3Id0,enemyLeftLane3Id1;
     private ImageView enemyRightLane3Id0;
     private ImageView target1;
     private ImageView target2;
@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
     private TextView textLifeRight;
     private TextView textPointsRight;
 
-    private String id_user;
+    private String id_user, id_doctor;
 
     private int leftCarPosition;
     private int rightCarPosition;
@@ -107,17 +107,22 @@ public class MainActivity extends Activity {
 
         id_user=(String) intent.getSerializableExtra("id_user");
 
+        id_doctor=(String) intent.getSerializableExtra("id_doctor");
+
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
 
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
         enemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
+        enemyLeftLane1Id1=(ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id1);
         enemyRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
 
         enemyLeftLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0);
+        enemyLeftLane2Id1 =(ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id1);
         enemyRightLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0);
 
         enemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
+        enemyLeftLane3Id1= (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id1);
         enemyRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
 
         textLevelLeft=(TextView) findViewById(R.id.textViewLevelLeft);
@@ -156,8 +161,8 @@ public class MainActivity extends Activity {
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1Id0,enemyLeftLane2Id0,enemyLeftLane3Id0,enemyRightLane1Id0,
-                enemyRightLane2Id0,enemyRightLane3Id0,target1,target2,target3,globalData,eye,
-                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height, running,id_user);
+                enemyRightLane2Id0,enemyRightLane3Id0,enemyLeftLane1Id1,enemyLeftLane2Id1,enemyLeftLane3Id1,target1,target2,target3,globalData,eye,
+                relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
         gameThread.start();
 

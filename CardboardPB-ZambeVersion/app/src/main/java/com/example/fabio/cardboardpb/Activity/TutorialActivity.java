@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -33,6 +34,11 @@ public class TutorialActivity extends ActionBarActivity {
         checkBox= (CheckBox) findViewById(R.id.dont_show);
         text= (TextView) findViewById(R.id.textView);
         text.setTypeface(font);
+        text.setGravity(View.TEXT_ALIGNMENT_CENTER);
+
+        checkBox.setTypeface(font);
+        text.setTextSize(40);
+
         thread= new TutorialThread(this,text,id_user);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

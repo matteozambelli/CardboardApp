@@ -15,6 +15,7 @@ public class TutorialThread extends  Thread {
     private TextView text;
     private Activity activity;
     private String id_user;
+    private int pause=3000;
 
 
     public TutorialThread(Activity activity,TextView text,String id_user){
@@ -30,13 +31,13 @@ public class TutorialThread extends  Thread {
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                text.setText("Pick up your phone and connect to the earphones (with volume control keys)");
+                text.setText("Pick up your phone and connect to the earphones" +'\n'+"(with volume control keys)");
 
 
             }
         });
         try {
-            Thread.sleep(2000);
+            Thread.sleep(pause);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -49,7 +50,7 @@ public class TutorialThread extends  Thread {
             }
         });
         try {
-            Thread.sleep(2000);
+            Thread.sleep(pause);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -62,7 +63,7 @@ public class TutorialThread extends  Thread {
             }
         });
         try {
-            Thread.sleep(2000);
+            Thread.sleep(pause);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -74,7 +75,7 @@ public class TutorialThread extends  Thread {
             }
         });
         try {
-            Thread.sleep(2000);
+            Thread.sleep(pause);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -82,11 +83,11 @@ public class TutorialThread extends  Thread {
             @Override
             public void run() {
 
-                text.setText("Enjoy");
+                text.setText("ENJOY");
             }
         });
         try {
-            Thread.sleep(2000);
+            Thread.sleep(pause);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

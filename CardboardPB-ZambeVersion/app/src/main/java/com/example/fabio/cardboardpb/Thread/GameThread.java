@@ -33,6 +33,9 @@ public class GameThread extends Thread{
     private ImageView enemyLeftLane1Id0;
     private ImageView enemyLeftLane2Id0;
     private ImageView enemyLeftLane3Id0;
+    private ImageView enemyLeftLane1Id1;
+    private ImageView enemyLeftLane2Id1;
+    private ImageView enemyLeftLane3Id1;
     private ImageView enemyRightLane1Id0;
     private ImageView enemyRightLane2Id0;
     private ImageView enemyRightLane3Id0;
@@ -70,6 +73,7 @@ public class GameThread extends Thread{
     private int displayWidth;
     private int displayHeight;
     private String id_user;
+
     //private Toast toastLifeLeft;
     //private Toast toastLifeRight;
 
@@ -99,9 +103,9 @@ public class GameThread extends Thread{
      */
     public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tScoreLeft,
                       TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ImageView i1, ImageView i2, ImageView i3,
-                      ImageView i4, ImageView i5, ImageView i6, ImageView target1, ImageView target2, ImageView target3,
+                      ImageView i4, ImageView i5, ImageView i6,ImageView i7,ImageView i8,ImageView i9, ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
-                      int width, int height,boolean running,String id_user) {
+                      int width, int height,String id_user) {
         this.activity=activity;
         relativeLayoutLeft=(RelativeLayout)activity.findViewById(R.id.relativeLayoutLeft);
         relativeLayoutRight=(RelativeLayout)activity.findViewById(R.id.relativeLayoutRight);
@@ -134,12 +138,18 @@ public class GameThread extends Thread{
         enemyLeftLane1Id0=i1;
         enemyLeftLane2Id0=i2;
         enemyLeftLane3Id0=i3;
+        enemyLeftLane1Id1=i7;
+        enemyLeftLane2Id1=i8;
+        enemyLeftLane3Id1=i9;
         enemyRightLane1Id0=i4;
         enemyRightLane2Id0=i5;
         enemyRightLane3Id0=i6;
         animationEnemies.hideImage(enemyLeftLane1Id0);
         animationEnemies.hideImage(enemyLeftLane2Id0);
         animationEnemies.hideImage(enemyLeftLane3Id0);
+        animationEnemies.hideImage(enemyLeftLane1Id1);
+        animationEnemies.hideImage(enemyLeftLane2Id1);
+        animationEnemies.hideImage(enemyLeftLane3Id1);
         animationEnemies.hideImage(enemyRightLane1Id0);
         animationEnemies.hideImage(enemyRightLane2Id0);
         animationEnemies.hideImage(enemyRightLane3Id0);
@@ -152,6 +162,7 @@ public class GameThread extends Thread{
                 enemyRightLane1Id0, enemyRightLane2Id0,  enemyRightLane3Id0, globalData);
         this.eye=eye;
         this.id_user=id_user;
+
     }
 
     @Override
@@ -173,7 +184,7 @@ public class GameThread extends Thread{
                         postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user);
                         postCall.myPostCall(TypeCall.REPORT,activity);
                         globalData.setRunnable(false);
-                        //todo PREMI PLAY PER INSERIRE NOME, UP PER RIGIOCARE
+                        //todo , HOME PER RIGIOCARE
 
                         gameOver=true;
 
@@ -218,8 +229,15 @@ public class GameThread extends Thread{
                         //onAnimationTimer();
 
                         if (pick == 1) {
-                            animationEnemies.showImage(enemyLeftLane1Id0);
-                            animationEnemies.showImage(enemyRightLane1Id0);
+                            if(gameManager.getIdEnemy().get(i).getNumberOfCar()==1){
+                                animationEnemies.showImage(enemyLeftLane1Id0);
+                                animationEnemies.showImage(enemyRightLane1Id0);
+                            }
+                            if(gameManager.getIdEnemy().get(i).getNumberOfCar()==2){
+                                animationEnemies.showImage(enemyLeftLane1Id1);
+                                //animationEnemies.showImage(enemyRightLane1Id1);
+                            }
+
                             onAnimationTimer();
                             animationTarget.animateTarget1(target1, displayWidth, displayHeight);
                             animationEnemies.animateFrontCarLane1(enemyLeftLane1Id0, enemyRightLane1Id0,

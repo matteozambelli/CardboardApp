@@ -25,14 +25,14 @@
             </RelativeLayout>
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:id="@+id/imageViewEnemyLeftLane1Id0"
-            android:layout_marginTop="127dp"
-            android:src="@drawable/prova_rid"
-            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginRight="45dp"
-           />
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageViewEnemyLeftLane1Id0"
+        android:layout_marginTop="127dp"
+        android:src="@drawable/prova_rid"
+        android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+        android:layout_marginRight="45dp"
+        />
 
         <ImageView
             android:layout_width="35dp"
@@ -54,6 +54,42 @@
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane1Id1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/lamborghini_left"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginRight="45dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/ferrari"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="45dp"/>
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/lamborghini_right"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/car_front_rid"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/target1"
             android:layout_marginTop="127dp"
             android:layout_marginRight="40dp"
@@ -65,8 +101,8 @@
             android:layout_height="35dp"
             android:id="@+id/target3"
             android:layout_marginTop="127dp"
-            android:layout_marginLeft="40dp"
-            android:layout_alignLeft="@+id/target2"/>
+          android:layout_marginLeft="100dp"
+           />
 
         <ImageView
             android:layout_width="55dp"
@@ -80,8 +116,8 @@
             android:layout_height="70dp"
             android:id="@+id/imageViewMyCarLeft"
             android:layout_marginTop="176dp"
-            android:layout_marginLeft="100dp"
-            android:src="@drawable/wheel" />
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -259,8 +295,8 @@
             android:layout_height="70dp"
             android:id="@+id/imageViewMyCarRight"
             android:layout_marginTop="172dp"
-            android:layout_marginLeft="100dp"
-            android:src="@drawable/wheel" />
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
 
         <ImageView
             android:layout_width="wrap_content"

@@ -6,7 +6,7 @@ package com.example.fabio.cardboardpb.Manager;
 public class EnemiesManager implements EnemiesManagerInterface{
 
     private final int lane=3;  //we have 3 lane
-    private final int numberOfCar=10; //we have 10 different picture of car
+    private final int numberOfCar=2; //we have 10 different picture of car
 
     private int selectedLane; //what's the selected lane
     private int selectedCar; //what's the enemy

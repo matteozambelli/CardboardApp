@@ -33,6 +33,7 @@ public class DoctorActivity extends Activity {
     private Button start;
     private Activity doctorActivity;
     private int year, month, day;
+    private String monthString, dayString;
     private String id_doctor, date;
     private PostCall post;
 
@@ -76,12 +77,24 @@ public class DoctorActivity extends Activity {
 
                 } else {
                     birthday.setText(day + "/" + month + "/" + year);
-                    date = year + "-" + month + "-" + day;
+                    monthString=new Integer(month).toString();
+                    dayString=new Integer(day).toString();
+
+                    if(month<10){
+                        monthString="0"+month;
+                    }
+                    if(day<10){
+                        dayString="0"+day;
+                    }
+                    date = year + "-" + monthString + "-" + dayString;
+                    status.setText(date);
                 }
             }
 
         }
                 , year, month, day);
+
+
 
         birthday.setInputType(0);
         birthday.setOnClickListener(new View.OnClickListener() {
@@ -117,12 +130,12 @@ public class DoctorActivity extends Activity {
 
                     Thread.sleep(2000);
 
-                    if(status.getText().toString().contains("patientInsertSuccessfully")){
+
                         Intent i = new Intent(DoctorActivity.this, SplashActivity.class);
                         i.putExtra("id_doctor", id_doctor);
-                        //i.putExtra("id_user", "2");
+                        i.putExtra("id_user", status.getText().toString());
                         startActivity(i);
-                    }
+
                 } catch (Exception e) {
                 }
                 ringProgressDialog.dismiss();

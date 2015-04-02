@@ -20,11 +20,13 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.crashlytics.android.Crashlytics;
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.PasswdManager;
 import com.example.fabio.cardboardpb.R;
 
+import io.fabric.sdk.android.Fabric;
 import org.w3c.dom.Text;
 
 import java.math.BigInteger;
@@ -66,6 +68,7 @@ public class LogInActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         //Remove title bar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_log_in);

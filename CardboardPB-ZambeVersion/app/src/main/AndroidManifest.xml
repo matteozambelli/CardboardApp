@@ -59,6 +59,9 @@
             android:label="@string/title_activity_doctor" >
 
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="67c0f32681e9c97e82dc5d151b08ad96b09e75ca" />
     </application>
 
 </manifest>

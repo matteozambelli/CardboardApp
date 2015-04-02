@@ -27,12 +27,13 @@ public class TutorialActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
         Typeface font = Typeface.createFromAsset(getAssets(), "orange juice 2.0.ttf");
-      //  text.setTypeface(font);
+
         Intent intent=getIntent();
         id_user=(String) intent.getSerializableExtra("id_user");
         checkBox= (CheckBox) findViewById(R.id.dont_show);
         text= (TextView) findViewById(R.id.textView);
-        thread= new TutorialThread(this,text);
+        text.setTypeface(font);
+        thread= new TutorialThread(this,text,id_user);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -59,9 +60,7 @@ public class TutorialActivity extends ActionBarActivity {
 
         thread.start();
 
-        Intent i = new Intent(TutorialActivity.this, SplashActivity.class);
-        i.putExtra("id_user", id_user);
-        startActivity(i);
+
 
 
 

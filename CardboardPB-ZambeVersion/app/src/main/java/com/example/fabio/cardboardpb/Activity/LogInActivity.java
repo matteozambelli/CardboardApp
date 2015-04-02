@@ -725,7 +725,7 @@ public class LogInActivity extends Activity {
                         // close this activity
                         finish();
                     } else if (status.getText().toString().contains("connection")) {
-                        Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                        Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
                         i.putExtra("id_user", id_user);
                         startActivity(i);
                         // close this activity

@@ -1,22 +1,21 @@
 package com.example.fabio.cardboardpb.Activity;
 
 import android.content.Intent;
-import android.graphics.Color;
+
 import android.graphics.Typeface;
-import android.media.Image;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
+
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Exception.MyException;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
-import com.example.fabio.cardboardpb.Manager.Enum.Language;
-import com.example.fabio.cardboardpb.Manager.LanguageManager;
+
 import com.example.fabio.cardboardpb.R;
 
 
@@ -24,9 +23,9 @@ public class SettingsActivity extends ActionBarActivity {
 
 
     private String id_user;
-    private LanguageManager languageManager;
+
     private Eye eye= Eye.LEFT_EYE;
-    private Language language=Language.ENGLISH;
+
     private TextView textEyeLeft,textEyeRight,textSelectLeft,textSelectRight,textStartLeft,textStartRight;
 
     @Override
@@ -42,36 +41,36 @@ public class SettingsActivity extends ActionBarActivity {
 
         Intent intent=getIntent();
         Bundle data = getIntent().getExtras();
-        language=(Language) intent.getSerializableExtra("language");
+
 
         id_user=(String) intent.getSerializableExtra("id_user");
-        languageManager=new LanguageManager(language);
-        languageManager.suitable();
+
+
 
         textEyeLeft=(TextView) findViewById(R.id.textViewEye1);
-        textEyeLeft.setText(languageManager.getEyeLeft());
+        textEyeLeft.setText("Left");
         textEyeLeft.setTypeface(font);
 
         textEyeRight=(TextView) findViewById(R.id.textViewEye2);
-        textEyeRight.setText(languageManager.getEyeLeft());
+        textEyeRight.setText("Left");
         textEyeRight.setTypeface(font);
 
         textStartLeft=(TextView) findViewById(R.id.textSettingsStart1);
-        textStartLeft.setText(languageManager.getSettingsStart());
+        textStartLeft.setText("PRESS HOME TO START");
         textStartLeft.setTextSize(16);
         textStartLeft.setTypeface(font);
 
         textStartRight=(TextView) findViewById(R.id.textSettingsStart2);
-        textStartRight.setText(languageManager.getSettingsStart());
+        textStartRight.setText("PRESS HOME TO START");
         textStartRight.setTextSize(16);
         textStartRight.setTypeface(font);
 
         textSelectLeft=(TextView) findViewById(R.id.textViewSelectEyeLeft);
-        textSelectLeft.setText(languageManager.getSettingsTitle());
+        textSelectLeft.setText("SELECT THE EYE");
         textSelectLeft.setTypeface(font);
 
         textSelectRight=(TextView) findViewById(R.id.textViewSelectEyeRight);
-        textSelectRight.setText(languageManager.getSettingsTitle());
+        textSelectRight.setText("SELECT THE EYE");
         textSelectRight.setTypeface(font);
 
     }
@@ -144,7 +143,7 @@ public class SettingsActivity extends ActionBarActivity {
 
         Intent startGame = new Intent(SettingsActivity.this, MainActivity.class);
         startGame.putExtra("eye", eye);
-        startGame.putExtra("language", language);
+
         startGame.putExtra("id_user",id_user);
         startActivity(startGame);
 
@@ -167,13 +166,13 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     private void changeEye(){
-        if(textEyeLeft.getText().equals(languageManager.getEyeLeft())){
-            textEyeLeft.setText(languageManager.getEyeRight());
-            textEyeRight.setText(languageManager.getEyeRight());
+        if(textEyeLeft.getText().equals("Left")){
+            textEyeLeft.setText("Right");
+            textEyeRight.setText("Right");
             eye=Eye.RIGHT_EYE;
-        }else if(textEyeLeft.getText().equals(languageManager.getEyeRight())){
-            textEyeLeft.setText(languageManager.getEyeLeft());
-            textEyeRight.setText(languageManager.getEyeLeft());
+        }else if(textEyeLeft.getText().equals("Right")){
+            textEyeLeft.setText("Left");
+            textEyeRight.setText("Left");
             eye=Eye.LEFT_EYE;
         }else{
             try {

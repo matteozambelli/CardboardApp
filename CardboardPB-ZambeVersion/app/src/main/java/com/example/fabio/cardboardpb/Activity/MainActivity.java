@@ -16,8 +16,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
-import com.example.fabio.cardboardpb.Manager.Enum.Language;
-import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
@@ -31,7 +29,7 @@ public class MainActivity extends Activity {
     private int height;
     private static MainActivity instance;
     private Eye eye;
-    private Language language;
+
     public GlobalData globalData;
     private GameThread gameThread;
     private AnimationLoopThread glt;
@@ -106,7 +104,7 @@ public class MainActivity extends Activity {
         Bundle data = getIntent().getExtras();
 
         eye=(Eye) intent.getSerializableExtra("eye");
-        language=(Language) intent.getSerializableExtra("language");
+
         id_user=(String) intent.getSerializableExtra("id_user");
 
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
@@ -164,63 +162,6 @@ public class MainActivity extends Activity {
         gameThread.start();
 
     }
-
-   /* private void getCollision(final AnimationEnemies animationEnemies) {
-
-        animationEnemies.animationSetLane1.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                isEndEnemyLane1 = true;
-                detectCollision();
-                animationEnemies.animationSetLane1.reset(); //da resettare animzioni, reset non funziona
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-        animationEnemies.animationSetLane2.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                isEndEnemyLane2 = true;
-                detectCollision();
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-        animationEnemies.animationSetLane3.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                isEndEnemyLane3 = true;
-                detectCollision();
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-    }*/
 
 
     @Override

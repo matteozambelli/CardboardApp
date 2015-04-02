@@ -16,6 +16,8 @@
     </string-array>
 
     <string name="title_activity_doctor">DoctorActivity</string>
-
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
 
 </resources>

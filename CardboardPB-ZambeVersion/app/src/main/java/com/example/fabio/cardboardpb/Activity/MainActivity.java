@@ -141,7 +141,9 @@ public class MainActivity extends Activity {
         enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id1));
 
         panoramaLeft1.add((ImageView) findViewById(R.id.tree_left1));
+        panoramaLeft2.add((ImageView) findViewById(R.id.tree_left2));
         panoramaRight1.add((ImageView) findViewById(R.id.tree_right1));
+        panoramaRight2.add((ImageView) findViewById(R.id.tree_right2));
 
         panoramaLeftSky.add((ImageView)findViewById(R.id.cloud_left));
         panoramaRightSky.add((ImageView)findViewById(R.id.cloud_right));
@@ -182,7 +184,7 @@ public class MainActivity extends Activity {
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1,enemyLeftLane2,enemyLeftLane3,enemyRightLane1,
-                enemyRightLane2,enemyRightLane3,panoramaLeft1,panoramaRight1,panoramaLeftSky,panoramaRightSky,target1,target2,target3,globalData,eye,
+                enemyRightLane2,enemyRightLane3,panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky,target1,target2,target3,globalData,eye,
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
         gameThread.start();

@@ -43,6 +43,13 @@
             android:background="@drawable/tree_rid"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="121dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_left2"
+            android:background="@drawable/tree_rid"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="121dp" />
 
 
         <ImageView
@@ -293,6 +300,13 @@
             android:background="@drawable/tree_rid"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="121dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_right2"
+            android:background="@drawable/tree_rid"
+            android:layout_marginTop="121dp"
+            android:layout_marginLeft="200dp" />
 
 
         <ImageView

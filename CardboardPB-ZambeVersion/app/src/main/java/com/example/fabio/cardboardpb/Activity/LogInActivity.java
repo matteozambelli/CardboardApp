@@ -725,19 +725,19 @@ public class LogInActivity extends Activity {
                         // close this activity
                         finish();
                     } else if (status.getText().toString().contains("connection")) {
-                        if (getSharedPreferences("TUTORIAL", 1) != null) {
-                            SharedPreferences settings1 = getSharedPreferences("TUTORIAL", 1);
-                            if (settings1.getBoolean("isCheck", false)) {
+
+                            SharedPreferences settings2 = getSharedPreferences("TUTORIAL", 0);
+                            if (settings2.getBoolean("isCheck", false)) {
                                 Intent i = new Intent(LogInActivity.this, SplashActivity.class);
                                 i.putExtra("id_user", id_user);
                                 startActivity(i);
                             }
-                        }
+                            else {
 
-                            Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
-                            i.putExtra("id_user", id_user);
-                            startActivity(i);
-
+                                Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
+                                i.putExtra("id_user", id_user);
+                                startActivity(i);
+                            }
                         // close this activity
                         finish();
                     }

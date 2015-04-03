@@ -40,11 +40,11 @@ public class TutorialActivity extends ActionBarActivity {
         text.setTextSize(40);
 
 
-        thread= new TutorialThread(this,text,id_user);
+
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SharedPreferences settings = getSharedPreferences("TUTORIAL", 1);
+                SharedPreferences settings = getSharedPreferences("TUTORIAL",0);
                 SharedPreferences.Editor editor = settings.edit();
                 if(isChecked){
                     editor.putBoolean("isCheck",true);
@@ -56,8 +56,12 @@ public class TutorialActivity extends ActionBarActivity {
             }
         });
 
+        SharedPreferences settings3= getSharedPreferences("TUTORIAL",0);
+
+        checkBox.setChecked(settings3.getBoolean("isCheck",false));
 
 
+        thread= new TutorialThread(this,text,id_user);
         thread.start();
 
 

@@ -57,6 +57,7 @@ public class  PanoramaAsyncTask extends AsyncTask<Void, Void, Void>{
             @Override
             public void run() {
                 animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(0),panoramaRight1.get(0));
+                animationPanorama.animatePanoramaRightView(panoramaLeft2.get(0),panoramaRight2.get(0));
                 animationPanorama.animatePanoramaCloud(panoramaLeftSky.get(0),panoramaRightSky.get(0));
             }
         });

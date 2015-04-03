@@ -42,6 +42,8 @@ public class GameThread extends Thread{
     private ArrayList<ImageView> enemyRightLane3;
     private ArrayList<ImageView> panoramaLeft1;
     private ArrayList<ImageView> panoramaRight1;
+    private ArrayList<ImageView> panoramaLeft2;
+    private ArrayList<ImageView> panoramaRight2;
     private ArrayList<ImageView> panoramaLeftSky;
     private ArrayList<ImageView> panoramaRightSky;
 
@@ -97,7 +99,7 @@ public class GameThread extends Thread{
 
 
     public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tScoreLeft,
-                      TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ArrayList<ImageView> i1,ArrayList<ImageView> i2,ArrayList<ImageView> i3,ArrayList<ImageView> i4,ArrayList<ImageView> i5,ArrayList<ImageView> i6,ArrayList<ImageView>p1,ArrayList<ImageView>p2, ArrayList<ImageView>s1,ArrayList<ImageView>s2,ImageView target1, ImageView target2, ImageView target3,
+                      TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ArrayList<ImageView> i1,ArrayList<ImageView> i2,ArrayList<ImageView> i3,ArrayList<ImageView> i4,ArrayList<ImageView> i5,ArrayList<ImageView> i6,ArrayList<ImageView>p1,ArrayList<ImageView>p2,ArrayList<ImageView>p3,ArrayList<ImageView>p4, ArrayList<ImageView>s1,ArrayList<ImageView>s2,ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
                       int width, int height,String id_user) {
         this.activity=activity;
@@ -137,12 +139,15 @@ public class GameThread extends Thread{
         enemyRightLane2=i5;
         enemyRightLane3=i6;
 
+
         panoramaLeft1=p1;
-        panoramaRight1=p2;
+        panoramaLeft2=p2;
+        panoramaRight1=p3;
+        panoramaRight2=p4;
         panoramaLeftSky=s1;
         panoramaRightSky=s2;
 
-        panoramaAsyncTask=new PanoramaAsyncTask(panoramaLeft1,panoramaLeft1,panoramaRight1,panoramaRight1,panoramaLeftSky,panoramaRightSky, activity);
+        panoramaAsyncTask=new PanoramaAsyncTask(panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky, activity);
 
 
 

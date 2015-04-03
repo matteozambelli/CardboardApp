@@ -92,8 +92,8 @@
             android:layout_marginLeft="45dp"/>
 
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/imageViewEnemyLeftLane2Id1"
             android:layout_marginTop="118dp"
             android:src="@drawable/ferrari"
@@ -342,8 +342,8 @@
             android:layout_marginLeft="45dp"/>
 
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/imageViewEnemyRightLane2Id1"
             android:layout_marginTop="118dp"
             android:src="@drawable/ferrari"

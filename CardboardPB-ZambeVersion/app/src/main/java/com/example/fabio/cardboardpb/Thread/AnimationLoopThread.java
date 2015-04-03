@@ -7,7 +7,7 @@ import android.graphics.Canvas;
 import android.view.SurfaceView;
 
 public class AnimationLoopThread extends Thread {
-    static final long FPS = 5;
+    static final long FPS = 10;
     private SurfaceView view;
     private boolean running = false;
     private AnimationBackgroundView viewBackground;

@@ -9,6 +9,8 @@ import android.graphics.Matrix;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
+import android.renderscript.Matrix2f;
+import android.renderscript.Matrix4f;
 import android.view.Gravity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -70,23 +72,23 @@ public class AnimationBackgroundView extends SurfaceView {
         options.inMutable=true;
         options.inScaled=true;
         //this is the file going to use temporally to save the bytes.
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cartoonprova,options);
-        Bitmap rbitmap = getResizedBitmap(bitmap,700,700);
-        spriteBackground = new Sprite(this,rbitmap,1);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.backgroundfinalecompleto,options);
+        Bitmap rbitmap = getResizedBitmap(bitmap,700,10500);
+        spriteBackground = new Sprite(this,rbitmap,15);
     }
 
-    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth)
+    public Bitmap getResizedBitmap(Bitmap bm, long newHeight, long newWidth)
     {
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
+        long width = (long)bm.getWidth();
+        long height = (long)bm.getHeight();
+        double scaleWidth = ((double) newWidth) / width;
+        double scaleHeight = ((double) newHeight) / height;
         // create a matrix for the manipulation
         Matrix matrix = new Matrix();
         // resize the bit map
-        matrix.postScale(scaleWidth, scaleHeight);
+        matrix.postScale((float) scaleWidth, (float) scaleHeight);
         // recreate the new Bitmap
-        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, (int)width, (int)height, matrix, false);
         return resizedBitmap;
     }
 

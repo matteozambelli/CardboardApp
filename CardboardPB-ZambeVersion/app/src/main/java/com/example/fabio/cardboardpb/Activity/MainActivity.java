@@ -52,13 +52,20 @@ public class MainActivity extends Activity {
     private ImageView carRight;
 
     //Enemies
-
     private ArrayList<ImageView> enemyLeftLane1= new ArrayList<ImageView>();
     private ArrayList<ImageView> enemyLeftLane2= new ArrayList<ImageView>();
     private ArrayList<ImageView> enemyLeftLane3= new ArrayList<ImageView>();
     private ArrayList<ImageView> enemyRightLane1= new ArrayList<ImageView>();
     private ArrayList<ImageView> enemyRightLane2= new ArrayList<ImageView>();
     private ArrayList<ImageView> enemyRightLane3= new ArrayList<ImageView>();
+
+
+    private ArrayList<ImageView> panoramaLeft1= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaRight1= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaLeft2= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaRight2= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaLeftSky= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaRightSky= new ArrayList<ImageView>();
 
     private ImageView target1;
     private ImageView target2;
@@ -133,6 +140,12 @@ public class MainActivity extends Activity {
         enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0));
         enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id1));
 
+        panoramaLeft1.add((ImageView) findViewById(R.id.tree_left1));
+        panoramaRight1.add((ImageView) findViewById(R.id.tree_right1));
+
+        panoramaLeftSky.add((ImageView)findViewById(R.id.cloud_left));
+        panoramaRightSky.add((ImageView)findViewById(R.id.cloud_right));
+
         textLevelLeft=(TextView) findViewById(R.id.textViewLevelLeft);
         textLifeLeft = (TextView)findViewById(R.id.textViewLifeLeft);
         textPointsLeft = (TextView)findViewById(R.id.textViewScoreLeft);
@@ -169,10 +182,11 @@ public class MainActivity extends Activity {
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1,enemyLeftLane2,enemyLeftLane3,enemyRightLane1,
-                enemyRightLane2,enemyRightLane3,target1,target2,target3,globalData,eye,
+                enemyRightLane2,enemyRightLane3,panoramaLeft1,panoramaRight1,panoramaLeftSky,panoramaRightSky,target1,target2,target3,globalData,eye,
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
         gameThread.start();
+
 
     }
 

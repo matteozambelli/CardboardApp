@@ -40,6 +40,11 @@ public class GameThread extends Thread{
     private ArrayList<ImageView> enemyRightLane1;
     private ArrayList<ImageView> enemyRightLane2;
     private ArrayList<ImageView> enemyRightLane3;
+    private ArrayList<ImageView> panoramaLeft1;
+    private ArrayList<ImageView> panoramaRight1;
+    private ArrayList<ImageView> panoramaLeftSky;
+    private ArrayList<ImageView> panoramaRightSky;
+
     private ImageView target1;
     private ImageView target2;
     private ImageView target3;
@@ -75,6 +80,8 @@ public class GameThread extends Thread{
     private int displayHeight;
     private String id_user;
 
+    private PanoramaAsyncTask panoramaAsyncTask;
+
     //private Toast toastLifeLeft;
     //private Toast toastLifeRight;
 
@@ -88,22 +95,9 @@ public class GameThread extends Thread{
     private boolean gameOver=false;
     TextView textLevelDialogLeft;
 
-    /**
-     * @param activity
-     * @param text1
-     * @param i1
-     * @param i2
-     * @param i3
-     * @param i4
-     * @param i5
-     * @param i6
-     * @param RLAnimationLeft
-     * @param RLAnimationRight
-     * @param width
-     * @param height
-     */
+
     public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tScoreLeft,
-                      TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ArrayList<ImageView> i1,ArrayList<ImageView> i2,ArrayList<ImageView> i3,ArrayList<ImageView> i4,ArrayList<ImageView> i5,ArrayList<ImageView> i6, ImageView target1, ImageView target2, ImageView target3,
+                      TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ArrayList<ImageView> i1,ArrayList<ImageView> i2,ArrayList<ImageView> i3,ArrayList<ImageView> i4,ArrayList<ImageView> i5,ArrayList<ImageView> i6,ArrayList<ImageView>p1,ArrayList<ImageView>p2, ArrayList<ImageView>s1,ArrayList<ImageView>s2,ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
                       int width, int height,String id_user) {
         this.activity=activity;
@@ -143,6 +137,13 @@ public class GameThread extends Thread{
         enemyRightLane2=i5;
         enemyRightLane3=i6;
 
+        panoramaLeft1=p1;
+        panoramaRight1=p2;
+        panoramaLeftSky=s1;
+        panoramaRightSky=s2;
+
+        panoramaAsyncTask=new PanoramaAsyncTask(panoramaLeft1,panoramaLeft1,panoramaRight1,panoramaRight1,panoramaLeftSky,panoramaRightSky, activity);
+
 
 
         animationEnemies.hideImage(enemyLeftLane1.get(0));
@@ -167,6 +168,8 @@ public class GameThread extends Thread{
         this.eye=eye;
         this.id_user=id_user;
 
+
+
     }
 
     @Override
@@ -178,6 +181,7 @@ public class GameThread extends Thread{
                 // Se non è vero fai altro
             }
             state = !state;
+
 
             activity.runOnUiThread(new Runnable() {
                 @Override
@@ -207,6 +211,7 @@ public class GameThread extends Thread{
                     }
 
                     else { //only if globalData.getLife() >0
+                        panoramaAsyncTask.doInBackground();
                         globalData.setRunnable(true);
 
                         if(gameOver){

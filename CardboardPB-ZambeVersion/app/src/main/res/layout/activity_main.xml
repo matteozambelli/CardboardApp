@@ -22,7 +22,28 @@
             android:layout_height="fill_parent"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
-            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:id="@+id/cloud_left"
+            android:src="@drawable/cloud"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_left1"
+            android:background="@drawable/tree_rid"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="121dp" />
+
 
         <ImageView
         android:layout_width="35dp"
@@ -234,6 +255,7 @@
                 android:padding="5dp"
                 />
 
+
         </FrameLayout>
         <!---->
     </RelativeLayout>
@@ -254,6 +276,23 @@
             android:layout_centerHorizontal="true">
 
         </RelativeLayout>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:id="@+id/cloud_right"
+            android:src="@drawable/cloud"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_right1"
+            android:background="@drawable/tree_rid"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="121dp" />
 
 
         <ImageView

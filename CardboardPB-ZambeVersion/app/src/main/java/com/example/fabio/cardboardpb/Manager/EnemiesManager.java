@@ -11,12 +11,27 @@ public class EnemiesManager implements EnemiesManagerInterface{
     private int selectedLane; //what's the selected lane
     private int selectedCar; //what's the enemy
 
+    private int previousLane=0;// use this to manipulate the random algorithm
+    private int countPrevious=0;// use this to manipulate the random algorithm
+
     /**
      * chooses lane and enemy
      */
     public void randomFunction(){
         selectedLane=(int)(lane*Math.random())+1;
+        if(previousLane==selectedLane){
+            countPrevious++;
+            if(countPrevious>3){
+                selectedLane++;
+                if(selectedLane>3){
+                    selectedLane=1;
+                }
+            }
+        }
+        previousLane=selectedLane;
+
         selectedCar=(int)(numberOfCar*Math.random())+1;
+
     }
     public void setLane(){
         selectedLane=2; //at first the car is on the center lane

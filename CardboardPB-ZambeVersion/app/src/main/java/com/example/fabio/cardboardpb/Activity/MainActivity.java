@@ -17,10 +17,12 @@ import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
+import com.example.fabio.cardboardpb.Manager.PanoramaManager;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
+import com.example.fabio.cardboardpb.Thread.PanoramaAsyncTask;
 
 import java.util.ArrayList;
 
@@ -144,6 +146,15 @@ public class MainActivity extends Activity {
         panoramaLeft2.add((ImageView) findViewById(R.id.tree_left2));
         panoramaRight1.add((ImageView) findViewById(R.id.tree_right1));
         panoramaRight2.add((ImageView) findViewById(R.id.tree_right2));
+        panoramaLeft1.add((ImageView) findViewById(R.id.signal_left1));
+        panoramaLeft2.add((ImageView) findViewById(R.id.signal_left2));
+        panoramaRight1.add((ImageView) findViewById(R.id.signal_right1));
+        panoramaRight2.add((ImageView) findViewById(R.id.signal_right2));
+        panoramaLeft1.add((ImageView) findViewById(R.id.house_left1));
+        panoramaLeft2.add((ImageView) findViewById(R.id.house_left2));
+        panoramaRight1.add((ImageView) findViewById(R.id.house_right1));
+        panoramaRight2.add((ImageView) findViewById(R.id.house_right2));
+
 
         panoramaLeftSky.add((ImageView)findViewById(R.id.cloud_left));
         panoramaRightSky.add((ImageView)findViewById(R.id.cloud_right));
@@ -188,7 +199,6 @@ public class MainActivity extends Activity {
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
         gameThread.start();
-
 
     }
 

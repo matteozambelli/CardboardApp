@@ -160,7 +160,19 @@ public class LogInActivity extends Activity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                warningNoRegistration();
+              //  warningNoRegistration();
+                SharedPreferences settings2 = getSharedPreferences("TUTORIAL", 0);
+                if (settings2.getBoolean("isCheck", false)) {
+                    Intent i = new Intent(LogInActivity.this, SplashActivity.class);
+                    i.putExtra("id_user", id_user);
+                    startActivity(i);
+                }
+                else {
+
+                    Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
+                    i.putExtra("id_user", id_user);
+                    startActivity(i);
+                }
             }
         });
 

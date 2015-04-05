@@ -48,9 +48,11 @@ public class TutorialActivity extends ActionBarActivity {
                 SharedPreferences.Editor editor = settings.edit();
                 if(isChecked){
                     editor.putBoolean("isCheck",true);
+                    editor.commit();
                 }
                 else{
                     editor.putBoolean("isCheck",false);
+                    editor.commit();
                 }
 
             }

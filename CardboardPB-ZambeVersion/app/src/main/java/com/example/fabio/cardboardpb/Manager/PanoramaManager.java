@@ -12,7 +12,7 @@ public class PanoramaManager implements PanoramaManagerInterface
 
 
     private Side selectedSide;
-    private final int numberOfSubject=2;
+    private final int numberOfSubject=3;
     private int idSubject;
 
 

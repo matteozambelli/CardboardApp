@@ -306,7 +306,7 @@ public class PostCall {
                 } catch (IOException e) {
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(activity, "IOE response ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity, "Server error "+'\n'+"We apologize for the inconvenience ", Toast.LENGTH_LONG).show();
                         }
                     });
 

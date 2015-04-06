@@ -35,7 +35,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="61dp" />
+            android:layout_marginTop="71dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -320,7 +320,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="61dp" />
+            android:layout_marginTop="71dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -350,15 +350,15 @@
             android:layout_marginTop="121dp"
             android:layout_marginLeft="200dp" />
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/house_right1"
             android:background="@drawable/house"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="121dp" />
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/house_right2"
             android:background="@drawable/house"
             android:layout_marginTop="121dp"

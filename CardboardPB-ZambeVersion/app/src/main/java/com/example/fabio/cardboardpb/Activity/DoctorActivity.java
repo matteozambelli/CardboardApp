@@ -135,7 +135,7 @@ public class DoctorActivity extends Activity {
                         i.putExtra("id_doctor", id_doctor);
                         i.putExtra("id_user", status.getText().toString());
                         startActivity(i);
-
+                        finish();
                 } catch (Exception e) {
                 }
                 ringProgressDialog.dismiss();

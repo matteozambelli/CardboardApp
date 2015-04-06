@@ -750,8 +750,8 @@ public class LogInActivity extends Activity {
                                 i.putExtra("id_user", id_user);
                                 startActivity(i);
                             }
-                        // close this activity
-                        finish();
+
+
                     }
                 } catch (Exception e) {
 
@@ -774,7 +774,7 @@ public class LogInActivity extends Activity {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
                 i.putExtra(Intent.EXTRA_EMAIL, new String[]{"3d4ambunibg@gmail.com"});
-                i.putExtra(Intent.EXTRA_SUBJECT, "3d4amb DOCTOR COLLABORATION");
+                i.putExtra(Intent.EXTRA_SUBJECT, "3D4Amb DOCTOR COLLABORATION");
                 i.putExtra(Intent.EXTRA_TEXT, "");
                 try {
                     startActivity(Intent.createChooser(i, "Send mail..."));

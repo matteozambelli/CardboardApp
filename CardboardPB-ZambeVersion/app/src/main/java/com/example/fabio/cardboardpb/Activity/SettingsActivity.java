@@ -146,15 +146,7 @@ public class SettingsActivity extends ActionBarActivity {
 
         startGame.putExtra("id_user",id_user);
         startActivity(startGame);
-
-   /*new AlertDialog.Builder(this)
-            .setTitle("test mode")
-            .setMessage("PAUSE").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-            // continue with delete
-        }
-    }).show();
-*/
+        finish();
     }
 
 

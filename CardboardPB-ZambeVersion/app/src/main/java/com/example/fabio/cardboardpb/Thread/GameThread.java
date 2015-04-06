@@ -2,8 +2,7 @@ package com.example.fabio.cardboardpb.Thread;
 
 import android.app.Activity;
 
-import android.os.Handler;
-import android.os.SystemClock;
+
 import android.view.animation.Animation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -32,7 +31,7 @@ public class GameThread extends Thread{
     private PostCall postCall;
     private AnimationEnemies animationEnemies;
     private AnimationTarget animationTarget;
-
+    private PanoramaAsyncTask panoramaAsyncTask;
 
     private ArrayList<ImageView> enemyLeftLane1;
     private ArrayList<ImageView> enemyLeftLane2;
@@ -81,23 +80,44 @@ public class GameThread extends Thread{
     private int displayWidth;
     private int displayHeight;
     private String id_user;
-
-    private PanoramaAsyncTask panoramaAsyncTask;
-
-    //private Toast toastLifeLeft;
-    //private Toast toastLifeRight;
-
-    Thread Controllo;
-    private Handler customHandler = new Handler();
-
-
-
-    private long startTime = 0L;
-    //public boolean runnable; //if life==0 runnable turn false
     private boolean gameOver=false;
-    TextView textLevelDialogLeft;
+    private int countNotInMyLane=0;
 
 
+    /**
+     *
+     * @param activity
+     * @param text1
+     * @param text2
+     * @param tLevelLeft
+     * @param tLifeLeft
+     * @param tScoreLeft
+     * @param tLevelRight
+     * @param tLifeRight
+     * @param tScoreRight
+     * @param i1
+     * @param i2
+     * @param i3
+     * @param i4
+     * @param i5
+     * @param i6
+     * @param p1
+     * @param p2
+     * @param p3
+     * @param p4
+     * @param s1
+     * @param s2
+     * @param target1
+     * @param target2
+     * @param target3
+     * @param globalData
+     * @param eye
+     * @param RLAnimationLeft
+     * @param RLAnimationRight
+     * @param width
+     * @param height
+     * @param id_user
+     */
     public GameThread(Activity activity, TextView text1, TextView text2, TextView tLevelLeft, TextView tLifeLeft, TextView tScoreLeft,
                       TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ArrayList<ImageView> i1,ArrayList<ImageView> i2,ArrayList<ImageView> i3,ArrayList<ImageView> i4,ArrayList<ImageView> i5,ArrayList<ImageView> i6,ArrayList<ImageView>p1,ArrayList<ImageView>p2,ArrayList<ImageView>p3,ArrayList<ImageView>p4, ArrayList<ImageView>s1,ArrayList<ImageView>s2,ImageView target1, ImageView target2, ImageView target3,
                       GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
@@ -128,9 +148,6 @@ public class GameThread extends Thread{
         textScoreRight =tScoreRight;
         displayHeight=height;
         displayWidth=width;
-        //runnable=running;
-        //toastLifeLeft=Toast.makeText(activity.getApplicationContext(),"Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
-        //toastLifeRight=Toast.makeText(activity.getApplicationContext(), "Oh noo, you lost a Life!!", Toast.LENGTH_LONG);
         enemyLeftLane1=i1;
         enemyLeftLane2=i2;
         enemyLeftLane3=i3;
@@ -243,6 +260,12 @@ public class GameThread extends Thread{
                         //collision(animationTarget);
                         //onAnimationTimer();
 
+                        if(globalData.getAbsolutePosition()!=pick){
+                            countNotInMyLane++;
+                        }
+                        if(countNotInMyLane>2){
+                            pick=globalData.getAbsolutePosition();
+                        }
                         if (pick == 1) {
                             if(gameManager.getIdEnemy().get(i).getNumberOfCar()==1){
                                 animationEnemies.showImage(enemyLeftLane1.get(0));

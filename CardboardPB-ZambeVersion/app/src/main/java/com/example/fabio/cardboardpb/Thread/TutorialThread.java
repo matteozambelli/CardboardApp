@@ -94,6 +94,7 @@ public class TutorialThread extends  Thread {
         Intent i = new Intent(activity, SplashActivity.class);
         i.putExtra("id_user", id_user);
         activity.startActivity(i);
+        activity.finish();
 
     }
 }

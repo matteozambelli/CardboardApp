@@ -45,11 +45,11 @@ public class PostCall {
     private String id_doctor;
     //UPDATE
     private String update;
-    private String reverseString;
+
 
     TextView status;
 
-    /**
+    /**UPDATE
      * @param id_user
      * @param string
      * @param status
@@ -62,7 +62,7 @@ public class PostCall {
     }
 
 
-    /**
+    /**LOGIN
      * @param email
      * @param password
      * @param status
@@ -73,7 +73,7 @@ public class PostCall {
         this.status = status;
     }
 
-    /**
+    /**RESET PASSWORD
      * @param email
      * @param myColor
      * @param newPassword
@@ -88,7 +88,7 @@ public class PostCall {
         this.status = status;
     }
 
-    /**
+    /**SIGN UP
      * @param firstName
      * @param lastName
      * @param email
@@ -107,7 +107,7 @@ public class PostCall {
         this.status = status;
     }
 
-    /**
+    /**DOCTOR CALL
      * @param firstName
      * @param lastName
      * @param id_doctor
@@ -122,13 +122,17 @@ public class PostCall {
     }
 
     /**
+     * REPORT
      * @param score
      * @param level
+     * @param id_user
+     * @param textView
      */
-    public PostCall(String score, String level, String id_user) {
+    public PostCall(String score, String level, String id_user,TextView textView) {
         this.score = score;
         this.level = level;
         this.id_user = id_user;
+        this.status=textView;
     }
 
     public void myPostCall(final TypeCall type, final Activity logInActivity) {
@@ -149,7 +153,7 @@ public class PostCall {
                     List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(7);
                     List<NameValuePair> nameValuePairsDoctorCall = new ArrayList<NameValuePair>(5);
                     List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
-                    if(!type.equals(TypeCall.REPORT)) {
+
                         if (type.equals(TypeCall.LOG_IN)) {
                             nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
                             nameValuePairsLogIn.add(new BasicNameValuePair("email", email));
@@ -229,8 +233,8 @@ public class PostCall {
 
                         response = httpclient.execute(httppost, responseHandler);
                         //This is the response from a php application
-                        reverseString = response;
-                    }
+                       final String reverseString = response;
+
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
                              status.setText(reverseString);

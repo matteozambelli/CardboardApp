@@ -211,7 +211,7 @@ public class GameThread extends Thread{
 
                     if (globalData.getLife() == 0){
 
-                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user);
+                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2);
                         postCall.myPostCall(TypeCall.REPORT,activity);
                         globalData.setRunnable(false);
                         //todo , HOME PER RIGIOCARE

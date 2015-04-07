@@ -233,7 +233,8 @@ public class PostCall {
                     }
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-                             status.setText(reverseString);
+                            if(!type.equals(TypeCall.REPORT)) {
+                                status.setText(reverseString);
 
 
                             if (response.contains("password errata")) {
@@ -285,7 +286,7 @@ public class PostCall {
                                                 "Your new password has been sent to your email address."+'\n'+'\n'+"3D4Amb staff",logInActivity);
                                     }
                                 });
-                            }
+                            }}
 
                         }
                     });

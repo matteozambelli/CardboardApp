@@ -54,12 +54,12 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     public Void doInBackground(Void... params) {
-        panoramaManager.randomPanorama();
+
 
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-
+                panoramaManager.randomPanorama();
                 animationPanorama.hideImage(panoramaLeft1.get(0));
                 animationPanorama.hideImage(panoramaLeft1.get(1));
                 animationPanorama.hideImage(panoramaLeft1.get(2));
@@ -83,7 +83,8 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                         animationPanorama.showImage(panoramaLeft1.get(1));
                         animationPanorama.showImage(panoramaRight1.get(1));
                         animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(1), panoramaRight1.get(1));
-                    } else {
+                    }
+                    if (panoramaManager.getIdSubject() == 3) {
                         animationPanorama.showImage(panoramaLeft1.get(2));
                         animationPanorama.showImage(panoramaRight1.get(2));
                         animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(2), panoramaRight1.get(2));
@@ -94,11 +95,12 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                         animationPanorama.showImage(panoramaRight2.get(0));
                         animationPanorama.animatePanoramaRightView(panoramaLeft2.get(0), panoramaRight2.get(0));
                     }
-                    if (panoramaManager.getIdSubject() == 1) {
+                    if (panoramaManager.getIdSubject() == 2) {
                         animationPanorama.showImage(panoramaLeft2.get(1));
                         animationPanorama.showImage(panoramaRight2.get(1));
                         animationPanorama.animatePanoramaRightView(panoramaLeft2.get(1), panoramaRight2.get(1));
-                    } else {
+                    }
+                    if (panoramaManager.getIdSubject() == 3) {
                         animationPanorama.showImage(panoramaLeft2.get(2));
                         animationPanorama.showImage(panoramaRight2.get(2));
                         animationPanorama.animatePanoramaRightView(panoramaLeft2.get(2), panoramaRight2.get(2));
@@ -106,6 +108,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                 }
 
                 animationPanorama.animatePanoramaCloud(panoramaLeftSky.get(0), panoramaRightSky.get(0));
+                panoramaManager.randomPanorama();
             }
         });
 
@@ -115,6 +118,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void result) {
         super.onPostExecute(result);
+        doInBackground();
 
     }
 

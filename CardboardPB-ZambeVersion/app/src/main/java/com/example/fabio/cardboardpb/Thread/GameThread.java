@@ -205,6 +205,7 @@ public class GameThread extends Thread{
             state = !state;
 
 
+
             activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -233,8 +234,7 @@ public class GameThread extends Thread{
                     }
 
                     else { //only if globalData.getLife() >0
-                        panoramaAsyncTask= new PanoramaAsyncTask(panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky, activity);
-                        panoramaAsyncTask.doInBackground();
+
                         globalData.setRunnable(true);
 
                         if(gameOver){

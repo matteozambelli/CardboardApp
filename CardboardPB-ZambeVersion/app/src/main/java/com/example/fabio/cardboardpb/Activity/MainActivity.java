@@ -23,6 +23,7 @@ import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
 import com.example.fabio.cardboardpb.Thread.PanoramaAsyncTask;
+import com.example.fabio.cardboardpb.Thread.PanoramaThread;
 
 import java.util.ArrayList;
 
@@ -199,6 +200,12 @@ public class MainActivity extends Activity {
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
         gameThread.start();
+
+        PanoramaThread panoramaThread= new PanoramaThread(panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky, this);
+        panoramaThread.start();
+
+
+
 
     }
 

@@ -86,7 +86,7 @@ public class DoctorActivity extends Activity {
                     if(day<10){
                         dayString="0"+day;
                     }
-                    date = year + "-" + monthString + "-" + dayString;
+                    date = year + "-" + monthString + "-" + dayString ;
                     status.setText(date);
                 }
             }

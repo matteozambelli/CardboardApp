@@ -72,9 +72,9 @@ public class AnimationBackgroundView extends SurfaceView {
         options.inMutable=true;
         options.inScaled=true;
         //this is the file going to use temporally to save the bytes.
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.backgroundfinalecompleto2,options);
-        Bitmap rbitmap = getResizedBitmap(bitmap,700,9800);
-        spriteBackground = new Sprite(this,rbitmap,14);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.backgroundfinalecompleto5,options);
+        Bitmap rbitmap = getResizedBitmap(bitmap,700,11200);
+        spriteBackground = new Sprite(this,rbitmap,16);
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, long newHeight, long newWidth)

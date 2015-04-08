@@ -86,18 +86,18 @@
         android:layout_height="35dp"
         android:id="@+id/imageViewEnemyLeftLane1Id0"
         android:layout_marginTop="127dp"
-        android:src="@drawable/prova_rid"
+        android:src="@drawable/audicianosx"
         android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
-        android:layout_marginRight="45dp"
+        android:layout_marginRight="35dp"
         />
 
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginTop="118dp"
-            android:src="@drawable/fiatred"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/smartblue"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -105,9 +105,9 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane3Id0"
             android:layout_marginTop="127dp"
-            android:src="@drawable/prova_right_rid"
+            android:src="@drawable/audicianodx"
             android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginLeft="45dp"/>
+            android:layout_marginLeft="35dp"/>
 
 
         <ImageView
@@ -115,16 +115,16 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane1Id1"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_left"
+            android:src="@drawable/audigreensx"
             android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id1"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="35dp"
             />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane2Id1"
-            android:layout_marginTop="118dp"
+            android:layout_marginTop="122dp"
             android:src="@drawable/fiatmilitary"
             android:layout_centerHorizontal="true" />
 
@@ -133,26 +133,26 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane3Id1"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_right"
+            android:src="@drawable/audigreendx"
             android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginLeft="45dp"/>
+            android:layout_marginLeft="35dp"/>
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane1Id2"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_left"
+            android:src="@drawable/audiyellowsx"
             android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id1"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="35dp"
             />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane2Id2"
-            android:layout_marginTop="118dp"
-            android:src="@drawable/fiatciano"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatred"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -160,9 +160,9 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane3Id2"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_right"
+            android:src="@drawable/audiyellowdx"
             android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
-            android:layout_marginLeft="45dp"/>
+            android:layout_marginLeft="35dp"/>
 
 
         <ImageView
@@ -401,17 +401,17 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane1Id0"
             android:layout_marginTop="127dp"
-            android:src="@drawable/prova_rid"
+            android:src="@drawable/audicianosx"
             android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="35dp"
             />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginTop="118dp"
-            android:src="@drawable/fiatred"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/smartblue"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -419,9 +419,9 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane3Id0"
             android:layout_marginTop="127dp"
-            android:src="@drawable/prova_right_rid"
+            android:src="@drawable/audicianodx"
             android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginLeft="45dp"/>
+            android:layout_marginLeft="35dp"/>
 
 
         <ImageView
@@ -429,16 +429,16 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane1Id1"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_left"
+            android:src="@drawable/audigreensx"
             android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="35dp"
             />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane2Id1"
-            android:layout_marginTop="118dp"
+            android:layout_marginTop="122dp"
             android:src="@drawable/fiatmilitary"
             android:layout_centerHorizontal="true" />
 
@@ -447,26 +447,26 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane3Id1"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_right"
+            android:src="@drawable/audigreendx"
             android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginLeft="45dp"/>
+            android:layout_marginLeft="35dp"/>
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane1Id2"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_left"
+            android:src="@drawable/audiyellowsx"
             android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="35dp"
             />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane2Id2"
-            android:layout_marginTop="118dp"
-            android:src="@drawable/fiatciano"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatred"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -474,9 +474,9 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane3Id2"
             android:layout_marginTop="127dp"
-            android:src="@drawable/lamborghini_right"
+            android:src="@drawable/audiyellowdx"
             android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
-            android:layout_marginLeft="45dp"/>
+            android:layout_marginLeft="35dp"/>
 
         <ImageView
             android:layout_width="70dp"

@@ -22,7 +22,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
 
     public void animateFrontCarLane1(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
 
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.05))),
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.04))),
                 0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,
@@ -42,7 +42,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
 
     public void animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
 
-        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
+        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.1))));
         ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 4f,
                 1, 4f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
@@ -61,7 +61,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
     }
 
     public void animateFrontCarLane3(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.05))),
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.04))),
                 0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
         ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 5.2f,
                 1, 5.2f,

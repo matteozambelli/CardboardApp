@@ -150,12 +150,18 @@ public class GameThread extends Thread{
         animationEnemies.hideImage(enemyLeftLane1.get(1));
         animationEnemies.hideImage(enemyLeftLane2.get(1));
         animationEnemies.hideImage(enemyLeftLane3.get(1));
+        animationEnemies.hideImage(enemyLeftLane1.get(2));
+        animationEnemies.hideImage(enemyLeftLane2.get(2));
+        animationEnemies.hideImage(enemyLeftLane3.get(2));
         animationEnemies.hideImage(enemyRightLane1.get(0));
         animationEnemies.hideImage(enemyRightLane2.get(0));
         animationEnemies.hideImage(enemyRightLane3.get(0));
         animationEnemies.hideImage(enemyRightLane1.get(1));
         animationEnemies.hideImage(enemyRightLane2.get(1));
         animationEnemies.hideImage(enemyRightLane3.get(1));
+        animationEnemies.hideImage(enemyRightLane1.get(2));
+        animationEnemies.hideImage(enemyRightLane2.get(2));
+        animationEnemies.hideImage(enemyRightLane3.get(2));
         this.target1=target1;
         this.target2=target2;
         this.target3=target3;
@@ -255,6 +261,12 @@ public class GameThread extends Thread{
                                 animationEnemies.animateFrontCarLane1(enemyLeftLane1.get(1), enemyRightLane1.get(1),
                                         displayWidth, displayHeight);
                             }
+                            if(gameManager.getIdEnemy().get(i).getNumberOfCar()==3){
+                                animationEnemies.showImage(enemyLeftLane1.get(2));
+                                animationEnemies.showImage(enemyRightLane1.get(2));
+                                animationEnemies.animateFrontCarLane1(enemyLeftLane1.get(2), enemyRightLane1.get(2),
+                                        displayWidth, displayHeight);
+                            }
 
                             onAnimationTimer();
                             animationTarget.animateTarget1(target1, displayWidth, displayHeight);
@@ -274,8 +286,14 @@ public class GameThread extends Thread{
                                 animationEnemies.animateFrontCarLane2(enemyLeftLane2.get(1), enemyRightLane2.get(1),
                                         displayWidth, displayHeight);
                             }
+                            if(gameManager.getIdEnemy().get(i).getNumberOfCar()==3){
+                                animationEnemies.showImage(enemyLeftLane2.get(2));
+                                animationEnemies.showImage(enemyRightLane2.get(2));
+                                animationEnemies.animateFrontCarLane2(enemyLeftLane2.get(2), enemyRightLane2.get(2),
+                                        displayWidth, displayHeight);
+                            }
 
-
+                            onAnimationTimer();
 
                             animationTarget.animateTarget2(target2, displayWidth, displayHeight);
 
@@ -296,6 +314,12 @@ public class GameThread extends Thread{
                                 animationEnemies.showImage(enemyLeftLane3.get(1));
                                 animationEnemies.showImage(enemyRightLane3.get(1));
                                 animationEnemies.animateFrontCarLane3(enemyLeftLane3.get(1), enemyRightLane3.get(1),
+                                        displayWidth, displayHeight);
+                            }
+                            if(gameManager.getIdEnemy().get(i).getNumberOfCar()==3){
+                                animationEnemies.showImage(enemyLeftLane3.get(2));
+                                animationEnemies.showImage(enemyRightLane3.get(2));
+                                animationEnemies.animateFrontCarLane3(enemyLeftLane3.get(2), enemyRightLane3.get(2),
                                         displayWidth, displayHeight);
                             }
 
@@ -427,6 +451,8 @@ public class GameThread extends Thread{
                     animationEnemies.hideImage(enemyRightLane1.get(0));
                     animationEnemies.hideImage(enemyLeftLane1.get(1));
                     animationEnemies.hideImage(enemyRightLane1.get(1));
+                    animationEnemies.hideImage(enemyLeftLane1.get(2));
+                    animationEnemies.hideImage(enemyRightLane1.get(2));
                 }
                 else{
                     globalData.increaseScore();
@@ -477,6 +503,8 @@ public class GameThread extends Thread{
                     animationEnemies.hideImage(enemyRightLane2.get(0));
                     animationEnemies.hideImage(enemyLeftLane2.get(1));
                     animationEnemies.hideImage(enemyRightLane2.get(1));
+                    animationEnemies.hideImage(enemyLeftLane2.get(2));
+                    animationEnemies.hideImage(enemyRightLane2.get(2));
                 }
                 else{
                     globalData.increaseScore();
@@ -525,6 +553,8 @@ public class GameThread extends Thread{
                     animationEnemies.hideImage(enemyRightLane3.get(0));
                     animationEnemies.hideImage(enemyLeftLane3.get(1));
                     animationEnemies.hideImage(enemyRightLane3.get(1));
+                    animationEnemies.hideImage(enemyLeftLane3.get(2));
+                    animationEnemies.hideImage(enemyRightLane3.get(2));
                 }
                 else{
                     globalData.increaseScore();

@@ -36,7 +36,6 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
         ivLeft.startAnimation(animationSetLane1);
         ivRight.startAnimation(animationSetLane1);
 
-
     }
 
 

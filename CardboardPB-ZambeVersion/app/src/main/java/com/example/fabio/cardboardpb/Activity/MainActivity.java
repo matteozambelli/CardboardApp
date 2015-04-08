@@ -135,18 +135,27 @@ public class MainActivity extends Activity {
 
         enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0));
         enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id1));
+        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id2));
         enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0));
         enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id1));
+        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id2));
 
         enemyLeftLane2.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0));
         enemyLeftLane2.add( (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id1));
+        enemyLeftLane2.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id2));
         enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0));
         enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id1));
+        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id2));
+
 
         enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0));
         enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id1));
+        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id2));
+
         enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0));
         enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id1));
+        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id2));
+
 
         panoramaLeft1.add((ImageView) findViewById(R.id.tree_left1));
         panoramaLeft2.add((ImageView) findViewById(R.id.tree_left2));

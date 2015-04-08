@@ -201,7 +201,7 @@ public class MainActivity extends Activity {
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1,enemyLeftLane2,enemyLeftLane3,enemyRightLane1,
-                enemyRightLane2,enemyRightLane3,panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky,target1,target2,target3,globalData,eye,
+                enemyRightLane2,enemyRightLane3,target1,target2,target3,globalData,eye,
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
 
@@ -211,7 +211,7 @@ public class MainActivity extends Activity {
         timerTask= new TimerTask() {
              @Override
              public void run() {
-                 PanoramaAsyncTask p = new PanoramaAsyncTask(globalData, panoramaLeft1, panoramaLeft2, panoramaRight1, panoramaRight2, panoramaLeftSky, panoramaRightSky, activity);
+                 PanoramaAsyncTask p = new PanoramaAsyncTask(panoramaLeft1, panoramaLeft2, panoramaRight1, panoramaRight2, panoramaLeftSky, panoramaRightSky);
 
                  p.execute();
              }

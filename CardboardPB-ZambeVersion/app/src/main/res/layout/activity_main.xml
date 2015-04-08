@@ -35,7 +35,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="71dp" />
+            android:layout_marginTop="71dp"
+            android:layout_marginLeft="35dp"/>
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -56,14 +57,14 @@
             android:id="@+id/signal_left1"
             android:background="@drawable/signalboard"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="121dp" />
+            android:layout_marginTop="141dp" />
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/signal_left2"
             android:background="@drawable/signalboard"
             android:layout_marginLeft="200dp"
-            android:layout_marginTop="121dp" />
+            android:layout_marginTop="141dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -320,7 +321,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="71dp" />
+            android:layout_marginTop="71dp"
+            android:layout_marginLeft="35dp"/>
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -341,13 +343,13 @@
             android:id="@+id/signal_right1"
             android:background="@drawable/signalboard"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="121dp" />
+            android:layout_marginTop="141dp" />
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/signal_right2"
             android:background="@drawable/signalboard"
-            android:layout_marginTop="121dp"
+            android:layout_marginTop="141dp"
             android:layout_marginLeft="200dp" />
         <ImageView
             android:layout_width="40dp"

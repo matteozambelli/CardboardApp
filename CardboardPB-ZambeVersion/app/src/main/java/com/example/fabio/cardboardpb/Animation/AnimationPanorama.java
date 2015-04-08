@@ -89,7 +89,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
     }
 
     public void animatePanoramaCloud(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation = new TranslateAnimation(0,1000,0,0);
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0,500,0,0);
         ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 1,
                 1, 1,
                 android.view.animation.Animation.RELATIVE_TO_SELF, 1f,

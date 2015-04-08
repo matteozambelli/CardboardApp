@@ -14,15 +14,22 @@ public class PanoramaManager implements PanoramaManagerInterface
     private Side selectedSide;
     private final int numberOfSubject=3;
     private int idSubject;
-
+    private int previousId=1;
 
     /**
-     * chooses the side and what subject send
+     * chooses the side and what subject send(never like the previous)
      */
     public void randomPanorama() {
         int pick = new Random().nextInt(Side.values().length);
         selectedSide= Side.values()[pick];
         idSubject=(int)(numberOfSubject*Math.random())+1;
+        if(previousId==idSubject){
+            idSubject++;
+            if(idSubject>numberOfSubject){
+                idSubject=1;
+            }
+        }
+        previousId=idSubject;
     }
 
 

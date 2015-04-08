@@ -17,15 +17,16 @@ import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
-import com.example.fabio.cardboardpb.Manager.PanoramaManager;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
 import com.example.fabio.cardboardpb.Thread.PanoramaAsyncTask;
-import com.example.fabio.cardboardpb.Thread.PanoramaThread;
+
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class MainActivity extends Activity {
@@ -34,6 +35,8 @@ public class MainActivity extends Activity {
     private int height;
     private static MainActivity instance;
     private Eye eye;
+    private TimerTask timerTask;
+    private Timer timer;
 
     public GlobalData globalData;
     private GameThread gameThread;
@@ -90,6 +93,8 @@ public class MainActivity extends Activity {
     private int rightCarPosition;
     private boolean running=true;
 
+    private Activity activity;
+
     public MainActivity(){
         instance=this;
     }
@@ -102,7 +107,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         View decorView = getWindow().getDecorView();
-
+        activity=this;
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
@@ -199,13 +204,21 @@ public class MainActivity extends Activity {
                 enemyRightLane2,enemyRightLane3,panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky,target1,target2,target3,globalData,eye,
                 relativeLayoutAnimationLeft,relativeLayoutAnimationRight, width, height,id_user);
 
+
         gameThread.start();
 
-        PanoramaThread panoramaThread= new PanoramaThread(panoramaLeft1,panoramaLeft2,panoramaRight1,panoramaRight2,panoramaLeftSky,panoramaRightSky, this);
-        panoramaThread.start();
 
+        timerTask= new TimerTask() {
+             @Override
+             public void run() {
+                 PanoramaAsyncTask p = new PanoramaAsyncTask(globalData, panoramaLeft1, panoramaLeft2, panoramaRight1, panoramaRight2, panoramaLeftSky, panoramaRightSky, activity);
 
+                 p.execute();
+             }
+         };
 
+        timer= new Timer();
+        timer.schedule(timerTask,0,20000);
 
     }
 

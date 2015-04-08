@@ -60,8 +60,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
     @Override
     public Void doInBackground(Void... params) {
         panoramaManager.randomPanorama();
-       // pick= panoramaManager.getIdSubject();
-        pick=2;
+        pick= panoramaManager.getIdSubject();
         side=panoramaManager.getSelectedSide();
         return null;
     }

@@ -103,7 +103,7 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginTop="122dp"
-            android:src="@drawable/smartblue"
+            android:src="@drawable/miniyellow"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -425,7 +425,7 @@
             android:layout_height="35dp"
             android:id="@+id/imageViewEnemyRightLane2Id0"
             android:layout_marginTop="122dp"
-            android:src="@drawable/smartblue"
+            android:src="@drawable/miniyellow"
             android:layout_centerHorizontal="true" />
 
         <ImageView

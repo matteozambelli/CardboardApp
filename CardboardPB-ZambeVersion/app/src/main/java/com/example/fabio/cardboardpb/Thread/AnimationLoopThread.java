@@ -7,7 +7,8 @@ import android.graphics.Canvas;
 import android.view.SurfaceView;
 
 public class AnimationLoopThread extends Thread {
-    static final long FPS = 10;
+    static final long FPSexplosion = 8;
+    static final long FPSbackground = 10;
     private SurfaceView view;
     private boolean running = false;
     private AnimationBackgroundView viewBackground;
@@ -29,7 +30,8 @@ public class AnimationLoopThread extends Thread {
 
     @Override
     public void run() {
-        long ticksPS = 1000 / FPS;
+        long ticksPSexplosion = 1000 / FPSexplosion;
+        long ticksPSbackground = 1000 / FPSbackground;
         long startTime;
         long sleepTime;
 
@@ -54,7 +56,7 @@ public class AnimationLoopThread extends Thread {
                         viewBackground.getHolder().unlockCanvasAndPost(canvasBackground);
                     }
                 }
-                sleepTime = ticksPS - (System.currentTimeMillis() - startTime);
+                sleepTime = ticksPSbackground - (System.currentTimeMillis() - startTime);
                 try {
                     if (sleepTime > 0)
                         sleep(sleepTime);
@@ -80,7 +82,7 @@ public class AnimationLoopThread extends Thread {
                         viewExplosion.getHolder().unlockCanvasAndPost(canvasExplosion);
                     }
                 }
-                sleepTime = ticksPS - (System.currentTimeMillis() - startTime);
+                sleepTime = ticksPSexplosion - (System.currentTimeMillis() - startTime);
                 try {
                     if (sleepTime > 0)
                         sleep(sleepTime);

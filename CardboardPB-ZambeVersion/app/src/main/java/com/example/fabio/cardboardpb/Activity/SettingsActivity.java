@@ -25,6 +25,7 @@ public class SettingsActivity extends ActionBarActivity {
     private String id_user;
 
     private Eye eye= Eye.LEFT_EYE;
+    private Eye lazyEye;
 
     private TextView textEyeLeft,textEyeRight,textSelectLeft,textSelectRight,textStartLeft,textStartRight;
 
@@ -66,11 +67,11 @@ public class SettingsActivity extends ActionBarActivity {
         textStartRight.setTypeface(font);
 
         textSelectLeft=(TextView) findViewById(R.id.textViewSelectEyeLeft);
-        textSelectLeft.setText("SELECT THE EYE");
+        textSelectLeft.setText("SELECT THE LAZY EYE");
         textSelectLeft.setTypeface(font);
 
         textSelectRight=(TextView) findViewById(R.id.textViewSelectEyeRight);
-        textSelectRight.setText("SELECT THE EYE");
+        textSelectRight.setText("SELECT THE LAZY EYE");
         textSelectRight.setTypeface(font);
 
     }
@@ -142,7 +143,12 @@ public class SettingsActivity extends ActionBarActivity {
     private void goToMain(){
 
         Intent startGame = new Intent(SettingsActivity.this, MainActivity.class);
-        startGame.putExtra("eye", eye);
+        if(eye.equals(Eye.LEFT_EYE)){
+            lazyEye=Eye.RIGHT_EYE;
+        }else{
+            lazyEye=Eye.LEFT_EYE;
+        }
+        startGame.putExtra("eye", lazyEye);
 
         startGame.putExtra("id_user",id_user);
         startActivity(startGame);

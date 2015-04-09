@@ -22,11 +22,9 @@
                 android:layout_height="70dp"
                 android:id="@+id/imageViewTrafficLight1"
                 android:src="@drawable/lighttraffic"
-
                 android:layout_above="@+id/textViewSelectEyeLeft"
-                android:layout_toLeftOf="@+id/imageArrowMinus1"
-                android:layout_toStartOf="@+id/imageArrowMinus1"
-                android:layout_marginBottom="30dp" />
+                android:layout_centerHorizontal="true"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SELECT THE EYE"
+                android:text="SELECT THE LAZY EYE"
                 android:id="@+id/textViewSelectEyeLeft"
                 android:layout_above="@+id/textViewEye1"
                 android:textColor="@color/Black"
@@ -105,11 +103,10 @@
                 android:layout_height="70dp"
                 android:id="@+id/imageViewTrafficLight2"
                 android:src="@drawable/lighttraffic"
-
                 android:layout_above="@+id/textViewSelectEyeRight"
-                android:layout_toLeftOf="@+id/imageArrowMinus2"
-                android:layout_toStartOf="@+id/imageArrowMinus2"
-                android:layout_marginBottom="30dp" />
+                android:layout_centerHorizontal="true"
+
+                />
 
 
             <TextView
@@ -135,7 +132,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SELECT THE EYE"
+                android:text="SELECT THE LAZY EYE"
                 android:id="@+id/textViewSelectEyeRight"
                 android:layout_marginBottom="20dp"
                 android:textColor="@color/Black"

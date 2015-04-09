@@ -12,13 +12,6 @@ import java.util.ArrayList;
 
 public class PenalizationManager implements PenalizationManagerInterface {
 
-    private Eye eye;
-    private ImageView enemyLeftLane1Id0;
-    private ImageView enemyRightLane1Id0;
-    private ImageView enemyLeftLane2Id0;
-    private ImageView enemyRightLane2Id0;
-    private ImageView enemyLeftLane3Id0;
-    private ImageView enemyRightLane3Id0;
     private ArrayList<ImageView> enemyLeftLane1;
     private ArrayList<ImageView> enemyLeftLane2;
     private ArrayList<ImageView> enemyLeftLane3;
@@ -49,7 +42,7 @@ public class PenalizationManager implements PenalizationManagerInterface {
     }
 
     /**
-     *
+     * set the penalization to the imageView of the enemy
      * @param eye
      */
     @Override
@@ -62,6 +55,9 @@ public class PenalizationManager implements PenalizationManagerInterface {
                 enemyLeftLane1.get(1).setAlpha(getLevelPenalization());
                 enemyLeftLane2.get(1).setAlpha(getLevelPenalization());
                 enemyLeftLane3.get(1).setAlpha(getLevelPenalization());
+                enemyLeftLane1.get(2).setAlpha(getLevelPenalization());
+                enemyLeftLane2.get(2).setAlpha(getLevelPenalization());
+                enemyLeftLane3.get(2).setAlpha(getLevelPenalization());
 
             }break;
             case RIGHT_EYE:{
@@ -71,6 +67,9 @@ public class PenalizationManager implements PenalizationManagerInterface {
                 enemyRightLane1.get(1).setAlpha(getLevelPenalization());
                 enemyRightLane2.get(1).setAlpha(getLevelPenalization());
                 enemyRightLane3.get(1).setAlpha(getLevelPenalization());
+                enemyRightLane1.get(2).setAlpha(getLevelPenalization());
+                enemyRightLane2.get(2).setAlpha(getLevelPenalization());
+                enemyRightLane3.get(2).setAlpha(getLevelPenalization());
             }break;
             default:{}break;
         }

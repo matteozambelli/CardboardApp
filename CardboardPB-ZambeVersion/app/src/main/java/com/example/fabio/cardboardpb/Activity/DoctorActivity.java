@@ -2,8 +2,10 @@ package com.example.fabio.cardboardpb.Activity;
 
 import android.app.Activity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -33,8 +35,10 @@ public class DoctorActivity extends Activity {
     private Button start;
     private Activity doctorActivity;
     private int year, month, day;
-    private String monthString, dayString;
-    private String id_doctor, date;
+    private String monthString;
+    private String dayString;
+    private String id_doctor;
+    private String date;
     private PostCall post;
 
 
@@ -53,7 +57,7 @@ public class DoctorActivity extends Activity {
         lastName = (EditText) findViewById(R.id.last_name);
         birthday = (EditText) findViewById(R.id.date);
         status= (TextView) findViewById(R.id.status);
-
+        status.setAlpha(0);
         birthday.setFocusable(false);
 
         // Process to get Current Date
@@ -108,17 +112,24 @@ public class DoctorActivity extends Activity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                post=new PostCall(firstName.getText().toString(),lastName.getText().toString(),id_doctor,date,status,true);
-                post.myPostCall(TypeCall.DOCTORCALL,doctorActivity);
-                launchRingDialog();
 
+                if(firstName.getText().toString().isEmpty()||lastName.getText().toString().isEmpty()||birthday.getText().toString().isEmpty()){
+                    emptyFieldAlert();
+
+                }else {
+                    post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), id_doctor, date, status, true);
+                    post.myPostCall(TypeCall.DOCTORCALL, doctorActivity);
+                    launchRingDialog();
+                }
             }
         });
 
     }
 
 
-
+    /**
+     * thread for the connection to the DB
+     */
     private void launchRingDialog() {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(DoctorActivity.this, "Please wait ...", "contacting server ...", true);
         ringProgressDialog.setCancelable(true);
@@ -126,11 +137,7 @@ public class DoctorActivity extends Activity {
             @Override
             public void run() {
                 try {
-
-
                     Thread.sleep(2000);
-
-
                         Intent i = new Intent(DoctorActivity.this, SplashActivity.class);
                         i.putExtra("id_doctor", id_doctor);
                         i.putExtra("id_user", status.getText().toString());
@@ -142,5 +149,21 @@ public class DoctorActivity extends Activity {
             }
         }).start();
 
+    }
+
+    /**
+     * showed when firstname or lastname or bithday field is empty
+     */
+    private void emptyFieldAlert(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Warning");
+        alert.setMessage("some field is empty");
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.show();
     }
 }

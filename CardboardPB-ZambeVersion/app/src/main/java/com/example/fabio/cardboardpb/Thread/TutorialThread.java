@@ -15,7 +15,7 @@ public class TutorialThread extends  Thread {
     private TextView text;
     private Activity activity;
     private String id_user;
-    private int pause=3000;
+    private int pause=4000;
 
 
     public TutorialThread(Activity activity,TextView text,String id_user){
@@ -31,8 +31,8 @@ public class TutorialThread extends  Thread {
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                text.setText("Pick up your phone and connect to the earphones" +'\n'+"(with volume control keys)");
 
+                text.setText("Pick up your phone and connect to the earphones" +'\n'+"(with volume control keys)");
 
             }
         });
@@ -57,7 +57,7 @@ public class TutorialThread extends  Thread {
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                text.setText("insert your phone in cardboard");
+                text.setText("insert your phone"+'\n'+" in cardboard");
 
 
             }
@@ -70,7 +70,7 @@ public class TutorialThread extends  Thread {
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                text.setText("the game will start in a few seconds");
+                text.setText("the game will start "+'\n'+"in a few seconds");
 
             }
         });
@@ -83,11 +83,11 @@ public class TutorialThread extends  Thread {
             @Override
             public void run() {
 
-                text.setText("ENJOY");
+                text.setText("ENJOY ;)");
             }
         });
         try {
-            Thread.sleep(pause);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

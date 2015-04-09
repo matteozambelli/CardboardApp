@@ -160,19 +160,9 @@ public class LogInActivity extends Activity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  warningNoRegistration();
-                SharedPreferences settings2 = getSharedPreferences("TUTORIAL", 0);
-                if (settings2.getBoolean("isCheck", false)) {
-                    Intent i = new Intent(LogInActivity.this, SplashActivity.class);
-                    i.putExtra("id_user", id_user);
-                    startActivity(i);
-                }
-                else {
 
-                    Intent i = new Intent(LogInActivity.this, TutorialActivity.class);
-                    i.putExtra("id_user", id_user);
-                    startActivity(i);
-                }
+              warningNoRegistration();
+
             }
         });
 
@@ -360,7 +350,7 @@ public class LogInActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 launchRingDialog();
                 passwordToSend = PasswdManager.calculateHash("default_user");
-                post = new PostCall("3d4ambcardboard@gmail.com", passwordToSend, status);
+                post = new PostCall("3d4ambunibg@gmail.com", passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
             }
         });
@@ -613,7 +603,7 @@ public class LogInActivity extends Activity {
         alert.setTitle("Update");
         final EditText password = new EditText(this);
         final CheckBox check = new CheckBox(this);
-        check.setText("show passord");
+        check.setText("show password");
         password.setHint("new password");
         password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -734,8 +724,7 @@ public class LogInActivity extends Activity {
                         Intent i = new Intent(LogInActivity.this, DoctorActivity.class);
                         i.putExtra("id_doctor", id_user);
                         startActivity(i);
-                        // close this activity
-                        finish();
+
                     } else if (status.getText().toString().contains("connection")) {
 
                             SharedPreferences settings2 = getSharedPreferences("TUTORIAL", 0);
@@ -790,7 +779,7 @@ public class LogInActivity extends Activity {
     private void helpAlert() {
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("this application goal: the player see only one part of the scene with the normal eye, while the amblyopic eye sees all the details."+'\n'+ "If you are interested to trace your child improvement, SIGNU UP! and after every game we show you your progress."+'\n'+"you can also play without registration, but we can't trace your improvement. +'\n"+ "GAME USAGE:"+'\n'+"after this screen, put your smartphone into your cardboard or VR visor, and connect a pair of earphone with +,- and confirm keys");
+        alert.setMessage("this application goal: the player see only one part of the scene with the normal eye, while the amblyopic eye sees all the details."+'\n'+ "If you are interested to trace your child improvement, SIGN UP! and after every game we show you your progress."+'\n'+"you can also play without registration, but we can't trace your improvement." +'\n'+ "GAME USAGE:"+'\n'+"after this screen, put your smartphone into your cardboard or VR visor, and connect a pair of earphone with +,- and confirm keys");
         alert.setTitle("HELP");
         alert.setPositiveButton("OK",new DialogInterface.OnClickListener() {
             @Override

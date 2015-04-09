@@ -7,10 +7,10 @@ import android.widget.ImageView;
  */
 public interface AnimationPanoramaInterface {
 
-    public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight);
+    public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight);
 
 
-    public void animatePanoramaRightView(final ImageView ivLeft, final ImageView ivRight);
+    public void animatePanoramaRightView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight);
 
     public void hideImage(ImageView img);
 

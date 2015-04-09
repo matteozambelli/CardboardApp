@@ -29,6 +29,8 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
     private AnimationPanorama animationPanorama;
     private int pick=0;
     private Side side;
+    private int displayWidth;
+    private int displayHeight;
 
     /**
      * @param panoramaLeft1
@@ -38,7 +40,10 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
      * @param panoramaLeftSky
      * @param panoramaRightSky
      */
-    public PanoramaAsyncTask(ArrayList<ImageView> panoramaLeft1, ArrayList<ImageView> panoramaLeft2, ArrayList<ImageView> panoramaRight1, ArrayList<ImageView> panoramaRight2, ArrayList<ImageView> panoramaLeftSky, ArrayList<ImageView> panoramaRightSky) {
+    public PanoramaAsyncTask(ArrayList<ImageView> panoramaLeft1, ArrayList<ImageView> panoramaLeft2,
+                             ArrayList<ImageView> panoramaRight1, ArrayList<ImageView> panoramaRight2,
+                             ArrayList<ImageView> panoramaLeftSky, ArrayList<ImageView> panoramaRightSky,
+                             int width,int height) {
 
         this.panoramaLeft1 = panoramaLeft1;
         this.panoramaLeft2 = panoramaLeft2;
@@ -46,6 +51,9 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
         this.panoramaRight2 = panoramaRight2;
         this.panoramaLeftSky = panoramaLeftSky;
         this.panoramaRightSky = panoramaRightSky;
+
+        this.displayHeight=height;
+        this.displayWidth=width;
 
         animationPanorama = new AnimationPanorama();
         panoramaManager = new PanoramaManager();
@@ -68,8 +76,6 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void result) {
 
-
-
                     animationPanorama.hideImage(panoramaLeft1.get(0));
                     animationPanorama.hideImage(panoramaLeft1.get(1));
                     animationPanorama.hideImage(panoramaLeft1.get(2));
@@ -87,37 +93,44 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                         if (pick == 1) {
                             animationPanorama.showImage(panoramaLeft1.get(0));
                             animationPanorama.showImage(panoramaRight1.get(0));
-                            animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(0), panoramaRight1.get(0));
+                            animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(0), panoramaRight1.get(0),
+                                    displayWidth, displayHeight);
                         }
                         if (pick == 2) {
                             animationPanorama.showImage(panoramaLeft1.get(1));
                             animationPanorama.showImage(panoramaRight1.get(1));
-                            animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(1), panoramaRight1.get(1));
+                            animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(1), panoramaRight1.get(1),
+                                    displayWidth, displayHeight);
                         }
                         if (pick == 3) {
                             animationPanorama.showImage(panoramaLeft1.get(2));
                             animationPanorama.showImage(panoramaRight1.get(2));
-                            animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(2), panoramaRight1.get(2));
+                            animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(2), panoramaRight1.get(2),
+                                    displayWidth, displayHeight);
                         }
                     } else {
                         if (pick == 1) {
                             animationPanorama.showImage(panoramaLeft2.get(0));
                             animationPanorama.showImage(panoramaRight2.get(0));
-                            animationPanorama.animatePanoramaRightView(panoramaLeft2.get(0), panoramaRight2.get(0));
+                            animationPanorama.animatePanoramaRightView(panoramaLeft2.get(0), panoramaRight2.get(0),
+                                    displayWidth, displayHeight);
                         }
                         if (pick== 2) {
                             animationPanorama.showImage(panoramaLeft2.get(1));
                             animationPanorama.showImage(panoramaRight2.get(1));
-                            animationPanorama.animatePanoramaRightView(panoramaLeft2.get(1), panoramaRight2.get(1));
+                            animationPanorama.animatePanoramaRightView(panoramaLeft2.get(1), panoramaRight2.get(1),
+                                    displayWidth, displayHeight);
                         }
                         if (pick == 3) {
                             animationPanorama.showImage(panoramaLeft2.get(2));
                             animationPanorama.showImage(panoramaRight2.get(2));
-                            animationPanorama.animatePanoramaRightView(panoramaLeft2.get(2), panoramaRight2.get(2));
+                            animationPanorama.animatePanoramaRightView(panoramaLeft2.get(2), panoramaRight2.get(2),
+                                    displayWidth, displayHeight);
                         }
                     }
 
-                    animationPanorama.animatePanoramaCloud(panoramaLeftSky.get(0), panoramaRightSky.get(0));
+                    animationPanorama.animatePanoramaCloud(panoramaLeftSky.get(0), panoramaRightSky.get(0),
+                            displayWidth, displayHeight);
                     animationPanorama = new AnimationPanorama();
                     panoramaManager = new PanoramaManager();
                     panoramaManager.randomPanorama();

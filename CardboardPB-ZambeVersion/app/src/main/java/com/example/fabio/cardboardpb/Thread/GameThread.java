@@ -445,6 +445,10 @@ public class GameThread extends Thread{
                     t2.setText("COLLISIONE SU 1");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
+                    animationExplosionViewLeft.setX((float) (displayWidth*0.001));
+                    animationExplosionViewLeft.setY((float) (displayHeight*0.25));
+                    animationExplosionViewRight.setX((float) (displayWidth*0.001));
+                    animationExplosionViewRight.setY((float) (displayHeight*0.25));
                     relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
                     animationEnemies.hideImage(enemyLeftLane1.get(0));
@@ -495,8 +499,10 @@ public class GameThread extends Thread{
                     t2.setText("COLLISIONE SU 2");
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
-                    animationExplosionViewLeft.setX(100);
-                    animationExplosionViewRight.setX(100);
+                    animationExplosionViewLeft.setX((float) (displayWidth*0.135));
+                    animationExplosionViewLeft.setY((float) (displayHeight*0.25));
+                    animationExplosionViewRight.setX((float) (displayWidth*0.135));
+                    animationExplosionViewRight.setY((float) (displayHeight*0.25));
                     relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
                     animationEnemies.hideImage(enemyLeftLane2.get(0));
@@ -545,8 +551,10 @@ public class GameThread extends Thread{
                     textLifeRight.setText("LIFE: " + globalData.getLife().toString());
                     animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
                     animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
-                    animationExplosionViewLeft.setX(200);
-                    animationExplosionViewRight.setX(200);
+                    animationExplosionViewLeft.setX((float) (displayWidth*0.3));
+                    animationExplosionViewLeft.setY((float) (displayHeight*0.25));
+                    animationExplosionViewRight.setX((float) (displayWidth*0.3));
+                    animationExplosionViewRight.setY((float) (displayHeight*0.25));
                     relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
                     relativeLayoutAnimationRight.addView(animationExplosionViewRight);
                     animationEnemies.hideImage(enemyLeftLane3.get(0));

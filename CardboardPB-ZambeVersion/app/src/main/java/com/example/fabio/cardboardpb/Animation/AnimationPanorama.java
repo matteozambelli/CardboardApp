@@ -12,10 +12,11 @@ import android.widget.ImageView;
 public class AnimationPanorama implements AnimationPanoramaInterface{
 
     //start panorama animation
-    public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-28, 0, android.view.animation.Animation.RELATIVE_TO_SELF + 30);
-        ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
+    public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.07))),
+                0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
+        ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 5f,
+                1, 5f,
                 android.view.animation.Animation.RELATIVE_TO_SELF, 1f,
                 android.view.animation.Animation.RELATIVE_TO_SELF, 1f
         );
@@ -51,10 +52,11 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
     }
 
 
-    public void animatePanoramaRightView(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, Animation.RELATIVE_TO_SELF-28, 0, android.view.animation.Animation.RELATIVE_TO_SELF + 30);
-        ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 3.5f,
-                1, 3.5f,
+    public void animatePanoramaRightView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.02))),
+                0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
+        ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 5f,
+                1, 5f,
                 android.view.animation.Animation.RELATIVE_TO_SELF, -1f,
                 android.view.animation.Animation.RELATIVE_TO_SELF, 1f
         );
@@ -88,8 +90,9 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
         });
     }
 
-    public void animatePanoramaCloud(final ImageView ivLeft, final ImageView ivRight) {
-        TranslateAnimation TranslateAnimation = new TranslateAnimation(0,650,0,0);
+    public void animatePanoramaCloud(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0,((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.4))),
+                0,0);
         ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 1,
                 1, 1,
                 android.view.animation.Animation.RELATIVE_TO_SELF, 1f,

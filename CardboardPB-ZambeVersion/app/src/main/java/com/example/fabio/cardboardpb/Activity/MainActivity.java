@@ -220,7 +220,8 @@ public class MainActivity extends Activity {
         timerTask= new TimerTask() {
              @Override
              public void run() {
-                 PanoramaAsyncTask p = new PanoramaAsyncTask(panoramaLeft1, panoramaLeft2, panoramaRight1, panoramaRight2, panoramaLeftSky, panoramaRightSky);
+                 PanoramaAsyncTask p = new PanoramaAsyncTask(panoramaLeft1, panoramaLeft2, panoramaRight1,
+                         panoramaRight2, panoramaLeftSky, panoramaRightSky, width, height);
 
                  p.execute();
              }

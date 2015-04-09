@@ -42,7 +42,7 @@ public class AnimationEnemies extends Animation implements AnimationEnemiesInter
 
     public void animateFrontCarLane2(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
 
-        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.1))));
+        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.095))));
         ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 4f,
                 1, 4f,
                 Animation.RELATIVE_TO_SELF, 0.5f,

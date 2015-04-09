@@ -41,43 +41,49 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/tree_left1"
-            android:background="@drawable/tree_rid"
-            android:layout_marginLeft="50dp"
+            android:background="@drawable/housecianosx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="76dp"
             android:layout_marginTop="121dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/tree_left2"
-            android:background="@drawable/tree_rid"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="121dp" />
+            android:background="@drawable/housecianodx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="121dp"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/signal_left1"
             android:background="@drawable/signalboard"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="141dp" />
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="132dp"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/signal_left2"
             android:background="@drawable/signalboard"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="141dp" />
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="132dp"/>
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/house_left1"
-            android:background="@drawable/house"
-            android:layout_marginLeft="50dp"
+            android:background="@drawable/houseredsx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="76dp"
             android:layout_marginTop="121dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/house_left2"
-            android:background="@drawable/house"
-            android:layout_marginLeft="200dp"
+            android:background="@drawable/housereddx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="76dp"
             android:layout_marginTop="121dp" />
 
 
@@ -355,45 +361,50 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/tree_right1"
-            android:background="@drawable/tree_rid"
-            android:layout_marginLeft="50dp"
+            android:background="@drawable/housecianosx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="76dp"
             android:layout_marginTop="121dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/tree_right2"
-            android:background="@drawable/tree_rid"
-            android:layout_marginTop="121dp"
-            android:layout_marginLeft="200dp" />
+            android:background="@drawable/housecianodx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="121dp"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/signal_right1"
             android:background="@drawable/signalboard"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="141dp" />
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="132dp" />
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/signal_right2"
             android:background="@drawable/signalboard"
-            android:layout_marginTop="141dp"
-            android:layout_marginLeft="200dp" />
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="132dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/house_right1"
-            android:background="@drawable/house"
-            android:layout_marginLeft="50dp"
+            android:background="@drawable/houseredsx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="76dp"
             android:layout_marginTop="121dp" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/house_right2"
-            android:background="@drawable/house"
-            android:layout_marginTop="121dp"
-            android:layout_marginLeft="200dp" />
-
+            android:background="@drawable/housereddx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="121dp" />
 
 
         <ImageView

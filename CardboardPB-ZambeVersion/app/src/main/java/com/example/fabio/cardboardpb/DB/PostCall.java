@@ -264,11 +264,28 @@ public class PostCall {
                                     }
                                 });
                             }
+                            else if(response.contains("emailNotChecked")){
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Warning","this email: "+ email+" doesn't exist",logInActivity);
+                                    }
+                                });
+                            }
                             else if(response.contains("emailAlreadyExist")){
                                 logInActivity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
                                         customAlert("Warning","email address is already in use."+'\n'+"Sign up failed",logInActivity);
+                                    }
+                                });
+                            }
+                            else if(response.contains("emailNotFound")){
+
+                                logInActivity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        customAlert("Warning","wrong email",logInActivity);
                                     }
                                 });
                             }

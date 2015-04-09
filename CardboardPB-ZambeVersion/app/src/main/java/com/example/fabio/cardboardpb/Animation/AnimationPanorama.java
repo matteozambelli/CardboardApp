@@ -13,7 +13,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
 
     //start panorama animation
     public void animatePanoramaLeftView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
-        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.07))),
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.06))),
                 0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
         ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 5f,
                 1, 5f,
@@ -53,7 +53,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
 
 
     public void animatePanoramaRightView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
-        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.02))),
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.005))),
                 0,((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.08))));
         ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 5f,
                 1, 5f,

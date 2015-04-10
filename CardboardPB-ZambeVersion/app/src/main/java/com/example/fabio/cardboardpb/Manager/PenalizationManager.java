@@ -58,6 +58,9 @@ public class PenalizationManager implements PenalizationManagerInterface {
                 enemyLeftLane1.get(2).setAlpha(getLevelPenalization());
                 enemyLeftLane2.get(2).setAlpha(getLevelPenalization());
                 enemyLeftLane3.get(2).setAlpha(getLevelPenalization());
+                enemyLeftLane1.get(3).setAlpha(getLevelPenalization());
+                enemyLeftLane2.get(3).setAlpha(getLevelPenalization());
+                enemyLeftLane3.get(3).setAlpha(getLevelPenalization());
 
             }break;
             case RIGHT_EYE:{
@@ -70,6 +73,9 @@ public class PenalizationManager implements PenalizationManagerInterface {
                 enemyRightLane1.get(2).setAlpha(getLevelPenalization());
                 enemyRightLane2.get(2).setAlpha(getLevelPenalization());
                 enemyRightLane3.get(2).setAlpha(getLevelPenalization());
+                enemyRightLane1.get(3).setAlpha(getLevelPenalization());
+                enemyRightLane2.get(3).setAlpha(getLevelPenalization());
+                enemyRightLane3.get(3).setAlpha(getLevelPenalization());
             }break;
             default:{}break;
         }

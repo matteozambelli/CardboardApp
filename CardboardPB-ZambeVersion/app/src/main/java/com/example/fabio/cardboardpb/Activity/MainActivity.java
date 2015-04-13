@@ -281,10 +281,10 @@ public class MainActivity extends Activity {
 
         relativeLayoutAnimationLeft=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundLeft);
         relativeLayoutAnimationRight=(RelativeLayout)findViewById(R.id.relativeLayoutAnimationBackgroundRight);
-        backgroundViewLeft=new AnimationBackgroundView(this);
-        backgroundViewRight=new AnimationBackgroundView(this);
-        relativeLayoutAnimationLeft.addView(backgroundViewLeft);
-        relativeLayoutAnimationRight.addView(backgroundViewRight);
+        //backgroundViewLeft=new AnimationBackgroundView(this);
+        //backgroundViewRight=new AnimationBackgroundView(this);
+        //relativeLayoutAnimationLeft.addView(backgroundViewLeft);
+        //relativeLayoutAnimationRight.addView(backgroundViewRight);
 
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,

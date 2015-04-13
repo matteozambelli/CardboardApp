@@ -14,6 +14,7 @@
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
+        android:background="@drawable/background_car1_rid"
         >
 
         <RelativeLayout
@@ -364,14 +365,16 @@
         android:id="@+id/relativeLayoutRight"
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
-        android:layout_weight="50">
+        android:layout_weight="50"
+        >
 
         <RelativeLayout
             android:id="@+id/relativeLayoutAnimationBackgroundRight"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_car1_rid">
 
         </RelativeLayout>
 

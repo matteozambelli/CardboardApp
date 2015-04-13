@@ -132,39 +132,110 @@ public class MainActivity extends Activity {
 
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
 
+        ImageView imageViewEnemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
+        imageViewEnemyLeftLane1Id0.setX((float) (width*0.001));
+        imageViewEnemyLeftLane1Id0.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane1Id1 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id1);
+        imageViewEnemyLeftLane1Id1.setX((float) (width*0.001));
+        imageViewEnemyLeftLane1Id1.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane1Id2 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id2);
+        imageViewEnemyLeftLane1Id2.setX((float) (width*0.001));
+        imageViewEnemyLeftLane1Id2.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane1Id3 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id3);
+        imageViewEnemyLeftLane1Id3.setX((float) (width*0.001));
+        imageViewEnemyLeftLane1Id3.setY((float) (height*0.001));
 
-        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0));
-        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id1));
-        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id2));
-        enemyLeftLane1.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id3));
-        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0));
-        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id1));
-        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id2));
-        enemyRightLane1.add((ImageView) findViewById(R.id.imageViewEnemyRightLane1Id3));
+        ImageView imageViewEnemyRightLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id0);
+        imageViewEnemyRightLane1Id0.setX((float) (width*0.001));
+        imageViewEnemyRightLane1Id0.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane1Id1 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id1);
+        imageViewEnemyRightLane1Id1.setX((float) (width*0.001));
+        imageViewEnemyRightLane1Id1.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane1Id2 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id2);
+        imageViewEnemyRightLane1Id2.setX((float) (width*0.001));
+        imageViewEnemyRightLane1Id2.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane1Id3 = (ImageView) findViewById(R.id.imageViewEnemyRightLane1Id3);
+        imageViewEnemyRightLane1Id3.setX((float) (width*0.001));
+        imageViewEnemyRightLane1Id3.setY((float) (height*0.001));
 
+        ImageView imageViewEnemyLeftLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0);
+        imageViewEnemyLeftLane2Id0.setX((float) (width*0.0015));
+        imageViewEnemyLeftLane2Id0.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane2Id1 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id1);
+        imageViewEnemyLeftLane2Id1.setX((float) (width*0.0015));
+        imageViewEnemyLeftLane2Id1.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane2Id2 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id2);
+        imageViewEnemyLeftLane2Id2.setX((float) (width*0.0015));
+        imageViewEnemyLeftLane2Id2.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane2Id3 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id3);
+        imageViewEnemyLeftLane2Id3.setX((float) (width*0.0015));
+        imageViewEnemyLeftLane2Id3.setY((float) (height*0.001));
 
-        enemyLeftLane2.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id0));
-        enemyLeftLane2.add( (ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id1));
-        enemyLeftLane2.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id2));
-        enemyLeftLane2.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane2Id3));
+        ImageView imageViewEnemyRightLane2Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0);
+        imageViewEnemyRightLane2Id0.setX((float) (width*0.0015));
+        imageViewEnemyRightLane2Id0.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane2Id1 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id1);
+        imageViewEnemyRightLane2Id1.setX((float) (width*0.0015));
+        imageViewEnemyRightLane2Id1.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane2Id2 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id2);
+        imageViewEnemyRightLane2Id2.setX((float) (width*0.0015));
+        imageViewEnemyRightLane2Id2.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane2Id3 = (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id3);
+        imageViewEnemyRightLane2Id3.setX((float) (width*0.0015));
+        imageViewEnemyRightLane2Id3.setY((float) (height*0.001));
 
-        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id0));
-        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id1));
-        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id2));
-        enemyRightLane2.add( (ImageView) findViewById(R.id.imageViewEnemyRightLane2Id3));
+        ImageView imageViewEnemyLeftLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0);
+        imageViewEnemyLeftLane3Id0.setX((float) (width*0.001));
+        imageViewEnemyLeftLane3Id0.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane3Id1 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id1);
+        imageViewEnemyLeftLane3Id1.setX((float) (width*0.001));
+        imageViewEnemyLeftLane3Id1.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane3Id2 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id2);
+        imageViewEnemyLeftLane3Id2.setX((float) (width*0.001));
+        imageViewEnemyLeftLane3Id2.setY((float) (height*0.001));
+        ImageView imageViewEnemyLeftLane3Id3 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id3);
+        imageViewEnemyLeftLane3Id3.setX((float) (width*0.001));
+        imageViewEnemyLeftLane3Id3.setY((float) (height*0.001));
 
+        ImageView imageViewEnemyRightLane3Id0 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0);
+        imageViewEnemyRightLane3Id0.setX((float) (width*0.001));
+        imageViewEnemyRightLane3Id0.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane3Id1 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id1);
+        imageViewEnemyRightLane3Id1.setX((float) (width*0.001));
+        imageViewEnemyRightLane3Id1.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane3Id2 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id2);
+        imageViewEnemyRightLane3Id2.setX((float) (width*0.001));
+        imageViewEnemyRightLane3Id2.setY((float) (height*0.001));
+        ImageView imageViewEnemyRightLane3Id3 = (ImageView) findViewById(R.id.imageViewEnemyRightLane3Id3);
+        imageViewEnemyRightLane3Id3.setX((float) (width*0.001));
+        imageViewEnemyRightLane3Id3.setY((float) (height*0.001));
 
-        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id0));
-        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id1));
-        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id2));
-        enemyLeftLane3.add((ImageView) findViewById(R.id.imageViewEnemyLeftLane3Id3));
+        enemyLeftLane1.add(imageViewEnemyLeftLane1Id0);
+        enemyLeftLane1.add(imageViewEnemyLeftLane1Id1);
+        enemyLeftLane1.add(imageViewEnemyLeftLane1Id2);
+        enemyLeftLane1.add(imageViewEnemyLeftLane1Id3);
+        enemyRightLane1.add(imageViewEnemyRightLane1Id0);
+        enemyRightLane1.add(imageViewEnemyRightLane1Id1);
+        enemyRightLane1.add(imageViewEnemyRightLane1Id2);
+        enemyRightLane1.add(imageViewEnemyRightLane1Id3);
 
+        enemyLeftLane2.add(imageViewEnemyLeftLane2Id0);
+        enemyLeftLane2.add(imageViewEnemyLeftLane2Id1);
+        enemyLeftLane2.add(imageViewEnemyLeftLane2Id2);
+        enemyLeftLane2.add(imageViewEnemyLeftLane2Id3);
+        enemyRightLane2.add(imageViewEnemyRightLane2Id0);
+        enemyRightLane2.add(imageViewEnemyRightLane2Id1);
+        enemyRightLane2.add(imageViewEnemyRightLane2Id2);
+        enemyRightLane2.add(imageViewEnemyRightLane2Id3);
 
-        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id0));
-        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id1));
-        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id2));
-        enemyRightLane3.add((ImageView) findViewById(R.id.imageViewEnemyRightLane3Id3));
-
+        enemyLeftLane3.add(imageViewEnemyLeftLane3Id0);
+        enemyLeftLane3.add(imageViewEnemyLeftLane3Id1);
+        enemyLeftLane3.add(imageViewEnemyLeftLane3Id2);
+        enemyLeftLane3.add(imageViewEnemyLeftLane3Id3);
+        enemyRightLane3.add(imageViewEnemyRightLane3Id0);
+        enemyRightLane3.add(imageViewEnemyRightLane3Id1);
+        enemyRightLane3.add(imageViewEnemyRightLane3Id2);
+        enemyRightLane3.add(imageViewEnemyRightLane3Id3);
 
         panoramaLeft1.add((ImageView) findViewById(R.id.tree_left1));
         panoramaLeft2.add((ImageView) findViewById(R.id.tree_left2));

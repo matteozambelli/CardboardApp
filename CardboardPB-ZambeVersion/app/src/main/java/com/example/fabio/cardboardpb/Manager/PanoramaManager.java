@@ -30,6 +30,7 @@ public class PanoramaManager implements PanoramaManagerInterface
             }
         }
         previousId=idSubject;
+
     }
 
 
@@ -50,8 +51,7 @@ public class PanoramaManager implements PanoramaManagerInterface
     }
 
 
-     /* FOR TEST ONLY
-    public static void main(String [ ] args)
+  /*FOR TEST ONLY  public static void main(String [ ] args)
     {
 
         PanoramaManager p = new PanoramaManager();

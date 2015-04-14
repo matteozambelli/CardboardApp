@@ -321,7 +321,7 @@ public class PostCall {
                 } catch (IOException e) {
                     activity.runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(activity, "Server error "+'\n'+"We apologize for the inconvenience ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity, "Network error "+'\n'+"check out your connection ", Toast.LENGTH_LONG).show();
                         }
                     });
 

@@ -5,9 +5,11 @@ import android.os.AsyncTask;
 import android.widget.ImageView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationPanorama;
+import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Side;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Manager.PanoramaManager;
+import com.example.fabio.cardboardpb.Manager.PenalizationManager;
 
 import java.util.ArrayList;
 
@@ -27,23 +29,19 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
     private ArrayList<ImageView> panoramaLeftSky;
     private PanoramaManager panoramaManager;
     private AnimationPanorama animationPanorama;
+    private PenalizationManager penalizationManager;
     private int pick=0;
     private Side side;
     private int displayWidth;
     private int displayHeight;
+    private GlobalData globalData;
+    private Eye eye;
 
-    /**
-     * @param panoramaLeft1
-     * @param panoramaLeft2
-     * @param panoramaRight1
-     * @param panoramaRight2
-     * @param panoramaLeftSky
-     * @param panoramaRightSky
-     */
+
     public PanoramaAsyncTask(ArrayList<ImageView> panoramaLeft1, ArrayList<ImageView> panoramaLeft2,
                              ArrayList<ImageView> panoramaRight1, ArrayList<ImageView> panoramaRight2,
                              ArrayList<ImageView> panoramaLeftSky, ArrayList<ImageView> panoramaRightSky,
-                             int width,int height) {
+                             int width,int height,GlobalData globalData,Eye eye) {
 
         this.panoramaLeft1 = panoramaLeft1;
         this.panoramaLeft2 = panoramaLeft2;
@@ -54,9 +52,12 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
 
         this.displayHeight=height;
         this.displayWidth=width;
+        this.globalData=globalData;
+        this.eye=eye;
 
         animationPanorama = new AnimationPanorama();
         panoramaManager = new PanoramaManager();
+        penalizationManager=new PenalizationManager(panoramaLeft1,panoramaRight1,panoramaLeft2,panoramaRight2,panoramaLeftSky,panoramaRightSky,globalData,true);
     }
 
     @Override
@@ -70,6 +71,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
         panoramaManager.randomPanorama();
         pick= panoramaManager.getIdSubject();
         side=panoramaManager.getSelectedSide();
+
         return null;
     }
 
@@ -88,6 +90,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                     animationPanorama.hideImage(panoramaRight2.get(0));
                     animationPanorama.hideImage(panoramaRight2.get(1));
                     animationPanorama.hideImage(panoramaRight2.get(2));
+                    penalizationManager.penalize(eye);
 
                     if (side.equals(Side.LEFT)) {
                         if (pick == 1) {

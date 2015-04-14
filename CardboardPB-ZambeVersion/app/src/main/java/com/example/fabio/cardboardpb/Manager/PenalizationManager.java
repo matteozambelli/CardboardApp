@@ -18,11 +18,22 @@ public class PenalizationManager implements PenalizationManagerInterface {
     private ArrayList<ImageView> enemyRightLane1;
     private ArrayList<ImageView> enemyRightLane2;
     private ArrayList<ImageView> enemyRightLane3;
+
+    private ArrayList<ImageView> panoramaLeft1= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaRight1= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaLeft2= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaRight2= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaLeftSky= new ArrayList<ImageView>();
+    private ArrayList<ImageView> panoramaRightSky= new ArrayList<ImageView>();
+
+    private boolean panorama;
+
+
     private GlobalData globalData;
 
 
     /**
-     *
+     * constructor for enemy penalization
      * @param enemyLeftLane1
      * @param enemyLeftLane2
      * @param enemyLeftLane3
@@ -42,6 +53,28 @@ public class PenalizationManager implements PenalizationManagerInterface {
     }
 
     /**
+     * constructor for panorama penalization
+     * @param panoramaLeft1
+     * @param panoramaRight1
+     * @param panoramaLeft2
+     * @param panoramaRight2
+     * @param panoramaLeftSky
+     * @param panoramaRightSky
+     * @param panorama
+     * @param globalData
+     */
+    public PenalizationManager(ArrayList<ImageView> panoramaLeft1, ArrayList<ImageView> panoramaRight1, ArrayList<ImageView> panoramaLeft2, ArrayList<ImageView> panoramaRight2, ArrayList<ImageView> panoramaLeftSky, ArrayList<ImageView> panoramaRightSky, GlobalData globalData,boolean panorama) {
+        this.panoramaLeft1 = panoramaLeft1;
+        this.panoramaRight1 = panoramaRight1;
+        this.panoramaLeft2 = panoramaLeft2;
+        this.panoramaRight2 = panoramaRight2;
+        this.panoramaLeftSky = panoramaLeftSky;
+        this.panoramaRightSky = panoramaRightSky;
+        this.panorama = panorama;
+        this.globalData = globalData;
+    }
+
+    /**
      * set the penalization to the imageView of the enemy
      * @param eye
      */
@@ -49,6 +82,13 @@ public class PenalizationManager implements PenalizationManagerInterface {
     public void penalize(Eye eye) {
         switch(eye){
             case LEFT_EYE:{
+                if(panorama){
+                    panoramaLeft1.get(0).setAlpha(getLevelPenalization());
+                    panoramaLeft1.get(1).setAlpha(getLevelPenalization());
+                    panoramaLeft2.get(0).setAlpha(getLevelPenalization());
+                    panoramaLeft2.get(1).setAlpha(getLevelPenalization());
+                    panoramaLeftSky.get(0).setAlpha(getLevelPenalization());
+                }else{
                 enemyLeftLane1.get(0).setAlpha(getLevelPenalization());
                 enemyLeftLane2.get(0).setAlpha(getLevelPenalization());
                 enemyLeftLane3.get(0).setAlpha(getLevelPenalization());
@@ -61,21 +101,31 @@ public class PenalizationManager implements PenalizationManagerInterface {
                 enemyLeftLane1.get(3).setAlpha(getLevelPenalization());
                 enemyLeftLane2.get(3).setAlpha(getLevelPenalization());
                 enemyLeftLane3.get(3).setAlpha(getLevelPenalization());
+                }
 
             }break;
             case RIGHT_EYE:{
-                enemyRightLane1.get(0).setAlpha(getLevelPenalization());
-                enemyRightLane2.get(0).setAlpha(getLevelPenalization());
-                enemyRightLane3.get(0).setAlpha(getLevelPenalization());
-                enemyRightLane1.get(1).setAlpha(getLevelPenalization());
-                enemyRightLane2.get(1).setAlpha(getLevelPenalization());
-                enemyRightLane3.get(1).setAlpha(getLevelPenalization());
-                enemyRightLane1.get(2).setAlpha(getLevelPenalization());
-                enemyRightLane2.get(2).setAlpha(getLevelPenalization());
-                enemyRightLane3.get(2).setAlpha(getLevelPenalization());
-                enemyRightLane1.get(3).setAlpha(getLevelPenalization());
-                enemyRightLane2.get(3).setAlpha(getLevelPenalization());
-                enemyRightLane3.get(3).setAlpha(getLevelPenalization());
+                if(panorama){
+                    panoramaRight1.get(0).setAlpha(getLevelPenalization());
+                    panoramaRight1.get(1).setAlpha(getLevelPenalization());
+                    panoramaRight2.get(0).setAlpha(getLevelPenalization());
+                    panoramaRight2.get(1).setAlpha(getLevelPenalization());
+                    panoramaRightSky.get(0).setAlpha(getLevelPenalization());
+
+                }else {
+                    enemyRightLane1.get(0).setAlpha(getLevelPenalization());
+                    enemyRightLane2.get(0).setAlpha(getLevelPenalization());
+                    enemyRightLane3.get(0).setAlpha(getLevelPenalization());
+                    enemyRightLane1.get(1).setAlpha(getLevelPenalization());
+                    enemyRightLane2.get(1).setAlpha(getLevelPenalization());
+                    enemyRightLane3.get(1).setAlpha(getLevelPenalization());
+                    enemyRightLane1.get(2).setAlpha(getLevelPenalization());
+                    enemyRightLane2.get(2).setAlpha(getLevelPenalization());
+                    enemyRightLane3.get(2).setAlpha(getLevelPenalization());
+                    enemyRightLane1.get(3).setAlpha(getLevelPenalization());
+                    enemyRightLane2.get(3).setAlpha(getLevelPenalization());
+                    enemyRightLane3.get(3).setAlpha(getLevelPenalization());
+                }
             }break;
             default:{}break;
         }

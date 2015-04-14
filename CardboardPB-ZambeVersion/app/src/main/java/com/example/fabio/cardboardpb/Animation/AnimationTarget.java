@@ -10,7 +10,7 @@ import android.widget.ImageView;
 /**
  * Created by matteo on 03/02/2015.
  */
-public class AnimationTarget {
+public class AnimationTarget implements  AnimationTargetInterface{
 
     public AnimationSet animationTarget1=new AnimationSet(false);
     public AnimationSet animationTarget2=new AnimationSet(false);

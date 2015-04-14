@@ -12,6 +12,8 @@ public interface AnimationPanoramaInterface {
 
     public void animatePanoramaRightView(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight);
 
+    public void animatePanoramaCloud(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight);
+
     public void hideImage(ImageView img);
 
     public void showImage(ImageView img);

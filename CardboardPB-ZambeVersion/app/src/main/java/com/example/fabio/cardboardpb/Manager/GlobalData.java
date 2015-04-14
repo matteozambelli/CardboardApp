@@ -11,6 +11,19 @@ public class GlobalData {
     private boolean isEnd1 = false;
     private boolean isEnd2 = false;
     private boolean isEnd3 = false;
+    private boolean gameover=false;
+    private int life = 3;
+    private Eye eye;
+    private int level = 1;
+    private int score = 0;
+
+    public boolean isGameover() {
+        return gameover;
+    }
+
+    public void setGameover(boolean gameover) {
+        this.gameover = gameover;
+    }
 
     public boolean isRunnable() {
         return runnable;
@@ -21,11 +34,6 @@ public class GlobalData {
     }
 
     private boolean runnable = true;
-
-    private int life = 3;
-    private Eye eye;
-    private int level = 1;
-    private int score = 0;
 
     public int getAbsolutePosition() {
         return absolutePosition;

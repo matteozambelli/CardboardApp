@@ -28,7 +28,6 @@ import java.util.ArrayList;
 public class GameThread extends Thread{
 
     public GameManager gameManager;
-    private PostCall postCall;
     private AnimationEnemies animationEnemies;
     private AnimationTarget animationTarget;
 
@@ -75,7 +74,6 @@ public class GameThread extends Thread{
     private int displayWidth;
     private int displayHeight;
     private String id_user;
-    private boolean gameOver=false;
     private int countNotInMyLane=0;
 
 
@@ -202,12 +200,11 @@ public class GameThread extends Thread{
 
                     if (globalData.getLife() == 0){
 
-                        postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2);
-                        postCall.myPostCall(TypeCall.REPORT,activity);
+
                         globalData.setRunnable(false);
                         //todo , HOME PER RIGIOCARE
 
-                        gameOver=true;
+                        globalData.setGameover(true);
 
                         textLevelGameOverLeft = (TextView) frameLayoutGameOverLeft.findViewById(R.id.textLevelGameOverLeft);
                         textLevelGameOverLeft.setText("LEVEL: "+(gameManager.getIdLevel()));
@@ -227,11 +224,11 @@ public class GameThread extends Thread{
 
                         globalData.setRunnable(true);
 
-                        if(gameOver){
+                        if(globalData.isGameover()){
                             globalData.resetLife();
                             gameManager=new GameManager();
                             gameManager.generateGameData();
-                            gameOver=false;
+                            globalData.setGameover(false);
                             i=0;
                         }
 

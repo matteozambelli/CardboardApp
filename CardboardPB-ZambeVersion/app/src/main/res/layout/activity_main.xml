@@ -337,14 +337,14 @@
                 android:layout_marginTop="95dp"
                 android:textSize="12dp"
                 android:padding="5dp"
-                android:text="Press DOWN for insert your name"
+                android:text="Press DOWN to receive your score by mail"
                 android:id="@+id/editTextInsertNameLeft"
                 android:background="@android:color/holo_orange_light"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Press UP to restart"
+                android:text="Press HOME to restart"
                 android:id="@+id/textRestartGameOverLeft"
                 android:layout_marginTop="133dp"
                 android:layout_gravity="center_horizontal"
@@ -630,14 +630,14 @@
                 android:layout_marginTop="95dp"
                 android:textSize="12dp"
                 android:padding="5dp"
-                android:text="Press DOWN for insert your name"
+                android:text="Press DOWN to receive your score by mail"
                 android:id="@+id/editTextInsertNameRight"
                 android:background="@android:color/holo_orange_light"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Press UP to restart"
+                android:text="Press HOME to restart"
                 android:id="@+id/textRestartGameOverRight"
                 android:layout_marginTop="133dp"
                 android:layout_gravity="center_horizontal"

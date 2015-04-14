@@ -10,12 +10,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
+import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
@@ -46,12 +49,13 @@ public class MainActivity extends Activity {
     private boolean isEndEnemyLane1 =false;
     private boolean isEndEnemyLane2 = false;
     private boolean isEndEnemyLane3 = false;
-    RelativeLayout relativeLayoutLeft;
-    RelativeLayout relativeLayoutRight;
-    RelativeLayout relativeLayoutAnimationLeft;
-    RelativeLayout relativeLayoutAnimationRight;
-    FrameLayout frameLayoutLeft;
-    FrameLayout frameLayoutRight;
+    private PostCall postCall;
+    private RelativeLayout relativeLayoutLeft;
+    private RelativeLayout relativeLayoutRight;
+    private RelativeLayout relativeLayoutAnimationLeft;
+    private RelativeLayout relativeLayoutAnimationRight;
+    private FrameLayout frameLayoutLeft;
+    private FrameLayout frameLayoutRight;
 
     //Our car
     private ImageView carLeft;
@@ -76,7 +80,8 @@ public class MainActivity extends Activity {
     private ImageView target1;
     private ImageView target2;
     private ImageView target3;
-
+    private EditText sendEmailLeft;
+    private EditText sendEmailRight;
     private TextView t1; //REMOVE THIS
     private TextView t2; //REMOVE THIS
 
@@ -120,7 +125,6 @@ public class MainActivity extends Activity {
         Intent intent=getIntent();
 
         globalData= new GlobalData();
-        Bundle data = getIntent().getExtras();
 
         eye=(Eye) intent.getSerializableExtra("eye");
 
@@ -131,6 +135,12 @@ public class MainActivity extends Activity {
         carLeft = (ImageView) findViewById(R.id.imageViewMyCarLeft);
 
         carRight = (ImageView) findViewById(R.id.imageViewMyCarRight);
+
+        sendEmailLeft=(EditText) findViewById(R.id.editTextInsertNameLeft);
+
+        sendEmailRight=(EditText) findViewById(R.id.editTextInsertNameRight);
+
+        hideSendEmail(); //hide send email
 
         ImageView imageViewEnemyLeftLane1Id0 = (ImageView) findViewById(R.id.imageViewEnemyLeftLane1Id0);
         imageViewEnemyLeftLane1Id0.setX((float) (width*0.001));
@@ -286,6 +296,8 @@ public class MainActivity extends Activity {
         //relativeLayoutAnimationLeft.addView(backgroundViewLeft);
         //relativeLayoutAnimationRight.addView(backgroundViewRight);
 
+
+
         gameThread=new GameThread(this,t1,t2,textLevelLeft,textLifeLeft, textPointsLeft,
                 textLevelRight,textLifeRight, textPointsRight,
                 enemyLeftLane1,enemyLeftLane2,enemyLeftLane3,enemyRightLane1,
@@ -365,19 +377,32 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_VOLUME_DOWN:
                 if (action == KeyEvent.ACTION_DOWN) {
                     //on key - press
-                    volumeDown();
+                    if(!globalData.isGameover()){
+                        volumeDown();
+                    }else{
+                        sendResultByEmail();
+                    }
+
+
                 }
                 return true;
             case KeyEvent.KEYCODE_MEDIA_PREVIOUS:
                 if (action == KeyEvent.ACTION_DOWN) {
                     //on key - press
-                    volumeDown();
+                    if(!globalData.isGameover()){
+                        volumeDown();
+                    }else{
+                        sendResultByEmail();
+                    }
                 }
                 return true;
             case KeyEvent.KEYCODE_HEADSETHOOK:
                 if (action == KeyEvent.ACTION_DOWN) {
                     //on key home press
-                    playAgain();
+                    if(globalData.isGameover()){
+                        playAgain();
+                    }
+
                 }
                 return true;
             default:
@@ -490,12 +515,33 @@ public class MainActivity extends Activity {
     private void playAgain() {
 
         Intent restart = new Intent(MainActivity.this, MainActivity.class);
+        restart.putExtra("eye",eye);
+        restart.putExtra("id_user",id_user);
+        restart.putExtra("id_doctor",id_doctor);
+
         startActivity(restart);
 
 
     }
 
 
+    /**
+     * if you play without registration you can't receive the results
+     */
+    private void hideSendEmail(){
+        if(id_user.equals("3")){
+            sendEmailRight.setAlpha(0);
+            sendEmailLeft.setAlpha(0);
+        }
+    }
+
+    private void sendResultByEmail(){
+        if(!id_user.equals("3")){
+            postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2);
+            postCall.myPostCall(TypeCall.REPORT,activity);
+        }
+
+    }
 
 
 

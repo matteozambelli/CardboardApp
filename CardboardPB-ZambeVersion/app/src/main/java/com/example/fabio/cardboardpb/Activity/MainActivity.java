@@ -24,6 +24,7 @@ import com.example.fabio.cardboardpb.Thread.AnimationBackgroundView;
 import com.example.fabio.cardboardpb.Thread.AnimationLoopThread;
 import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
+import com.example.fabio.cardboardpb.Thread.LaneAsyncTask;
 import com.example.fabio.cardboardpb.Thread.PanoramaAsyncTask;
 
 
@@ -38,8 +39,16 @@ public class MainActivity extends Activity {
     private int height;
     private static MainActivity instance;
     private Eye eye;
-    private TimerTask timerTask;
-    private Timer timer;
+    private TimerTask timerTaskPanorama;
+    private TimerTask timerTaskLane;
+    private TimerTask timerTaskLane2;
+    private TimerTask timerTaskLane3;
+
+    private Timer timerPanorama;
+    private Timer timerLane;
+    private Timer timerLane2;
+
+
 
     public GlobalData globalData;
     private GameThread gameThread;
@@ -76,6 +85,14 @@ public class MainActivity extends Activity {
     private ArrayList<ImageView> panoramaRight2= new ArrayList<ImageView>();
     private ArrayList<ImageView> panoramaLeftSky= new ArrayList<ImageView>();
     private ArrayList<ImageView> panoramaRightSky= new ArrayList<ImageView>();
+
+    private ImageView imageViewLaneLeft1;
+    private ImageView imageViewLaneLeft2;
+    private ImageView imageViewLaneLeft3;
+    private ImageView imageViewLaneRight1;
+    private ImageView imageViewLaneRight2;
+    private ImageView imageViewLaneRight3;
+
 
     private ImageView target1;
     private ImageView target2;
@@ -271,6 +288,12 @@ public class MainActivity extends Activity {
         textLifeRight = (TextView)findViewById(R.id.textViewLifeRight);
         textPointsRight = (TextView)findViewById(R.id.textViewScoreRight);
 
+        imageViewLaneLeft1 = (ImageView) findViewById(R.id.laneLeft1);
+        imageViewLaneLeft2 = (ImageView) findViewById(R.id.laneLeft2);
+        imageViewLaneLeft3 = (ImageView) findViewById(R.id.laneLeft3);
+        imageViewLaneRight1 = (ImageView) findViewById(R.id.laneRight1);
+        imageViewLaneRight2 = (ImageView) findViewById(R.id.laneRight2);
+        imageViewLaneRight3 = (ImageView) findViewById(R.id.laneRight3);
 
         target1=(ImageView) findViewById(R.id.target1);
         target2=(ImageView) findViewById(R.id.target2);
@@ -308,7 +331,7 @@ public class MainActivity extends Activity {
         gameThread.start();
 
 
-        timerTask= new TimerTask() {
+        timerTaskPanorama= new TimerTask() {
              @Override
              public void run() {
                  PanoramaAsyncTask p = new PanoramaAsyncTask(panoramaLeft1, panoramaLeft2, panoramaRight1,
@@ -318,8 +341,38 @@ public class MainActivity extends Activity {
              }
          };
 
-        timer= new Timer();
-        timer.schedule(timerTask,0,20000);
+        timerPanorama= new Timer();
+        timerPanorama.schedule(timerTaskPanorama,0,20000);
+
+        timerTaskLane= new TimerTask() {
+            @Override
+            public void run() {
+                LaneAsyncTask l = new LaneAsyncTask(imageViewLaneLeft1,imageViewLaneLeft2, imageViewLaneLeft3,
+                        imageViewLaneRight1, imageViewLaneRight2, imageViewLaneRight3,width, height);
+
+                l.execute();
+
+            }
+        };
+
+        timerTaskLane2= new TimerTask() {
+            @Override
+            public void run() {
+                LaneAsyncTask l2 = new LaneAsyncTask(imageViewLaneLeft1,imageViewLaneLeft2, imageViewLaneLeft3,
+                        imageViewLaneRight1, imageViewLaneRight2, imageViewLaneRight3,width, height);
+
+                l2.execute();
+            }
+        };
+
+        timerLane= new Timer();
+        timerLane.schedule(timerTaskLane,0,10000);
+
+        timerLane2= new Timer();
+        timerLane2.schedule(timerTaskLane2,1000,10000);
+
+
+
 
     }
 

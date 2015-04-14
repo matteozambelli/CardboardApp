@@ -335,7 +335,7 @@ public class MainActivity extends Activity {
              @Override
              public void run() {
                  PanoramaAsyncTask p = new PanoramaAsyncTask(panoramaLeft1, panoramaLeft2, panoramaRight1,
-                         panoramaRight2, panoramaLeftSky, panoramaRightSky, width, height);
+                         panoramaRight2, panoramaLeftSky, panoramaRightSky, width, height,globalData,eye);
 
                  p.execute();
              }

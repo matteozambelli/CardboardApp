@@ -40,15 +40,14 @@ public class MainActivity extends Activity {
     private static MainActivity instance;
     private Eye eye;
     private TimerTask timerTaskPanorama;
-    private TimerTask timerTaskLane;
+    private TimerTask timerTaskLane1;
     private TimerTask timerTaskLane2;
     private TimerTask timerTaskLane3;
 
     private Timer timerPanorama;
-    private Timer timerLane;
+    private Timer timerLane1;
     private Timer timerLane2;
-
-
+    private Timer timerLane3;
 
     public GlobalData globalData;
     private GameThread gameThread;
@@ -86,12 +85,24 @@ public class MainActivity extends Activity {
     private ArrayList<ImageView> panoramaLeftSky= new ArrayList<ImageView>();
     private ArrayList<ImageView> panoramaRightSky= new ArrayList<ImageView>();
 
-    private ImageView imageViewLaneLeft1;
-    private ImageView imageViewLaneLeft2;
-    private ImageView imageViewLaneLeft3;
-    private ImageView imageViewLaneRight1;
-    private ImageView imageViewLaneRight2;
-    private ImageView imageViewLaneRight3;
+    private ImageView imageViewLaneLeft1id0;
+    private ImageView imageViewLaneLeft2id0;
+    private ImageView imageViewLaneLeft3id0;
+    private ImageView imageViewLaneRight1id0;
+    private ImageView imageViewLaneRight2id0;
+    private ImageView imageViewLaneRight3id0;
+    private ImageView imageViewLaneLeft1id1;
+    private ImageView imageViewLaneLeft2id1;
+    private ImageView imageViewLaneLeft3id1;
+    private ImageView imageViewLaneRight1id1;
+    private ImageView imageViewLaneRight2id1;
+    private ImageView imageViewLaneRight3id1;
+    private ImageView imageViewLaneLeft1id2;
+    private ImageView imageViewLaneLeft2id2;
+    private ImageView imageViewLaneLeft3id2;
+    private ImageView imageViewLaneRight1id2;
+    private ImageView imageViewLaneRight2id2;
+    private ImageView imageViewLaneRight3id2;
 
 
     private ImageView target1;
@@ -288,12 +299,24 @@ public class MainActivity extends Activity {
         textLifeRight = (TextView)findViewById(R.id.textViewLifeRight);
         textPointsRight = (TextView)findViewById(R.id.textViewScoreRight);
 
-        imageViewLaneLeft1 = (ImageView) findViewById(R.id.laneLeft1);
-        imageViewLaneLeft2 = (ImageView) findViewById(R.id.laneLeft2);
-        imageViewLaneLeft3 = (ImageView) findViewById(R.id.laneLeft3);
-        imageViewLaneRight1 = (ImageView) findViewById(R.id.laneRight1);
-        imageViewLaneRight2 = (ImageView) findViewById(R.id.laneRight2);
-        imageViewLaneRight3 = (ImageView) findViewById(R.id.laneRight3);
+        imageViewLaneLeft1id0 = (ImageView) findViewById(R.id.laneLeft1id0);
+        imageViewLaneLeft2id0 = (ImageView) findViewById(R.id.laneLeft2id0);
+        imageViewLaneLeft3id0 = (ImageView) findViewById(R.id.laneLeft3id0);
+        imageViewLaneRight1id0 = (ImageView) findViewById(R.id.laneRight1id0);
+        imageViewLaneRight2id0 = (ImageView) findViewById(R.id.laneRight2id0);
+        imageViewLaneRight3id0 = (ImageView) findViewById(R.id.laneRight3id0);
+        imageViewLaneLeft1id1 = (ImageView) findViewById(R.id.laneLeft1id1);
+        imageViewLaneLeft2id1 = (ImageView) findViewById(R.id.laneLeft2id1);
+        imageViewLaneLeft3id1 = (ImageView) findViewById(R.id.laneLeft3id1);
+        imageViewLaneRight1id1 = (ImageView) findViewById(R.id.laneRight1id1);
+        imageViewLaneRight2id1 = (ImageView) findViewById(R.id.laneRight2id1);
+        imageViewLaneRight3id1 = (ImageView) findViewById(R.id.laneRight3id1);
+        imageViewLaneLeft1id2 = (ImageView) findViewById(R.id.laneLeft1id2);
+        imageViewLaneLeft2id2 = (ImageView) findViewById(R.id.laneLeft2id2);
+        imageViewLaneLeft3id2 = (ImageView) findViewById(R.id.laneLeft3id2);
+        imageViewLaneRight1id2 = (ImageView) findViewById(R.id.laneRight1id2);
+        imageViewLaneRight2id2 = (ImageView) findViewById(R.id.laneRight2id2);
+        imageViewLaneRight3id2 = (ImageView) findViewById(R.id.laneRight3id2);
 
         target1=(ImageView) findViewById(R.id.target1);
         target2=(ImageView) findViewById(R.id.target2);
@@ -344,11 +367,11 @@ public class MainActivity extends Activity {
         timerPanorama= new Timer();
         timerPanorama.schedule(timerTaskPanorama,0,20000);
 
-        timerTaskLane= new TimerTask() {
+        timerTaskLane1 = new TimerTask() {
             @Override
             public void run() {
-                LaneAsyncTask l = new LaneAsyncTask(imageViewLaneLeft1,imageViewLaneLeft2, imageViewLaneLeft3,
-                        imageViewLaneRight1, imageViewLaneRight2, imageViewLaneRight3,width, height);
+                LaneAsyncTask l = new LaneAsyncTask(imageViewLaneLeft1id0, imageViewLaneLeft2id0, imageViewLaneLeft3id0,
+                        imageViewLaneRight1id0, imageViewLaneRight2id0, imageViewLaneRight3id0,width, height);
 
                 l.execute();
 
@@ -358,20 +381,31 @@ public class MainActivity extends Activity {
         timerTaskLane2= new TimerTask() {
             @Override
             public void run() {
-                LaneAsyncTask l2 = new LaneAsyncTask(imageViewLaneLeft1,imageViewLaneLeft2, imageViewLaneLeft3,
-                        imageViewLaneRight1, imageViewLaneRight2, imageViewLaneRight3,width, height);
+                LaneAsyncTask l2 = new LaneAsyncTask(imageViewLaneLeft1id1, imageViewLaneLeft2id1, imageViewLaneLeft3id1,
+                        imageViewLaneRight1id1, imageViewLaneRight2id1, imageViewLaneRight3id1,width, height);
 
                 l2.execute();
             }
         };
 
-        timerLane= new Timer();
-        timerLane.schedule(timerTaskLane,0,10000);
+        timerTaskLane3= new TimerTask() {
+            @Override
+            public void run() {
+                LaneAsyncTask l3 = new LaneAsyncTask(imageViewLaneLeft1id2, imageViewLaneLeft2id2, imageViewLaneLeft3id2,
+                        imageViewLaneRight1id2, imageViewLaneRight2id2, imageViewLaneRight3id2,width, height);
+
+                l3.execute();
+            }
+        };
+
+        timerLane1 = new Timer();
+        timerLane1.schedule(timerTaskLane1, 0, 10000);
 
         timerLane2= new Timer();
-        timerLane2.schedule(timerTaskLane2,1000,10000);
+        timerLane2.schedule(timerTaskLane2,2000,10000);
 
-
+        timerLane3= new Timer();
+        timerLane3.schedule(timerTaskLane3,4000,10000);
 
 
     }

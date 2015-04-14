@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
-        android:background="@drawable/backgroundfisso"
+        android:background="@drawable/backgroundfissoblack"
         >
 
         <RelativeLayout
@@ -88,28 +88,83 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/laneLeft1"
+            android:id="@+id/laneLeft1id0"
             android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneLeft2"
-            android:layout_marginRight="22dp"
-            android:layout_marginTop="145dp" />
+            android:layout_alignRight="@+id/laneLeft2id0"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="139dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/laneLeft2"
+            android:id="@+id/laneLeft2id0"
             android:background="@drawable/lane"
             android:layout_centerHorizontal="true"
+            android:visibility="invisible"
             android:layout_marginTop="145dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/laneLeft3"
+            android:id="@+id/laneLeft3id0"
             android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneLeft2"
-            android:layout_marginLeft="22dp"
+            android:layout_alignLeft="@+id/laneLeft2id0"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id1"
+            android:background="@drawable/lanesx"
+            android:layout_alignRight="@+id/laneLeft2id1"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft2id1"
+            android:background="@drawable/lane"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
             android:layout_marginTop="145dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id1"
+            android:background="@drawable/lanedx"
+            android:layout_alignLeft="@+id/laneLeft2id1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id2"
+            android:background="@drawable/lanesx"
+            android:layout_alignRight="@+id/laneLeft2id2"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft2id2"
+            android:background="@drawable/lane"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_marginTop="145dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id2"
+            android:background="@drawable/lanedx"
+            android:layout_alignLeft="@+id/laneLeft2id2"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="139dp" />
 
         <ImageView
         android:layout_width="35dp"
@@ -399,7 +454,7 @@
             android:layout_height="fill_parent"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/backgroundfisso">
+            android:background="@drawable/backgroundfissoblack">
 
         </RelativeLayout>
 
@@ -465,28 +520,83 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/laneRight1"
+            android:id="@+id/laneRight1id0"
             android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneRight2"
-            android:layout_marginRight="22dp"
-            android:layout_marginTop="145dp" />
+            android:layout_alignRight="@+id/laneRight2id0"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="139dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/laneRight2"
+            android:id="@+id/laneRight2id0"
             android:background="@drawable/lane"
             android:layout_centerHorizontal="true"
+            android:visibility="invisible"
             android:layout_marginTop="145dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/laneRight3"
+            android:id="@+id/laneRight3id0"
             android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneRight2"
-            android:layout_marginLeft="22dp"
+            android:layout_alignLeft="@+id/laneRight2id0"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id1"
+            android:background="@drawable/lanesx"
+            android:layout_alignRight="@+id/laneRight2id1"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight2id1"
+            android:background="@drawable/lane"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
             android:layout_marginTop="145dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id1"
+            android:background="@drawable/lanedx"
+            android:layout_alignLeft="@+id/laneRight2id1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id2"
+            android:background="@drawable/lanesx"
+            android:layout_alignRight="@+id/laneRight2id2"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="139dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight2id2"
+            android:background="@drawable/lane"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_marginTop="145dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id2"
+            android:background="@drawable/lanedx"
+            android:layout_alignLeft="@+id/laneRight2id2"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="139dp" />
 
 
         <ImageView

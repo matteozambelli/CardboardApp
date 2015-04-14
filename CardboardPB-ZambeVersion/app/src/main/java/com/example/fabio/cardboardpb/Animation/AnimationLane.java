@@ -21,7 +21,7 @@ public class AnimationLane extends Animation {
 
     public void animateLane1(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
 
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.255))),
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.2))),
                 0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.25))));
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 1f,
                 1, 1f,
@@ -60,7 +60,7 @@ public class AnimationLane extends Animation {
     }
 
     public void animateLane3(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.255))),
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.2))),
                 0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.25))));
         ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 1f,
                 1, 1f,

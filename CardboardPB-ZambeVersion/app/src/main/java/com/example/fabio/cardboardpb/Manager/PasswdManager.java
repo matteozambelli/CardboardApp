@@ -10,17 +10,13 @@ import java.security.SecureRandom;
 /**
  * Created by matteo on 04/03/2015.
  */
-public class PasswdManager {
-
-
-    private static String salt = "12ThisIsMySaltForAddedSecurity*59";
+public class PasswdManager{
 
     public static String calculateHash(String data) {
 
         String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
         return hash;
     }
-
 
 /*  public static void main(String args[]) {
       SecureRandom random = new SecureRandom();

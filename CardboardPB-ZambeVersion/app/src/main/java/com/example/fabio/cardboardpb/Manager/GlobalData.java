@@ -5,7 +5,7 @@ import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 /**
  * Created by matteo on 03/02/2015.
  */
-public class GlobalData {
+public class GlobalData implements GlobalDataInterface {
 
     private int absolutePosition;
     private boolean isEnd1 = false;

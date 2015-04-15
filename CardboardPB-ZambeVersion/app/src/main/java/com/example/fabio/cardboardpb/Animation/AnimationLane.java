@@ -12,7 +12,6 @@ import android.widget.ImageView;
 public class AnimationLane extends Animation {
 
     public AnimationSet animationSetLane1 = new AnimationSet(false);
-    public AnimationSet animationSetLane2 = new AnimationSet(false);
     public AnimationSet animationSetLane3 = new AnimationSet(false);
 
 
@@ -21,15 +20,16 @@ public class AnimationLane extends Animation {
 
     public void animateLane1(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
 
-        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.2))),
-                0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.25))));
+        TranslateAnimation TranslateAnimation1 = new TranslateAnimation(0,
+                ((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.14))),
+                0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.38))));
         ScaleAnimation ScaleAnimation1 = new ScaleAnimation(1, 1f,
                 1, 1f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
         animationSetLane1.addAnimation(TranslateAnimation1);
         animationSetLane1.addAnimation(ScaleAnimation1);
-        animationSetLane1.setDuration(4600);
+        animationSetLane1.setDuration(5900);
         animationSetLane1.setFillAfter(true);
 
         ivLeft.startAnimation(animationSetLane1);
@@ -37,31 +37,10 @@ public class AnimationLane extends Animation {
 
     }
 
-
-    public void animateLane2(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
-
-        TranslateAnimation TranslateAnimation2 = new TranslateAnimation(0, 0, 0,
-                ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.25))));
-        ScaleAnimation ScaleAnimation2 = new ScaleAnimation(1, 1.1f,
-                1, 1.1f,
-                Animation.RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f
-        );
-
-        //Create AnimationSet Lane 2
-        animationSetLane2.addAnimation(TranslateAnimation2);
-        animationSetLane2.addAnimation(ScaleAnimation2);
-        animationSetLane2.setDuration(3500);
-        animationSetLane2.setFillAfter(true);
-
-        ivLeft.startAnimation(animationSetLane2);
-        ivRight.startAnimation(animationSetLane2);
-
-    }
-
     public void animateLane3(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
-        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0, ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.2))),
-                0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.25))));
+        TranslateAnimation TranslateAnimation3 = new TranslateAnimation(0,
+                ((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.14))),
+                0, ((int) (Animation.RELATIVE_TO_SELF + (displayHeight * 0.38))));
         ScaleAnimation ScaleAnimation3 = new ScaleAnimation(1, 1f,
                 1, 1f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
@@ -71,7 +50,7 @@ public class AnimationLane extends Animation {
         //Create AnimationSet Lane 3
         animationSetLane3.addAnimation(TranslateAnimation3);
         animationSetLane3.addAnimation(ScaleAnimation3);
-        animationSetLane3.setDuration(4600);
+        animationSetLane3.setDuration(5900);
         animationSetLane3.setFillAfter(true);
 
 

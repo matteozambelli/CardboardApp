@@ -27,6 +27,67 @@
         </RelativeLayout>
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id0"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id0"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id1"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id1"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id2"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id2"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:id="@+id/skyLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/sky"
+            />
+
+        <ImageView
             android:layout_width="80dp"
             android:layout_height="20dp"
             android:id="@+id/cloud_left"
@@ -84,87 +145,6 @@
             android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginLeft="76dp"
             android:layout_marginTop="115dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft1id0"
-            android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneLeft2id0"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="139dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft2id0"
-            android:background="@drawable/lane"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:layout_marginTop="145dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft3id0"
-            android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneLeft2id0"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft1id1"
-            android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneLeft2id1"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft2id1"
-            android:background="@drawable/lane"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:layout_marginTop="145dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft3id1"
-            android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneLeft2id1"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft1id2"
-            android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneLeft2id2"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft2id2"
-            android:background="@drawable/lane"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:layout_marginTop="145dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneLeft3id2"
-            android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneLeft2id2"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="139dp" />
 
         <ImageView
         android:layout_width="35dp"
@@ -302,12 +282,13 @@
             android:layout_centerHorizontal="true" />
 
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:id="@+id/imageViewMyCarLeft"
-            android:layout_marginTop="176dp"
+            android:layout_marginTop="185dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/car_rid" />
+            android:src="@drawable/wheel" />
+
 
         <ImageView
             android:layout_width="wrap_content"
@@ -316,6 +297,7 @@
             android:src="@drawable/background"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -459,6 +441,67 @@
         </RelativeLayout>
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id0"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id0"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id1"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id1"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id2"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id2"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:id="@+id/skyRight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/sky"
+            />
+
+        <ImageView
             android:layout_width="80dp"
             android:layout_height="20dp"
             android:id="@+id/cloud_right"
@@ -516,88 +559,6 @@
             android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
             android:layout_marginLeft="76dp"
             android:layout_marginTop="115dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight1id0"
-            android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneRight2id0"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight2id0"
-            android:background="@drawable/lane"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:layout_marginTop="145dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight3id0"
-            android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneRight2id0"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight1id1"
-            android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneRight2id1"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight2id1"
-            android:background="@drawable/lane"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:layout_marginTop="145dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight3id1"
-            android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneRight2id1"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight1id2"
-            android:background="@drawable/lanesx"
-            android:layout_alignRight="@+id/laneRight2id2"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="139dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight2id2"
-            android:background="@drawable/lane"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:layout_marginTop="145dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/laneRight3id2"
-            android:background="@drawable/lanedx"
-            android:layout_alignLeft="@+id/laneRight2id2"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="139dp" />
-
 
         <ImageView
             android:layout_width="35dp"
@@ -709,12 +670,12 @@
             android:layout_marginLeft="35dp"/>
 
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:id="@+id/imageViewMyCarRight"
-            android:layout_marginTop="176dp"
+            android:layout_marginTop="185dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/car_rid" />
+            android:src="@drawable/wheel" />
 
         <ImageView
             android:layout_width="wrap_content"

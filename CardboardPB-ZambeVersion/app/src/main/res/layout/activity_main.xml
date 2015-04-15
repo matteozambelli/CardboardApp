@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_weight="50"
-        android:background="@drawable/backgroundfissoblack"
+        android:background="@drawable/backgroundfisso"
         >
 
         <RelativeLayout
@@ -26,7 +26,7 @@
 
 
         </RelativeLayout>
-
+<!--
         <ImageView
 
             android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
             android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginLeft="-6dp"
             android:layout_marginTop="100dp" />
-
+-->
         <ImageView
             android:id="@+id/skyLeft"
             android:layout_width="fill_parent"
@@ -447,10 +447,10 @@
             android:layout_height="fill_parent"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/backgroundfissoblack">
+            android:background="@drawable/backgroundfisso">
 
         </RelativeLayout>
-
+<!--
         <ImageView
 
             android:layout_width="wrap_content"
@@ -505,7 +505,7 @@
             android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
             android:layout_marginLeft="-6dp"
             android:layout_marginTop="100dp" />
-
+-->
         <ImageView
             android:id="@+id/skyRight"
             android:layout_width="fill_parent"

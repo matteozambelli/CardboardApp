@@ -299,7 +299,7 @@ public class MainActivity extends Activity {
         textLifeRight = (TextView)findViewById(R.id.textViewLifeRight);
         textPointsRight = (TextView)findViewById(R.id.textViewScoreRight);
 
-        imageViewLaneLeft1id0 = (ImageView) findViewById(R.id.laneLeft1id0);
+      /*  imageViewLaneLeft1id0 = (ImageView) findViewById(R.id.laneLeft1id0);
         imageViewLaneLeft3id0 = (ImageView) findViewById(R.id.laneLeft3id0);
         imageViewLaneRight1id0 = (ImageView) findViewById(R.id.laneRight1id0);
         imageViewLaneRight3id0 = (ImageView) findViewById(R.id.laneRight3id0);
@@ -310,7 +310,7 @@ public class MainActivity extends Activity {
         imageViewLaneLeft1id2 = (ImageView) findViewById(R.id.laneLeft1id2);
         imageViewLaneLeft3id2 = (ImageView) findViewById(R.id.laneLeft3id2);
         imageViewLaneRight1id2 = (ImageView) findViewById(R.id.laneRight1id2);
-        imageViewLaneRight3id2 = (ImageView) findViewById(R.id.laneRight3id2);
+        imageViewLaneRight3id2 = (ImageView) findViewById(R.id.laneRight3id2);*/
 
         target1=(ImageView) findViewById(R.id.target1);
         target2=(ImageView) findViewById(R.id.target2);
@@ -372,7 +372,7 @@ public class MainActivity extends Activity {
         timerSun= new Timer();
         timerSun.schedule(timerTaskSun,0,90000);
 
-        timerTaskLane1 = new TimerTask() {
+    /*    timerTaskLane1 = new TimerTask() {
             @Override
             public void run() {
                 LaneAsyncTask l = new LaneAsyncTask(imageViewLaneLeft1id0, imageViewLaneLeft3id0,
@@ -412,8 +412,7 @@ public class MainActivity extends Activity {
 
         timerLane3= new Timer();
         timerLane3.schedule(timerTaskLane3,4000,6000);
-
-
+*/
     }
 
 

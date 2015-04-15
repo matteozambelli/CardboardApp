@@ -12,12 +12,10 @@ import android.widget.TextView;
 
 import com.example.fabio.cardboardpb.Animation.AnimationEnemies;
 import com.example.fabio.cardboardpb.Animation.AnimationTarget;
-import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.Eye;
-import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
 import com.example.fabio.cardboardpb.Manager.GameManager;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
-import com.example.fabio.cardboardpb.Manager.PenalizationManager;
+import com.example.fabio.cardboardpb.Manager.PenalizationEnemyManager;
 import com.example.fabio.cardboardpb.R;
 
 import java.util.ArrayList;
@@ -61,7 +59,7 @@ public class GameThread extends Thread{
     private int size;
     private int i;
     private GlobalData globalData;
-    private PenalizationManager penalizationManager;
+    private PenalizationEnemyManager penalizationManager;
     private Eye eye;
     private RelativeLayout relativeLayoutAnimationLeft;
     private RelativeLayout relativeLayoutAnimationRight;
@@ -173,7 +171,7 @@ public class GameThread extends Thread{
         this.target3=target3;
         this.globalData=globalData;
         animationTarget=new AnimationTarget();
-        penalizationManager=new PenalizationManager(enemyLeftLane1,enemyLeftLane2, enemyLeftLane3,
+        penalizationManager=new PenalizationEnemyManager(enemyLeftLane1,enemyLeftLane2, enemyLeftLane3,
                 enemyRightLane1, enemyRightLane2,  enemyRightLane3, globalData);
         this.eye=eye;
         this.id_user=id_user;

@@ -26,6 +26,7 @@ import com.example.fabio.cardboardpb.Thread.GameThread;
 import com.example.fabio.cardboardpb.R;
 import com.example.fabio.cardboardpb.Thread.LaneAsyncTask;
 import com.example.fabio.cardboardpb.Thread.PanoramaAsyncTask;
+import com.example.fabio.cardboardpb.Thread.SunAsyncTask;
 
 
 import java.util.ArrayList;
@@ -40,11 +41,13 @@ public class MainActivity extends Activity {
     private static MainActivity instance;
     private Eye eye;
     private TimerTask timerTaskPanorama;
+    private TimerTask timerTaskSun;
     private TimerTask timerTaskLane1;
     private TimerTask timerTaskLane2;
     private TimerTask timerTaskLane3;
 
     private Timer timerPanorama;
+    private Timer timerSun;
     private Timer timerLane1;
     private Timer timerLane2;
     private Timer timerLane3;
@@ -280,8 +283,13 @@ public class MainActivity extends Activity {
         panoramaRight1.add((ImageView) findViewById(R.id.house_right1));
         panoramaRight2.add((ImageView) findViewById(R.id.house_right2));
 
+
         panoramaLeftSky.add((ImageView)findViewById(R.id.cloud_left));
         panoramaRightSky.add((ImageView)findViewById(R.id.cloud_right));
+        panoramaLeftSky.add((ImageView) findViewById(R.id.sun_left));
+        panoramaRightSky.add((ImageView) findViewById(R.id.sun_right));
+        panoramaLeftSky.get(0).setX((float) ( width*0.001));
+        panoramaLeftSky.get(0).setY((float) ( width*0.001));
 
         textLevelLeft=(TextView) findViewById(R.id.textViewLevelLeft);
         textLifeLeft = (TextView)findViewById(R.id.textViewLifeLeft);
@@ -353,6 +361,17 @@ public class MainActivity extends Activity {
         timerPanorama= new Timer();
         timerPanorama.schedule(timerTaskPanorama,0,20000);
 
+        timerTaskSun= new TimerTask() {
+            @Override
+            public void run() {
+                SunAsyncTask sunAsyncTask= new SunAsyncTask(panoramaLeftSky,panoramaRightSky,width,height,globalData,eye);
+                sunAsyncTask.execute();
+            }
+        };
+
+        timerSun= new Timer();
+        timerSun.schedule(timerTaskSun,0,90000);
+
         timerTaskLane1 = new TimerTask() {
             @Override
             public void run() {
@@ -383,6 +402,7 @@ public class MainActivity extends Activity {
                 l3.execute();
             }
         };
+
 
         timerLane1 = new Timer();
         timerLane1.schedule(timerTaskLane1, 0, 6000);

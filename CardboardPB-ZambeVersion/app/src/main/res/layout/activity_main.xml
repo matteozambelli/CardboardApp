@@ -28,7 +28,7 @@
         </RelativeLayout>
 
         <ImageView
-<<<<<<< HEAD
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/laneLeft1id0"
@@ -88,14 +88,15 @@
             android:layout_height="fill_parent"
             android:background="@drawable/sky"
             />
-=======
+
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/sun_left"
             android:src="@drawable/sun"
             android:layout_marginTop="120dp"
             android:layout_marginLeft="20dp" />
->>>>>>> origin/master
+
 
         <ImageView
             android:layout_width="80dp"
@@ -451,7 +452,7 @@
         </RelativeLayout>
 
         <ImageView
-<<<<<<< HEAD
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/laneRight1id0"
@@ -511,7 +512,8 @@
             android:layout_height="fill_parent"
             android:background="@drawable/sky"
             />
-=======
+
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/sun_right"
@@ -519,7 +521,6 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="120dp" />
 
->>>>>>> origin/master
 
         <ImageView
             android:layout_width="80dp"

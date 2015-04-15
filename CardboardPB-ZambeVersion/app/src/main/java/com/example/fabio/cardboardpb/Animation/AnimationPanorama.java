@@ -131,7 +131,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
 
     public void animatePanoramaSun(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
         TranslateAnimation TranslateAnimation = new TranslateAnimation(0,((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.4))),
-                0,((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.2))));
+                0,((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.1))));
         ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 1,
                 1, 1,
                 android.view.animation.Animation.RELATIVE_TO_SELF, 1f,
@@ -140,7 +140,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
         AnimationSet animationSet = new AnimationSet(false);
         animationSet.addAnimation(TranslateAnimation);
         animationSet.addAnimation(ScaleAnimation);
-        animationSet.setDuration(80000);
+        animationSet.setDuration(100000);
         animationSet.setFillAfter(true);
 
         ivLeft.startAnimation(animationSet);

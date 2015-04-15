@@ -370,7 +370,7 @@ public class MainActivity extends Activity {
         };
 
         timerSun= new Timer();
-        timerSun.schedule(timerTaskSun,0,90000);
+        timerSun.schedule(timerTaskSun,0,100000);
 
     /*    timerTaskLane1 = new TimerTask() {
             @Override

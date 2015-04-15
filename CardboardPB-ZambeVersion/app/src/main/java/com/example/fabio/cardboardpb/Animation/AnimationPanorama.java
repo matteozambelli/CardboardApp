@@ -128,6 +128,45 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
 
         });
     }
+
+    public void animatePanoramaSun(final ImageView ivLeft, final ImageView ivRight, int displayWidth, int displayHeight) {
+        TranslateAnimation TranslateAnimation = new TranslateAnimation(0,((int) (Animation.RELATIVE_TO_SELF + (displayWidth * 0.4))),
+                0,((int) (Animation.RELATIVE_TO_SELF - (displayWidth * 0.2))));
+        ScaleAnimation ScaleAnimation = new ScaleAnimation(1, 1,
+                1, 1,
+                android.view.animation.Animation.RELATIVE_TO_SELF, 1f,
+                android.view.animation.Animation.RELATIVE_TO_SELF, 1f
+        );
+        AnimationSet animationSet = new AnimationSet(false);
+        animationSet.addAnimation(TranslateAnimation);
+        animationSet.addAnimation(ScaleAnimation);
+        animationSet.setDuration(80000);
+        animationSet.setFillAfter(true);
+
+        ivLeft.startAnimation(animationSet);
+        ivRight.startAnimation(animationSet);
+
+        animationSet.setAnimationListener(new android.view.animation.Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(android.view.animation.Animation animation) {
+             /* showImage(ivLeft);
+                showImage(ivRight);*/
+            }
+
+            @Override
+            public void onAnimationEnd(android.view.animation.Animation animation) {
+                hideImage(ivLeft);
+                hideImage(ivRight);
+            }
+
+            @Override
+            public void onAnimationRepeat(android.view.animation.Animation animation) {
+
+            }
+
+
+        });
+    }
     //end panorama animation
 
     public void hideImage(ImageView img){

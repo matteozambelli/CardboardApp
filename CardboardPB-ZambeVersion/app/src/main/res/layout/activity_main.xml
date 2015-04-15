@@ -24,7 +24,16 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
 
+
         </RelativeLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/sun_left"
+            android:src="@drawable/sun"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="20dp" />
 
         <ImageView
             android:layout_width="80dp"
@@ -459,6 +468,15 @@
         </RelativeLayout>
 
         <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/sun_right"
+            android:src="@drawable/sun"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="120dp" />
+
+
+        <ImageView
             android:layout_width="80dp"
             android:layout_height="20dp"
             android:id="@+id/cloud_right"
@@ -766,7 +784,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/back1">
+            android:background="@drawable/back1"
+            android:visibility="invisible">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

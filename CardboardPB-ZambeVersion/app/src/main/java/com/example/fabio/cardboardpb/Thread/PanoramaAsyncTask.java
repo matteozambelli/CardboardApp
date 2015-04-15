@@ -1,6 +1,5 @@
 package com.example.fabio.cardboardpb.Thread;
 
-import android.app.Activity;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 
@@ -9,11 +8,11 @@ import com.example.fabio.cardboardpb.Manager.Enum.Eye;
 import com.example.fabio.cardboardpb.Manager.Enum.Side;
 import com.example.fabio.cardboardpb.Manager.GlobalData;
 import com.example.fabio.cardboardpb.Manager.PanoramaManager;
-import com.example.fabio.cardboardpb.Manager.PenalizationManager;
+import com.example.fabio.cardboardpb.Manager.PenalizationEnemyManager;
+import com.example.fabio.cardboardpb.Manager.PenalizationPanoramaManager;
+import com.example.fabio.cardboardpb.Manager.PenalizationPanoramaManagerInterface;
 
 import java.util.ArrayList;
-
-import javax.security.auth.callback.Callback;
 
 /**
  * Created by matteo on 03/04/2015.
@@ -29,7 +28,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
     private ArrayList<ImageView> panoramaLeftSky;
     private PanoramaManager panoramaManager;
     private AnimationPanorama animationPanorama;
-    private PenalizationManager penalizationManager;
+    private PenalizationPanoramaManager penalizationPanoramaManager;
     private int pick=0;
     private Side side;
     private int displayWidth;
@@ -54,10 +53,9 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
         this.displayWidth=width;
         this.globalData=globalData;
         this.eye=eye;
-
+        penalizationPanoramaManager= new PenalizationPanoramaManager(panoramaLeft1,panoramaRight1,panoramaLeft2,panoramaRight2,panoramaLeftSky,panoramaRightSky,globalData);
         animationPanorama = new AnimationPanorama();
         panoramaManager = new PanoramaManager();
-        penalizationManager=new PenalizationManager(panoramaLeft1,panoramaRight1,panoramaLeft2,panoramaRight2,panoramaLeftSky,panoramaRightSky,globalData,true);
     }
 
     @Override
@@ -90,7 +88,7 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                     animationPanorama.hideImage(panoramaRight2.get(0));
                     animationPanorama.hideImage(panoramaRight2.get(1));
                     animationPanorama.hideImage(panoramaRight2.get(2));
-                    penalizationManager.penalize(eye);
+
 
                     if (side.equals(Side.LEFT)) {
                         if (pick == 1) {
@@ -98,18 +96,21 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                             animationPanorama.showImage(panoramaRight1.get(0));
                             animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(0), panoramaRight1.get(0),
                                     displayWidth, displayHeight);
+                            penalizationPanoramaManager.penalize(eye);
                         }
                         if (pick == 2) {
                             animationPanorama.showImage(panoramaLeft1.get(1));
                             animationPanorama.showImage(panoramaRight1.get(1));
                             animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(1), panoramaRight1.get(1),
                                     displayWidth, displayHeight);
+                            penalizationPanoramaManager.penalize(eye);
                         }
                         if (pick == 3) {
                             animationPanorama.showImage(panoramaLeft1.get(2));
                             animationPanorama.showImage(panoramaRight1.get(2));
                             animationPanorama.animatePanoramaLeftView(panoramaLeft1.get(2), panoramaRight1.get(2),
                                     displayWidth, displayHeight);
+                            penalizationPanoramaManager.penalize(eye);
                         }
                     } else {
                         if (pick == 1) {
@@ -117,24 +118,27 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                             animationPanorama.showImage(panoramaRight2.get(0));
                             animationPanorama.animatePanoramaRightView(panoramaLeft2.get(0), panoramaRight2.get(0),
                                     displayWidth, displayHeight);
+                            penalizationPanoramaManager.penalize(eye);
                         }
                         if (pick== 2) {
                             animationPanorama.showImage(panoramaLeft2.get(1));
                             animationPanorama.showImage(panoramaRight2.get(1));
                             animationPanorama.animatePanoramaRightView(panoramaLeft2.get(1), panoramaRight2.get(1),
                                     displayWidth, displayHeight);
+                            penalizationPanoramaManager.penalize(eye);
                         }
                         if (pick == 3) {
                             animationPanorama.showImage(panoramaLeft2.get(2));
                             animationPanorama.showImage(panoramaRight2.get(2));
                             animationPanorama.animatePanoramaRightView(panoramaLeft2.get(2), panoramaRight2.get(2),
                                     displayWidth, displayHeight);
+                            penalizationPanoramaManager.penalize(eye);
                         }
                     }
-
+                    penalizationPanoramaManager.penalize(eye);
                     animationPanorama.animatePanoramaCloud(panoramaLeftSky.get(0), panoramaRightSky.get(0),
                             displayWidth, displayHeight);
-                    animationPanorama = new AnimationPanorama();
+
                     panoramaManager = new PanoramaManager();
                     panoramaManager.randomPanorama();
                 }

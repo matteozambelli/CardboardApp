@@ -22,15 +22,15 @@ public class PanoramaManager implements PanoramaManagerInterface
     public void randomPanorama() {
         int pick = new Random().nextInt(Side.values().length);
         selectedSide= Side.values()[pick];
-        idSubject=1;   //    (int)(numberOfSubject*Math.random())+1;
-       /* if(previousId==idSubject){
+        idSubject=(int)(numberOfSubject*Math.random())+1;
+        if(previousId==idSubject){
             idSubject++;
             if(idSubject>numberOfSubject){
                 idSubject=1;
             }
         }
         previousId=idSubject;
-*/
+
     }
 
 

@@ -23,7 +23,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
         AnimationSet animationSet = new AnimationSet(false);
         animationSet.addAnimation(TranslateAnimation);
         animationSet.addAnimation(ScaleAnimation);
-        animationSet.setDuration(20000);
+        animationSet.setDuration(40000);
         animationSet.setFillAfter(true);
 
         ivLeft.startAnimation(animationSet);
@@ -63,7 +63,7 @@ public class AnimationPanorama implements AnimationPanoramaInterface{
         AnimationSet animationSet = new AnimationSet(false);
         animationSet.addAnimation(TranslateAnimation);
         animationSet.addAnimation(ScaleAnimation);
-        animationSet.setDuration(20000);
+        animationSet.setDuration(40000);
         animationSet.setFillAfter(true);
 
         ivLeft.startAnimation(animationSet);

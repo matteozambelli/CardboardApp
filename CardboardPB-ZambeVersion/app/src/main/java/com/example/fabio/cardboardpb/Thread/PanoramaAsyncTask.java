@@ -66,15 +66,17 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     public Void doInBackground(Void... params) {
-        panoramaManager.randomPanorama();
-        pick= panoramaManager.getIdSubject();
-        side=panoramaManager.getSelectedSide();
+
 
         return null;
     }
 
     @Override
     protected void onPostExecute(Void result) {
+
+                    panoramaManager.randomPanorama();
+                    pick=panoramaManager.getIdSubject();
+                    side=panoramaManager.getSelectedSide();
 
                     animationPanorama.hideImage(panoramaLeft1.get(0));
                     animationPanorama.hideImage(panoramaLeft1.get(1));
@@ -139,8 +141,8 @@ public class PanoramaAsyncTask extends AsyncTask<Void, Void, Void> {
                     animationPanorama.animatePanoramaCloud(panoramaLeftSky.get(0), panoramaRightSky.get(0),
                             displayWidth, displayHeight);
 
-                    panoramaManager = new PanoramaManager();
-                    panoramaManager.randomPanorama();
+
+
                 }
 
 

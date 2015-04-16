@@ -759,6 +759,7 @@ pre code {
   margin-left: auto;
 }
 .row {
+  margin:0 auto;
   margin-right: -15px;
   margin-left: -15px;
 }

@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -777,18 +778,12 @@ public class LogInActivity extends Activity {
     }
 
     private void helpAlert() {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://3d4amb.unibg.it/3dcar/cardboard%20site/"));
+        startActivity(browserIntent);
 
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("this application goal: the player see only one part of the scene with the normal eye, while the amblyopic eye sees all the details."+'\n'+ "If you are interested to trace your child improvement, SIGN UP! and after every game we show you your progress."+'\n'+"you can also play without registration, but we can't trace your improvement." +'\n'+ "GAME USAGE:"+'\n'+"after this screen, put your smartphone into your cardboard or VR visor, and connect a pair of earphone with +,- and confirm keys");
-        alert.setTitle("HELP");
-        alert.setPositiveButton("OK",new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        alert.show();
     }
+
+
     private String generateRandom() {
         SecureRandom random = new SecureRandom();
         return new BigInteger(40, random).toString(32);

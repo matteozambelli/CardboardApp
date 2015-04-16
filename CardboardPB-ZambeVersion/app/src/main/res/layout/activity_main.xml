@@ -108,6 +108,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="71dp"
             android:layout_marginLeft="0dp"/>
+
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -115,7 +116,8 @@
             android:background="@drawable/housecianosx"
             android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginRight="76dp"
-            android:layout_marginTop="115dp" />
+            android:layout_marginTop="115dp"
+             />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -147,7 +149,8 @@
             android:background="@drawable/houseredsx"
             android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
             android:layout_marginRight="76dp"
-            android:layout_marginTop="115dp" />
+            android:layout_marginTop="115dp"
+            android:visibility="visible" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"

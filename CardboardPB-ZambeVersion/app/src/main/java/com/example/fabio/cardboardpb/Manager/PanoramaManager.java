@@ -25,12 +25,6 @@ public class PanoramaManager implements PanoramaManagerInterface
         selectedSide= Side.values()[pick];
         idSubject= (int)(numberOfSubject*Math.random())+1;
 
-        /*idSubject++;
-        if(idSubject>3){
-            idSubject=1;
-        }
-*/
-
     }
 
 

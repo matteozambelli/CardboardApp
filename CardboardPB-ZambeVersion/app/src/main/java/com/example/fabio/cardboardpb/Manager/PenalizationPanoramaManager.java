@@ -51,8 +51,10 @@ public class PenalizationPanoramaManager implements PenalizationPanoramaManagerI
 
                 panoramaLeft1.get(0).setAlpha(getLevelPenalization());
                 panoramaLeft1.get(1).setAlpha(getLevelPenalization());
+                panoramaLeft1.get(2).setAlpha(getLevelPenalization());
                 panoramaLeft2.get(0).setAlpha(getLevelPenalization());
                 panoramaLeft2.get(1).setAlpha(getLevelPenalization());
+                panoramaLeft2.get(2).setAlpha(getLevelPenalization());
                 panoramaLeftSky.get(0).setAlpha(getLevelPenalization());
                 panoramaLeftSky.get(1).setAlpha(getLevelPenalization());
 
@@ -60,8 +62,10 @@ public class PenalizationPanoramaManager implements PenalizationPanoramaManagerI
             case RIGHT_EYE:{
                 panoramaRight1.get(0).setAlpha(getLevelPenalization());
                 panoramaRight1.get(1).setAlpha(getLevelPenalization());
+                panoramaRight1.get(2).setAlpha(getLevelPenalization());
                 panoramaRight2.get(0).setAlpha(getLevelPenalization());
                 panoramaRight2.get(1).setAlpha(getLevelPenalization());
+                panoramaRight2.get(2).setAlpha(getLevelPenalization());
                 panoramaRightSky.get(0).setAlpha(getLevelPenalization());
                 panoramaRightSky.get(1).setAlpha(getLevelPenalization());
 

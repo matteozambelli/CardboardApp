@@ -24,11 +24,10 @@ import android.widget.Toast;
 import com.crashlytics.android.Crashlytics;
 import com.example.fabio.cardboardpb.DB.PostCall;
 import com.example.fabio.cardboardpb.Manager.Enum.TypeCall;
-import com.example.fabio.cardboardpb.Manager.PasswdManager;
+import com.example.fabio.cardboardpb.Manager.PasswordManager;
 import com.example.fabio.cardboardpb.R;
 
 import io.fabric.sdk.android.Fabric;
-import org.w3c.dom.Text;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -87,7 +86,7 @@ public class LogInActivity extends Activity {
         workWithUs.setPaintFlags(workWithUs.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         updateData = (TextView) findViewById(R.id.updateInfo);
         updateData.setPaintFlags(updateData.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        passwordToSend = PasswdManager.calculateHash(password.toString());
+        passwordToSend = PasswordManager.calculateHash(password.toString());
         play = (Button) findViewById(R.id.playWithoutReg);
         forgot = (TextView) findViewById(R.id.forgotPassword);
         forgot.setPaintFlags(forgot.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
@@ -142,7 +141,7 @@ public class LogInActivity extends Activity {
                     alert.show();
 
                 } else {
-                    passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                    passwordToSend = PasswordManager.calculateHash(password.getText().toString());
                     post = new PostCall(email.getText().toString(), passwordToSend, status);
                     post.myPostCall(TypeCall.LOG_IN, logInActivity);
                     launchRingDialog();
@@ -316,7 +315,7 @@ public class LogInActivity extends Activity {
                     } else {
                         if (!password.getText().toString().isEmpty()) {
                             //Cript the password
-                            passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                            passwordToSend = PasswordManager.calculateHash(password.getText().toString());
                             //send data
                             post = new PostCall(firstName.getText().toString(), lastName.getText().toString(), eMail.getText().toString(), myColor.getText().toString(), date, passwordToSend, statusUpdate);
                             post.myPostCall(TypeCall.SIGN_UP, logInActivity);
@@ -350,7 +349,7 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 launchRingDialog();
-                passwordToSend = PasswdManager.calculateHash("default_user");
+                passwordToSend = PasswordManager.calculateHash("default_user");
                 post = new PostCall("3d4ambunibg@gmail.com", passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
             }
@@ -383,7 +382,7 @@ public class LogInActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String newPasswd = generateRandom();
-                passwordToSend = PasswdManager.calculateHash(newPasswd);
+                passwordToSend = PasswordManager.calculateHash(newPasswd);
                 post = new PostCall(mailTo.getText().toString(), myColor.getText().toString(), newPasswd, passwordToSend, status);
                 post.myPostCall(TypeCall.RESET, logInActivity);
                 launchRingDialog();
@@ -436,7 +435,7 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                passwordToSend = PasswordManager.calculateHash(password.getText().toString());
                 post = new PostCall(email.getText().toString(), passwordToSend, status);
                 post.myPostCall(TypeCall.LOG_IN, logInActivity);
                 launchRingDialogUpdate();
@@ -627,7 +626,7 @@ public class LogInActivity extends Activity {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                passwordToSend = PasswdManager.calculateHash(password.getText().toString());
+                passwordToSend = PasswordManager.calculateHash(password.getText().toString());
                 post = new PostCall(id_user, passwordToSend, statusUpdate, true);
                 post.myPostCall(TypeCall.UPDATE_PASSWORD, logInActivity);
 

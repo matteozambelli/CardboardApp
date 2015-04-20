@@ -301,7 +301,7 @@
             android:id="@+id/imageViewMyCarLeft"
             android:layout_marginTop="185dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/wheel" />
+            android:src="@drawable/car_rid" />
 
 
         <ImageView
@@ -699,7 +699,7 @@
             android:id="@+id/imageViewMyCarRight"
             android:layout_marginTop="185dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/wheel" />
+            android:src="@drawable/car_rid" />
 
         <ImageView
             android:layout_width="wrap_content"

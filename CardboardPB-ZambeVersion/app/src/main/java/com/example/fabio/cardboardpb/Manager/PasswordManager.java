@@ -10,7 +10,7 @@ import java.security.SecureRandom;
 /**
  * Created by matteo on 04/03/2015.
  */
-public class PasswdManager{
+public class PasswordManager {
 
     public static String calculateHash(String data) {
 

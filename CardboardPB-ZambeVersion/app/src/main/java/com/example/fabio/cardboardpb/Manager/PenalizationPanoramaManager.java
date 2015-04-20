@@ -81,8 +81,8 @@ public class PenalizationPanoramaManager implements PenalizationPanoramaManagerI
      * @return Alpha value to penalize the image
      */
     private int getLevelPenalization(){
-        return 50;
-       /* switch(globalData.getLevel()){
+
+        switch(globalData.getLevel()){
 
             case 1:{
                 return 200;
@@ -111,7 +111,7 @@ public class PenalizationPanoramaManager implements PenalizationPanoramaManagerI
             default:{
                 return 50;
             }
-        }*/
+        }
     }
 
 }

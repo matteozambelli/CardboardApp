@@ -1,0 +1,802 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary_dark_material_dark"
+    tools:context=".MainActivity"
+    android:weightSum="100"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- left eye view-->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutLeft"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        android:background="@drawable/backgroundfisso"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutAnimationBackgroundLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+
+        </RelativeLayout>
+<!--
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id0"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id0"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id1"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id1"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft1id2"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneLeft3id2"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+-->
+        <ImageView
+            android:id="@+id/skyLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/sky"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/sun_left"
+            android:src="@drawable/sun"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="0dp" />
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:id="@+id/cloud_left"
+            android:src="@drawable/cloud"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="71dp"
+            android:layout_marginLeft="0dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_left1"
+            android:background="@drawable/housecianosx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="76dp"
+            android:layout_marginTop="115dp"
+             />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_left2"
+            android:background="@drawable/housecianodx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="115dp"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/signal_left1"
+            android:background="@drawable/signalboardsx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="132dp"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/signal_left2"
+            android:background="@drawable/signalboarddx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="132dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/house_left1"
+            android:background="@drawable/houseredsx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginRight="76dp"
+            android:layout_marginTop="115dp"
+            android:visibility="visible" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/house_left2"
+            android:background="@drawable/housereddx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="115dp" />
+
+        <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageViewEnemyLeftLane1Id0"
+        android:layout_marginTop="127dp"
+        android:src="@drawable/audicianosx"
+        android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id0"
+        android:layout_marginRight="35dp"
+        />
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/miniyellow"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id0"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audicianodx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane1Id1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audigreensx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatmilitary"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audigreendx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane1Id2"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiyellowsx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id2"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatred"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id2"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiyellowdx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane1Id3"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiwhitesx"
+            android:layout_alignRight="@+id/imageViewEnemyLeftLane2Id1"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane2Id3"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatciano"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyLeftLane3Id3"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiwhitedx"
+            android:layout_alignLeft="@+id/imageViewEnemyLeftLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/target1"
+            android:layout_marginTop="127dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignRight="@+id/target2"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/target3"
+            android:layout_marginTop="127dp"
+          android:layout_marginLeft="100dp"
+           />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/target2"
+            android:layout_marginTop="118dp"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageViewMyCarLeft"
+            android:layout_marginTop="185dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewBackgroundBlackLeft"
+            android:src="@drawable/background"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLifeLeft"
+            android:text="LIFE: "
+            android:layout_marginTop="255dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="italic"
+            android:background="@color/button_material_light"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLevelLeft"
+            android:text="LEVEL: "
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignTop="@+id/textViewLifeLeft"
+            android:textStyle="italic"
+            android:background="@color/button_material_light"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewScoreLeft"
+            android:text="SCORE: "
+            android:layout_alignTop="@+id/textViewLifeLeft"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="120dp"
+            android:textStyle="italic"
+            android:background="@color/button_material_light"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Medium Text"
+            android:id="@+id/textView3"
+            android:layout_marginTop="310dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Medium Text"
+            android:id="@+id/textView6"
+            android:layout_marginTop="325dp"
+            android:layout_centerHorizontal="true" />
+
+        <!--REMOVE THIS-->
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/textViewProva"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/White"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutGameOverLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:background="@drawable/back1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEVEL: "
+                android:id="@+id/textLevelGameOverLeft"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#4e5154"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCORE: "
+                android:id="@+id/textScoreGameOverLeft"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp"
+                android:padding="5dp"
+                android:background="#4e5154"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="95dp"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:text="Press DOWN to receive your score by mail"
+                android:id="@+id/editTextInsertNameLeft"
+                android:background="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press HOME to restart"
+                android:id="@+id/textRestartGameOverLeft"
+                android:layout_marginTop="133dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/holo_orange_light"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                />
+
+
+        </FrameLayout>
+        <!---->
+    </RelativeLayout>
+
+<!-- right eye view-->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutRight"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutAnimationBackgroundRight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/backgroundfisso">
+
+        </RelativeLayout>
+<!--
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id0"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id0"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id1"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id1"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight1id2"
+            android:background="@drawable/roadlanesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="-6dp"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laneRight3id2"
+            android:background="@drawable/roadlanedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="100dp" />
+-->
+        <ImageView
+            android:id="@+id/skyRight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/sky"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/sun_right"
+            android:src="@drawable/sun"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="100dp" />
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:id="@+id/cloud_right"
+            android:src="@drawable/cloud"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="71dp"
+            android:layout_marginLeft="0dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_right1"
+            android:background="@drawable/housecianosx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="76dp"
+            android:layout_marginTop="115dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tree_right2"
+            android:background="@drawable/housecianodx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="115dp"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/signal_right1"
+            android:background="@drawable/signalboardsx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="132dp" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/signal_right2"
+            android:background="@drawable/signalboarddx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="132dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/house_right1"
+            android:background="@drawable/houseredsx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="76dp"
+            android:layout_marginTop="115dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/house_right2"
+            android:background="@drawable/housereddx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="76dp"
+            android:layout_marginTop="115dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane1Id0"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audicianosx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/miniyellow"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane3Id0"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audicianodx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane1Id1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audigreensx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane2Id1"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatmilitary"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane3Id1"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audigreendx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane1Id2"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiyellowsx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane2Id2"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatred"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane3Id2"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiyellowdx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane1Id3"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiwhitesx"
+            android:layout_alignRight="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginRight="35dp"
+            />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane2Id3"
+            android:layout_marginTop="122dp"
+            android:src="@drawable/fiatciano"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewEnemyRightLane3Id3"
+            android:layout_marginTop="127dp"
+            android:src="@drawable/audiwhitedx"
+            android:layout_alignLeft="@+id/imageViewEnemyRightLane2Id0"
+            android:layout_marginLeft="35dp"/>
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageViewMyCarRight"
+            android:layout_marginTop="185dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/car_rid" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewBackgroundBlackRight"
+            android:layout_centerVertical="true"
+            android:src="@drawable/background"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLifeRight"
+            android:text="LIFE: "
+            android:layout_marginTop="255dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="italic"
+            android:background="@color/button_material_light"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLevelRight"
+            android:text="LEVEL: "
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:textStyle="italic"
+            android:layout_alignTop="@+id/textViewLifeRight"
+            android:background="@color/button_material_light"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewScoreRight"
+            android:text="SCORE: "
+            android:layout_alignTop="@+id/textViewLifeRight"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="120dp"
+            android:textStyle="italic"
+            android:background="@color/button_material_light"
+            android:padding="5dp"
+            />
+
+        <FrameLayout
+            android:id="@+id/frameLayoutGameOverRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/back1"
+            android:visibility="visible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEVEL: "
+                android:id="@+id/textLevelGameOverRight"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#4e5154"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCORE: "
+                android:id="@+id/textScoreGameOverRight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp"
+                android:padding="5dp"
+                android:background="#4e5154"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="95dp"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:text="Press DOWN to receive your score by mail"
+                android:id="@+id/editTextInsertNameRight"
+                android:background="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press HOME to restart"
+                android:id="@+id/textRestartGameOverRight"
+                android:layout_marginTop="133dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/holo_orange_light"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

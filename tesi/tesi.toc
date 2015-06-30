@@ -1,0 +1,9 @@
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Introduzione}{3}
+\contentsline {chapter}{\numberline {2}L'Ambliopia}{5}
+\contentsline {section}{\numberline {2.1}Il disturbo}{5}
+\contentsline {chapter}{\numberline {3}Il principio del trattamento tramite il gioco}{7}
+\contentsline {chapter}{\numberline {4}Car racing cardboard: l'applicazione}{9}
+\contentsline {chapter}{\numberline {5}??Raccolta dati??}{11}
+\contentsline {chapter}{\numberline {6}Social media}{13}
+\contentsline {chapter}{\numberline {7}Paper}{15}

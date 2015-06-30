@@ -2,13 +2,21 @@
 % Encoding: Cp1252
 
 
-@Article{achtman08,
-  Title                    = {Video games as a tool to train visual skills},
-  Author                   = {R.L. Achtman and C.S. Green and D. Bavelier},
-  Journal                  = {Restorative Neurology and Neuroscience},
-  Year                     = {2008},
-  Number                   = {4-5},
-  Pages                    = {435-446},
-  Volume                   = {26}
+@Unpublished{tesiTZ,
+  Title                    = {{Progetto e sviluppo di un videogame basato sulla penalizzazione per il trattamento dell'ambliopia}},
+  Author                   = {"Fabio Terzi, Matteo Zambelli"},
+  Year                     = {2013},
+
+  Owner                    = {matteo},
+  Timestamp                = {2015.06.30}
+}
+
+@Article{GCfb,
+  Title                    = {Facebook has Oculus, Google has Cardboard},
+  Author                   = {Nick Statt},
+  Year                     = {2014},
+
+  Owner                    = {matteo},
+  Timestamp                = {2015.06.30}
 }
 

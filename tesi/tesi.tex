@@ -14,6 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage{emptypage}
 \renewcommand{\baselinestretch}{1.5} 
+\newcommand{\virgolette}[1]{``#1''}
 %sommario
 %profondità 1 = sezioni (2 = sottosezioni ecc..)
 \setcounter{tocdepth}{1}
@@ -84,14 +85,35 @@ Per il trattamento dell'ambliopia sono stati proposti anche degli stimolatori vi
 Il principio primario del sistema è che all?occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
 Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare, ma l'occhio sano non è ?patchato?. Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
 
+
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/3D4Amb_sys.png}
 	\caption{La tecnologia di 3D4Amb \label{idea 3D4Amb}}
 \end{figure}
 
+%----------------------------------------------------------------------------------------
+%	la tecnlogia per il trattamento
+%----------------------------------------------------------------------------------------
+\chapter{La tecnologia per il trattamento}
 
+\section{Google cardboard}
+Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. Creato da  David Coz e Damien Henry, due ingegneri della Google, nel Google Cultural Institute  a Parigi nel loro 20\%  \virgolette{Innovation Time Off} \cite{GCfb}
 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/Google-Cardboard.jpg}
+	\caption{Google Cardboard}\label{googlecardboard}
+\end{figure}
+
+Introdotto nel 2014 al \virgolette{Google I/O developers conference for Android device}, è formato da un cartone ripiegabile e due lenti, l'utente deve inserirci lo smartphone (Figura ~\ref{googlecardboard}). Questo sistema consente una visione stereoscopica, funziona con differenti smartphone e può essere facilmente usato dai bambini.\\
+Google cardboard non consente un' esperienza immersiva come Oculus rift, il quale necessita però di un PC collegato (ed è ancora in fase di sviluppo), ma è un modo facile ed economico per provare l'esperienza della realtà virtuale, inoltre la maggior parte delle applicazioni sono reperibili gratuitamente.
+\linebreak
+\textbf{Esistono rischi per la salute?}\\
+Ad oggi non esistono evidenze scientifiche certe e rilevanti a supporto della tesi secondo cui le tecnologie 3D siano responsabili (o corresponsabili) della patogenesi di disturbi e difetti a carico dell'apparato della vista.\\
+Tuttavia, è importante notare che l'assenza di prove a sostegno della tesi non implica la sua totale infondatezza, cioè in altre parole almeno per il momento non siamo in grado di mettere in relazione con certezza i due elementi.
+
+	
 %----------------------------------------------------------------------------------------
 %	il prinicipio del trattamento
 %----------------------------------------------------------------------------------------
@@ -129,6 +151,7 @@ Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb i
 \chapter{Conclusioni}
 
 %bibliografia
+\bibliographystyle{abbrv}
 \bibliography{tesi} 
 
 \end{document}

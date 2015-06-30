@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  30 JUN 2015 12:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  30 JUN 2015 13:48
 entering extended mode
 **tesi.tex
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -180,26 +180,26 @@ Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty
 pages
 )
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
 File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -219,7 +219,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \everyMPtoPDFconversion=\toks23
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
  (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
@@ -246,15 +246,15 @@ Capitolo 1.
 ]
 Capitolo 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 
 Underfull \vbox (badness 2057) has occurred while \output is active []
 
  [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
 
-Overfull \hbox (0.37949pt too wide) in paragraph at lines 70--71
+Overfull \hbox (0.37949pt too wide) in paragraph at lines 71--72
 \OT1/ptm/m/n/12 La te-ra-pia oc-clu-si-va si ba-sa sul-la co-per-tu-ra dell?occ
 hio sa-no per sti-mo-la-re l?occhio
  []
@@ -263,25 +263,35 @@ hio sa-no per sti-mo-la-re l?occhio
 Underfull \vbox (badness 1701) has occurred while \output is active []
 
  [6]
-
-LaTeX Warning: Citation `tesiTZ' on page 7 undefined on input line 85.
-
 [7] <immagini/3D4Amb_sys.png, id=26, 708.6475pt x 873.2625pt>
 File: immagini/3D4Amb_sys.png Graphic file (type png)
 
 <use immagini/3D4Amb_sys.png>
-Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 89.
+Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 91.
 (pdftex.def)             Requested size: 390.0pt x 480.60233pt.
  [8] [9 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/3D4Amb_sys
 .png>] [10
 
 ]
 Capitolo 3.
-[11] [12
+<immagini/Google-Cardboard.jpg, id=38, 1284.8pt x 707.64375pt>
+File: immagini/Google-Cardboard.jpg Graphic file (type jpg)
 
-]
+<use immagini/Google-Cardboard.jpg>
+Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 105.
+(pdftex.def)             Requested size: 390.0pt x 214.79984pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--115
+\OT1/ptm/m/n/12 mag-gior par-te del-le ap-pli-ca-zio-ni so-no re-pe-ri-bi-li gr
+a-tui-ta-men-te.
+ []
+
+[11 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/Google-Cardboa
+rd.jpg>] [12]
 Capitolo 4.
-[13] [14
+[13
+
+] [14
 
 ]
 Capitolo 5.
@@ -297,26 +307,29 @@ Capitolo 7.
 
 ]
 Capitolo 8.
-(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl) [21]
-(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
+[21] [22
 
-LaTeX Warning: There were undefined references.
+]
+Capitolo 9.
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [23] [24
 
- ) 
+])
+[25] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 2730 strings out of 493921
- 35789 string characters out of 3144873
- 91008 words of memory out of 3000000
- 5977 multiletter control sequences out of 15000+200000
+ 2739 strings out of 493921
+ 35981 string characters out of 3144873
+ 91035 words of memory out of 3000000
+ 5984 multiletter control sequences out of 15000+200000
  17895 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,43p,991b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on tesi.pdf (21 pages, 432231 bytes).
+ 27i,10n,43p,991b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/times/utmr8a.pfb>
+Output written on tesi.pdf (25 pages, 624410 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

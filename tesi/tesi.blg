@@ -1,3 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: tesi.aux
-I found no \bibstyle command---while reading file tesi.aux
-(There was 1 error message)
+The style file: abbrv.bst
+Database file #1: tesi.bib
+Name 1 in ""Fabio Terzi, and Matteo Zambelli"" has a comma at the end for entry tesiTZ
+while executing---line 1049 of file abbrv.bst
+Warning--empty journal in GCfb
+Name 1 in ""Fabio Terzi, and Matteo Zambelli"" has a comma at the end for entry tesiTZ
+while executing---line 1090 of file abbrv.bst
+Warning--empty note in tesiTZ
+(There were 2 error messages)

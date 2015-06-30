@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  30 JUN 2015 12:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  30 JUN 2015 12:38
 entering extended mode
 **tesi.tex
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -246,47 +246,77 @@ Capitolo 1.
 ]
 Capitolo 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 
 Underfull \vbox (badness 2057) has occurred while \output is active []
 
  [5]
-[6]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+
+Overfull \hbox (0.37949pt too wide) in paragraph at lines 70--71
+\OT1/ptm/m/n/12 La te-ra-pia oc-clu-si-va si ba-sa sul-la co-per-tu-ra dell?occ
+hio sa-no per sti-mo-la-re l?occhio
+ []
+
+
+Underfull \vbox (badness 1701) has occurred while \output is active []
+
+ [6]
+
+LaTeX Warning: Citation `tesiTZ' on page 7 undefined on input line 85.
+
+[7] <immagini/3D4Amb_sys.png, id=26, 708.6475pt x 873.2625pt>
+File: immagini/3D4Amb_sys.png Graphic file (type png)
+
+<use immagini/3D4Amb_sys.png>
+Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 89.
+(pdftex.def)             Requested size: 390.0pt x 480.60233pt.
+ [8] [9 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/3D4Amb_sys
+.png>] [10
+
+]
 Capitolo 3.
-[7
-
-] [8
-
-]
-Capitolo 4.
-[9] [10
-
-]
-Capitolo 5.
 [11] [12
 
 ]
-Capitolo 6.
+Capitolo 4.
 [13] [14
 
 ]
+Capitolo 5.
+[15] [16
+
+]
+Capitolo 6.
+[17] [18
+
+]
 Capitolo 7.
-[15] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux) ) 
+[19] [20
+
+]
+Capitolo 8.
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl) [21]
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2707 strings out of 493921
- 35369 string characters out of 3144873
- 89998 words of memory out of 3000000
- 5961 multiletter control sequences out of 15000+200000
- 15762 words of font info for 42 fonts, out of 3000000 for 9000
+ 2730 strings out of 493921
+ 35789 string characters out of 3144873
+ 91008 words of memory out of 3000000
+ 5977 multiletter control sequences out of 15000+200000
+ 17895 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,43p,560b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program
- Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/urw/times/utmr8a.pfb>
-Output written on tesi.pdf (15 pages, 40508 bytes).
+ 27i,10n,43p,991b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on tesi.pdf (21 pages, 432231 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

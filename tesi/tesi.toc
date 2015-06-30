@@ -2,8 +2,15 @@
 \contentsline {chapter}{\numberline {1}Introduzione}{3}
 \contentsline {chapter}{\numberline {2}L'Ambliopia}{5}
 \contentsline {section}{\numberline {2.1}Il disturbo}{5}
-\contentsline {chapter}{\numberline {3}Il principio del trattamento tramite il gioco}{7}
-\contentsline {chapter}{\numberline {4}Car racing cardboard: l'applicazione}{9}
-\contentsline {chapter}{\numberline {5}??Raccolta dati??}{11}
-\contentsline {chapter}{\numberline {6}Social media}{13}
-\contentsline {chapter}{\numberline {7}Paper}{15}
+\contentsline {section}{\numberline {2.2}Trattamenti}{6}
+\contentsline {subsection}{\numberline {2.2.1}Occlusione}{6}
+\contentsline {subsection}{\numberline {2.2.2}Penalizzazione ottica}{6}
+\contentsline {subsection}{\numberline {2.2.3}Penalizzazione farmacologica}{7}
+\contentsline {subsection}{\numberline {2.2.4}Settorizzazione}{7}
+\contentsline {section}{\numberline {2.3}L'idea di 3D4Amb}{7}
+\contentsline {chapter}{\numberline {3}Il principio del trattamento tramite il gioco}{11}
+\contentsline {chapter}{\numberline {4}Car racing cardboard: l'applicazione}{13}
+\contentsline {chapter}{\numberline {5}??Raccolta dati??}{15}
+\contentsline {chapter}{\numberline {6}Social media}{17}
+\contentsline {chapter}{\numberline {7}Paper}{19}
+\contentsline {chapter}{\numberline {8}Conclusioni}{21}

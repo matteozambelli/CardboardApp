@@ -668,7 +668,7 @@ public class MainActivity extends Activity {
 
     private void sendResultByEmail(){
         if(!id_user.equals("3")){
-            postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2);
+            postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2,false);
             postCall.myPostCall(TypeCall.REPORT,activity);
         }
 

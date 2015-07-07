@@ -12,7 +12,11 @@
 \contentsline {section}{\numberline {3.1}Google cardboard}{11}
 \contentsline {chapter}{\numberline {4}Il principio del trattamento tramite il gioco}{13}
 \contentsline {chapter}{\numberline {5}Car racing cardboard: l'applicazione}{15}
-\contentsline {chapter}{\numberline {6}??Raccolta dati??}{17}
-\contentsline {chapter}{\numberline {7}Social media}{19}
-\contentsline {chapter}{\numberline {8}Paper}{21}
-\contentsline {chapter}{\numberline {9}Conclusioni}{23}
+\contentsline {section}{\numberline {5.1}Sistema operativo ed ambiente di sviluppo:}{15}
+\contentsline {subsection}{\numberline {5.1.1}Perch\`e Android:}{16}
+\contentsline {subsection}{\numberline {5.1.2}Perch\`e Android Studio:}{16}
+\contentsline {section}{\numberline {5.2}Principio del gioco:}{17}
+\contentsline {chapter}{\numberline {6}??Raccolta dati??}{19}
+\contentsline {chapter}{\numberline {7}Social media}{21}
+\contentsline {chapter}{\numberline {8}Paper}{23}
+\contentsline {chapter}{\numberline {9}Conclusioni}{25}

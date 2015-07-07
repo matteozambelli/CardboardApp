@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.6.24)  7 JUL 2015 16:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  30 JUN 2015 13:48
 entering extended mode
 **tesi.tex
-(C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.tex
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,9 +13,9 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk12.clo"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\bk12.clo"
 File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -31,54 +31,54 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\italian.ldf"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\italian.ldf"
 Language: italian 2008/03/14 v1.2t Italian support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 94.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen104
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count89
@@ -119,41 +119,41 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
@@ -161,10 +161,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip46
 \f@ncyO@elh=\skip47
 \f@ncyO@erh=\skip48
@@ -175,11 +175,11 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 \f@ncyO@olf=\skip53
 \f@ncyO@orf=\skip54
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\emptypage\emptypage.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\emptypage\emptypage.sty"
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
 pages
 )
-(C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.aux)
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
@@ -195,16 +195,16 @@ LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 35.
 LaTeX Font Info:    Try loading font information for LGR+cmr on input line 35.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
 File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 35.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
 \scratchdimen=\dimen115
@@ -220,17 +220,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
- (C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.toc
+ (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
@@ -269,8 +269,8 @@ File: immagini/3D4Amb_sys.png Graphic file (type png)
 <use immagini/3D4Amb_sys.png>
 Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 91.
 (pdftex.def)             Requested size: 390.0pt x 480.60233pt.
- [8] [9 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/3D4Amb_sys.
-png>] [10
+ [8] [9 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/3D4Amb_sys
+.png>] [10
 
 ]
 Capitolo 3.
@@ -286,91 +286,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--115
 a-tui-ta-men-te.
  []
 
-[11 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/Google-Cardboar
-d.jpg>] [12]
+[11 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/Google-Cardboa
+rd.jpg>] [12]
 Capitolo 4.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 125.
+[13
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
+] [14
 
-<immagini/child_cardboard.png, id=45, 586.19pt x 511.9125pt>
-File: immagini/child_cardboard.png Graphic file (type png)
-
-<use immagini/child_cardboard.png>
-Package pdftex.def Info: immagini/child_cardboard.png used on input line 133.
-(pdftex.def)             Requested size: 390.0pt x 340.58157pt.
- [13
-
-] [14 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/child_cardboa
-rd.png>]
+]
 Capitolo 5.
-
-Overfull \hbox (119.51328pt too wide) in paragraph at lines 146--147
-\OT1/ptm/m/n/12 zio-ne Ja-va, re-pe-ri-bi-le dal si-to http://www.oracle.com/te
-chnetwork/java/javase/downloads/index.html. 
- []
-
-
-Overfull \hbox (105.83656pt too wide) in paragraph at lines 151--152
-\OT1/ptm/m/n/12 gram-ming In-ter-fa-ce) 15, ov-ve-ro dal si-ste-ma ope-ra-ti-vo
- An-droid 4.0.3 (ICE[]CREAM[]SANDWICH[]MR1)
- []
-
-[15
-
-] [16]
-Overfull \hbox (12.6543pt too wide) in paragraph at lines 162--163
-\OT1/ptm/m/n/12 mo stru-men-to di an-te-pri-ma in gra-do di mo-stra-re l'a-spet
--to fi-na-le dell?interfaccia
- []
-
-<immagini/android-logo.png, id=61, 1606.0pt x 1606.0pt>
-File: immagini/android-logo.png Graphic file (type png)
-
-<use immagini/android-logo.png>
-Package pdftex.def Info: immagini/android-logo.png used on input line 167.
-(pdftex.def)             Requested size: 175.48428pt x 177.59175pt.
- [17 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/android-logo.p
-ng>] [18
+[15] [16
 
 ]
 Capitolo 6.
-[19] [20
+[17] [18
 
 ]
 Capitolo 7.
-[21] [22
+[19] [20
 
 ]
 Capitolo 8.
-[23] [24
+[21] [22
 
 ]
 Capitolo 9.
-(C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.bbl [25] [26
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [23] [24
 
-]) [27]
-(C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.aux) ) 
+])
+[25] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 2770 strings out of 493921
- 36158 string characters out of 3147282
- 94057 words of memory out of 3000000
- 6010 multiletter control sequences out of 15000+200000
+ 2739 strings out of 493921
+ 35981 string characters out of 3144873
+ 91035 words of memory out of 3000000
+ 5984 multiletter control sequences out of 15000+200000
  17895 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,43p,1259b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
-b>
-Output written on tesi.pdf (27 pages, 1323760 bytes).
+ 27i,10n,43p,991b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/times/utmr8a.pfb>
+Output written on tesi.pdf (25 pages, 624410 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

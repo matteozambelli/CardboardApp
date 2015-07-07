@@ -41,7 +41,6 @@ public class PostCall {
     private String score;
     private String level;
     private String id_user;
-    private boolean save;
     //RESET
     private String newPassword;
     private String passwordCfr;
@@ -132,12 +131,11 @@ public class PostCall {
      * @param id_user
      * @param textView
      */
-    public PostCall(String score, String level, String id_user,TextView textView,boolean save) {
+    public PostCall(String score, String level, String id_user,TextView textView) {
         this.score = score;
         this.level = level;
         this.id_user = id_user;
         this.status=textView;
-        this.save=save;
     }
 
     public void myPostCall(final TypeCall type, final Activity logInActivity) {
@@ -192,19 +190,11 @@ public class PostCall {
                             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsDoctorCall));
                         }
                         if (type.equals(TypeCall.REPORT)) {
-                            if(save){
                             nameValuePairsReport.add(new BasicNameValuePair("type", "report"));
                             nameValuePairsReport.add(new BasicNameValuePair("score", score));
                             nameValuePairsReport.add(new BasicNameValuePair("level", level));
                             nameValuePairsReport.add(new BasicNameValuePair("id_user", id_user));
-                            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));}
-                            else{
-                                nameValuePairsReport.add(new BasicNameValuePair("type", "report_and_email"));
-                                nameValuePairsReport.add(new BasicNameValuePair("score", score));
-                                nameValuePairsReport.add(new BasicNameValuePair("level", level));
-                                nameValuePairsReport.add(new BasicNameValuePair("id_user", id_user));
-                                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));
-                            }
+                            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsReport));
                         }
                         if (type.equals(TypeCall.UPDATE_MAIL)) {
                             nameValuePairsUpdateString.add(new BasicNameValuePair("type", "update_email"));

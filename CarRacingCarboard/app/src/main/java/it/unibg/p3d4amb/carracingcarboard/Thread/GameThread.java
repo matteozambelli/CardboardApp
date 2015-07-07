@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import it.unibg.p3d4amb.carracingcarboard.Animation.AnimationEnemies;
 import it.unibg.p3d4amb.carracingcarboard.Animation.AnimationTarget;
-import it.unibg.p3d4amb.carracingcarboard.DB.PostCall;
 import it.unibg.p3d4amb.carracingcarboard.Manager.Enum.Eye;
-import it.unibg.p3d4amb.carracingcarboard.Manager.Enum.TypeCall;
 import it.unibg.p3d4amb.carracingcarboard.Manager.GameManager;
 import it.unibg.p3d4amb.carracingcarboard.Manager.GlobalData;
 import it.unibg.p3d4amb.carracingcarboard.Manager.PenalizationEnemyManager;
@@ -196,8 +194,8 @@ public class GameThread extends Thread{
                 public void run() {
 
                     if (globalData.getLife() == 0){
-                        PostCall postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2,true);
-                        postCall.myPostCall(TypeCall.REPORT,activity);
+
+
                         globalData.setRunnable(false);
                         //todo , HOME PER RIGIOCARE
 

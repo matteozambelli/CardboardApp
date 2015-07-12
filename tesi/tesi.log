@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  12 JUL 2015 10:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  12 JUL 2015 14:13
 entering extended mode
 **tesi.tex
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -355,38 +355,66 @@ ft.png>] [20
 
 ]
 Capitolo 6.
-[21] [22
+<immagini/architettura_di_sistema.png, id=78, 603.75563pt x 238.64156pt>
+File: immagini/architettura_di_sistema.png Graphic file (type png)
 
-]
+<use immagini/architettura_di_sistema.png>
+Package pdftex.def Info: immagini/architettura_di_sistema.png used on input lin
+e 208.
+(pdftex.def)             Requested size: 390.0pt x 154.15019pt.
+ [21] [22 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/architet
+tura_di_sistema.png>]
 Capitolo 7.
-[23] [24
+[23
+
+] [24
 
 ]
 Capitolo 8.
-[25] [26
+<immagini/sito2.png, id=92, 1015.54407pt x 484.05844pt>
+File: immagini/sito2.png Graphic file (type png)
 
-]
+<use immagini/sito2.png>
+Package pdftex.def Info: immagini/sito2.png used on input line 235.
+(pdftex.def)             Requested size: 390.0pt x 185.89404pt.
+ [25] [26 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/sito2.pn
+g>]
 Capitolo 9.
-(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [27] [28
+<immagini/certifications.png, id=101, 356.0803pt x 60.225pt>
+File: immagini/certifications.png Graphic file (type png)
 
-])
-[29] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux) ) 
+<use immagini/certifications.png>
+Package pdftex.def Info: immagini/certifications.png used on input line 254.
+(pdftex.def)             Requested size: 390.0pt x 65.96465pt.
+
+Overfull \hbox (4.45995pt too wide) in paragraph at lines 251--258
+ \OT1/ptm/b/n/12 Cer-ti-fi-ca-zio-ne con-te-nu-ti:[] \OT1/ptm/m/n/12 L'ap-pli-c
+a-zio-ne ha ri-ce-vu-to del-le cer-ti-fi-ca-zio-ni da Goo-
+ []
+
+[27
+
+ <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/certifications.pn
+g>] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [28])
+[29
+
+] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 2798 strings out of 493921
- 37089 string characters out of 3144873
- 94079 words of memory out of 3000000
- 6031 multiletter control sequences out of 15000+200000
+ 2817 strings out of 493921
+ 37566 string characters out of 3144873
+ 94123 words of memory out of 3000000
+ 6047 multiletter control sequences out of 15000+200000
  24349 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,43p,1259b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program
- Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/urw/times/utmr8a.pfb>
-Output written on tesi.pdf (29 pages, 1745977 bytes).
+ 27i,10n,43p,1259b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/urw/times/utmr8a.pfb>
+Output written on tesi.pdf (29 pages, 3359217 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

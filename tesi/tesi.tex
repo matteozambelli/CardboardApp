@@ -44,11 +44,11 @@
 
 \chapter{Introduzione}
 
-Il progetto 3D4Amb mira a sviluppare un sistema basato sul 3D per la diagnosi e il trattamento dell?ambliopia nei bambini piccoli.\\
+Il progetto 3D4Amb \footnote{http://3d4amb.unibg.it/} mira a sviluppare un sistema basato sul 3D per la diagnosi e il trattamento dell?ambliopia nei bambini piccoli.\\
 Sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Essa dovrebbe consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. Non dovrebbe soffrire dei problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
 L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è di sviluppare un sistema per la diagnosi e il trattamento di ambliopia, basata sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
 Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg.it/
-Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è curare una patologia come l?ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
+Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
 
 %----------------------------------------------------------------------------------------
 %	l'ambliopia
@@ -98,7 +98,7 @@ Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb i
 %----------------------------------------------------------------------------------------
 \chapter{La tecnologia per il trattamento}
 
-\section{Google cardboard}
+\section{Google cardboard} \label{sectionGC}
 Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. Creato da  David Coz e Damien Henry, due ingegneri della Google, nel Google Cultural Institute  a Parigi nel loro 20\%  \virgolette{Innovation Time Off} \cite{GCfb}
 
 \begin{figure}[ht!]
@@ -192,9 +192,29 @@ In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro i
 
 
 %----------------------------------------------------------------------------------------
-%	architettura software
+%	Software
 %----------------------------------------------------------------------------------------
-\chapter{Architettura software}
+\chapter{Il software}
+\section{Architettura di sistema}
+Il sistema prevede le seguenti componenti:
+\begin{itemize}
+	\item Google Cardboard (vedi sezione \ref{sectionGC})
+	\item Smartphone Android con connessione internet attiva
+	\item Auricolari con tasti di controllo del volume
+	\item Server con database MySql
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{immagini/architettura_di_sistema}
+\caption{Architettura di sistema}
+\label{AS}
+\end{figure}
+\newpage
+Lo smartphone va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualisasi visore 3D per smartphone il risultato sarà lo stesso, TODO %TODO
+
+\section{Class diagram}
+
+\section{Sequence diagram}
 
 %----------------------------------------------------------------------------------------
 %	raccolta dati
@@ -208,7 +228,15 @@ In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro i
 
 \chapter{Social media}
 
-La promozione dell'applicazione è stata effettuata con i mezzi che ad oggi sono più in voga, gli strumenti utilizzati sono stati Facebook \footnote{https://www.facebook.com/3D4Amb} e Google+ \footnote{https://plus.google.com/u/1/110383688193490676162/posts} 
+La promozione dell'applicazione è stata effettuata con i mezzi che ad oggi sono più in voga, gli strumenti utilizzati sono stati Facebook\footnote{https://www.facebook.com/3D4Amb} e Google+\footnote{https://plus.google.com/u/1/110383688193490676162/posts}, è stato anche realizzato un sito internet\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/sito2}
+	\caption{Car Racing Cardboard web site}
+	\label{sito_web}
+\end{figure}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -219,6 +247,26 @@ La promozione dell'applicazione è stata effettuata con i mezzi che ad oggi sono 
 
 Lo scopo di questa applicazione è il trattamento dell'ambliopia, non è necessario avere a disposizione device costoso, al giorno d'oggi tutte le persone hanno uno smartphone e Goggole Cardboard è molto economico. Usando l'applicazione Car Racing Cardboard, le persone che soffrono di ambliopia possono migliorare il loro occhio pigro.\\
 La tipologia di trattamento proposta da 3D4Amb, cerca di evitare i rischi della terapia occlusiva, ma può anche essere usata in parallelo con la terapia occlusiva. 
+\paragraph{Certificazione contenuti:}
+L'applicazione ha ricevuto delle certificazioni da Google Play Store:
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/certifications.png}
+	\caption{Classificazione contenuti}
+	\label{classificaizone}
+\end{figure}
+
+\begin{itemize}
+		\item Australian Classification Board (ACB) --	Australia
+		\item Classificação Indicativa (ClassInd) --	Brazil
+		\item Entertainment Software Rating Board (ESRB) --	North America
+		\item Pan-European Game Information (PEGI) -- 	Europe
+		\item Unterhaltungssoftware Selbstkontrolle (USK) -- Germany
+		\item IARC Generic -- Rest of the world
+		\item Google Play --South Korea	
+\end{itemize}
+
+
 
 \section{Paper}
 

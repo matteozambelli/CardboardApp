@@ -20,6 +20,8 @@
 \contentsline {subsection}{\numberline {5.2.2}Doppia Viewport:}{18}
 \contentsline {chapter}{\numberline {6}Il software}{21}
 \contentsline {section}{\numberline {6.1}Architettura di sistema}{21}
+\contentsline {paragraph}{La scelta degli auricolari come controller}{22}
+\contentsline {paragraph}{Il server}{22}
 \contentsline {section}{\numberline {6.2}Class diagram}{22}
 \contentsline {section}{\numberline {6.3}Sequence diagram}{22}
 \contentsline {chapter}{\numberline {7}??Raccolta dati??}{23}

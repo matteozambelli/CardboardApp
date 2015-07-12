@@ -4,11 +4,20 @@
 
 @Unpublished{tesiTZ,
   Title                    = {{Progetto e sviluppo di un videogame basato sulla penalizzazione per il trattamento dell'ambliopia}},
-  Author                   = {"Fabio Terzi, Matteo Zambelli"},
+  Author                   = {"Fabio Terzi, and Matteo Zambelli"},
   Year                     = {2013},
 
   Owner                    = {matteo},
   Timestamp                = {2015.06.30}
+}
+
+@Article{rehab2015,
+  Title                    = {A Low-cost Virtual Reality Game for Amblyopia Rehabilitation},
+  Author                   = {"Angelo Gargantini and Fabio Terzi and Matteo Zambelli and Silvia Bonfanti"},
+  Year                     = {2015},
+
+  Owner                    = {matteo},
+  Timestamp                = {2015.07.12}
 }
 
 @Article{GCfb,

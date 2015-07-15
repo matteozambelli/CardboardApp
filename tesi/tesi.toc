@@ -22,10 +22,11 @@
 \contentsline {section}{\numberline {6.1}Architettura di sistema}{21}
 \contentsline {paragraph}{La scelta degli auricolari come controller}{22}
 \contentsline {paragraph}{Il server}{22}
-\contentsline {section}{\numberline {6.2}Class diagram}{22}
-\contentsline {section}{\numberline {6.3}Sequence diagram}{22}
-\contentsline {chapter}{\numberline {7}??Raccolta dati??}{23}
-\contentsline {chapter}{\numberline {8}Social media}{25}
-\contentsline {chapter}{\numberline {9}Conclusioni}{27}
-\contentsline {paragraph}{Certificazione contenuti:}{27}
-\contentsline {section}{\numberline {9.1}Paper}{28}
+\contentsline {section}{\numberline {6.2}Package Diagram}{22}
+\contentsline {section}{\numberline {6.3}Class diagram}{23}
+\contentsline {section}{\numberline {6.4}Sequence diagram}{23}
+\contentsline {chapter}{\numberline {7}??Raccolta dati??}{25}
+\contentsline {chapter}{\numberline {8}Social media}{27}
+\contentsline {chapter}{\numberline {9}Conclusioni}{29}
+\contentsline {paragraph}{Certificazione contenuti:}{29}
+\contentsline {section}{\numberline {9.1}Paper}{30}

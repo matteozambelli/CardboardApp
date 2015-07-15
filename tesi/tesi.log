@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  12 JUL 2015 23:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  15 JUL 2015 22:05
 entering extended mode
 **tesi.tex
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -240,9 +240,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
-
-]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 Capitolo 1.
 <immagini/logo3D4Amb.jpg, id=10, 497.86pt x 111.41624pt>
 File: immagini/logo3D4Amb.jpg Graphic file (type jpg)
@@ -250,8 +248,10 @@ File: immagini/logo3D4Amb.jpg Graphic file (type jpg)
 <use immagini/logo3D4Amb.jpg>
 Package pdftex.def Info: immagini/logo3D4Amb.jpg used on input line 54.
 (pdftex.def)             Requested size: 227.62204pt x 50.94098pt.
- [3 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/logo3D4Amb.jpg
->] [4
+ [3
+
+ <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/logo3D4Amb.jpg>] 
+[4
 
 ]
 Capitolo 2.
@@ -360,40 +360,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
-[22]
-Capitolo 7.
-[23
+<immagini/package_diagram.jpg, id=83, 606.76688pt x 434.37282pt>
+File: immagini/package_diagram.jpg Graphic file (type jpg)
 
-] [24
+<use immagini/package_diagram.jpg>
+Package pdftex.def Info: immagini/package_diagram.jpg used on input line 232.
+(pdftex.def)             Requested size: 369.88582pt x 264.7947pt.
+
+Underfull \vbox (badness 1776) has occurred while \output is active []
+
+ [22]
+[23 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/package_diagra
+m.jpg>] [24
+
+]
+Capitolo 7.
+[25] [26
 
 ]
 Capitolo 8.
-<immagini/sito2.png, id=92, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=100, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 244.
+Package pdftex.def Info: immagini/sito2.png used on input line 253.
 (pdftex.def)             Requested size: 390.0pt x 185.89404pt.
- [25] [26 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/sito2.pn
+ [27] [28 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/sito2.pn
 g>]
 Capitolo 9.
-<immagini/certifications.png, id=101, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=108, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 266.
+Package pdftex.def Info: immagini/certifications.png used on input line 275.
 (pdftex.def)             Requested size: 390.0pt x 65.96465pt.
 
-Overfull \hbox (4.45995pt too wide) in paragraph at lines 263--270
+Overfull \hbox (4.45995pt too wide) in paragraph at lines 272--279
  \OT1/ptm/b/n/12 Cer-ti-fi-ca-zio-ne con-te-nu-ti:[] \OT1/ptm/m/n/12 L'ap-pli-c
 a-zio-ne ha ri-ce-vu-to del-le cer-ti-fi-ca-zio-ni da Goo-
  []
 
-[27
+[29
 
  <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/certifications.pn
-g>] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [28])
-[29
+g>] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [30])
+[31
 
 ] (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
 
@@ -401,10 +412,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2823 strings out of 493921
- 37702 string characters out of 3144873
- 94166 words of memory out of 3000000
- 6052 multiletter control sequences out of 15000+200000
+ 2829 strings out of 493921
+ 37869 string characters out of 3144873
+ 94177 words of memory out of 3000000
+ 6057 multiletter control sequences out of 15000+200000
  24349 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,10n,43p,1259b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -412,9 +423,9 @@ Here is how much of TeX's memory you used:
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on tesi.pdf (29 pages, 3424724 bytes).
+Output written on tesi.pdf (31 pages, 3473695 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

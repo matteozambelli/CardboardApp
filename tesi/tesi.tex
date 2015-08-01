@@ -148,7 +148,7 @@ Il soggetto in cui è presente l'ambliopia soffre di un alterazione della visione
 Può colpire i bambini dalla nascita fino ai 7 anni, età in cui il sistema visivo raggiunge la sua maturità. Durante questo periodo iniziale l'ambliopia può essere trattata e prevenuta, mentre superata questa fase l'istaurazione della malattia diventa impossibile, ma, nel caso fosse presente, essa risulta irreversibile. L'ambliopia funzionale deve essere distinta dall'ambliopia organica, la quale è un impoverimento della visione, causata da anomalie strutturali dell?occhio o del cervello, che sono indipendenti dagli input sensoriali.\\
 L'ambliopia funzionale è reversibile se trattata con la stimolazione visiva adeguata, mentre quella organica non subisce alcun beneficio da una stimolazione visiva.
 Il videogame di rebalance ha quindi effetto solo sull'ambliopia funzionale e non su quella organica.
-
+\newpage
 \section{Trattamenti}
 Il trattamento precoce dell'ambliopia è fondamentale per ottenere buoni risultati, la correzione oculare avviene in diversi modi:
 
@@ -164,7 +164,7 @@ Viene effettuata con un collirio cicloplegico instillato nell?occhio sano per es
 \subsection{Settorizzazione}
 Consiste nella copertura di parte del campo visivo dell?occhio sano con pellicole adesive traslucide sugli occhiali. \\
 Per il trattamento dell'ambliopia sono stati proposti anche degli stimolatori visivi di tipo elettrico (trattamento CAM-Cambridge Stimulator e trattamento Flicker): vengono inviati stimoli luminosi di vario tipo sulla retina dell'occhio ambliope, forzandolo  a trasmettere l'impulso luminoso al cervello, e riattivando così i canali "impigriti" dall'ambliopia. L'efficacia di queste metodiche è ancora oggi molto dibattuta.  Recentemente si stanno utilizzando farmaci neuroprotettivi come sostegno alla terapia occlusiva: studi recenti indicano che in questo modo viene potenziato l'effetto della terapia occlusiva e viene più facilmente stabilizzato il miglioramento della funzione visiva.
-
+\newpage
 \section{L'idea di 3D4Amb}
 3D4Amb ha ideato un sistema basato sulle tecnologie 3D per consentire la visione binoculare. L'uso classico di un sistema 3D è quello di fornire ai due occhi diverse immagini della stessa scena con angoli di visualizzazione leggermente sfalsati che corrispondono ai diversi punti di vista dell' occhio destro e sinistro. Questa visione produce un'illusione di profondità della scena ed è la base della realtà virtuale.\\                                                         
 Il principio primario del sistema è che all?occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
@@ -209,7 +209,7 @@ Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclips
 	\caption{Android Logo}
 	\label{fig:android-logo}
 \end{figure}
-
+\newpage
 \section{Google cardboard} \label{sectionGC}
 Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. Creato da  David Coz e Damien Henry, due ingegneri della Google, nel Google Cultural Institute  a Parigi nel loro 20\%  \virgolette{Innovation Time Off} \cite{GCfb}
 
@@ -348,9 +348,9 @@ Il sistema prevede le seguenti componenti:
 	\item Auricolari con tasti di controllo del volume
 	\item Server con database MySql
 \end{itemize}
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=130mm]{immagini/architettura_di_sistema}
+\includegraphics[width=160mm]{immagini/architettura_di_sistema}
 \caption{Architettura di sistema}
 \label{AS}
 \end{figure}
@@ -362,7 +362,7 @@ al dispositivo vanno collegati degli auricolari con il controllo del volume (com
 Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma piuttosto sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
 
 \paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
-
+\newpage
 \section{Casi d'uso}
 \section{Requisiti funzionali e casi d'uso}
 \subsection{Definizioni dei requisiti:}
@@ -449,6 +449,27 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 
 \paragraph{Postcondizioni:}
 Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene avviato.
+\subsubsection{Update Info:}
+\paragraph{Attori:} Utente 
+\paragraph{Precondizioni:} E' necessaria una connessione ad internet.
+\paragraph{Passi principali:}
+\begin{enumerate}
+	\item L'utente avvia l' applicazione.
+	\item L'utente clicca sul link Update Your Info.
+	\item L'utente sceglie la credenziale di cui vuole fare l' update.
+	\item L'utente effettua il Log In utilizzando le credenziali precenti all'update.
+	\item L'utente inserisce il nuovo valore della credenziale da modificare e clicca Ok.
+\end{enumerate}
+\paragraph{Situazioni eccezionali:}
+\begin{enumerate}
+	\item[1a.] Le credenziali di Log In non sono valide
+	\item[1b.] L'applicazione risponde con un warning e rimanda alla schermata principale.
+\end{enumerate}
+\begin{enumerate}
+	\item[2a.] La nuova credenziale inserita non è valida.
+	\item[2b.] L'applicazione risponde tramite una warning, rimandando alla schermata principale.
+\end{enumerate}
+\newpage
 \section{Package Diagram}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 
@@ -478,70 +499,70 @@ L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua tra
 	 * @return Alpha value to penalize the image
 	 */
 	 private int getLevelPenalization(){
-	 switch(globalData.getLevel()){
+		 switch(globalData.getLevel()){
 	 
-	 case 1:{
-	 return 200;
-	 }
-	 case 2:{
-	 return 180;
-	 }
-	 case 3:{
-	 return 160;
-	 }
-	 case 4:{
-	 return 140;
-	 }
-	 case 5:{
-	 return 120;
-	 }
-	 case 6:{
-	 return 100;
-	 }
-	 case 7:{
-	 return 80;
-	 }
-	 case 8:{
-	 return 50;
-	 }
-	 default:{
-	 return 50;
-	 }
-	 }
+			 case 1:{
+				 return 200;
+			 }
+			 case 2:{
+				 return 180;
+			 }
+			 case 3:{
+				 return 160;
+			 }
+			 case 4:{
+				 return 140;
+			 }
+			 case 5:{
+				 return 120;
+			 }
+			 case 6:{
+				 return 100;
+			 }
+			 case 7:{
+				 return 80;
+			 }
+			 case 8:{
+				 return 50;
+			 }
+			 default:{
+				 return 50;
+			 }
+		 }
 	 }
 \end{lstlisting}
-
-\section{Generazione random nemici}
-\begin{lstlisting}
+\newpage
+\section{Generazione random dei nemici}
+Nella scena ci sono tre \virgolette{corsie} dalle quali possono arrivare i \virgolette{nemici}, questo è il codice dal quale viene estratat la corsia scelta.
+Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo nella stessa corsia senza muoversi viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.\\
+\begin{lstlisting}[language=Java]
 	public void randomFunction(){
-	selectedLane=(int)(lane*Math.random())+1;
-	if(previousLane==selectedLane){
-	countPrevious++;
-	if(countPrevious>3){
-	selectedLane++;
-	if(selectedLane>3){
-	selectedLane=1;
-	}
-	}
-	}
-	previousLane=selectedLane;
-	
-	selectedCar=(int)(numberOfCar*Math.random())+1;
-	
+		selectedLane=(int)(lane*Math.random())+1;
+		if(previousLane==selectedLane){
+			countPrevious++;
+			if(countPrevious>3){
+			   	selectedLane++;
+				if(selectedLane>3){
+						selectedLane=1;
+				}
+			}
+		}
+		previousLane=selectedLane;
+		selectedCar=(int)(numberOfCar*Math.random())+1;	
 	}?
 \end{lstlisting}
+\newpage
 \section{Cifratura password}
 
-Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.
+Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.\\
 
 \begin{lstlisting}[language=Java]
 	public static String calculateHash(String data) {
-	
-	String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
-	return hash;
+		String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
+		return hash;
 	}
 \end{lstlisting}
-
+\newpage
 \section{Servizio web}
 %----------------------------------------------------------------------------------------
 %	tool

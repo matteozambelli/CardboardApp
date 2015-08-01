@@ -12,24 +12,25 @@
 \BOOKMARK [2][-]{subsection.3.1.1}{Perch\350 Android:}{section.3.1}% 12
 \BOOKMARK [2][-]{subsection.3.1.2}{Perch\350 Android Studio:}{section.3.1}% 13
 \BOOKMARK [1][-]{section.3.2}{Google cardboard}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Il principio del trattamento tramite il gioco}{}% 15
-\BOOKMARK [0][-]{chapter.5}{Car racing cardboard: l'applicazione}{}% 16
-\BOOKMARK [1][-]{section.5.1}{Principio del gioco:}{chapter.5}% 17
-\BOOKMARK [2][-]{subsection.5.1.1}{Obiettivo:}{section.5.1}% 18
-\BOOKMARK [2][-]{subsection.5.1.2}{Doppia Viewport:}{section.5.1}% 19
-\BOOKMARK [0][-]{chapter.6}{Il software}{}% 20
-\BOOKMARK [1][-]{section.6.1}{Architettura di sistema}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.2}{Casi d'uso}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{Package Diagram}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.4}{Component diagram}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.5}{Class diagram}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.6}{Sequence diagram}{chapter.6}% 26
-\BOOKMARK [0][-]{chapter.7}{Analisi degli Algoritmi}{}% 27
-\BOOKMARK [1][-]{section.7.1}{Penalizzazione progressiva delle immagini}{chapter.7}% 28
-\BOOKMARK [1][-]{section.7.2}{Cifratura password}{chapter.7}% 29
-\BOOKMARK [0][-]{chapter.8}{Toll utilizzati}{}% 30
-\BOOKMARK [1][-]{section.8.1}{GitHub}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.2}{Crashlitics}{chapter.8}% 32
-\BOOKMARK [0][-]{chapter.9}{Social media}{}% 33
-\BOOKMARK [0][-]{chapter.10}{Conclusioni}{}% 34
-\BOOKMARK [1][-]{section.10.1}{Paper}{chapter.10}% 35
+\BOOKMARK [0][-]{chapter.4}{Car Racing Cardboard: l'applicazione}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Il principio del trattamento tramite il gioco:}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Il gioco:}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.2.1}{Obiettivo:}{section.4.2}% 18
+\BOOKMARK [2][-]{subsection.4.2.2}{Doppia Viewport:}{section.4.2}% 19
+\BOOKMARK [1][-]{section.4.3}{Guida all'utilizzo:}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Il software}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Architettura di sistema}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Casi d'uso}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{Package Diagram}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.4}{Component diagram}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.5}{Class diagram}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.6}{Sequence diagram}{chapter.5}% 27
+\BOOKMARK [0][-]{chapter.6}{Analisi degli Algoritmi}{}% 28
+\BOOKMARK [1][-]{section.6.1}{Penalizzazione progressiva delle immagini}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.2}{Cifratura password}{chapter.6}% 30
+\BOOKMARK [0][-]{chapter.7}{Toll utilizzati}{}% 31
+\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 33
+\BOOKMARK [0][-]{chapter.8}{Social media}{}% 34
+\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 35
+\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 36

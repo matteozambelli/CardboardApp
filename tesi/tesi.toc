@@ -13,27 +13,28 @@
 \contentsline {subsection}{\numberline {3.1.1}Perch\`e Android:}{14}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Perch\`e Android Studio:}{14}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Google cardboard}{15}{section.3.2}
-\contentsline {chapter}{\numberline {4}Il principio del trattamento tramite il gioco}{17}{chapter.4}
-\contentsline {chapter}{\numberline {5}Car racing cardboard: l'applicazione}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Principio del gioco:}{19}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Obiettivo:}{19}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Doppia Viewport:}{20}{subsection.5.1.2}
-\contentsline {chapter}{\numberline {6}Il software}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}Architettura di sistema}{23}{section.6.1}
-\contentsline {paragraph}{La scelta degli auricolari come controller}{24}{section*.11}
-\contentsline {paragraph}{Il server}{24}{section*.12}
-\contentsline {section}{\numberline {6.2}Casi d'uso}{24}{section.6.2}
-\contentsline {section}{\numberline {6.3}Package Diagram}{24}{section.6.3}
-\contentsline {section}{\numberline {6.4}Component diagram}{25}{section.6.4}
-\contentsline {section}{\numberline {6.5}Class diagram}{25}{section.6.5}
-\contentsline {section}{\numberline {6.6}Sequence diagram}{25}{section.6.6}
-\contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{27}{chapter.7}
-\contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{27}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cifratura password}{28}{section.7.2}
-\contentsline {chapter}{\numberline {8}Toll utilizzati}{29}{chapter.8}
-\contentsline {section}{\numberline {8.1}GitHub}{29}{section.8.1}
-\contentsline {section}{\numberline {8.2}Crashlitics}{29}{section.8.2}
-\contentsline {chapter}{\numberline {9}Social media}{31}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusioni}{33}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{33}{section*.15}
-\contentsline {section}{\numberline {10.1}Paper}{34}{section.10.1}
+\contentsline {chapter}{\numberline {4}Car Racing Cardboard: l'applicazione}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Il principio del trattamento tramite il gioco:}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Il gioco:}{18}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Obiettivo:}{18}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Doppia Viewport:}{19}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Guida all'utilizzo:}{20}{section.4.3}
+\contentsline {chapter}{\numberline {5}Il software}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Architettura di sistema}{23}{section.5.1}
+\contentsline {paragraph}{La scelta degli auricolari come controller}{24}{section*.12}
+\contentsline {paragraph}{Il server}{24}{section*.13}
+\contentsline {section}{\numberline {5.2}Casi d'uso}{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}Package Diagram}{24}{section.5.3}
+\contentsline {section}{\numberline {5.4}Component diagram}{25}{section.5.4}
+\contentsline {section}{\numberline {5.5}Class diagram}{25}{section.5.5}
+\contentsline {section}{\numberline {5.6}Sequence diagram}{25}{section.5.6}
+\contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Cifratura password}{28}{section.6.2}
+\contentsline {chapter}{\numberline {7}Toll utilizzati}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{29}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{29}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{31}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusioni}{33}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{33}{section*.16}
+\contentsline {section}{\numberline {9.1}Paper}{34}{section.9.1}

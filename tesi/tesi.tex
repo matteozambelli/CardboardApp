@@ -245,17 +245,17 @@ Questa tecnica può però presentare alcuni limiti:
 
 Probabilmente la tendenza alla perdita di effetto è dovuta, almeno in parte, al fatto che l'occlusione non affronta un altro importante aspetto della terapia dell'ambliopia, cioè la stimolazione diretta dell'occhio con il deficit visivo. Sulla base di questo, si è quindi pensato di realizzare un gioco interattivo che punti alla cura dell'occhio ampliope in modo più coinvolgente.
 Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo Android ed all'intrattenimento volontario ed intrinsecamente motivato dato dal gioco, è stato possibile creare un metodo di cura innovativo.
-\begin{figure}[th!]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/child_cardboard}
 	\caption{Interactive game scene}
 	\label{fig:child_cardboard}
 \end{figure}
-
+\newpage
 \section{Il gioco:}
 \subsection{Obiettivo:}
 L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono nella nostra direzione sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/game}
 	\caption{Game scene}
@@ -263,7 +263,7 @@ L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è que
 \end{figure}
 \subsection{Doppia Viewport:}
 Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizzando sullo smartphone dell'utente una doppia Viewport. Questo sdoppiamento, grazie alla tecnologia offerta dal Google Cardboard, permette all'utente una visione stereoscopica del gioco. Le due Viewport sono inoltre fondamentali per il principio di funzionamento della nostra applicazione. Infatti, grazie ad esse è possibile trattare in modo differente l'occhio sinistro dall'occhio destro, e più specificatamente l'occhio ambliope dall'occhio sano. Prima dell'inizio del gioco vero e proprio, l'applicazione da la possibilità di scegliere l'occhio pigro:
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/chooselazyeye_left}
 	\caption{Choose the lazy eye}
@@ -271,19 +271,70 @@ Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizza
 \end{figure}
 In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare dello score e dei livelli raggiunti dall'utente. 
 
+\newpage
 \section{Guida all'utilizzo:}
 
 Dopo aver scaricato l'applicazione da Google Play Store \footnote{https://play.google.com/store/apps/details?id=it.unibg.p3d4amb.carracingcarboard\&hl=it}
 è possibile friure dei contenuti di Car Racing Cardboard.
+Connettere quindi lo smartphone agli auricolari, ma aspettare ad inserirlo nel visore 3D.
 La schermata di avvio è la seguente (Figura \ref*{login_activity}):
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=80mm]{immagini/login}
 	\caption{Schemata di avvio}
 	\label{login_activity}
 \end{figure}
-Da questa schermata è possibile effettuare il log in se l'utente è gia registrato, in caso contrario è possibile registrarsi premendo sul bottono \virgolette{SIGN UP}.
-Prima della schermata di registrazione il sistema mostra un messaggio per ricordare all'utente (qualora esso non sia )
+Da questa schermata è possibile effettuare il log in, se l'utente è gia registrato, in caso contrario è possibile registrarsi premendo sul bottone \virgolette{SIGN UP}.
+Prima della schermata di registrazione il sistema mostra un messaggio per ricordare all'utente (qualora esso non sia il pazeinte, ad esempio un genitore) di inserire i dati del paziente, poichè non avrebbe senso raccogliere informazioni forvianti (Figura \ref{warning_signup})
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=60mm]{immagini/warning_registration}
+	\caption{Pop up di warning}
+	\label{warning_signup}
+\end{figure}
+Cliccando su \virgolette{CONTINUE} si entra nella vera schermata di registrazione (Figura \ref{popup_signup} ):
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=60mm]{immagini/registration}
+	\caption{Registrazione nuovi utenti}
+	\label{popup_signup}
+\end{figure}
+
+Qui bisogna inserire: Nome, Cognome, email, data di nascita, colore preferito e password. Il colore viene utilizzato in caso di password dimenticata, come domanda di sicurezza.
+Nell'eventualità in cui un utente si dimentichi la sua password, dalla schermata iniziale (Figura \ref*{login_activity}) premendo su \virgolette{forgot your password?} si accede al pop up di ripristino (Figura \ref{resetpassword}).
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=60mm]{immagini/resetpassword}
+	\caption{Pop up di reset della password}
+	\label{resetpassword}
+\end{figure}
+
+Inserendo l'indirizzo email valido ed il colore corretto, il sistema invia una mail con la nuova password, che sarà possibile ri-personalizzare premendo su \virgolette{update your info} (Figura \ref{login_activity}).
+Sempre dalla schermata iniziale è possibile, premendo su \virgolette{?} aprire il sito dedicato a Car Racing Cardboard\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}.
+Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questo possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(cFigura \ref{cwu}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=60mm]{immagini/collaborate_with_us}
+	\caption{Pop up collaborate with us}
+	\label{cwu}
+\end{figure}
+
+In questo caso, è stata prevista la possibilità per i dottori di gestire più pazienti con un unico account, infatti, il sistema è in grado di riconoscere un dottore registrato e lo reindirizza ad una pagina apposita (Figura \ref{doctor_activity}).
+
+Un utente può anche accedere al gioco senza registrarsi sul nostro sistema, cliccando su \virgolette{PLAY WITHOUT REGISTRATION}, in questo caso però non godrà degli stessi servizi di un utente loggato.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=80mm]{immagini/doctor}
+	\caption{Schermata per i dottori}
+	\label{doctor_activity}
+\end{figure}
+
+\paragraph{Avvio del gioco:}dopo aver effettuato il log in o aver avviato l'applicazione con l'opzione senza registrazione, inserire lo smartphone nel visore 3D.
+Inserire nel sistema a quale occhio si desidera somministrare il trattamento (Figura \ref{fig:chooselazyeye_left}), e premere conferma.
+A questo punto inizia il gioco vero e proprio.
+
+
 
 %----------------------------------------------------------------------------------------
 %	Software
@@ -317,7 +368,7 @@ sxsdadaas
 \section{Package Diagram}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=130mm]{immagini/package_diagram}
 	\caption{Package diagram}
@@ -387,6 +438,8 @@ Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma veng
 	return hash;
 	}
 \end{lstlisting}
+
+\section{Servizio web}
 %----------------------------------------------------------------------------------------
 %	tool
 %----------------------------------------------------------------------------------------

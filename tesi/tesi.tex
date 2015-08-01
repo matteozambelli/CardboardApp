@@ -387,7 +387,7 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 \chapter{Analisi degli Algoritmi}
 
 \section{Penalizzazione progressiva delle immagini}
-
+L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha=0 è trasparente, mentre con aplha=255 conserva tutte le sue caratteristiche, con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, in termini di nemici e velocità d'azione. 
 \begin{lstlisting}[language=Java]
 	 /**
 	 *
@@ -427,6 +427,25 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 	 }
 \end{lstlisting}
 
+\section{Generazione random nemici}
+\begin{lstlisting}
+	public void randomFunction(){
+	selectedLane=(int)(lane*Math.random())+1;
+	if(previousLane==selectedLane){
+	countPrevious++;
+	if(countPrevious>3){
+	selectedLane++;
+	if(selectedLane>3){
+	selectedLane=1;
+	}
+	}
+	}
+	previousLane=selectedLane;
+	
+	selectedCar=(int)(numberOfCar*Math.random())+1;
+	
+	}?
+\end{lstlisting}
 \section{Cifratura password}
 
 Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.

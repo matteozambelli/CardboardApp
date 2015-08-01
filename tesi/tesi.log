@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  1 AUG 2015 16:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  1 AUG 2015 17:00
 entering extended mode
 **tesi.tex
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.tex
@@ -675,76 +675,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-<immagini/package_diagram.jpg, id=369, 606.76688pt x 434.37282pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+[27] [28] [29]
+<immagini/package_diagram.jpg, id=417, 606.76688pt x 434.37282pt>
 File: immagini/package_diagram.jpg Graphic file (type jpg)
 
 <use immagini/package_diagram.jpg>
-Package pdftex.def Info: immagini/package_diagram.jpg used on input line 373.
+Package pdftex.def Info: immagini/package_diagram.jpg used on input line 457.
 (pdftex.def)             Requested size: 369.88582pt x 264.7947pt.
-
-Underfull \vbox (badness 4341) has occurred while \output is active []
-
- [26]
-[27 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/package_diagra
-m.jpg>] [28
-
-]
+ [30 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/package_diagr
+am.jpg>]
 Capitolo 6.
 ("C:\Program Files (x86)\miktex\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files (x86)\miktex\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-) [29] [30]
-[31] [32
+) [31
 
-]
-Capitolo 7.
+] [32]
 [33] [34
 
 ]
+Capitolo 7.
+[35] [36
+
+]
 Capitolo 8.
-<immagini/sito2.png, id=473, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=512, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 476.
+Package pdftex.def Info: immagini/sito2.png used on input line 560.
 (pdftex.def)             Requested size: 426.79135pt x 203.42871pt.
- [35] [36 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sito2.pn
+ [37] [38 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sito2.pn
 g>]
 Capitolo 9.
-<immagini/certifications.png, id=491, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=531, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 498.
+Package pdftex.def Info: immagini/certifications.png used on input line 582.
 (pdftex.def)             Requested size: 426.79135pt x 72.18782pt.
- [37
+ [39
 
  <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/certifications.pn
 g>]
-(C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.bbl [38])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 521.
- [39
+(C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.bbl [40])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 605.
+ [41
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 521.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 605.
 
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 521.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 521.
-Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: D7244201F92CC2CD9B1CFAFA631B2483;2460.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 605.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 605.
 
+
+Package rerunfilecheck Warning: File `tesi.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `tesi.out':
+(rerunfilecheck)             Before: D7244201F92CC2CD9B1CFAFA631B2483;2460
+(rerunfilecheck)             After:  B8757C6416A40375B970FC495DFB6755;2775.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 521.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 605.
  ) 
 Here is how much of TeX's memory you used:
- 10661 strings out of 493921
- 155212 string characters out of 3146472
- 306575 words of memory out of 3000000
+ 10694 strings out of 493921
+ 155537 string characters out of 3146472
+ 306600 words of memory out of 3000000
  13619 multiletter control sequences out of 15000+200000
  12624 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -758,9 +765,9 @@ ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/miktex/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/miktex/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsf
 onts/cm/cmtt12.pfb>
-Output written on tesi.pdf (39 pages, 3889182 bytes).
+Output written on tesi.pdf (41 pages, 3897487 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
+ 624 PDF objects out of 1000 (max. 8388607)
+ 206 named destinations out of 1000 (max. 500000)
  390 words of extra memory for PDF output out of 10000 (max. 10000000)
 

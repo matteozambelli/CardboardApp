@@ -364,7 +364,91 @@ Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti 
 \paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 
 \section{Casi d'uso}
-sxsdadaas
+\section{Requisiti funzionali e casi d'uso}
+\subsection{Definizioni dei requisiti:}
+\subsection{Analisi del contesto:}
+\subsection{Scenari e casi d' uso:}
+\subsubsection{Sign Up:}
+\paragraph{Attori:} Utente
+\paragraph{Precondizioni:} E' necessaria una connessione ad internet.
+\paragraph{Passi principali:}
+\begin{enumerate}
+	\item L'utente lancia l'applicazione.
+	\item L'utente clicca sul pulsante di Sign Up.
+	\item L'utente inserisce i propri dati (first name, last name, email, birthday, favourite color, password, password di conferma) e clicca Ok.
+\end{enumerate}
+\paragraph{Situazioni eccezionali:}
+\begin{enumerate}
+	\item[1a.] L'utente lascia vuoti alcuni campi.
+	\item[1b.] L'applicazione risponde con un toggle che segnala che alcuni campi sono da compilare e non permette il Sign Up.
+\end{enumerate}
+\begin{enumerate}
+	\item[2a.] L' email inserita dall' utente non esiste.
+	\item[2b.] L'applicazione risponde tramite una warning, segnalando all'utente l'insesistenza dell'email inserita, non permettendo la registrazione.
+\end{enumerate}
+\begin{enumerate}
+	\item[3a.] L' email inserita dall' utente è già presente nel database.
+	\item[3b.] L'applicazione risponde tramite una warning, segnalando all'utente che la mail non è valida, non permettendo la registrazione.
+\end{enumerate}
+\begin{enumerate}
+	\item[4a.] La data di nascita inserita non è valida.
+	\item[4b.] L'applicazione risponde tramite una warning, non permettendo la registrazione.
+\end{enumerate}
+\begin{enumerate}
+	\item[5a.] La password di conferma non corrisponde alla password inserita.
+	\item[5b.] L'applicazione risponde tramite una warning, segnalando l'errore e non permettendo il Sign Up.
+\end{enumerate}
+
+\paragraph{Postcondizioni:}
+I dati inseriti dall'utente sono validi e vengono registrati sul database MySql. L'utente è in grado sfruttare tutti i servizi offerti dall'applicazione accedendo tramite la fase di Log In.
+
+\subsubsection{Log In utente comune:}
+\paragraph{Attori:} Utente
+\paragraph{Precondizioni:} E' necessaria una connessione ad internet.
+\paragraph{Passi principali:}
+\begin{enumerate}
+	\item L'utente lancia l'applicazione.
+	\item L'utente inserisce i campi email e password utilizzati nella fase di Sign Up.
+	\item L'utente clicca sul pulsante di Log In.
+\end{enumerate}
+\paragraph{Situazioni eccezionali:}
+\begin{enumerate}
+	\item[1a.] L'utente lascia vuoto il campo email o il campo password.
+	\item[1b.] L'applicazione risponde con un toggle, il quale segnala che alcuni campi sono da compilare e non permette il Log In.
+\end{enumerate}
+\begin{enumerate}
+	\item[2a.] L'utente inserisce un email non presente nel database.
+	\item[2b.] L'applicazione risponde tramite una warning, segnalando all'utente la non presenza dell' email nel database MySql.
+\end{enumerate}
+\begin{enumerate}
+	\item[3a.] L'utente inserisce un email presente nel database ma con password scorretta.
+	\item[3b.] L'applicazione risponde tramite una warning, segnalando all'utente che la password inserita non è corretta, non permettendo il Log In.
+\end{enumerate}
+
+\paragraph{Postcondizioni:}
+Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene eseguito.
+
+\subsubsection{Log In medico:}
+\paragraph{Attori:} Medico
+\paragraph{Precondizioni:} E' necessaria una connessione ad internet. E' necessario che il medico abbia sottomano i dati del paziente.
+\paragraph{Passi principali:}
+\begin{enumerate}
+	\item Il medico lancia l'applicazione.
+	\item Il medico inserisce i campi email e password utilizzati nella fase di Sign Up.
+	\item Il medico inserisce i dati del paziente nella form successiva alla fase di Log In.
+\end{enumerate}
+\paragraph{Situazioni eccezionali:}
+\begin{enumerate}
+	\item[1a.] Il medico lascia vuoti alcuni dati del paziente
+	\item[1b.] L'applicazione risponde con un toggle, il quale segnala che alcuni campi sono da compilare e non permette l'avvio del gioco.
+\end{enumerate}
+\begin{enumerate}
+	\item[2a.] L'utente inserisce una data di nascita non valida per il paziente.
+	\item[2b.] L'applicazione risponde tramite una warning, segnalando che la data non è valida e non permettendo l' avvio del gioco.
+\end{enumerate}
+
+\paragraph{Postcondizioni:}
+Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene avviato.
 \section{Package Diagram}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 

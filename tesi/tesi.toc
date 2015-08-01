@@ -22,11 +22,18 @@
 \contentsline {section}{\numberline {6.1}Architettura di sistema}{23}{section.6.1}
 \contentsline {paragraph}{La scelta degli auricolari come controller}{24}{section*.11}
 \contentsline {paragraph}{Il server}{24}{section*.12}
-\contentsline {section}{\numberline {6.2}Package Diagram}{24}{section.6.2}
-\contentsline {section}{\numberline {6.3}Class diagram}{25}{section.6.3}
-\contentsline {section}{\numberline {6.4}Sequence diagram}{25}{section.6.4}
-\contentsline {chapter}{\numberline {7}??Raccolta dati??}{27}{chapter.7}
-\contentsline {chapter}{\numberline {8}Social media}{29}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusioni}{31}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{31}{section*.15}
-\contentsline {section}{\numberline {9.1}Paper}{32}{section.9.1}
+\contentsline {section}{\numberline {6.2}Casi d'uso}{24}{section.6.2}
+\contentsline {section}{\numberline {6.3}Package Diagram}{24}{section.6.3}
+\contentsline {section}{\numberline {6.4}Component diagram}{25}{section.6.4}
+\contentsline {section}{\numberline {6.5}Class diagram}{25}{section.6.5}
+\contentsline {section}{\numberline {6.6}Sequence diagram}{25}{section.6.6}
+\contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{27}{chapter.7}
+\contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{27}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cifratura password}{28}{section.7.2}
+\contentsline {chapter}{\numberline {8}Toll utilizzati}{29}{chapter.8}
+\contentsline {section}{\numberline {8.1}GitHub}{29}{section.8.1}
+\contentsline {section}{\numberline {8.2}Crashlitics}{29}{section.8.2}
+\contentsline {chapter}{\numberline {9}Social media}{31}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusioni}{33}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{33}{section*.15}
+\contentsline {section}{\numberline {10.1}Paper}{34}{section.10.1}

@@ -84,9 +84,8 @@
 
 \graphicspath{{./immagini/}}
 
-\author{Marco Rosa}
-\title{AppPolicyModule: Extending Android with Mandatory Access Control for Third-Party Apps}
-
+\author{Fabio Terzi and Matteo Zambelli}
+\title{A Low Cost virtual reality game for amblyopia}
 
 
 \renewcommand{\baselinestretch}{1.5} 
@@ -301,6 +300,7 @@ Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti 
 
 \paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 
+\section{Casi d'uso}
 \section{Package Diagram}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 
@@ -310,15 +310,76 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 	\caption{Package diagram}
 	\label{package_diagram}
 \end{figure}
+
+\section{Component diagram}
 \section{Class diagram}
 
 \section{Sequence diagram}
 
 %----------------------------------------------------------------------------------------
-%	raccolta dati
+%	analisi degli algoritmi
 %----------------------------------------------------------------------------------------
 
-\chapter{??Raccolta dati??}
+\chapter{Analisi degli Algoritmi}
+
+\section{Penalizzazione progressiva delle immagini}
+
+\begin{lstlisting}[language=Java]
+	 /**
+	 *
+	 * @return Alpha value to penalize the image
+	 */
+	 private int getLevelPenalization(){
+	 switch(globalData.getLevel()){
+	 
+	 case 1:{
+	 return 200;
+	 }
+	 case 2:{
+	 return 180;
+	 }
+	 case 3:{
+	 return 160;
+	 }
+	 case 4:{
+	 return 140;
+	 }
+	 case 5:{
+	 return 120;
+	 }
+	 case 6:{
+	 return 100;
+	 }
+	 case 7:{
+	 return 80;
+	 }
+	 case 8:{
+	 return 50;
+	 }
+	 default:{
+	 return 50;
+	 }
+	 }
+	 }
+\end{lstlisting}
+
+\section{Cifratura password}
+
+Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.
+
+\begin{lstlisting}[language=Java]
+	public static String calculateHash(String data) {
+	
+	String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
+	return hash;
+	}
+\end{lstlisting}
+%----------------------------------------------------------------------------------------
+%	tool
+%----------------------------------------------------------------------------------------
+\chapter{Toll utilizzati}
+\section{GitHub}
+\section{Crashlitics}
 
 %----------------------------------------------------------------------------------------
 %	social media

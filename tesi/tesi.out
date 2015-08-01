@@ -1,0 +1,28 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [0][-]{chapter.2}{L'Ambliopia}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Il disturbo}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Trattamenti}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{Occlusione}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Penalizzazione ottica}{section.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.3}{Penalizzazione farmacologica}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.4}{Settorizzazione}{section.2.2}% 8
+\BOOKMARK [1][-]{section.2.3}{L'idea di 3D4Amb}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{La tecnologia per il trattamento}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Google cardboard}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{Il principio del trattamento tramite il gioco}{}% 12
+\BOOKMARK [0][-]{chapter.5}{Car racing cardboard: l'applicazione}{}% 13
+\BOOKMARK [1][-]{section.5.1}{Sistema operativo ed ambiente di sviluppo:}{chapter.5}% 14
+\BOOKMARK [2][-]{subsection.5.1.1}{Perch\350 Android:}{section.5.1}% 15
+\BOOKMARK [2][-]{subsection.5.1.2}{Perch\350 Android Studio:}{section.5.1}% 16
+\BOOKMARK [1][-]{section.5.2}{Principio del gioco:}{chapter.5}% 17
+\BOOKMARK [2][-]{subsection.5.2.1}{Obiettivo:}{section.5.2}% 18
+\BOOKMARK [2][-]{subsection.5.2.2}{Doppia Viewport:}{section.5.2}% 19
+\BOOKMARK [0][-]{chapter.6}{Il software}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Architettura di sistema}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Package Diagram}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.3}{Class diagram}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.4}{Sequence diagram}{chapter.6}% 24
+\BOOKMARK [0][-]{chapter.7}{??Raccolta dati??}{}% 25
+\BOOKMARK [0][-]{chapter.8}{Social media}{}% 26
+\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 27
+\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 28

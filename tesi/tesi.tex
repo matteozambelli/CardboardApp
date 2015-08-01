@@ -2,31 +2,95 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt,a4paper,twoside]{book}
-\usepackage{times}
+\documentclass[12pt,a4paper,twoside, italian, openright]{book}
 \usepackage[latin1]{inputenc}
-\usepackage[italian]{babel}
+\usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[left=3.00cm, right=3.00cm, top=3.00cm, bottom=3.00cm]{geometry}
 \usepackage{setspace}
 \usepackage{fancyhdr}
 \usepackage{emptypage}
+\usepackage{verbatim}
+\usepackage[usenames,dvipsnames]{xcolor}
+%inserire i link senza colorarli o riquadrarli:
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=false,
+	allbordercolors=White,
+}
+%elenchi con lettere:
+\usepackage{enumerate}
+% stili per inserire codice
+\usepackage{listings}
+\usepackage{caption}
 
-\renewcommand{\baselinestretch}{1.5} 
-\newcommand{\virgolette}[1]{``#1''}
-%sommario
-%profondità 1 = sezioni (2 = sottosezioni ecc..)
-\setcounter{tocdepth}{1}
+\lstdefinestyle{numeri}{
+	numbers=left, % where to put the line-numbers
+	numberstyle=\tiny\color{Black} % the style that is used for the line-numbers
+	%stepnumber=2, % the step between two line-numbers
+	%numbersep=10pt, % how far the line-numbers are from the code
+}
+\lstdefinestyle{stiliComuni}{
+	frame=single, % adds a frame around the code
+	basicstyle={\normalsize\ttfamily},
+	backgroundcolor=\color{black!5!white}, % choose the background color;
+	showstringspaces=false, % underline spaces within strings only
+	showspaces=false, % show spaces everywhere adding particular underscores		
+	keepspaces=true, % keeps spaces in text 
+	tabsize=2, % sets default tabsize to 2 spaces
+	breaklines=true, % sets automatic line breaking
+	showtabs=false,
+	captionpos=b % sets the caption-position to bottom
+}
+
+%stile codice xml
+\lstdefinelanguage{XML}{
+	otherkeywords={policy, signer, default, package, seinfo},
+	morecomment=[s]{<!--}{-->}
+}
+%linguaggio e stile policy
+\lstdefinelanguage{Policy}{
+	keywords={isSystemServer,user,domain,type,seinfo, typealias, allow, neverallow}
+	%morecomment=[l]{#}
+	%moreidentifiers={},
+	%identifierstyle=\color{MidnightBlue},	
+}
+\lstset{
+	frame=single,
+	basicstyle={\normalsize\ttfamily},
+	stringstyle=\color{YellowOrange},
+	commentstyle=\color{OliveGreen},
+	keywordstyle=\color{RubineRed},
+	identifierstyle=\color{MidnightBlue},
+	style=numeri,
+	style=stiliComuni
+}
+
+%per scrivere tag xml
+\newcommand*{\xml}[1]{\texttt{<#1>}}
+
+%interlinea 1.5
 \onehalfspacing
+
 %numeri di pagina dispari a dx e pari a sx nel piè di pagina
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[LE,RO]{\thepage}
 \fancypagestyle{plain}{\fancyfoot[RO,LE]{\thepage}}
 
+\graphicspath{{./immagini/}}
 
+\author{Marco Rosa}
+\title{AppPolicyModule: Extending Android with Mandatory Access Control for Third-Party Apps}
+
+
+
+\renewcommand{\baselinestretch}{1.5} 
+\newcommand{\virgolette}[1]{``#1''}
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------

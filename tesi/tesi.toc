@@ -1,32 +1,32 @@
-\select@language {italian}
-\contentsline {chapter}{\numberline {1}Introduzione}{5}
-\contentsline {chapter}{\numberline {2}L'Ambliopia}{7}
-\contentsline {section}{\numberline {2.1}Il disturbo}{7}
-\contentsline {section}{\numberline {2.2}Trattamenti}{8}
-\contentsline {subsection}{\numberline {2.2.1}Occlusione}{8}
-\contentsline {subsection}{\numberline {2.2.2}Penalizzazione ottica}{8}
-\contentsline {subsection}{\numberline {2.2.3}Penalizzazione farmacologica}{9}
-\contentsline {subsection}{\numberline {2.2.4}Settorizzazione}{9}
-\contentsline {section}{\numberline {2.3}L'idea di 3D4Amb}{9}
-\contentsline {chapter}{\numberline {3}La tecnologia per il trattamento}{13}
-\contentsline {section}{\numberline {3.1}Google cardboard}{13}
-\contentsline {chapter}{\numberline {4}Il principio del trattamento tramite il gioco}{15}
-\contentsline {chapter}{\numberline {5}Car racing cardboard: l'applicazione}{17}
-\contentsline {section}{\numberline {5.1}Sistema operativo ed ambiente di sviluppo:}{17}
-\contentsline {subsection}{\numberline {5.1.1}Perch\`e Android:}{18}
-\contentsline {subsection}{\numberline {5.1.2}Perch\`e Android Studio:}{18}
-\contentsline {section}{\numberline {5.2}Principio del gioco:}{19}
-\contentsline {subsection}{\numberline {5.2.1}Obiettivo:}{19}
-\contentsline {subsection}{\numberline {5.2.2}Doppia Viewport:}{20}
-\contentsline {chapter}{\numberline {6}Il software}{23}
-\contentsline {section}{\numberline {6.1}Architettura di sistema}{23}
-\contentsline {paragraph}{La scelta degli auricolari come controller}{24}
-\contentsline {paragraph}{Il server}{24}
-\contentsline {section}{\numberline {6.2}Package Diagram}{24}
-\contentsline {section}{\numberline {6.3}Class diagram}{25}
-\contentsline {section}{\numberline {6.4}Sequence diagram}{25}
-\contentsline {chapter}{\numberline {7}??Raccolta dati??}{27}
-\contentsline {chapter}{\numberline {8}Social media}{29}
-\contentsline {chapter}{\numberline {9}Conclusioni}{31}
-\contentsline {paragraph}{Certificazione contenuti:}{31}
-\contentsline {section}{\numberline {9.1}Paper}{32}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduzione}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}L'Ambliopia}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Il disturbo}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Trattamenti}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Occlusione}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Penalizzazione ottica}{8}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Penalizzazione farmacologica}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Settorizzazione}{9}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}L'idea di 3D4Amb}{9}{section.2.3}
+\contentsline {chapter}{\numberline {3}La tecnologia per il trattamento}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Google cardboard}{13}{section.3.1}
+\contentsline {chapter}{\numberline {4}Il principio del trattamento tramite il gioco}{15}{chapter.4}
+\contentsline {chapter}{\numberline {5}Car racing cardboard: l'applicazione}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Sistema operativo ed ambiente di sviluppo:}{17}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Perch\`e Android:}{18}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Perch\`e Android Studio:}{18}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Principio del gioco:}{19}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Obiettivo:}{19}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Doppia Viewport:}{20}{subsection.5.2.2}
+\contentsline {chapter}{\numberline {6}Il software}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Architettura di sistema}{23}{section.6.1}
+\contentsline {paragraph}{La scelta degli auricolari come controller}{24}{section*.11}
+\contentsline {paragraph}{Il server}{24}{section*.12}
+\contentsline {section}{\numberline {6.2}Package Diagram}{24}{section.6.2}
+\contentsline {section}{\numberline {6.3}Class diagram}{25}{section.6.3}
+\contentsline {section}{\numberline {6.4}Sequence diagram}{25}{section.6.4}
+\contentsline {chapter}{\numberline {7}??Raccolta dati??}{27}{chapter.7}
+\contentsline {chapter}{\numberline {8}Social media}{29}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusioni}{31}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{31}{section*.15}
+\contentsline {section}{\numberline {9.1}Paper}{32}{section.9.1}

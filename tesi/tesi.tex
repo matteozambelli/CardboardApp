@@ -180,6 +180,34 @@ Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb i
 %	la tecnlogia per il trattamento
 %----------------------------------------------------------------------------------------
 \chapter{La tecnologia per il trattamento}
+\section{Sistema operativo ed ambiente di sviluppo:}
+L'applicazione è stata progettata e sviluppata per il mondo Android. I software utilizzati per l'implementazione sono stati:
+\begin{itemize}
+	\item L'ultima versione del JDK, il kit di sviluppo per la tradizionale programmazione Java, reperibile dal sito Oracle\footnote{http://www.oracle.com/technetwork/java/javase/downloads/index.html} .
+	\item L'IDE (ambiente di sviluppo integrato) Android Studio, alternativa fresca e promettente ad Eclipse. La sua installazione include il pacchetto di strumenti Android SDK, il quale è costituito da programmi, emulatori e piattaforme per ogni versione di Android. La sua composizione inoltre non è immutabile, ma viene gestita tramite il programma Android SDK Manager, avviabile dall'IDE, grazie al quale siamo stati in grado di profilare le piattaforme e gli strumenti presenti nel SDK nella maniera più congeniale al nostro lavoro.
+	
+\end{itemize}
+
+In particolare si è deciso che il requisito minimo che deve possedere lo smartphone dell'utente che utilizza l'applicazione sia un livello di API(Application Programming Interface) 15, ovvero dal sistema operativo Android 4.0.3 \footnote{(ICE\_CREAM\_SANDWICH\_MR1)} in poi.
+\subsection{Perchè Android:}
+La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
+Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alle radici ben salde nel mondo open source. Il sistema operativo Android, infatti, è figlio di Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
+Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.
+\subsection{Perchè Android Studio:}
+Dopo aver scelto per quale sistema operativo sviluppare, un'altra importante scelta è stata quella di identificare l'IDE più adatto alle nostre esigenze.
+Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclipse. Esso è sponsorizzato direttamente da Google e pensato appositamente per Android. Gli elementi di Android Studio che spiccano maggiormente sono:
+\begin{itemize}
+	\item l'utilizzo di Gradle come strumento di build automation, atto quindi ad accompagnare lo sviluppatore nelle fasi di build, sviluppo, test e pubblicazione della propria app;
+	\item disponibilità di un gran numero di template per la realizzazione di applicazioni già in linea con i più comuni pattern progettuali;
+	\item editor grafico per la realizzazione di layout, molto pratico e dotato di un ottimo strumento di anteprima in grado di mostrare l'aspetto finale dell?interfaccia che si sta realizzando in una molteplicità di configurazioni (tablet e smartphone di vario tipo).
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth, height=0.3\textheight]{immagini/android-logo}
+	\caption{Android Logo}
+	\label{fig:android-logo}
+\end{figure}
 
 \section{Google cardboard} \label{sectionGC}
 Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. Creato da  David Coz e Damien Henry, due ingegneri della Google, nel Google Cultural Institute  a Parigi nel loro 20\%  \virgolette{Innovation Time Off} \cite{GCfb}
@@ -224,34 +252,6 @@ Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo 
 %----------------------------------------------------------------------------------------
 
 \chapter{Car racing cardboard: l'applicazione}
-\section{Sistema operativo ed ambiente di sviluppo:}
-L'applicazione è stata progettata e sviluppata per il mondo Android. I software utilizzati per l'implementazione sono stati:
-\begin{itemize}
-	\item L'ultima versione del JDK, il kit di sviluppo per la tradizionale programmazione Java, reperibile dal sito Oracle\footnote{http://www.oracle.com/technetwork/java/javase/downloads/index.html} .
-	\item L'IDE (ambiente di sviluppo integrato) Android Studio, alternativa fresca e promettente ad Eclipse. La sua installazione include il pacchetto di strumenti Android SDK, il quale è costituito da programmi, emulatori e piattaforme per ogni versione di Android. La sua composizione inoltre non è immutabile, ma viene gestita tramite il programma Android SDK Manager, avviabile dall'IDE, grazie al quale siamo stati in grado di profilare le piattaforme e gli strumenti presenti nel SDK nella maniera più congeniale al nostro lavoro.
-
-\end{itemize}
-
-In particolare si è deciso che il requisito minimo che deve possedere lo smartphone dell'utente che utilizza l'applicazione sia un livello di API(Application Programming Interface) 15, ovvero dal sistema operativo Android 4.0.3 \footnote{(ICE\_CREAM\_SANDWICH\_MR1)} in poi.
-\subsection{Perchè Android:}
-La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
-Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alle radici ben salde nel mondo open source. Il sistema operativo Android, infatti, è figlio di Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
-Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.
-\subsection{Perchè Android Studio:}
-Dopo aver scelto per quale sistema operativo sviluppare, un'altra importante scelta è stata quella di identificare l'IDE più adatto alle nostre esigenze.
-Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclipse. Esso è sponsorizzato direttamente da Google e pensato appositamente per Android. Gli elementi di Android Studio che spiccano maggiormente sono:
-\begin{itemize}
-	\item l'utilizzo di Gradle come strumento di build automation, atto quindi ad accompagnare lo sviluppatore nelle fasi di build, sviluppo, test e pubblicazione della propria app;
-	\item disponibilità di un gran numero di template per la realizzazione di applicazioni già in linea con i più comuni pattern progettuali;
-	\item editor grafico per la realizzazione di layout, molto pratico e dotato di un ottimo strumento di anteprima in grado di mostrare l'aspetto finale dell?interfaccia che si sta realizzando in una molteplicità di configurazioni (tablet e smartphone di vario tipo).
-\end{itemize}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.45\linewidth, height=0.3\textheight]{immagini/android-logo}
-	\caption{Android Logo}
-	\label{fig:android-logo}
-\end{figure}
 
 
 \section{Principio del gioco:}

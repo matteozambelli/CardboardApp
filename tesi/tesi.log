@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  1 AUG 2015 10:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  1 AUG 2015 10:14
 entering extended mode
 **tesi.tex
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -565,65 +565,65 @@ ys.png>] [12
 
 ]
 Chapter 3.
-<immagini/Google-Cardboard.jpg, id=208, 1284.8pt x 707.64375pt>
-File: immagini/Google-Cardboard.jpg Graphic file (type jpg)
-
-<use immagini/Google-Cardboard.jpg>
-Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 189.
-(pdftex.def)             Requested size: 426.79135pt x 235.06723pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
-\OT1/cmr/m/n/12 parte delle ap-pli-cazioni sono reperi-bili gra-tuita-mente.
- []
-
-[13 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/Google-Cardboa
-rd.jpg>] [14]
-Chapter 4.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 209.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 186.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 209.
-
-<immagini/child_cardboard.png, id=221, 586.19pt x 511.9125pt>
-File: immagini/child_cardboard.png Graphic file (type png)
-
-<use immagini/child_cardboard.png>
-Package pdftex.def Info: immagini/child_cardboard.png used on input line 217.
-(pdftex.def)             Requested size: 426.79135pt x 372.70882pt.
- [15
-
-] [16 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/child_cardbo
-ard.png>]
-Chapter 5.
-[17
-
-] [18] <immagini/android-logo.png, id=248, 1606.0pt x 1606.0pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
+ [13] [14]
+<immagini/android-logo.png, id=224, 1606.0pt x 1606.0pt>
 File: immagini/android-logo.png Graphic file (type png)
 
 <use immagini/android-logo.png>
-Package pdftex.def Info: immagini/android-logo.png used on input line 251.
+Package pdftex.def Info: immagini/android-logo.png used on input line 207.
 (pdftex.def)             Requested size: 192.05003pt x 202.29335pt.
 
-<immagini/game.png, id=249, 1927.2pt x 1084.05pt>
+<immagini/Google-Cardboard.jpg, id=226, 1284.8pt x 707.64375pt>
+File: immagini/Google-Cardboard.jpg Graphic file (type jpg)
+
+<use immagini/Google-Cardboard.jpg>
+Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 217.
+(pdftex.def)             Requested size: 426.79135pt x 235.06723pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--227
+\OT1/cmr/m/n/12 parte delle ap-pli-cazioni sono reperi-bili gra-tuita-mente.
+ []
+
+[15 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/android-logo.p
+ng>] [16 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/Google-Ca
+rdboard.jpg>]
+Chapter 4.
+<immagini/child_cardboard.png, id=240, 586.19pt x 511.9125pt>
+File: immagini/child_cardboard.png Graphic file (type png)
+
+<use immagini/child_cardboard.png>
+Package pdftex.def Info: immagini/child_cardboard.png used on input line 245.
+(pdftex.def)             Requested size: 426.79135pt x 372.70882pt.
+ [17
+
+] [18 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/child_cardbo
+ard.png>]
+Chapter 5.
+<immagini/game.png, id=251, 1927.2pt x 1084.05pt>
 File: immagini/game.png Graphic file (type png)
  <use immagini/game.png>
 Package pdftex.def Info: immagini/game.png used on input line 262.
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
 
-[19 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/android-logo.p
-ng>] <immagini/chooselazyeye_left.png, id=257, 1927.2pt x 1084.05pt>
+<immagini/chooselazyeye_left.png, id=252, 1927.2pt x 1084.05pt>
 File: immagini/chooselazyeye_left.png Graphic file (type png)
 
 <use immagini/chooselazyeye_left.png>
 Package pdftex.def Info: immagini/chooselazyeye_left.png used on input line 270
 .
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
- [20 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/game.png>] [2
-1 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/chooselazyeye_le
-ft.png>] [22
+ [19
+
+] [20 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/game.png>] [
+21 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/chooselazyeye_l
+eft.png>] [22
 
 ]
 Chapter 6.
@@ -694,7 +694,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 375.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 375.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 523402C5AA9C509F1E0B6E0158213D98;1810.
+(rerunfilecheck)             Checksum: B6044154BEEE89EF096F23D6AD4C9F05;1810.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -715,7 +715,7 @@ Here is how much of TeX's memory you used:
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesi.pdf (33 pages, 3539525 bytes).
+Output written on tesi.pdf (33 pages, 3538826 bytes).
 PDF statistics:
  384 PDF objects out of 1000 (max. 8388607)
  88 named destinations out of 1000 (max. 500000)

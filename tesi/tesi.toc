@@ -66,10 +66,10 @@
 \contentsline {section}{\numberline {6.5}Thread}{41}{section.6.5}
 \contentsline {section}{\numberline {6.6}Asynctask}{42}{section.6.6}
 \contentsline {paragraph}{I quattro passi:}{42}{section*.44}
-\contentsline {chapter}{\numberline {7}Toll utilizzati}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{45}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{47}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusioni}{49}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{49}{section*.46}
-\contentsline {section}{\numberline {9.1}Paper}{50}{section.9.1}
+\contentsline {chapter}{\numberline {7}Toll utilizzati}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{43}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{45}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusioni}{47}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{47}{section*.46}
+\contentsline {section}{\numberline {9.1}Paper}{48}{section.9.1}

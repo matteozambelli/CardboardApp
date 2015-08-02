@@ -492,7 +492,7 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 \chapter{Analisi degli Algoritmi}
 
 \section{Penalizzazione progressiva delle immagini}
-L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha=0 è trasparente, mentre con aplha=255 conserva tutte le sue caratteristiche, con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, in termini di nemici e velocità d'azione. 
+L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha=0 è trasparente, mentre con aplha=255 conserva tutte le sue caratteristiche, con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, in termini di nemici e velocità d'azione. \\
 \begin{lstlisting}[language=Java]
 	 /**
 	 *
@@ -532,7 +532,8 @@ L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua tra
 	 }
 \end{lstlisting}
 \newpage
-\section{Generazione random dei nemici}
+\section{Generazione random scena}
+\subsection{Nemici}
 Nella scena ci sono tre \virgolette{corsie} dalle quali possono arrivare i \virgolette{nemici}, questo è il codice dal quale viene estratat la corsia scelta.
 Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo nella stessa corsia senza muoversi viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.\\
 \begin{lstlisting}[language=Java]
@@ -549,8 +550,20 @@ Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evit
 		}
 		previousLane=selectedLane;
 		selectedCar=(int)(numberOfCar*Math.random())+1;	
-	}?
+	}
 \end{lstlisting}
+\newpage
+\subsection{Panorama}
+Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l'ambientazione del gioco.\\
+
+\begin{lstlisting}
+public void randomPanorama() {
+	int pick = new Random().nextInt(Side.values().length);
+	selectedSide= Side.values()[pick];
+	idSubject= (int)(numberOfSubject*Math.random())+1;
+}
+\end{lstlisting}
+
 \newpage
 \section{Cifratura password}
 
@@ -564,6 +577,20 @@ Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma veng
 \end{lstlisting}
 \newpage
 \section{Servizio web}
+\newpage
+\section{Thread}
+\newpage
+\section{Asynctask}
+Per ottimizzare l'utilizzo di memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 
+In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell?applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall?interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
+\paragraph{I quattro passi:} un Asynktask in android si divide in quattro \virgolette{step}
+\begin{enumerate}
+	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} priva che il task venga eseguito. Qui viene solitamento messo il setup del task
+	
+	\item doInBackground(Params...), invoked on the background thread immediately after onPreExecute() finishes executing. This step is used to perform background computation that can take a long time. The parameters of the asynchronous task are passed to this step. The result of the computation must be returned by this step and will be passed back to the last step. This step can also use publishProgress(Progress...) to publish one or more units of progress. These values are published on the UI thread, in the onProgressUpdate(Progress...) step.
+	\item onProgressUpdate(Progress...), invoked on the UI thread after a call to publishProgress(Progress...). The timing of the execution is undefined. This method is used to display any form of progress in the user interface while the background computation is still executing. For instance, it can be used to animate a progress bar or show logs in a text field.
+	\item onPostExecute(Result), invoked on the UI thread after the background computation finishes. The result of the background computation is passed to this step as a parameter\cite{aos}.
+\end{enumerate}
 %----------------------------------------------------------------------------------------
 %	tool
 %----------------------------------------------------------------------------------------

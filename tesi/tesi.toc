@@ -58,13 +58,18 @@
 \contentsline {section}{\numberline {5.7}Sequence diagram}{33}{section.5.7}
 \contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{35}{chapter.6}
 \contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{35}{section.6.1}
-\contentsline {section}{\numberline {6.2}Generazione random dei nemici}{37}{section.6.2}
-\contentsline {section}{\numberline {6.3}Cifratura password}{38}{section.6.3}
-\contentsline {section}{\numberline {6.4}Servizio web}{39}{section.6.4}
-\contentsline {chapter}{\numberline {7}Toll utilizzati}{41}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{41}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{41}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{43}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusioni}{45}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{45}{section*.45}
-\contentsline {section}{\numberline {9.1}Paper}{46}{section.9.1}
+\contentsline {section}{\numberline {6.2}Generazione random scena}{37}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Nemici}{37}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Panorama}{38}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Cifratura password}{39}{section.6.3}
+\contentsline {section}{\numberline {6.4}Servizio web}{40}{section.6.4}
+\contentsline {section}{\numberline {6.5}Thread}{41}{section.6.5}
+\contentsline {section}{\numberline {6.6}Asynctask}{42}{section.6.6}
+\contentsline {paragraph}{I quattro passi:}{42}{section*.44}
+\contentsline {chapter}{\numberline {7}Toll utilizzati}{45}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{45}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{45}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{47}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusioni}{49}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{49}{section*.46}
+\contentsline {section}{\numberline {9.1}Paper}{50}{section.9.1}

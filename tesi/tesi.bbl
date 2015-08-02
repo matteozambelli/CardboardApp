@@ -1,9 +1,17 @@
 \begin{thebibliography}{1}
 
+\bibitem{asynktask}
+F.~Collini.
+\newblock http://android.devapp.it/, Luglio 2011.
+
 \bibitem{rehab2015}
 A.~Gargantini, F.~Terzi, M.~Zambelli, and S.~Bonfanti".
 \newblock A low-cost virtual reality game for amblyopia rehabilitation.
 \newblock 2015.
+
+\bibitem{aos}
+A.~official site.
+\newblock http://developer.android.com/.
 
 \bibitem{GCfb}
 N.~Statt.

@@ -31,12 +31,16 @@
 \BOOKMARK [1][-]{section.5.7}{Sequence diagram}{chapter.5}% 31
 \BOOKMARK [0][-]{chapter.6}{Analisi degli Algoritmi}{}% 32
 \BOOKMARK [1][-]{section.6.1}{Penalizzazione progressiva delle immagini}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{Generazione random dei nemici}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 36
-\BOOKMARK [0][-]{chapter.7}{Toll utilizzati}{}% 37
-\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 39
-\BOOKMARK [0][-]{chapter.8}{Social media}{}% 40
-\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 41
-\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 42
+\BOOKMARK [1][-]{section.6.2}{Generazione random scena}{chapter.6}% 34
+\BOOKMARK [2][-]{subsection.6.2.1}{Nemici}{section.6.2}% 35
+\BOOKMARK [2][-]{subsection.6.2.2}{Panorama}{section.6.2}% 36
+\BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.5}{Thread}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.6}{Asynctask}{chapter.6}% 40
+\BOOKMARK [0][-]{chapter.7}{Toll utilizzati}{}% 41
+\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 43
+\BOOKMARK [0][-]{chapter.8}{Social media}{}% 44
+\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 45
+\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 46

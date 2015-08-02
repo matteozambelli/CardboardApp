@@ -1,6 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: tesi.aux
 The style file: abbrv.bst
 Database file #1: tesi.bib
+Warning--entry type for "aos" isn't style-file defined
+--line 5 of file tesi.bib
+Warning--entry type for "asynktask" isn't style-file defined
+--line 22 of file tesi.bib
 Name 1 in ""Fabio Terzi, and Matteo Zambelli"" has a comma at the end for entry tesiTZ
 while executing---line 1049 of file abbrv.bst
 Warning--empty journal in rehab2015

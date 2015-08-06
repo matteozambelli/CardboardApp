@@ -4,7 +4,7 @@
 
 @Electronic{aos,
   Title                    = {http://developer.android.com/},
-  Author                   = {"Android official site"},
+  Author                   = {Android official site},
 
   Owner                    = {matteo},
   Timestamp                = {2015.08.02}

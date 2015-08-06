@@ -127,12 +127,6 @@ Sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, ci
 L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è di sviluppare un sistema per la diagnosi e il trattamento di ambliopia, basata sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
 Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg.it/
 Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
-\begin{figure}
-	\centering
-	\includegraphics[width=80mm]{immagini/logo3D4Amb}
-
-	\label{AS}
-\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	l'ambliopia
@@ -479,10 +473,42 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 	\caption{Package diagram}
 	\label{package_diagram}
 \end{figure}
-
+\newpage
 \section{Component diagram}
-\section{Class diagram}
+\subsection{Il sistema di Car Racing Cardboard}
+Le due compoenenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Andoid, queste due componenti comunicano con chiamate di tipo http post.\\
+A differenza di GET, che permette a un server di mandare informazioni a un client, l'operazione POST fornisce ai client un modo per trasmettere informazioni ai server. 
+La maggior parte dei browser web usa comunemente tale metodo per inviare forms ai server Web.
+Il client manda un messaggio POST e include l'informazione che desidera mandare al server.
+Il server può rimandare l'informazione stessa come parte della risposta \cite{httppost}. \\
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=100mm]{immagini/component_sistema}
+	\caption{Component diagram sistema}
+	\label{component sistema}
+\end{figure}
 
+\subsection{L'applicazione Android}
+Entranto nel dettaglio della prima componete, l'applicazione Android, offre il servizio di interfaccia grafica touch, mentre riceve dal server il servizio di scambio dati http.
+I componenti grafici di Android si dividono in due categorie: View e ViewGroup. Una View è un qualunque componente utilizzabile (TextView, EditView, CheckBox, Button, ImageView, ?) in una interfaccia. Una ViewGroup è solitamente un layout che contiene un insieme di View, i più usati sono LinearLayout, RelativeLayout e TableLayout. Un ViewGroup è a sua volta una View, per questo possono essere creati layout complessi annidando a più livelli i vari componenti. View e ViewGroup sono un esempio di pattern composite.
+Le interfacce grafiche in Android possono essere definite in due modi:\\
+\begin{itemize}
+	
+\item definendo un file xml: ad ogni View corrisponde un tag xml, i ViewGroup sono tag xml che contengono all?interno altri tag;
+\item scrivendo codice Java: ogni View ha una classe associata, è possibile aggiungere una View a un ViewGroup usando il metodo addView.
+\end{itemize}
+L'applicazione Car Racing Cardboard sfrutta entrambe le forme di componenti grafiche.\\
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=100mm]{immagini/component_android}
+	\caption{Component diagram applicazione Android}
+	\label{component andoid}
+\end{figure}
+\subsection{Il server}
+\subsection{Dettaglio applicazione}
+\newpage
+\section{Class diagram}
+\newpage
 \section{Sequence diagram}
 
 %----------------------------------------------------------------------------------------

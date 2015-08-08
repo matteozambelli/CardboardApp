@@ -358,10 +358,10 @@ Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti 
 \paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 \newpage
 \section{Casi d'uso}
-\section{Requisiti funzionali e casi d'uso}
-\subsection{Definizioni dei requisiti:}
-\subsection{Analisi del contesto:}
-\subsection{Scenari e casi d' uso:}
+%\section{Requisiti funzionali e casi d'uso}
+%\subsection{Definizioni dei requisiti:}
+%\subsection{Analisi del contesto:}
+%\subsection{Scenari e casi d' uso:}
 \subsubsection{Sign Up:}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
@@ -418,7 +418,6 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 	\item[3a.] L'utente inserisce un email presente nel database ma con password scorretta.
 	\item[3b.] L'applicazione risponde tramite una warning, segnalando all'utente che la password inserita non è corretta, non permettendo il Log In.
 \end{enumerate}
-
 \paragraph{Postcondizioni:}
 Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene eseguito.
 
@@ -440,9 +439,9 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 	\item[2a.] L'utente inserisce una data di nascita non valida per il paziente.
 	\item[2b.] L'applicazione risponde tramite una warning, segnalando che la data non è valida e non permettendo l' avvio del gioco.
 \end{enumerate}
-
 \paragraph{Postcondizioni:}
 Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene avviato.
+
 \subsubsection{Update Info:}
 \paragraph{Attori:} Utente 
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
@@ -463,6 +462,9 @@ Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene 
 	\item[2a.] La nuova credenziale inserita non è valida.
 	\item[2b.] L'applicazione risponde tramite una warning, rimandando alla schermata principale.
 \end{enumerate}
+\paragraph{Postcondizioni:}
+L'update delle credenziali selezionate viene eseguito correttamente.
+
 \newpage
 \section{Package Diagram}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.

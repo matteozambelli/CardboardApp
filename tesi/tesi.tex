@@ -199,7 +199,7 @@ Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclips
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\linewidth, height=0.3\textheight]{immagini/android-logo}
+	\includegraphics[width=0.45\linewidth, height=0.3\textheight]{immagini/android-logo.png}
 	\caption{Android Logo}
 	\label{fig:android-logo}
 \end{figure}
@@ -477,7 +477,7 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 \end{figure}
 \newpage
 \section{Component diagram}
-\subsection{Il sistema di Car Racing Cardboard}
+\subsection{Il sistema di Car Racing Cardboard}\label{post_call}
 Le due compoenenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Andoid, queste due componenti comunicano con chiamate di tipo http post.\\
 A differenza di GET, che permette a un server di mandare informazioni a un client, l'operazione POST fornisce ai client un modo per trasmettere informazioni ai server. 
 La maggior parte dei browser web usa comunemente tale metodo per inviare forms ai server Web.
@@ -593,7 +593,7 @@ public void randomPanorama() {
 \end{lstlisting}
 
 \newpage
-\section{Cifratura password}
+\section{Cifratura password}\label{cifratura}
 
 Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.\\
 
@@ -605,6 +605,55 @@ Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma veng
 \end{lstlisting}
 \newpage
 \section{Servizio web}
+La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrispondono sempre delle risposte dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
+\paragraph{Il thread della chiamata post}la chiamata avviene nel metodo \textit{public void myPostCall(final TypeCall type, final Activity logInActivity)} grazie ad un thread al suo interno.
+\begin{lstlisting}[language=java]
+// Create a new HttpClient and Post Header
+thread = new Thread(new Runnable() {
+	@Override
+	public void run() {
+		HttpClient httpclient = new DefaultHttpClient();
+		HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/3d4ambService.php");
+		[...]
+	}
+}			
+\end{lstlisting}
+
+La chiamata viene fatta al servizio php di Car Racing Cardboard (3d4ambService.php).
+\newpage
+Le chiamate possibili sono varie, per ognuna è stato predisposto una lista di stringhe che possono essere passate all'oggetto httppost:
+\begin{lstlisting}[language=java]
+List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(3);
+List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
+List<NameValuePair> nameValuePairsReset = new ArrayList<NameValuePair>(5);
+List<NameValuePair> nameValuePairsSignUp = new ArrayList<NameValuePair>(7);
+List<NameValuePair> nameValuePairsDoctorCall = new ArrayList<NameValuePair>(5);
+List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
+
+\end{lstlisting}
+\subsection*{Log in:}La chiamata post per il login avviene ogni volta che l'utente preme il bottone di login (Figura \ref{login_post}):
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=50mm]{immagini/login_post}
+	\caption{}
+	\label{login_post}
+\end{figure}
+
+Per il login vengono inviate al server email e password, che prima di essere inviata viene cifrata (vedi \ref{cifratura}).\\
+A questo punto viene lanciata la finestra di attesa (Figura \ref{attesa}):
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=70mm]{immagini/attesa}
+	\caption{interfaccia di attesa}
+	\label{attesa}
+\end{figure}
+
+Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente).
+\subsection*{Reset}
+//TODO
+\subsection*{Doctor call}//TODO
+\subsection*{Report}//TODO
+\subsection*{Sign up}//TODO
 \newpage
 \section{Thread}
 \newpage

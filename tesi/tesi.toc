@@ -25,10 +25,6 @@
 \contentsline {paragraph}{La scelta degli auricolari come controller}{30}{section*.17}
 \contentsline {paragraph}{Il server}{30}{section*.18}
 \contentsline {section}{\numberline {5.2}Casi d'uso}{31}{section.5.2}
-\contentsline {section}{\numberline {5.3}Requisiti funzionali e casi d'uso}{31}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Definizioni dei requisiti:}{31}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Analisi del contesto:}{31}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Scenari e casi d' uso:}{31}{subsection.5.3.3}
 \contentsline {subsubsection}{Sign Up:}{31}{section*.19}
 \contentsline {paragraph}{Attori:}{31}{section*.20}
 \contentsline {paragraph}{Precondizioni:}{31}{section*.21}
@@ -46,20 +42,21 @@
 \contentsline {paragraph}{Precondizioni:}{33}{section*.33}
 \contentsline {paragraph}{Passi principali:}{33}{section*.34}
 \contentsline {paragraph}{Situazioni eccezionali:}{33}{section*.35}
-\contentsline {paragraph}{Postcondizioni:}{34}{section*.36}
-\contentsline {subsubsection}{Update Info:}{34}{section*.37}
-\contentsline {paragraph}{Attori:}{34}{section*.38}
-\contentsline {paragraph}{Precondizioni:}{34}{section*.39}
+\contentsline {paragraph}{Postcondizioni:}{33}{section*.36}
+\contentsline {subsubsection}{Update Info:}{33}{section*.37}
+\contentsline {paragraph}{Attori:}{33}{section*.38}
+\contentsline {paragraph}{Precondizioni:}{33}{section*.39}
 \contentsline {paragraph}{Passi principali:}{34}{section*.40}
 \contentsline {paragraph}{Situazioni eccezionali:}{34}{section*.41}
-\contentsline {section}{\numberline {5.4}Package Diagram}{35}{section.5.4}
-\contentsline {section}{\numberline {5.5}Component diagram}{36}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Il sistema di Car Racing Cardboard}{36}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}L'applicazione Android}{36}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Il server}{37}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}Dettaglio applicazione}{37}{subsection.5.5.4}
-\contentsline {section}{\numberline {5.6}Class diagram}{38}{section.5.6}
-\contentsline {section}{\numberline {5.7}Sequence diagram}{39}{section.5.7}
+\contentsline {paragraph}{Postcondizioni:}{34}{section*.42}
+\contentsline {section}{\numberline {5.3}Package Diagram}{35}{section.5.3}
+\contentsline {section}{\numberline {5.4}Component diagram}{36}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Il sistema di Car Racing Cardboard}{36}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}L'applicazione Android}{36}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Il server}{37}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Dettaglio applicazione}{37}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Class diagram}{38}{section.5.5}
+\contentsline {section}{\numberline {5.6}Sequence diagram}{39}{section.5.6}
 \contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{41}{chapter.6}
 \contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{41}{section.6.1}
 \contentsline {section}{\numberline {6.2}Generazione random scena}{43}{section.6.2}
@@ -67,13 +64,14 @@
 \contentsline {subsection}{\numberline {6.2.2}Panorama}{44}{subsection.6.2.2}
 \contentsline {section}{\numberline {6.3}Cifratura password}{45}{section.6.3}
 \contentsline {section}{\numberline {6.4}Servizio web}{46}{section.6.4}
-\contentsline {section}{\numberline {6.5}Thread}{47}{section.6.5}
-\contentsline {section}{\numberline {6.6}Asynctask}{48}{section.6.6}
-\contentsline {paragraph}{I quattro passi:}{48}{section*.45}
-\contentsline {chapter}{\numberline {7}Toll utilizzati}{49}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{49}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{49}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{51}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusioni}{53}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{53}{section*.47}
-\contentsline {section}{\numberline {9.1}Paper}{54}{section.9.1}
+\contentsline {paragraph}{Il thread della chiamata post}{46}{section*.46}
+\contentsline {section}{\numberline {6.5}Thread}{50}{section.6.5}
+\contentsline {section}{\numberline {6.6}Asynctask}{51}{section.6.6}
+\contentsline {paragraph}{I quattro passi:}{51}{section*.54}
+\contentsline {chapter}{\numberline {7}Toll utilizzati}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{53}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{53}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{55}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusioni}{57}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{57}{section*.56}
+\contentsline {section}{\numberline {9.1}Paper}{58}{section.9.1}

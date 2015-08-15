@@ -65,13 +65,14 @@
 \contentsline {section}{\numberline {6.3}Cifratura password}{45}{section.6.3}
 \contentsline {section}{\numberline {6.4}Servizio web}{46}{section.6.4}
 \contentsline {paragraph}{Il thread della chiamata post}{46}{section*.46}
-\contentsline {section}{\numberline {6.5}Thread}{50}{section.6.5}
-\contentsline {section}{\numberline {6.6}Asynctask}{51}{section.6.6}
-\contentsline {paragraph}{I quattro passi:}{51}{section*.54}
+\contentsline {paragraph}{email all'utente:}{49}{section*.52}
+\contentsline {section}{\numberline {6.5}Thread}{51}{section.6.5}
+\contentsline {section}{\numberline {6.6}Asynctask}{52}{section.6.6}
+\contentsline {paragraph}{I quattro passi:}{52}{section*.58}
 \contentsline {chapter}{\numberline {7}Toll utilizzati}{53}{chapter.7}
 \contentsline {section}{\numberline {7.1}GitHub}{53}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{53}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{55}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusioni}{57}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{57}{section*.56}
-\contentsline {section}{\numberline {9.1}Paper}{58}{section.9.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{54}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{57}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusioni}{59}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{59}{section*.64}
+\contentsline {section}{\numberline {9.1}Paper}{60}{section.9.1}

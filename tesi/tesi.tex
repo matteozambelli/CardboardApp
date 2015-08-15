@@ -266,7 +266,7 @@ Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizza
 In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare dello score e dei livelli raggiunti dall'utente. 
 
 \newpage
-\section{Guida all'utilizzo:}
+\section{Guida all'utilizzo:}\label{guida}
 
 Dopo aver scaricato l'applicazione da Google Play Store \footnote{https://play.google.com/store/apps/details?id=it.unibg.p3d4amb.carracingcarboard\&hl=it}
 è possibile friure dei contenuti di Car Racing Cardboard.
@@ -584,7 +584,7 @@ Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evit
 \subsection{Panorama}
 Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l'ambientazione del gioco.\\
 
-\begin{lstlisting}
+\begin{lstlisting}[language=java]
 public void randomPanorama() {
 	int pick = new Random().nextInt(Side.values().length);
 	selectedSide= Side.values()[pick];
@@ -649,11 +649,51 @@ A questo punto viene lanciata la finestra di attesa (Figura \ref{attesa}):
 \end{figure}
 
 Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente).
+\subsection*{Sign up}
+L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha premuto il tasto \virgolette{ok} (Figura \ref{registration_post})
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=70mm]{immagini/registration_post}
+	\caption{}
+	\label{registration_post}
+\end{figure}
+
+La chiamata al server passa i seguenti parametri:
+
+\begin{itemize}
+	\item nome
+	\item cognome
+	\item email
+	\item colore preferito
+    \item data di nascita
+	\item password
+\end{itemize}
+
+Se va tutto a buon fine il nuovo utente viene inserito nel database:\\
+\textbf{//TODO--- metterei qui la parte php relativa alla registrazione!!!}\\
+\paragraph{email all'utente:} l'utente riceve una mail di conferma come questa (Figura \ref{conferma_registrazione})
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/email_registrazione}
+	\caption{email di conferma registrazione}
+	\label{conferma_registrazione}
+\end{figure}
+
+
 \subsection*{Reset}
-//TODO
+Il reset della password avviene quando l'utente preme sul tasto \virgolette{forgot your password?}, viene richiesta l'email e il colore preferito, se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}), e verrà inviata la seguente email (Figura \ref{reset_password})
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/email_reset_password}
+	\caption{email di reset della password}
+	\label{reset_password}
+\end{figure}
+
+
 \subsection*{Doctor call}//TODO
-\subsection*{Report}//TODO
-\subsection*{Sign up}//TODO
+\subsection*{Report}//TODO qui metterei lo screen di fine gioco, adesso non riesco perchè il server è down e la foto della mail di riepilogo
 \newpage
 \section{Thread}
 \newpage
@@ -672,8 +712,51 @@ In molti framework di sviluppo con interfacce grafiche i task lunghi non devono 
 %	tool
 %----------------------------------------------------------------------------------------
 \chapter{Toll utilizzati}
-\section{GitHub}
+\section{GitHub}Per il versioning del software e la sincronizzazione del lavoro è stato utilizzato github,%da modificare preno da wikipedia%
+ GitHub è un servizio web di hosting per lo sviluppo di progetti software, che usa il sistema di controllo di versione Git. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili (sfruttando il sistema di controllo di versione dei file di Git).
+
+GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti open-source. Nel maggio 2011, GitHub era il più popolare repository di progetti open source.
+
+GitHub Inc. è stata fondata nel 2008 ed ha sede legale a San Francisco, California. Nel luglio 2012 la compagnia ha ricevuto 100 milioni di dollari da Andreessen Horowitz per avviare la compagnia.
+%fine da modificare
+
+\newpage
 \section{Crashlitics}
+Per tenere traccia di eventuali problemi all' interno dell'applicazione è stato utilizzato Crashlitics\footnote{https://try.crashlytics.com/}.\\
+Crashlitics è uno strumento per tenere traccia dei crash all'interno dell'applicazione, segnala in quale activity si è verificato il problema, genera statistihe di utilizzo degli utenti, e consente agli sviluppatori di gestire i bug (marcandoli come risolti o non risolti).\\
+//TODO - aggiornare i dati prima di stampare la tesi (15/8/2015)\\
+Da quando l'applicazione è stata rilasciata (11 Maggio 2015 per la versione 1.1)
+Si sono verificati in totale 21 crash, molti dei quali(7) dovuti all'assenza di risposta da parte del server.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/daily_active_user}
+	\caption{utenti attivi per giorno}
+	\label{daily_active_user}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/daily_new_users}
+	\caption{nuovi utenti ogni giorno}
+	\label{daily_new_users}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/molthly_active_users}
+	\caption{utenti attivi per mese}
+	\label{monthly_active_user}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/crash_free_users}
+	\caption{utenti che non hanno riscontrato crash}
+	\label{crash_free_user}
+\end{figure}
+
+
 
 %----------------------------------------------------------------------------------------
 %	social media
@@ -722,7 +805,29 @@ L'applicazione ha ricevuto delle certificazioni da Google Play Store:
 
 
 \section{Paper}
+Riguardo l'applicazione Car Racing Cardboard è stato steso un paper dal titolo: \textit{A low-cost virtual reality game for amblyopia rehabilitation}\\
+//TODO descrizione paper?\\
+Il paper è stato sottoposto alla commissione della conferenza rehab 2015\footnote{http://rehab.greenlines-institute.org/}, ed è stato accettato:
+\begin{lstlisting}
+Dear Angelo Gargantini, 
 
+We have received the reviewers' reports on your paper 25 entitled 
+A Low-cost Virtual Reality Game for Amblyopia Rehabilitation and I am glad to inform you that your paper has been classified as 
+?Accepted?. 
+
+For your guidance, reviewers' comments are appended below. I hope these comments 
+can help you to improve the contribution. 
+
+Please note that the deadline for the camera ready is the next September 13th, 2015
+
+the process to register will be available next week in the workshop web page 
+[http://www.rehab-workshop.org]
+
+Thank you for your interest in the REHAB 2015 workshop. 
+
+Yours sincerely, 
+REHAB 2015 co-chairs
+\end{lstlisting}
 %bibliografia
 \bibliographystyle{abbrv}
 \bibliography{tesi} 

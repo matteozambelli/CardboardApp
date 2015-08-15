@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.14)  14 AUG 2015 21:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.14)  15 AUG 2015 10:52
 entering extended mode
 **tesi.tex
 ("C:\Users\Mara Carminati\Documents\GitHub\CardboardApp\tesi\tesi.tex"
@@ -411,7 +411,20 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 )
-("C:\Users\Mara Carminati\Documents\GitHub\CardboardApp\tesi\tesi.aux")
+("C:\Users\Mara Carminati\Documents\GitHub\CardboardApp\tesi\tesi.aux"
+
+LaTeX Warning: Label `reset_password' multiply defined.
+
+
+LaTeX Warning: Label `reset_password' multiply defined.
+
+
+LaTeX Warning: Label `reset_password' multiply defined.
+
+
+LaTeX Warning: Label `reset_password' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
 LaTeX Font Info:    ... okay on input line 99.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
@@ -426,8 +439,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
 LaTeX Font Info:    ... okay on input line 99.
 LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 99.
 LaTeX Font Info:    Try loading font information for LGR+cmr on input line 99.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
 File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 99.
@@ -612,7 +624,7 @@ Package pdftex.def Info: immagini/warning_registration.png used on input line 2
 85.
 (pdftex.def)             Requested size: 170.71652pt x 280.71603pt.
 
-<immagini/registration.png, id=366, 1084.05pt x 1782.66pt>
+<immagini/registration.png, id=366, 813.0375pt x 1336.995pt>
 File: immagini/registration.png Graphic file (type png)
 
 <use immagini/registration.png>
@@ -748,53 +760,121 @@ Package pdftex.def Info: immagini/attesa.png used on input line 646.
 (pdftex.def)             Requested size: 199.16928pt x 354.05626pt.
 
 [47 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/login_
-post.png>] [48 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/imma
-gini/attesa.png>] [49] [50] [51] [52
+post.png>] <immagini/registration_post.png, id=642, 813.0375pt x 1336.995pt>
+File: immagini/registration_post.png Graphic file (type png)
 
-]
+<use immagini/registration_post.png>
+Package pdftex.def Info: immagini/registration_post.png used on input line 656.
+
+(pdftex.def)             Requested size: 199.16928pt x 327.51564pt.
+ [48 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/attes
+a.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 672--674
+
+ []
+
+<immagini/email_registrazione.jpg, id=651, 608.2725pt x 214.55156pt>
+File: immagini/email_registrazione.jpg Graphic file (type jpg)
+
+<use immagini/email_registrazione.jpg>
+Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 67
+8.
+(pdftex.def)             Requested size: 426.79135pt x 150.5419pt.
+ [49 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/regis
+tration_post.png>]
+<immagini/email_reset_password.jpg, id=662, 592.46344pt x 124.21407pt>
+File: immagini/email_reset_password.jpg Graphic file (type jpg)
+
+<use immagini/email_reset_password.jpg>
+Package pdftex.def Info: immagini/email_reset_password.jpg used on input line 6
+89.
+(pdftex.def)             Requested size: 426.79135pt x 89.48332pt.
+ [50 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/email
+_registrazione.jpg> <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi
+/immagini/email_reset_password.jpg>]
+[51] [52]
 Capitolo 7.
-[53] [54
+[53
 
-]
+] <immagini/daily_active_user.jpg, id=696, 746.03719pt x 426.09187pt>
+File: immagini/daily_active_user.jpg Graphic file (type jpg)
+
+<use immagini/daily_active_user.jpg>
+Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 733.
+
+(pdftex.def)             Requested size: 426.79135pt x 243.7526pt.
+
+<immagini/daily_new_users.jpg, id=697, 735.49782pt x 418.56375pt>
+File: immagini/daily_new_users.jpg Graphic file (type jpg)
+
+<use immagini/daily_new_users.jpg>
+Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 740.
+(pdftex.def)             Requested size: 426.79135pt x 242.88847pt.
+
+<immagini/molthly_active_users.jpg, id=698, 730.22812pt x 414.04688pt>
+File: immagini/molthly_active_users.jpg Graphic file (type jpg)
+
+<use immagini/molthly_active_users.jpg>
+Package pdftex.def Info: immagini/molthly_active_users.jpg used on input line 7
+47.
+(pdftex.def)             Requested size: 426.79135pt x 241.99216pt.
+
+<immagini/crash_free_users.jpg, id=699, 727.21687pt x 338.01282pt>
+File: immagini/crash_free_users.jpg Graphic file (type jpg)
+
+<use immagini/crash_free_users.jpg>
+Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 754.
+(pdftex.def)             Requested size: 426.79135pt x 198.37881pt.
+ [54 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/daily
+_active_user.jpg>] [55 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/t
+esi/immagini/daily_new_users.jpg> <C:/Users/Mara Carminati/Documents/GitHub/Car
+dboardApp/tesi/immagini/molthly_active_users.jpg>] [56 <C:/Users/Mara Carminati
+/Documents/GitHub/CardboardApp/tesi/immagini/crash_free_users.jpg>]
 Capitolo 8.
-<immagini/sito2.png, id=686, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=717, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 685.
+Package pdftex.def Info: immagini/sito2.png used on input line 768.
 (pdftex.def)             Requested size: 426.79135pt x 203.42871pt.
- [55] [56 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/
-sito2.png>]
+ [57
+
+] [58 <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/sito
+2.png>]
 Capitolo 9.
-<immagini/certifications.png, id=705, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=735, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 707.
+Package pdftex.def Info: immagini/certifications.png used on input line 790.
 (pdftex.def)             Requested size: 426.79135pt x 72.18782pt.
- [57
+ [59
 
  <C:/Users/Mara Carminati/Documents/GitHub/CardboardApp/tesi/immagini/certifica
-tions.png>]
-("C:\Users\Mara Carminati\Documents\GitHub\CardboardApp\tesi\tesi.bbl" [58])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 730.
+tions.png>] [60]
+("C:\Users\Mara Carminati\Documents\GitHub\CardboardApp\tesi\tesi.bbl" [61]
+[62
 
-[59
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 730.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 835.
+ [63]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 835.
  ("C:\Users\Mara Carminati\Documents\GitHub\CardboardApp\tesi\tesi.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 730.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 730.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 835.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 835.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: F2A414564E1E5153A905444CB3CFC2F8;3001.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 730.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 835.
  ) 
 Here is how much of TeX's memory you used:
- 10826 strings out of 493921
- 158133 string characters out of 3144849
- 308992 words of memory out of 3000000
- 13677 multiletter control sequences out of 15000+200000
+ 10978 strings out of 493921
+ 160651 string characters out of 3144849
+ 320245 words of memory out of 3000000
+ 13789 multiletter control sequences out of 15000+200000
  12624 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,12n,51p,1259b,1948s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -807,9 +887,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (59 pages, 4153282 bytes).
+Output written on tesi.pdf (63 pages, 4560970 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 277 named destinations out of 1000 (max. 500000)
- 469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 310 named destinations out of 1000 (max. 500000)
+ 504 words of extra memory for PDF output out of 10000 (max. 10000000)
 

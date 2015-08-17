@@ -73,6 +73,7 @@
 \contentsline {section}{\numberline {7.1}GitHub}{53}{section.7.1}
 \contentsline {section}{\numberline {7.2}Crashlitics}{54}{section.7.2}
 \contentsline {chapter}{\numberline {8}Social media}{57}{chapter.8}
+\contentsline {paragraph}{Risultati promozione}{58}{section*.64}
 \contentsline {chapter}{\numberline {9}Conclusioni}{59}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{59}{section*.64}
+\contentsline {paragraph}{Certificazione contenuti:}{59}{section*.66}
 \contentsline {section}{\numberline {9.1}Paper}{60}{section.9.1}

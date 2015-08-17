@@ -626,6 +626,7 @@ Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma veng
 \section{Servizio web}
 La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrispondono sempre delle risposte dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
 \paragraph{Il thread della chiamata post}la chiamata avviene nel metodo \textit{public void myPostCall(final TypeCall type, final Activity logInActivity)} grazie ad un thread al suo interno.
+\\
 \begin{lstlisting}[language=java]
 // Create a new HttpClient and Post Header
 thread = new Thread(new Runnable() {
@@ -641,6 +642,7 @@ thread = new Thread(new Runnable() {
 La chiamata viene fatta al servizio php di Car Racing Cardboard (3d4ambService.php).
 \newpage
 Le chiamate possibili sono varie, per ognuna è stato predisposto una lista di stringhe che possono essere passate all'oggetto httppost:
+\\
 \begin{lstlisting}[language=java]
 List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(3);
 List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
@@ -650,7 +652,29 @@ List<NameValuePair> nameValuePairsDoctorCall = new ArrayList<NameValuePair>(5);
 List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
 
 \end{lstlisting}
-\subsection*{Log in:}La chiamata post per il login avviene ogni volta che l'utente preme il bottone di login (Figura \ref{login_post}):
+
+\paragraph{La gestione delle chiamate lato server} le chiamate fatte a lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute a lato server eseguendo una POST sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database:
+\\
+\begin{lstlisting}[language=php]
+
+$server = "localhost";
+$user = "3d4amb";
+$pass = "amb43d";
+$db = "cardboard";
+
+//Connect to mysql 
+$conn=mysql_connect($server,$user,$pass) or die("errore mysql");
+
+//Select the db
+mysql_select_db($db) or die("sorry,can't connect to the database.");
+
+$type = $_POST['type'];
+
+\end{lstlisting}
+
+In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di Sign Up, Log In, Report e così via, viene eseguito uno 'switch' per intraprendere diverse azioni in base alla procedura scelta.
+
+\subsection*{Log in}La chiamata post per il login avviene ogni volta che l'utente preme il bottone di login (Figura \ref{login_post}):
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=50mm]{immagini/login_post}
@@ -668,6 +692,45 @@ A questo punto viene lanciata la finestra di attesa (Figura \ref{attesa}):
 \end{figure}
 
 Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente).
+\\
+
+La procedura di Log In è trattata nel seguente modo a lato server:
+\\
+\begin{lstlisting}[language=php]
+
+case "log_in":
+	$emailFound = false;
+	$email = $_POST['email']; 
+	$password = $_POST['password'];
+	$sqlSelectAllFromUsers = "SELECT * FROM users";
+	$querySelectAllFromUsers = mysql_query($sqlSelectAllFromUsers);
+	
+	while($row = mysql_fetch_array($querySelectAllFromUsers)) {
+		if($email == $row['email'] && $email!= NULL) {
+			$emailFound = true;
+			if($password == $row['password']) {
+				$statusConnection = true;
+				$id_user = $row['id'];
+				$doc = $row['doctor'];
+			}
+			else {
+				echo "password errata";
+			}
+		}
+	}
+	
+	if($emailFound == false) {
+		echo "emailNotFound";
+	}
+	if($statusConnection == true) {
+		echo "connection/".$id_user."/".$doc;
+	}
+	
+	break;
+\end{lstlisting}
+
+Come si può vedere sopra, viene eseguito un controllo sui campi email e password e viene restituita una stringa che informa sull'esito. Viene inoltre restituito un valore concatenato (\$doc, 0 or 1) per indicare se si tratta del Log In di un utente comune o di un dottore, il quale dovrà quindi aggiungere successivamente i dati del paziente.
+\newpage
 \subsection*{Sign up}
 L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha premuto il tasto \virgolette{ok} (Figura \ref{registration_post})
 \begin{figure}[ht]
@@ -689,8 +752,76 @@ La chiamata al server passa i seguenti parametri:
 \end{itemize}
 
 Se va tutto a buon fine il nuovo utente viene inserito nel database:\\
-\textbf{//TODO--- metterei qui la parte php relativa alla registrazione!!!}\\
-\paragraph{email all'utente:} l'utente riceve una mail di conferma come questa (Figura \ref{conferma_registrazione})
+
+\begin{lstlisting}[language=php]
+
+case "sign_up":
+
+	$firstname = $_POST['first_name'];
+	$lastname = $_POST['last_name'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$color = $_POST['color'];
+	$date = $_POST['date'];
+	$doctor = false;
+	$emailAlreadyChecked = false;
+	$patient = false;
+	
+	// include SMTP Email Validation Class
+	require_once('smtp_validateEmail.php');
+
+	// instantiate the class
+	$SMTP_Validator = new SMTP_validateEmail();
+	
+	// turn on debugging if you want to view the SMTP transaction
+	//$SMTP_Validator->debug = true;
+	
+	// do the validation
+	$results = $SMTP_Validator->validate(array($email), 
+		"3D4AmbUnibg@gmail");
+	
+	if ($results[$email]) {
+		$sqlSelectAllFromUsers = "SELECT * FROM users";
+		$querySelectAllFromUsers = mysql_query($sqlSelectAllFromUsers);
+		while($row = mysql_fetch_array($querySelectAllFromUsers)) {
+			if($email == $row['email']) {
+				$emailAlreadyChecked = true;
+			}
+		}
+
+		if($emailAlreadyChecked == false) {	
+			//insert user into DB
+			$sqlInsertNewUser = "INSERT INTO users (firstname,
+			lastname,birthday,email,patient,color,password) values ('$firstname','$lastname','$date','$email','$patient','$color','$password')";
+			$queryInsertNewUser = mysql_query($sqlInsertNewUser);
+
+			//send mail registration
+			gmail($email,"REGISTRATION 3D4AMB","Hello dear ".$email.", welcome to 3d4Amb!".'<br> <br>'."
+			The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children.
+			Below you can find your authentication data:".'<br> <br>'."Firstname: ".$firstname.'<br>'."
+			Lastname: ".$lastname.'<br>'."
+			Email: ".$email.'<br>'."
+			Birthday: ".$date.'<br>'."
+			Favourite color: ".$color.'<br> <br>'.
+			"If you want change your info, you can go over 'update you info'.
+			Thanks for using our application, best regards.".'<br> <br>'." 3d4amb Staff".'<br> <br>'."Contact us on: 3D4AmbUnibg@gmail.com"
+			.'<br> <br>'."Visit our site on: http://3d4amb.unibg.it");
+			
+			echo "emailChecked";
+		}
+		else {
+			echo "emailAlreadyExist";
+		}
+	}
+	else {
+		echo "emailNotChecked";
+	}
+
+break;
+
+\end{lstlisting}
+
+Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un' email di benvenuto. Durante questa fase si è utilizzata la funzione 'gmail(\$to, \$subject, \$message)' appartenente alla classe 'SMTP\_validateEmail', in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell' email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell' operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga alla seguente: (Figura \ref{conferma_registrazione})
 
 \begin{figure}[ht]
 	\centering
@@ -710,9 +841,169 @@ Il reset della password avviene quando l'utente preme sul tasto \virgolette{forg
 	\label{reset_password}
 \end{figure}
 
+L' operazione di reset della password è gestita a livello server nel seguente modo:
+\\
+\begin{lstlisting}[language=php]
+	
+	case "reset":
+	
+	$new_password = $_POST['new_password'];
+	$new_passwordCfr = $_POST['new_passwordCfr'];
+	$email = $_POST['email'];
+	$color = $_POST['color'];
+	$sqlSelectColor = "SELECT * FROM users WHERE email = '$email'";
+	$querySelectColor = mysql_query($sqlSelectColor);
+	
+	while($row = mysql_fetch_array($querySelectColor)) {
+		if($row['color'] == $color ) {
+			$id_user=$row['id'];
+			$sqlInsertNewPassword = "UPDATE users SET password='$new_passwordCfr' WHERE id='$id_user'";
+			$queryInsertNewPassword = mysql_query($sqlInsertNewPassword);
+	
+			//send email password changed
+			gmail($email,"PASSWORD CHANGED SUCCESSFULLY","Hello dear ".$email."!".'<br> <br>'."Your password
+			has been changed and the new password is: ".$new_password.". 
+			If you want customize your password, you can go over 'update you info'. 
+			Thanks for using our application, best regards.".'<br> <br>'." 3d4amb Staff".'<br> <br>'."Contact us on: 3D4AmbUnibg@gmail.com"
+			.'<br> <br>'."Visit our site on: http://3d4amb.unibg.it");
+			echo "colorTrue";
+		}
+		else {
+			echo "colorFalse";
+		}
+	}
+	
+	break;
 
-\subsection*{Doctor call}//TODO
-\subsection*{Report}//TODO qui metterei lo screen di fine gioco, adesso non riesco perchè il server è down e la foto della mail di riepilogo
+\end{lstlisting}
+
+Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell' identità dell'utente. Sulla base dell' email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti allora l'operazione di ripristino della password viene eseguita con successo. L' utente riceverà quindi un email contenente la nuova password.
+
+\subsection*{Doctor call}//TODO parte lato client
+
+L' utilizzo dell'applicazione da parte di un dottore prevede come detto il Log In tramite le credenziali del medico, l' inserimento dei dati del paziente e l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
+La gestione lato server dell' avvio di una partita da parte di un dottore, dopo avere inserito i dati del paziente, è stata realizzata nel seguente modo: 
+\\
+\begin{lstlisting}[language=php]
+
+case "doctorcall":
+
+	$first_name = $_POST['first_name'];
+	$last_name = $_POST['last_name'];
+	$id_doctor = $_POST['id_doctor'];
+	$birthday = $_POST['birthday'];
+	$patient = true;
+	$patientAlreadyExist = false;
+	
+	$sqlSelectAllFromUsers1 = "SELECT * FROM users";
+	$querySelectAllFromUsers1 = mysql_query($sqlSelectAllFromUsers1);
+	
+	while($row = mysql_fetch_array($querySelectAllFromUsers1)) {
+		if($first_name == $row['firstname'] &&
+		 $last_name == $row['lastname'] &&
+		 $birthday == $row['birthday'] &&
+		 $patient == true) {
+			 $patientAlreadyExist = true;
+			 $id_user = $row['id'];
+		}
+	}
+	
+	if($patientAlreadyExist == false) {
+		$sqlInsertDoctorPatient = "INSERT INTO users (firstname,lastname,birthday,patient,id_doctor) values ('$first_name','$last_name','$birthday',
+		'$patient','$id_doctor')";
+		
+		$queryInsertDoctorPatient = mysql_query($sqlInsertDoctorPatient);
+		
+		$sqlSelectAllFromUsers = "SELECT * FROM users";
+		
+		$querySelectAllFromUsers = mysql_query($sqlSelectAllFromUsers);
+		
+		while($row = mysql_fetch_array($querySelectAllFromUsers)) {
+			if($first_name == $row['firstname'] &&
+			 $last_name == $row['lastname'] &&
+			 $birthday == $row['birthday'] &&
+			 $row['patient'] == true) {
+				 $id_user = $row['id'];
+			}
+		}
+	}
+	
+	echo $id_user;
+	
+	break;
+
+\end{lstlisting}
+
+Prima di avviare una partita viene controllato se il paziente è già presente nel database, in tal caso verrà restituito come valore 'id\_user' il valore pescato dal database. In caso si tratti di un nuovo paziente, si procede all'inserimento dei nuovi dati nel database e viene creato un nuovo 'id\_user'.
+
+\subsection*{Report}
+
+La fase di report nell' applicazione è differenziata per due diverse casistiche, ovvero l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso si usufruisca dell' applicativo come utente non registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso invece si sfrutti la possibilità di registrarsi, si ottiene il privilegio di salvataggio e monitoraggio automatico dei risultati raggiunti.
+
+//TODO qui metterei lo screen di fine gioco, adesso non riesco perchè il server è down e la foto della mail di riepilogo
+//TODO lato client
+
+Vediamo ora nel dettaglio la gestione della fase di report lato server per quanto riguarda gli utenti registrati, siano essi pazienti di dottori o meno:
+\\
+\begin{lstlisting}[language=php]
+
+case "report_and_email":
+	$score = $_POST['score'];
+	$level = $_POST['level'];
+	$id_user = $_POST['id_user'];
+	$isDoctor = false;
+	
+	$sqlInsertReport = "INSERT INTO results(id_user,score,level,date)
+		values ('$id_user','$score','$level',now())";
+	$queryInsertReport = mysql_query($sqlInsertReport);
+
+	$sqlSelectAllFromUsers2 = "SELECT * FROM users WHERE id='$id_user'";
+	$querySelectAllFromUsers2 = mysql_query($sqlSelectAllFromUsers2);
+	$sqlSelectAllFromResults = "SELECT * FROM results WHERE id_user='$id_user'";
+	$querySelectAllFromResults = mysql_query($sqlSelectAllFromResults);
+	
+	while($row = mysql_fetch_array($querySelectAllFromUsers2)) {
+		$patient_firstname = $row['firstname'];
+		$patient_lastname = $row['lastname'];
+		
+		if($row['patient'] == NULL) {
+			$message="Hello ".$row['email']."!".'<br> <br>'."These are your results: ".'<br> <br>';
+			while($row3 = mysql_fetch_array($querySelectAllFromResults)) {
+				$extract=$extract.
+				"SCORE: ".$row3['score'].".".'<br>'.
+				"LEVEL: ".$row3['level'].".".'<br>'.
+				"DATE: ".$row3['date'].".".'<br> <br>';
+			}
+			$message=$message.$extract.
+			"Carry on playing in order to improve your lazy eye! Thank you for using our app. Regards.".'<br> <br>'." 3d4amb Staff".'<br> <br>'."Contact us on: 3D4AmbUnibg@gmail.com".'<br> <br>'."Visit our site on: http://3d4amb.unibg.it";
+			
+			gmail($row['email'],"3D4AMB SCORE",$message);
+		}
+		else {
+			$id_doctor = $row['id_doctor'];
+			$sqlSelectDoctorFromUsers = "SELECT * FROM users WHERE id='$id_doctor'";
+			$querySelectDoctorFromUsers = mysql_query($sqlSelectDoctorFromUsers);
+			while($row1 = mysql_fetch_array($querySelectDoctorFromUsers)) {
+				gmail($row1['email'],"3D4AMB SCORE","Hello dear ".$row1['email']."!".'<br> <br>'."There are the results of your patient's game : "
+				.'<br> <br>'."PATIENT'S FIRSTNAME: ".$patient_firstname."."
+				.'<br> '."PATIENT'S LASTNAME: ".$patient_lastname."."
+				.'<br> '."SCORE: ".$score.".
+				".'<br>'."LEVEL: ".$level.".".'<br> <br>'."
+				Continues to play to improve your results! 
+				Thanks for using our application, best regards.".'<br> <br>'." 3d4amb Staff".'<br> <br>'."Contact us on: 3D4AmbUnibg@gmail.com"
+				.'<br> <br>'."Visit our site on: http://3d4amb.unibg.it");
+			}
+		}
+	}
+
+echo "report_and_email";
+
+break;
+
+\end{lstlisting}
+
+Come si può vedere, una volta finita la partita, i risultati ottenuti dall' utente vengono inseriti nella tabella 'results'. In seguito viene individuato lo storico dell' utente dal database e viene inviata una mail che notifica i risultati ottenuti fino all' ultima partita effettuata. L' obiettivo è quello di mantenere una cronologia che permetta all' utente di osservare progressivamente i miglioramenti ottenuti.
+
 \newpage
 \section{Thread}
 \newpage

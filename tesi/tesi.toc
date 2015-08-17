@@ -66,15 +66,15 @@
 \contentsline {section}{\numberline {6.3}Cifratura password}{45}{section.6.3}
 \contentsline {section}{\numberline {6.4}Servizio web}{46}{section.6.4}
 \contentsline {paragraph}{Il thread della chiamata post}{46}{section*.47}
-\contentsline {paragraph}{email all'utente:}{49}{section*.53}
-\contentsline {section}{\numberline {6.5}Thread}{51}{section.6.5}
-\contentsline {section}{\numberline {6.6}Asynctask}{52}{section.6.6}
-\contentsline {paragraph}{I quattro passi:}{52}{section*.59}
-\contentsline {chapter}{\numberline {7}Toll utilizzati}{53}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{53}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{54}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{57}{chapter.8}
-\contentsline {paragraph}{Risultati promozione}{58}{section*.65}
-\contentsline {chapter}{\numberline {9}Conclusioni}{59}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{59}{section*.67}
-\contentsline {section}{\numberline {9.1}Paper}{60}{section.9.1}
+\contentsline {paragraph}{La gestione delle chiamate lato server}{47}{section*.48}
+\contentsline {section}{\numberline {6.5}Thread}{63}{section.6.5}
+\contentsline {section}{\numberline {6.6}Asynctask}{64}{section.6.6}
+\contentsline {paragraph}{I quattro passi:}{64}{section*.59}
+\contentsline {chapter}{\numberline {7}Toll utilizzati}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{65}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{66}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{69}{chapter.8}
+\contentsline {paragraph}{Risultati promozione}{70}{section*.65}
+\contentsline {chapter}{\numberline {9}Conclusioni}{71}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{71}{section*.67}
+\contentsline {section}{\numberline {9.1}Paper}{72}{section.9.1}

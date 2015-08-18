@@ -382,12 +382,12 @@ Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti 
 
 \paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 \newpage
-\section{Casi d'uso}
+\section{Scenari e casi d'uso}
 %\section{Requisiti funzionali e casi d'uso}
 %\subsection{Definizioni dei requisiti:}
 %\subsection{Analisi del contesto:}
 %\subsection{Scenari e casi d' uso:}
-\subsubsection{Sign Up:}
+\subsection{Sign Up:}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -421,7 +421,15 @@ Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti 
 \paragraph{Postcondizioni:}
 I dati inseriti dall'utente sono validi e vengono registrati sul database MySql. L'utente è in grado sfruttare tutti i servizi offerti dall'applicazione accedendo tramite la fase di Log In.
 
-\subsubsection{Log In utente comune:}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=160mm]{immagini/ucSignUp}
+	\caption{Use Case Sign Up}
+	\label{Use Case Sign Up}
+\end{figure}
+
+\newpage
+\subsection{Log In utente comune:}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -446,13 +454,23 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 \paragraph{Postcondizioni:}
 Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene eseguito.
 
-\subsubsection{Log In medico:}
+\newpage
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=160mm]{immagini/ucLogInUtente}
+	\caption{Use Case Log In utente comune}
+	\label{Use Case Log In utente comune}
+\end{figure}
+
+\newpage
+\subsection{Log In medico:}
 \paragraph{Attori:} Medico
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet. E' necessario che il medico abbia sottomano i dati del paziente.
 \paragraph{Passi principali:}
 \begin{enumerate}
 	\item Il medico lancia l'applicazione.
 	\item Il medico inserisce i campi email e password utilizzati nella fase di Sign Up.
+	\item Il medico clicca sul pulsante di Log In.
 	\item Il medico inserisce i dati del paziente nella form successiva alla fase di Log In.
 \end{enumerate}
 \paragraph{Situazioni eccezionali:}
@@ -467,7 +485,16 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 \paragraph{Postcondizioni:}
 Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene avviato.
 
-\subsubsection{Update Info:}
+\newpage
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=160mm]{immagini/ucLogInMedico}
+	\caption{Use Case Log In medico}
+	\label{Use Case Log In medico}
+\end{figure}
+\newpage
+
+\subsection{Update Info:}
 \paragraph{Attori:} Utente 
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -489,6 +516,13 @@ Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene 
 \end{enumerate}
 \paragraph{Postcondizioni:}
 L'update delle credenziali selezionate viene eseguito correttamente.
+\newpage
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=160mm]{immagini/ucUpdateInfo}
+	\caption{Use Case Update Info}
+	\label{Use Case Update Info}
+\end{figure}
 
 \newpage
 \section{Package Diagram}
@@ -1220,7 +1254,7 @@ Si sono verificati in totale 21 crash, molti dei quali(7) dovuti all'assenza di 
 La promozione dell'applicazione è stata effettuata con i mezzi che ad oggi sono più in voga, gli strumenti utilizzati sono stati Facebook\footnote{https://www.facebook.com/3D4Amb} e Google+\footnote{https://plus.google.com/u/1/110383688193490676162/posts}, è stato anche realizzato un sito internet\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/} (Figura \ref{sito_web}).\\
 Il sito contiene informazioni sulla strumentazione necessaria per l'utilizzo dell'applicazione, rimanda alla pagina di Google Play per il download e continene anche una piccola guida utente.
 
-\paragraph{Risultati promozione} sicuramente tale \virgolette{pubblicizzazione} ha infliuto nell numero di download dell'applicazione, possiamo notare un notevole picco dopo la data di rilascio: 
+\paragraph{Risultati promozione} sicuramente tale \virgolette{pubblicizzazione} ha infliuto nel numero di download dell'applicazione, possiamo notare un notevole picco dopo la data di rilascio: 
 
 \begin{figure}[ht]
 	\centering

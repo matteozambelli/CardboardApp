@@ -72,11 +72,11 @@
 \contentsline {section}{\numberline {6.6}Thread}{68}{section.6.6}
 \contentsline {section}{\numberline {6.7}Asynctask}{69}{section.6.7}
 \contentsline {paragraph}{I quattro passi:}{69}{section*.60}
-\contentsline {chapter}{\numberline {7}Toll utilizzati}{71}{chapter.7}
+\contentsline {chapter}{\numberline {7}Tool utilizzati}{71}{chapter.7}
 \contentsline {section}{\numberline {7.1}GitHub}{71}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{72}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{75}{chapter.8}
-\contentsline {paragraph}{Risultati promozione}{76}{section*.66}
-\contentsline {chapter}{\numberline {9}Conclusioni}{77}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{77}{section*.68}
-\contentsline {section}{\numberline {9.1}Paper}{78}{section.9.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{73}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{77}{chapter.8}
+\contentsline {paragraph}{Risultati promozione}{78}{section*.68}
+\contentsline {chapter}{\numberline {9}Conclusioni}{79}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{79}{section*.70}
+\contentsline {section}{\numberline {9.1}Paper}{80}{section.9.1}

@@ -1,46 +1,4 @@
 \BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
-<<<<<<< HEAD
-\BOOKMARK [0][-]{chapter.2}{L'Ambliopia}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Il disturbo}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Trattamenti}{chapter.2}% 4
-\BOOKMARK [2][-]{subsection.2.2.1}{Occlusione}{section.2.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.2}{Penalizzazione ottica}{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.3}{Penalizzazione farmacologica}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.4}{Settorizzazione}{section.2.2}% 8
-\BOOKMARK [1][-]{section.2.3}{L'idea di 3D4Amb}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{La tecnologia per il trattamento}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Sistema operativo ed ambiente di sviluppo:}{chapter.3}% 11
-\BOOKMARK [2][-]{subsection.3.1.1}{Perch\350 Android:}{section.3.1}% 12
-\BOOKMARK [2][-]{subsection.3.1.2}{Perch\350 Android Studio:}{section.3.1}% 13
-\BOOKMARK [1][-]{section.3.2}{Google cardboard}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Car Racing Cardboard: l'applicazione}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Il principio del trattamento tramite il gioco:}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Il gioco:}{chapter.4}% 17
-\BOOKMARK [2][-]{subsection.4.2.1}{Obiettivo:}{section.4.2}% 18
-\BOOKMARK [2][-]{subsection.4.2.2}{Doppia Viewport:}{section.4.2}% 19
-\BOOKMARK [1][-]{section.4.3}{Guida all'utilizzo:}{chapter.4}% 20
-\BOOKMARK [0][-]{chapter.5}{Il software}{}% 21
-\BOOKMARK [1][-]{section.5.1}{Architettura di sistema}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.2}{Casi d'uso}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.3}{Package Diagram}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.4}{Component diagram}{chapter.5}% 25
-\BOOKMARK [2][-]{subsection.5.4.1}{Il sistema di Car Racing Cardboard}{section.5.4}% 26
-\BOOKMARK [2][-]{subsection.5.4.2}{L'applicazione Android}{section.5.4}% 27
-\BOOKMARK [2][-]{subsection.5.4.3}{Il server}{section.5.4}% 28
-\BOOKMARK [2][-]{subsection.5.4.4}{Dettaglio applicazione}{section.5.4}% 29
-\BOOKMARK [1][-]{section.5.5}{Class diagram}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.6}{Sequence diagram}{chapter.5}% 31
-\BOOKMARK [0][-]{chapter.6}{Analisi degli Algoritmi}{}% 32
-\BOOKMARK [1][-]{section.6.1}{Penalizzazione progressiva delle immagini}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{Generazione random scena}{chapter.6}% 34
-\BOOKMARK [2][-]{subsection.6.2.1}{Nemici}{section.6.2}% 35
-\BOOKMARK [2][-]{subsection.6.2.2}{Panorama}{section.6.2}% 36
-\BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 37
-\BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.5}{Gestione dello scontro con il nemico}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.6}{Thread}{chapter.6}% 40
-\BOOKMARK [1][-]{section.6.7}{Asynctask}{chapter.6}% 41
-=======
 \BOOKMARK [1][-]{section.1.1}{Obiettivo}{chapter.1}% 2
 \BOOKMARK [0][-]{chapter.2}{L'Ambliopia}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Il disturbo}{chapter.2}% 4
@@ -79,12 +37,12 @@
 \BOOKMARK [2][-]{subsection.6.2.2}{Panorama}{section.6.2}% 37
 \BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 38
 \BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.5}{Thread}{chapter.6}% 40
-\BOOKMARK [1][-]{section.6.6}{Asynctask}{chapter.6}% 41
->>>>>>> origin/master
-\BOOKMARK [0][-]{chapter.7}{Toll utilizzati}{}% 42
-\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 43
-\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 44
-\BOOKMARK [0][-]{chapter.8}{Social media}{}% 45
-\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 46
-\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 47
+\BOOKMARK [1][-]{section.6.5}{Gestione dello scontro con il nemico}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.6}{Thread}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.7}{Asynctask}{chapter.6}% 42
+\BOOKMARK [0][-]{chapter.7}{Tool utilizzati}{}% 43
+\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 45
+\BOOKMARK [0][-]{chapter.8}{Social media}{}% 46
+\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 47
+\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 48

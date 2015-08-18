@@ -29,6 +29,16 @@
   Timestamp                = {2015.08.02}
 }
 
+@Article{percentualeSmartphone,
+  Title                    = {a},
+  Author                   = {Luigi Ferro},
+  Journal                  = {Il Fatto Quotidiano},
+  Year                     = {18 agosto 2014},
+
+  Owner                    = {mzambell},
+  Timestamp                = {2015.08.18}
+}
+
 @Article{rehab2015,
   Title                    = {A Low-cost Virtual Reality Game for Amblyopia Rehabilitation},
   Author                   = {"Angelo Gargantini and Fabio Terzi and Matteo Zambelli and Silvia Bonfanti"},
@@ -36,6 +46,15 @@
 
   Owner                    = {matteo},
   Timestamp                = {2015.07.12}
+}
+
+@Article{httppost,
+  Title                    = {appunti a cura di Salvatore Di Modica},
+  Author                   = {Salvatore Di Modica},
+  Journal                  = {Università di Pisa},
+
+  Owner                    = {matteo},
+  Timestamp                = {2015.08.06}
 }
 
 @Article{GCfb,

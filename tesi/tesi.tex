@@ -1005,6 +1005,119 @@ break;
 Come si può vedere, una volta finita la partita, i risultati ottenuti dall' utente vengono inseriti nella tabella 'results'. In seguito viene individuato lo storico dell' utente dal database e viene inviata una mail che notifica i risultati ottenuti fino all' ultima partita effettuata. L' obiettivo è quello di mantenere una cronologia che permetta all' utente di osservare progressivamente i miglioramenti ottenuti.
 
 \newpage
+\section{Gestione dello scontro con il nemico}
+
+Nel momento in cui si effettua una collisione con un autoveicolo nemico, oltre al decremento del numero di vite a disposizione ed alla gestione di un eventuale Game Over, viene visualizzata a schermo un' esplosione animata nel punto di scontro. Questo effetto è stato progettato basandosi sulle potenzialità dei Thread e sfruttando le potenzialità della classe SurfaceView, messa a disposizione da Android.
+Essa fornisce infatti una superficie di disegno pienamente controllabile che può essere adoperata per effettuare delle sovrapposizioni grafiche con altre View. L' accesso alla superficie sottostante è fornito tramite l' interfaccia SurfaceHolder, la quale può essere richiamata usando il metodo getHolder(). Nella classe, è necessario implementare i  metodi 'surfaceCreated(SurfaceHolder)' e 'surfaceDestroyed(surfaceHolder)' che agiscono quando la superficie viene creata e distrutta. Lo scopo principae della classe SurfaceView è quello di fornire una superficie dove un thread secondario possa renderizzare a schermo. Per questo obiettivo, vengono utilizzate delle Callback sull' oggetto SurfaceHolder per fare da filo conduttore tra thread principale e secondario. Di seguito è riportata la classe AnimationExplosionView, la nostra estensione della classe SurfaceView precedentemente descritta:
+
+\begin{lstlisting}[language=java]
+
+public class AnimationExplosionView extends SurfaceView {
+	private SurfaceHolder holder;
+	private AnimationLoopThread gameLoopThread;
+	private Sprite spriteExplosion;
+	
+	public AnimationExplosionView(Context context)
+	{
+		super(context);
+		gameLoopThread = new AnimationLoopThread(this);
+		setZOrderOnTop(true);
+		holder = getHolder();
+		holder.addCallback(new SurfaceHolder.Callback() {
+			@Override
+			public void surfaceDestroyed(SurfaceHolder holder) {
+				boolean retry = true;
+				gameLoopThread.setRunning(false);
+				while (retry) {
+					try {
+						gameLoopThread.join();
+						retry = false;
+					} 
+					catch (InterruptedException e) {
+					}
+				}
+			}
+	
+			@Override
+			public void surfaceCreated(SurfaceHolder holder) {
+				gameLoopThread.setRunning(true);
+				gameLoopThread.start();
+			}
+			
+			@Override
+			public void surfaceChanged(SurfaceHolder holder, int format,
+				int width, int height) {
+			}
+		});
+		
+		holder.setFormat(PixelFormat.TRANSPARENT);
+		createSprite();
+	}
+			
+			
+	private void createSprite()
+	{
+		Bitmap bmpExplosion = BitmapFactory.decodeResource(getResources(),
+		 R.drawable.explosion_anim);
+		spriteExplosion = new Sprite(this,bmpExplosion,12);
+	}
+
+
+	public void onDrawAnimationExplosionView(Canvas canvas)
+	{
+		if(canvas!=null)
+			spriteExplosion.onDrawExplosion(canvas);
+	}
+}
+
+
+\end{lstlisting}
+
+Come si può osservare dal codice, nella classe vengono utilizzati anche oggetti di tipo Bitmap. Questi oggetti sono molto utili per la rappresentazione di immagini in formato raster. Inoltre si istanzia anche un oggetto GameLoopThread, il quale ha il compito di richiamare ad intervalli regolari il metodo onDrawAnimationExplosionView(Canvas canvas). Il principio dell' animazione dell' esplosione è infatti dato dallo scorrimento di un vettore diviso in colonne aventi la medesima dimensione. Ogni colonna contiene 'l' evoluzione' dell' animazione e lo scorrimento veloce da parte del thread simula l'effetto dell'esplosione:
+\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{immagini/explosion_anim1.png}
+\caption{Vettore esplosione}
+\label{vettore esplosione}
+\end{figure}
+
+\newpage
+
+In AnimationExplosionView viene inoltre istanziato l'oggetto spriteExplosion della classe Sprite. Il costruttore della classe Sprite accetta come parametri la SurfaceView , la Bitmap ed il numero di colonne in cui è divisa la bitmap da scorrere. Il metodo richiamato da GameLoopThread 'onDrawAnimationExplosionView(Canvas canvas)' chiama a sua volta il metodo 'onDrawExplosion(Canvas canvas)' sull'oggetto spriteExplosion. Tale metodo va effettivamente a disegnare a schermo la nostra animazione:
+
+\begin{lstlisting}[language=java]
+
+public void onDrawExplosion(Canvas canvas)
+{
+	updateExplosion();
+	if(canvas!=null)
+		canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+	
+	int srcX = currentFrame * bmpWidth;
+	int srcY = 0;
+	Rect src = new Rect(srcX, 0, srcX + bmpWidth, srcY + bmpHeight);
+	Rect dst = new Rect(xExplosion, yExplosion, xExplosion + bmpWidth, yExplosion + bmpHeight);
+	if(canvas!=null)
+		canvas.drawBitmap(bmp, src, dst, null);
+}
+
+\end{lstlisting}
+
+La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei singoli frame, nel punto specificato dai valori 'xExplosion' e 'yExplosion'. Il metodo updateExplosion() non fa altro che scorrere la nostra immagine sulla base del frame corrente e del numero di colonne specificato in fase di costruzione:
+
+\begin{lstlisting}[language=java]
+
+    private void updateExplosion()
+    {
+	    currentFrame = ++currentFrame % nColums;
+    }
+
+\end{lstlisting}
+
+
+\newpage
 \section{Thread}
 \newpage
 \section{Asynctask}

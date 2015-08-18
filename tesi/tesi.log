@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.6.24)  17 AUG 2015 17:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.6.24)  18 AUG 2015 15:01
 entering extended mode
 **tesi.tex
 (C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -529,7 +529,7 @@ Capitolo 1.
 
 ]
 Capitolo 2.
-[7] [8] [9] [10] <immagini/3D4Amb_sys.png, id=283, 708.6475pt x 873.2625pt>
+[7] [8] [9] [10] <immagini/3D4Amb_sys.png, id=288, 708.6475pt x 873.2625pt>
 File: immagini/3D4Amb_sys.png Graphic file (type png)
 
 <use immagini/3D4Amb_sys.png>
@@ -548,7 +548,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [13
 
 ] [14]
-<immagini/android-logo.png, id=313, 1606.0pt x 1606.0pt>
+<immagini/android-logo.png, id=318, 1606.0pt x 1606.0pt>
 File: immagini/android-logo.png Graphic file (type png)
 
 <use immagini/android-logo.png>
@@ -556,7 +556,7 @@ Package pdftex.def Info: immagini/android-logo.png used on input line 203.
 (pdftex.def)             Requested size: 192.05003pt x 202.29335pt.
  [15 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/android-logo.p
 ng>]
-<immagini/Google-Cardboard.jpg, id=321, 1284.8pt x 707.64375pt>
+<immagini/Google-Cardboard.jpg, id=326, 1284.8pt x 707.64375pt>
 File: immagini/Google-Cardboard.jpg Graphic file (type jpg)
 
 <use immagini/Google-Cardboard.jpg>
@@ -573,7 +573,7 @@ d.jpg>] [17] [18
 
 ]
 Capitolo 4.
-<immagini/child_cardboard.png, id=337, 586.19pt x 511.9125pt>
+<immagini/child_cardboard.png, id=342, 586.19pt x 511.9125pt>
 File: immagini/child_cardboard.png Graphic file (type png)
 
 <use immagini/child_cardboard.png>
@@ -581,14 +581,14 @@ Package pdftex.def Info: immagini/child_cardboard.png used on input line 245.
 (pdftex.def)             Requested size: 426.79135pt x 372.70882pt.
  [19] [20 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/child_car
 dboard.png>]
-<immagini/game.png, id=349, 1927.2pt x 1084.05pt>
+<immagini/game.png, id=354, 1927.2pt x 1084.05pt>
 File: immagini/game.png Graphic file (type png)
  <use immagini/game.png>
 Package pdftex.def Info: immagini/game.png used on input line 256.
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
 
 [21 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/game.png>]
-<immagini/chooselazyeye_left.png, id=355, 1927.2pt x 1084.05pt>
+<immagini/chooselazyeye_left.png, id=360, 1927.2pt x 1084.05pt>
 File: immagini/chooselazyeye_left.png Graphic file (type png)
 
 <use immagini/chooselazyeye_left.png>
@@ -597,14 +597,14 @@ Package pdftex.def Info: immagini/chooselazyeye_left.png used on input line 266
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
  [22 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/chooselazyeye_
 left.png>]
-<immagini/login.png, id=362, 1083.04625pt x 1703.36375pt>
+<immagini/login.png, id=367, 1083.04625pt x 1703.36375pt>
 File: immagini/login.png Graphic file (type png)
 
 <use immagini/login.png>
 Package pdftex.def Info: immagini/login.png used on input line 283.
 (pdftex.def)             Requested size: 227.62204pt x 357.97685pt.
 
-<immagini/warning_registration.png, id=364, 1084.05pt x 1782.66pt>
+<immagini/warning_registration.png, id=369, 1084.05pt x 1782.66pt>
 File: immagini/warning_registration.png Graphic file (type png)
 
 <use immagini/warning_registration.png>
@@ -612,7 +612,7 @@ Package pdftex.def Info: immagini/warning_registration.png used on input line 2
 93.
 (pdftex.def)             Requested size: 156.49014pt x 257.32303pt.
 
-<immagini/registration.png, id=366, 813.0375pt x 1336.995pt>
+<immagini/registration.png, id=371, 813.0375pt x 1336.995pt>
 File: immagini/registration.png Graphic file (type png)
 
 <use immagini/registration.png>
@@ -622,14 +622,14 @@ Package pdftex.def Info: immagini/registration.png used on input line 302.
 4 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/warning_registrat
 ion.png> <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/registrati
 on.png>]
-<immagini/resetpassword.png, id=382, 1084.05pt x 1782.66pt>
+<immagini/resetpassword.png, id=387, 1084.05pt x 1782.66pt>
 File: immagini/resetpassword.png Graphic file (type png)
 
 <use immagini/resetpassword.png>
 Package pdftex.def Info: immagini/resetpassword.png used on input line 312.
 (pdftex.def)             Requested size: 156.49014pt x 257.32303pt.
 
-<immagini/collaborate_with_us.png, id=387, 939.51pt x 1244.65pt>
+<immagini/collaborate_with_us.png, id=392, 939.51pt x 1244.65pt>
 File: immagini/collaborate_with_us.png Graphic file (type png)
 
 <use immagini/collaborate_with_us.png>
@@ -638,7 +638,7 @@ Package pdftex.def Info: immagini/collaborate_with_us.png used on input line 32
 (pdftex.def)             Requested size: 156.49014pt x 207.31454pt.
  [25 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/resetpassword.
 png>]
-<immagini/doctor.png, id=398, 1080.035pt x 1702.36pt>
+<immagini/doctor.png, id=403, 1080.035pt x 1702.36pt>
 File: immagini/doctor.png Graphic file (type png)
 
 <use immagini/doctor.png>
@@ -650,7 +650,7 @@ ng>] [27] [28
 
 ]
 Capitolo 5.
-<immagini/architettura_di_sistema.jpg, id=419, 599.23875pt x 230.36063pt>
+<immagini/architettura_di_sistema.jpg, id=424, 599.23875pt x 230.36063pt>
 File: immagini/architettura_di_sistema.jpg Graphic file (type jpg)
 
 <use immagini/architettura_di_sistema.jpg>
@@ -669,7 +669,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--374
  []
 
 [30] [31] [32] [33] [34]
-<immagini/package_diagram.jpg, id=488, 606.76688pt x 434.37282pt>
+<immagini/package_diagram.jpg, id=493, 606.76688pt x 434.37282pt>
 File: immagini/package_diagram.jpg Graphic file (type jpg)
 
 <use immagini/package_diagram.jpg>
@@ -677,7 +677,7 @@ Package pdftex.def Info: immagini/package_diagram.jpg used on input line 493.
 (pdftex.def)             Requested size: 369.88582pt x 264.7947pt.
  [35 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/package_diagra
 m.jpg>]
-<immagini/component_sistema.png, id=495, 310.15875pt x 191.9672pt>
+<immagini/component_sistema.png, id=500, 310.15875pt x 191.9672pt>
 File: immagini/component_sistema.png Graphic file (type png)
 
 <use immagini/component_sistema.png>
@@ -690,7 +690,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 513--516
  []
 
 [36 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/component_siste
-ma.png>] <immagini/component_android.png, id=503, 442.65375pt x 237.13594pt>
+ma.png>] <immagini/component_android.png, id=508, 442.65375pt x 237.13594pt>
 File: immagini/component_android.png Graphic file (type png)
 
 <use immagini/component_android.png>
@@ -753,14 +753,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 656--658
 
  []
 
-[47] <immagini/login_post.png, id=648, 1083.04625pt x 1703.36375pt>
+[47] <immagini/login_post.png, id=653, 1083.04625pt x 1703.36375pt>
 File: immagini/login_post.png Graphic file (type png)
 
 <use immagini/login_post.png>
 Package pdftex.def Info: immagini/login_post.png used on input line 680.
 (pdftex.def)             Requested size: 142.26378pt x 223.73228pt.
 
-<immagini/attesa.png, id=651, 1084.05pt x 1927.2pt>
+<immagini/attesa.png, id=656, 1084.05pt x 1927.2pt>
 File: immagini/attesa.png Graphic file (type png)
  <use immagini/attesa.png>
 Package pdftex.def Info: immagini/attesa.png used on input line 689.
@@ -777,7 +777,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 697--699
 
 [48 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/login_post.png>
 ] [49 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/attesa.png>]
-[50] <immagini/registration_post.png, id=705, 813.0375pt x 1336.995pt>
+[50] <immagini/registration_post.png, id=710, 813.0375pt x 1336.995pt>
 File: immagini/registration_post.png Graphic file (type png)
 
 <use immagini/registration_post.png>
@@ -797,7 +797,7 @@ Underfull \vbox (badness 1997) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
-<immagini/email_registrazione.jpg, id=773, 608.2725pt x 214.55156pt>
+<immagini/email_registrazione.jpg, id=778, 608.2725pt x 214.55156pt>
 File: immagini/email_registrazione.jpg Graphic file (type jpg)
 
 <use immagini/email_registrazione.jpg>
@@ -808,7 +808,7 @@ Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 82
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [54]
-<immagini/email_reset_password.jpg, id=794, 592.46344pt x 124.21407pt>
+<immagini/email_reset_password.jpg, id=799, 592.46344pt x 124.21407pt>
 File: immagini/email_reset_password.jpg Graphic file (type jpg)
 
 <use immagini/email_reset_password.jpg>
@@ -845,98 +845,116 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [61]
-[62] [63] [64]
-Capitolo 7.
-[65
+[62]
+Underfull \vbox (badness 5446) has occurred while \output is active []
 
-] <immagini/daily_active_user.jpg, id=990, 746.03719pt x 426.09187pt>
+ [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
+
+ []
+
+<immagini/explosion_anim1.png, id=1022, 361.35pt x 30.1125pt>
+File: immagini/explosion_anim1.png Graphic file (type png)
+
+<use immagini/explosion_anim1.png>
+Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1081.
+(pdftex.def)             Requested size: 426.79135pt x 35.56642pt.
+ [65 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/explosion_anim
+1.png>] [66] [67] [68] [69] [70
+
+]
+Capitolo 7.
+[71] <immagini/daily_active_user.jpg, id=1103, 746.03719pt x 426.09187pt>
 File: immagini/daily_active_user.jpg Graphic file (type jpg)
 
 <use immagini/daily_active_user.jpg>
-Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1043
+Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1156
 .
 (pdftex.def)             Requested size: 426.79135pt x 243.7526pt.
 
-<immagini/daily_new_users.jpg, id=991, 735.49782pt x 418.56375pt>
+<immagini/daily_new_users.jpg, id=1104, 735.49782pt x 418.56375pt>
 File: immagini/daily_new_users.jpg Graphic file (type jpg)
 
 <use immagini/daily_new_users.jpg>
-Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1050.
+Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1163.
 (pdftex.def)             Requested size: 426.79135pt x 242.88847pt.
 
-<immagini/molthly_active_users.jpg, id=992, 730.22812pt x 414.04688pt>
+<immagini/molthly_active_users.jpg, id=1105, 730.22812pt x 414.04688pt>
 File: immagini/molthly_active_users.jpg Graphic file (type jpg)
 
 <use immagini/molthly_active_users.jpg>
 Package pdftex.def Info: immagini/molthly_active_users.jpg used on input line 1
-057.
+170.
 (pdftex.def)             Requested size: 426.79135pt x 241.99216pt.
 
-<immagini/crash_free_users.jpg, id=993, 727.21687pt x 338.01282pt>
+<immagini/crash_free_users.jpg, id=1106, 727.21687pt x 338.01282pt>
 File: immagini/crash_free_users.jpg Graphic file (type jpg)
 
 <use immagini/crash_free_users.jpg>
-Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1064.
+Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1177.
 
 (pdftex.def)             Requested size: 426.79135pt x 198.37881pt.
- [66 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/daily_active_u
-ser.jpg>] [67 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/daily
+ [72 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/daily_active_u
+ser.jpg>] [73 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/daily
 _new_users.jpg> <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/mol
-thly_active_users.jpg>] [68 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/
+thly_active_users.jpg>] [74 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/
 immagini/crash_free_users.jpg>]
 Capitolo 8.
-<immagini/sito2.png, id=1012, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=1125, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 1078.
+Package pdftex.def Info: immagini/sito2.png used on input line 1191.
 (pdftex.def)             Requested size: 426.79135pt x 203.42871pt.
 
 Underfull \vbox (badness 1019) has occurred while \output is active []
 
- [69
+ [75
 
  <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/sito2.png>]
-<immagini/stats_play_store.png, id=1026, 706.89093pt x 118.94438pt>
+<immagini/stats_play_store.png, id=1139, 706.89093pt x 118.94438pt>
 File: immagini/stats_play_store.png Graphic file (type png)
 
 <use immagini/stats_play_store.png>
-Package pdftex.def Info: immagini/stats_play_store.png used on input line 1089.
+Package pdftex.def Info: immagini/stats_play_store.png used on input line 1202.
 
 (pdftex.def)             Requested size: 426.79135pt x 71.81364pt.
- [70 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/stats_play_sto
+ [76 <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/stats_play_sto
 re.png>]
 Capitolo 9.
-<immagini/certifications.png, id=1035, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=1148, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 1106.
+Package pdftex.def Info: immagini/certifications.png used on input line 1219.
 (pdftex.def)             Requested size: 426.79135pt x 72.18782pt.
- [71
+ [77
 
  <C:/Users/Fabio/Documents/GitHub/CardboardApp/tesi/immagini/certifications.png
->] [72]
-(C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.bbl [73] [74
+>] [78]
+(C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.bbl [79] [80
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1151.
- [75]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1151.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1264.
+ [81]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1264.
 
 (C:\Users\Fabio\Documents\GitHub\CardboardApp\tesi\tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1264.
 
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: F2A414564E1E5153A905444CB3CFC2F8;3001.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1151.
+(rerunfilecheck)             Checksum: 56517F6BEF248886846748EBE8EABC7C;3085.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1264.
  ) 
 Here is how much of TeX's memory you used:
- 13168 strings out of 493921
- 197936 string characters out of 3147282
- 712330 words of memory out of 3000000
- 15716 multiletter control sequences out of 15000+200000
+ 13323 strings out of 493921
+ 200323 string characters out of 3147282
+ 712383 words of memory out of 3000000
+ 15782 multiletter control sequences out of 15000+200000
  12624 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,12n,51p,1259b,3702s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -949,9 +967,9 @@ lic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
-Output written on tesi.pdf (75 pages, 4657958 bytes).
+Output written on tesi.pdf (81 pages, 4707540 bytes).
 PDF statistics:
- 1232 PDF objects out of 1440 (max. 8388607)
- 567 named destinations out of 1000 (max. 500000)
- 509 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1364 PDF objects out of 1440 (max. 8388607)
+ 655 named destinations out of 1000 (max. 500000)
+ 522 words of extra memory for PDF output out of 10000 (max. 10000000)
 

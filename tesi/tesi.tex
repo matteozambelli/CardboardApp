@@ -397,7 +397,18 @@ al dispositivo vanno collegati degli auricolari con il controllo del volume (com
 
 Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma piuttosto sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
 
-\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
+\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it è una macchina Linux e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
+\newpage
+\section{Vista di implementazione software}
+Questo grafico mostra dove sono installate le varie componenti software, in che linguaggio sono scritte e come interagiscono tra di loro (Figura \ref{vista_implementazione_software}).\\
+Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password e la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepiloge dei dati di gioco, notifiche di conferma registrazione, cambiamento dati o modifica della password.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=160mm]{immagini/vista_implementazione_software}
+	\caption{Vista d'implementazione del software}
+	\label{vista_implementazione_software}
+\end{figure}
+
 \newpage
 \section{Scenari e casi d'uso}
 %\section{Requisiti funzionali e casi d'uso}

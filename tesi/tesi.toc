@@ -30,62 +30,63 @@
 \contentsline {section}{\numberline {5.1}Architettura di sistema}{37}{section.5.1}
 \contentsline {paragraph}{La scelta degli auricolari come controller}{38}{section*.18}
 \contentsline {paragraph}{Il server}{38}{section*.19}
-\contentsline {section}{\numberline {5.2}Scenari e casi d'uso}{39}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Sign Up:}{39}{subsection.5.2.1}
-\contentsline {paragraph}{Attori:}{39}{section*.20}
-\contentsline {paragraph}{Precondizioni:}{39}{section*.21}
-\contentsline {paragraph}{Passi principali:}{39}{section*.22}
-\contentsline {paragraph}{Situazioni eccezionali:}{39}{section*.23}
-\contentsline {paragraph}{Postcondizioni:}{40}{section*.24}
-\contentsline {subsection}{\numberline {5.2.2}Log In utente comune:}{41}{subsection.5.2.2}
-\contentsline {paragraph}{Attori:}{41}{section*.26}
-\contentsline {paragraph}{Precondizioni:}{41}{section*.27}
-\contentsline {paragraph}{Passi principali:}{41}{section*.28}
-\contentsline {paragraph}{Situazioni eccezionali:}{41}{section*.29}
-\contentsline {paragraph}{Postcondizioni:}{41}{section*.30}
-\contentsline {subsection}{\numberline {5.2.3}Log In medico:}{43}{subsection.5.2.3}
-\contentsline {paragraph}{Attori:}{43}{section*.32}
-\contentsline {paragraph}{Precondizioni:}{43}{section*.33}
-\contentsline {paragraph}{Passi principali:}{43}{section*.34}
-\contentsline {paragraph}{Situazioni eccezionali:}{43}{section*.35}
-\contentsline {paragraph}{Postcondizioni:}{43}{section*.36}
-\contentsline {subsection}{\numberline {5.2.4}Update Info:}{45}{subsection.5.2.4}
-\contentsline {paragraph}{Attori:}{45}{section*.38}
-\contentsline {paragraph}{Precondizioni:}{45}{section*.39}
-\contentsline {paragraph}{Passi principali:}{45}{section*.40}
-\contentsline {paragraph}{Situazioni eccezionali:}{45}{section*.41}
-\contentsline {paragraph}{Postcondizioni:}{45}{section*.42}
-\contentsline {section}{\numberline {5.3}Package Diagram}{47}{section.5.3}
-\contentsline {section}{\numberline {5.4}Component diagram}{48}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Il sistema di Car Racing Cardboard}{48}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}L'applicazione Android}{48}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Il server}{49}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Dettaglio applicazione}{49}{subsection.5.4.4}
-\contentsline {section}{\numberline {5.5}Class diagram}{50}{section.5.5}
-\contentsline {section}{\numberline {5.6}Sequence diagram}{51}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Funziononamento con log in}{51}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Funziononamento senza log in}{52}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Funziononamento sign up}{52}{subsection.5.6.3}
-\contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{55}{chapter.6}
-\contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{55}{section.6.1}
-\contentsline {section}{\numberline {6.2}Generazione random scena}{57}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Nemici}{57}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Panorama}{58}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Cifratura password}{59}{section.6.3}
-\contentsline {section}{\numberline {6.4}Servizio web}{60}{section.6.4}
-\contentsline {paragraph}{Il thread della chiamata post}{60}{section*.49}
-\contentsline {paragraph}{La gestione delle chiamate lato server}{61}{section*.50}
-\contentsline {section}{\numberline {6.5}Gestione dello scontro con il nemico}{77}{section.6.5}
-\contentsline {section}{\numberline {6.6}Thread}{82}{section.6.6}
-\contentsline {section}{\numberline {6.7}Asynctask}{83}{section.6.7}
-\contentsline {paragraph}{I quattro passi:}{83}{section*.62}
-\contentsline {chapter}{\numberline {7}Tool utilizzati}{85}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{85}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{87}{section.7.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{91}{part.4}
-\contentsline {chapter}{\numberline {8}Social media}{93}{chapter.8}
-\contentsline {paragraph}{Risultati promozione}{94}{section*.70}
-\contentsline {chapter}{\numberline {9}Conclusioni}{95}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{95}{section*.72}
-\contentsline {section}{\numberline {9.1}Paper}{96}{section.9.1}
-\contentsline {section}{\numberline {9.2}Sviluppi futuri}{97}{section.9.2}
+\contentsline {section}{\numberline {5.2}Vista di implementazione software}{39}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scenari e casi d'uso}{40}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Sign Up:}{40}{subsection.5.3.1}
+\contentsline {paragraph}{Attori:}{40}{section*.21}
+\contentsline {paragraph}{Precondizioni:}{40}{section*.22}
+\contentsline {paragraph}{Passi principali:}{40}{section*.23}
+\contentsline {paragraph}{Situazioni eccezionali:}{40}{section*.24}
+\contentsline {paragraph}{Postcondizioni:}{41}{section*.25}
+\contentsline {subsection}{\numberline {5.3.2}Log In utente comune:}{42}{subsection.5.3.2}
+\contentsline {paragraph}{Attori:}{42}{section*.27}
+\contentsline {paragraph}{Precondizioni:}{42}{section*.28}
+\contentsline {paragraph}{Passi principali:}{42}{section*.29}
+\contentsline {paragraph}{Situazioni eccezionali:}{42}{section*.30}
+\contentsline {paragraph}{Postcondizioni:}{42}{section*.31}
+\contentsline {subsection}{\numberline {5.3.3}Log In medico:}{44}{subsection.5.3.3}
+\contentsline {paragraph}{Attori:}{44}{section*.33}
+\contentsline {paragraph}{Precondizioni:}{44}{section*.34}
+\contentsline {paragraph}{Passi principali:}{44}{section*.35}
+\contentsline {paragraph}{Situazioni eccezionali:}{44}{section*.36}
+\contentsline {paragraph}{Postcondizioni:}{44}{section*.37}
+\contentsline {subsection}{\numberline {5.3.4}Update Info:}{46}{subsection.5.3.4}
+\contentsline {paragraph}{Attori:}{46}{section*.39}
+\contentsline {paragraph}{Precondizioni:}{46}{section*.40}
+\contentsline {paragraph}{Passi principali:}{46}{section*.41}
+\contentsline {paragraph}{Situazioni eccezionali:}{46}{section*.42}
+\contentsline {paragraph}{Postcondizioni:}{46}{section*.43}
+\contentsline {section}{\numberline {5.4}Package Diagram}{48}{section.5.4}
+\contentsline {section}{\numberline {5.5}Component diagram}{49}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Il sistema di Car Racing Cardboard}{49}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}L'applicazione Android}{49}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Il server}{50}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Dettaglio applicazione}{50}{subsection.5.5.4}
+\contentsline {section}{\numberline {5.6}Class diagram}{51}{section.5.6}
+\contentsline {section}{\numberline {5.7}Sequence diagram}{52}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Funziononamento con log in}{52}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Funziononamento senza log in}{53}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Funziononamento sign up}{53}{subsection.5.7.3}
+\contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}Generazione random scena}{59}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Nemici}{59}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Panorama}{60}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Cifratura password}{61}{section.6.3}
+\contentsline {section}{\numberline {6.4}Servizio web}{62}{section.6.4}
+\contentsline {paragraph}{Il thread della chiamata post}{62}{section*.50}
+\contentsline {paragraph}{La gestione delle chiamate lato server}{63}{section*.51}
+\contentsline {section}{\numberline {6.5}Gestione dello scontro con il nemico}{79}{section.6.5}
+\contentsline {section}{\numberline {6.6}Thread}{84}{section.6.6}
+\contentsline {section}{\numberline {6.7}Asynctask}{85}{section.6.7}
+\contentsline {paragraph}{I quattro passi:}{85}{section*.63}
+\contentsline {chapter}{\numberline {7}Tool utilizzati}{87}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{87}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{89}{section.7.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{93}{part.4}
+\contentsline {chapter}{\numberline {8}Social media}{95}{chapter.8}
+\contentsline {paragraph}{Risultati promozione}{96}{section*.71}
+\contentsline {chapter}{\numberline {9}Conclusioni}{97}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{97}{section*.73}
+\contentsline {section}{\numberline {9.1}Paper}{98}{section.9.1}
+\contentsline {section}{\numberline {9.2}Sviluppi futuri}{99}{section.9.2}

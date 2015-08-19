@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  19 AUG 2015 10:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  19 AUG 2015 16:04
 entering extended mode
 **tesi.tex
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.tex
@@ -510,12 +510,12 @@ Package caption Info: End \AtBeginDocument code.
 
 ]
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 ("C:\Program Files (x86)\miktex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 ("C:\Program Files (x86)\miktex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -524,251 +524,254 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [5]
 [6
 
-]
+] [7] [8]
 Capitolo 1.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1845) has occurred while \output is active []
 
- [7]
-[8]
+ [9
+
+]
+[10]
 Capitolo 2.
-[9
+[11
 
-] [10] [11] [12] <immagini/3D4Amb_sys.png, id=346, 708.6475pt x 873.2625pt>
+] [12] [13] [14] <immagini/3D4Amb_sys.png, id=385, 708.6475pt x 873.2625pt>
 File: immagini/3D4Amb_sys.png Graphic file (type png)
 
 <use immagini/3D4Amb_sys.png>
-Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 176.
+Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 184.
 (pdftex.def)             Requested size: 426.79135pt x 525.94695pt.
- [13] [14 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/3D4Amb_s
+ [15] [16 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/3D4Amb_s
 ys.png>]
 Capitolo 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 187.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 197.
 
 ("C:\Program Files (x86)\miktex\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 187.
- [15
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 197.
+ [17
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
-<immagini/android-logo.png, id=375, 1606.0pt x 1606.0pt>
+] [18]
+<immagini/android-logo.png, id=414, 1606.0pt x 1606.0pt>
 File: immagini/android-logo.png Graphic file (type png)
 
 <use immagini/android-logo.png>
-Package pdftex.def Info: immagini/android-logo.png used on input line 208.
-(pdftex.def)             Requested size: 192.05003pt x 202.29335pt.
- [17 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/android-logo.
+Package pdftex.def Info: immagini/android-logo.png used on input line 218.
+(pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
+ [19 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/android-logo.
 png>]
-<immagini/Google-Cardboard.jpg, id=383, 1284.8pt x 707.64375pt>
+<immagini/Google-Cardboard.jpg, id=424, 1284.8pt x 707.64375pt>
 File: immagini/Google-Cardboard.jpg Graphic file (type jpg)
 
 <use immagini/Google-Cardboard.jpg>
-Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 218.
+Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 228.
 (pdftex.def)             Requested size: 426.79135pt x 235.06723pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--228
+Underfull \hbox (badness 10000) in paragraph at lines 232--238
 \OT1/cmr/m/n/12 del-le ap-pli-ca-zio-ni so-no re-pe-ri-bi-li gra-tui-ta-men-te.
 
  []
 
-[18 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/Google-Cardboa
-rd.jpg>] [19] [20
+[20 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/Google-Cardboa
+rd.jpg>] [21] [22
 
-]
+] [23] [24]
 Capitolo 4.
-<immagini/child_cardboard.png, id=400, 586.19pt x 511.9125pt>
+<immagini/child_cardboard.png, id=451, 586.19pt x 511.9125pt>
 File: immagini/child_cardboard.png Graphic file (type png)
 
 <use immagini/child_cardboard.png>
-Package pdftex.def Info: immagini/child_cardboard.png used on input line 250.
+Package pdftex.def Info: immagini/child_cardboard.png used on input line 265.
 (pdftex.def)             Requested size: 426.79135pt x 372.70882pt.
- [21] [22 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/child_ca
-rdboard.png>]
-<immagini/game.png, id=411, 1927.2pt x 1084.05pt>
+ [25
+
+] [26 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/child_cardbo
+ard.png>]
+<immagini/game.png, id=463, 1927.2pt x 1084.05pt>
 File: immagini/game.png Graphic file (type png)
  <use immagini/game.png>
-Package pdftex.def Info: immagini/game.png used on input line 261.
+Package pdftex.def Info: immagini/game.png used on input line 276.
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
 
-[23 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/game.png>]
-<immagini/chooselazyeye_left.png, id=417, 1927.2pt x 1084.05pt>
+[27 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/game.png>]
+<immagini/chooselazyeye_left.png, id=469, 1927.2pt x 1084.05pt>
 File: immagini/chooselazyeye_left.png Graphic file (type png)
 
 <use immagini/chooselazyeye_left.png>
-Package pdftex.def Info: immagini/chooselazyeye_left.png used on input line 271
+Package pdftex.def Info: immagini/chooselazyeye_left.png used on input line 286
 .
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
- [24 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/chooselazyeye
+ [28 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/chooselazyeye
 _left.png>]
-<immagini/login.png, id=424, 1083.04625pt x 1703.36375pt>
+<immagini/login.png, id=476, 1083.04625pt x 1703.36375pt>
 File: immagini/login.png Graphic file (type png)
 
 <use immagini/login.png>
-Package pdftex.def Info: immagini/login.png used on input line 288.
+Package pdftex.def Info: immagini/login.png used on input line 303.
 (pdftex.def)             Requested size: 227.62204pt x 357.97685pt.
 
-<immagini/warning_registration.png, id=426, 1084.05pt x 1782.66pt>
+<immagini/warning_registration.png, id=478, 1084.05pt x 1782.66pt>
 File: immagini/warning_registration.png Graphic file (type png)
 
 <use immagini/warning_registration.png>
-Package pdftex.def Info: immagini/warning_registration.png used on input line 2
-98.
+Package pdftex.def Info: immagini/warning_registration.png used on input line 3
+13.
 (pdftex.def)             Requested size: 156.49014pt x 257.32303pt.
 
-<immagini/registration.png, id=428, 813.0375pt x 1336.995pt>
+<immagini/registration.png, id=480, 813.0375pt x 1336.995pt>
 File: immagini/registration.png Graphic file (type png)
 
 <use immagini/registration.png>
-Package pdftex.def Info: immagini/registration.png used on input line 307.
+Package pdftex.def Info: immagini/registration.png used on input line 322.
 (pdftex.def)             Requested size: 156.49014pt x 257.33662pt.
- [25 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/login.png>] [
-26 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/warning_registr
+ [29 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/login.png>] [
+30 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/warning_registr
 ation.png> <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/registr
 ation.png>]
-<immagini/resetpassword.png, id=445, 1084.05pt x 1782.66pt>
+<immagini/resetpassword.png, id=496, 1084.05pt x 1782.66pt>
 File: immagini/resetpassword.png Graphic file (type png)
 
 <use immagini/resetpassword.png>
-Package pdftex.def Info: immagini/resetpassword.png used on input line 317.
+Package pdftex.def Info: immagini/resetpassword.png used on input line 332.
 (pdftex.def)             Requested size: 156.49014pt x 257.32303pt.
 
-<immagini/collaborate_with_us.png, id=450, 939.51pt x 1244.65pt>
+<immagini/collaborate_with_us.png, id=501, 939.51pt x 1244.65pt>
 File: immagini/collaborate_with_us.png Graphic file (type png)
 
 <use immagini/collaborate_with_us.png>
-Package pdftex.def Info: immagini/collaborate_with_us.png used on input line 32
-8.
+Package pdftex.def Info: immagini/collaborate_with_us.png used on input line 34
+3.
 (pdftex.def)             Requested size: 156.49014pt x 207.31454pt.
- [27 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/resetpassword
+ [31 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/resetpassword
 .png>]
-<immagini/doctor.png, id=460, 1080.035pt x 1702.36pt>
+<immagini/doctor.png, id=512, 1080.035pt x 1702.36pt>
 File: immagini/doctor.png Graphic file (type png)
 
 <use immagini/doctor.png>
-Package pdftex.def Info: immagini/doctor.png used on input line 337.
+Package pdftex.def Info: immagini/doctor.png used on input line 352.
 (pdftex.def)             Requested size: 156.49014pt x 246.64105pt.
- [28 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/collaborate_w
+ [32 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/collaborate_w
 ith_us.png> <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/doctor
-.png>] [29] [30
+.png>] [33] [34
 
-]
+] [35] [36]
 Capitolo 5.
-<immagini/architettura_di_sistema.jpg, id=481, 599.23875pt x 230.36063pt>
+<immagini/architettura_di_sistema.jpg, id=541, 599.23875pt x 230.36063pt>
 File: immagini/architettura_di_sistema.jpg Graphic file (type jpg)
 
 <use immagini/architettura_di_sistema.jpg>
 Package pdftex.def Info: immagini/architettura_di_sistema.jpg used on input lin
-e 371.
+e 389.
 (pdftex.def)             Requested size: 455.24408pt x 175.0091pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 371--372
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 389--390
  [][] 
  []
 
-[31 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/architettura_d
-i_sistema.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+[37
+
+ <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/architettura_di_s
+istema.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
-[32] [33] <immagini/ucSignUp.jpg, id=507, 520.94624pt x 421.575pt>
+[38] [39] <immagini/ucSignUp.jpg, id=567, 694.595pt x 562.1pt>
 File: immagini/ucSignUp.jpg Graphic file (type jpg)
 
 <use immagini/ucSignUp.jpg>
-Package pdftex.def Info: immagini/ucSignUp.jpg used on input line 425.
-(pdftex.def)             Requested size: 455.24408pt x 368.40762pt.
+Package pdftex.def Info: immagini/ucSignUp.jpg used on input line 443.
+(pdftex.def)             Requested size: 455.24408pt x 368.41406pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 425--426
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 443--444
  [][] 
  []
 
-[34 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucSignUp.jpg>]
-[35] <immagini/ucLogInUtente.jpg, id=526, 520.94624pt x 421.575pt>
+[40 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucSignUp.jpg>]
+[41] <immagini/ucLogInUtente.jpg, id=586, 694.595pt x 562.1pt>
 File: immagini/ucLogInUtente.jpg Graphic file (type jpg)
 
 <use immagini/ucLogInUtente.jpg>
-Package pdftex.def Info: immagini/ucLogInUtente.jpg used on input line 459.
-(pdftex.def)             Requested size: 455.24408pt x 368.40762pt.
+Package pdftex.def Info: immagini/ucLogInUtente.jpg used on input line 477.
+(pdftex.def)             Requested size: 455.24408pt x 368.41406pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 459--460
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 477--478
  [][] 
  []
 
-[36 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucLogInUtente.
-jpg>] [37] <immagini/ucLogInMedico.jpg, id=546, 523.20468pt x 421.575pt>
+[42 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucLogInUtente.
+jpg>] [43] <immagini/ucLogInMedico.jpg, id=606, 697.60625pt x 562.1pt>
 File: immagini/ucLogInMedico.jpg Graphic file (type jpg)
 
 <use immagini/ucLogInMedico.jpg>
-Package pdftex.def Info: immagini/ucLogInMedico.jpg used on input line 490.
-(pdftex.def)             Requested size: 455.24408pt x 366.82518pt.
+Package pdftex.def Info: immagini/ucLogInMedico.jpg used on input line 508.
+(pdftex.def)             Requested size: 455.24408pt x 366.81876pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 490--491
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 508--509
  [][] 
  []
 
-[38 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucLogInMedico.
-jpg>] [39] <immagini/ucUpdateInfo.jpg, id=566, 520.94624pt x 429.85594pt>
+[44 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucLogInMedico.
+jpg>] [45] <immagini/ucUpdateInfo.jpg, id=626, 694.595pt x 573.14125pt>
 File: immagini/ucUpdateInfo.jpg Graphic file (type jpg)
 
 <use immagini/ucUpdateInfo.jpg>
-Package pdftex.def Info: immagini/ucUpdateInfo.jpg used on input line 521.
-(pdftex.def)             Requested size: 455.24408pt x 375.64421pt.
+Package pdftex.def Info: immagini/ucUpdateInfo.jpg used on input line 539.
+(pdftex.def)             Requested size: 455.24408pt x 375.65076pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 521--522
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 539--540
  [][] 
  []
 
-[40 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucUpdateInfo.j
-pg>] <immagini/package_diagram.jpg, id=572, 606.76688pt x 434.37282pt>
+[46 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/ucUpdateInfo.j
+pg>] <immagini/package_diagram.jpg, id=632, 606.76688pt x 434.37282pt>
 File: immagini/package_diagram.jpg Graphic file (type jpg)
 
 <use immagini/package_diagram.jpg>
-Package pdftex.def Info: immagini/package_diagram.jpg used on input line 532.
+Package pdftex.def Info: immagini/package_diagram.jpg used on input line 550.
 (pdftex.def)             Requested size: 369.88582pt x 264.7947pt.
- [41 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/package_diagr
+ [47 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/package_diagr
 am.jpg>]
-<immagini/component_sistema.png, id=579, 310.15875pt x 191.9672pt>
+<immagini/component_sistema.png, id=639, 310.15875pt x 191.9672pt>
 File: immagini/component_sistema.png Graphic file (type png)
 
 <use immagini/component_sistema.png>
-Package pdftex.def Info: immagini/component_sistema.png used on input line 546.
+Package pdftex.def Info: immagini/component_sistema.png used on input line 564.
 
 (pdftex.def)             Requested size: 284.52756pt x 176.10228pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--555
+Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
  []
 
-[42 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/component_sist
-ema.png>] <immagini/component_android.png, id=587, 442.65375pt x 237.13594pt>
+[48 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/component_sist
+ema.png>] <immagini/component_android.png, id=647, 442.65375pt x 237.13594pt>
 File: immagini/component_android.png Graphic file (type png)
 
 <use immagini/component_android.png>
-Package pdftex.def Info: immagini/component_android.png used on input line 563.
+Package pdftex.def Info: immagini/component_android.png used on input line 581.
 
 (pdftex.def)             Requested size: 284.52756pt x 152.43225pt.
- [43 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/component_and
-roid.png>] [44]
-<immagini/sequence_login.png, id=600, 807.7678pt x 537.50812pt>
+ [49 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/component_and
+roid.png>] [50]
+<immagini/sequence_login.png, id=660, 807.7678pt x 537.50812pt>
 File: immagini/sequence_login.png Graphic file (type png)
 
 <use immagini/sequence_login.png>
-Package pdftex.def Info: immagini/sequence_login.png used on input line 591.
+Package pdftex.def Info: immagini/sequence_login.png used on input line 609.
 (pdftex.def)             Requested size: 807.76582pt x 537.5068pt.
- [45]
-<immagini/sequence_signup.png, id=611, 613.54219pt x 289.83281pt>
+ [51]
+<immagini/sequence_signup.png, id=671, 613.54219pt x 289.83281pt>
 File: immagini/sequence_signup.png Graphic file (type png)
 
 <use immagini/sequence_signup.png>
-Package pdftex.def Info: immagini/sequence_signup.png used on input line 606.
+Package pdftex.def Info: immagini/sequence_signup.png used on input line 624.
 (pdftex.def)             Requested size: 426.79135pt x 201.61232pt.
- [46] [47 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sequence
-_login.png>] [48 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/s
+ [52] [53 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sequence
+_login.png>] [54 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/s
 equence_signup.png>]
 Capitolo 6.
 ("C:\Program Files (x86)\miktex\tex\latex\listings\lstlang1.sty"
@@ -777,40 +780,40 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files (x86)\miktex\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 617--618
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
 
  []
 
-[49
+[55
 
-] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 659--661
-
- []
-
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 679--680
+] [56]
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 
  []
 
-[52]
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 700--701
 
  []
 
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 703--705
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
+
+ []
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 724--726
 
  []
 
 
-Overfull \hbox (28.25116pt too wide) in paragraph at lines 717--718
+Overfull \hbox (28.25116pt too wide) in paragraph at lines 738--739
 []\OT1/cmr/m/n/12 La chia-ma-ta vie-ne fat-ta al ser-vi-zio php di Car Ra-cing 
 Card-board (3d4ambService.php). 
  []
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 719--721
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 740--742
 
  []
 
@@ -820,227 +823,230 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files (x86)\miktex\tex\latex\listings\lstlang2.sty"
 File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 731--733
+Underfull \hbox (badness 10000) in paragraph at lines 752--754
 
  []
 
-[55] <immagini/login_post.png, id=753, 1083.04625pt x 1703.36375pt>
+[61] <immagini/login_post.png, id=813, 1083.04625pt x 1703.36375pt>
 File: immagini/login_post.png Graphic file (type png)
 
 <use immagini/login_post.png>
-Package pdftex.def Info: immagini/login_post.png used on input line 755.
+Package pdftex.def Info: immagini/login_post.png used on input line 776.
 (pdftex.def)             Requested size: 142.26378pt x 223.73228pt.
 
-<immagini/attesa.png, id=756, 1084.05pt x 1927.2pt>
+<immagini/attesa.png, id=816, 1084.05pt x 1927.2pt>
 File: immagini/attesa.png Graphic file (type png)
  <use immagini/attesa.png>
-Package pdftex.def Info: immagini/attesa.png used on input line 764.
+Package pdftex.def Info: immagini/attesa.png used on input line 785.
 (pdftex.def)             Requested size: 199.16928pt x 354.05626pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 769--771
+Underfull \hbox (badness 10000) in paragraph at lines 790--792
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--774
+Underfull \hbox (badness 10000) in paragraph at lines 793--795
 
  []
 
-[56 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/login_post.png
->] [57 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/attesa.png>
-] [58] <immagini/registration_post.png, id=809, 813.0375pt x 1336.995pt>
+[62 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/login_post.png
+>] [63 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/attesa.png>
+] [64] <immagini/registration_post.png, id=869, 813.0375pt x 1336.995pt>
 File: immagini/registration_post.png Graphic file (type png)
 
 <use immagini/registration_post.png>
-Package pdftex.def Info: immagini/registration_post.png used on input line 813.
+Package pdftex.def Info: immagini/registration_post.png used on input line 834.
 
 (pdftex.def)             Requested size: 199.16928pt x 327.51564pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
+Underfull \hbox (badness 10000) in paragraph at lines 850--851
 
  []
 
-[59 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/registration_p
+[65 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/registration_p
 ost.png>]
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [60]
+ [66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
-<immagini/email_registrazione.jpg, id=877, 608.2725pt x 214.55156pt>
+ [67]
+<immagini/email_registrazione.jpg, id=937, 608.2725pt x 214.55156pt>
 File: immagini/email_registrazione.jpg Graphic file (type jpg)
 
 <use immagini/email_registrazione.jpg>
-Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 90
-3.
+Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 92
+4.
 (pdftex.def)             Requested size: 426.79135pt x 150.5419pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
-<immagini/email_reset_password.jpg, id=898, 592.46344pt x 124.21407pt>
+ [68]
+<immagini/email_reset_password.jpg, id=958, 592.46344pt x 124.21407pt>
 File: immagini/email_reset_password.jpg Graphic file (type jpg)
 
 <use immagini/email_reset_password.jpg>
 Package pdftex.def Info: immagini/email_reset_password.jpg used on input line 9
-14.
+35.
 (pdftex.def)             Requested size: 426.79135pt x 89.48332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--921
+Underfull \hbox (badness 10000) in paragraph at lines 940--942
 
  []
 
-[63 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_registra
+[69 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_registra
 zione.jpg> <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_r
 eset_password.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64]
-Underfull \hbox (badness 10000) in paragraph at lines 959--962
+ [70]
+Underfull \hbox (badness 10000) in paragraph at lines 980--983
 
  []
 
-[65]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66]
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1023
-
- []
-
-[67]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
-[70]
-Underfull \vbox (badness 5446) has occurred while \output is active []
-
- [71]
+[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [72]
-Underfull \hbox (badness 10000) in paragraph at lines 1151--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1044
 
  []
 
-<immagini/explosion_anim1.png, id=1120, 361.35pt x 30.1125pt>
+[73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+[76]
+Underfull \vbox (badness 5446) has occurred while \output is active []
+
+ [77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+Underfull \hbox (badness 10000) in paragraph at lines 1172--1174
+
+ []
+
+<immagini/explosion_anim1.png, id=1180, 361.35pt x 30.1125pt>
 File: immagini/explosion_anim1.png Graphic file (type png)
 
 <use immagini/explosion_anim1.png>
-Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1156.
+Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1177.
 (pdftex.def)             Requested size: 426.79135pt x 35.56642pt.
- [73 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/explosion_ani
-m1.png>] [74] [75] [76] [77] [78
+ [79 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/explosion_ani
+m1.png>] [80] [81] [82] [83] [84
 
 ]
 Capitolo 7.
-[79] <immagini/git1.png, id=1201, 423.08063pt x 224.33812pt>
+[85] <immagini/git1.png, id=1261, 423.08063pt x 224.33812pt>
 File: immagini/git1.png Graphic file (type png)
 
 <use immagini/git1.png>
-Package pdftex.def Info: immagini/git1.png used on input line 1224.
+Package pdftex.def Info: immagini/git1.png used on input line 1245.
 (pdftex.def)             Requested size: 426.79135pt x 226.3127pt.
 
-<immagini/git2.png, id=1202, 1028.34187pt x 512.66531pt>
+<immagini/git2.png, id=1262, 1028.34187pt x 512.66531pt>
 File: immagini/git2.png Graphic file (type png)
 
 <use immagini/git2.png>
-Package pdftex.def Info: immagini/git2.png used on input line 1233.
+Package pdftex.def Info: immagini/git2.png used on input line 1254.
 (pdftex.def)             Requested size: 426.79135pt x 212.7756pt.
- [80 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/git1.png> <C:
+ [86 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/git1.png> <C:
 /Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/git2.png>]
-<immagini/daily_active_user.jpg, id=1211, 746.03719pt x 426.09187pt>
+<immagini/daily_active_user.jpg, id=1271, 746.03719pt x 426.09187pt>
 File: immagini/daily_active_user.jpg Graphic file (type jpg)
 
 <use immagini/daily_active_user.jpg>
-Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1250
+Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1271
 .
 (pdftex.def)             Requested size: 426.79135pt x 243.7526pt.
 
-<immagini/daily_new_users.jpg, id=1212, 735.49782pt x 418.56375pt>
+<immagini/daily_new_users.jpg, id=1272, 735.49782pt x 418.56375pt>
 File: immagini/daily_new_users.jpg Graphic file (type jpg)
 
 <use immagini/daily_new_users.jpg>
-Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1257.
+Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1278.
 (pdftex.def)             Requested size: 426.79135pt x 242.88847pt.
 
-<immagini/molthly_active_users.jpg, id=1213, 730.22812pt x 414.04688pt>
+<immagini/molthly_active_users.jpg, id=1273, 730.22812pt x 414.04688pt>
 File: immagini/molthly_active_users.jpg Graphic file (type jpg)
 
 <use immagini/molthly_active_users.jpg>
 Package pdftex.def Info: immagini/molthly_active_users.jpg used on input line 1
-264.
+285.
 (pdftex.def)             Requested size: 426.79135pt x 241.99216pt.
 
-<immagini/crash_free_users.jpg, id=1214, 727.21687pt x 338.01282pt>
+<immagini/crash_free_users.jpg, id=1274, 727.21687pt x 338.01282pt>
 File: immagini/crash_free_users.jpg Graphic file (type jpg)
 
 <use immagini/crash_free_users.jpg>
-Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1271.
+Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1292.
 
 (pdftex.def)             Requested size: 426.79135pt x 198.37881pt.
- [81 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/daily_active_
-user.jpg>] [82 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/dai
+ [87 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/daily_active_
+user.jpg>] [88 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/dai
 ly_new_users.jpg> <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/
-molthly_active_users.jpg>] [83 <C:/Users/mzambell/Personal/unibg/CardboardApp/t
-esi/immagini/crash_free_users.jpg>] [84
+molthly_active_users.jpg>] [89 <C:/Users/mzambell/Personal/unibg/CardboardApp/t
+esi/immagini/crash_free_users.jpg>] [90
 
 ]
+[91] [92]
 Capitolo 8.
-<immagini/sito2.png, id=1236, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=1305, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 1285.
+Package pdftex.def Info: immagini/sito2.png used on input line 1309.
 (pdftex.def)             Requested size: 426.79135pt x 203.42871pt.
 
 Underfull \vbox (badness 1019) has occurred while \output is active []
 
- [85 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sito2.png>]
-<immagini/stats_play_store.png, id=1251, 706.89093pt x 118.94438pt>
+ [93
+
+ <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sito2.png>]
+<immagini/stats_play_store.png, id=1319, 706.89093pt x 118.94438pt>
 File: immagini/stats_play_store.png Graphic file (type png)
 
 <use immagini/stats_play_store.png>
-Package pdftex.def Info: immagini/stats_play_store.png used on input line 1296.
+Package pdftex.def Info: immagini/stats_play_store.png used on input line 1320.
 
 (pdftex.def)             Requested size: 426.79135pt x 71.81364pt.
- [86 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/stats_play_st
+ [94 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/stats_play_st
 ore.png>]
 Capitolo 9.
-<immagini/certifications.png, id=1260, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=1328, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 1313.
+Package pdftex.def Info: immagini/certifications.png used on input line 1337.
 (pdftex.def)             Requested size: 426.79135pt x 72.18782pt.
- [87
+ [95
 
  <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/certifications.pn
-g>] [88]
-(C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.bbl [89] [90
+g>] [96]
+(C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.bbl [97] [98
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1365.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1389.
 
-[91]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1365.
+[99]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1389.
  (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1365.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1365.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1389.
 
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 7F991FA6790E1B5A4419E95FAEA67A89;3732.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1365.
+(rerunfilecheck)             Checksum: 5B98AF82AACBA170694149BD500430B8;4077.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1389.
  ) 
 Here is how much of TeX's memory you used:
- 13411 strings out of 493921
- 202389 string characters out of 3146472
- 713340 words of memory out of 3000000
- 15833 multiletter control sequences out of 15000+200000
+ 13437 strings out of 493921
+ 202612 string characters out of 3146472
+ 713719 words of memory out of 3000000
+ 15846 multiletter control sequences out of 15000+200000
  12624 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,12n,51p,1259b,3702s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1053,9 +1059,9 @@ ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/miktex/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/miktex/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsf
 onts/cm/cmtt12.pfb>
-Output written on tesi.pdf (91 pages, 4972259 bytes).
+Output written on tesi.pdf (99 pages, 5211062 bytes).
 PDF statistics:
- 1480 PDF objects out of 1728 (max. 8388607)
- 684 named destinations out of 1000 (max. 500000)
- 634 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1552 PDF objects out of 1728 (max. 8388607)
+ 697 named destinations out of 1000 (max. 500000)
+ 674 words of extra memory for PDF output out of 10000 (max. 10000000)
 

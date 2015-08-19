@@ -83,3 +83,4 @@
 \contentsline {chapter}{\numberline {9}Conclusioni}{87}{chapter.9}
 \contentsline {paragraph}{Certificazione contenuti:}{87}{section*.72}
 \contentsline {section}{\numberline {9.1}Paper}{88}{section.9.1}
+\contentsline {section}{\numberline {9.2}Sviluppi futuri}{89}{section.9.2}

@@ -59,24 +59,27 @@
 \contentsline {subsection}{\numberline {5.4.4}Dettaglio applicazione}{43}{subsection.5.4.4}
 \contentsline {section}{\numberline {5.5}Class diagram}{44}{section.5.5}
 \contentsline {section}{\numberline {5.6}Sequence diagram}{45}{section.5.6}
-\contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{47}{chapter.6}
-\contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{47}{section.6.1}
-\contentsline {section}{\numberline {6.2}Generazione random scena}{49}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Nemici}{49}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Panorama}{50}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Cifratura password}{51}{section.6.3}
-\contentsline {section}{\numberline {6.4}Servizio web}{52}{section.6.4}
-\contentsline {paragraph}{Il thread della chiamata post}{52}{section*.47}
-\contentsline {paragraph}{La gestione delle chiamate lato server}{53}{section*.48}
-\contentsline {section}{\numberline {6.5}Gestione dello scontro con il nemico}{69}{section.6.5}
-\contentsline {section}{\numberline {6.6}Thread}{74}{section.6.6}
-\contentsline {section}{\numberline {6.7}Asynctask}{75}{section.6.7}
-\contentsline {paragraph}{I quattro passi:}{75}{section*.60}
-\contentsline {chapter}{\numberline {7}Tool utilizzati}{77}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{77}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{79}{section.7.2}
-\contentsline {chapter}{\numberline {8}Social media}{83}{chapter.8}
-\contentsline {paragraph}{Risultati promozione}{84}{section*.68}
-\contentsline {chapter}{\numberline {9}Conclusioni}{85}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{85}{section*.70}
-\contentsline {section}{\numberline {9.1}Paper}{86}{section.9.1}
+\contentsline {subsection}{\numberline {5.6.1}Funziononamento con log in}{45}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Funziononamento senza log in}{46}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Funziononamento sign up}{46}{subsection.5.6.3}
+\contentsline {chapter}{\numberline {6}Analisi degli Algoritmi}{49}{chapter.6}
+\contentsline {section}{\numberline {6.1}Penalizzazione progressiva delle immagini}{49}{section.6.1}
+\contentsline {section}{\numberline {6.2}Generazione random scena}{51}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Nemici}{51}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Panorama}{52}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Cifratura password}{53}{section.6.3}
+\contentsline {section}{\numberline {6.4}Servizio web}{54}{section.6.4}
+\contentsline {paragraph}{Il thread della chiamata post}{54}{section*.49}
+\contentsline {paragraph}{La gestione delle chiamate lato server}{55}{section*.50}
+\contentsline {section}{\numberline {6.5}Gestione dello scontro con il nemico}{71}{section.6.5}
+\contentsline {section}{\numberline {6.6}Thread}{76}{section.6.6}
+\contentsline {section}{\numberline {6.7}Asynctask}{77}{section.6.7}
+\contentsline {paragraph}{I quattro passi:}{77}{section*.62}
+\contentsline {chapter}{\numberline {7}Tool utilizzati}{79}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{79}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{81}{section.7.2}
+\contentsline {chapter}{\numberline {8}Social media}{85}{chapter.8}
+\contentsline {paragraph}{Risultati promozione}{86}{section*.70}
+\contentsline {chapter}{\numberline {9}Conclusioni}{87}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{87}{section*.72}
+\contentsline {section}{\numberline {9.1}Paper}{88}{section.9.1}

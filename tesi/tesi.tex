@@ -190,8 +190,7 @@ L'applicazione è stata progettata e sviluppata per il mondo Android. I software 
 \end{itemize}
 
 In particolare si è deciso che il requisito minimo che deve possedere lo smartphone dell'utente che utilizza l'applicazione sia un livello di API(Application Programming Interface) 15, ovvero dal sistema operativo Android 4.0.3 \footnote{(ICE\_CREAM\_SANDWICH\_MR1)} in poi.
-\subsection{Perchè Android:}
-La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
+\subsection{Perchè Android:}La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
 Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alle radici ben salde nel mondo open source. Il sistema operativo Android, infatti, è figlio di Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
 Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.\\
 Parlando di numeri, Android domina fra gli smartphone con una quota di mercato dell' 84,7\%. E' il dato principale che emerge dall' analisi della società di ricerca \textit{Idc} sul mercato dei cellulari. Il sistema operativo mobile di Google, a differenza di quello di Apple, è presente su decine di modelli di cellulari di marche diverse e domina il mercato lasciando alla \virgolette{Mela} l'11,7\% di share \cite{percentualeSmartphone}.
@@ -571,7 +570,43 @@ L'applicazione Car Racing Cardboard sfrutta entrambe le forme di componenti graf
 \section{Class diagram}
 \newpage
 \section{Sequence diagram}
+\subsection{Funziononamento con log in}
+All'avvio dell'applicazione, se l'utente ho inserito correttamente email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
+\begin{itemize}
+	\item alla classe PostCall vengono passate la stringa contentente l'email e quella della password
+	\item la classe PostCall effettua una chiamata post al server cs.unibg.it, più precisamente al servizio 3d4ambservice.php
+\end{itemize}
+Il servizio php verifica nel database se l'email e la password sono corrette, e manda un messaggio di risposta alla PostCall, la quale effettua un parsing della risposta e restituisce un messaggio all'interfaccia corrente.\\
+A questo punto la dialog ring viene interrotta, e nel caso di un email e password corrette, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
+Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un animazione d'avvio. Viene avviata ora la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
+Confermata la scelta dell'occhio, si apre la MainActivity, contenente il gioco vero e proprio, i thread principali sono tre:
+\begin{enumerate}
+	\item GameThread: che gestisce i nemici e l'auto dell'utente
+	\item TimerPanorama: per la gestione del panorama laterale
+	\item TimerSun: per la gestione del sole e delle nuvole sulle sfondo
+\end{enumerate}
+Terminato il gioco (gameover) è possibile richiedere i risultati via mail oppure ricominciare a giocare, in ogni caso viene fatta una chiamata post per memorizzare i risultati sul server.(Figura \ref{sequence_login})
+\begin{figure}[ht]
+	\centering
+	\includegraphics[angle=90,width=\columnwidth]{immagini/sequence_login}
+	\caption{sequence diagram funzionamento app con login}
+	\label{sequence_login}
+\end{figure}
 
+
+
+\subsection{Funziononamento senza log in}
+Il funzionamento in modalità \virgolette{play without registration} è identico a quello del log in utente, infatti, in questo caso è stato definito un utente di default, al quale vengono associati tutti i risultati degli utenti che hanno giocato senza registrarsi.
+
+\subsection{Funziononamento sign up}
+Per quanto riguarda la reigstrazione di nuovi utenti, una volta premuto il bottone \virgolette{SIGN UP}, si apre un pop up di warning, dopo di che ,se è stato premuto il tasto di confemra, come verrà poi approfondito nella sezione \ref{signup_label}, l'utente deve fornire: nome, cognome, email, colore preferito, data di nascita e password.\\
+Viene passato il tutto alla classe PostCall, che a sua volta effettua una chiamata post al servizio 3d4ambservice.php. Se i dati inseriti sono corretti (l'email è esistente e non ci sono gi record nel db con gli stessi attributi), il nuovo utente viene inserito.(Figura \ref{sequence_signup})
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/sequence_signup}
+	\caption{sequence diagram funzionamento app registrazione utente (sign up)}
+	\label{sequence_signup}
+\end{figure}
 %----------------------------------------------------------------------------------------
 %	analisi degli algoritmi
 %----------------------------------------------------------------------------------------
@@ -771,7 +806,7 @@ case "log_in":
 
 Come si può vedere sopra, viene eseguito un controllo sui campi email e password e viene restituita una stringa che informa sull'esito. Viene inoltre restituito un valore concatenato (\$doc, 0 or 1) per indicare se si tratta del Log In di un utente comune o di un dottore, il quale dovrà quindi aggiungere successivamente i dati del paziente.
 \newpage
-\subsection*{Sign up}
+\subsection*{Sign up}\label{signup_label}
 L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha premuto il tasto \virgolette{ok} (Figura \ref{registration_post})
 \begin{figure}[ht]
 	\centering

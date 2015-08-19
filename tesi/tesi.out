@@ -34,19 +34,22 @@
 \BOOKMARK [2][-]{subsection.5.4.4}{Dettaglio applicazione}{section.5.4}% 34
 \BOOKMARK [1][-]{section.5.5}{Class diagram}{chapter.5}% 35
 \BOOKMARK [1][-]{section.5.6}{Sequence diagram}{chapter.5}% 36
-\BOOKMARK [0][-]{chapter.6}{Analisi degli Algoritmi}{}% 37
-\BOOKMARK [1][-]{section.6.1}{Penalizzazione progressiva delle immagini}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.2}{Generazione random scena}{chapter.6}% 39
-\BOOKMARK [2][-]{subsection.6.2.1}{Nemici}{section.6.2}% 40
-\BOOKMARK [2][-]{subsection.6.2.2}{Panorama}{section.6.2}% 41
-\BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 42
-\BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 43
-\BOOKMARK [1][-]{section.6.5}{Gestione dello scontro con il nemico}{chapter.6}% 44
-\BOOKMARK [1][-]{section.6.6}{Thread}{chapter.6}% 45
-\BOOKMARK [1][-]{section.6.7}{Asynctask}{chapter.6}% 46
-\BOOKMARK [0][-]{chapter.7}{Tool utilizzati}{}% 47
-\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 48
-\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 49
-\BOOKMARK [0][-]{chapter.8}{Social media}{}% 50
-\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 51
-\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 52
+\BOOKMARK [2][-]{subsection.5.6.1}{Funziononamento con log in}{section.5.6}% 37
+\BOOKMARK [2][-]{subsection.5.6.2}{Funziononamento senza log in}{section.5.6}% 38
+\BOOKMARK [2][-]{subsection.5.6.3}{Funziononamento sign up}{section.5.6}% 39
+\BOOKMARK [0][-]{chapter.6}{Analisi degli Algoritmi}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Penalizzazione progressiva delle immagini}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{Generazione random scena}{chapter.6}% 42
+\BOOKMARK [2][-]{subsection.6.2.1}{Nemici}{section.6.2}% 43
+\BOOKMARK [2][-]{subsection.6.2.2}{Panorama}{section.6.2}% 44
+\BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.5}{Gestione dello scontro con il nemico}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.6}{Thread}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.7}{Asynctask}{chapter.6}% 49
+\BOOKMARK [0][-]{chapter.7}{Tool utilizzati}{}% 50
+\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 52
+\BOOKMARK [0][-]{chapter.8}{Social media}{}% 53
+\BOOKMARK [0][-]{chapter.9}{Conclusioni}{}% 54
+\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 55

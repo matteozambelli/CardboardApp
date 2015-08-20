@@ -1229,7 +1229,99 @@ La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei 
 
 
 \newpage
-\section{Thread}
+\section{Game Thread}
+
+L' implementazione del cuore di funzionamento del gioco è stata realizzata nella classe GameThread. Essa estende la classe Thread e ne effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Innanzitutto, nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le imageView relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i relativeLayout riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Ci sono poi l'activity da cui parte la chiamata, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:
+
+\begin{lstlisting}[language=java]
+
+public GameThread(Activity activity, TextView text1, TextView text2, 
+TextView tLevelLeft, TextView tLifeLeft, TextView tScoreLeft,
+TextView tLevelRight, TextView tLifeRight, TextView tScoreRight, ArrayList<ImageView> i1,ArrayList<ImageView> i2,ArrayList<ImageView> 	i3,ArrayList<ImageView> i4,ArrayList<ImageView> i5,ArrayList<ImageView> i6,ImageView target1, ImageView target2, ImageView target3,
+GlobalData globalData, Eye eye, RelativeLayout RLAnimationLeft, RelativeLayout RLAnimationRight,
+int width, int height,String id_user) { ... }
+
+\end{lstlisting}
+
+Il fulcro della classe GameThread è contenuto all' interno del metodo run(). In esso inoltre, le principali azioni vengono lanciate all' interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell' interfaccia utente. In primo luogo, nel thread, viene controllato il numero di vite attuale dell' utente. Se il valore delle vite rimaste è pari a '0', vengono eseguite le procedure relative alla fase di GameOver, come ad esempio la visualizzazione della view di report a schermo e l'invio della mail contenente lo storico ed i progressi dell'utente, in caso di gioco con utente registrato. Nel caso invece il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale viene immesso il nemico, scelta dall'algoritmo random precedentemente esplicato. Si esegue poi un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o centralmente. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:
+
+\begin{lstlisting}[language=java]
+
+if (pick == 2) {
+	if(gameManager.getIdEnemy().get(i).getNumberOfCar()==1) {
+		animationEnemies.showImage(enemyLeftLane2.get(0));
+		animationEnemies.showImage(enemyRightLane2.get(0));
+		animationEnemies.animateFrontCarLane2(enemyLeftLane2.get(0), enemyRightLane2.get(0),
+			displayWidth, displayHeight);
+	}
+	if(gameManager.getIdEnemy().get(i).getNumberOfCar()==2) {
+		animationEnemies.showImage(enemyLeftLane2.get(1));
+		animationEnemies.showImage(enemyRightLane2.get(1));
+		animationEnemies.animateFrontCarLane2(enemyLeftLane2.get(1), enemyRightLane2.get(1),
+			displayWidth, displayHeight);
+	}
+	if(gameManager.getIdEnemy().get(i).getNumberOfCar()==3) {
+		animationEnemies.showImage(enemyLeftLane2.get(2));
+		animationEnemies.showImage(enemyRightLane2.get(2));
+		animationEnemies.animateFrontCarLane2(enemyLeftLane2.get(2), enemyRightLane2.get(2),
+			displayWidth, displayHeight);
+	}
+	if(gameManager.getIdEnemy().get(i).getNumberOfCar()==4) {
+		animationEnemies.showImage(enemyLeftLane2.get(3));
+		animationEnemies.showImage(enemyRightLane2.get(3));
+		animationEnemies.animateFrontCarLane2(enemyLeftLane2.get(3), enemyRightLane2.get(3),
+			displayWidth, displayHeight);
+	}
+	
+	onAnimationTimer();
+	animationTarget.animateTarget2(target2, displayWidth, displayHeight);
+	animationEnemies = new AnimationEnemies();
+}
+
+\end{lstlisting}
+
+Per trattare l' implementazione vera e propria dell'animazione sull' oggetto animationEnemies rimandiamo al capitolo seguente per esplicarla più in dettaglio. Il metodo onAnimationTimer() implementa a sua volta i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, lo stratagemma adottato per far scomparire all'attimo esatto le macchine evitate è stato quello di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l' obiettivo di fare da 'target'. Le imageView che fanno da target hanno visibilità nulla. L' animazione di quest' ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l' esempio di tale implementazione adottato nella corsia centrale:
+
+\begin{lstlisting}[language=java]
+
+@Override
+public void onAnimationEnd(Animation animation)
+{
+	globalData.setEnd2(true);
+	t1.setText("FINITA ANIMAZIONE 2");
+	if(globalData.isEnd2() && globalData.getAbsolutePosition()==2) {
+		globalData.decreaseLife();
+		textLifeLeft.setText("LIFE: " + globalData.getLife().toString());
+		textLifeRight.setText("LIFE: " + globalData.getLife().toString());
+		t2.setText("COLLISIONE SU 2");
+		animationExplosionViewLeft = new AnimationExplosionView(activity.getApplicationContext());
+		animationExplosionViewRight = new AnimationExplosionView(activity.getApplicationContext());
+		animationExplosionViewLeft.setX((float) (displayWidth*0.135));
+		animationExplosionViewLeft.setY((float) (displayHeight*0.25));
+		animationExplosionViewRight.setX((float) (displayWidth*0.135));
+		animationExplosionViewRight.setY((float) (displayHeight*0.25));
+		relativeLayoutAnimationLeft.addView(animationExplosionViewLeft);
+		relativeLayoutAnimationRight.addView(animationExplosionViewRight);
+		animationEnemies.hideImage(enemyLeftLane2.get(0));
+		animationEnemies.hideImage(enemyRightLane2.get(0));
+		animationEnemies.hideImage(enemyLeftLane2.get(1));
+		animationEnemies.hideImage(enemyRightLane2.get(1));
+		animationEnemies.hideImage(enemyLeftLane2.get(2));
+		animationEnemies.hideImage(enemyRightLane2.get(2));
+		animationEnemies.hideImage(enemyLeftLane2.get(3));
+		animationEnemies.hideImage(enemyRightLane2.get(3));
+	}
+	else {
+		globalData.increaseScore();
+		textScoreLeft.setText("SCORE: " + globalData.getScore().toString());
+		textScoreRight.setText("SCORE: " + globalData.getScore().toString());
+	}
+}
+
+\end{lstlisting}
+
+Come si può vedere, si agisce sugli oggetti animationEnemies sfruttando l' evento onAnimationEnd(Animation animation) generato dal target. In particolare, oltre alla gestione della scomparsa dei veicoli si effettua un controllo sull' eventuale collisione con un auto nemica. Se lo scontro ha luogo, viene lanciata l' animazione dell'esplosione.
+
 \newpage
 \section{Asynctask}
 Per ottimizzare l'utilizzo di memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 

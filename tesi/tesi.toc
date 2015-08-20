@@ -77,16 +77,16 @@
 \contentsline {paragraph}{Il thread della chiamata post}{62}{section*.51}
 \contentsline {paragraph}{La gestione delle chiamate lato server}{63}{section*.52}
 \contentsline {section}{\numberline {6.5}Gestione dello scontro con il nemico}{79}{section.6.5}
-\contentsline {section}{\numberline {6.6}Thread}{84}{section.6.6}
-\contentsline {section}{\numberline {6.7}Asynctask}{85}{section.6.7}
-\contentsline {paragraph}{I quattro passi:}{85}{section*.64}
-\contentsline {chapter}{\numberline {7}Tool utilizzati}{87}{chapter.7}
-\contentsline {section}{\numberline {7.1}GitHub}{87}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crashlitics}{89}{section.7.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{93}{part.4}
-\contentsline {chapter}{\numberline {8}Social media}{95}{chapter.8}
-\contentsline {paragraph}{Risultati promozione}{96}{section*.72}
-\contentsline {chapter}{\numberline {9}Conclusioni}{97}{chapter.9}
-\contentsline {paragraph}{Certificazione contenuti:}{97}{section*.74}
-\contentsline {section}{\numberline {9.1}Paper}{98}{section.9.1}
-\contentsline {section}{\numberline {9.2}Sviluppi futuri}{99}{section.9.2}
+\contentsline {section}{\numberline {6.6}Game Thread}{84}{section.6.6}
+\contentsline {section}{\numberline {6.7}Asynctask}{89}{section.6.7}
+\contentsline {paragraph}{I quattro passi:}{89}{section*.64}
+\contentsline {chapter}{\numberline {7}Tool utilizzati}{91}{chapter.7}
+\contentsline {section}{\numberline {7.1}GitHub}{91}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crashlitics}{93}{section.7.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{97}{part.4}
+\contentsline {chapter}{\numberline {8}Social media}{99}{chapter.8}
+\contentsline {paragraph}{Risultati promozione}{100}{section*.72}
+\contentsline {chapter}{\numberline {9}Conclusioni}{101}{chapter.9}
+\contentsline {paragraph}{Certificazione contenuti:}{101}{section*.74}
+\contentsline {section}{\numberline {9.1}Paper}{102}{section.9.1}
+\contentsline {section}{\numberline {9.2}Sviluppi futuri}{103}{section.9.2}

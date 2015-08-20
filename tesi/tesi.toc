@@ -79,15 +79,16 @@
 \contentsline {paragraph}{La gestione delle chiamate lato server}{63}{section*.52}
 \contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{79}{section.7.5}
 \contentsline {section}{\numberline {7.6}Game Thread}{84}{section.7.6}
-\contentsline {section}{\numberline {7.7}Asynctask}{89}{section.7.7}
-\contentsline {paragraph}{I quattro passi:}{89}{section*.64}
-\contentsline {chapter}{\numberline {8}Tool utilizzati}{91}{chapter.8}
-\contentsline {section}{\numberline {8.1}GitHub}{91}{section.8.1}
-\contentsline {section}{\numberline {8.2}Crashlitics}{93}{section.8.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{97}{part.4}
-\contentsline {chapter}{\numberline {9}Social media}{99}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{100}{section*.72}
-\contentsline {chapter}{\numberline {10}Conclusioni}{101}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{101}{section*.74}
-\contentsline {section}{\numberline {10.1}Paper}{102}{section.10.1}
-\contentsline {section}{\numberline {10.2}Sviluppi futuri}{103}{section.10.2}
+\contentsline {section}{\numberline {7.7}Gestione animazioni}{89}{section.7.7}
+\contentsline {section}{\numberline {7.8}Asynctask}{91}{section.7.8}
+\contentsline {paragraph}{I quattro passi:}{91}{section*.64}
+\contentsline {chapter}{\numberline {8}Tool utilizzati}{93}{chapter.8}
+\contentsline {section}{\numberline {8.1}GitHub}{93}{section.8.1}
+\contentsline {section}{\numberline {8.2}Crashlitics}{95}{section.8.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{99}{part.4}
+\contentsline {chapter}{\numberline {9}Social media}{101}{chapter.9}
+\contentsline {paragraph}{Risultati promozione}{102}{section*.72}
+\contentsline {chapter}{\numberline {10}Conclusioni}{103}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{103}{section*.74}
+\contentsline {section}{\numberline {10.1}Paper}{104}{section.10.1}
+\contentsline {section}{\numberline {10.2}Sviluppi futuri}{105}{section.10.2}

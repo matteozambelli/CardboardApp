@@ -30,32 +30,32 @@
 \contentsline {section}{\numberline {5.1}Architettura di sistema}{37}{section.5.1}
 \contentsline {paragraph}{La scelta degli auricolari come controller}{38}{section*.19}
 \contentsline {paragraph}{Il server}{38}{section*.20}
-\contentsline {section}{\numberline {5.2}Vista di implementazione software}{40}{section.5.2}
-\contentsline {section}{\numberline {5.3}Scenari e casi d'uso}{41}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Sign Up}{41}{subsection.5.3.1}
-\contentsline {paragraph}{Attori:}{41}{section*.22}
-\contentsline {paragraph}{Precondizioni:}{41}{section*.23}
-\contentsline {paragraph}{Passi principali:}{41}{section*.24}
-\contentsline {paragraph}{Situazioni eccezionali:}{41}{section*.25}
-\contentsline {paragraph}{Postcondizioni:}{42}{section*.26}
-\contentsline {subsection}{\numberline {5.3.2}Log In utente comune}{43}{subsection.5.3.2}
-\contentsline {paragraph}{Attori:}{43}{section*.28}
-\contentsline {paragraph}{Precondizioni:}{43}{section*.29}
-\contentsline {paragraph}{Passi principali:}{43}{section*.30}
-\contentsline {paragraph}{Situazioni eccezionali:}{43}{section*.31}
-\contentsline {paragraph}{Postcondizioni:}{43}{section*.32}
-\contentsline {subsection}{\numberline {5.3.3}Log In medico}{45}{subsection.5.3.3}
-\contentsline {paragraph}{Attori:}{45}{section*.34}
-\contentsline {paragraph}{Precondizioni:}{45}{section*.35}
-\contentsline {paragraph}{Passi principali:}{45}{section*.36}
-\contentsline {paragraph}{Situazioni eccezionali:}{45}{section*.37}
-\contentsline {paragraph}{Postcondizioni:}{45}{section*.38}
-\contentsline {subsection}{\numberline {5.3.4}Update Info}{47}{subsection.5.3.4}
-\contentsline {paragraph}{Attori:}{47}{section*.40}
-\contentsline {paragraph}{Precondizioni:}{47}{section*.41}
-\contentsline {paragraph}{Passi principali:}{47}{section*.42}
-\contentsline {paragraph}{Situazioni eccezionali:}{47}{section*.43}
-\contentsline {paragraph}{Postcondizioni:}{47}{section*.44}
+\contentsline {section}{\numberline {5.2}Vista di implementazione software}{39}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scenari e casi d'uso}{40}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Sign Up}{40}{subsection.5.3.1}
+\contentsline {paragraph}{Attori:}{40}{section*.22}
+\contentsline {paragraph}{Precondizioni:}{40}{section*.23}
+\contentsline {paragraph}{Passi principali:}{40}{section*.24}
+\contentsline {paragraph}{Situazioni eccezionali:}{40}{section*.25}
+\contentsline {paragraph}{Postcondizioni:}{41}{section*.26}
+\contentsline {subsection}{\numberline {5.3.2}Log In utente comune}{42}{subsection.5.3.2}
+\contentsline {paragraph}{Attori:}{42}{section*.28}
+\contentsline {paragraph}{Precondizioni:}{42}{section*.29}
+\contentsline {paragraph}{Passi principali:}{42}{section*.30}
+\contentsline {paragraph}{Situazioni eccezionali:}{42}{section*.31}
+\contentsline {paragraph}{Postcondizioni:}{42}{section*.32}
+\contentsline {subsection}{\numberline {5.3.3}Log In medico}{44}{subsection.5.3.3}
+\contentsline {paragraph}{Attori:}{44}{section*.34}
+\contentsline {paragraph}{Precondizioni:}{44}{section*.35}
+\contentsline {paragraph}{Passi principali:}{44}{section*.36}
+\contentsline {paragraph}{Situazioni eccezionali:}{44}{section*.37}
+\contentsline {paragraph}{Postcondizioni:}{44}{section*.38}
+\contentsline {subsection}{\numberline {5.3.4}Update Info}{46}{subsection.5.3.4}
+\contentsline {paragraph}{Attori:}{46}{section*.40}
+\contentsline {paragraph}{Precondizioni:}{46}{section*.41}
+\contentsline {paragraph}{Passi principali:}{46}{section*.42}
+\contentsline {paragraph}{Situazioni eccezionali:}{46}{section*.43}
+\contentsline {paragraph}{Postcondizioni:}{46}{section*.44}
 \contentsline {chapter}{\numberline {6}Software design}{49}{chapter.6}
 \contentsline {section}{\numberline {6.1}Package Diagram}{49}{section.6.1}
 \contentsline {section}{\numberline {6.2}Component diagram}{50}{section.6.2}

@@ -205,7 +205,7 @@ In particolare si è deciso che il requisito minimo che deve possedere lo smartph
 Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alle radici ben salde nel mondo open source. Il sistema operativo Android, infatti, è figlio di Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
 Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.\\
 Parlando di numeri, Android domina fra gli smartphone con una quota di mercato dell' 84,7\%. E' il dato principale che emerge dall' analisi della società di ricerca \textit{Idc} sul mercato dei cellulari. Il sistema operativo mobile di Google, a differenza di quello di Apple, è presente su decine di modelli di cellulari di marche diverse e domina il mercato lasciando alla \virgolette{Mela} l'11,7\% di share \cite{percentualeSmartphone}.
-\subsection{Perchè Android Studio}
+\subsection{Perchè Android Studio}\label{android_studio}
 Dopo aver scelto per quale sistema operativo sviluppare, un'altra importante scelta è stata quella di identificare l'IDE più adatto alle nostre esigenze.
 Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclipse. Esso è sponsorizzato direttamente da Google e pensato appositamente per Android. Gli elementi di Android Studio che spiccano maggiormente sono:
 \begin{itemize}
@@ -381,7 +381,9 @@ La difficoltà aumenta dinamicamente, per rendere via via più stimolante il tratt
 %	Panoramica su software e hardware
 %----------------------------------------------------------------------------------------
 \chapter{Panoramica su software e hardware}
-\section{Architettura di sistema}
+In questo capitolo troviamo l'architettura di sistema con relativo diagramma (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
+
+\section{Architettura di sistema}\label{architettura_di_sistema}
 Il sistema prevede le seguenti componenti:
 \begin{itemize}
 	\item Google Cardboard (vedi sezione \ref{sectionGC})
@@ -389,22 +391,23 @@ Il sistema prevede le seguenti componenti:
 	\item Auricolari con tasti di controllo del volume
 	\item Server con database MySql
 \end{itemize}
+Lo smartphone (con S.O. Android) va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso,
+al dispositivo vanno collegati degli auricolari con il controllo del volume (come quelli che si trovano nelle confezioni dei telefoni all'acquisto), saranno necessari  per controllare il movimento della macchinina.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=160mm]{immagini/architettura_di_sistema}
 \caption{Architettura di sistema}
 \label{AS}
 \end{figure}
-\newpage
-Lo smartphone (con S.O. Android) va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso,
-al dispositivo vanno collegati degli auricolari con il controllo del volume (come quelli che si trovano nelle confezioni dei telefoni all'acquisto), saranno necessari  per controllare il movimento della macchinina.
+
+
 \paragraph{La scelta degli auricolari come controller}è nata dopo aver notato come l'utilizzo dell'accelerometro (sensore presente su ogni smartphone) come strumento per catturare i comandi dell'utente, causasse un senso di nausea dopo pochi minuti di gioco, si è quindi deciso di utilizzare un controllore esterno.\\
 
 Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma piuttosto sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
 
 \paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it è una macchina Linux e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 \newpage
-\section{Vista di implementazione software}
+\section{Vista di implementazione software}\label{vista_di_implementazione_software}
 Questo grafico mostra dove sono installate le varie componenti software, in che linguaggio sono scritte e come interagiscono tra di loro (Figura \ref{vista_implementazione_software}).\\
 Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password e la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepiloge dei dati di gioco, notifiche di conferma registrazione, cambiamento dati o modifica della password.
 \begin{figure}[ht]
@@ -415,7 +418,7 @@ Tutte le componenti lato client (Android), sono realizzate in java e xml, per in
 \end{figure}
 
 \newpage
-\section{Scenari e casi d'uso}
+\section{Scenari e casi d'uso}\label{scenari_e_casi_d_uso}
 %\section{Requisiti funzionali e casi d'uso}
 %\subsection{Definizioni dei requisiti:}
 %\subsection{Analisi del contesto:}
@@ -560,17 +563,19 @@ L'update delle credenziali selezionate viene eseguito correttamente.
 %	Software design
 %----------------------------------------------------------------------------------------
 \chapter{Software design}
-\section{Package Diagram}
+
+In questo capitolo vengono riportari i classici diagrammi UML, i quali permettono tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software, in sequenza di trovano package diagram (\ref{package}), component diagram (\ref{component}), class diagram (\ref{class}) e sequence diagram (\ref{sequence}).
+\section{Package Diagram}\label{package}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=130mm]{immagini/package_diagram}
+	\includegraphics[width=\columnwidth]{immagini/package_diagram}
 	\caption{Package diagram}
 	\label{package_diagram}
 \end{figure}
 \newpage
-\section{Component diagram}
+\section{Component diagram}\label{component}
 \subsection{Il sistema di Car Racing Cardboard}\label{post_call}
 Le due compoenenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Andoid, queste due componenti comunicano con chiamate di tipo http post.\\
 A differenza di GET, che permette a un server di mandare informazioni a un client, l'operazione POST fornisce ai client un modo per trasmettere informazioni ai server. 
@@ -626,9 +631,9 @@ L'applicazione Car Racing Cardboard sfrutta entrambe le forme di componenti graf
 
 \subsection{Dettaglio applicazione}
 \newpage
-\section{Class diagram}
+\section{Class diagram}\label{class}
 \newpage
-\section{Sequence diagram}
+\section{Sequence diagram}\label{sequence}
 \subsection{Funziononamento con log in}
 All'avvio dell'applicazione, se l'utente ho inserito correttamente email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
 \begin{itemize}
@@ -674,8 +679,9 @@ Viene passato il tutto alla classe PostCall, che a sua volta effettua una chiama
 %----------------------------------------------------------------------------------------
 
 \chapter{Analisi degli Algoritmi}
+In questo capitolo vengono spiegati gli algoritmi che compongono questa applicazione: la penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), come la scena viene generata casualmente (\ref{generazione_random_scena}), come vengono cifrate le password degli utenti (\ref{cifratura}), una panoramica sul servizio web (\ref{servizio_web}), come vengono gestiti gli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), il thread principale del gioco (\ref{game_thread}), la gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni utilizzati (\ref{asynctask}).
 
-\section{Penalizzazione progressiva delle immagini}
+\section{Penalizzazione progressiva delle immagini}\label{penalizzazione_progressiva}
 L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha=0 è trasparente, mentre con aplha=255 conserva tutte le sue caratteristiche, con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, in termini di nemici e velocità d'azione. \\
 \begin{lstlisting}[language=Java]
 	 /**
@@ -716,7 +722,7 @@ L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua tra
 	 }
 \end{lstlisting}
 \newpage
-\section{Generazione random scena}
+\section{Generazione random scena}\label{generazione_random_scena}
 \subsection{Nemici}
 Nella scena ci sono tre \virgolette{corsie} dalle quali possono arrivare i \virgolette{nemici}, questo è il codice dal quale viene estratat la corsia scelta.
 Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo nella stessa corsia senza muoversi viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.\\
@@ -760,7 +766,7 @@ Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma veng
 	}
 \end{lstlisting}
 \newpage
-\section{Servizio web}
+\section{Servizio web}\label{servizio_web}
 La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrispondono sempre delle risposte dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
 \paragraph{Il thread della chiamata post}la chiamata avviene nel metodo \textit{public void myPostCall(final TypeCall type, final Activity logInActivity)} grazie ad un thread al suo interno.
 \\
@@ -1142,7 +1148,7 @@ break;
 Come si può vedere, una volta finita la partita, i risultati ottenuti dall' utente vengono inseriti nella tabella 'results'. In seguito viene individuato lo storico dell' utente dal database e viene inviata una mail che notifica i risultati ottenuti fino all' ultima partita effettuata. L' obiettivo è quello di mantenere una cronologia che permetta all' utente di osservare progressivamente i miglioramenti ottenuti.
 
 \newpage
-\section{Gestione dello scontro con il nemico}
+\section{Gestione dello scontro con il nemico}\label{gestione_dello_scontro_con_nemico}
 
 Nel momento in cui si effettua una collisione con un autoveicolo nemico, oltre al decremento del numero di vite a disposizione ed alla gestione di un eventuale Game Over, viene visualizzata a schermo un' esplosione animata nel punto di scontro. Questo effetto è stato progettato basandosi sulle potenzialità dei Thread e sfruttando le potenzialità della classe SurfaceView, messa a disposizione da Android.
 Essa fornisce infatti una superficie di disegno pienamente controllabile che può essere adoperata per effettuare delle sovrapposizioni grafiche con altre View. L' accesso alla superficie sottostante è fornito tramite l' interfaccia SurfaceHolder, la quale può essere richiamata usando il metodo getHolder(). Nella classe, è necessario implementare i  metodi 'surfaceCreated(SurfaceHolder)' e 'surfaceDestroyed(surfaceHolder)' che agiscono quando la superficie viene creata e distrutta. Lo scopo principae della classe SurfaceView è quello di fornire una superficie dove un thread secondario possa renderizzare a schermo. Per questo obiettivo, vengono utilizzate delle Callback sull' oggetto SurfaceHolder per fare da filo conduttore tra thread principale e secondario. Di seguito è riportata la classe AnimationExplosionView, la nostra estensione della classe SurfaceView precedentemente descritta:
@@ -1255,7 +1261,7 @@ La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei 
 
 
 \newpage
-\section{Game Thread}
+\section{Game Thread}\label{game_thread}
 
 L' implementazione del cuore di funzionamento del gioco è stata realizzata nella classe GameThread. Essa estende la classe Thread e ne effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Innanzitutto, nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le imageView relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i relativeLayout riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Ci sono poi l'activity da cui parte la chiamata, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:
 
@@ -1349,7 +1355,7 @@ public void onAnimationEnd(Animation animation)
 Come si può vedere, si agisce sugli oggetti animationEnemies sfruttando l' evento onAnimationEnd(Animation animation) generato dal target. In particolare, oltre alla gestione della scomparsa dei veicoli si effettua un controllo sull' eventuale collisione con un auto nemica. Se lo scontro ha luogo, viene lanciata l' animazione dell'esplosione.
 
 \newpage
-\section{Gestione animazioni}
+\section{Gestione animazioni}\label{gestione_animazione}
 La gestione delle animazione relative sia alle auto nemiche sia al paesaggio, è stata realizzata estendendo la classe Animation messa a disposizione da Android. In seguito verrà presentato l' esempio relativo alle auto nemiche. Per quanto rigurda il panorama, è stato applicato il medesimo principio.
 Innanzitutto, per ogni corsia, è stato necessario creare un 'AnimationSet', ovvero un gruppo di animazioni riproducibile simultaneamente:
 
@@ -1384,7 +1390,7 @@ public void animateFrontCarLane1(final ImageView ivLeft, final ImageView 	ivRigh
 Come si può vedere dalla segnatura del medoto, vengono passati i due oggetti relativi alle imageView delle auto della corsia sinistra. In particolare 'ivLeft' si riferisce all' autoveicolo presente nel relativeLayout di sinistra, mentre 'ivRight' all' autoveicolo del relativeLayout destro. Per fare in modo che le animazioni avessero lo stesso comportamento su ogni dispositivo, si è deciso di applicare le trasalazioni e la scala operando sui valori di larghezza ed altezza del display. Per le traslazionivengono specificati come parametri i punti di partenza relativi alle coordinate 'x' ed 'y' dell'oggetto ed in seguito i punti di arrivo. Per la scala viene specificata la grandezza iniziale dell' imageView ed in seguito è indicato il valore moltiplicativo di scala sull'asse verticale ed orizzontale. Le singole animazioni vengono poi aggiunte all' animationSet tramite il metodo 'addAnimation'. Viene inoltre impostata la durata delle animazioni ed infine vengono fatte partire grazie al metodo 'startAnimation'.
 
 \newpage
-\section{Asynctask}
+\section{Asynctask}\label{asynctask}
 Per ottimizzare l'utilizzo di memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 
 In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell?applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall?interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
 \paragraph{I quattro passi:} un Asynktask in android si divide in quattro \virgolette{step}
@@ -1400,12 +1406,11 @@ In molti framework di sviluppo con interfacce grafiche i task lunghi non devono 
 %----------------------------------------------------------------------------------------
 \chapter{Tool utilizzati}
 
-\section{GitHub}Come repository del lavoro è stato utilizzato GitHub.
-
-GitHub è un servizio web di hosting per lo sviluppo di progetti software, che usa il sistema di controllo di versione Git. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili.
-
-GitHub offre diversi piani per repository privati sia a pagamento (utilizzato nel nostro caso, grazie all'account 3D4Amb), sia gratuiti, molto utilizzati per lo sviluppo di progetti open-source.
-
+In questo capitolo vengono spiegati i tool utilizzati durante lo sviluppo dell'applicazione, il tool principale, Android Studio, è descritto nella sezione (\ref{android_studio}), il tool per la sincronizzazione del lavoro da remoto, GitHub (\ref{github}) ed il tool per la gestione dei crash, crashlitics (\ref{crashlitics}).
+\section{GitHub}\label{github}
+Come repository del lavoro è stato utilizzato GitHub.\\
+GitHub è un servizio web di hosting per lo sviluppo di progetti software, che usa il sistema di controllo di versione Git. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili.\\
+GitHub offre diversi piani per repository privati sia a pagamento (utilizzato nel nostro caso, grazie all'account 3D4Amb), sia gratuiti, molto utilizzati per lo sviluppo di progetti open-source.\\
 Grazie alla versione Desktop di GitHub, la gestione del lavoro e l' iterazione con il repository è resa ancora più semplificata. I comandi per l' aggiunta, la creazione e la clonazione di un repository direttamente accessibili dall'applicazione:
 \newpage
 \begin{figure}[h]
@@ -1427,7 +1432,7 @@ Inoltre è possibile gestire i vari progetti e documenti mantenendo uno storico d
 Tramite questo tool è quindi possibile creare un account, aggiungere un nuovo progetto ed inviare dati in pochi minuti. Se il progetto venisse inoltre reso open source, sarebbe possibile anche avere un' ampia comunità di sviluppatori che potrebbe osservare il progetto, biforcarlo ed dare un aiuto per migliorarlo.
 
 \newpage
-\section{Crashlitics}
+\section{Crashlitics}\label{crashlitics}
 Per tenere traccia di eventuali problemi all' interno dell'applicazione è stato utilizzato Crashlitics\footnote{https://try.crashlytics.com/}.\\
 Crashlitics è uno strumento per tenere traccia dei crash all'interno dell'applicazione, segnala in quale activity si è verificato il problema, genera statistihe di utilizzo degli utenti, e consente agli sviluppatori di gestire i bug (marcandoli come risolti o non risolti).\\
 //TODO - aggiornare i dati prima di stampare la tesi (15/8/2015)\\

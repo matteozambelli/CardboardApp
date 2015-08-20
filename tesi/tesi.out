@@ -1,6 +1,6 @@
 \BOOKMARK [-1][-]{part.1}{I Descrizione del contesto}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Introduzione}{part.1}% 2
-\BOOKMARK [1][-]{section.1.1}{3D4Amb}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.1}{Il progetto 3D4Amb}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Obiettivo}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{L'Ambliopia}{part.1}% 5
 \BOOKMARK [1][-]{section.2.1}{Il disturbo}{chapter.2}% 6
@@ -11,52 +11,53 @@
 \BOOKMARK [2][-]{subsection.2.2.4}{Settorizzazione}{section.2.2}% 11
 \BOOKMARK [1][-]{section.2.3}{L'idea di 3D4Amb}{chapter.2}% 12
 \BOOKMARK [0][-]{chapter.3}{La tecnologia per il trattamento}{part.1}% 13
-\BOOKMARK [1][-]{section.3.1}{Sistema operativo ed ambiente di sviluppo:}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.1.1}{Perch\350 Android:}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.2}{Perch\350 Android Studio:}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.1}{Sistema operativo ed ambiente di sviluppo}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{Perch\350 Android}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Perch\350 Android Studio}{section.3.1}% 16
 \BOOKMARK [1][-]{section.3.2}{Google cardboard}{chapter.3}% 17
 \BOOKMARK [-1][-]{part.2}{II Panoramica sull'applicazione}{}% 18
 \BOOKMARK [0][-]{chapter.4}{Car Racing Cardboard: l'applicazione}{part.2}% 19
-\BOOKMARK [1][-]{section.4.1}{Il principio del trattamento tramite il gioco:}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{Il gioco:}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.2.1}{Obiettivo:}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.2}{Doppia Viewport:}{section.4.2}% 23
-\BOOKMARK [1][-]{section.4.3}{Guida all'utilizzo:}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.1}{Il principio del trattamento tramite il gioco}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Il gioco}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.2.1}{Obiettivo}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.2}{Doppia Viewport}{section.4.2}% 23
+\BOOKMARK [1][-]{section.4.3}{Guida all'utilizzo}{chapter.4}% 24
 \BOOKMARK [-1][-]{part.3}{III Implementazione}{}% 25
-\BOOKMARK [0][-]{chapter.5}{Il software}{part.3}% 26
+\BOOKMARK [0][-]{chapter.5}{Panoramica su software e hardware}{part.3}% 26
 \BOOKMARK [1][-]{section.5.1}{Architettura di sistema}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.2}{Vista di implementazione software}{chapter.5}% 28
 \BOOKMARK [1][-]{section.5.3}{Scenari e casi d'uso}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.3.1}{Sign Up:}{section.5.3}% 30
-\BOOKMARK [2][-]{subsection.5.3.2}{Log In utente comune:}{section.5.3}% 31
-\BOOKMARK [2][-]{subsection.5.3.3}{Log In medico:}{section.5.3}% 32
-\BOOKMARK [2][-]{subsection.5.3.4}{Update Info:}{section.5.3}% 33
-\BOOKMARK [1][-]{section.5.4}{Package Diagram}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.5}{Component diagram}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.5.1}{Il sistema di Car Racing Cardboard}{section.5.5}% 36
-\BOOKMARK [2][-]{subsection.5.5.2}{L'applicazione Android}{section.5.5}% 37
-\BOOKMARK [2][-]{subsection.5.5.3}{Il server}{section.5.5}% 38
-\BOOKMARK [2][-]{subsection.5.5.4}{Dettaglio applicazione}{section.5.5}% 39
-\BOOKMARK [1][-]{section.5.6}{Class diagram}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.7}{Sequence diagram}{chapter.5}% 41
-\BOOKMARK [2][-]{subsection.5.7.1}{Funziononamento con log in}{section.5.7}% 42
-\BOOKMARK [2][-]{subsection.5.7.2}{Funziononamento senza log in}{section.5.7}% 43
-\BOOKMARK [2][-]{subsection.5.7.3}{Funziononamento sign up}{section.5.7}% 44
-\BOOKMARK [0][-]{chapter.6}{Analisi degli Algoritmi}{part.3}% 45
-\BOOKMARK [1][-]{section.6.1}{Penalizzazione progressiva delle immagini}{chapter.6}% 46
-\BOOKMARK [1][-]{section.6.2}{Generazione random scena}{chapter.6}% 47
-\BOOKMARK [2][-]{subsection.6.2.1}{Nemici}{section.6.2}% 48
-\BOOKMARK [2][-]{subsection.6.2.2}{Panorama}{section.6.2}% 49
-\BOOKMARK [1][-]{section.6.3}{Cifratura password}{chapter.6}% 50
-\BOOKMARK [1][-]{section.6.4}{Servizio web}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.5}{Gestione dello scontro con il nemico}{chapter.6}% 52
-\BOOKMARK [1][-]{section.6.6}{Game Thread}{chapter.6}% 53
-\BOOKMARK [1][-]{section.6.7}{Asynctask}{chapter.6}% 54
-\BOOKMARK [0][-]{chapter.7}{Tool utilizzati}{part.3}% 55
-\BOOKMARK [1][-]{section.7.1}{GitHub}{chapter.7}% 56
-\BOOKMARK [1][-]{section.7.2}{Crashlitics}{chapter.7}% 57
-\BOOKMARK [-1][-]{part.4}{IV Valutazioni finali}{}% 58
-\BOOKMARK [0][-]{chapter.8}{Social media}{part.4}% 59
-\BOOKMARK [0][-]{chapter.9}{Conclusioni}{part.4}% 60
-\BOOKMARK [1][-]{section.9.1}{Paper}{chapter.9}% 61
-\BOOKMARK [1][-]{section.9.2}{Sviluppi futuri}{chapter.9}% 62
+\BOOKMARK [2][-]{subsection.5.3.1}{Sign Up}{section.5.3}% 30
+\BOOKMARK [2][-]{subsection.5.3.2}{Log In utente comune}{section.5.3}% 31
+\BOOKMARK [2][-]{subsection.5.3.3}{Log In medico}{section.5.3}% 32
+\BOOKMARK [2][-]{subsection.5.3.4}{Update Info}{section.5.3}% 33
+\BOOKMARK [0][-]{chapter.6}{Software design}{part.3}% 34
+\BOOKMARK [1][-]{section.6.1}{Package Diagram}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.2}{Component diagram}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.2.1}{Il sistema di Car Racing Cardboard}{section.6.2}% 37
+\BOOKMARK [2][-]{subsection.6.2.2}{L'applicazione Android}{section.6.2}% 38
+\BOOKMARK [2][-]{subsection.6.2.3}{Il server}{section.6.2}% 39
+\BOOKMARK [2][-]{subsection.6.2.4}{Dettaglio applicazione}{section.6.2}% 40
+\BOOKMARK [1][-]{section.6.3}{Class diagram}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.4}{Sequence diagram}{chapter.6}% 42
+\BOOKMARK [2][-]{subsection.6.4.1}{Funziononamento con log in}{section.6.4}% 43
+\BOOKMARK [2][-]{subsection.6.4.2}{Funziononamento senza log in}{section.6.4}% 44
+\BOOKMARK [2][-]{subsection.6.4.3}{Funziononamento sign up}{section.6.4}% 45
+\BOOKMARK [0][-]{chapter.7}{Analisi degli Algoritmi}{part.3}% 46
+\BOOKMARK [1][-]{section.7.1}{Penalizzazione progressiva delle immagini}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.2}{Generazione random scena}{chapter.7}% 48
+\BOOKMARK [2][-]{subsection.7.2.1}{Nemici}{section.7.2}% 49
+\BOOKMARK [2][-]{subsection.7.2.2}{Panorama}{section.7.2}% 50
+\BOOKMARK [1][-]{section.7.3}{Cifratura password}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.4}{Servizio web}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.5}{Gestione dello scontro con il nemico}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.6}{Game Thread}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.7}{Asynctask}{chapter.7}% 55
+\BOOKMARK [0][-]{chapter.8}{Tool utilizzati}{part.3}% 56
+\BOOKMARK [1][-]{section.8.1}{GitHub}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.2}{Crashlitics}{chapter.8}% 58
+\BOOKMARK [-1][-]{part.4}{IV Valutazioni finali}{}% 59
+\BOOKMARK [0][-]{chapter.9}{Social media}{part.4}% 60
+\BOOKMARK [0][-]{chapter.10}{Conclusioni}{part.4}% 61
+\BOOKMARK [1][-]{section.10.1}{Paper}{chapter.10}% 62
+\BOOKMARK [1][-]{section.10.2}{Sviluppi futuri}{chapter.10}% 63

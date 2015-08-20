@@ -128,7 +128,7 @@
 
 In questo primo capitolo viene spiegato di cosa tratta il progetto 3D4Amb, del quale fa parte questo lavoro (\ref{3d4amb}) e qual è l'obiettivo di questa tesi (\ref{obiettivo}).
 
-\section{3D4Amb}\label{3d4amb}
+\section{Il progetto 3D4Amb}\label{3d4amb}
 Il progetto 3D4Amb mira a sviluppare un sistema basato sul 3D per la diagnosi e il trattamento dell'ambliopia nei bambini piccoli.\\
 Sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Essa dovrebbe consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. Non dovrebbe soffrire dei problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
 L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è di sviluppare un sistema per la diagnosi e il trattamento di ambliopia, basata sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
@@ -175,7 +175,7 @@ Per il trattamento dell'ambliopia sono stati proposti anche degli stimolatori vi
 \newpage
 \section{L'idea di 3D4Amb}\label{idea_3D4Amb}
 3D4Amb ha ideato un sistema basato sulle tecnologie 3D per consentire la visione binoculare. L'uso classico di un sistema 3D è quello di fornire ai due occhi diverse immagini della stessa scena con angoli di visualizzazione leggermente sfalsati che corrispondono ai diversi punti di vista dell' occhio destro e sinistro. Questa visione produce un'illusione di profondità della scena ed è la base della realtà virtuale.\\                                                         
-Il principio primario del sistema è che all?occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
+Il principio primario del sistema è che all' occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
 Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare, ma l'occhio sano non è ''patchato''. Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
 
 
@@ -191,7 +191,7 @@ Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb i
 \chapter{La tecnologia per il trattamento}
 In questo terzo capitolo viene spiegata la scelta del sistema operativo dell'applicazione realizzata e l'ambiente di sviluppo utilizzato (\ref{SO_ADS}), inoltre il capitolo contiene la descrizione al visore 3D \virgolette{ideale}con il quale interagisce l'applicazione (\ref{sectionGC}).
 
-\section{Sistema operativo ed ambiente di sviluppo:}\label{SO_ADS}
+\section{Sistema operativo ed ambiente di sviluppo}\label{SO_ADS}
 L'applicazione è stata progettata e sviluppata per il mondo Android. I software utilizzati per l'implementazione sono stati:
 \begin{itemize}
 	\item L'ultima versione del JDK, il kit di sviluppo per la tradizionale programmazione Java, reperibile dal sito Oracle\footnote{http://www.oracle.com/technetwork/java/javase/downloads/index.html} .
@@ -200,11 +200,11 @@ L'applicazione è stata progettata e sviluppata per il mondo Android. I software 
 \end{itemize}
 
 In particolare si è deciso che il requisito minimo che deve possedere lo smartphone dell'utente che utilizza l'applicazione sia un livello di API(Application Programming Interface) 15, ovvero dal sistema operativo Android 4.0.3 \footnote{(ICE\_CREAM\_SANDWICH\_MR1)} in poi.
-\subsection{Perchè Android:}La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
+\subsection{Perchè Android}La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
 Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alle radici ben salde nel mondo open source. Il sistema operativo Android, infatti, è figlio di Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
 Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.\\
 Parlando di numeri, Android domina fra gli smartphone con una quota di mercato dell' 84,7\%. E' il dato principale che emerge dall' analisi della società di ricerca \textit{Idc} sul mercato dei cellulari. Il sistema operativo mobile di Google, a differenza di quello di Apple, è presente su decine di modelli di cellulari di marche diverse e domina il mercato lasciando alla \virgolette{Mela} l'11,7\% di share \cite{percentualeSmartphone}.
-\subsection{Perchè Android Studio:}
+\subsection{Perchè Android Studio}
 Dopo aver scelto per quale sistema operativo sviluppare, un'altra importante scelta è stata quella di identificare l'IDE più adatto alle nostre esigenze.
 Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclipse. Esso è sponsorizzato direttamente da Google e pensato appositamente per Android. Gli elementi di Android Studio che spiccano maggiormente sono:
 \begin{itemize}
@@ -250,7 +250,7 @@ Tuttavia, è importante notare che l'assenza di prove a sostegno della tesi non i
 \chapter{Car Racing Cardboard: l'applicazione}
 Questo capitolo contiene la descrizione del principio di tratatamento del gioco (\ref{principio}), la spiegazione degli obiettivi del gioco (\ref{il_gioco}), e una giuda all'utilizzo dell'applicazione (\ref{guida}).
 
-\section{Il principio del trattamento tramite il gioco:}\label{principio}
+\section{Il principio del trattamento tramite il gioco}\label{principio}
 L' applicazione sviluppata in questo progetto di tesi, punta a sfruttare le potenzialità del Google Cardboard per correggere il disturbo dovuto all'ambliopia. Fino ad ora, il trattamento standard consolidato per la cura della malattia è stato l'occlusione visiva.
 Questa tecnica può però presentare alcuni limiti: 
 \begin{itemize}
@@ -267,8 +267,8 @@ Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo 
 	\label{fig:child_cardboard}
 \end{figure}
 \newpage
-\section{Il gioco:}\label{il_gioco}
-\subsection{Obiettivo:}
+\section{Il gioco}\label{il_gioco}
+\subsection{Obiettivo}
 L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono nella nostra direzione sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
 
 \begin{figure}[ht]
@@ -278,7 +278,7 @@ L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è que
 	\label{fig:game}
 \end{figure}
 
-\subsection{Doppia Viewport:}
+\subsection{Doppia Viewport}
 Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizzando sullo smartphone dell'utente una doppia Viewport. Questo sdoppiamento, grazie alla tecnologia offerta dal Google Cardboard, permette all'utente una visione stereoscopica del gioco. Le due Viewport sono inoltre fondamentali per il principio di funzionamento della nostra applicazione. Infatti, grazie ad esse è possibile trattare in modo differente l'occhio sinistro dall'occhio destro, e più specificatamente l'occhio ambliope dall'occhio sano. Prima dell'inizio del gioco vero e proprio, l'applicazione da la possibilità di scegliere l'occhio pigro:
 
 \begin{figure}[ht]
@@ -291,7 +291,7 @@ Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizza
 In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare dello score e dei livelli raggiunti dall'utente. 
 
 \newpage
-\section{Guida all'utilizzo:}\label{guida}
+\section{Guida all'utilizzo}\label{guida}
 
 Dopo aver scaricato l'applicazione da Google Play Store \footnote{https://play.google.com/store/apps/details?id=it.unibg.p3d4amb.carracingcarboard\&hl=it}
 è possibile friure dei contenuti di Car Racing Cardboard.
@@ -377,9 +377,9 @@ La difficoltà aumenta dinamicamente, per rendere via via più stimolante il tratt
 %----------------------------------------------------------------------------------------
 \part{Implementazione}
 %----------------------------------------------------------------------------------------
-%	Software
+%	Panoramica su software e hardware
 %----------------------------------------------------------------------------------------
-\chapter{Il software}
+\chapter{Panoramica su software e hardware}
 \section{Architettura di sistema}
 Il sistema prevede le seguenti componenti:
 \begin{itemize}
@@ -419,7 +419,7 @@ Tutte le componenti lato client (Android), sono realizzate in java e xml, per in
 %\subsection{Definizioni dei requisiti:}
 %\subsection{Analisi del contesto:}
 %\subsection{Scenari e casi d' uso:}
-\subsection{Sign Up:}
+\subsection{Sign Up}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -461,7 +461,7 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 \end{figure}
 
 \newpage
-\subsection{Log In utente comune:}
+\subsection{Log In utente comune}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -495,7 +495,7 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 \end{figure}
 
 \newpage
-\subsection{Log In medico:}
+\subsection{Log In medico}
 \paragraph{Attori:} Medico
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet. E' necessario che il medico abbia sottomano i dati del paziente.
 \paragraph{Passi principali:}
@@ -526,7 +526,7 @@ Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene 
 \end{figure}
 \newpage
 
-\subsection{Update Info:}
+\subsection{Update Info}
 \paragraph{Attori:} Utente 
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -555,8 +555,10 @@ L'update delle credenziali selezionate viene eseguito correttamente.
 	\caption{Use Case Update Info}
 	\label{Use Case Update Info}
 \end{figure}
-
-\newpage
+%----------------------------------------------------------------------------------------
+%	Software design
+%----------------------------------------------------------------------------------------
+\chapter{Software design}
 \section{Package Diagram}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 

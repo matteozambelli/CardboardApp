@@ -620,18 +620,43 @@ L'applicazione Car Racing Cardboard sfrutta entrambe le forme di componenti graf
 \caption{Component diagram Database}
 \label{fig:componentDB}
 \end{figure}
+
+
+\subsection{Dettaglio applicazione} //TODO
+\newpage
+\section{Class diagram}\label{class}
+I class diagram sono stati semplificati per renderli leggibili in questo documento, sono stati tralasciati i campi e alcuni metodi.
+
 \begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{immagini/serverClasses}
-\caption{Class diagram Server}
-\label{fig:serverClasses}
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/Activity_ridotto}
+	\caption{Class diagram package Activity}
+	\label{class_diagram_activity}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/DB_ridotto}
+	\caption{Class diagram package DB}
+	\label{class_diagram_db}
 \end{figure}
 
 
 
-\subsection{Dettaglio applicazione}
-\newpage
-\section{Class diagram}\label{class}
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/Animation}
+	\caption{Class diagram package Animation}
+	\label{class_diagram_animation}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{immagini/serverClasses}
+	\caption{Class diagram Server}
+	\label{fig:serverClasses}
+\end{figure}
+
 \newpage
 \section{Sequence diagram}\label{sequence}
 \subsection{Funziononamento con log in}
@@ -725,7 +750,7 @@ L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua tra
 \section{Generazione random scena}\label{generazione_random_scena}
 \subsection{Nemici}
 Nella scena ci sono tre \virgolette{corsie} dalle quali possono arrivare i \virgolette{nemici}, questo è il codice dal quale viene estratat la corsia scelta.
-Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo nella stessa corsia senza muoversi viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.\\
+Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo nella stessa corsia senza muoversi viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.
 \begin{lstlisting}[language=Java]
 	public void randomFunction(){
 		selectedLane=(int)(lane*Math.random())+1;
@@ -733,18 +758,16 @@ Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evit
 			countPrevious++;
 			if(countPrevious>3){
 			   	selectedLane++;
-				if(selectedLane>3){
-						selectedLane=1;
-				}
+				if(selectedLane>3) selectedLane=1;
 			}
 		}
 		previousLane=selectedLane;
 		selectedCar=(int)(numberOfCar*Math.random())+1;	
 	}
 \end{lstlisting}
-\newpage
+
 \subsection{Panorama}
-Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l'ambientazione del gioco.\\
+Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l'ambientazione del gioco.
 
 \begin{lstlisting}[language=java]
 public void randomPanorama() {
@@ -758,7 +781,8 @@ public void randomPanorama() {
 \section{Cifratura password}\label{cifratura}
 
 Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.\\
-
+Solitamente tale algoritmo viene utilizzato per generare un' \virgolette{impronta digitale} di un documento, in questa applicazione è stato usato in questo modo poichè in java viene fornita una funzione di default, molto leggera, che appunto cifra in sha256.\\
+Nei confronti degli utenti di Car Racing Cardboard non era corretto memorizzare le password in chiaro, a seguire il codice implementato.\\ 
 \begin{lstlisting}[language=Java]
 	public static String calculateHash(String data) {
 		String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
@@ -816,7 +840,7 @@ $type = $_POST['type'];
 \end{lstlisting}
 
 In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di Sign Up, Log In, Report e così via, viene eseguito uno 'switch' per intraprendere diverse azioni in base alla procedura scelta.
-
+\newpage
 \subsection*{Log in}La chiamata post per il login avviene ogni volta che l'utente preme il bottone di login (Figura \ref{login_post}):
 \begin{figure}[ht]
 	\centering
@@ -972,8 +996,7 @@ Nella gestione della registrazione utente lato server vengono innanzitutto inizi
 	\caption{email di conferma registrazione}
 	\label{conferma_registrazione}
 \end{figure}
-
-
+\newpage
 \subsection*{Reset}
 Il reset della password avviene quando l'utente preme sul tasto \virgolette{forgot your password?}, viene richiesta l'email e il colore preferito, se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}), e verrà inviata la seguente email (Figura \ref{reset_password})
 
@@ -1021,9 +1044,9 @@ L' operazione di reset della password è gestita a livello server nel seguente mo
 \end{lstlisting}
 
 Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell' identità dell'utente. Sulla base dell' email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti allora l'operazione di ripristino della password viene eseguita con successo. L' utente riceverà quindi un email contenente la nuova password.
-
-\subsection*{Doctor call}//TODO parte lato client
-
+\newpage
+\subsection*{Doctor call}
+Nel caso in cui un utente, memorizzato come dottore nel nostro database, effettua il log in, viene reindirizzato ad un' apposita paginia; si tratta della DoctorActivity, nella quale il dottore può inserire i dati del paziente, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche \ref{guida}).\\
 L' utilizzo dell'applicazione da parte di un dottore prevede come detto il Log In tramite le credenziali del medico, l' inserimento dei dati del paziente e l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
 La gestione lato server dell' avvio di una partita da parte di un dottore, dopo avere inserito i dati del paziente, è stata realizzata nel seguente modo: 
 \\
@@ -1078,13 +1101,23 @@ case "doctorcall":
 \end{lstlisting}
 
 Prima di avviare una partita viene controllato se il paziente è già presente nel database, in tal caso verrà restituito come valore 'id\_user' il valore pescato dal database. In caso si tratti di un nuovo paziente, si procede all'inserimento dei nuovi dati nel database e viene creato un nuovo 'id\_user'.
-
+\newpage
 \subsection*{Report}
 
-La fase di report nell' applicazione è differenziata per due diverse casistiche, ovvero l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso si usufruisca dell' applicativo come utente non registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso invece si sfrutti la possibilità di registrarsi, si ottiene il privilegio di salvataggio e monitoraggio automatico dei risultati raggiunti.
+La fase di report nell' applicazione è differenziata per due diverse casistiche, ovvero l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso si usufruisca dell' applicativo come utente non registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso invece si sfrutti la possibilità di registrarsi, si ottiene il privilegio di salvataggio e monitoraggio automatico dei risultati raggiunti (Figura \ref{Gameover}).
 
-//TODO qui metterei lo screen di fine gioco, adesso non riesco perchè il server è down e la foto della mail di riepilogo
-//TODO lato client
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{immagini/gameover.png}
+	\caption{Schermata finale del gioco}
+	\label{Gameover}
+\end{figure}
+
+A livello di codice, nel thread del gioco (vedi anche sezione \ref{game_thread}), viene lanciata una chiamata post, passando come parametri il punteggio ottenuto, il livello raggiunto e i dati dell' utente:
+\begin{lstlisting}[language=java]
+	 PostCall postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2,true);
+	 postCall.myPostCall(TypeCall.REPORT,activity);
+\end{lstlisting}
 
 Vediamo ora nel dettaglio la gestione della fase di report lato server per quanto riguarda gli utenti registrati, siano essi pazienti di dottori o meno:
 \\

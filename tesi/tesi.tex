@@ -460,7 +460,7 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=160mm]{immagini/ucSignUp}
+	\includegraphics[width=160mm]{immagini/usecaseSignUpPNG}
 	\caption{Use Case Sign Up}
 	\label{Use Case Sign Up}
 \end{figure}
@@ -494,7 +494,7 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 \newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=160mm]{immagini/ucLogInUtente}
+	\includegraphics[width=160mm]{immagini/usecaseLogInUtenteComunePNG}
 	\caption{Use Case Log In utente comune}
 	\label{Use Case Log In utente comune}
 \end{figure}
@@ -525,7 +525,7 @@ Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene 
 \newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=160mm]{immagini/ucLogInMedico}
+	\includegraphics[width=160mm]{immagini/usecaseLogInMedicoPNG}
 	\caption{Use Case Log In medico}
 	\label{Use Case Log In medico}
 \end{figure}
@@ -556,7 +556,7 @@ L'update delle credenziali selezionate viene eseguito correttamente.
 \newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=160mm]{immagini/ucUpdateInfo}
+	\includegraphics[width=160mm]{immagini/usecaseUpdateYourInfoPNG}
 	\caption{Use Case Update Info}
 	\label{Use Case Update Info}
 \end{figure}
@@ -605,23 +605,6 @@ Le interfacce grafiche in Android possono essere definite in due modi (entrambe 
 	\caption{Component diagram applicazione Android}
 	\label{component andoid}
 \end{figure}
-//BISOGNA SCRIVERE DUE RIGHE SUL SERVER, NON IMMAGINE E BASTA!
-%\subsection{Il server}
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=0.7\linewidth]{immagini/componentServer}
-%\caption{Component diagram Server}
-%\label{fig:componentServer}
-%\end{figure}
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=0.7\linewidth]{immagini/componentDB}
-%\caption{Component diagram Database}
-%\label{fig:componentDB}
-%\end{figure}
-
 
 \subsection{Dettaglio applicazione} 
 L'applicazione per quanto riguarda la componente algoritmica (intesa come la parte che non  riguarda la GUI), è composta dalle Activity, ossia le varie schermate di un'applicazione Android, le quali si occupano di \virgolette{tradurre} gli input dell'utente in output implementati tramite codice java.\\
@@ -632,6 +615,26 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \includegraphics[width=0.7\linewidth]{immagini/component_applicazione}
 \caption{Component applicazione}
 \label{component_applicazione}
+\end{figure}
+
+\subsection{Il server}
+//TODO: Descrizione server
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=100mm]{immagini/componentServerPNG}
+	\caption{Component diagram Server}
+	\label{component server}
+\end{figure}
+
+\subsection{Database} 
+//TODO: Descrizione DB
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{immagini/componentDatabasePNG}
+	\caption{Component database}
+	\label{component db}
 \end{figure}
 
 \newpage

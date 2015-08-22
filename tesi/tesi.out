@@ -37,26 +37,28 @@
 \BOOKMARK [2][-]{subsection.6.2.1}{Il sistema di Car Racing Cardboard}{section.6.2}% 37
 \BOOKMARK [2][-]{subsection.6.2.2}{L'applicazione Android}{section.6.2}% 38
 \BOOKMARK [2][-]{subsection.6.2.3}{Dettaglio applicazione}{section.6.2}% 39
-\BOOKMARK [1][-]{section.6.3}{Sequence diagram}{chapter.6}% 40
-\BOOKMARK [2][-]{subsection.6.3.1}{Funziononamento con log in}{section.6.3}% 41
-\BOOKMARK [2][-]{subsection.6.3.2}{Funziononamento senza log in}{section.6.3}% 42
-\BOOKMARK [2][-]{subsection.6.3.3}{Funziononamento sign up}{section.6.3}% 43
-\BOOKMARK [0][-]{chapter.7}{Analisi degli Algoritmi}{part.3}% 44
-\BOOKMARK [1][-]{section.7.1}{Penalizzazione progressiva delle immagini}{chapter.7}% 45
-\BOOKMARK [1][-]{section.7.2}{Generazione random scena}{chapter.7}% 46
-\BOOKMARK [2][-]{subsection.7.2.1}{Nemici}{section.7.2}% 47
-\BOOKMARK [2][-]{subsection.7.2.2}{Panorama}{section.7.2}% 48
-\BOOKMARK [1][-]{section.7.3}{Cifratura password}{chapter.7}% 49
-\BOOKMARK [1][-]{section.7.4}{Servizio web}{chapter.7}% 50
-\BOOKMARK [1][-]{section.7.5}{Gestione dello scontro con il nemico}{chapter.7}% 51
-\BOOKMARK [1][-]{section.7.6}{Game Thread}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.7}{Gestione animazioni}{chapter.7}% 53
-\BOOKMARK [1][-]{section.7.8}{Asynctask}{chapter.7}% 54
-\BOOKMARK [0][-]{chapter.8}{Tool utilizzati}{part.3}% 55
-\BOOKMARK [1][-]{section.8.1}{GitHub}{chapter.8}% 56
-\BOOKMARK [1][-]{section.8.2}{Crashlitics}{chapter.8}% 57
-\BOOKMARK [-1][-]{part.4}{IV Valutazioni finali}{}% 58
-\BOOKMARK [0][-]{chapter.9}{Social media}{part.4}% 59
-\BOOKMARK [0][-]{chapter.10}{Conclusioni}{part.4}% 60
-\BOOKMARK [1][-]{section.10.1}{Paper}{chapter.10}% 61
-\BOOKMARK [1][-]{section.10.2}{Sviluppi futuri}{chapter.10}% 62
+\BOOKMARK [2][-]{subsection.6.2.4}{Il server}{section.6.2}% 40
+\BOOKMARK [2][-]{subsection.6.2.5}{Database}{section.6.2}% 41
+\BOOKMARK [1][-]{section.6.3}{Sequence diagram}{chapter.6}% 42
+\BOOKMARK [2][-]{subsection.6.3.1}{Funziononamento con log in}{section.6.3}% 43
+\BOOKMARK [2][-]{subsection.6.3.2}{Funziononamento senza log in}{section.6.3}% 44
+\BOOKMARK [2][-]{subsection.6.3.3}{Funziononamento sign up}{section.6.3}% 45
+\BOOKMARK [0][-]{chapter.7}{Analisi degli Algoritmi}{part.3}% 46
+\BOOKMARK [1][-]{section.7.1}{Penalizzazione progressiva delle immagini}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.2}{Generazione random scena}{chapter.7}% 48
+\BOOKMARK [2][-]{subsection.7.2.1}{Nemici}{section.7.2}% 49
+\BOOKMARK [2][-]{subsection.7.2.2}{Panorama}{section.7.2}% 50
+\BOOKMARK [1][-]{section.7.3}{Cifratura password}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.4}{Servizio web}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.5}{Gestione dello scontro con il nemico}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.6}{Game Thread}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.7}{Gestione animazioni}{chapter.7}% 55
+\BOOKMARK [1][-]{section.7.8}{Asynctask}{chapter.7}% 56
+\BOOKMARK [0][-]{chapter.8}{Tool utilizzati}{part.3}% 57
+\BOOKMARK [1][-]{section.8.1}{GitHub}{chapter.8}% 58
+\BOOKMARK [1][-]{section.8.2}{Crashlitics}{chapter.8}% 59
+\BOOKMARK [-1][-]{part.4}{IV Valutazioni finali}{}% 60
+\BOOKMARK [0][-]{chapter.9}{Social media}{part.4}% 61
+\BOOKMARK [0][-]{chapter.10}{Conclusioni}{part.4}% 62
+\BOOKMARK [1][-]{section.10.1}{Paper}{chapter.10}% 63
+\BOOKMARK [1][-]{section.10.2}{Sviluppi futuri}{chapter.10}% 64

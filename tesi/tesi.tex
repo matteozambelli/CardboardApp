@@ -140,7 +140,8 @@ Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è
 L'obiettivo di fonndo era quello di un \textbf{upgrade} della tesi triennale, dove era stato fatto un restyling di un videogioco desktop, chiamato Space Invaders \footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
 Nel 2013 provare il tipo di trattamento proposta da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
 Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online), praticamente tutti possiedono uno smartphone,
-quindi la terapia \virgolette{mnobile} proposta da 3D4Amb è in grado di raccogliere un bacino d'utenza molto più ampio.
+quindi la terapia \virgolette{mnobile} proposta da 3D4Amb è in grado di raccogliere un bacino d'utenza molto più ampio.\\
+Il fulcro di questa tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata sia a livello logico che a livello di implementazione.
 %----------------------------------------------------------------------------------------
 %	l'ambliopia
 %----------------------------------------------------------------------------------------
@@ -564,13 +565,13 @@ L'update delle credenziali selezionate viene eseguito correttamente.
 %----------------------------------------------------------------------------------------
 \chapter{Software design}
 
-In questo capitolo vengono riportari i classici diagrammi UML, i quali permettono tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software, in sequenza di trovano package diagram (\ref{package}), component diagram (\ref{component}), class diagram (\ref{class}) e sequence diagram (\ref{sequence}).
+In questo capitolo vengono riportari i classici diagrammi UML, i quali permettono tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software, in sequenza di trovano package diagram (\ref{package}), component diagram (\ref{component}) e sequence diagram (\ref{sequence}), i class diagram non sono stati riportati pochè data la mole di codice, sarebbero risultati illeggibili.
 \section{Package Diagram}\label{package}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=\columnwidth]{immagini/package_diagram}
+	\includegraphics[width=130mm]{immagini/package_diagram}
 	\caption{Package diagram}
 	\label{package_diagram}
 \end{figure}
@@ -592,69 +593,45 @@ Il server può rimandare l'informazione stessa come parte della risposta \cite{ht
 \subsection{L'applicazione Android}
 Entranto nel dettaglio della prima componete, l'applicazione Android, offre il servizio di interfaccia grafica touch, mentre riceve dal server il servizio di scambio dati http.
 I componenti grafici di Android si dividono in due categorie: View e ViewGroup. Una View è un qualunque componente utilizzabile (TextView, EditView, CheckBox, Button, ImageView, ?) in una interfaccia. Una ViewGroup è solitamente un layout che contiene un insieme di View, i più usati sono LinearLayout, RelativeLayout e TableLayout. Un ViewGroup è a sua volta una View, per questo possono essere creati layout complessi annidando a più livelli i vari componenti. View e ViewGroup sono un esempio di pattern composite.
-Le interfacce grafiche in Android possono essere definite in due modi:\\
+Le interfacce grafiche in Android possono essere definite in due modi (entrambe sfruttate in Car Racing Cardboard):
 \begin{itemize}
-	
 \item definendo un file xml: ad ogni View corrisponde un tag xml, i ViewGroup sono tag xml che contengono all' interno altri tag;
 \item scrivendo codice Java: ogni View ha una classe associata, è possibile aggiungere una View a un ViewGroup usando il metodo addView.
 \end{itemize}
-L'applicazione Car Racing Cardboard sfrutta entrambe le forme di componenti grafiche.\\
-\begin{figure}[ht]
+
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=100mm]{immagini/component_android}
 	\caption{Component diagram applicazione Android}
 	\label{component andoid}
 \end{figure}
-\subsection{Il server}
+//BISOGNA SCRIVERE DUE RIGHE SUL SERVER, NON IMMAGINE E BASTA!
+%\subsection{Il server}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.7\linewidth]{immagini/componentServer}
+%\caption{Component diagram Server}
+%\label{fig:componentServer}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.7\linewidth]{immagini/componentDB}
+%\caption{Component diagram Database}
+%\label{fig:componentDB}
+%\end{figure}
+
+
+\subsection{Dettaglio applicazione} 
+L'applicazione per quanto riguarda la componente algoritmica (intesa come la parte che non  riguarda la GUI), è composta dalle Activity, ossia le varie schermate di un'applicazione Android, le quali si occupano di \virgolette{tradurre} gli input dell'utente in output implementati tramite codice java.\\
+Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del gioco nella sua ripetizione ciclica, infine gli asynctask, utilizzati per alleggerire l'esecuzione dei thread sulla User Interface (Figura \ref{component_applicazione}).
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{immagini/componentServer}
-\caption{Component diagram Server}
-\label{fig:componentServer}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{immagini/componentDB}
-\caption{Component diagram Database}
-\label{fig:componentDB}
-\end{figure}
-
-
-\subsection{Dettaglio applicazione} //TODO
-\newpage
-\section{Class diagram}\label{class}
-I class diagram sono stati semplificati per renderli leggibili in questo documento, sono stati tralasciati i campi e alcuni metodi.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\columnwidth]{immagini/Activity_ridotto}
-	\caption{Class diagram package Activity}
-	\label{class_diagram_activity}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\columnwidth]{immagini/DB_ridotto}
-	\caption{Class diagram package DB}
-	\label{class_diagram_db}
-\end{figure}
-
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\columnwidth]{immagini/Animation}
-	\caption{Class diagram package Animation}
-	\label{class_diagram_animation}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{immagini/serverClasses}
-	\caption{Class diagram Server}
-	\label{fig:serverClasses}
+\includegraphics[width=0.7\linewidth]{immagini/component_applicazione}
+\caption{Component applicazione}
+\label{component_applicazione}
 \end{figure}
 
 \newpage

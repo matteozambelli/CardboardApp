@@ -86,9 +86,10 @@
 \contentsline {section}{\numberline {8.1}GitHub}{95}{section.8.1}
 \contentsline {section}{\numberline {8.2}Crashlitics}{97}{section.8.2}
 \contentsline {part}{IV\hspace {1em}Valutazioni finali}{101}{part.4}
-\contentsline {chapter}{\numberline {9}Social media}{107}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{108}{section*.76}
-\contentsline {chapter}{\numberline {10}Conclusioni}{109}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{109}{section*.78}
-\contentsline {section}{\numberline {10.1}Paper}{110}{section.10.1}
-\contentsline {section}{\numberline {10.2}Sviluppi futuri}{111}{section.10.2}
+\contentsline {chapter}{\numberline {9}Social media}{103}{chapter.9}
+\contentsline {paragraph}{Risultati promozione}{104}{section*.76}
+\contentsline {chapter}{\numberline {10}Conclusioni}{105}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{106}{section*.78}
+\contentsline {section}{\numberline {10.1}Paper}{107}{section.10.1}
+\contentsline {paragraph}{Di seguito riportato il contenuto del nostro elaborato, redatto in collaborazione con il Professor Angelo Gargantini e l' Ing. Silvia Bonfanti:}{107}{section*.80}
+\contentsline {section}{\numberline {10.2}Sviluppi futuri}{112}{section.10.2}

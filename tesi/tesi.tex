@@ -38,7 +38,7 @@
 \lstdefinestyle{stiliComuni}{
 	frame=single, % adds a frame around the code
 	basicstyle={\normalsize\ttfamily},
-	backgroundcolor=\color{black!5!white}, % choose the background color;
+	backgroundcolor=\color{white}, % choose the background color;
 	showstringspaces=false, % underline spaces within strings only
 	showspaces=false, % show spaces everywhere adding particular underscores		
 	keepspaces=true, % keeps spaces in text 
@@ -66,7 +66,7 @@
 	stringstyle=\color{YellowOrange},
 	commentstyle=\color{OliveGreen},
 	keywordstyle=\color{RubineRed},
-	identifierstyle=\color{MidnightBlue},
+	identifierstyle=\color{Black},
 	style=numeri,
 	style=stiliComuni
 }
@@ -1489,7 +1489,7 @@ Si sono verificati in totale 21 crash, molti dei quali(7) dovuti all'assenza di 
 %	social media
 %----------------------------------------------------------------------------------------
 
-\includepdf[pages={1,2,3,4}]{rehab2015_racecardboard.pdf} 
+
 \chapter{Social media}\label{social_media}
 \begin{figure}[ht]
 	\centering
@@ -1516,10 +1516,14 @@ Il sito contiene informazioni sulla strumentazione necessaria per l'utilizzo del
 \chapter{Conclusioni}
 
 Lo scopo di questa applicazione è il trattamento dell'ambliopia, non è necessario avere a disposizione device costoso, al giorno d'oggi tutte le persone hanno uno smartphone e Goggole Cardboard è molto economico. Usando l'applicazione Car Racing Cardboard, le persone che soffrono di ambliopia possono migliorare il loro occhio pigro.\\
-La tipologia di trattamento proposta da 3D4Amb, cerca di evitare i rischi della terapia occlusiva, ma può anche essere usata in parallelo con la terapia occlusiva\cite{rehab2015}. 
+La tipologia di trattamento proposta da 3D4Amb, cerca di evitare i rischi della terapia occlusiva, ma può anche essere usata in parallelo con la terapia occlusiva\cite{rehab2015}.\\
+Alla base di questo progetto (Car Racing Cardboard), si trovava l'idea di dare continuità al nostro lavoro di tesi triennale \virgolette{Progetto e sviluppo di un videogioco basato sulla penalizzazione per il trattamento dell'ambliopia}, nel quale gli aspetti fondamentali del lavoro era una penalizzazione dinamica delle informazioni visive fornite al giocatore per rendere il trattamento dell?ambliopia equilibrato con le capacità del giocatore, infatti più l'utente si dimostra capace più viene penalizzato.\\
+Quest' idea di avere una penalizzazione proporzionata alle abilità del giocatore è stata applicata non solo alla quantità di informazioni fornite agli occhi, ma anche alla difficoltà vera e propria del gioco. Infatti, ad ogni ondata di nemici evitati, che equivale ad aver superato un livello, la velocità dei  nemici aumenta, in questo modo il gioco viene reso più dinamico, non resta identico fino al gameover, ed inoltre, in base alle prestazioni dell' utente, la difficoltà di gioco aumenta\cite{tesiTZ}.
+
+ 
 \paragraph{Certificazione contenuti:}
 L'applicazione ha ricevuto delle certificazioni da Google Play Store:
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/certifications.png}
 	\caption{Classificazione contenuti}
@@ -1535,25 +1539,19 @@ L'applicazione ha ricevuto delle certificazioni da Google Play Store:
 		\item IARC Generic -- Rest of the world
 		\item Google Play --South Korea	
 \end{itemize}
-
-
-
+Questa certificazioni sul Google PLay Store, insieme al numero di download, contribuiscono a dare credibilità alla nostra applicazione.
+\newpage
 \section{Paper}
-Riguardo l'applicazione Car Racing Cardboard è stato steso un paper dal titolo: \textit{A low-cost virtual reality game for amblyopia rehabilitation}\\
-//TODO descrizione paper?\\
-Il paper è stato sottoposto alla commissione della conferenza rehab 2015\footnote{http://www.rehab-workshop.org/}, ed è stato accettato:
+Riguardo l'applicazione Car Racing Cardboard è stato realizzato un paper dal titolo: \textit{A low-cost virtual reality game for amblyopia rehabilitation},ed è stato sottoposto alla commissione della conferenza rehab 2015 \footnote{http://www.rehab-workshop.org/}, ed è stato accettato:
 \begin{lstlisting}
 Dear Angelo Gargantini, 
 
 We have received the reviewers' reports on your paper 25 entitled 
-A Low-cost Virtual Reality Game for Amblyopia Rehabilitation and I am glad to inform you that your paper has been classified as 
-?Accepted?. 
-
+A Low-cost Virtual Reality Game for Amblyopia Rehabilitation and I am glad to inform you that your paper has been classified as Accepted. 
 For your guidance, reviewers' comments are appended below. I hope these comments 
 can help you to improve the contribution. 
 
 Please note that the deadline for the camera ready is the next September 13th, 2015
-
 the process to register will be available next week in the workshop web page 
 [http://www.rehab-workshop.org]
 
@@ -1562,11 +1560,16 @@ Thank you for your interest in the REHAB 2015 workshop.
 Yours sincerely, 
 REHAB 2015 co-chairs
 \end{lstlisting}
+\paragraph{Di seguito riportato il contenuto del nostro elaborato, redatto in collaborazione con il Professor Angelo Gargantini e l' Ing. Silvia Bonfanti:}
+\includepdf[pages={1,2,3,4}]{rehab2015_racecardboard.pdf} 
 \section{Sviluppi futuri}
+Questo progetto non è fine a se stesso, ci sono vari spunti per sviluppi futuri, di seguito eccone alcuni:
 \begin{itemize}
 	\item un famiglia di videogiochi mobile per il trattamento dell'ambliopia.
-	Per come è stata pensata l'applicazione sarà sufficiente cambiare le immagini montate sugli \virgolette{scheletri} che gestiscono la parte grafica del gioco, per quanto riguarda la getione utenti e dati, le modifiche richieste saranno veramente minime
-	\item una collaborazione attiva con i centri di ipovisione per raccogliere una maggior quantità di dati per migliorare l'efficacia dell'applicazione
+	Per come è stata pensata l'applicazione sarà sufficiente cambiare le immagini montate sugli \virgolette{scheletri} che gestiscono la parte grafica del gioco, per quanto riguarda la getione utenti e dati, le modifiche richieste saranno veramente minime.\\
+	In questo modo, sarà possibile rendere ancora più accattivante la ribilitazione, fornendo un ventaglio di soluzioni differenti, per catturare i gusti di tutti i bambini
+	\item una collaborazione attiva con i centri di ipovisione per raccogliere una maggior quantità di dati per migliorare l'efficacia dell'applicazione.\\
+	Grazie ad una collaborazione di questo tipo, sarebbe molto più facile per gli sviluppatori correggere eventuali errori, sia di implementazione, ma anche di logica, ad esempio una penalizzazione troppo repentina o troppo poco.
 	\item attuare i feedback provenienti dalla conferenza REHAB 2015, dove verrà presentata questa applicazione
 \end{itemize}
 %bibliografia

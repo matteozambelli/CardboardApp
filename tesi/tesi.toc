@@ -63,11 +63,11 @@
 \contentsline {subsection}{\numberline {6.2.2}L'applicazione Android}{50}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Dettaglio applicazione}{51}{subsection.6.2.3}
 \contentsline {subsection}{\numberline {6.2.4}Il server}{52}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Database}{52}{subsection.6.2.5}
-\contentsline {section}{\numberline {6.3}Sequence diagram}{53}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Funziononamento con log in}{53}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Funziononamento senza log in}{54}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{54}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.2.5}Database}{53}{subsection.6.2.5}
+\contentsline {section}{\numberline {6.3}Sequence diagram}{54}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Funziononamento con log in}{54}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Funziononamento senza log in}{56}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{56}{subsection.6.3.3}
 \contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{57}{chapter.7}
 \contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{57}{section.7.1}
 \contentsline {section}{\numberline {7.2}Generazione random scena}{59}{section.7.2}

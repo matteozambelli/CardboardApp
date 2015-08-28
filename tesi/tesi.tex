@@ -84,7 +84,7 @@
 \fancyfoot[LE,RO]{\thepage}
 \fancypagestyle{plain}{\fancyfoot[RO,LE]{\thepage}}
 
-
+\setlength\parindent{0pt}
 
 \author{Fabio Terzi and Matteo Zambelli}
 \title{A Low Cost virtual reality game for amblyopia}
@@ -92,6 +92,7 @@
 
 \renewcommand{\baselinestretch}{1.5} 
 \newcommand{\virgolette}[1]{``#1''}
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -137,11 +138,11 @@ Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg
 Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
 
 \section{Obiettivo}\label{obiettivo}
-L'obiettivo di fonndo era quello di un \textbf{upgrade} della tesi triennale, dove era stato fatto un restyling di un videogioco desktop, chiamato Space Invaders \footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
+L'obiettivo di fondo era quello di un \textbf{upgrade} della tesi di laurea di primo livello, dove era stato fatto un restyling di un videogioco desktop, chiamato Space Invaders\footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
 Nel 2013 provare il tipo di trattamento proposta da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
 Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online), praticamente tutti possiedono uno smartphone,
 quindi la terapia \virgolette{mnobile} proposta da 3D4Amb è in grado di raccogliere un bacino d'utenza molto più ampio.\\
-Il fulcro di questa tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata sia a livello logico che a livello di implementazione.
+Il fulcro di questa tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
 %----------------------------------------------------------------------------------------
 %	l'ambliopia
 %----------------------------------------------------------------------------------------
@@ -259,7 +260,7 @@ Questa tecnica può però presentare alcuni limiti:
 	\item in primo luogo la compliance (adesione del paziente alla terapia) è un fattore limitante da non trascurare, soprattutto quando la profondità dell'ambliopia richiede tempi lunghi di trattamento;
 	\item Inoltre, l'occlusione è gravata dalla tendenza alla perdita di efficacia nel breve periodo. Infatti fino al 50\% dei benefici ottenuti vengono persi, se i risultati funzionali non sono stati resi stabili, prolungando il trattamento per un tempo sufficientemente lungo, dopo che si è registrato il miglioramento del visus.
 \end{itemize}
-
+\noindent
 Probabilmente la tendenza alla perdita di effetto è dovuta, almeno in parte, al fatto che l'occlusione non affronta un altro importante aspetto della terapia dell'ambliopia, cioè la stimolazione diretta dell'occhio con il deficit visivo. Sulla base di questo, si è quindi pensato di realizzare un gioco interattivo che punti alla cura dell'occhio ampliope in modo più coinvolgente.
 Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo Android ed all'intrattenimento volontario ed intrinsecamente motivato dato dal gioco, è stato possibile creare un metodo di cura innovativo.
 \begin{figure}[!ht]
@@ -289,7 +290,7 @@ Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizza
 	\caption{scelta dell'occhio pigro}
 	\label{fig:chooselazyeye_left}
 \end{figure}
-
+\noindent
 In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare dello score e dei livelli raggiunti dall'utente. 
 
 \newpage
@@ -308,7 +309,7 @@ La schermata di avvio è la seguente (Figura \ref*{login_activity}):
 \end{figure}
 
 Da questa schermata è possibile effettuare il log in, se l'utente è gia registrato, in caso contrario è possibile registrarsi premendo sul bottone \virgolette{SIGN UP}.
-Prima della schermata di registrazione il sistema mostra un messaggio per ricordare all'utente (qualora esso non sia il pazeinte, ad esempio un genitore) di inserire i dati del paziente, poichè non avrebbe senso raccogliere informazioni forvianti (Figura \ref{warning_signup})
+Prima della schermata di registrazione il sistema mostra un messaggio per ricordare all'utente (qualora esso non sia il paziente, ad esempio un genitore) di inserire i dati del paziente, poichè non avrebbe senso raccogliere informazioni forvianti (Figura \ref{warning_signup})
 
 \begin{figure}[ht]
 	\centering
@@ -327,7 +328,7 @@ Cliccando su \virgolette{CONTINUE} si entra nella vera schermata di registrazion
 \end{figure}
 
 Qui bisogna inserire: Nome, Cognome, email, data di nascita, colore preferito e password. Il colore viene utilizzato in caso di password dimenticata, come domanda di sicurezza.
-Nell'eventualità in cui un utente si dimentichi la sua password, dalla schermata iniziale (Figura \ref*{login_activity}) premendo su \virgolette{forgot your password?} si accede al pop up di ripristino (Figura \ref{resetpassword}).
+Nell'eventualità nella quale un utente dimentichi la sua password, dalla schermata iniziale (Figura \ref*{login_activity}) premendo su \virgolette{forgot your password?} si accede al pop up di ripristino (Figura \ref{resetpassword}).
  
 \begin{figure}[ht]
 	\centering
@@ -337,8 +338,8 @@ Nell'eventualità in cui un utente si dimentichi la sua password, dalla schermata
 \end{figure}
 
 Inserendo l'indirizzo email valido ed il colore corretto, il sistema invia una mail con la nuova password, che sarà possibile ri-personalizzare premendo su \virgolette{update your info} (Figura \ref{login_activity}).
-Sempre dalla schermata iniziale è possibile, premendo su \virgolette{?} aprire il sito dedicato a Car Racing Cardboard\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}(Vedia anche \ref{social_media}).
-Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questo possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(Figura \ref{cwu}).
+Sempre dalla schermata iniziale è possibile, premendo su \virgolette{?} aprire il sito dedicato a Car Racing Cardboard\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}(vedi anche sezione \ref{social_media}).
+Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questa possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(Figura \ref{cwu}).
 
 \begin{figure}[ht]
 	\centering
@@ -347,7 +348,7 @@ Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo 
 	\label{cwu}
 \end{figure}
 \newpage
-Non sarebbe efficiente, ad esempio, per un dottore che ha tre pazienti, dover registrare tre account diversi, in questo caso, è stata prevista la possibilità per i dottori di gestire più pazienti con un unico account, infatti, il sistema è in grado di riconoscere un dottore registrato e lo reindirizza ad una pagina apposita (Figura \ref{doctor_activity}).
+Il motivo per il quale è stata fatta questa distinzione è il seguente: non sarebbe efficiente, ad esempio, per un dottore che ha tre pazienti, dover registrare tre account diversi, in questo caso, è stata prevista la possibilità per i dottori di gestire più pazienti con un unico account, infatti, il sistema è in grado di riconoscere un dottore registrato e lo reindirizza ad una pagina apposita (Figura \ref{doctor_activity}).
 
 \begin{figure}[!ht]
 	\centering
@@ -358,15 +359,17 @@ Non sarebbe efficiente, ad esempio, per un dottore che ha tre pazienti, dover re
 In questo caso il dottore inserisce i dati del paziente (nome, cognome e data di nascita), il sistema in autonomia verifica se si tratta di un primo inserimento oppure di un \virgolette{log in}. Nel caso di un primo inserimento viene aggiunto un record alla tabella dei pazienti, questo record è collegato a quello del dottore, per consentire poi un eventuale estrazione dei dati di tutti i pazienti di quel dottore.
 
 \paragraph{Giocare senza registrarsi:}
-un utente può anche accedere al gioco senza registrarsi sul nostro sistema, cliccando su \virgolette{PLAY WITHOUT REGISTRATION}, in questo caso però non godrà degli stessi servizi di un utente loggato, questa possibilità è stata pensata per chi volesse provare l'applicazione senza per forza dover fornire i propri dati.
+un utente può anche accedere al gioco senza registrarsi sul nostro sistema, cliccando su \virgolette{PLAY WITHOUT REGISTRATION}, in questo caso però non godrà degli stessi servizi di un utente registrato, questa possibilità è stata pensata per chi volesse provare l'applicazione senza per forza dover fornire i propri dati.
 
 
-\paragraph{Avvio del gioco:}dopo aver effettuato il log in o aver avviato l'applicazione con l'opzione senza registrazione, nel caso di un primo avvio viene visualizzato un \virgolette{video-tutorial} per l'utilizzo del gioco, nel quale vengono descritti i comandi del gioco, è possibile saltare questo video spuntando la checkbox in basso \virgolette{don't show me again}.\\
-A questo punto bisogna inserire lo smarthphone nel visore 3D, ed nserire nel sistema a quale occhio si desidera somministrare il trattamento (Figura \ref{fig:chooselazyeye_left}), e premere conferma.\\
-Ora inizia il gioco vero e proprio, l'utente può muovere la sua auto a sinistra premendo il tasto \virgolette{+} del controller e a destra premendo il tasto \virgolette{-} (Figura \ref{fig:game}).\\
-La difficoltà aumenta dinamicamente, per rendere via via più stimolante il trattamento. Per ogni sessione di gioco un utente ha tre vite, dopo di che, una volta arrivati al \virgolette{game over}, l'applicazione chiede se si desidera ricevere via mail lo storico con i risultati (Figura \ref{schermata_finale}).
+\paragraph{Avvio del gioco:}dopo aver effettuato il log in o aver avviato l'applicazione con l'opzione senza registrazione, nel caso di un primo avvio viene visualizzato un video-tutorial per l'utilizzo del gioco, nel quale vengono descritti i comandi per utilizzare lo stesso, è possibile saltare questo video spuntando la checkbox in basso \virgolette{don't show me again}.\\
+A questo punto bisogna inserire lo smarthphone nel visore 3D, ed inserire nel sistema l'occhio al quale si desidera somministrare il trattamento (Figura \ref{fig:chooselazyeye_left}), e premere conferma.\\
+Il gioco vero e proprio ha inizio ora, l'utente può muovere la sua auto a sinistra premendo il tasto \virgolette{+} del controller e a destra premendo il tasto \virgolette{-} (Figura \ref{fig:game}).\\
+La difficoltà aumenta dinamicamente, per rendere via via più stimolante il trattamento. Per ogni sessione di gioco un utente ha tre vite, dopo di che, una volta arrivati al \virgolette{game over}, l'applicazione chiede se si desidera ricevere via mail lo storico con i risultati (Figura \ref{schermata_finale}).\\
+Come accennato in precedenza, tale funzionalità, è accessibile solo dagli utenti registrati, un utente non registratio visualizzarà, una volta terminata la sua partita, la stessa schermata in Figura \ref{schermata_finale}, con solamente l'opzione di riavvio del gioco.
 
-\begin{figure}[ht]
+
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/gameover}
 	\caption{Schermata finale}
@@ -382,7 +385,7 @@ La difficoltà aumenta dinamicamente, per rendere via via più stimolante il tratt
 %	Panoramica su software e hardware
 %----------------------------------------------------------------------------------------
 \chapter{Panoramica su software e hardware}
-In questo capitolo troviamo l'architettura di sistema con relativo diagramma (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
+In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed una breve descrizione sulle scelte dell' hardware (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
 
 \section{Architettura di sistema}\label{architettura_di_sistema}
 Il sistema prevede le seguenti componenti:
@@ -390,10 +393,10 @@ Il sistema prevede le seguenti componenti:
 	\item Google Cardboard (vedi sezione \ref{sectionGC})
 	\item Smartphone Android con connessione internet attiva
 	\item Auricolari con tasti di controllo del volume
-	\item Server con database MySql
+	\item Server Linux con database MySql
 \end{itemize}
-Lo smartphone (con S.O. Android) va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso,
-al dispositivo vanno collegati degli auricolari con il controllo del volume (come quelli che si trovano nelle confezioni dei telefoni all'acquisto), saranno necessari  per controllare il movimento della macchinina.
+Lo smartphone (con S.O. Android) va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso.\\
+Al dispositivo vanno collegati degli auricolari con il controllo del volume (come quelli che si trovano nelle confezioni dei telefoni all'acquisto), saranno necessari  per controllare il movimento della macchinina.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=160mm]{immagini/architettura_di_sistema}
@@ -403,14 +406,14 @@ al dispositivo vanno collegati degli auricolari con il controllo del volume (com
 
 
 \paragraph{La scelta degli auricolari come controller}è nata dopo aver notato come l'utilizzo dell'accelerometro (sensore presente su ogni smartphone) come strumento per catturare i comandi dell'utente, causasse un senso di nausea dopo pochi minuti di gioco, si è quindi deciso di utilizzare un controllore esterno.\\
-
 Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma piuttosto sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
 
-\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it è una macchina Linux e utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
+\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it, è una macchina Linux ed utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
+
 \newpage
 \section{Vista di implementazione software}\label{vista_di_implementazione_software}
 Questo grafico mostra dove sono installate le varie componenti software, in che linguaggio sono scritte e come interagiscono tra di loro (Figura \ref{vista_implementazione_software}).\\
-Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password e la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepiloge dei dati di gioco, notifiche di conferma registrazione, cambiamento dati o modifica della password.
+Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password, infine la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepilogo dei dati di gioco, le notifiche di conferma registrazione il cambiamento dei dati o la modifica della password.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=160mm]{immagini/vista_implementazione_software}
@@ -466,7 +469,7 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 \end{figure}
 
 \newpage
-\subsection{Log In utente comune}
+\subsection{Log In utente comune}\label{log_in_utente_comune}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
@@ -565,7 +568,7 @@ L'update delle credenziali selezionate viene eseguito correttamente.
 %----------------------------------------------------------------------------------------
 \chapter{Software design}
 
-In questo capitolo vengono riportari i classici diagrammi UML, i quali permettono tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software, in sequenza di trovano package diagram (\ref{package}), component diagram (\ref{component}) e sequence diagram (\ref{sequence}), i class diagram non sono stati riportati pochè data la mole di codice, sarebbero risultati illeggibili.
+In questo capitolo vengono riportari i classici diagrammi UML, i quali permettono tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software, in sequenza di trovano package diagram (\ref{package}), component diagram (\ref{component}) e sequence diagram (\ref{sequence}), i class diagram non sono stati riportati poichè data la mole di codice, sarebbero risultati illeggibili.
 \section{Package Diagram}\label{package}
 Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
 
@@ -578,10 +581,10 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 \newpage
 \section{Component diagram}\label{component}
 \subsection{Il sistema di Car Racing Cardboard}\label{post_call}
-Le due compoenenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Andoid, queste due componenti comunicano con chiamate di tipo http post.\\
-A differenza di GET, che permette a un server di mandare informazioni a un client, l'operazione POST fornisce ai client un modo per trasmettere informazioni ai server. 
+Le due componenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Android, queste due componenti comunicano con chiamate di tipo http post.\\
+A differenza di get, che permette a un server di mandare informazioni a un client, l'operazione post fornisce ai client un modo per trasmettere informazioni ai server. 
 La maggior parte dei browser web usa comunemente tale metodo per inviare forms ai server Web.
-Il client manda un messaggio POST e include l'informazione che desidera mandare al server.
+Il client manda un messaggio post e include l'informazione che desidera mandare al server.
 Il server può rimandare l'informazione stessa come parte della risposta \cite{httppost}. \\
 \begin{figure}[ht]
 	\centering
@@ -591,7 +594,7 @@ Il server può rimandare l'informazione stessa come parte della risposta \cite{ht
 \end{figure}
 
 \subsection{L'applicazione Android}
-Entranto nel dettaglio della prima componete, l'applicazione Android, offre il servizio di interfaccia grafica touch, mentre riceve dal server il servizio di scambio dati http.
+Entrando nel dettaglio della prima componete, l'applicazione Android, offre il servizio di interfaccia grafica touch, mentre riceve dal server il servizio di scambio dati http.
 I componenti grafici di Android si dividono in due categorie: View e ViewGroup. Una View è un qualunque componente utilizzabile (TextView, EditView, CheckBox, Button, ImageView, ?) in una interfaccia. Una ViewGroup è solitamente un layout che contiene un insieme di View, i più usati sono LinearLayout, RelativeLayout e TableLayout. Un ViewGroup è a sua volta una View, per questo possono essere creati layout complessi annidando a più livelli i vari componenti. View e ViewGroup sono un esempio di pattern composite.
 Le interfacce grafiche in Android possono essere definite in due modi (entrambe sfruttate in Car Racing Cardboard):
 \begin{itemize}
@@ -607,8 +610,8 @@ Le interfacce grafiche in Android possono essere definite in due modi (entrambe 
 \end{figure}
 
 \subsection{Dettaglio applicazione} 
-L'applicazione per quanto riguarda la componente algoritmica (intesa come la parte che non  riguarda la GUI), è composta dalle Activity, ossia le varie schermate di un'applicazione Android, le quali si occupano di \virgolette{tradurre} gli input dell'utente in output implementati tramite codice java.\\
-Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del gioco nella sua ripetizione ciclica, infine gli asynctask, utilizzati per alleggerire l'esecuzione dei thread sulla User Interface (Figura \ref{component_applicazione}).
+L'applicazione per quanto riguarda la componente algoritmica (intesa come la parte che non  riguarda la GUI), è composta dalle Activity, ossia le varie schermate o pagine di un'applicazione Android, le quali si occupano di tradurre gli input dell'utente in output implementati tramite codice java.\\
+Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del gioco nella sua ripetizione ciclica, infine gli asynctask, sono utilizzati per alleggerire l'esecuzione dei thread sulla User Interface (Figura \ref{component_applicazione}).
 
 \begin{figure}
 \centering
@@ -618,8 +621,7 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \end{figure}
 
 \subsection{Il server}
-//TODO: Descrizione server
-
+//TODO: Descrizione server -testo inserito per capire l'impaginazione - scrivere almeno 2 righe testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo  
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=100mm]{immagini/componentServerPNG}
@@ -628,9 +630,8 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \end{figure}
 
 \subsection{Database} 
-//TODO: Descrizione DB
-
-\begin{figure}
+//TODO: Descrizione DB - testo inserito per capire l'impaginazione - scrivere almeno 2 righe testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo  
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{immagini/componentDatabasePNG}
 	\caption{Component database}
@@ -640,43 +641,40 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \newpage
 \section{Sequence diagram}\label{sequence}
 \subsection{Funziononamento con log in}
-All'avvio dell'applicazione, se l'utente ho inserito correttamente email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
+All'avvio dell'applicazione, se l'utente ha popolato correttamente i campi email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
 \begin{itemize}
 	\item alla classe PostCall vengono passate la stringa contentente l'email e quella della password
 	\item la classe PostCall effettua una chiamata post al server cs.unibg.it, più precisamente al servizio 3d4ambservice.php
 \end{itemize}
 Il servizio php verifica nel database se l'email e la password sono corrette, e manda un messaggio di risposta alla PostCall, la quale effettua un parsing della risposta e restituisce un messaggio all'interfaccia corrente.\\
-A questo punto la dialog ring viene interrotta, e nel caso di un email e password corrette, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
-Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un animazione d'avvio. Viene avviata ora la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
+A questo punto la dialog ring viene interrotta, e nello scenario di un' autenticazione corretta, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
+Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un' animazione d'avvio. Viene avviata ora la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
 Confermata la scelta dell'occhio, si apre la MainActivity, contenente il gioco vero e proprio, i thread principali sono tre:
 \begin{enumerate}
 	\item GameThread: che gestisce i nemici e l'auto dell'utente
 	\item TimerPanorama: per la gestione del panorama laterale
-	\item TimerSun: per la gestione del sole e delle nuvole sulle sfondo
+	\item TimerSun: per la gestione del sole e delle nuvole sullo sfondo
 \end{enumerate}
-Terminato il gioco (gameover) è possibile richiedere i risultati via mail oppure ricominciare a giocare, in ogni caso viene fatta una chiamata post per memorizzare i risultati sul server.(Figura \ref{sequence_login})
-\begin{figure}[ht]
+Terminato il gioco (gameover) è possibile richiedere i risultati via mail oppure ricominciare a giocare, in ogni caso viene fatta una chiamata post per memorizzare i risultati sul server (Figura \ref{sequence_login}).
+\begin{figure}[p]
 	\centering
 	\includegraphics[angle=90,width=\columnwidth]{immagini/sequence_login}
-	\caption{sequence diagram funzionamento app con login}
+	\caption{Sequence diagram funzionamento app con log in }
 	\label{sequence_login}
 \end{figure}
-
-
 
 \subsection{Funziononamento senza log in}
 Il funzionamento in modalità \virgolette{play without registration} è identico a quello del log in utente, infatti, in questo caso è stato definito un utente di default, al quale vengono associati tutti i risultati degli utenti che hanno giocato senza registrarsi.
 
 \subsection{Funziononamento sign up}
-Per quanto riguarda la reigstrazione di nuovi utenti, una volta premuto il bottone \virgolette{SIGN UP}, si apre un pop up di warning, dopo di che ,se è stato premuto il tasto di confemra, come verrà poi approfondito nella sezione \ref{signup_label}, l'utente deve fornire: nome, cognome, email, colore preferito, data di nascita e password.\\
-Viene passato il tutto alla classe PostCall, che a sua volta effettua una chiamata post al servizio 3d4ambservice.php. Se i dati inseriti sono corretti (l'email è esistente e non ci sono gi record nel db con gli stessi attributi), il nuovo utente viene inserito.(Figura \ref{sequence_signup})
+Per quanto riguarda la registrazione di nuovi utenti, una volta premuto il bottone \virgolette{SIGN UP}, si apre un pop up di warning, dopo di che ,se è stato premuto il tasto di conferma, come verrà poi approfondito nella sezione \ref{signup_label}, l'utente deve fornire: nome, cognome, email, colore preferito, data di nascita e password.\\
+Tutti i dati vengono inviati classe PostCall (con una chiamata analoga a quella per il log in), che a sua volta effettua una chiamata post al servizio 3d4ambservice.php. Se i dati inseriti sono corretti (l'email è esistente e non sono presenti record nel database con gli stessi attributi, inteso come stessa email, nome e cognome), il nuovo utente viene inserito (Figura \ref{sequence_signup}).\\
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/sequence_signup}
-	\caption{sequence diagram funzionamento app registrazione utente (sign up)}
+	\caption{Sequence diagram funzionamento app registrazione utente (sign up)}
 	\label{sequence_signup}
 \end{figure}
-
 
 
 %----------------------------------------------------------------------------------------
@@ -687,7 +685,7 @@ Viene passato il tutto alla classe PostCall, che a sua volta effettua una chiama
 In questo capitolo vengono spiegati gli algoritmi che compongono questa applicazione: la penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), come la scena viene generata casualmente (\ref{generazione_random_scena}), come vengono cifrate le password degli utenti (\ref{cifratura}), una panoramica sul servizio web (\ref{servizio_web}), come vengono gestiti gli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), il thread principale del gioco (\ref{game_thread}), la gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni utilizzati (\ref{asynctask}).
 
 \section{Penalizzazione progressiva delle immagini}\label{penalizzazione_progressiva}
-L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha=0 è trasparente, mentre con aplha=255 conserva tutte le sue caratteristiche, con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, in termini di nemici e velocità d'azione. \\
+L'alpha value di un' immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha pari a 0 è trasparente, mentre con aplha uguale a 255 conserva tutte le sue caratteristiche. Con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, considerando che il numero dei nemici e la loro velocità continua ad aumentare. \\
 \begin{lstlisting}[language=Java]
 	 /**
 	 *
@@ -729,8 +727,8 @@ L'alpha value di un immagine è un valore che va da 0 a 255 e descrive la sua tra
 \newpage
 \section{Generazione random scena}\label{generazione_random_scena}
 \subsection{Nemici}
-Nella scena ci sono tre \virgolette{corsie} dalle quali possono arrivare i \virgolette{nemici}, questo è il codice dal quale viene estratat la corsia scelta.
-Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo nella stessa corsia senza muoversi viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.
+Nella scena ci sono tre corsie dalle quali possono arrivare i nemici (Figura \ref{fig:game}), questo è il codice con il quale viene estratata la corsia scelta.
+Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo senza muoversi, viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.
 \begin{lstlisting}[language=Java]
 	public void randomFunction(){
 		selectedLane=(int)(lane*Math.random())+1;
@@ -747,7 +745,7 @@ Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evit
 \end{lstlisting}
 
 \subsection{Panorama}
-Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l'ambientazione del gioco.
+Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l' ambientazione del gioco.
 
 \begin{lstlisting}[language=java]
 public void randomPanorama() {
@@ -760,7 +758,7 @@ public void randomPanorama() {
 \newpage
 \section{Cifratura password}\label{cifratura}
 
-Le password degli utenti non vengono memorizzate nel Data Base in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.\\
+Le password degli utenti non vengono memorizzate nel database in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.\\
 Solitamente tale algoritmo viene utilizzato per generare un' \virgolette{impronta digitale} di un documento, in questa applicazione è stato usato in questo modo poichè in java viene fornita una funzione di default, molto leggera, che appunto cifra in sha256.\\
 Nei confronti degli utenti di Car Racing Cardboard non era corretto memorizzare le password in chiaro, a seguire il codice implementato.\\ 
 \begin{lstlisting}[language=Java]
@@ -771,7 +769,7 @@ Nei confronti degli utenti di Car Racing Cardboard non era corretto memorizzare 
 \end{lstlisting}
 \newpage
 \section{Servizio web}\label{servizio_web}
-La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrispondono sempre delle risposte dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
+La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche sezione \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrispondono sempre delle risposte dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
 \paragraph{Il thread della chiamata post}la chiamata avviene nel metodo \textit{public void myPostCall(final TypeCall type, final Activity logInActivity)} grazie ad un thread al suo interno.
 \\
 \begin{lstlisting}[language=java]
@@ -800,7 +798,7 @@ List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
 
 \end{lstlisting}
 
-\paragraph{La gestione delle chiamate lato server} le chiamate fatte a lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute a lato server eseguendo una POST sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database:
+\paragraph{La gestione delle chiamate lato server} le chiamate fatte a lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute lato server eseguendo una post sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database:
 \\
 \begin{lstlisting}[language=php]
 

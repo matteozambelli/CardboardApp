@@ -976,7 +976,7 @@ Nella gestione della registrazione utente lato server vengono innanzitutto inizi
 \end{figure}
 \newpage
 \subsection*{Reset}
-Il reset della password avviene quando l'utente preme sul tasto \virgolette{forgot your password?}, viene richiesta l'email e il colore preferito, se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}), e verrà inviata la seguente email (Figura \ref{reset_password})
+Il reset della password avviene quando l'utente preme sul tasto \virgolette{forgot your password?}. Viene richiesta l'email e il colore preferito, se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}), e verrà inviata la seguente email (Figura \ref{reset_password})
 
 \begin{figure}[ht]
 	\centering
@@ -1024,9 +1024,9 @@ L' operazione di reset della password è gestita a livello server nel seguente mo
 Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell' identità dell'utente. Sulla base dell' email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti allora l'operazione di ripristino della password viene eseguita con successo. L' utente riceverà quindi un email contenente la nuova password.
 \newpage
 \subsection*{Doctor call}
-Nel caso in cui un utente, memorizzato come dottore nel nostro database, effettua il log in, viene reindirizzato ad un' apposita paginia; si tratta della DoctorActivity, nella quale il dottore può inserire i dati del paziente, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche \ref{guida}).\\
-L' utilizzo dell'applicazione da parte di un dottore prevede come detto il Log In tramite le credenziali del medico, l' inserimento dei dati del paziente e l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
-La gestione lato server dell' avvio di una partita da parte di un dottore, dopo avere inserito i dati del paziente, è stata realizzata nel seguente modo: 
+Nel caso in cui un utente, memorizzato come dottore nel nostro database, effettua il log in, viene reindirizzato ad un' apposita pagina; si tratta della DoctorActivity, nella quale il dottore può inserire i dati del paziente, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
+L' utilizzo dell'applicazione da parte di un dottore prevede come detto il log In tramite le credenziali del medico, l' inserimento dei dati del paziente e l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
+La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo: 
 \\
 \begin{lstlisting}[language=php]
 
@@ -1082,7 +1082,7 @@ Prima di avviare una partita viene controllato se il paziente è già presente nel
 \newpage
 \subsection*{Report}
 
-La fase di report nell' applicazione è differenziata per due diverse casistiche, ovvero l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso si usufruisca dell' applicativo come utente non registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso invece si sfrutti la possibilità di registrarsi, si ottiene il privilegio di salvataggio e monitoraggio automatico dei risultati raggiunti (Figura \ref{Gameover}).
+La fase di report nell' applicazione è differenziata per due diverse casistiche, ovvero l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso si usufruisca dell' applicazione come utente non registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso invece si sfrutti la possibilità di registrarsi, si ottiene il privilegio di salvataggio e monitoraggio automatico dei risultati raggiunti (Figura \ref{Gameover}).
 
 \begin{figure}[h]
 	\centering
@@ -1404,7 +1404,7 @@ Come si può vedere dalla segnatura del medoto, vengono passati i due oggetti rel
 \section{Asynctask}\label{asynctask}
 Per ottimizzare l'utilizzo di memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 
 In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell' applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall' interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
-\paragraph{I quattro passi:} un Asynktask in android si divide in quattro \virgolette{step}
+\paragraph{I quattro passi:} un Asynctask in android si divide in quattro \virgolette{step}
 \begin{enumerate}
 	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} priva che il task venga eseguito. Qui viene solitamento messo il setup del task
 	\item doInBackground(Params...), invocato nel background del thread, subito dopo onPreExecute(). Questo step è usato per eseguire computazioni in background che possono durare molto tempo.
@@ -1412,6 +1412,17 @@ In molti framework di sviluppo con interfacce grafiche i task lunghi non devono 
 	\item onProgressUpdate(Progress...), invocato nell' UI thread dopo aver chiamato publicProgress(Progress...). Questo metodo è usato per mostrare ogni progresso nella UI mentre in backgrond la computazione è ancora in esecuzione
 	\item onPostExecute(Result), invocato dopo che la computazione in background è finita.\cite{aos}.
 \end{enumerate}
+In Car Racing Cardboard gli asynctask sono usati per gestire: il movimento del panorama, il sole e le nuvole sullo sfondo. Di seguito un esempio di utilizzo di asynctask, si tratta in questo caso del task asincrono che gestisce il sole.\\
+\begin{lstlisting}[language=java]
+	 @Override
+	 protected void onPostExecute(Void aVoid) {
+		 super.onPostExecute(aVoid);
+		 animationPanorama.animatePanoramaSun(panoramaLeftSky.get(1),panoramaRightSky.get(1),displayWidth,displayHeight);
+		 animationPanorama = new AnimationPanorama();
+	 }
+\end{lstlisting}
+Nel metodo doInBackground viene inizializzato l'oggetto relativo alla gestione del panorama (sole), mentre nel metodo onPostExecute viene lanciata la sua esecuzione (riga 4), in modo che questa operazione non gravi sul thread della User Interface.
+
 %----------------------------------------------------------------------------------------
 %	tool
 %----------------------------------------------------------------------------------------

@@ -70,26 +70,26 @@
 \contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{56}{subsection.6.3.3}
 \contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{57}{chapter.7}
 \contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{57}{section.7.1}
-\contentsline {section}{\numberline {7.2}Generazione random scena}{59}{section.7.2}
+\contentsline {section}{\numberline {7.2}Generazione casuale della scena}{59}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Nemici}{59}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Panorama}{59}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Cifratura password}{60}{section.7.3}
-\contentsline {section}{\numberline {7.4}Servizio web}{61}{section.7.4}
-\contentsline {paragraph}{Il thread della chiamata post}{61}{section*.54}
-\contentsline {paragraph}{La gestione delle chiamate lato server}{62}{section*.55}
-\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{81}{section.7.5}
-\contentsline {section}{\numberline {7.6}Game Thread}{86}{section.7.6}
-\contentsline {section}{\numberline {7.7}Gestione animazioni}{91}{section.7.7}
-\contentsline {section}{\numberline {7.8}Asynctask}{93}{section.7.8}
-\contentsline {paragraph}{I quattro passi:}{93}{section*.68}
-\contentsline {chapter}{\numberline {8}Tool utilizzati}{95}{chapter.8}
-\contentsline {section}{\numberline {8.1}GitHub}{95}{section.8.1}
-\contentsline {section}{\numberline {8.2}Crashlitics}{97}{section.8.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{101}{part.4}
-\contentsline {chapter}{\numberline {9}Social media}{103}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{104}{section*.76}
-\contentsline {chapter}{\numberline {10}Conclusioni}{105}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{106}{section*.78}
-\contentsline {section}{\numberline {10.1}Paper}{107}{section.10.1}
-\contentsline {paragraph}{Di seguito riportato il contenuto del nostro elaborato, redatto in collaborazione con il Professor Angelo Gargantini e l' Ing. Silvia Bonfanti:}{107}{section*.80}
-\contentsline {section}{\numberline {10.2}Sviluppi futuri}{112}{section.10.2}
+\contentsline {subsection}{\numberline {7.2.2}Panorama}{60}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Cifratura password}{61}{section.7.3}
+\contentsline {section}{\numberline {7.4}Servizio web}{62}{section.7.4}
+\contentsline {paragraph}{Chiamata post}{62}{section*.54}
+\contentsline {paragraph}{Gestione delle chiamate lato server:}{64}{section*.55}
+\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{83}{section.7.5}
+\contentsline {section}{\numberline {7.6}Game Thread}{88}{section.7.6}
+\contentsline {section}{\numberline {7.7}Gestione animazioni}{93}{section.7.7}
+\contentsline {section}{\numberline {7.8}Asynctask}{95}{section.7.8}
+\contentsline {paragraph}{I quattro passi:}{95}{section*.68}
+\contentsline {chapter}{\numberline {8}Tool utilizzati}{97}{chapter.8}
+\contentsline {section}{\numberline {8.1}GitHub}{97}{section.8.1}
+\contentsline {section}{\numberline {8.2}Crashlitics}{99}{section.8.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{103}{part.4}
+\contentsline {chapter}{\numberline {9}Social media}{105}{chapter.9}
+\contentsline {paragraph}{Risultati promozione}{106}{section*.76}
+\contentsline {chapter}{\numberline {10}Conclusioni}{107}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{108}{section*.78}
+\contentsline {section}{\numberline {10.1}Paper}{109}{section.10.1}
+\contentsline {paragraph}{Di seguito riportato il contenuto del nostro elaborato, redatto in collaborazione con il Professor Angelo Gargantini e l' Ing. Silvia Bonfanti:}{109}{section*.80}
+\contentsline {section}{\numberline {10.2}Sviluppi futuri}{114}{section.10.2}

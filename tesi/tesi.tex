@@ -4,6 +4,8 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[12pt,a4paper,twoside, italian, openright]{book}
+\usepackage[T1]{fontenc}
+
 \usepackage[latin1]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
@@ -128,11 +130,12 @@
 
 \chapter{Introduzione}
 
-In questo primo capitolo viene spiegato di cosa tratta il progetto 3D4Amb, del quale fa parte questo lavoro (\ref{3d4amb}) e qual è l'obiettivo di questa tesi (\ref{obiettivo}).
-
+%In questo primo capitolo viene spiegato di cosa tratta il progetto 3D4Amb, del quale fa parte questo lavoro (\ref{3d4amb}) e qual è l'obiettivo di questa tesi (\ref{obiettivo}).
+3D4Amb (\ref{3d4amb}) è un progetto che punta a sviluppare un sistema basato sulla tecnologia 3D per la
+diagnosi e il trattamento dell'ambliopia. Nell'ambito di questo progetto è stata sviluppata
+un'applicazione Android il cui scopo è quello di effettuare il trattamento della malattia.
 \section{Il progetto 3D4Amb}\label{3d4amb}
-Il progetto 3D4Amb mira a sviluppare un sistema basato sul 3D per la diagnosi e il trattamento dell'ambliopia nei bambini piccoli.\\
-Sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Essa dovrebbe consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. Non dovrebbe soffrire dei problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
+Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Essa dovrebbe consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. Non dovrebbe soffrire dei problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
 L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è di sviluppare un sistema per la diagnosi e il trattamento di ambliopia, basata sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
 Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg.it/
 Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
@@ -682,10 +685,11 @@ Tutti i dati vengono inviati classe PostCall (con una chiamata analoga a quella 
 %----------------------------------------------------------------------------------------
 
 \chapter{Analisi degli Algoritmi}
-In questo capitolo vengono spiegati gli algoritmi che compongono questa applicazione: la penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), come la scena viene generata casualmente (\ref{generazione_random_scena}), come vengono cifrate le password degli utenti (\ref{cifratura}), una panoramica sul servizio web (\ref{servizio_web}), come vengono gestiti gli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), il thread principale del gioco (\ref{game_thread}), la gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni utilizzati (\ref{asynctask}).
+In questo capitolo vengono analizzati gli algoritmi che compongono l' applicazione. Gli algoritmi utilizzati sono: penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), generazione casuale della scena (\ref{generazione_random_scena}),cifratura delle password degli utenti (\ref{cifratura}), servizio web (\ref{servizio_web}), gestione degli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), thread principale del gioco (\ref{game_thread}), gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni per la gestione di una parte della grafica (\ref{asynctask}).
 
 \section{Penalizzazione progressiva delle immagini}\label{penalizzazione_progressiva}
-L'alpha value di un' immagine è un valore che va da 0 a 255 e descrive la sua trasparenza. Un' immagine con alpha pari a 0 è trasparente, mentre con aplha uguale a 255 conserva tutte le sue caratteristiche. Con questo codice all' aumentare del livello, aumenta anche la trasparenza dell'immagine, dopo l'ottavo livello l'alpha rimane=50, continua però ad aumentare la difficoltà del gioco, considerando che il numero dei nemici e la loro velocità continua ad aumentare. \\
+La penalizzazione progressiva delle immagini avviene modificando la trasparenza tramite il parametro alpha
+value che può assumere valori tra 0 e 255. Un' immagine con alpha=0 è trasparente, mentre con alpha=255 conserva tutte le sue caratteristiche. Nell'applicazione sviluppata la trasparenza dell'immagine viene aumentata all'aumentare del livello e rimane costante al valore 50 dopo l'ottavo livello. Dall'ottavo livello la difficoltà del gioco viene aumentata in termini di nemici e velocità d'azione. \\
 \begin{lstlisting}[language=Java]
 	 /**
 	 *
@@ -725,10 +729,11 @@ L'alpha value di un' immagine è un valore che va da 0 a 255 e descrive la sua tr
 	 }
 \end{lstlisting}
 \newpage
-\section{Generazione random scena}\label{generazione_random_scena}
+\section{Generazione casuale della scena}\label{generazione_random_scena}
+La scena è suddivisa in due soggetti principali: i nemici e il paesaggio.
 \subsection{Nemici}
-Nella scena ci sono tre corsie dalle quali possono arrivare i nemici (Figura \ref{fig:game}), questo è il codice con il quale viene estratata la corsia scelta.
-Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evitare che il giocatore resti troppo a lungo fermo senza muoversi, viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte sulla stessa corsia.
+Nella scena ci sono tre corsie dalle quali possono arrivare i nemici (Figura \ref{fig:game}).
+Inizialmente la corsia viene scelta con un'estrazione random, ma per evitare che venga scelta sempre la stessa corsia e il giocatore resti troppo a lungo fermo, viene fatto un controllo sulla scelta precedente. Un nemico non viene mai mandato più di due volte consecutive sulla stessa corsia.\\
 \begin{lstlisting}[language=Java]
 	public void randomFunction(){
 		selectedLane=(int)(lane*Math.random())+1;
@@ -743,24 +748,33 @@ Inizialmente la corsia viene scelta a caso con un'estrazione random, ma per evit
 		selectedCar=(int)(numberOfCar*Math.random())+1;	
 	}
 \end{lstlisting}
-
+\newpage
 \subsection{Panorama}
-Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l' ambientazione del gioco.
+Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l' ambientazione del gioco.\\
 
 \begin{lstlisting}[language=java]
+
 public void randomPanorama() {
 	int pick = new Random().nextInt(Side.values().length);
 	selectedSide= Side.values()[pick];
 	idSubject= (int)(numberOfSubject*Math.random())+1;
+	if(previousSide==selectedSide){
+		countPrevious++;
+		if(countPrevious>3){
+			selectedSide++;
+			if(selectedSide>3) selectedSide=1;
+		}
+	}
+	previousSide=selectedSide;
 }
 \end{lstlisting}
 
 \newpage
 \section{Cifratura password}\label{cifratura}
 
-Le password degli utenti non vengono memorizzate nel database in chiaro ma vengono cifrate (dallo smartphone) con un algoritmo sha256.\\
-Solitamente tale algoritmo viene utilizzato per generare un' \virgolette{impronta digitale} di un documento, in questa applicazione è stato usato in questo modo poichè in java viene fornita una funzione di default, molto leggera, che appunto cifra in sha256.\\
-Nei confronti degli utenti di Car Racing Cardboard non era corretto memorizzare le password in chiaro, a seguire il codice implementato.\\ 
+Per garantire la privacy degli utenti le password vengono memorizzate nel database utilizzando l'algoritmo di cifratura sha256.\\
+Solitamente tale algoritmo viene utilizzato per generare un' \virgolette{impronta digitale} di un documento.\MakeUppercase{è} stato utilizzato in questa applicazione poichè in java viene fornito un metodo per la cifratura in sha256.\\
+In seguito è mostrato il codice implementato.\\ 
 \begin{lstlisting}[language=Java]
 	public static String calculateHash(String data) {
 		String hash = new String(Hex.encodeHex(DigestUtils.sha256(data)));
@@ -769,8 +783,8 @@ Nei confronti degli utenti di Car Racing Cardboard non era corretto memorizzare 
 \end{lstlisting}
 \newpage
 \section{Servizio web}\label{servizio_web}
-La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche sezione \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrispondono sempre delle risposte dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
-\paragraph{Il thread della chiamata post}la chiamata avviene nel metodo \textit{public void myPostCall(final TypeCall type, final Activity logInActivity)} grazie ad un thread al suo interno.
+La comunicazione tra \textbf{client} (smarthphone) e \textbf{server} (cs.unibg.it) avviene tramite chiamate post (vedi anche sezione \ref{post_call}), le chiamate sono sincrone, ossia ad un messaggio inviato dal client corrisponde sempre una risposta dal servizio. Le chiamate partono sempre dal client, il server di suo non invia messaggi.
+\paragraph{Chiamata post}la chiamata viene effettuata al servizio php di Car Racing Cardboard (3d4ambService.php), all'interno del metodo \textit{public void myPostCall(final TypeCall type, final Activity logInActivity)} tramite un thread.
 \\
 \begin{lstlisting}[language=java]
 // Create a new HttpClient and Post Header
@@ -784,10 +798,13 @@ thread = new Thread(new Runnable() {
 }			
 \end{lstlisting}
 
-La chiamata viene fatta al servizio php di Car Racing Cardboard (3d4ambService.php).
+
 \newpage
-Le chiamate possibili sono varie, per ognuna è stato predisposto una lista di stringhe che possono essere passate all'oggetto httppost:
-\\
+Le chiamate che possono essere effettuate dal client sono varie e per ognuna è stata predisposta una lista di stringhe che possono essere passate all'oggetto httppost, ossia il preposto, all'interno del metodo myPostCall, a gestire la connessione con il servizio php.\\
+\begin{lstlisting}
+HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/3d4ambService.php");
+\end{lstlisting}
+Dopo aver inizializzato l'oggetto httppost vengono inizializzate le stringhe sopra citate\\
 \begin{lstlisting}[language=java]
 List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(3);
 List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
@@ -797,8 +814,17 @@ List<NameValuePair> nameValuePairsDoctorCall = new ArrayList<NameValuePair>(5);
 List<NameValuePair> nameValuePairsReport = new ArrayList<NameValuePair>(4);
 
 \end{lstlisting}
+Infine in base al tipo di chiamata che deve essere effettuata, tali stringhe vengono valorizzate e assegnate tramite un apposito metodo all'oggetto htppost. In seguito è mostrato l'esempio della chiamata di log in.\\
 
-\paragraph{La gestione delle chiamate lato server} le chiamate fatte a lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute lato server eseguendo una post sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database:
+\begin{lstlisting}
+	 if (type.equals(TypeCall.LOG_IN)) {
+		 nameValuePairsLogIn.add(new BasicNameValuePair("type", "log_in"));
+		 nameValuePairsLogIn.add(new BasicNameValuePair("email", email));
+		 nameValuePairsLogIn.add(new BasicNameValuePair("password", password));
+		 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsLogIn));
+	 }
+\end{lstlisting} 
+\paragraph{Gestione delle chiamate lato server:} le chiamate effettuate lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute lato server eseguendo una Post sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database (come mostrato nel codice)
 \\
 \begin{lstlisting}[language=php]
 
@@ -817,9 +843,9 @@ $type = $_POST['type'];
 
 \end{lstlisting}
 
-In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di Sign Up, Log In, Report e così via, viene eseguito uno 'switch' per intraprendere diverse azioni in base alla procedura scelta.
+In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di sign up, log in,log in come dottore, report, reset della password o update dei dati personali, viene eseguito uno 'switch' per intraprendere diverse azioni in base alla procedura scelta.
 \newpage
-\subsection*{Log in}La chiamata post per il login avviene ogni volta che l'utente preme il bottone di login (Figura \ref{login_post}):
+\subsection*{Log in}La chiamata Post per il log in avviene ogni volta che l'utente preme l'apposito pulsante (Figura \ref{login_post}):
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=50mm]{immagini/login_post}
@@ -827,19 +853,19 @@ In seguito all'inizializzazione del parametro "type", che specifica se è stata r
 	\label{login_post}
 \end{figure}
 
-Per il login vengono inviate al server email e password, che prima di essere inviata viene cifrata (vedi \ref{cifratura}).\\
-A questo punto viene lanciata la finestra di attesa (Figura \ref{attesa}):
-\begin{figure}[ht]
+Per effettuare il log in vengono inviate al server email e password, che prima di essere inviata viene cifrata (vedi \ref{cifratura}).\\
+All' utente viene mostrata una finestra in attesa di una risposta dal server (Figura \ref{attesa}):
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=70mm]{immagini/attesa}
 	\caption{interfaccia di attesa}
 	\label{attesa}
 \end{figure}
 
-Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente).
+Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente), altrimenti viene mostrata una finestra contenente una descrizione dell'errore.
 \\
 
-La procedura di Log In è trattata nel seguente modo a lato server:
+La procedura di Log In è trattata lato server nel seguente modo.
 \\
 \begin{lstlisting}[language=php]
 
@@ -874,7 +900,7 @@ case "log_in":
 	break;
 \end{lstlisting}
 
-Come si può vedere sopra, viene eseguito un controllo sui campi email e password e viene restituita una stringa che informa sull'esito. Viene inoltre restituito un valore concatenato (\$doc, 0 or 1) per indicare se si tratta del Log In di un utente comune o di un dottore, il quale dovrà quindi aggiungere successivamente i dati del paziente.
+Come si può vedere sopra, viene eseguito un controllo sui campi email e password e viene restituita una stringa che informa sull'esito dell'operazione. Viene inoltre restituito un valore concatenato (\$doc, 0 or 1) per indicare se si tratta del Log In di un utente comune o di un dottore, il quale dovrà quindi aggiungere successivamente i dati del paziente.
 \newpage
 \subsection*{Sign up}\label{signup_label}
 L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha premuto il tasto \virgolette{ok} (Figura \ref{registration_post})
@@ -885,17 +911,7 @@ L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha p
 	\label{registration_post}
 \end{figure}
 
-La chiamata al server passa i seguenti parametri:
-
-\begin{itemize}
-	\item nome
-	\item cognome
-	\item email
-	\item colore preferito
-    \item data di nascita
-	\item password
-\end{itemize}
-
+Al server  vengono inviati i seguenti parametri: nome, cognome, email, colore preferito, data di nascita e password.\\
 Se va tutto a buon fine il nuovo utente viene inserito nel database:\\
 
 \begin{lstlisting}[language=php]
@@ -966,7 +982,7 @@ break;
 
 \end{lstlisting}
 
-Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un' email di benvenuto. Durante questa fase si è utilizzata la funzione 'gmail(\$to, \$subject, \$message)' appartenente alla classe 'SMTP\_validateEmail', in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell' email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell' operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga alla seguente: (Figura \ref{conferma_registrazione})
+Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un' email di benvenuto. Durante questa fase si è utilizzata la funzione 'gmail(\$to, \$subject, \$message)' appartenente alla classe 'SMTP\_validateEmail', in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell' email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell' operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga a quella mostrata in figura \ref{conferma_registrazione}
 
 \begin{figure}[ht]
 	\centering
@@ -976,7 +992,7 @@ Nella gestione della registrazione utente lato server vengono innanzitutto inizi
 \end{figure}
 \newpage
 \subsection*{Reset}
-Il reset della password avviene quando l'utente preme sul tasto \virgolette{forgot your password?}. Viene richiesta l'email e il colore preferito, se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}), e verrà inviata la seguente email (Figura \ref{reset_password})
+L'utente può resettare la password premendo sul tasto \virgolette{forgot your password?}. Viene richiesta l'email e il colore preferito; se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}). Verrà inoltre inviata una email come mostrato in figura \ref{reset_password}
 
 \begin{figure}[ht]
 	\centering
@@ -1021,11 +1037,11 @@ L' operazione di reset della password è gestita a livello server nel seguente mo
 
 \end{lstlisting}
 
-Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell' identità dell'utente. Sulla base dell' email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti allora l'operazione di ripristino della password viene eseguita con successo. L' utente riceverà quindi un email contenente la nuova password.
+Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell' identità dell'utente. Sulla base dell' email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti l'operazione di ripristino della password viene eseguita con successo e l' utente riceverà un' email contenente la nuova password.
 \newpage
 \subsection*{Doctor call}
-Nel caso in cui un utente, memorizzato come dottore nel nostro database, effettua il log in, viene reindirizzato ad un' apposita pagina; si tratta della DoctorActivity, nella quale il dottore può inserire i dati del paziente, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
-L' utilizzo dell'applicazione da parte di un dottore prevede come detto il log In tramite le credenziali del medico, l' inserimento dei dati del paziente e l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
+Nel caso in cui l' utente, effettua l'accesso come dottore, viene reindirizzato ad un' apposita pagina: DoctorActivity. Il dottore può inserire i dati dei pazienti, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
+L' utilizzo dell'applicazione da parte di un dottore prevede inoltre l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
 La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo: 
 \\
 \begin{lstlisting}[language=php]

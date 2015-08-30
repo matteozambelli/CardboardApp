@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  29 AUG 2015 10:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.28)  31 AUG 2015 00:08
 entering extended mode
 **tesi.tex
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.tex
@@ -31,6 +31,13 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
@@ -361,7 +368,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 25.
+Package hyperref Info: Option `colorlinks' set `false' on input line 27.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
@@ -453,28 +460,20 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 \AM@templatesizebox=\box31
 )
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 102.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 102.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
-File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
-)
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -525,7 +524,7 @@ LaTeX Font Info:    ... okay on input line 102.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 102.
+Package hyperref Info: Link coloring OFF on input line 104.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -534,9 +533,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 102.
-LaTeX Info: Redefining \pageref on input line 102.
-LaTeX Info: Redefining \nameref on input line 102.
+LaTeX Info: Redefining \ref on input line 104.
+LaTeX Info: Redefining \pageref on input line 104.
+LaTeX Info: Redefining \nameref on input line 104.
 
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.out)
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.out)
@@ -577,43 +576,42 @@ Underfull \vbox (badness 1845) has occurred while \output is active []
 Capitolo 2.
 [11
 
-] [12] [13] [14] <immagini/3D4Amb_sys.png, id=400, 708.6475pt x 873.2625pt>
+] [12] [13] [14] <immagini/3D4Amb_sys.png, id=402, 708.6475pt x 873.2625pt>
 File: immagini/3D4Amb_sys.png Graphic file (type png)
 
 <use immagini/3D4Amb_sys.png>
-Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 187.
+Package pdftex.def Info: immagini/3D4Amb_sys.png used on input line 190.
 (pdftex.def)             Requested size: 426.79135pt x 525.94695pt.
  [15] [16 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/3D4Amb_s
 ys.png>]
 Capitolo 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 200.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 203.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 200.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 203.
  [17
 
 ] [18]
-<immagini/android-logo.png, id=429, 1606.0pt x 1606.0pt>
+<immagini/android-logo.png, id=431, 1606.0pt x 1606.0pt>
 File: immagini/android-logo.png Graphic file (type png)
 
 <use immagini/android-logo.png>
-Package pdftex.def Info: immagini/android-logo.png used on input line 221.
+Package pdftex.def Info: immagini/android-logo.png used on input line 224.
 (pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
  [19 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/android-logo.
 png>]
-<immagini/Google-Cardboard.jpg, id=439, 1284.8pt x 707.64375pt>
+<immagini/Google-Cardboard.jpg, id=441, 1284.8pt x 707.64375pt>
 File: immagini/Google-Cardboard.jpg Graphic file (type jpg)
 
 <use immagini/Google-Cardboard.jpg>
-Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 231.
+Package pdftex.def Info: immagini/Google-Cardboard.jpg used on input line 234.
 (pdftex.def)             Requested size: 426.79135pt x 235.06723pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--241
-\OT1/cmr/m/n/12 del-le ap-pli-ca-zio-ni so-no re-pe-ri-bi-li gra-tui-ta-men-te.
-
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+\T1/cmr/m/n/12 del-le ap-pli-ca-zio-ni so-no re-pe-ri-bi-li gra-tui-ta-men-te.
  []
 
 [20 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/Google-Cardboa
@@ -621,87 +619,87 @@ rd.jpg>] [21] [22
 
 ] [23] [24]
 Capitolo 4.
-<immagini/child_cardboard.png, id=466, 586.19pt x 511.9125pt>
+<immagini/child_cardboard.png, id=468, 586.19pt x 511.9125pt>
 File: immagini/child_cardboard.png Graphic file (type png)
 
 <use immagini/child_cardboard.png>
-Package pdftex.def Info: immagini/child_cardboard.png used on input line 268.
+Package pdftex.def Info: immagini/child_cardboard.png used on input line 271.
 (pdftex.def)             Requested size: 426.79135pt x 372.70882pt.
  [25
 
 ] [26 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/child_cardbo
 ard.png>]
-<immagini/game2.png, id=478, 867.99281pt x 430.91832pt>
+<immagini/game2.png, id=480, 867.99281pt x 430.91832pt>
 File: immagini/game2.png Graphic file (type png)
 
 <use immagini/game2.png>
-Package pdftex.def Info: immagini/game2.png used on input line 279.
+Package pdftex.def Info: immagini/game2.png used on input line 282.
 (pdftex.def)             Requested size: 426.79135pt x 211.88168pt.
  [27 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/game2.png>]
-<immagini/chooselazyeye_left.png, id=485, 1927.2pt x 1084.05pt>
+<immagini/chooselazyeye_left.png, id=487, 1927.2pt x 1084.05pt>
 File: immagini/chooselazyeye_left.png Graphic file (type png)
 
 <use immagini/chooselazyeye_left.png>
-Package pdftex.def Info: immagini/chooselazyeye_left.png used on input line 289
+Package pdftex.def Info: immagini/chooselazyeye_left.png used on input line 292
 .
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
  [28 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/chooselazyeye
 _left.png>]
-<immagini/login.png, id=492, 1083.04625pt x 1703.36375pt>
+<immagini/login.png, id=494, 1083.04625pt x 1703.36375pt>
 File: immagini/login.png Graphic file (type png)
 
 <use immagini/login.png>
-Package pdftex.def Info: immagini/login.png used on input line 306.
+Package pdftex.def Info: immagini/login.png used on input line 309.
 (pdftex.def)             Requested size: 227.62204pt x 357.97685pt.
 
-<immagini/warning_registration.png, id=494, 1084.05pt x 1782.66pt>
+<immagini/warning_registration.png, id=496, 1084.05pt x 1782.66pt>
 File: immagini/warning_registration.png Graphic file (type png)
 
 <use immagini/warning_registration.png>
 Package pdftex.def Info: immagini/warning_registration.png used on input line 3
-16.
+19.
 (pdftex.def)             Requested size: 156.49014pt x 257.32303pt.
 
-<immagini/registration.png, id=496, 813.0375pt x 1336.995pt>
+<immagini/registration.png, id=498, 813.0375pt x 1336.995pt>
 File: immagini/registration.png Graphic file (type png)
 
 <use immagini/registration.png>
-Package pdftex.def Info: immagini/registration.png used on input line 325.
+Package pdftex.def Info: immagini/registration.png used on input line 328.
 (pdftex.def)             Requested size: 156.49014pt x 257.33662pt.
  [29 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/login.png>] [
 30 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/warning_registr
 ation.png> <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/registr
 ation.png>]
-<immagini/resetpassword.png, id=512, 1084.05pt x 1782.66pt>
+<immagini/resetpassword.png, id=514, 1084.05pt x 1782.66pt>
 File: immagini/resetpassword.png Graphic file (type png)
 
 <use immagini/resetpassword.png>
-Package pdftex.def Info: immagini/resetpassword.png used on input line 335.
+Package pdftex.def Info: immagini/resetpassword.png used on input line 338.
 (pdftex.def)             Requested size: 156.49014pt x 257.32303pt.
 
-<immagini/collaborate_with_us.png, id=517, 939.51pt x 1244.65pt>
+<immagini/collaborate_with_us.png, id=519, 939.51pt x 1244.65pt>
 File: immagini/collaborate_with_us.png Graphic file (type png)
 
 <use immagini/collaborate_with_us.png>
 Package pdftex.def Info: immagini/collaborate_with_us.png used on input line 34
-6.
+9.
 (pdftex.def)             Requested size: 156.49014pt x 207.31454pt.
  [31 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/resetpassword
 .png>]
-<immagini/doctor.png, id=528, 1080.035pt x 1702.36pt>
+<immagini/doctor.png, id=530, 1080.035pt x 1702.36pt>
 File: immagini/doctor.png Graphic file (type png)
 
 <use immagini/doctor.png>
-Package pdftex.def Info: immagini/doctor.png used on input line 355.
+Package pdftex.def Info: immagini/doctor.png used on input line 358.
 (pdftex.def)             Requested size: 156.49014pt x 246.64105pt.
  [32 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/collaborate_w
 ith_us.png> <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/doctor
 .png>]
-<immagini/gameover.png, id=540, 1927.2pt x 1084.05pt>
+<immagini/gameover.png, id=542, 1927.2pt x 1084.05pt>
 File: immagini/gameover.png Graphic file (type png)
 
 <use immagini/gameover.png>
-Package pdftex.def Info: immagini/gameover.png used on input line 374.
+Package pdftex.def Info: immagini/gameover.png used on input line 377.
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
 
 
@@ -712,15 +710,15 @@ png>] [35
 
 ] [36]
 Capitolo 5.
-<immagini/architettura_di_sistema.jpg, id=564, 599.23875pt x 230.36063pt>
+<immagini/architettura_di_sistema.jpg, id=566, 599.23875pt x 230.36063pt>
 File: immagini/architettura_di_sistema.jpg Graphic file (type jpg)
 
 <use immagini/architettura_di_sistema.jpg>
 Package pdftex.def Info: immagini/architettura_di_sistema.jpg used on input lin
-e 402.
+e 405.
 (pdftex.def)             Requested size: 455.24408pt x 175.0091pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 402--403
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 405--406
  [][] 
  []
 
@@ -728,70 +726,70 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 402--403
 
 ] [38 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/architettura
 _di_sistema.jpg>]
-<immagini/vista_implementazione_software.png, id=580, 809.27344pt x 578.16pt>
+<immagini/vista_implementazione_software.png, id=582, 809.27344pt x 578.16pt>
 File: immagini/vista_implementazione_software.png Graphic file (type png)
 
 <use immagini/vista_implementazione_software.png>
 Package pdftex.def Info: immagini/vista_implementazione_software.png used on in
-put line 419.
+put line 422.
 (pdftex.def)             Requested size: 455.24408pt x 325.24066pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 419--420
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 422--423
  [][] 
  []
 
 [39 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/vista_implemen
 tazione_software.png>] [40]
-<immagini/usecaseSignUpPNG.png, id=597, 381.00745pt x 246.36842pt>
+<immagini/usecaseSignUpPNG.png, id=599, 381.00745pt x 246.36842pt>
 File: immagini/usecaseSignUpPNG.png Graphic file (type png)
 
 <use immagini/usecaseSignUpPNG.png>
-Package pdftex.def Info: immagini/usecaseSignUpPNG.png used on input line 466.
+Package pdftex.def Info: immagini/usecaseSignUpPNG.png used on input line 469.
 (pdftex.def)             Requested size: 455.24408pt x 294.37373pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 466--467
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 469--470
  [][] 
  []
 
 [41 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/usecaseSignUpP
 NG.png>] [42]
-<immagini/usecaseLogInUtenteComunePNG.png, id=616, 381.00745pt x 246.36842pt>
+<immagini/usecaseLogInUtenteComunePNG.png, id=618, 381.00745pt x 246.36842pt>
 File: immagini/usecaseLogInUtenteComunePNG.png Graphic file (type png)
 
 <use immagini/usecaseLogInUtenteComunePNG.png>
 Package pdftex.def Info: immagini/usecaseLogInUtenteComunePNG.png used on input
- line 500.
+ line 503.
 (pdftex.def)             Requested size: 455.24408pt x 294.37373pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 500--501
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 503--504
  [][] 
  []
 
 [43 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/usecaseLogInUt
 enteComunePNG.png>] [44]
-<immagini/usecaseLogInMedicoPNG.png, id=636, 381.00745pt x 257.57028pt>
+<immagini/usecaseLogInMedicoPNG.png, id=638, 381.00745pt x 257.57028pt>
 File: immagini/usecaseLogInMedicoPNG.png Graphic file (type png)
 
 <use immagini/usecaseLogInMedicoPNG.png>
 Package pdftex.def Info: immagini/usecaseLogInMedicoPNG.png used on input line 
-531.
+534.
 (pdftex.def)             Requested size: 455.24408pt x 307.7583pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 531--532
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 534--535
  [][] 
  []
 
 [45 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/usecaseLogInMe
 dicoPNG.png>] [46]
-<immagini/usecaseUpdateYourInfoPNG.png, id=656, 381.00745pt x 246.29616pt>
+<immagini/usecaseUpdateYourInfoPNG.png, id=658, 381.00745pt x 246.29616pt>
 File: immagini/usecaseUpdateYourInfoPNG.png Graphic file (type png)
 
 <use immagini/usecaseUpdateYourInfoPNG.png>
 Package pdftex.def Info: immagini/usecaseUpdateYourInfoPNG.png used on input li
-ne 562.
+ne 565.
 (pdftex.def)             Requested size: 455.24408pt x 294.2874pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 562--563
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 565--566
  [][] 
  []
 
@@ -800,54 +798,54 @@ ourInfoPNG.png>] [48
 
 ]
 Capitolo 6.
-<immagini/package_diagram.jpg, id=669, 654.94687pt x 317.68687pt>
+<immagini/package_diagram.jpg, id=671, 654.94687pt x 317.68687pt>
 File: immagini/package_diagram.jpg Graphic file (type jpg)
 
 <use immagini/package_diagram.jpg>
-Package pdftex.def Info: immagini/package_diagram.jpg used on input line 577.
+Package pdftex.def Info: immagini/package_diagram.jpg used on input line 580.
 (pdftex.def)             Requested size: 369.88582pt x 179.41585pt.
  [49 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/package_diagr
 am.jpg>]
-<immagini/component_sistema.png, id=677, 310.15875pt x 191.9672pt>
+<immagini/component_sistema.png, id=679, 310.15875pt x 191.9672pt>
 File: immagini/component_sistema.png Graphic file (type png)
 
 <use immagini/component_sistema.png>
-Package pdftex.def Info: immagini/component_sistema.png used on input line 591.
+Package pdftex.def Info: immagini/component_sistema.png used on input line 594.
 
 (pdftex.def)             Requested size: 284.52756pt x 176.10228pt.
  [50 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/component_sis
 tema.png>]
-<immagini/component_android.png, id=685, 442.65375pt x 237.13594pt>
+<immagini/component_android.png, id=687, 442.65375pt x 237.13594pt>
 File: immagini/component_android.png Graphic file (type png)
 
 <use immagini/component_android.png>
-Package pdftex.def Info: immagini/component_android.png used on input line 607.
+Package pdftex.def Info: immagini/component_android.png used on input line 610.
 
 (pdftex.def)             Requested size: 284.52756pt x 152.43225pt.
 
-<immagini/component_applicazione.png, id=687, 330.48468pt x 255.95625pt>
+<immagini/component_applicazione.png, id=689, 330.48468pt x 255.95625pt>
 File: immagini/component_applicazione.png Graphic file (type png)
 
 <use immagini/component_applicazione.png>
 Package pdftex.def Info: immagini/component_applicazione.png used on input line
- 618.
+ 621.
 (pdftex.def)             Requested size: 298.75264pt x 231.38956pt.
 
-<immagini/componentServerPNG.png, id=688, 219.12263pt x 171.71352pt>
+<immagini/componentServerPNG.png, id=690, 219.12263pt x 171.71352pt>
 File: immagini/componentServerPNG.png Graphic file (type png)
 
 <use immagini/componentServerPNG.png>
-Package pdftex.def Info: immagini/componentServerPNG.png used on input line 627
+Package pdftex.def Info: immagini/componentServerPNG.png used on input line 630
 .
 (pdftex.def)             Requested size: 284.52756pt x 222.99434pt.
  [51 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/component_and
 roid.png>]
-<immagini/componentDatabasePNG.png, id=696, 167.95547pt x 167.95547pt>
+<immagini/componentDatabasePNG.png, id=698, 167.95547pt x 167.95547pt>
 File: immagini/componentDatabasePNG.png Graphic file (type png)
 
 <use immagini/componentDatabasePNG.png>
 Package pdftex.def Info: immagini/componentDatabasePNG.png used on input line 6
-36.
+39.
 (pdftex.def)             Requested size: 298.75264pt x 298.78294pt.
 
 Underfull \vbox (badness 3128) has occurred while \output is active []
@@ -856,22 +854,22 @@ Underfull \vbox (badness 3128) has occurred while \output is active []
 licazione.png> <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/com
 ponentServerPNG.png>] [53 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/i
 mmagini/componentDatabasePNG.png>]
-<immagini/sequence_login.png, id=708, 820.56563pt x 536.75531pt>
+<immagini/sequence_login.png, id=710, 820.56563pt x 536.75531pt>
 File: immagini/sequence_login.png Graphic file (type png)
 
 <use immagini/sequence_login.png>
-Package pdftex.def Info: immagini/sequence_login.png used on input line 661.
+Package pdftex.def Info: immagini/sequence_login.png used on input line 664.
 (pdftex.def)             Requested size: 820.56363pt x 536.75398pt.
 
 
-LaTeX Warning: Float too large for page by 2.62892pt on input line 664.
+LaTeX Warning: Float too large for page by 2.62892pt on input line 667.
 
 [54] [55 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/sequence_
-login.png>] <immagini/sequence_signup.png, id=724, 718.93594pt x 310.91156pt>
+login.png>] <immagini/sequence_signup.png, id=726, 718.93594pt x 310.91156pt>
 File: immagini/sequence_signup.png Graphic file (type png)
 
 <use immagini/sequence_signup.png>
-Package pdftex.def Info: immagini/sequence_signup.png used on input line 674.
+Package pdftex.def Info: immagini/sequence_signup.png used on input line 677.
 (pdftex.def)             Requested size: 426.79135pt x 184.5748pt.
  [56 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/sequence_sign
 up.png>]
@@ -882,450 +880,473 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
+Underfull \hbox (badness 10000) in paragraph at lines 691--693
 
  []
 
-[57
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 693.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [57
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [58]
+Underfull \hbox (badness 10000) in paragraph at lines 735--737
+
+ []
+
 [59]
-Underfull \hbox (badness 10000) in paragraph at lines 761--764
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
 
  []
 
 [60]
-Underfull \hbox (badness 10000) in paragraph at lines 773--775
+Underfull \hbox (badness 10000) in paragraph at lines 775--778
 
- []
-
-
-Overfull \hbox (10.62634pt too wide) in paragraph at lines 787--788
-[]\OT1/cmr/m/n/12 La chia-ma-ta vie-ne fat-ta al ser-vi-zio php di Car Ra-cing 
-Card-board (3d4ambService.php). 
  []
 
 [61]
-Underfull \hbox (badness 10000) in paragraph at lines 789--791
+Underfull \hbox (badness 10000) in paragraph at lines 787--789
 
  []
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 803--804
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--818
+
+ []
+
+[63] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
 File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 801--803
+Underfull \hbox (badness 10000) in paragraph at lines 827--829
 
  []
 
-[62] [63] <immagini/login_post.png, id=867, 1083.04625pt x 1703.36375pt>
+[64] [65] <immagini/login_post.png, id=895, 1083.04625pt x 1703.36375pt>
 File: immagini/login_post.png Graphic file (type png)
 
 <use immagini/login_post.png>
-Package pdftex.def Info: immagini/login_post.png used on input line 825.
+Package pdftex.def Info: immagini/login_post.png used on input line 851.
 (pdftex.def)             Requested size: 142.26378pt x 223.73228pt.
 
-<immagini/attesa.png, id=870, 1084.05pt x 1927.2pt>
+<immagini/attesa.png, id=898, 1084.05pt x 1927.2pt>
 File: immagini/attesa.png Graphic file (type png)
  <use immagini/attesa.png>
-Package pdftex.def Info: immagini/attesa.png used on input line 834.
+Package pdftex.def Info: immagini/attesa.png used on input line 860.
 (pdftex.def)             Requested size: 199.16928pt x 354.05626pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--841
+Underfull \hbox (badness 10000) in paragraph at lines 865--867
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 842--844
+Underfull \hbox (badness 10000) in paragraph at lines 868--870
 
  []
 
-[64 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/login_post.png
+[66 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/login_post.png
 >]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/attesa.png>] 
-[66]
-<immagini/registration_post.png, id=919, 813.0375pt x 1336.995pt>
+ [67 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/attesa.png>] 
+[68]
+<immagini/registration_post.png, id=948, 813.0375pt x 1336.995pt>
 File: immagini/registration_post.png Graphic file (type png)
 
 <use immagini/registration_post.png>
-Package pdftex.def Info: immagini/registration_post.png used on input line 883.
+Package pdftex.def Info: immagini/registration_post.png used on input line 909.
 
 (pdftex.def)             Requested size: 199.16928pt x 327.51564pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--900
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
 
  []
 
-[67 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/registration_p
+[69 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/registration_p
 ost.png>]
-Underfull \vbox (badness 1997) has occurred while \output is active []
-
- [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
-<immagini/email_registrazione.jpg, id=987, 608.2725pt x 214.55156pt>
-File: immagini/email_registrazione.jpg Graphic file (type jpg)
-
-<use immagini/email_registrazione.jpg>
-Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 97
-3.
-(pdftex.def)             Requested size: 426.79135pt x 150.5419pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [70]
-[71 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/email_registra
-zione.jpg>]
-<immagini/email_reset_password.jpg, id=1013, 592.46344pt x 124.21407pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+<immagini/email_registrazione.jpg, id=1019, 608.2725pt x 214.55156pt>
+File: immagini/email_registrazione.jpg Graphic file (type jpg)
+
+<use immagini/email_registrazione.jpg>
+Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 98
+9.
+(pdftex.def)             Requested size: 426.79135pt x 150.5419pt.
+ [72]
+<immagini/email_reset_password.jpg, id=1037, 592.46344pt x 124.21407pt>
 File: immagini/email_reset_password.jpg Graphic file (type jpg)
 
 <use immagini/email_reset_password.jpg>
 Package pdftex.def Info: immagini/email_reset_password.jpg used on input line 9
-83.
+99.
 (pdftex.def)             Requested size: 426.79135pt x 89.48332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 988--990
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1006
 
  []
 
-[72 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/email_reset_pa
-ssword.jpg>] [73]
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1031
-
- []
-
-
+[73 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/email_registra
+zione.jpg> <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/email_r
+eset_password.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1047
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-[76]
+ [76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+[78]
 File: immagini/gameover.png Graphic file (type png)
  <use immagini/gameover.png>
-Package pdftex.def Info: immagini/gameover.png used on input line 1089.
+Package pdftex.def Info: immagini/gameover.png used on input line 1105.
 (pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1100--1102
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1118
 
  []
 
 
 Underfull \vbox (badness 1939) has occurred while \output is active []
 
- [77]
+ [79]
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [78]
+ [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [79]
-[80]
-Underfull \vbox (badness 5446) has occurred while \output is active []
 
  [81]
+[82]
+Underfull \vbox (badness 5446) has occurred while \output is active []
+
+ [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1232
+ [84]
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1248
 
  []
 
-<immagini/explosion_anim1.png, id=1246, 361.35pt x 30.1125pt>
+<immagini/explosion_anim1.png, id=1274, 361.35pt x 30.1125pt>
 File: immagini/explosion_anim1.png Graphic file (type png)
 
 <use immagini/explosion_anim1.png>
-Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1235.
+Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1251.
 (pdftex.def)             Requested size: 426.79135pt x 35.56642pt.
- [83 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/explosion_ani
-m1.png>] [84] [85] [86]
+ [85 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/explosion_ani
+m1.png>] [86] [87] [88]
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [87]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [88]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [89]
-[90]
-Underfull \vbox (badness 1189) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [91]
 [92]
-Underfull \hbox (badness 10000) in paragraph at lines 1415--1416
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [93]
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 1431--1432
 
  []
 
-[93] [94]
+[95] [96]
 Capitolo 8.
-[95
+[97
 
-] <immagini/git1.png, id=1455, 423.08063pt x 224.33812pt>
+] <immagini/git1.png, id=1484, 423.08063pt x 224.33812pt>
 File: immagini/git1.png Graphic file (type png)
 
 <use immagini/git1.png>
-Package pdftex.def Info: immagini/git1.png used on input line 1440.
+Package pdftex.def Info: immagini/git1.png used on input line 1456.
 (pdftex.def)             Requested size: 426.79135pt x 226.3127pt.
 
-<immagini/git2.png, id=1456, 1028.34187pt x 512.66531pt>
+<immagini/git2.png, id=1485, 1028.34187pt x 512.66531pt>
 File: immagini/git2.png Graphic file (type png)
 
 <use immagini/git2.png>
-Package pdftex.def Info: immagini/git2.png used on input line 1449.
+Package pdftex.def Info: immagini/git2.png used on input line 1465.
 (pdftex.def)             Requested size: 426.79135pt x 212.7756pt.
- [96 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/git1.png> <C:
+ [98 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/git1.png> <C:
 /Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/git2.png>]
-<immagini/daily_active_user.jpg, id=1465, 746.03719pt x 426.09187pt>
+<immagini/daily_active_user.jpg, id=1494, 746.03719pt x 426.09187pt>
 File: immagini/daily_active_user.jpg Graphic file (type jpg)
 
 <use immagini/daily_active_user.jpg>
-Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1466
+Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1482
 .
 (pdftex.def)             Requested size: 426.79135pt x 243.7526pt.
 
-<immagini/daily_new_users.jpg, id=1466, 735.49782pt x 418.56375pt>
+<immagini/daily_new_users.jpg, id=1495, 735.49782pt x 418.56375pt>
 File: immagini/daily_new_users.jpg Graphic file (type jpg)
 
 <use immagini/daily_new_users.jpg>
-Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1473.
+Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1489.
 (pdftex.def)             Requested size: 426.79135pt x 242.88847pt.
 
-<immagini/molthly_active_users.jpg, id=1467, 730.22812pt x 414.04688pt>
+<immagini/molthly_active_users.jpg, id=1496, 730.22812pt x 414.04688pt>
 File: immagini/molthly_active_users.jpg Graphic file (type jpg)
 
 <use immagini/molthly_active_users.jpg>
 Package pdftex.def Info: immagini/molthly_active_users.jpg used on input line 1
-480.
+496.
 (pdftex.def)             Requested size: 426.79135pt x 241.99216pt.
 
-<immagini/crash_free_users.jpg, id=1468, 727.21687pt x 338.01282pt>
+<immagini/crash_free_users.jpg, id=1497, 727.21687pt x 338.01282pt>
 File: immagini/crash_free_users.jpg Graphic file (type jpg)
 
 <use immagini/crash_free_users.jpg>
-Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1487.
+Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1503.
 
 (pdftex.def)             Requested size: 426.79135pt x 198.37881pt.
- [97 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/daily_active_
-user.jpg>] [98 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/dai
-ly_new_users.jpg> <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/
-molthly_active_users.jpg>] [99 <C:/Users/matteo/Documents/GitHub/CardboardApp/t
-esi/immagini/crash_free_users.jpg>] [100
+ [99 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/daily_active_
+user.jpg>] [100 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/da
+ily_new_users.jpg> <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini
+/molthly_active_users.jpg>] [101 <C:/Users/matteo/Documents/GitHub/CardboardApp
+/tesi/immagini/crash_free_users.jpg>]
+[102
 
-]
-[101] [102]
+] [103] [104]
 Capitolo 9.
-<immagini/sito2.png, id=1499, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=1528, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 1505.
+Package pdftex.def Info: immagini/sito2.png used on input line 1521.
 (pdftex.def)             Requested size: 426.79135pt x 203.42871pt.
 
 Underfull \vbox (badness 1019) has occurred while \output is active []
 
- [103
+ [105
 
  <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/sito2.png>]
-<immagini/stats_play_store.png, id=1514, 706.89093pt x 118.94438pt>
+<immagini/stats_play_store.png, id=1542, 706.89093pt x 118.94438pt>
 File: immagini/stats_play_store.png Graphic file (type png)
 
 <use immagini/stats_play_store.png>
-Package pdftex.def Info: immagini/stats_play_store.png used on input line 1516.
+Package pdftex.def Info: immagini/stats_play_store.png used on input line 1532.
 
 (pdftex.def)             Requested size: 426.79135pt x 71.81364pt.
- [104 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/stats_play_s
+ [106 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/stats_play_s
 tore.png>]
 Capitolo 10.
-<immagini/certifications.png, id=1524, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=1552, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 1537.
+Package pdftex.def Info: immagini/certifications.png used on input line 1553.
 (pdftex.def)             Requested size: 426.79135pt x 72.18782pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [105
+ [107
 
 ]
-[106 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/certification
-s.png>] <rehab2015_racecardboard.pdf, id=1538, 597.50829pt x 845.0471pt>
+[108 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/immagini/certification
+s.png>] <rehab2015_racecardboard.pdf, id=1566, 597.50829pt x 845.0471pt>
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1573.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1589.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
  <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1573.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1589.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1573.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1589.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
  <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1573.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1589.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1573.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1589.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-<rehab2015_racecardboard.pdf, id=1544, page=1, 597.50829pt x 845.0471pt>
+<rehab2015_racecardboard.pdf, id=1572, page=1, 597.50829pt x 845.0471pt>
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1573.
+1589.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1573.
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [107]
+ [109]
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1573.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 1>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1573.
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1573.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [108 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/rehab2015_racecardboa
-rd.pdf>]
-<rehab2015_racecardboard.pdf, id=1627, page=2, 597.50829pt x 845.0471pt>
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 2>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
-1573.
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 2>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
-1573.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 2>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
-1573.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [109 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/rehab2015_racecardboa
-rd.pdf>]
-<rehab2015_racecardboard.pdf, id=1644, page=3, 597.50829pt x 845.0471pt>
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 3>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
-1573.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 3>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
-1573.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 3>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
-1573.
+<use rehab2015_racecardboard.pdf, page 1>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [110 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/rehab2015_racecardboa
 rd.pdf>]
-<rehab2015_racecardboard.pdf, id=1653, page=4, 597.50829pt x 845.0471pt>
+<rehab2015_racecardboard.pdf, id=1656, page=2, 597.50829pt x 845.0471pt>
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 4>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
-1573.
+<use rehab2015_racecardboard.pdf, page 2>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 4>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
-1573.
+<use rehab2015_racecardboard.pdf, page 2>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 4>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
-1573.
+<use rehab2015_racecardboard.pdf, page 2>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
+1589.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [111 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/rehab2015_racecardboa
 rd.pdf>]
-(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [112])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1588.
- [113
+<rehab2015_racecardboard.pdf, id=1672, page=3, 597.50829pt x 845.0471pt>
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 3>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
+1589.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 3>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
+1589.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 3>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
+1589.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [112 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/rehab2015_racecardboa
+rd.pdf>]
+<rehab2015_racecardboard.pdf, id=1681, page=4, 597.50829pt x 845.0471pt>
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 4>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
+1589.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 4>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
+1589.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 4>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
+1589.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [113 <C:/Users/matteo/Documents/GitHub/CardboardApp/tesi/rehab2015_racecardboa
+rd.pdf>]
+(C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.bbl [114])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1604.
+ [115
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1588.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1604.
 
 (C:\Users\matteo\Documents\GitHub\CardboardApp\tesi\tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1588.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1588.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1604.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1604.
 
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: D2892E6B7AEF681E68F6A72212549906;4317.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1588.
+(rerunfilecheck)             Checksum: 0BC58437BC95662E7AAF5353DB414D9E;4324.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1604.
  ) 
 Here is how much of TeX's memory you used:
- 14449 strings out of 493921
- 220177 string characters out of 3144873
- 698241 words of memory out of 3000000
- 16704 multiletter control sequences out of 15000+200000
- 12624 words of font info for 49 fonts, out of 3000000 for 9000
+ 14653 strings out of 493921
+ 221052 string characters out of 3144873
+ 698455 words of memory out of 3000000
+ 16873 multiletter control sequences out of 15000+200000
+ 20216 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 39i,18n,51p,1259b,3700s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
-w/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tesi.pdf (113 pages, 8595888 bytes).
+ 39i,18n,51p,1258b,3003s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ectt1200.pk> <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm0600.pk> <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\matteo\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\matteo\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\matteo\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\
+matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>
+ <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+cbx1440.pk> <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2488.pk> <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\matteo\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helveti
+c/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on tesi.pdf (115 pages, 8668192 bytes).
 PDF statistics:
- 1880 PDF objects out of 2073 (max. 8388607)
- 820 named destinations out of 1000 (max. 500000)
+ 2400 PDF objects out of 2487 (max. 8388607)
+ 840 named destinations out of 1000 (max. 500000)
  773 words of extra memory for PDF output out of 10000 (max. 10000000)
 

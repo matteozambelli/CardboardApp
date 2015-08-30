@@ -24,7 +24,14 @@ public class PanoramaManager implements PanoramaManagerInterface
         int pick = new Random().nextInt(Side.values().length);
         selectedSide= Side.values()[pick];
         idSubject= (int)(numberOfSubject*Math.random())+1;
-
+        if(previousSide==selectedSide){
+            countPrevious++;
+            if(countPrevious>3){
+                selectedSide++;
+                if(selectedSide>3) selectedSide=1;
+            }
+        }
+        previousSide=selectedSide;
     }
 
 

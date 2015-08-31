@@ -106,18 +106,28 @@
 %----------------------------------------------------------------------------------------
 %	Ringraziamenti
 %----------------------------------------------------------------------------------------	
+
 	
 \chapter*{}
 \thispagestyle{empty}
 	\vspace{\fill}
 	\begin{flushright}
-		Ringraziamo il Professor Angelo Gargantini per i preziosi insegnamenti, Silvia Bonfanti per il supporto nella stesura di questo elaborato, inoltre vogliamo ringraziare le nostre famiglie per il sostegno ed il grande aiuto.\\ 
+		Ringraziamo il Professor Angelo Gargantini per i preziosi insegnamenti, la Dott.ssa Silvia Bonfanti per il supporto nella stesura di questo elaborato, inoltre vogliamo ringraziare le nostre famiglie per il sostegno ed il grande aiuto.\par\bigskip
 		\textit{Fabio e Matteo}
 		
 	\end{flushright}
 	
-\thispagestyle{empty}	
-\tableofcontents % l'indice
+
+	
+
+%----------------------------------------------------------------------------------------
+%	Indice
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+\pagenumbering{gobble}
+\tableofcontents
+\cleardoublepage	
+\pagenumbering{arabic}
 
 %----------------------------------------------------------------------------------------
 %	PARTE I
@@ -182,7 +192,7 @@ Per il trattamento dell'ambliopia sono stati proposti anche degli stimolatori vi
 \section{L'idea di 3D4Amb}\label{idea_3D4Amb}
 3D4Amb ha ideato un sistema basato sulle tecnologie 3D per consentire la visione binoculare. L'uso classico di un sistema 3D è quello di fornire ai due occhi diverse immagini della stessa scena con angoli di visualizzazione leggermente sfalsati che corrispondono ai diversi punti di vista dell' occhio destro e sinistro. Questa visione produce un'illusione di profondità della scena ed è la base della realtà virtuale.\\                                                         
 Il principio primario del sistema è che all' occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
-Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare, ma l'occhio sano non è ''patchato''. Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
+Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare, ma l'occhio sano non è \virgolette{patchato}. Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
 
 
 \begin{figure}[t]
@@ -200,8 +210,8 @@ In questo terzo capitolo viene spiegata la scelta del sistema operativo dell'app
 \section{Sistema operativo ed ambiente di sviluppo}\label{SO_ADS}
 L'applicazione è stata progettata e sviluppata per il mondo Android. I software utilizzati per l'implementazione sono stati:
 \begin{itemize}
-	\item L'ultima versione del JDK, il kit di sviluppo per la tradizionale programmazione Java, reperibile dal sito Oracle\footnote{http://www.oracle.com/technetwork/java/javase/downloads/index.html} .
-	\item L'IDE (ambiente di sviluppo integrato) Android Studio, alternativa fresca e promettente ad Eclipse. La sua installazione include il pacchetto di strumenti Android SDK, il quale è costituito da programmi, emulatori e piattaforme per ogni versione di Android. La sua composizione inoltre non è immutabile, ma viene gestita tramite il programma Android SDK Manager, avviabile dall'IDE, grazie al quale siamo stati in grado di profilare le piattaforme e gli strumenti presenti nel SDK nella maniera più congeniale al nostro lavoro.
+	\item l'ultima versione del JDK, il kit di sviluppo per la tradizionale programmazione Java, reperibile dal sito Oracle\footnote{http://www.oracle.com/technetwork/java/javase/downloads/index.html} ;
+	\item l'IDE (ambiente di sviluppo integrato) Android Studio, alternativa fresca e promettente ad Eclipse. La sua installazione include il pacchetto di strumenti Android SDK, il quale è costituito da programmi, emulatori e piattaforme per ogni versione di Android. La sua composizione inoltre non è immutabile, ma viene gestita tramite il programma Android SDK Manager, avviabile dall'IDE, grazie al quale siamo stati in grado di profilare le piattaforme e gli strumenti presenti nel SDK nella maniera più congeniale al nostro lavoro.
 	
 \end{itemize}
 
@@ -393,10 +403,10 @@ In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed 
 \section{Architettura di sistema}\label{architettura_di_sistema}
 Il sistema prevede le seguenti componenti:
 \begin{itemize}
-	\item Google Cardboard (vedi sezione \ref{sectionGC})
-	\item Smartphone Android con connessione internet attiva
-	\item Auricolari con tasti di controllo del volume
-	\item Server Linux con database MySql
+	\item Google Cardboard (vedi sezione \ref{sectionGC});
+	\item smartphone Android con connessione internet attiva;
+	\item auricolari con tasti di controllo del volume;
+	\item server Linux con database MySql.
 \end{itemize}
 Lo smartphone (con S.O. Android) va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso.\\
 Al dispositivo vanno collegati degli auricolari con il controllo del volume (come quelli che si trovano nelle confezioni dei telefoni all'acquisto), saranno necessari  per controllare il movimento della macchinina.
@@ -435,30 +445,30 @@ Tutte le componenti lato client (Android), sono realizzate in java e xml, per in
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
 \begin{enumerate}
-	\item L'utente lancia l'applicazione.
-	\item L'utente clicca sul pulsante di Sign Up.
-	\item L'utente inserisce i propri dati (first name, last name, email, birthday, favourite color, password, password di conferma) e clicca Ok.
+	\item l'utente lancia l'applicazione;
+	\item l'utente clicca sul pulsante di Sign Up;
+	\item l'utente inserisce i propri dati (first name, last name, email, birthday, favourite color, password, password di conferma) e clicca Ok.
 \end{enumerate}
 \paragraph{Situazioni eccezionali:}
 \begin{enumerate}
-	\item[1a.] L'utente lascia vuoti alcuni campi.
-	\item[1b.] L'applicazione risponde con un toggle che segnala che alcuni campi sono da compilare e non permette il Sign Up.
+	\item[1a.] l'utente lascia vuoti alcuni campi;
+	\item[1b.] l'applicazione risponde con un toggle che segnala che alcuni campi sono da compilare e non permette il Sign Up.
 \end{enumerate}
 \begin{enumerate}
-	\item[2a.] L' email inserita dall' utente non esiste.
-	\item[2b.] L'applicazione risponde tramite una warning, segnalando all'utente l'insesistenza dell'email inserita, non permettendo la registrazione.
+	\item[2a.] l' email inserita dall' utente non esiste;
+	\item[2b.] l'applicazione risponde tramite una warning, segnalando all'utente l'insesistenza dell'email inserita, non permettendo la registrazione.
 \end{enumerate}
 \begin{enumerate}
-	\item[3a.] L' email inserita dall' utente è già presente nel database.
-	\item[3b.] L'applicazione risponde tramite una warning, segnalando all'utente che la mail non è valida, non permettendo la registrazione.
+	\item[3a.] l' email inserita dall' utente è già presente nel database;
+	\item[3b.] l'applicazione risponde tramite una warning, segnalando all'utente che la mail non è valida, non permettendo la registrazione.
 \end{enumerate}
 \begin{enumerate}
-	\item[4a.] La data di nascita inserita non è valida.
-	\item[4b.] L'applicazione risponde tramite una warning, non permettendo la registrazione.
+	\item[4a.] la data di nascita inserita non è valida;
+	\item[4b.] l'applicazione risponde tramite una warning, non permettendo la registrazione.
 \end{enumerate}
 \begin{enumerate}
-	\item[5a.] La password di conferma non corrisponde alla password inserita.
-	\item[5b.] L'applicazione risponde tramite una warning, segnalando l'errore e non permettendo il Sign Up.
+	\item[5a.] la password di conferma non corrisponde alla password inserita;
+	\item[5b.] l'applicazione risponde tramite una warning, segnalando l'errore e non permettendo il Sign Up.
 \end{enumerate}
 
 \paragraph{Postcondizioni:}
@@ -477,22 +487,22 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
 \begin{enumerate}
-	\item L'utente lancia l'applicazione.
-	\item L'utente inserisce i campi email e password utilizzati nella fase di Sign Up.
-	\item L'utente clicca sul pulsante di Log In.
+	\item l'utente lancia l'applicazione;
+	\item l'utente inserisce i campi email e password utilizzati nella fase di Sign Up;
+	\item l'utente clicca sul pulsante di Log In.
 \end{enumerate}
 \paragraph{Situazioni eccezionali:}
 \begin{enumerate}
-	\item[1a.] L'utente lascia vuoto il campo email o il campo password.
-	\item[1b.] L'applicazione risponde con un toggle, il quale segnala che alcuni campi sono da compilare e non permette il Log In.
+	\item[1a.] l'utente lascia vuoto il campo email o il campo password;
+	\item[1b.] l'applicazione risponde con un toggle, il quale segnala che alcuni campi sono da compilare e non permette il Log In.
 \end{enumerate}
 \begin{enumerate}
-	\item[2a.] L'utente inserisce un email non presente nel database.
-	\item[2b.] L'applicazione risponde tramite una warning, segnalando all'utente la non presenza dell' email nel database MySql.
+	\item[2a.] l'utente inserisce un email non presente nel database;
+	\item[2b.] l'applicazione risponde tramite una warning, segnalando all'utente la non presenza dell' email nel database MySql.
 \end{enumerate}
 \begin{enumerate}
-	\item[3a.] L'utente inserisce un email presente nel database ma con password scorretta.
-	\item[3b.] L'applicazione risponde tramite una warning, segnalando all'utente che la password inserita non è corretta, non permettendo il Log In.
+	\item[3a.] l'utente inserisce un email presente nel database ma con password scorretta;
+	\item[3b.] l'applicazione risponde tramite una warning, segnalando all'utente che la password inserita non è corretta, non permettendo il Log In.
 \end{enumerate}
 \paragraph{Postcondizioni:}
 Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene eseguito.
@@ -511,19 +521,19 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet. E' necessario che il medico abbia sottomano i dati del paziente.
 \paragraph{Passi principali:}
 \begin{enumerate}
-	\item Il medico lancia l'applicazione.
-	\item Il medico inserisce i campi email e password utilizzati nella fase di Sign Up.
-	\item Il medico clicca sul pulsante di Log In.
-	\item Il medico inserisce i dati del paziente nella form successiva alla fase di Log In.
+	\item il medico lancia l'applicazione;
+	\item il medico inserisce i campi email e password utilizzati nella fase di Sign Up;
+	\item il medico clicca sul pulsante di Log In;
+	\item il medico inserisce i dati del paziente nella form successiva alla fase di Log In.
 \end{enumerate}
 \paragraph{Situazioni eccezionali:}
 \begin{enumerate}
-	\item[1a.] Il medico lascia vuoti alcuni dati del paziente
-	\item[1b.] L'applicazione risponde con un toggle, il quale segnala che alcuni campi sono da compilare e non permette l'avvio del gioco.
+	\item[1a.] il medico lascia vuoti alcuni dati del paziente;
+	\item[1b.] l'applicazione risponde con un toggle, il quale segnala che alcuni campi sono da compilare e non permette l'avvio del gioco.
 \end{enumerate}
 \begin{enumerate}
-	\item[2a.] L'utente inserisce una data di nascita non valida per il paziente.
-	\item[2b.] L'applicazione risponde tramite una warning, segnalando che la data non è valida e non permettendo l' avvio del gioco.
+	\item[2a.] l'utente inserisce una data di nascita non valida per il paziente;
+	\item[2b.] l'applicazione risponde tramite una warning, segnalando che la data non è valida e non permettendo l' avvio del gioco.
 \end{enumerate}
 \paragraph{Postcondizioni:}
 Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene avviato.
@@ -542,20 +552,20 @@ Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene 
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
 \begin{enumerate}
-	\item L'utente avvia l' applicazione.
-	\item L'utente clicca sul link Update Your Info.
-	\item L'utente sceglie la credenziale di cui vuole fare l' update.
-	\item L'utente effettua il Log In utilizzando le credenziali precenti all'update.
-	\item L'utente inserisce il nuovo valore della credenziale da modificare e clicca Ok.
+	\item l'utente avvia l' applicazione;
+	\item l'utente clicca sul link Update Your Info;
+	\item l'utente sceglie la credenziale di cui vuole fare l' update;
+	\item l'utente effettua il Log In utilizzando le credenziali precenti all'update;
+	\item l'utente inserisce il nuovo valore della credenziale da modificare e clicca Ok.
 \end{enumerate}
 \paragraph{Situazioni eccezionali:}
 \begin{enumerate}
-	\item[1a.] Le credenziali di Log In non sono valide
-	\item[1b.] L'applicazione risponde con un warning e rimanda alla schermata principale.
+	\item[1a.] le credenziali di Log In non sono valide;
+	\item[1b.] l'applicazione risponde con un warning e rimanda alla schermata principale.
 \end{enumerate}
 \begin{enumerate}
-	\item[2a.] La nuova credenziale inserita non è valida.
-	\item[2b.] L'applicazione risponde tramite una warning, rimandando alla schermata principale.
+	\item[2a.] la nuova credenziale inserita non è valida;
+	\item[2b.] l'applicazione risponde tramite una warning, rimandando alla schermata principale.
 \end{enumerate}
 \paragraph{Postcondizioni:}
 L'update delle credenziali selezionate viene eseguito correttamente.
@@ -646,17 +656,17 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \subsection{Funziononamento con log in}
 All'avvio dell'applicazione, se l'utente ha popolato correttamente i campi email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
 \begin{itemize}
-	\item alla classe PostCall vengono passate la stringa contentente l'email e quella della password
-	\item la classe PostCall effettua una chiamata post al server cs.unibg.it, più precisamente al servizio 3d4ambservice.php
+	\item alla classe PostCall vengono passate la stringa contentente l'email e quella della password;
+	\item la classe PostCall effettua una chiamata post al server cs.unibg.it, più precisamente al servizio 3d4ambservice.php .
 \end{itemize}
 Il servizio php verifica nel database se l'email e la password sono corrette, e manda un messaggio di risposta alla PostCall, la quale effettua un parsing della risposta e restituisce un messaggio all'interfaccia corrente.\\
 A questo punto la dialog ring viene interrotta, e nello scenario di un' autenticazione corretta, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
 Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un' animazione d'avvio. Viene avviata ora la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
 Confermata la scelta dell'occhio, si apre la MainActivity, contenente il gioco vero e proprio, i thread principali sono tre:
 \begin{enumerate}
-	\item GameThread: che gestisce i nemici e l'auto dell'utente
-	\item TimerPanorama: per la gestione del panorama laterale
-	\item TimerSun: per la gestione del sole e delle nuvole sullo sfondo
+	\item GameThread: che gestisce i nemici e l'auto dell'utente;
+	\item TimerPanorama: per la gestione del panorama laterale;
+	\item TimerSun: per la gestione del sole e delle nuvole sullo sfondo.
 \end{enumerate}
 Terminato il gioco (gameover) è possibile richiedere i risultati via mail oppure ricominciare a giocare, in ogni caso viene fatta una chiamata post per memorizzare i risultati sul server (Figura \ref{sequence_login}).
 \begin{figure}[p]
@@ -804,7 +814,7 @@ Le chiamate che possono essere effettuate dal client sono varie e per ognuna è s
 \begin{lstlisting}
 HttpPost httppost = new HttpPost("http://3d4amb.unibg.it/3dcar/3d4ambService.php");
 \end{lstlisting}
-Dopo aver inizializzato l'oggetto httppost vengono inizializzate le stringhe sopra citate\\
+Dopo aver inizializzato l'oggetto httppost vengono inizializzate le stringhe sopra citate.\\
 \begin{lstlisting}[language=java]
 List<NameValuePair> nameValuePairsUpdateString = new ArrayList<NameValuePair>(3);
 List<NameValuePair> nameValuePairsLogIn = new ArrayList<NameValuePair>(3);
@@ -824,7 +834,7 @@ Infine in base al tipo di chiamata che deve essere effettuata, tali stringhe ven
 		 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairsLogIn));
 	 }
 \end{lstlisting} 
-\paragraph{Gestione delle chiamate lato server:} le chiamate effettuate lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute lato server eseguendo una Post sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database (come mostrato nel codice)
+\paragraph{Gestione delle chiamate lato server:} le chiamate effettuate lato client, gestite tramite l'arrayList "ArrayList<NameValuePair>(i)", vengono ricevute lato server eseguendo una Post sul parametro "type", in seguito alla connessione a MySql ed alla selezione del database (come mostrato nel codice):
 \\
 \begin{lstlisting}[language=php]
 
@@ -844,29 +854,28 @@ $type = $_POST['type'];
 \end{lstlisting}
 
 In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di sign up, log in,log in come dottore, report, reset della password o update dei dati personali, viene eseguito uno 'switch' per intraprendere diverse azioni in base alla procedura scelta.
+
 \newpage
 \subsection*{Log in}La chiamata Post per il log in avviene ogni volta che l'utente preme l'apposito pulsante (Figura \ref{login_post}):
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=50mm]{immagini/login_post}
+	\includegraphics[width=45mm]{immagini/login_post}
 	\caption{}
 	\label{login_post}
 \end{figure}
 
-Per effettuare il log in vengono inviate al server email e password, che prima di essere inviata viene cifrata (vedi \ref{cifratura}).\\
+Per effettuare il log in vengono inviate al server email e password, che prima di essere inviata viene cifrata (vedi sezione \ref{cifratura}).
 All' utente viene mostrata una finestra in attesa di una risposta dal server (Figura \ref{attesa}):
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=70mm]{immagini/attesa}
+	\includegraphics[width=45mm]{immagini/attesa}
 	\caption{interfaccia di attesa}
 	\label{attesa}
 \end{figure}
+\newpage
+Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente), altrimenti viene mostrata una finestra contenente una descrizione dell'errore.\\
+La procedura di Log In è trattata lato server nel seguente modo:\\
 
-Se il servizio risponde in maniera positiva viene lanciata l'activity successiva (SplashActivity o TutorialActivity a seconda delle impostazioni utente), altrimenti viene mostrata una finestra contenente una descrizione dell'errore.
-\\
-
-La procedura di Log In è trattata lato server nel seguente modo.
-\\
 \begin{lstlisting}[language=php]
 
 case "log_in":
@@ -901,6 +910,8 @@ case "log_in":
 \end{lstlisting}
 
 Come si può vedere sopra, viene eseguito un controllo sui campi email e password e viene restituita una stringa che informa sull'esito dell'operazione. Viene inoltre restituito un valore concatenato (\$doc, 0 or 1) per indicare se si tratta del Log In di un utente comune o di un dottore, il quale dovrà quindi aggiungere successivamente i dati del paziente.
+
+
 \newpage
 \subsection*{Sign up}\label{signup_label}
 L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha premuto il tasto \virgolette{ok} (Figura \ref{registration_post})
@@ -912,7 +923,7 @@ L'evento post call per la registrazione (sign up) avviene dopo che l'utente ha p
 \end{figure}
 
 Al server  vengono inviati i seguenti parametri: nome, cognome, email, colore preferito, data di nascita e password.\\
-Se va tutto a buon fine il nuovo utente viene inserito nel database:\\
+Se va tutto a buon fine il nuovo utente viene inserito nel database.\\
 
 \begin{lstlisting}[language=php]
 
@@ -1042,7 +1053,7 @@ Come si può vedere, vengono dapprima catturati i valori relativi alla nuova pass
 \subsection*{Doctor call}
 Nel caso in cui l' utente, effettua l'accesso come dottore, viene reindirizzato ad un' apposita pagina: DoctorActivity. Il dottore può inserire i dati dei pazienti, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
 L' utilizzo dell'applicazione da parte di un dottore prevede inoltre l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
-La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo.
+La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo:
 \\
 \begin{lstlisting}[language=php]
 
@@ -1290,7 +1301,7 @@ La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei 
 \newpage
 \section{Game Thread}\label{game_thread}
 
-La parte principale dell'applicazione è stata sviluppata all'interno della classe GameThread. Essa estende la classe Thread ed effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le immagini (di tipo imageView) relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i layout (di tipo relativeLayout) riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Sono inoltre presenti l'activity da cui parte la chiamata a questo thread, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:
+La parte principale dell'applicazione è stata sviluppata all'interno della classe GameThread. Essa estende la classe Thread ed effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le immagini (di tipo imageView) relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i layout (di tipo relativeLayout) riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Sono inoltre presenti l'activity da cui parte la chiamata a questo thread, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1302,7 +1313,7 @@ int width, int height,String id_user) { ... }
 
 \end{lstlisting}
 
-La parte principale della classe GameThread è contenuta all' interno del metodo run(). Le principali azioni vengono lanciate all' interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell' interfaccia utente. Nel thread viene controllato il numero di vite attuale dell' utente. Se il valore delle vite rimaste è pari a '0', vengono eseguite le procedure relative alla fase di GameOver. Se l'utente è registrato viene mostrato il report a schermo e viene inviata la mail contenente lo storico ed i progressi dell'utente, altrimenti verrà visualizzato solo il report. Nel caso in cui il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale immettere il nuovo nemico scelta dall'algoritmo random precedentemente esplicato. Si esegue successivamente un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o nella parte centrale dello schermo. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:
+La parte principale della classe GameThread è contenuta all' interno del metodo run(). Le principali azioni vengono lanciate all' interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell' interfaccia utente. Nel thread viene controllato il numero di vite attuale dell' utente. Se il valore delle vite rimaste è pari a '0', vengono eseguite le procedure relative alla fase di GameOver. Se l'utente è registrato viene mostrato il report a schermo e viene inviata la mail contenente lo storico ed i progressi dell'utente, altrimenti verrà visualizzato solo il report. Nel caso in cui il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale immettere il nuovo nemico scelta dall'algoritmo random precedentemente esplicato. Si esegue successivamente un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o nella parte centrale dello schermo. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1339,7 +1350,7 @@ if (pick == 2) {
 
 \end{lstlisting}
 
-L' implementazione dell'animazione sull' oggetto animationEnemies verrà descritta più in dettaglio nella sezione \ref{gestione_animazione}. Il metodo onAnimationTimer() implementa i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, la soluzione adottata per far scomparire all'attimo esatto le macchine evitate è stata quella di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l' obiettivo di fare da 'target'. Le imageView che fanno da target hanno visibilità nulla. L' animazione di quest' ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l' esempio di tale implementazione adottato nella corsia centrale:
+L' implementazione dell'animazione sull' oggetto animationEnemies verrà descritta più in dettaglio nella sezione \ref{gestione_animazione}. Il metodo onAnimationTimer() implementa i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, la soluzione adottata per far scomparire all'attimo esatto le macchine evitate è stata quella di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l' obiettivo di fare da 'target'. Le imageView che fanno da target hanno visibilità nulla. L' animazione di quest' ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l' esempio di tale implementazione adottato nella corsia centrale:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1384,7 +1395,7 @@ Come si può vedere, si agisce sugli oggetti animationEnemies sfruttando l' event
 \newpage
 \section{Gestione animazioni}\label{gestione_animazione}
 La gestione delle animazione relative alle auto nemiche ed al paesaggio, è stata realizzata estendendo la classe Animation messa a disposizione da Android. In seguito verrà presentato l' esempio relativo alle auto nemiche; per quanto rigurda il panorama, è stato applicato il medesimo principio.\\
-Per ogni corsia, è stato necessario creare un 'AnimationSet', ovvero un gruppo di animazioni riproducibile simultaneamente:\\
+Per ogni corsia, è stato necessario creare un 'AnimationSet', ovvero un gruppo di animazioni riproducibile simultaneamente.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1422,10 +1433,10 @@ Per ottimizzare l'utilizzo della memoria del device da parte dell'applicazione s
 In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell' applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall' interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
 \paragraph{I quattro passi:} un Asynctask in android si divide in quattro \virgolette{step}
 \begin{enumerate}
-	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} prima che il task venga eseguito. Qui viene solitamento messo il setup del task
+	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} prima che il task venga eseguito. Qui viene solitamento messo il setup del task;
 	\item doInBackground(Params...), invocato nel background del thread, subito dopo onPreExecute(). Questo step è usato per eseguire computazioni in background che possono durare molto tempo.
-	Il risultato della computazione deve essere tornato in questo step, e possono essere pubblicati grazie a publishProgress(Progress...). I valori sono passati all' UI thread nello step onProgressUpdate(Progress...).
-	\item onProgressUpdate(Progress...), invocato nell' UI thread dopo aver chiamato publicProgress(Progress...). Questo metodo è usato per mostrare ogni progresso nella UI mentre in backgrond la computazione è ancora in esecuzione
+	Il risultato della computazione deve essere tornato in questo step, e possono essere pubblicati grazie a publishProgress(Progress...). I valori sono passati all' UI thread nello step onProgressUpdate(Progress...);
+	\item onProgressUpdate(Progress...), invocato nell' UI thread dopo aver chiamato publicProgress(Progress...). Questo metodo è usato per mostrare ogni progresso nella UI mentre in backgrond la computazione è ancora in esecuzione;
 	\item onPostExecute(Result), invocato dopo che la computazione in background è finita.\cite{aos}.
 \end{enumerate}
 In Car Racing Cardboard gli asynctask sono usati per gestire: il movimento del panorama, il sole e le nuvole sullo sfondo. Di seguito un esempio di utilizzo di asynctask, si tratta in questo caso del task asincrono che gestisce il sole.\\
@@ -1555,13 +1566,13 @@ L'applicazione ha ricevuto delle certificazioni da Google Play Store:
 \end{figure}
 
 \begin{itemize}
-		\item Australian Classification Board (ACB) --	Australia
-		\item Classificação Indicativa (ClassInd) --	Brazil
-		\item Entertainment Software Rating Board (ESRB) --	North America
-		\item Pan-European Game Information (PEGI) -- 	Europe
-		\item Unterhaltungssoftware Selbstkontrolle (USK) -- Germany
-		\item IARC Generic -- Rest of the world
-		\item Google Play --South Korea	
+		\item Australian Classification Board (ACB) --	Australia;
+		\item Classificação Indicativa (ClassInd) --	Brazil;
+		\item Entertainment Software Rating Board (ESRB) --	North America;
+		\item Pan-European Game Information (PEGI) -- 	Europe;
+		\item Unterhaltungssoftware Selbstkontrolle (USK) -- Germany;
+		\item IARC Generic -- Rest of the world;
+		\item Google Play --South Korea.
 \end{itemize}
 Questa certificazioni sul Google PLay Store, insieme al numero di download, contribuiscono a dare credibilità alla nostra applicazione.
 \newpage
@@ -1589,16 +1600,16 @@ REHAB 2015 co-chairs
 \section{Sviluppi futuri}
 Questo progetto non è fine a se stesso, ci sono vari spunti per sviluppi futuri, di seguito eccone alcuni:
 \begin{itemize}
-	\item un famiglia di videogiochi mobile per il trattamento dell'ambliopia.
+	\item lo sviluppo di una famiglia di videogiochi mobile per il trattamento dell'ambliopia.
 	Per come è stata pensata l'applicazione sarà sufficiente cambiare le immagini montate sugli \virgolette{scheletri} che gestiscono la parte grafica del gioco, per quanto riguarda la getione utenti e dati, le modifiche richieste saranno veramente minime.\\
-	In questo modo, sarà possibile rendere ancora più accattivante la ribilitazione, fornendo un ventaglio di soluzioni differenti, per catturare i gusti di tutti i bambini
+	In questo modo, sarà possibile rendere ancora più accattivante la ribilitazione, fornendo un ventaglio di soluzioni differenti, per catturare i gusti di tutti i bambini;
 	\item una collaborazione attiva con i centri di ipovisione per raccogliere una maggior quantità di dati per migliorare l'efficacia dell'applicazione.\\
-	Grazie ad una collaborazione di questo tipo, sarebbe molto più facile per gli sviluppatori correggere eventuali errori, sia di implementazione, ma anche di logica, ad esempio una penalizzazione troppo repentina o troppo poco.
-	\item attuare i feedback provenienti dalla conferenza REHAB 2015, dove verrà presentata questa applicazione
+	Grazie ad una collaborazione di questo tipo, sarebbe molto più facile per gli sviluppatori correggere eventuali errori, sia di implementazione, ma anche di logica, ad esempio una penalizzazione troppo repentina o troppo poco;
+	\item attuare i feedback provenienti dalla conferenza REHAB 2015, dove verrà presentata questa applicazione.
 \end{itemize}
 \clearpage
 
-	
+%due pagine vuote (stampa fronte e retro) prima della bibbliografia	
 \thispagestyle{empty}
 \null\newpage
 \addcontentsline{toc}{chapter}{\bibname}

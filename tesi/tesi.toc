@@ -1,96 +1,96 @@
 \select@language {italian}
-\contentsline {part}{I\hspace {1em}Descrizione del contesto}{7}{part.1}
-\contentsline {chapter}{\numberline {1}Introduzione}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Il progetto 3D4Amb}{9}{section.1.1}
-\contentsline {section}{\numberline {1.2}Obiettivo}{10}{section.1.2}
-\contentsline {chapter}{\numberline {2}L'Ambliopia}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Il disturbo}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Trattamenti}{13}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Occlusione}{13}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Penalizzazione ottica}{13}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Penalizzazione farmacologica}{13}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Settorizzazione}{13}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}L'idea di 3D4Amb}{15}{section.2.3}
-\contentsline {chapter}{\numberline {3}La tecnologia per il trattamento}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Sistema operativo ed ambiente di sviluppo}{17}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Perch\`e Android}{18}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Perch\`e Android Studio}{19}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Google cardboard}{20}{section.3.2}
-\contentsline {part}{II\hspace {1em}Panoramica sull'applicazione}{23}{part.2}
-\contentsline {chapter}{\numberline {4}Car Racing Cardboard: l'applicazione}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Il principio del trattamento tramite il gioco}{25}{section.4.1}
-\contentsline {section}{\numberline {4.2}Il gioco}{27}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Obiettivo}{27}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Doppia Viewport}{28}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Guida all'utilizzo}{29}{section.4.3}
-\contentsline {paragraph}{Giocare senza registrarsi:}{33}{section*.15}
-\contentsline {paragraph}{Avvio del gioco:}{33}{section*.16}
-\contentsline {part}{III\hspace {1em}Implementazione}{35}{part.3}
-\contentsline {chapter}{\numberline {5}Panoramica su software e hardware}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Architettura di sistema}{37}{section.5.1}
-\contentsline {paragraph}{La scelta degli auricolari come controller}{38}{section*.19}
-\contentsline {paragraph}{Il server}{38}{section*.20}
-\contentsline {section}{\numberline {5.2}Vista di implementazione software}{39}{section.5.2}
-\contentsline {section}{\numberline {5.3}Scenari e casi d'uso}{40}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Sign Up}{40}{subsection.5.3.1}
-\contentsline {paragraph}{Attori:}{40}{section*.22}
-\contentsline {paragraph}{Precondizioni:}{40}{section*.23}
-\contentsline {paragraph}{Passi principali:}{40}{section*.24}
-\contentsline {paragraph}{Situazioni eccezionali:}{40}{section*.25}
-\contentsline {paragraph}{Postcondizioni:}{41}{section*.26}
-\contentsline {subsection}{\numberline {5.3.2}Log In utente comune}{42}{subsection.5.3.2}
-\contentsline {paragraph}{Attori:}{42}{section*.28}
-\contentsline {paragraph}{Precondizioni:}{42}{section*.29}
-\contentsline {paragraph}{Passi principali:}{42}{section*.30}
-\contentsline {paragraph}{Situazioni eccezionali:}{42}{section*.31}
-\contentsline {paragraph}{Postcondizioni:}{42}{section*.32}
-\contentsline {subsection}{\numberline {5.3.3}Log In medico}{44}{subsection.5.3.3}
-\contentsline {paragraph}{Attori:}{44}{section*.34}
-\contentsline {paragraph}{Precondizioni:}{44}{section*.35}
-\contentsline {paragraph}{Passi principali:}{44}{section*.36}
-\contentsline {paragraph}{Situazioni eccezionali:}{44}{section*.37}
-\contentsline {paragraph}{Postcondizioni:}{44}{section*.38}
-\contentsline {subsection}{\numberline {5.3.4}Update Info}{46}{subsection.5.3.4}
-\contentsline {paragraph}{Attori:}{46}{section*.40}
-\contentsline {paragraph}{Precondizioni:}{46}{section*.41}
-\contentsline {paragraph}{Passi principali:}{46}{section*.42}
-\contentsline {paragraph}{Situazioni eccezionali:}{46}{section*.43}
-\contentsline {paragraph}{Postcondizioni:}{46}{section*.44}
-\contentsline {chapter}{\numberline {6}Software design}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Package Diagram}{49}{section.6.1}
-\contentsline {section}{\numberline {6.2}Component diagram}{50}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Il sistema di Car Racing Cardboard}{50}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}L'applicazione Android}{50}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Dettaglio applicazione}{51}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Il server}{52}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Database}{53}{subsection.6.2.5}
-\contentsline {section}{\numberline {6.3}Sequence diagram}{54}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Funziononamento con log in}{54}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Funziononamento senza log in}{56}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{56}{subsection.6.3.3}
-\contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{57}{chapter.7}
-\contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{57}{section.7.1}
-\contentsline {section}{\numberline {7.2}Generazione casuale della scena}{59}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Nemici}{59}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Panorama}{60}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Cifratura password}{61}{section.7.3}
-\contentsline {section}{\numberline {7.4}Servizio web}{62}{section.7.4}
-\contentsline {paragraph}{Chiamata post}{62}{section*.54}
-\contentsline {paragraph}{Gestione delle chiamate lato server:}{64}{section*.55}
-\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{83}{section.7.5}
-\contentsline {section}{\numberline {7.6}Game Thread}{88}{section.7.6}
-\contentsline {section}{\numberline {7.7}Gestione animazioni}{93}{section.7.7}
-\contentsline {section}{\numberline {7.8}Asynctask}{95}{section.7.8}
-\contentsline {paragraph}{I quattro passi:}{95}{section*.68}
-\contentsline {chapter}{\numberline {8}Tool utilizzati}{97}{chapter.8}
-\contentsline {section}{\numberline {8.1}GitHub}{97}{section.8.1}
-\contentsline {section}{\numberline {8.2}Crashlitics}{99}{section.8.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{103}{part.4}
-\contentsline {chapter}{\numberline {9}Social media}{105}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{106}{section*.76}
-\contentsline {chapter}{\numberline {10}Conclusioni}{107}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{108}{section*.78}
-\contentsline {section}{\numberline {10.1}Paper}{109}{section.10.1}
-\contentsline {paragraph}{Di seguito riportato il contenuto del nostro elaborato, redatto in collaborazione con il Professor Angelo Gargantini e l' Ing. Silvia Bonfanti:}{109}{section*.80}
-\contentsline {section}{\numberline {10.2}Sviluppi futuri}{114}{section.10.2}
-\contentsline {chapter}{Bibliografia}{116}{section.10.2}
+\contentsline {part}{I\hspace {1em}Descrizione del contesto}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Il progetto 3D4Amb}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Obiettivo}{4}{section.1.2}
+\contentsline {chapter}{\numberline {2}L'Ambliopia}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Il disturbo}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Trattamenti}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Occlusione}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Penalizzazione ottica}{7}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Penalizzazione farmacologica}{7}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Settorizzazione}{7}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}L'idea di 3D4Amb}{9}{section.2.3}
+\contentsline {chapter}{\numberline {3}La tecnologia per il trattamento}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Sistema operativo ed ambiente di sviluppo}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Perch\`e Android}{12}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Perch\`e Android Studio}{13}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Google cardboard}{14}{section.3.2}
+\contentsline {part}{II\hspace {1em}Panoramica sull'applicazione}{17}{part.2}
+\contentsline {chapter}{\numberline {4}Car Racing Cardboard: l'applicazione}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Il principio del trattamento tramite il gioco}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Il gioco}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Obiettivo}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Doppia Viewport}{22}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Guida all'utilizzo}{23}{section.4.3}
+\contentsline {paragraph}{Giocare senza registrarsi:}{27}{section*.15}
+\contentsline {paragraph}{Avvio del gioco:}{27}{section*.16}
+\contentsline {part}{III\hspace {1em}Implementazione}{29}{part.3}
+\contentsline {chapter}{\numberline {5}Panoramica su software e hardware}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Architettura di sistema}{31}{section.5.1}
+\contentsline {paragraph}{La scelta degli auricolari come controller}{32}{section*.19}
+\contentsline {paragraph}{Il server}{32}{section*.20}
+\contentsline {section}{\numberline {5.2}Vista di implementazione software}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scenari e casi d'uso}{34}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Sign Up}{34}{subsection.5.3.1}
+\contentsline {paragraph}{Attori:}{34}{section*.22}
+\contentsline {paragraph}{Precondizioni:}{34}{section*.23}
+\contentsline {paragraph}{Passi principali:}{34}{section*.24}
+\contentsline {paragraph}{Situazioni eccezionali:}{34}{section*.25}
+\contentsline {paragraph}{Postcondizioni:}{35}{section*.26}
+\contentsline {subsection}{\numberline {5.3.2}Log In utente comune}{36}{subsection.5.3.2}
+\contentsline {paragraph}{Attori:}{36}{section*.28}
+\contentsline {paragraph}{Precondizioni:}{36}{section*.29}
+\contentsline {paragraph}{Passi principali:}{36}{section*.30}
+\contentsline {paragraph}{Situazioni eccezionali:}{36}{section*.31}
+\contentsline {paragraph}{Postcondizioni:}{36}{section*.32}
+\contentsline {subsection}{\numberline {5.3.3}Log In medico}{38}{subsection.5.3.3}
+\contentsline {paragraph}{Attori:}{38}{section*.34}
+\contentsline {paragraph}{Precondizioni:}{38}{section*.35}
+\contentsline {paragraph}{Passi principali:}{38}{section*.36}
+\contentsline {paragraph}{Situazioni eccezionali:}{38}{section*.37}
+\contentsline {paragraph}{Postcondizioni:}{38}{section*.38}
+\contentsline {subsection}{\numberline {5.3.4}Update Info}{40}{subsection.5.3.4}
+\contentsline {paragraph}{Attori:}{40}{section*.40}
+\contentsline {paragraph}{Precondizioni:}{40}{section*.41}
+\contentsline {paragraph}{Passi principali:}{40}{section*.42}
+\contentsline {paragraph}{Situazioni eccezionali:}{40}{section*.43}
+\contentsline {paragraph}{Postcondizioni:}{40}{section*.44}
+\contentsline {chapter}{\numberline {6}Software design}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Package Diagram}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Component diagram}{44}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Il sistema di Car Racing Cardboard}{44}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}L'applicazione Android}{44}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Dettaglio applicazione}{45}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Il server}{46}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Database}{47}{subsection.6.2.5}
+\contentsline {section}{\numberline {6.3}Sequence diagram}{48}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Funziononamento con log in}{48}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Funziononamento senza log in}{50}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{50}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{51}{chapter.7}
+\contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{51}{section.7.1}
+\contentsline {section}{\numberline {7.2}Generazione casuale della scena}{53}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Nemici}{53}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Panorama}{54}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Cifratura password}{55}{section.7.3}
+\contentsline {section}{\numberline {7.4}Servizio web}{56}{section.7.4}
+\contentsline {paragraph}{Chiamata post}{56}{section*.54}
+\contentsline {paragraph}{Gestione delle chiamate lato server:}{58}{section*.55}
+\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{77}{section.7.5}
+\contentsline {section}{\numberline {7.6}Game Thread}{82}{section.7.6}
+\contentsline {section}{\numberline {7.7}Gestione animazioni}{87}{section.7.7}
+\contentsline {section}{\numberline {7.8}Asynctask}{89}{section.7.8}
+\contentsline {paragraph}{I quattro passi:}{89}{section*.68}
+\contentsline {chapter}{\numberline {8}Tool utilizzati}{91}{chapter.8}
+\contentsline {section}{\numberline {8.1}GitHub}{91}{section.8.1}
+\contentsline {section}{\numberline {8.2}Crashlitics}{93}{section.8.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{97}{part.4}
+\contentsline {chapter}{\numberline {9}Social media}{99}{chapter.9}
+\contentsline {paragraph}{Risultati promozione}{100}{section*.76}
+\contentsline {chapter}{\numberline {10}Conclusioni}{101}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{102}{section*.78}
+\contentsline {section}{\numberline {10.1}Paper}{103}{section.10.1}
+\contentsline {paragraph}{Di seguito riportato il contenuto del nostro elaborato, redatto in collaborazione con il Professor Angelo Gargantini e l' Ing. Silvia Bonfanti:}{103}{section*.80}
+\contentsline {section}{\numberline {10.2}Sviluppi futuri}{108}{section.10.2}
+\contentsline {chapter}{Bibliografia}{110}{section.10.2}

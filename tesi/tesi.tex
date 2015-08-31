@@ -111,7 +111,7 @@
 \thispagestyle{empty}
 	\vspace{\fill}
 	\begin{flushright}
-		Ringraziamo il Professor Angelo Gargantini per i preziosi insegnamenti, inoltre vogliamo ringraziare le nostre famiglie per il sostegno ed il grande aiuto.\\ 
+		Ringraziamo il Professor Angelo Gargantini per i preziosi insegnamenti, Silvia Bonfanti per il supporto nella stesura di questo elaborato, inoltre vogliamo ringraziare le nostre famiglie per il sostegno ed il grande aiuto.\\ 
 		\textit{Fabio e Matteo}
 		
 	\end{flushright}
@@ -1042,7 +1042,7 @@ Come si può vedere, vengono dapprima catturati i valori relativi alla nuova pass
 \subsection*{Doctor call}
 Nel caso in cui l' utente, effettua l'accesso come dottore, viene reindirizzato ad un' apposita pagina: DoctorActivity. Il dottore può inserire i dati dei pazienti, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
 L' utilizzo dell'applicazione da parte di un dottore prevede inoltre l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
-La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo: 
+La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo.
 \\
 \begin{lstlisting}[language=php]
 
@@ -1098,7 +1098,7 @@ Prima di avviare una partita viene controllato se il paziente è già presente nel
 \newpage
 \subsection*{Report}
 
-La fase di report nell' applicazione è differenziata per due diverse casistiche, ovvero l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso si usufruisca dell' applicazione come utente non registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso invece si sfrutti la possibilità di registrarsi, si ottiene il privilegio di salvataggio e monitoraggio automatico dei risultati raggiunti (Figura \ref{Gameover}).
+Il report generato al termine del gioco differenzia l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso in cui l' utente non sia registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso in cui l'utente è registrato, avviene in automatico il salvataggio e il monitoraggio dei risultati raggiunti (Figura \ref{Gameover}).
 
 \begin{figure}[h]
 	\centering
@@ -1107,13 +1107,13 @@ La fase di report nell' applicazione è differenziata per due diverse casistiche,
 	\label{Gameover}
 \end{figure}
 
-A livello di codice, nel thread del gioco (vedi anche sezione \ref{game_thread}), viene lanciata una chiamata post, passando come parametri il punteggio ottenuto, il livello raggiunto e i dati dell' utente:
+A livello di codice, nel thread del gioco (vedi anche sezione \ref{game_thread}), viene lanciata una chiamata post, passando come parametri il punteggio ottenuto, il livello raggiunto e i dati dell' utente.\\
 \begin{lstlisting}[language=java]
 	 PostCall postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2,true);
 	 postCall.myPostCall(TypeCall.REPORT,activity);
 \end{lstlisting}
 
-Vediamo ora nel dettaglio la gestione della fase di report lato server per quanto riguarda gli utenti registrati, siano essi pazienti di dottori o meno:
+Nel codice mostrato è possibile vedere nel dettaglio la gestione della fase di report lato server per quanto riguarda gli utenti registrati (siano essi pazienti di dottori o singoli utenti).
 \\
 \begin{lstlisting}[language=php]
 
@@ -1177,8 +1177,8 @@ Come si può vedere, una volta finita la partita, i risultati ottenuti dall' uten
 \newpage
 \section{Gestione dello scontro con il nemico}\label{gestione_dello_scontro_con_nemico}
 
-Nel momento in cui si effettua una collisione con un autoveicolo nemico, oltre al decremento del numero di vite a disposizione ed alla gestione di un eventuale Game Over, viene visualizzata a schermo un' esplosione animata nel punto di scontro. Questo effetto è stato progettato basandosi sulle potenzialità dei Thread e sfruttando le potenzialità della classe SurfaceView, messa a disposizione da Android.
-Essa fornisce infatti una superficie di disegno pienamente controllabile che può essere adoperata per effettuare delle sovrapposizioni grafiche con altre View. L' accesso alla superficie sottostante è fornito tramite l' interfaccia SurfaceHolder, la quale può essere richiamata usando il metodo getHolder(). Nella classe, è necessario implementare i  metodi 'surfaceCreated(SurfaceHolder)' e 'surfaceDestroyed(surfaceHolder)' che agiscono quando la superficie viene creata e distrutta. Lo scopo principae della classe SurfaceView è quello di fornire una superficie dove un thread secondario possa renderizzare a schermo. Per questo obiettivo, vengono utilizzate delle Callback sull' oggetto SurfaceHolder per fare da filo conduttore tra thread principale e secondario. Di seguito è riportata la classe AnimationExplosionView, la nostra estensione della classe SurfaceView precedentemente descritta:
+Nel momento in cui si verifica una collisione con un autoveicolo nemico, oltre al decremento del numero di vite a disposizione ed alla gestione di un eventuale Game Over, viene visualizzata a schermo un' esplosione animata nel punto di scontro. Questo effetto è stato progettato basandosi sulle potenzialità dei Thread e sfruttando le potenzialità della classe SurfaceView, messa a disposizione da Android.
+Essa fornisce una superficie di disegno pienamente controllabile che può essere utilizzata per effettuare delle sovrapposizioni grafiche con altre View. L' accesso alla superficie sottostante è fornito tramite l' interfaccia SurfaceHolder, la quale può essere richiamata usando il metodo getHolder(). Nella classe è necessario implementare i  metodi 'surfaceCreated(SurfaceHolder)' e 'surfaceDestroyed(surfaceHolder)' che agiscono quando la superficie viene creata e distrutta. Lo scopo principae della classe SurfaceView è quello di fornire una superficie dove un thread secondario possa renderizzare a schermo. Per questo obiettivo, vengono utilizzate delle Callback sull' oggetto SurfaceHolder che agiscono da filo conduttore tra thread principale e secondario. Di seguito è riportata la classe AnimationExplosionView, che rappresenta l' estensione della classe SurfaceView all'interno dell'applicazione sviluppata.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1243,7 +1243,7 @@ public class AnimationExplosionView extends SurfaceView {
 
 \end{lstlisting}
 
-Come si può osservare dal codice, nella classe vengono utilizzati anche oggetti di tipo Bitmap. Questi oggetti sono molto utili per la rappresentazione di immagini in formato raster. Inoltre si istanzia anche un oggetto GameLoopThread, il quale ha il compito di richiamare ad intervalli regolari il metodo onDrawAnimationExplosionView(Canvas canvas). Il principio dell' animazione dell' esplosione è infatti dato dallo scorrimento di un vettore diviso in colonne aventi la medesima dimensione. Ogni colonna contiene 'l' evoluzione' dell' animazione e lo scorrimento veloce da parte del thread simula l'effetto dell'esplosione:
+Come si può osservare dal codice, nella classe vengono utilizzati oggetti di tipo Bitmap. Questi oggetti sono molto utili per la rappresentazione di immagini in formato raster. Inoltre viene istanziato anche un oggetto GameLoopThread, il quale ha il compito di richiamare ad intervalli regolari il metodo onDrawAnimationExplosionView(Canvas canvas). Il principio dell' animazione dell' esplosione è dato dallo scorrimento di un vettore diviso in colonne aventi la medesima dimensione. Ogni colonna contiene 'l' evoluzione' dell' animazione e lo scorrimento veloce da parte del thread simula l'effetto dell'esplosione.
 \\
 
 \begin{figure}[h]
@@ -1255,7 +1255,7 @@ Come si può osservare dal codice, nella classe vengono utilizzati anche oggetti 
 
 \newpage
 
-In AnimationExplosionView viene inoltre istanziato l'oggetto spriteExplosion della classe Sprite. Il costruttore della classe Sprite accetta come parametri la SurfaceView , la Bitmap ed il numero di colonne in cui è divisa la bitmap da scorrere. Il metodo richiamato da GameLoopThread 'onDrawAnimationExplosionView(Canvas canvas)' chiama a sua volta il metodo 'onDrawExplosion(Canvas canvas)' sull'oggetto spriteExplosion. Tale metodo va effettivamente a disegnare a schermo la nostra animazione:
+In AnimationExplosionView viene inoltre istanziato l'oggetto spriteExplosion della classe Sprite. Il costruttore della classe Sprite accetta come parametri la SurfaceView , la Bitmap ed il numero di colonne in cui è divisa la bitmap da scorrere. Il metodo richiamato da GameLoopThread 'onDrawAnimationExplosionView(Canvas canvas)' chiama a sua volta il metodo 'onDrawExplosion(Canvas canvas)' sull'oggetto spriteExplosion. Tale metodo va effettivamente a disegnare a schermo la nostra animazione.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1275,7 +1275,7 @@ public void onDrawExplosion(Canvas canvas)
 
 \end{lstlisting}
 
-La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei singoli frame, nel punto specificato dai valori 'xExplosion' e 'yExplosion'. Il metodo updateExplosion() non fa altro che scorrere la nostra immagine sulla base del frame corrente e del numero di colonne specificato in fase di costruzione:
+La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei singoli frame, nel punto specificato dai valori 'xExplosion' e 'yExplosion'. Il metodo updateExplosion() non fa altro che scorrere la nostra immagine sulla base del frame corrente e del numero di colonne specificato in fase di costruzione.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1290,7 +1290,7 @@ La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei 
 \newpage
 \section{Game Thread}\label{game_thread}
 
-L' implementazione del cuore di funzionamento del gioco è stata realizzata nella classe GameThread. Essa estende la classe Thread e ne effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Innanzitutto, nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le imageView relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i relativeLayout riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Ci sono poi l'activity da cui parte la chiamata, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:
+La parte principale dell'applicazione è stata sviluppata all'interno della classe GameThread. Essa estende la classe Thread ed effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le immagini (di tipo imageView) relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i layout (di tipo relativeLayout) riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Sono inoltre presenti l'activity da cui parte la chiamata a questo thread, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:
 
 \begin{lstlisting}[language=java]
 
@@ -1302,7 +1302,7 @@ int width, int height,String id_user) { ... }
 
 \end{lstlisting}
 
-Il fulcro della classe GameThread è contenuto all' interno del metodo run(). In esso inoltre, le principali azioni vengono lanciate all' interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell' interfaccia utente. In primo luogo, nel thread, viene controllato il numero di vite attuale dell' utente. Se il valore delle vite rimaste è pari a '0', vengono eseguite le procedure relative alla fase di GameOver, come ad esempio la visualizzazione della view di report a schermo e l'invio della mail contenente lo storico ed i progressi dell'utente, in caso di gioco con utente registrato. Nel caso invece il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale viene immesso il nemico, scelta dall'algoritmo random precedentemente esplicato. Si esegue poi un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o centralmente. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:
+La parte principale della classe GameThread è contenuta all' interno del metodo run(). Le principali azioni vengono lanciate all' interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell' interfaccia utente. Nel thread viene controllato il numero di vite attuale dell' utente. Se il valore delle vite rimaste è pari a '0', vengono eseguite le procedure relative alla fase di GameOver. Se l'utente è registrato viene mostrato il report a schermo e viene inviata la mail contenente lo storico ed i progressi dell'utente, altrimenti verrà visualizzato solo il report. Nel caso in cui il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale immettere il nuovo nemico scelta dall'algoritmo random precedentemente esplicato. Si esegue successivamente un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o nella parte centrale dello schermo. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:
 
 \begin{lstlisting}[language=java]
 
@@ -1339,7 +1339,7 @@ if (pick == 2) {
 
 \end{lstlisting}
 
-Per trattare l' implementazione vera e propria dell'animazione sull' oggetto animationEnemies rimandiamo al capitolo seguente per esplicarla più in dettaglio. Il metodo onAnimationTimer() implementa a sua volta i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, lo stratagemma adottato per far scomparire all'attimo esatto le macchine evitate è stato quello di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l' obiettivo di fare da 'target'. Le imageView che fanno da target hanno visibilità nulla. L' animazione di quest' ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l' esempio di tale implementazione adottato nella corsia centrale:
+L' implementazione dell'animazione sull' oggetto animationEnemies verrà descritta più in dettaglio nella sezione \ref{gestione_animazione}. Il metodo onAnimationTimer() implementa i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, la soluzione adottata per far scomparire all'attimo esatto le macchine evitate è stata quella di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l' obiettivo di fare da 'target'. Le imageView che fanno da target hanno visibilità nulla. L' animazione di quest' ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l' esempio di tale implementazione adottato nella corsia centrale:
 
 \begin{lstlisting}[language=java]
 
@@ -1383,8 +1383,8 @@ Come si può vedere, si agisce sugli oggetti animationEnemies sfruttando l' event
 
 \newpage
 \section{Gestione animazioni}\label{gestione_animazione}
-La gestione delle animazione relative sia alle auto nemiche sia al paesaggio, è stata realizzata estendendo la classe Animation messa a disposizione da Android. In seguito verrà presentato l' esempio relativo alle auto nemiche. Per quanto rigurda il panorama, è stato applicato il medesimo principio.
-Innanzitutto, per ogni corsia, è stato necessario creare un 'AnimationSet', ovvero un gruppo di animazioni riproducibile simultaneamente:
+La gestione delle animazione relative alle auto nemiche ed al paesaggio, è stata realizzata estendendo la classe Animation messa a disposizione da Android. In seguito verrà presentato l' esempio relativo alle auto nemiche; per quanto rigurda il panorama, è stato applicato il medesimo principio.\\
+Per ogni corsia, è stato necessario creare un 'AnimationSet', ovvero un gruppo di animazioni riproducibile simultaneamente:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1394,8 +1394,8 @@ public AnimationSet animationSetLane3 = new AnimationSet(false);
 
 \end{lstlisting}
 
-Sono poi stati definititre metodi che implementano il comportamento della imageView delle auto, a seconda che si trovino nella corsia di destra, di sinistra o in quella centrale. Vediamone un esempio di funzionamento nella corsia di sinistra: 
-
+Sono poi stati definiti tre metodi che implementano il comportamento della imageView delle auto, a seconda che si trovino nella corsia di destra, di sinistra o in quella centrale. Vediamone un esempio di funzionamento nella corsia di sinistra: 
+\\
 \begin{lstlisting}[language=java]
 
 public void animateFrontCarLane1(final ImageView ivLeft, final ImageView 	ivRight, int displayWidth, int displayHeight)
@@ -1414,15 +1414,15 @@ public void animateFrontCarLane1(final ImageView ivLeft, final ImageView 	ivRigh
 
 \end{lstlisting}
 
-Come si può vedere dalla segnatura del medoto, vengono passati i due oggetti relativi alle imageView delle auto della corsia sinistra. In particolare 'ivLeft' si riferisce all' autoveicolo presente nel relativeLayout di sinistra, mentre 'ivRight' all' autoveicolo del relativeLayout destro. Per fare in modo che le animazioni avessero lo stesso comportamento su ogni dispositivo, si è deciso di applicare le trasalazioni e la scala operando sui valori di larghezza ed altezza del display. Per le traslazionivengono specificati come parametri i punti di partenza relativi alle coordinate 'x' ed 'y' dell'oggetto ed in seguito i punti di arrivo. Per la scala viene specificata la grandezza iniziale dell' imageView ed in seguito è indicato il valore moltiplicativo di scala sull'asse verticale ed orizzontale. Le singole animazioni vengono poi aggiunte all' animationSet tramite il metodo 'addAnimation'. Viene inoltre impostata la durata delle animazioni ed infine vengono fatte partire grazie al metodo 'startAnimation'.
+Come si può vedere dalla segnatura del medoto, vengono passati i due oggetti relativi alle imageView delle auto della corsia sinistra. In particolare 'ivLeft' si riferisce all' autoveicolo presente nel relativeLayout di sinistra, mentre 'ivRight' all' autoveicolo del relativeLayout destro. Per fare in modo che le animazioni avessero lo stesso comportamento su ogni dispositivo, si è deciso di applicare le trasalazioni e la scala operando sui valori di larghezza ed altezza del display. Per le traslazioni vengono specificati come parametri i punti di partenza relativi alle coordinate 'x' ed 'y' dell'oggetto ed in seguito i punti di arrivo. Per la scala viene specificata la grandezza iniziale dell' imageView ed in seguito è indicato il valore moltiplicativo di scala sull'asse verticale ed orizzontale. Le singole animazioni vengono poi aggiunte all' animationSet tramite il metodo 'addAnimation'. Viene inoltre impostata la durata delle animazioni ed infine vengono avviate utilizzando il metodo 'startAnimation'.
 
 \newpage
 \section{Asynctask}\label{asynctask}
-Per ottimizzare l'utilizzo di memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 
+Per ottimizzare l'utilizzo della memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 
 In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell' applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall' interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
 \paragraph{I quattro passi:} un Asynctask in android si divide in quattro \virgolette{step}
 \begin{enumerate}
-	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} priva che il task venga eseguito. Qui viene solitamento messo il setup del task
+	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} prima che il task venga eseguito. Qui viene solitamento messo il setup del task
 	\item doInBackground(Params...), invocato nel background del thread, subito dopo onPreExecute(). Questo step è usato per eseguire computazioni in background che possono durare molto tempo.
 	Il risultato della computazione deve essere tornato in questo step, e possono essere pubblicati grazie a publishProgress(Progress...). I valori sono passati all' UI thread nello step onProgressUpdate(Progress...).
 	\item onProgressUpdate(Progress...), invocato nell' UI thread dopo aver chiamato publicProgress(Progress...). Questo metodo è usato per mostrare ogni progresso nella UI mentre in backgrond la computazione è ancora in esecuzione

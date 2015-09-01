@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  1 SEP 2015 14:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  1 SEP 2015 18:21
 entering extended mode
 **tesi.tex
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.tex
@@ -1009,378 +1009,381 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
-<immagini/email_registrazione.jpg, id=1018, 608.2725pt x 214.55156pt>
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [66]
+<immagini/email_registrazione.jpg, id=1038, 608.2725pt x 214.55156pt>
 File: immagini/email_registrazione.jpg Graphic file (type jpg)
 
 <use immagini/email_registrazione.jpg>
 Package pdftex.def Info: immagini/email_registrazione.jpg used on input line 10
-00.
+20.
 (pdftex.def)             Requested size: 426.79135pt x 150.5419pt.
- [66]
-<immagini/email_reset_password.jpg, id=1036, 592.46344pt x 124.21407pt>
+ [67 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_registr
+azione.jpg>]
+<immagini/email_reset_password.jpg, id=1059, 592.46344pt x 124.21407pt>
 File: immagini/email_reset_password.jpg Graphic file (type jpg)
 
 <use immagini/email_reset_password.jpg>
 Package pdftex.def Info: immagini/email_reset_password.jpg used on input line 1
-010.
+040.
 (pdftex.def)             Requested size: 426.79135pt x 89.48332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1017
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
 
  []
 
-[67 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_registra
-zione.jpg> <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_r
-eset_password.jpg>]
+[68 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/email_reset_pa
+ssword.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68]
-[69]
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1058
+ [69]
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1088
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
-[72]
-File: immagini/gameover.png Graphic file (type png)
- <use immagini/gameover.png>
-Package pdftex.def Info: immagini/gameover.png used on input line 1116.
-(pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1129
-
- []
-
-[73]
-Underfull \vbox (badness 1997) has occurred while \output is active []
-
- [74]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [72]
+[73]
+File: immagini/gameover.png Graphic file (type png)
+ <use immagini/gameover.png>
+Package pdftex.def Info: immagini/gameover.png used on input line 1146.
+(pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1159
+
+ []
+
+[74]
+Underfull \vbox (badness 1997) has occurred while \output is active []
+
  [75]
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1193
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1223
 
  []
 
 
 Underfull \vbox (badness 5446) has occurred while \output is active []
 
- [77]
+ [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78]
-Underfull \hbox (badness 10000) in paragraph at lines 1257--1259
+ [79]
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1289
 
  []
 
-<immagini/explosion_anim1.png, id=1272, 361.35pt x 30.1125pt>
+<immagini/explosion_anim1.png, id=1305, 361.35pt x 30.1125pt>
 File: immagini/explosion_anim1.png Graphic file (type png)
 
 <use immagini/explosion_anim1.png>
-Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1262.
+Package pdftex.def Info: immagini/explosion_anim1.png used on input line 1292.
 (pdftex.def)             Requested size: 426.79135pt x 35.56642pt.
- [79 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/explosion_ani
+ [80 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/explosion_ani
 m1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1269--1270
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1320
 
  []
 
-[80] [81]
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
+[81] [82]
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1347
 
  []
 
-[82]
+[83]
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [83]
-Underfull \hbox (badness 10000) in paragraph at lines 1353--1354
+ [84]
+Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]
+ [85]
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [85]
-[86]
-Underfull \hbox (badness 10000) in paragraph at lines 1397--1399
+ [86]
+[87]
+Underfull \hbox (badness 10000) in paragraph at lines 1427--1429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1410
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 
  []
 
 
 Underfull \vbox (badness 1189) has occurred while \output is active []
 
- [87]
-[88]
-Underfull \hbox (badness 10000) in paragraph at lines 1442--1443
+ [88]
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1473
 
  []
 
-[89] [90]
-Capitolo 8.
-[91
+[90] [91] [92
 
-] <immagini/git1.png, id=1486, 423.08063pt x 224.33812pt>
+]
+Capitolo 8.
+[93] <immagini/git1.png, id=1522, 423.08063pt x 224.33812pt>
 File: immagini/git1.png Graphic file (type png)
 
 <use immagini/git1.png>
-Package pdftex.def Info: immagini/git1.png used on input line 1475.
+Package pdftex.def Info: immagini/git1.png used on input line 1505.
 (pdftex.def)             Requested size: 426.79135pt x 226.3127pt.
 
-<immagini/git2.png, id=1488, 1028.34187pt x 512.66531pt>
+<immagini/git2.png, id=1524, 1028.34187pt x 512.66531pt>
 File: immagini/git2.png Graphic file (type png)
 
 <use immagini/git2.png>
-Package pdftex.def Info: immagini/git2.png used on input line 1484.
+Package pdftex.def Info: immagini/git2.png used on input line 1514.
 (pdftex.def)             Requested size: 426.79135pt x 212.7756pt.
- [92 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/git1.png> <C:
+ [94 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/git1.png> <C:
 /Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/git2.png>]
-<immagini/daily_active_user.jpg, id=1496, 746.03719pt x 426.09187pt>
+<immagini/daily_active_user.jpg, id=1532, 746.03719pt x 426.09187pt>
 File: immagini/daily_active_user.jpg Graphic file (type jpg)
 
 <use immagini/daily_active_user.jpg>
-Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1501
+Package pdftex.def Info: immagini/daily_active_user.jpg used on input line 1531
 .
 (pdftex.def)             Requested size: 426.79135pt x 243.7526pt.
 
-<immagini/daily_new_users.jpg, id=1497, 735.49782pt x 418.56375pt>
+<immagini/daily_new_users.jpg, id=1533, 735.49782pt x 418.56375pt>
 File: immagini/daily_new_users.jpg Graphic file (type jpg)
 
 <use immagini/daily_new_users.jpg>
-Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1508.
+Package pdftex.def Info: immagini/daily_new_users.jpg used on input line 1538.
 (pdftex.def)             Requested size: 426.79135pt x 242.88847pt.
 
-<immagini/molthly_active_users.jpg, id=1498, 730.22812pt x 414.04688pt>
+<immagini/molthly_active_users.jpg, id=1534, 730.22812pt x 414.04688pt>
 File: immagini/molthly_active_users.jpg Graphic file (type jpg)
 
 <use immagini/molthly_active_users.jpg>
 Package pdftex.def Info: immagini/molthly_active_users.jpg used on input line 1
-515.
+545.
 (pdftex.def)             Requested size: 426.79135pt x 241.99216pt.
 
-<immagini/crash_free_users.jpg, id=1499, 727.21687pt x 338.01282pt>
+<immagini/crash_free_users.jpg, id=1535, 727.21687pt x 338.01282pt>
 File: immagini/crash_free_users.jpg Graphic file (type jpg)
 
 <use immagini/crash_free_users.jpg>
-Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1522.
+Package pdftex.def Info: immagini/crash_free_users.jpg used on input line 1552.
 
 (pdftex.def)             Requested size: 426.79135pt x 198.37881pt.
- [93 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/daily_active_
-user.jpg>] [94 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/dai
+ [95 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/daily_active_
+user.jpg>] [96 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/dai
 ly_new_users.jpg> <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/
-molthly_active_users.jpg>] [95 <C:/Users/mzambell/Personal/unibg/CardboardApp/t
-esi/immagini/crash_free_users.jpg>] [96
+molthly_active_users.jpg>] [97 <C:/Users/mzambell/Personal/unibg/CardboardApp/t
+esi/immagini/crash_free_users.jpg>] [98
 
 ]
-[97] [98]
+[99] [100]
 Capitolo 9.
-<immagini/sito2.png, id=1530, 1015.54407pt x 484.05844pt>
+<immagini/sito2.png, id=1566, 1015.54407pt x 484.05844pt>
 File: immagini/sito2.png Graphic file (type png)
 
 <use immagini/sito2.png>
-Package pdftex.def Info: immagini/sito2.png used on input line 1540.
+Package pdftex.def Info: immagini/sito2.png used on input line 1570.
 (pdftex.def)             Requested size: 426.79135pt x 203.42871pt.
 
-<immagini/stats_play_store.png, id=1535, 706.89093pt x 118.94438pt>
+<immagini/stats_play_store.png, id=1571, 706.89093pt x 118.94438pt>
 File: immagini/stats_play_store.png Graphic file (type png)
 
 <use immagini/stats_play_store.png>
-Package pdftex.def Info: immagini/stats_play_store.png used on input line 1551.
+Package pdftex.def Info: immagini/stats_play_store.png used on input line 1581.
 
 (pdftex.def)             Requested size: 426.79135pt x 71.81364pt.
- [99
+ [101
 
- <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sito2.png>] [100 
+ <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sito2.png>] [102 
 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/stats_play_store.p
 ng>]
 Capitolo 10.
-<immagini/certifications.png, id=1554, 356.0803pt x 60.225pt>
+<immagini/certifications.png, id=1590, 356.0803pt x 60.225pt>
 File: immagini/certifications.png Graphic file (type png)
 
 <use immagini/certifications.png>
-Package pdftex.def Info: immagini/certifications.png used on input line 1571.
+Package pdftex.def Info: immagini/certifications.png used on input line 1601.
 (pdftex.def)             Requested size: 426.79135pt x 72.18782pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [101
+ [103
 
 ]
-[102 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/certification
-s.png>] <rehab2015_racecardboard.pdf, id=1568, 597.50829pt x 845.0471pt>
+[104 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/certification
+s.png>] <rehab2015_racecardboard.pdf, id=1605, 597.50829pt x 845.0471pt>
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1607.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1637.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
  <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1607.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1637.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1607.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1637.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
  <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1607.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1637.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf>
-Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1607.
+Package pdftex.def Info: rehab2015_racecardboard.pdf used on input line 1637.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-<rehab2015_racecardboard.pdf, id=1574, page=1, 597.50829pt x 845.0471pt>
+<rehab2015_racecardboard.pdf, id=1611, page=1, 597.50829pt x 845.0471pt>
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1607.
+1637.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1607.
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [103]
+ [105]
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1607.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 1>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1607.
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
 <use rehab2015_racecardboard.pdf, page 1>
 Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
-1607.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [104 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/rehab2015_racecardboa
-rd.pdf>]
-<rehab2015_racecardboard.pdf, id=1658, page=2, 597.50829pt x 845.0471pt>
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 2>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
-1607.
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 2>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
-1607.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 2>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
-1607.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [105 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/rehab2015_racecardboa
-rd.pdf>]
-<rehab2015_racecardboard.pdf, id=1674, page=3, 597.50829pt x 845.0471pt>
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 3>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
-1607.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 3>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
-1607.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: rehab2015_racecardboard.pdf Graphic file (type pdf)
-
-<use rehab2015_racecardboard.pdf, page 3>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
-1607.
+<use rehab2015_racecardboard.pdf, page 1>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page1 used on input line 
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [106 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/rehab2015_racecardboa
 rd.pdf>]
-<rehab2015_racecardboard.pdf, id=1683, page=4, 597.50829pt x 845.0471pt>
+<rehab2015_racecardboard.pdf, id=1694, page=2, 597.50829pt x 845.0471pt>
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 4>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
-1607.
+<use rehab2015_racecardboard.pdf, page 2>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 4>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
-1607.
+<use rehab2015_racecardboard.pdf, page 2>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: rehab2015_racecardboard.pdf Graphic file (type pdf)
 
-<use rehab2015_racecardboard.pdf, page 4>
-Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
-1607.
+<use rehab2015_racecardboard.pdf, page 2>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page2 used on input line 
+1637.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [107 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/rehab2015_racecardboa
-rd.pdf>] [108] [109
+rd.pdf>]
+<rehab2015_racecardboard.pdf, id=1710, page=3, 597.50829pt x 845.0471pt>
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 3>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
+1637.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 3>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
+1637.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 3>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page3 used on input line 
+1637.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [108 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/rehab2015_racecardboa
+rd.pdf>]
+<rehab2015_racecardboard.pdf, id=1719, page=4, 597.50829pt x 845.0471pt>
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 4>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
+1637.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 4>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
+1637.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: rehab2015_racecardboard.pdf Graphic file (type pdf)
+
+<use rehab2015_racecardboard.pdf, page 4>
+Package pdftex.def Info: rehab2015_racecardboard.pdf, page4 used on input line 
+1637.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [109 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/rehab2015_racecardboa
+rd.pdf>] [110] [111
 
 ]
-(C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.bbl [110
+(C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.bbl [112
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1630.
- [111]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1630.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1660.
+ [113]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1660.
 
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1630.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1630.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1660.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1660.
 
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 04671A21DCEBA88D7930748CAEEAF9AA;4403.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1630.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1660.
  ) 
 Here is how much of TeX's memory you used:
- 14651 strings out of 493921
- 220368 string characters out of 3146472
- 698464 words of memory out of 3000000
- 16874 multiletter control sequences out of 15000+200000
+ 14739 strings out of 493921
+ 221427 string characters out of 3146472
+ 697961 words of memory out of 3000000
+ 16932 multiletter control sequences out of 15000+200000
  20216 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,18n,51p,1258b,3003s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1409,9 +1412,9 @@ C:/Program Files (x86)/miktex/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
 iles (x86)/miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/mikt
 ex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/miktex/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on tesi.pdf (117 pages, 8666014 bytes).
+Output written on tesi.pdf (119 pages, 8692386 bytes).
 PDF statistics:
- 2411 PDF objects out of 2487 (max. 8388607)
- 837 named destinations out of 1000 (max. 500000)
+ 2454 PDF objects out of 2487 (max. 8388607)
+ 867 named destinations out of 1000 (max. 500000)
  781 words of extra memory for PDF output out of 10000 (max. 10000000)
 

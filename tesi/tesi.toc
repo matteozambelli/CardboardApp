@@ -77,20 +77,20 @@
 \contentsline {section}{\numberline {7.4}Servizio web}{56}{section.7.4}
 \contentsline {paragraph}{Chiamata post}{56}{section*.54}
 \contentsline {paragraph}{Gestione delle chiamate lato server:}{58}{section*.55}
-\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{77}{section.7.5}
-\contentsline {section}{\numberline {7.6}Game Thread}{82}{section.7.6}
-\contentsline {section}{\numberline {7.7}Gestione animazioni}{87}{section.7.7}
-\contentsline {section}{\numberline {7.8}Asynctask}{89}{section.7.8}
-\contentsline {paragraph}{I quattro passi:}{89}{section*.68}
-\contentsline {chapter}{\numberline {8}Tool utilizzati}{91}{chapter.8}
-\contentsline {section}{\numberline {8.1}GitHub}{91}{section.8.1}
-\contentsline {section}{\numberline {8.2}Crashlitics}{93}{section.8.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{97}{part.4}
-\contentsline {chapter}{\numberline {9}Social media}{99}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{99}{section*.76}
-\contentsline {chapter}{\numberline {10}Conclusioni}{101}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{102}{section*.78}
-\contentsline {section}{\numberline {10.1}Pubblicazioni scientifiche}{103}{section.10.1}
-\contentsline {paragraph}{Di seguito viene riportato il contenuto del paper, redatto in collaborazione con il Professor Angelo Gargantini e la Dott.ssa Silvia Bonfanti:}{103}{section*.80}
-\contentsline {section}{\numberline {10.2}Sviluppi futuri}{108}{section.10.2}
-\contentsline {chapter}{Bibliografia}{110}{section.10.2}
+\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{78}{section.7.5}
+\contentsline {section}{\numberline {7.6}Game Thread}{83}{section.7.6}
+\contentsline {section}{\numberline {7.7}Gestione animazioni}{88}{section.7.7}
+\contentsline {section}{\numberline {7.8}Asynctask}{90}{section.7.8}
+\contentsline {paragraph}{I quattro passi:}{90}{section*.68}
+\contentsline {chapter}{\numberline {8}Tool utilizzati}{93}{chapter.8}
+\contentsline {section}{\numberline {8.1}GitHub}{93}{section.8.1}
+\contentsline {section}{\numberline {8.2}Crashlitics}{95}{section.8.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{99}{part.4}
+\contentsline {chapter}{\numberline {9}Social media}{101}{chapter.9}
+\contentsline {paragraph}{Risultati promozione}{101}{section*.76}
+\contentsline {chapter}{\numberline {10}Conclusioni}{103}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{104}{section*.78}
+\contentsline {section}{\numberline {10.1}Pubblicazioni scientifiche}{105}{section.10.1}
+\contentsline {paragraph}{Di seguito viene riportato il contenuto del paper, redatto in collaborazione con il Professor Angelo Gargantini e la Dott.ssa Silvia Bonfanti:}{105}{section*.80}
+\contentsline {section}{\numberline {10.2}Sviluppi futuri}{110}{section.10.2}
+\contentsline {chapter}{Bibliografia}{112}{section.10.2}

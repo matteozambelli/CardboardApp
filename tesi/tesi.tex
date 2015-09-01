@@ -993,18 +993,48 @@ break;
 
 \end{lstlisting}
 
-Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un' email di benvenuto. Durante questa fase si è utilizzata la funzione 'gmail(\$to, \$subject, \$message)' appartenente alla classe 'SMTP\_validateEmail', in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell' email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell' operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga a quella mostrata in figura \ref{conferma_registrazione}
+Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un' email di benvenuto. Durante questa fase si è utilizzata la funzione 'gmail(\$to, \$subject, \$message)' appartenente alla classe 'SMTP\_validateEmail', in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell' email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell' operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga a quella mostrata in figura \ref{provalist}
+
+\begin{lstlisting}
+Hello dear **********@********, welcome to 3d4Amb!
+
+The 3D4Amb project aims at developing a system based on the 3D for the diagnosis and treatment of amblyopia in young children. Below you can find your authentication data:
+
+Firstname: Pino
+Lastname: Rosso
+Email: m.zambelli3@studenti.unibg.it
+Birthday: 1991-5-27
+Favourite color: green
+
+If you want change your info, you can go over 'update you info'. Thanks for using our application, best regards.
+
+3d4amb Staff
+
+Contact us on: 3D4AmbUnibg@gmail.com
+
+Visit our site on: http://3d4amb.unibg.it
+\end{lstlisting}\label{provalist}
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/email_registrazione}
 	\caption{email di conferma registrazione}
-	\label{conferma_registrazione}
+	%\label{conferma_registrazione}
 \end{figure}
 \newpage
 \subsection*{Reset}
 L'utente può resettare la password premendo sul tasto \virgolette{forgot your password?}. Viene richiesta l'email e il colore preferito; se i dati superano la verifica sul database, viene generata random una nuova password alfanumerica di otto caratteri, che potrà poi successivamente essere personalizzata (vedi \ref{guida}). Verrà inoltre inviata una email come mostrato in figura \ref{reset_password}
-
+\begin{lstlisting}
+	Hello dear **********@********!
+	
+	Your password has been changed and the new password is: d89j9g78. If you want customize your password, you can go over 'update you info'. Thanks for using our application, best regards.
+	
+	3d4amb Staff
+	
+	Contact us on: 3D4AmbUnibg@gmail.com
+	
+	Visit our site on: http://3d4amb.unibg.it
+\end{lstlisting}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/email_reset_password}

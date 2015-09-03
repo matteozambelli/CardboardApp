@@ -106,8 +106,9 @@
 %----------------------------------------------------------------------------------------
 %	Ringraziamenti
 %----------------------------------------------------------------------------------------	
-
-	
+\includepdf[pages={1}]{frontespizio_tesi.pdf} %frontespizio per tesi 24 (serve un unico file)
+\cleardoublepage % pagina dispari bianca (retro)
+%LA PARTE SOPRA DA ELIMINARE PER IL FILE SU CD
 \chapter*{}
 \thispagestyle{empty}
 	\vspace{\fill}
@@ -145,36 +146,38 @@
 diagnosi e il trattamento dell'ambliopia. Nell'ambito di questo progetto è stata sviluppata
 un'applicazione Android il cui scopo è quello di effettuare il trattamento della malattia.
 \section{Il progetto 3D4Amb}\label{3d4amb}
-Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Essa dovrebbe consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. Non dovrebbe soffrire dei problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
+Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Il progetto punta a sviluppare una tecnologia per consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento.La soluzione proposta mira ad eliminare i problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
 L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è di sviluppare un sistema per la diagnosi e il trattamento di ambliopia, basata sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
 Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg.it/
 Car Racing Cardboard è un'applicazine per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
 
 \section{Obiettivo}\label{obiettivo}
-L'obiettivo di fondo era quello di un \textbf{upgrade} della tesi di laurea di primo livello, dove era stato fatto un restyling di un videogioco desktop, chiamato Space Invaders\footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
+Nell' ambito della tesi di laurea di primo livello è stato migliorato un videogioco desktop, chiamato Space Invaders\footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
 Nel 2013 provare il tipo di trattamento proposta da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
-Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online), praticamente tutti possiedono uno smartphone,
-quindi la terapia \virgolette{mnobile} proposta da 3D4Amb è in grado di raccogliere un bacino d'utenza molto più ampio.\\
-Il fulcro di questa tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
+Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online),utilizzare uno smartphone e l'applicazione proposta da 3D4Amb. Questo sistema è in grado di raccogliere un bacino d'utenza molto più ampio.\\
+L'obiettivo della tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
+
+\section{Struttura del documento}\label{struttura_del_documento}
+Il documento è diviso in quattro parti. Nella prima parte viene descritto il contesto nel quale opera l'applicazione. //TODO
 %----------------------------------------------------------------------------------------
 %	l'ambliopia
 %----------------------------------------------------------------------------------------
 
 \chapter{L'Ambliopia}
 
-In questo secondo capitolo viene spiegato il l'ambito nel quale opera questa tesi (\ref{il_disturbo}), quali sono i tipi di trattamento al momento disponibili (\ref{trattamenti}) e la nuova tipologia di trattamento proposta dal progetto 3D4Amb (\ref{idea_3D4Amb}).
+In questo secondo capitolo viene spiegato il problema visivo di cui si occupa questa tesi (\ref{il_disturbo}), quali sono i tipi di trattamento al momento disponibili (\ref{trattamenti})ed il nuovo trattamento proposta dal progetto 3D4Amb (\ref{idea_3D4Amb}).
 
 \section{Il disturbo}\label{il_disturbo}
 L'ambliopia è una condizione di ridotta acuità visiva mono o bilaterale e si manifesta indipendentemente da causa organica. È dovuta ad una inadeguata stimolazione visiva
 durante il periodo plastico del sistema visivo, ossia il periodo che va dalla nascita fino ai sette anni.\\
-Il soggetto in cui è presente l'ambliopia soffre di un alterazione della visione dello spazio: le immagini che provengono dagli occhi non vengono correttamente rielaborate all'interno del cervello. Questo causa una scorretta comprensione dello spazio che lo circonda e causa una percezione scorretta della profondità, dei movimenti e dei contrasti.
-È presente nel 2-4\% della popolazione, la sua incidenza è più elevata in associazione con alcune condizioni quali prematurità, sindrome di Down, patologia neurologica e familiarità per ambliopia o strabismo. Spesso le persone non si accorgono nemmeno di esserne affette fino ai 20-30 anni, per questo è fondamentale la diagnosi.\\
+Il soggetto affetto da ambliopia soffre di un alterazione della visione dello spazio: le immagini che provengono dagli occhi non vengono correttamente rielaborate all'interno del cervello. Questo causa una scorretta comprensione dello spazio che lo circonda e causa una percezione scorretta della profondità, dei movimenti e dei contrasti.
+È presente nel 2-4\% della popolazione, la sua incidenza è più elevata in associazione con alcune condizioni quali prematurità, sindrome di Down, patologia neurologica e familiarità per ambliopia o strabismo. Spesso le persone non si accorgono di esserne affette fino ai 20-30 anni, per questo è fondamentale la diagnosi.\\
 Può colpire i bambini dalla nascita fino ai 7 anni, età in cui il sistema visivo raggiunge la sua maturità. Durante questo periodo iniziale l'ambliopia può essere trattata e prevenuta, mentre superata questa fase l'istaurazione della malattia diventa impossibile, ma, nel caso fosse presente, essa risulta irreversibile. L'ambliopia funzionale deve essere distinta dall'ambliopia organica, la quale è un impoverimento della visione, causata da anomalie strutturali dell' occhio o del cervello, che sono indipendenti dagli input sensoriali.\\
 L'ambliopia funzionale è reversibile se trattata con la stimolazione visiva adeguata, mentre quella organica non subisce alcun beneficio da una stimolazione visiva.
 Il videogame di rebalance ha quindi effetto solo sull'ambliopia funzionale e non su quella organica.
 \newpage
 \section{Trattamenti}\label{trattamenti}
-Il trattamento precoce dell'ambliopia è fondamentale per ottenere buoni risultati, la correzione oculare avviene in diversi modi:
+Il trattamento precoce dell'ambliopia è fondamentale per ottenere buoni risultati, la correzione oculare avviene in diversi modi, che verranno descritti nei prossimi paragrafi:
 
 \subsection{Occlusione}
 La terapia occlusiva si basa sulla copertura dell'occhio sano per stimolare l'occhio ambliope. Solitamente nei pazienti affetti anche da strabismo l'occlusione avviene a tempo pieno; tuttavia l'occlusione  a tempo pieno, o occlusione totale, può causare un ambliopia inversa nei soggetti sotto i 4-5 anni. Per evitare l'insorgere di questo ulteriore problema, la condizione dell'ambliopia deve essere monitorata ogni settimana per l'età del bambino. Per esempio, un bambino di due anni va monitorato ogni due settimane, uno di tre ogni tre settimane. Nel caso in cui venga riscontrato che il paziente non sopporta un'occlusione totale si applica un'occlusione parziale, ossia solo qualche ora al giorno.

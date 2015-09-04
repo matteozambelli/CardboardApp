@@ -139,7 +139,7 @@
 %----------------------------------------------------------------------------------------
 
 
-\chapter{Introduzione}
+\chapter{Introduzione}\label{capitolo_introduzione}
 
 %In questo primo capitolo viene spiegato di cosa tratta il progetto 3D4Amb, del quale fa parte questo lavoro (\ref{3d4amb}) e qual è l'obiettivo di questa tesi (\ref{obiettivo}).
 3D4Amb (\ref{3d4amb}) è un progetto che punta a sviluppare un sistema basato sulla tecnologia 3D per la
@@ -156,14 +156,17 @@ Nell' ambito della tesi di laurea di primo livello è stato migliorato un videogi
 Nel 2013 provare il tipo di trattamento proposta da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
 Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online),utilizzare uno smartphone e l'applicazione proposta da 3D4Amb. Questo sistema è in grado di raccogliere un bacino d'utenza molto più ampio.\\
 L'obiettivo della tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
-
+\newpage
 \section{Struttura del documento}\label{struttura_del_documento}
-Il documento è diviso in quattro parti. Nella prima parte viene descritto il contesto nel quale opera l'applicazione. //TODO
+Il documento è diviso in quattro parti. Nella prima parte viene descritto il progetto nel quale rientra questa applicazione (Capitolo \ref{capitolo_introduzione}), viene approfondita l'alterazione visiva della quale si occupa e le tipologie di trattamento (Capitolo \ref{capitolo_ambliopia}) e viene spiegata la tecnologia adottata per il trattamento (Capitolo \ref{capitolo_tecnologia}). \\
+Nella seconda parte di questo elaborato viene approfondito il principio di trattamento tramite il gioco e viene fatta una panoramica sull'applicazione (Capitolo \ref{capitolo_applicazione}).\\
+La terza parte è la più corposa, contiene una panoramica su software e hardware a livello di architettura di sistema, imlementazione software e casi d'uso (Capitolo \ref{capitolo_panoramica}), il design del software (Capitolo \ref{capitolo_software_design}), l'analisi di tutti gli algoritmi presenti nell'applicazione (Capitolo \ref{capitolo_analisi_algoritmi}) ed una descrizione dei tool utilizzati nello sviluppo e nell'analisi (Capitolo \ref{capitolo_tool}).\\
+La quarta ed ultima parte comprende una descrizione della promozione fatta per rendere nota al pubblico l'applicazione (Capitolo \ref{social_media} e le conclusioni sul lavoro (Capitolo \ref{capitolo_conclusioni}).
 %----------------------------------------------------------------------------------------
 %	l'ambliopia
 %----------------------------------------------------------------------------------------
 
-\chapter{L'Ambliopia}
+\chapter{L'Ambliopia}\label{capitolo_ambliopia}
 
 In questo secondo capitolo viene spiegato il problema visivo di cui si occupa questa tesi (\ref{il_disturbo}), quali sono i tipi di trattamento al momento disponibili (\ref{trattamenti})ed il nuovo trattamento proposta dal progetto 3D4Amb (\ref{idea_3D4Amb}).
 
@@ -180,22 +183,23 @@ Il videogame di rebalance ha quindi effetto solo sull'ambliopia funzionale e non
 Il trattamento precoce dell'ambliopia è fondamentale per ottenere buoni risultati, la correzione oculare avviene in diversi modi, che verranno descritti nei prossimi paragrafi:
 
 \subsection{Occlusione}
-La terapia occlusiva si basa sulla copertura dell'occhio sano per stimolare l'occhio ambliope. Solitamente nei pazienti affetti anche da strabismo l'occlusione avviene a tempo pieno; tuttavia l'occlusione  a tempo pieno, o occlusione totale, può causare un ambliopia inversa nei soggetti sotto i 4-5 anni. Per evitare l'insorgere di questo ulteriore problema, la condizione dell'ambliopia deve essere monitorata ogni settimana per l'età del bambino. Per esempio, un bambino di due anni va monitorato ogni due settimane, uno di tre ogni tre settimane. Nel caso in cui venga riscontrato che il paziente non sopporta un'occlusione totale si applica un'occlusione parziale, ossia solo qualche ora al giorno.
+La terapia occlusiva si basa sulla copertura dell'occhio sano per stimolare l'occhio ambliope. Solitamente nei pazienti affetti anche da strabismo l'occlusione avviene a tempo pieno; tuttavia l'occlusione  a tempo pieno, o occlusione totale, può causare un ambliopia inversa nei soggetti sotto i 4-5 anni. Per evitare l'insorgere di questo ulteriore problema, la condizione dell'ambliopia deve essere monitorata in proporzione all'età del bambino. Per esempio, un bambino di due anni va monitorato ogni due settimane, uno di tre ogni tre settimane. Nel caso in cui venga riscontrato che il paziente non sopporta un'occlusione totale si applica un'occlusione parziale, ossia solo qualche ora al giorno.
 
 \subsection{Penalizzazione ottica}
-Attuata con filtri di Bangerter (lenti con gradi diversi di opacizzazione, a seconda della entità della penalizzazione che si vuole attuare) o con  lenti più forti o più deboli poste davanti all'occhio sano per costringere quello malato a lavorare; come l'occlusione parziale, viene attuata o per coloro che  necessitano di una occlusione ''morbida'' o come terapia di mantenimento.
+Questo trattamento si attuata con filtri di Bangerter (lenti con gradi diversi di opacizzazione, a seconda della entità della penalizzazione che si vuole attuare) o con  lenti più forti o più deboli poste davanti all'occhio sano per costringere quello malato a lavorare. Come per l'occlusione parziale, viene attuata per coloro che  necessitano di una occlusione \virgolette{morbida} o come terapia di mantenimento.
 
 \subsection{Penalizzazione farmacologica}
-Viene effettuata con un collirio cicloplegico instillato nell' occhio sano per escluderlo dal processo di visione e costringere quello malato a lavorare.
+La penalizzazione farmacologica viene effettuata con un collirio cicloplegico instillato nell' occhio sano per escluderlo dal processo di visione e costringere quello malato a lavorare.
 
 \subsection{Settorizzazione}
-Consiste nella copertura di parte del campo visivo dell' occhio sano con pellicole adesive traslucide sugli occhiali. \\
+Consiste nella copertura di una parte del campo visivo dell' occhio sano con pellicole adesive traslucide sugli occhiali. \\
 Per il trattamento dell'ambliopia sono stati proposti anche degli stimolatori visivi di tipo elettrico (trattamento CAM-Cambridge Stimulator e trattamento Flicker): vengono inviati stimoli luminosi di vario tipo sulla retina dell'occhio ambliope, forzandolo  a trasmettere l'impulso luminoso al cervello, e riattivando così i canali "impigriti" dall'ambliopia. L'efficacia di queste metodiche è ancora oggi molto dibattuta.  Recentemente si stanno utilizzando farmaci neuroprotettivi come sostegno alla terapia occlusiva: studi recenti indicano che in questo modo viene potenziato l'effetto della terapia occlusiva e viene più facilmente stabilizzato il miglioramento della funzione visiva.
 \newpage
 \section{L'idea di 3D4Amb}\label{idea_3D4Amb}
 3D4Amb ha ideato un sistema basato sulle tecnologie 3D per consentire la visione binoculare. L'uso classico di un sistema 3D è quello di fornire ai due occhi diverse immagini della stessa scena con angoli di visualizzazione leggermente sfalsati che corrispondono ai diversi punti di vista dell' occhio destro e sinistro. Questa visione produce un'illusione di profondità della scena ed è la base della realtà virtuale.\\                                                         
 Il principio primario del sistema è che all' occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
-Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare, ma l'occhio sano non è \virgolette{patchato}. Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
+Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare senza escludere l'occhio sano; in questo modo il paziente continua il processo di fusione tra l'occhio destro e sinistro.\\
+Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
 
 
 \begin{figure}[t]
@@ -207,20 +211,20 @@ Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb i
 %----------------------------------------------------------------------------------------
 %	la tecnlogia per il trattamento
 %----------------------------------------------------------------------------------------
-\chapter{La tecnologia per il trattamento}
+\chapter{La tecnologia per il trattamento}\label{capitolo_tecnologia}
 In questo terzo capitolo viene spiegata la scelta del sistema operativo dell'applicazione realizzata e l'ambiente di sviluppo utilizzato (\ref{SO_ADS}), inoltre il capitolo contiene la descrizione al visore 3D \virgolette{ideale}con il quale interagisce l'applicazione (\ref{sectionGC}).
 
 \section{Sistema operativo ed ambiente di sviluppo}\label{SO_ADS}
-L'applicazione è stata progettata e sviluppata per il mondo Android. I software utilizzati per l'implementazione sono stati:
+L'applicazione è stata progettata e sviluppata per dispositivi Android. I software utilizzati per l'implementazione sono:
 \begin{itemize}
 	\item l'ultima versione del JDK, il kit di sviluppo per la tradizionale programmazione Java, reperibile dal sito Oracle\footnote{http://www.oracle.com/technetwork/java/javase/downloads/index.html} ;
-	\item l'IDE (ambiente di sviluppo integrato) Android Studio, alternativa fresca e promettente ad Eclipse. La sua installazione include il pacchetto di strumenti Android SDK, il quale è costituito da programmi, emulatori e piattaforme per ogni versione di Android. La sua composizione inoltre non è immutabile, ma viene gestita tramite il programma Android SDK Manager, avviabile dall'IDE, grazie al quale siamo stati in grado di profilare le piattaforme e gli strumenti presenti nel SDK nella maniera più congeniale al nostro lavoro.
+	\item l'IDE (ambiente di sviluppo integrato) Android Studio, alternativa ad Eclipse. La sua installazione include il pacchetto di strumenti Android SDK, il quale è costituito da programmi, emulatori e piattaforme per ogni versione di Android. La sua composizione inoltre non è immutabile, ma viene gestita tramite il programma Android SDK Manager, avviabile dall'IDE, grazie al quale siamo stati in grado di profilare le piattaforme e gli strumenti presenti nel SDK nel modo più utile al nostro lavoro.
 	
 \end{itemize}
 
 In particolare si è deciso che il requisito minimo che deve possedere lo smartphone dell'utente che utilizza l'applicazione sia un livello di API(Application Programming Interface) 15, ovvero dal sistema operativo Android 4.0.3 \footnote{(ICE\_CREAM\_SANDWICH\_MR1)} in poi.
-\subsection{Perchè Android}La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè ad esempio per iOS o Windows Phone, è figlia delle seguenti riflessioni:
-Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alle radici ben salde nel mondo open source. Il sistema operativo Android, infatti, è figlio di Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
+\subsection{Perchè Android}La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè iOS, Windows Phone o altri SO\footnote{Sistemi Operativi}, nasce dalle delle seguenti riflessioni.\\
+Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alla sua appartenenza al mondo open source. Il sistema operativo Android, infatti, deriva da Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
 Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.\\
 Parlando di numeri, Android domina fra gli smartphone con una quota di mercato dell' 84,7\%. E' il dato principale che emerge dall' analisi della società di ricerca \textit{Idc} sul mercato dei cellulari. Il sistema operativo mobile di Google, a differenza di quello di Apple, è presente su decine di modelli di cellulari di marche diverse e domina il mercato lasciando alla \virgolette{Mela} l'11,7\% di share \cite{percentualeSmartphone}.
 \subsection{Perchè Android Studio}\label{android_studio}
@@ -248,7 +252,7 @@ Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. 
 	\caption{Google Cardboard}\label{googlecardboard}
 \end{figure}
 
-Introdotto nel 2014 al \virgolette{Google I/O developers conference for Android device}, è formato da un cartone ripiegabile e due lenti, l'utente deve inserirci lo smartphone (Figura ~\ref{googlecardboard}). Questo sistema consente una visione stereoscopica, funziona con differenti smartphone e può essere facilmente usato dai bambini.\\
+Introdotto nel 2014 al \virgolette{Google I/O developers conference for Android device}, è formato da un cartone ripiegabile e due lenti, l'utente deve semplicemente inserire lo smartphone (Figura ~\ref{googlecardboard}). Questo sistema consente una visione stereoscopica, funziona con differenti smartphone e può essere facilmente usato dai bambini.\\
 Google cardboard non consente un' esperienza immersiva come Oculus rift, il quale necessita però di un PC collegato (ed è ancora in fase di sviluppo), ma è un modo facile ed economico per provare l'esperienza della realtà virtuale, inoltre la maggior parte delle applicazioni sono reperibili gratuitamente.
 \linebreak
 \textbf{Esistono rischi per la salute?}\\
@@ -266,15 +270,15 @@ Tuttavia, è importante notare che l'assenza di prove a sostegno della tesi non i
 %	l'applicazione
 %----------------------------------------------------------------------------------------
 
-\chapter{Car Racing Cardboard: l'applicazione}
-Questo capitolo contiene la descrizione del principio di tratatamento del gioco (\ref{principio}), la spiegazione degli obiettivi del gioco (\ref{il_gioco}), e una giuda all'utilizzo dell'applicazione (\ref{guida}).
+\chapter{Car Racing Cardboard: l'applicazione}\label{capitolo_applicazione}
+Questo capitolo contiene la descrizione del principio di funzionamento del gioco per trattare l'ambliopia (\ref{principio}), la spiegazione degli obiettivi del gioco (\ref{il_gioco}), e una giuda all'utilizzo dell'applicazione (\ref{guida}).
 
 \section{Il principio del trattamento tramite il gioco}\label{principio}
 L' applicazione sviluppata in questo progetto di tesi, punta a sfruttare le potenzialità del Google Cardboard per correggere il disturbo dovuto all'ambliopia. Fino ad ora, il trattamento standard consolidato per la cura della malattia è stato l'occlusione visiva.
 Questa tecnica può però presentare alcuni limiti: 
 \begin{itemize}
-	\item in primo luogo la compliance (adesione del paziente alla terapia) è un fattore limitante da non trascurare, soprattutto quando la profondità dell'ambliopia richiede tempi lunghi di trattamento;
-	\item Inoltre, l'occlusione è gravata dalla tendenza alla perdita di efficacia nel breve periodo. Infatti fino al 50\% dei benefici ottenuti vengono persi, se i risultati funzionali non sono stati resi stabili, prolungando il trattamento per un tempo sufficientemente lungo, dopo che si è registrato il miglioramento del visus.
+	\item la compliance, adesione del paziente alla terapia, è un fattore limitante da non trascurare, soprattutto quando la profondità dell'ambliopia richiede tempi lunghi di trattamento;
+	\item l'occlusione è gravata dalla tendenza alla perdita di efficacia nel breve periodo. Infatti fino al 50\% dei benefici ottenuti vengono persi, se i risultati funzionali non sono stati resi stabili, prolungando il trattamento per un tempo sufficientemente lungo, dopo che si è registrato il miglioramento del visus.
 \end{itemize}
 \noindent
 Probabilmente la tendenza alla perdita di effetto è dovuta, almeno in parte, al fatto che l'occlusione non affronta un altro importante aspetto della terapia dell'ambliopia, cioè la stimolazione diretta dell'occhio con il deficit visivo. Sulla base di questo, si è quindi pensato di realizzare un gioco interattivo che punti alla cura dell'occhio ampliope in modo più coinvolgente.
@@ -288,7 +292,7 @@ Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo 
 \newpage
 \section{Il gioco}\label{il_gioco}
 \subsection{Obiettivo}
-L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono nella nostra direzione sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
+L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono in direzione opposta alla nostra sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
 
 \begin{figure}[ht]
 	\centering
@@ -298,7 +302,7 @@ L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è que
 \end{figure}
 
 \subsection{Doppia Viewport}
-Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizzando sullo smartphone dell'utente una doppia Viewport. Questo sdoppiamento, grazie alla tecnologia offerta dal Google Cardboard, permette all'utente una visione stereoscopica del gioco. Le due Viewport sono inoltre fondamentali per il principio di funzionamento della nostra applicazione. Infatti, grazie ad esse è possibile trattare in modo differente l'occhio sinistro dall'occhio destro, e più specificatamente l'occhio ambliope dall'occhio sano. Prima dell'inizio del gioco vero e proprio, l'applicazione da la possibilità di scegliere l'occhio pigro:
+Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizzando sullo smartphone dell'utente una doppia Viewport. Questo sdoppiamento, grazie alla tecnologia offerta dal Google Cardboard, permette all'utente una visione stereoscopica del gioco. Le due Viewport sono inoltre fondamentali per il principio di funzionamento della nostra applicazione. Infatti, grazie ad esse è possibile trattare in modo differente l'occhio sinistro dall'occhio destro, e più specificatamente l'occhio ambliope dall'occhio sano. Prima dell'inizio del gioco vero e proprio, l'applicazione da la possibilità di scegliere l'occhio pigro (Figura \ref{fig:chooselazyeye_left}).\\
 
 \begin{figure}[ht]
 	\centering
@@ -307,15 +311,15 @@ Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizza
 	\label{fig:chooselazyeye_left}
 \end{figure}
 \noindent
-In questo modo si da all'applicazione l'opportunità di trattare l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare dello score e dei livelli raggiunti dall'utente. 
+In questo modo l'applicazione tratta l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare del punteggio e dei livelli raggiunti dall'utente. 
 
 \newpage
 \section{Guida all'utilizzo}\label{guida}
 
 Dopo aver scaricato l'applicazione da Google Play Store \footnote{https://play.google.com/store/apps/details?id=it.unibg.p3d4amb.carracingcarboard\&hl=it}
 è possibile friure dei contenuti di Car Racing Cardboard.
-Connettere quindi lo smartphone agli auricolari, ma aspettare ad inserirlo nel visore 3D.
-La schermata di avvio è la seguente (Figura \ref*{login_activity}):
+Il primo passo consiste nel connettere lo smartphone agli auricolari.
+La schermata di avvio è mostrata in (Figura \ref*{login_activity}).\\
 
 \begin{figure}[ht]
 	\centering
@@ -325,7 +329,7 @@ La schermata di avvio è la seguente (Figura \ref*{login_activity}):
 \end{figure}
 
 Da questa schermata è possibile effettuare il log in, se l'utente è gia registrato, in caso contrario è possibile registrarsi premendo sul bottone \virgolette{SIGN UP}.
-Prima della schermata di registrazione il sistema mostra un messaggio per ricordare all'utente (qualora esso non sia il paziente, ad esempio un genitore) di inserire i dati del paziente, poichè non avrebbe senso raccogliere informazioni forvianti (Figura \ref{warning_signup})
+Prima della schermata di registrazione il sistema mostra un messaggio per ricordare all'utente (qualora esso non sia il paziente, ad esempio un genitore) di inserire i dati del paziente, poichè non avrebbe senso raccogliere informazioni forvianti (Figura \ref{warning_signup}).\\
 
 \begin{figure}[ht]
 	\centering
@@ -344,7 +348,7 @@ Cliccando su \virgolette{CONTINUE} si entra nella vera schermata di registrazion
 \end{figure}
 
 Qui bisogna inserire: Nome, Cognome, email, data di nascita, colore preferito e password. Il colore viene utilizzato in caso di password dimenticata, come domanda di sicurezza.
-Nell'eventualità nella quale un utente dimentichi la sua password, dalla schermata iniziale (Figura \ref*{login_activity}) premendo su \virgolette{forgot your password?} si accede al pop up di ripristino (Figura \ref{resetpassword}).
+Nell'eventualità nella quale un utente dimentichi la sua password, dalla schermata iniziale (Figura \ref*{login_activity}) premendo su \virgolette{forgot your password?} si accede al pop up di ripristino (Figura \ref{resetpassword}).\\
  
 \begin{figure}[ht]
 	\centering
@@ -355,7 +359,7 @@ Nell'eventualità nella quale un utente dimentichi la sua password, dalla scherma
 
 Inserendo l'indirizzo email valido ed il colore corretto, il sistema invia una mail con la nuova password, che sarà possibile ri-personalizzare premendo su \virgolette{update your info} (Figura \ref{login_activity}).
 Sempre dalla schermata iniziale è possibile, premendo su \virgolette{?} aprire il sito dedicato a Car Racing Cardboard\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}(vedi anche sezione \ref{social_media}).
-Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questa possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(Figura \ref{cwu}).
+Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questa possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(Figura \ref{cwu}).\\
 
 \begin{figure}[ht]
 	\centering
@@ -364,7 +368,7 @@ Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo 
 	\label{cwu}
 \end{figure}
 \newpage
-Il motivo per il quale è stata fatta questa distinzione è il seguente: non sarebbe efficiente, ad esempio, per un dottore che ha tre pazienti, dover registrare tre account diversi, in questo caso, è stata prevista la possibilità per i dottori di gestire più pazienti con un unico account, infatti, il sistema è in grado di riconoscere un dottore registrato e lo reindirizza ad una pagina apposita (Figura \ref{doctor_activity}).
+Il motivo per il quale è stata fatta questa distinzione è il seguente: non sarebbe efficiente, ad esempio, per un dottore che ha tre pazienti, dover registrare tre account diversi, in questo caso, è stata prevista la possibilità per i dottori di gestire più pazienti con un unico account, infatti, il sistema è in grado di riconoscere un dottore registrato e lo reindirizza ad una pagina apposita (Figura \ref{doctor_activity}).\\
 
 \begin{figure}[!ht]
 	\centering
@@ -375,7 +379,7 @@ Il motivo per il quale è stata fatta questa distinzione è il seguente: non sareb
 In questo caso il dottore inserisce i dati del paziente (nome, cognome e data di nascita), il sistema in autonomia verifica se si tratta di un primo inserimento oppure di un \virgolette{log in}. Nel caso di un primo inserimento viene aggiunto un record alla tabella dei pazienti, questo record è collegato a quello del dottore, per consentire poi un eventuale estrazione dei dati di tutti i pazienti di quel dottore.
 
 \paragraph{Giocare senza registrarsi:}
-un utente può anche accedere al gioco senza registrarsi sul nostro sistema, cliccando su \virgolette{PLAY WITHOUT REGISTRATION}, in questo caso però non godrà degli stessi servizi di un utente registrato, questa possibilità è stata pensata per chi volesse provare l'applicazione senza per forza dover fornire i propri dati.
+un utente può anche accedere al gioco senza registrarsi sul nostro sistema, cliccando su \virgolette{PLAY WITHOUT REGISTRATION}, in questo caso però non godrà degli stessi servizi di un utente registrato, questa possibilità è stata pensata per chi volesse provare l'applicazione senza dover fornire i propri dati.
 
 
 \paragraph{Avvio del gioco:}dopo aver effettuato il log in o aver avviato l'applicazione con l'opzione senza registrazione, nel caso di un primo avvio viene visualizzato un video-tutorial per l'utilizzo del gioco, nel quale vengono descritti i comandi per utilizzare lo stesso, è possibile saltare questo video spuntando la checkbox in basso \virgolette{don't show me again}.\\
@@ -400,7 +404,7 @@ Come accennato in precedenza, tale funzionalità, è accessibile solo dagli utenti
 %----------------------------------------------------------------------------------------
 %	Panoramica su software e hardware
 %----------------------------------------------------------------------------------------
-\chapter{Panoramica su software e hardware}
+\chapter{Panoramica su software e hardware}\label{capitolo_panoramica}
 In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed una breve descrizione sulle scelte dell' hardware (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
 
 \section{Architettura di sistema}\label{architettura_di_sistema}
@@ -411,8 +415,8 @@ Il sistema prevede le seguenti componenti:
 	\item auricolari con tasti di controllo del volume;
 	\item server Linux con database MySql.
 \end{itemize}
-Lo smartphone (con S.O. Android) va inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso.\\
-Al dispositivo vanno collegati degli auricolari con il controllo del volume (come quelli che si trovano nelle confezioni dei telefoni all'acquisto), saranno necessari  per controllare il movimento della macchinina.
+Lo smartphone (con S.O. Android) deve essere inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso.\\
+Al dispositivo vanno collegati gli auricolari con il controllo del volume, saranno necessari  per controllare il movimento della macchinina.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=160mm]{immagini/architettura_di_sistema}
@@ -421,15 +425,15 @@ Al dispositivo vanno collegati degli auricolari con il controllo del volume (com
 \end{figure}
 
 
-\paragraph{La scelta degli auricolari come controller}è nata dopo aver notato come l'utilizzo dell'accelerometro (sensore presente su ogni smartphone) come strumento per catturare i comandi dell'utente, causasse un senso di nausea dopo pochi minuti di gioco, si è quindi deciso di utilizzare un controllore esterno.\\
-Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma piuttosto sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
+\paragraph{La scelta degli auricolari come controller}è nata dopo aver notato che l'utilizzo dell'accelerometro (sensore presente su ogni smartphone) come strumento per catturare i comandi dell'utente, causasse disturbi alla persona dopo pochi minuti di gioco.\\
+Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
 
-\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server è il cs.unibg.it, è una macchina Linux ed utilizza un database MySql è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
+\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server utilizzato è cs.unibg.it, una macchina Linux che utilizza un database MySql, è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 
 \newpage
 \section{Vista di implementazione software}\label{vista_di_implementazione_software}
 Questo grafico mostra dove sono installate le varie componenti software, in che linguaggio sono scritte e come interagiscono tra di loro (Figura \ref{vista_implementazione_software}).\\
-Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password, infine la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepilogo dei dati di gioco, le notifiche di conferma registrazione il cambiamento dei dati o la modifica della password.
+Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password, la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepilogo dei dati di gioco, le notifiche di conferma registrazione il cambiamento dei dati o la modifica della password.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=160mm]{immagini/vista_implementazione_software}
@@ -521,7 +525,7 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 \newpage
 \subsection{Log In medico}
 \paragraph{Attori:} Medico
-\paragraph{Precondizioni:} E' necessaria una connessione ad internet. E' necessario che il medico abbia sottomano i dati del paziente.
+\paragraph{Precondizioni:} E' necessaria una connessione ad internet. E' necessario che il medico sia in possesso dei dati del paziente.
 \paragraph{Passi principali:}
 \begin{enumerate}
 	\item il medico lancia l'applicazione;
@@ -582,11 +586,11 @@ L'update delle credenziali selezionate viene eseguito correttamente.
 %----------------------------------------------------------------------------------------
 %	Software design
 %----------------------------------------------------------------------------------------
-\chapter{Software design}
+\chapter{Software design}\label{capitolo_software_design}
 
-In questo capitolo vengono riportari i classici diagrammi UML, i quali permettono tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software, in sequenza di trovano package diagram (\ref{package}), component diagram (\ref{component}) e sequence diagram (\ref{sequence}), i class diagram non sono stati riportati poichè data la mole di codice, sarebbero risultati illeggibili.
+In questo capitolo vengono riportari i diagrammi UML i quali permettono, tramite l'utilizzo di modelli visuali, di analizzare, descrivere, specificare e documentare un software. I tipi di diagrammi UML utilizzati sono: package diagram (\ref{package}), component diagram (\ref{component}) e sequence diagram (\ref{sequence}), i class diagram (non sono stati riportati poichè, data la mole di codice, sarebbero risultati illeggibili).
 \section{Package Diagram}\label{package}
-Ecco una panoramica sui package della nostra app, adottiamo una strategia top-down, e partendo da un livello alto, aumentiamo via via il grado di dettaglio.
+I package sono stati creati adottando una strategia top-down, partendo da un livello alto, aumentando via via il dettaglio.
 
 \begin{figure}[ht]
 	\centering
@@ -597,9 +601,9 @@ Ecco una panoramica sui package della nostra app, adottiamo una strategia top-do
 \newpage
 \section{Component diagram}\label{component}
 \subsection{Il sistema di Car Racing Cardboard}\label{post_call}
-Le due componenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Android, queste due componenti comunicano con chiamate di tipo http post.\\
-A differenza di get, che permette a un server di mandare informazioni a un client, l'operazione post fornisce ai client un modo per trasmettere informazioni ai server. 
-La maggior parte dei browser web usa comunemente tale metodo per inviare forms ai server Web.
+Le due componenti principali del sistema Car Racing Cardboard sono il server cs.unibg.it e l'applicazione Android; queste due componenti comunicano con chiamate di tipo http post.\\
+A differenza dell'operazione get, che permette a un server di mandare informazioni a un client, l'operazione post fornisce ai client un modo per trasmettere informazioni ai server. 
+La maggior parte dei browser web usa tale metodo per inviare forms ai server Web.
 Il client manda un messaggio post e include l'informazione che desidera mandare al server.
 Il server può rimandare l'informazione stessa come parte della risposta \cite{httppost}. \\
 \begin{figure}[ht]
@@ -611,7 +615,7 @@ Il server può rimandare l'informazione stessa come parte della risposta \cite{ht
 
 \subsection{L'applicazione Android}
 Entrando nel dettaglio della prima componete, l'applicazione Android, offre il servizio di interfaccia grafica touch, mentre riceve dal server il servizio di scambio dati http.
-I componenti grafici di Android si dividono in due categorie: View e ViewGroup. Una View è un qualunque componente utilizzabile (TextView, EditView, CheckBox, Button, ImageView, ?) in una interfaccia. Una ViewGroup è solitamente un layout che contiene un insieme di View, i più usati sono LinearLayout, RelativeLayout e TableLayout. Un ViewGroup è a sua volta una View, per questo possono essere creati layout complessi annidando a più livelli i vari componenti. View e ViewGroup sono un esempio di pattern composite.
+I componenti grafici di Android si dividono in due categorie: View e ViewGroup. Una View è un qualunque componente utilizzabile (TextView, EditView, CheckBox, Button, ImageView) in una interfaccia. Una ViewGroup è solitamente un layout che contiene un insieme di View, i più usati sono LinearLayout, RelativeLayout e TableLayout. Un ViewGroup è a sua volta una View, per questo possono essere creati layout complessi annidando a più livelli i vari componenti. View e ViewGroup sono un esempio di pattern composite.
 Le interfacce grafiche in Android possono essere definite in due modi (entrambe sfruttate in Car Racing Cardboard):
 \begin{itemize}
 \item definendo un file xml: ad ogni View corrisponde un tag xml, i ViewGroup sono tag xml che contengono all' interno altri tag;
@@ -626,8 +630,8 @@ Le interfacce grafiche in Android possono essere definite in due modi (entrambe 
 \end{figure}
 
 \subsection{Dettaglio applicazione} 
-L'applicazione per quanto riguarda la componente algoritmica (intesa come la parte che non  riguarda la GUI), è composta dalle Activity, ossia le varie schermate o pagine di un'applicazione Android, le quali si occupano di tradurre gli input dell'utente in output implementati tramite codice java.\\
-Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del gioco nella sua ripetizione ciclica, infine gli asynctask, sono utilizzati per alleggerire l'esecuzione dei thread sulla User Interface (Figura \ref{component_applicazione}).
+L'applicazione (intesa come la parte che non  riguarda la GUI), è composta da Activity, ossia da schermate o pagine di un'applicazione Android, le quali si occupano di tradurre gli input dell'utente in output implementati tramite codice java.\\
+Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del gioco nella sua ripetizione ciclica, infine gli asynctask sono utilizzati per alleggerire l'esecuzione dei thread sulla User Interface (Figura \ref{component_applicazione}).
 
 \begin{figure}
 \centering
@@ -659,13 +663,13 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \subsection{Funziononamento con log in}
 All'avvio dell'applicazione, se l'utente ha popolato correttamente i campi email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
 \begin{itemize}
-	\item alla classe PostCall vengono passate la stringa contentente l'email e quella della password;
+	\item alla classe PostCall vengono passate la stringa contentente l'email e quella contenente la password;
 	\item la classe PostCall effettua una chiamata post al server cs.unibg.it, più precisamente al servizio 3d4ambservice.php .
 \end{itemize}
 Il servizio php verifica nel database se l'email e la password sono corrette, e manda un messaggio di risposta alla PostCall, la quale effettua un parsing della risposta e restituisce un messaggio all'interfaccia corrente.\\
 A questo punto la dialog ring viene interrotta, e nello scenario di un' autenticazione corretta, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
-Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un' animazione d'avvio. Viene avviata ora la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
-Confermata la scelta dell'occhio, si apre la MainActivity, contenente il gioco vero e proprio, i thread principali sono tre:
+Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un' animazione d'avvio. Viene successivamente avviata la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
+Confermata la scelta dell'occhio, si apre la MainActivity contenente il gioco vero e proprio. I thread principali sono tre:
 \begin{enumerate}
 	\item GameThread: che gestisce i nemici e l'auto dell'utente;
 	\item TimerPanorama: per la gestione del panorama laterale;
@@ -683,8 +687,8 @@ Terminato il gioco (gameover) è possibile richiedere i risultati via mail oppure
 Il funzionamento in modalità \virgolette{play without registration} è identico a quello del log in utente, infatti, in questo caso è stato definito un utente di default, al quale vengono associati tutti i risultati degli utenti che hanno giocato senza registrarsi.
 
 \subsection{Funziononamento sign up}
-Per quanto riguarda la registrazione di nuovi utenti, una volta premuto il bottone \virgolette{SIGN UP}, si apre un pop up di warning, dopo di che ,se è stato premuto il tasto di conferma, come verrà poi approfondito nella sezione \ref{signup_label}, l'utente deve fornire: nome, cognome, email, colore preferito, data di nascita e password.\\
-Tutti i dati vengono inviati classe PostCall (con una chiamata analoga a quella per il log in), che a sua volta effettua una chiamata post al servizio 3d4ambservice.php. Se i dati inseriti sono corretti (l'email è esistente e non sono presenti record nel database con gli stessi attributi, inteso come stessa email, nome e cognome), il nuovo utente viene inserito (Figura \ref{sequence_signup}).\\
+Per quanto riguarda la registrazione di nuovi utenti, una volta premuto il bottone \virgolette{SIGN UP}, si apre un pop up di warning. Se viene premuto il tasto di conferma, come verrà poi approfondito nella sezione \ref{signup_label}, l'utente deve fornire: nome, cognome, email, colore preferito, data di nascita e password.\\
+Tutti i dati vengono inviati classe PostCall (con una chiamata analoga a quella per il log in), che a sua volta effettua una chiamata post al servizio 3d4ambservice.php. Se i dati inseriti sono corretti (l'email è esistente e non sono presenti record nel database con stessa email, nome e cognome), il nuovo utente viene inserito (Figura \ref{sequence_signup}).\\
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/sequence_signup}
@@ -697,7 +701,7 @@ Tutti i dati vengono inviati classe PostCall (con una chiamata analoga a quella 
 %	analisi degli algoritmi
 %----------------------------------------------------------------------------------------
 
-\chapter{Analisi degli Algoritmi}
+\chapter{Analisi degli Algoritmi}\label{capitolo_analisi_algoritmi}
 In questo capitolo vengono analizzati gli algoritmi che compongono l' applicazione. Gli algoritmi utilizzati sono: penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), generazione casuale della scena (\ref{generazione_random_scena}),cifratura delle password degli utenti (\ref{cifratura}), servizio web (\ref{servizio_web}), gestione degli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), thread principale del gioco (\ref{game_thread}), gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni per la gestione di una parte della grafica (\ref{asynctask}).
 
 \section{Penalizzazione progressiva delle immagini}\label{penalizzazione_progressiva}
@@ -1486,7 +1490,7 @@ Nel metodo doInBackground viene inizializzato l'oggetto relativo alla gestione d
 %----------------------------------------------------------------------------------------
 %	tool
 %----------------------------------------------------------------------------------------
-\chapter{Tool utilizzati}
+\chapter{Tool utilizzati}\label{capitolo_tool}
 
 %In questo capitolo vengono spiegati i tool utilizzati durante lo sviluppo dell'applicazione, il tool principale, Android Studio, è descritto nella sezione (\ref{android_studio}), il tool per la sincronizzazione del lavoro da remoto, GitHub (\ref{github}) ed il tool per la gestione dei crash, crashlitics (\ref{crashlitics}).
 
@@ -1590,7 +1594,7 @@ Il sito contiene informazioni sulla strumentazione necessaria per l'utilizzo del
 %   conclusioni
 %----------------------------------------------------------------------------------------
 
-\chapter{Conclusioni}
+\chapter{Conclusioni}\label{capitolo_conclusioni}
 
 Lo scopo di questa applicazione è il trattamento dell'ambliopia. Non è necessario avere a disposizione un device costoso, al giorno d'oggi infatti, tutte le persone hanno uno smartphone e Google Cardboard è molto economico. Usando l'applicazione Car Racing Cardboard, le persone che soffrono di ambliopia possono migliorare divertendosi.\\
 Quest' idea di avere una penalizzazione proporzionata alle abilità del giocatore è stata applicata non solo alla quantità di informazioni fornite agli occhi, ma anche alla difficoltà vera e propria del gioco. Infatti, ogni volta che viene superato un livello, la velocità dei  nemici aumenta, in questo modo il gioco viene reso più dinamico, non resta identico fino al gameover, ed inoltre, in base alle prestazioni dell' utente, la difficoltà di gioco aumenta\cite{tesiTZ}.\\

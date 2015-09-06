@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  6 SEP 2015 14:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.4)  6 SEP 2015 14:36
 entering extended mode
 **tesi.tex
 (C:\Users\mzambell\Personal\unibg\CardboardApp\tesi\tesi.tex
@@ -830,20 +830,20 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 422--423
 
 ] [34 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/architettura
 _di_sistema.png>]
-<immagini/vista_implementazione_software.png, id=635, 809.27344pt x 578.16pt>
+<immagini/vista_implementazione_software.png, id=635, 809.424pt x 578.28046pt>
 File: immagini/vista_implementazione_software.png Graphic file (type png)
 
 <use immagini/vista_implementazione_software.png>
 Package pdftex.def Info: immagini/vista_implementazione_software.png used on in
 put line 439.
-(pdftex.def)             Requested size: 455.24408pt x 325.24066pt.
+(pdftex.def)             Requested size: 455.24408pt x 325.24666pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 439--440
  [][] 
  []
 
 [35 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/vista_implemen
-tazione_software.png>] [36]
+tazione_software.png (PNG copy)>] [36]
 <immagini/usecaseSignUpPNG.png, id=653, 381.00745pt x 246.36842pt>
 File: immagini/usecaseSignUpPNG.png Graphic file (type png)
 
@@ -969,12 +969,12 @@ Package pdftex.def Info: immagini/sequence_login.png used on input line 681.
 LaTeX Warning: Float too large for page by 2.71437pt on input line 684.
 
 [50] [51 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sequence_
-login.png>] <immagini/sequence_signup.png, id=777, 718.93594pt x 310.91156pt>
+login.png>] <immagini/sequence_signup.png, id=777, 718.96605pt x 310.88145pt>
 File: immagini/sequence_signup.png Graphic file (type png)
 
 <use immagini/sequence_signup.png>
 Package pdftex.def Info: immagini/sequence_signup.png used on input line 694.
-(pdftex.def)             Requested size: 426.79135pt x 184.5748pt.
+(pdftex.def)             Requested size: 426.79135pt x 184.54745pt.
  [52 <C:/Users/mzambell/Personal/unibg/CardboardApp/tesi/immagini/sequence_sign
 up.png>]
 Capitolo 7.
@@ -1458,7 +1458,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1667.
 Here is how much of TeX's memory you used:
  14763 strings out of 493921
  221939 string characters out of 3146472
- 698503 words of memory out of 3000000
+ 698504 words of memory out of 3000000
  16950 multiletter control sequences out of 15000+200000
  20216 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1488,7 +1488,7 @@ C:/Program Files (x86)/miktex/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
 iles (x86)/miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/mikt
 ex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/miktex/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on tesi.pdf (123 pages, 16752102 bytes).
+Output written on tesi.pdf (123 pages, 17586562 bytes).
 PDF statistics:
  2510 PDF objects out of 2984 (max. 8388607)
  871 named destinations out of 1000 (max. 500000)

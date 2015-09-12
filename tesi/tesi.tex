@@ -146,15 +146,15 @@
 diagnosi e il trattamento dell'ambliopia. Nell'ambito di questo progetto è stata sviluppata
 un'applicazione Android il cui scopo è quello di effettuare il trattamento della malattia.
 \section{Il progetto 3D4Amb}\label{3d4amb}
-Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Il progetto punta a sviluppare una tecnologia per consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento.La soluzione proposta mira ad eliminare i problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
-L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è di sviluppare un sistema per la diagnosi e il trattamento di ambliopia, basata sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
+Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Il progetto punta a sviluppare una tecnologia per consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. La soluzione proposta mira ad eliminare i problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
+L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è sviluppare un sistema per la diagnosi e il trattamento dell'ambliopia, basato sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
 Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg.it/
 Car Racing Cardboard è un'applicazione per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
 
 \section{Obiettivo}\label{obiettivo}
-Nell' ambito della tesi di laurea di primo livello è stato migliorato un videogioco desktop, chiamato Space Invaders\footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
+Nell'ambito della tesi di laurea di primo livello è stato migliorato un videogioco desktop, chiamato Space Invaders\footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
 Nel 2013 provare il tipo di trattamento proposta da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
-Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online),utilizzare uno smartphone e l'applicazione proposta da 3D4Amb. Questo sistema è in grado di raccogliere un bacino d'utenza molto più ampio.\\
+Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online), utilizzare uno smartphone e l'applicazione proposta da 3D4Amb. Questo sistema è in grado di raccogliere un bacino d'utenza molto più ampio.\\
 L'obiettivo della tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
 \newpage
 \section{Struttura del documento}\label{struttura_del_documento}
@@ -175,7 +175,7 @@ L'ambliopia è una condizione di ridotta acuità visiva mono o bilaterale e si man
 durante il periodo plastico del sistema visivo, ossia il periodo che va dalla nascita fino ai sette anni.\\
 Il soggetto affetto da ambliopia soffre di un alterazione della visione dello spazio: le immagini che provengono dagli occhi non vengono correttamente rielaborate all'interno del cervello. Questo causa una scorretta comprensione dello spazio che lo circonda e causa una percezione scorretta della profondità, dei movimenti e dei contrasti.
 È presente nel 2-4\% della popolazione, la sua incidenza è più elevata in associazione con alcune condizioni quali prematurità, sindrome di Down, patologia neurologica e familiarità per ambliopia o strabismo. Spesso le persone non si accorgono di esserne affette fino ai 20-30 anni, per questo è fondamentale la diagnosi.\\
-Può colpire i bambini dalla nascita fino ai 7 anni, età in cui il sistema visivo raggiunge la sua maturità. Durante questo periodo iniziale l'ambliopia può essere trattata e prevenuta, mentre superata questa fase l'istaurazione della malattia diventa impossibile, ma, nel caso fosse presente, essa risulta irreversibile. L'ambliopia funzionale deve essere distinta dall'ambliopia organica, la quale è un impoverimento della visione, causata da anomalie strutturali dell' occhio o del cervello, che sono indipendenti dagli input sensoriali.\\
+Può colpire i bambini dalla nascita fino ai 7 anni, età in cui il sistema visivo raggiunge la sua maturità. Durante questo periodo iniziale l'ambliopia può essere trattata e prevenuta, mentre superata questa fase l'istaurazione della malattia diventa impossibile, ma, nel caso fosse presente, essa risulta irreversibile. L'ambliopia funzionale deve essere distinta dall'ambliopia organica, la quale è un impoverimento della visione, causata da anomalie strutturali dell'occhio o del cervello, che sono indipendenti dagli input sensoriali.\\
 L'ambliopia funzionale è reversibile se trattata con la stimolazione visiva adeguata, mentre quella organica non subisce alcun beneficio da una stimolazione visiva.
 Il videogame di rebalance ha quindi effetto solo sull'ambliopia funzionale e non su quella organica.
 \newpage
@@ -189,15 +189,15 @@ La terapia occlusiva si basa sulla copertura dell'occhio sano per stimolare l'oc
 Questo trattamento si attuata con filtri di Bangerter (lenti con gradi diversi di opacizzazione, a seconda della entità della penalizzazione che si vuole attuare) o con  lenti più forti o più deboli poste davanti all'occhio sano per costringere quello malato a lavorare. Come per l'occlusione parziale, viene attuata per coloro che  necessitano di una occlusione \virgolette{morbida} o come terapia di mantenimento.
 
 \subsection{Penalizzazione farmacologica}
-La penalizzazione farmacologica viene effettuata con un collirio cicloplegico instillato nell' occhio sano per escluderlo dal processo di visione e costringere quello malato a lavorare.
+La penalizzazione farmacologica viene effettuata con un collirio cicloplegico instillato nell'occhio sano per escluderlo dal processo di visione e costringere quello malato a lavorare.
 
 \subsection{Settorizzazione}
-Consiste nella copertura di una parte del campo visivo dell' occhio sano con pellicole adesive traslucide sugli occhiali. \\
+Consiste nella copertura di una parte del campo visivo dell'occhio sano con pellicole adesive traslucide sugli occhiali. \\
 Per il trattamento dell'ambliopia sono stati proposti anche degli stimolatori visivi di tipo elettrico (trattamento CAM-Cambridge Stimulator e trattamento Flicker): vengono inviati stimoli luminosi di vario tipo sulla retina dell'occhio ambliope, forzandolo  a trasmettere l'impulso luminoso al cervello, e riattivando così i canali "impigriti" dall'ambliopia. L'efficacia di queste metodiche è ancora oggi molto dibattuta.  Recentemente si stanno utilizzando farmaci neuroprotettivi come sostegno alla terapia occlusiva: studi recenti indicano che in questo modo viene potenziato l'effetto della terapia occlusiva e viene più facilmente stabilizzato il miglioramento della funzione visiva.
 \newpage
 \section{L'idea di 3D4Amb}\label{idea_3D4Amb}
-3D4Amb ha ideato un sistema basato sulle tecnologie 3D per consentire la visione binoculare. L'uso classico di un sistema 3D è quello di fornire ai due occhi diverse immagini della stessa scena con angoli di visualizzazione leggermente sfalsati che corrispondono ai diversi punti di vista dell' occhio destro e sinistro. Questa visione produce un'illusione di profondità della scena ed è la base della realtà virtuale.\\                                                         
-Il principio primario del sistema è che all' occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
+3D4Amb ha ideato un sistema basato sulle tecnologie 3D per consentire la visione binoculare. L'uso classico di un sistema 3D è quello di fornire ai due occhi diverse immagini della stessa scena con angoli di visualizzazione leggermente sfalsati che corrispondono ai diversi punti di vista dell'occhio destro e sinistro. Questa visione produce un'illusione di profondità della scena ed è la base della realtà virtuale.\\                                                         
+Il principio primario del sistema è che all'occhio ambliope (o occhio pigro) e all'occhio normale sono mostrate due immagini differenti ma correlate. Questo principio può essere utilizzato nella pratica per il trattamento di ambliopia, andando a mostrare all'occhio ambliope la parte più interessante dei frame della clip o del gioco, mentre all'occhio non ambliope (o buono) viene mostrata la parte meno interessante.\\
 Il contenuto da mostrare al paziente (gioco o immagine) viene diviso da 3D4Amb in due parti, una per l'occhio destro (occhio ambliope, Figura ~\ref{idea 3D4Amb}) e una per l'occhio sinistro (occhio buono, Figura ~\ref{idea 3D4Amb}). Il software 3D4Amb deciderà cosa inviare ad entrambi gli occhi a seconda del tipo di trattamento suggerito dal medico. Si noti che l'occhio pigro del bambino è più stimolato a lavorare senza escludere l'occhio sano; in questo modo il paziente continua il processo di fusione tra l'occhio destro e sinistro.\\
 Il cervello del paziente ha il compito di unire le due immagini per visualizzare il frame completo con successo ed eseguire correttamente operazioni semplici in caso di gioco interattivo. Per assicurarsi che il paziente possa unire le due immagini sono presenti un numero significativo di elementi comuni ad entrambe le immagini. Notare che il frame finale è una rappresentazione bidimensionale in quanto l'obiettivo è quello di non stimolare la visione stereo del paziente (almeno inizialmente).\cite{tesiTZ}
 
@@ -226,14 +226,14 @@ In particolare si è deciso che il requisito minimo che deve possedere lo smartph
 \subsection{Perchè Android}La scelta di sviluppare l'applicazione per il sistema operativo Android, anzichè iOS, Windows Phone o altri SO\footnote{Sistemi Operativi}, nasce dalle delle seguenti riflessioni.\\
 Innanzitutto il sistema Android sta dilagando. Non è più solo questione di smartphone o tablet. Si sta imponendo come sistema operativo in grado di animare qualsiasi dispositivo più o meno mobile tanto da apparire, in prospettiva non troppo futuristica, una presenza sempre più costante nel nostro quotidiano. Gli è stata inoltre attribuita la più veloce diffusione mai vista per un sistema operativo mobile. Gran parte del merito è dovuto alla sua appartenenza al mondo open source. Il sistema operativo Android, infatti, deriva da Linux, ed ha attirato l'interesse di tanti sviluppatori  che per anni si sono stretti intorno ai grandi bacini del software libero. Accoglie inoltre in sé tutto il meglio di quanto è stato ideato per supportare lo sviluppo del web, desktop e mobile sia in termini di pattern progettuali che di librerie software. Per decretare un successo tanto ampio è necessario che ci sia anche un forte riscontro di pubblico. Sicuramente un qualcosa che ha contraddistinto questo sistema è stata la sua adozione da parte di dispositivi molto diversi tra loro, non solo per tipologia (smartphone piuttosto che tablet), ma soprattutto per fasce di prezzo, da poche decine di euro fino a  cifre piuttosto significative. 
 Ciò ne ha permesso una diffusione molto diverficata trasversalmente alle diverse categorie sociali, ma ha causato di riflesso una frammentazione notevole dello scenario applicativo costringendo gli sviluppatori ad una particolare cura degli aspetti di adattamento alle caratteristiche del dispositivo ospite. Proprio in questo, Android ha dimostrato la sua grande modernità offrendo tutto il supporto necessario per permettere all'applicazione in esecuzione di adeguarsi ad ogni circostanza.\\
-Parlando di numeri, Android domina fra gli smartphone con una quota di mercato dell' 84,7\%. E' il dato principale che emerge dall' analisi della società di ricerca \textit{Idc} sul mercato dei cellulari. Il sistema operativo mobile di Google, a differenza di quello di Apple, è presente su decine di modelli di cellulari di marche diverse e domina il mercato lasciando alla \virgolette{Mela} l'11,7\% di share \cite{percentualeSmartphone}.
+Parlando di numeri, Android domina fra gli smartphone con una quota di mercato dell'84,7\%. E' il dato principale che emerge dall'analisi della società di ricerca \textit{Idc} sul mercato dei cellulari. Il sistema operativo mobile di Google, a differenza di quello di Apple, è presente su decine di modelli di cellulari di marche diverse e domina il mercato lasciando alla \virgolette{Mela} l'11,7\% di share \cite{percentualeSmartphone}.
 \subsection{Perchè Android Studio}\label{android_studio}
 Dopo aver scelto per quale sistema operativo sviluppare, un'altra importante scelta è stata quella di identificare l'IDE più adatto alle nostre esigenze.
-Android Studio è un' alternativa giovane ma molto promettente rispetto ad Eclipse. Esso è sponsorizzato direttamente da Google e pensato appositamente per Android. Gli elementi di Android Studio che spiccano maggiormente sono:
+Android Studio è un'alternativa giovane ma molto promettente rispetto ad Eclipse. Esso è sponsorizzato direttamente da Google e pensato appositamente per Android. Gli elementi di Android Studio che spiccano maggiormente sono:
 \begin{itemize}
 	\item l'utilizzo di Gradle come strumento di build automation, atto quindi ad accompagnare lo sviluppatore nelle fasi di build, sviluppo, test e pubblicazione della propria app;
 	\item disponibilità di un gran numero di template per la realizzazione di applicazioni già in linea con i più comuni pattern progettuali;
-	\item editor grafico per la realizzazione di layout, molto pratico e dotato di un ottimo strumento di anteprima in grado di mostrare l'aspetto finale dell' interfaccia che si sta realizzando in una molteplicità di configurazioni (tablet e smartphone di vario tipo).
+	\item editor grafico per la realizzazione di layout, molto pratico e dotato di un ottimo strumento di anteprima in grado di mostrare l'aspetto finale dell'interfaccia che si sta realizzando in una molteplicità di configurazioni (tablet e smartphone di vario tipo).
 \end{itemize}
 
 \begin{figure}[ht]
@@ -253,7 +253,7 @@ Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. 
 \end{figure}
 
 Introdotto nel 2014 al \virgolette{Google I/O developers conference for Android device}, è formato da un cartone ripiegabile e due lenti, l'utente deve semplicemente inserire lo smartphone (Figura ~\ref{googlecardboard}). Questo sistema consente una visione stereoscopica, funziona con differenti smartphone e può essere facilmente usato dai bambini.\\
-Google cardboard non consente un' esperienza immersiva come Oculus rift, il quale necessita però di un PC collegato (ed è ancora in fase di sviluppo), ma è un modo facile ed economico per provare l'esperienza della realtà virtuale, inoltre la maggior parte delle applicazioni sono reperibili gratuitamente.
+Google cardboard non consente un'esperienza immersiva come Oculus rift, il quale necessita però di un PC collegato (ed è ancora in fase di sviluppo), ma è un modo facile ed economico per provare l'esperienza della realtà virtuale, inoltre la maggior parte delle applicazioni sono reperibili gratuitamente.
 \linebreak
 \textbf{Esistono rischi per la salute?}\\
 Ad oggi non esistono evidenze scientifiche certe e rilevanti a supporto della tesi secondo cui le tecnologie 3D siano responsabili (o corresponsabili) della patogenesi di disturbi e difetti a carico dell'apparato della vista.\\
@@ -274,7 +274,7 @@ Tuttavia, è importante notare che l'assenza di prove a sostegno della tesi non i
 Questo capitolo contiene la descrizione del principio di funzionamento del gioco per trattare l'ambliopia (\ref{principio}), la spiegazione degli obiettivi del gioco (\ref{il_gioco}), e una giuda all'utilizzo dell'applicazione (\ref{guida}).
 
 \section{Il principio del trattamento tramite il gioco}\label{principio}
-L' applicazione sviluppata in questo progetto di tesi, punta a sfruttare le potenzialità del Google Cardboard per correggere il disturbo dovuto all'ambliopia. Fino ad ora, il trattamento standard consolidato per la cura della malattia è stato l'occlusione visiva.
+L'applicazione sviluppata in questo progetto di tesi, punta a sfruttare le potenzialità del Google Cardboard per correggere il disturbo dovuto all'ambliopia. Fino ad ora, il trattamento standard consolidato per la cura della malattia è stato l'occlusione visiva.
 Questa tecnica può però presentare alcuni limiti: 
 \begin{itemize}
 	\item la compliance, adesione del paziente alla terapia, è un fattore limitante da non trascurare, soprattutto quando la profondità dell'ambliopia richiede tempi lunghi di trattamento;
@@ -282,7 +282,7 @@ Questa tecnica può però presentare alcuni limiti:
 \end{itemize}
 \noindent
 Probabilmente la tendenza alla perdita di effetto è dovuta, almeno in parte, al fatto che l'occlusione non affronta un altro importante aspetto della terapia dell'ambliopia, cioè la stimolazione diretta dell'occhio con il deficit visivo. Sulla base di questo, si è quindi pensato di realizzare un gioco interattivo che punti alla cura dell'occhio ampliope in modo più coinvolgente.
-Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo Android ed all'intrattenimento volontario ed intrinsecamente motivato dato dal gioco, è stato possibile creare un metodo di cura innovativo.
+Grazie quindi all'accessibilità dei Google Cardboard, all'evoluzione del mondo Android ed all'intrattenimento volontario ed intrinsecamente motivato dato dal gioco, è stato possibile creare un metodo di cura innovativo.
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\columnwidth]{immagini/child_cardboard}
@@ -292,7 +292,7 @@ Grazie quindi all'accessibilità dei Google Cardboard, all' evoluzione del mondo 
 \newpage
 \section{Il gioco}\label{il_gioco}
 \subsection{Obiettivo}
-L' applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono in direzione opposta alla nostra sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
+L'applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono in direzione opposta alla nostra sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
 
 \begin{figure}[ht]
 	\centering
@@ -405,7 +405,7 @@ Come accennato in precedenza, tale funzionalità, è accessibile solo dagli utenti
 %	Panoramica su software e hardware
 %----------------------------------------------------------------------------------------
 \chapter{Panoramica su software e hardware}\label{capitolo_panoramica}
-In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed una breve descrizione sulle scelte dell' hardware (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
+In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed una breve descrizione sulle scelte dell'hardware (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
 
 \section{Architettura di sistema}\label{architettura_di_sistema}
 Il sistema prevede le seguenti componenti:
@@ -446,7 +446,7 @@ Tutte le componenti lato client (Android), sono realizzate in java e xml, per in
 %\section{Requisiti funzionali e casi d'uso}
 %\subsection{Definizioni dei requisiti:}
 %\subsection{Analisi del contesto:}
-%\subsection{Scenari e casi d' uso:}
+%\subsection{Scenari e casi d'uso:}
 \subsection{Sign Up}
 \paragraph{Attori:} Utente
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
@@ -462,11 +462,11 @@ Tutte le componenti lato client (Android), sono realizzate in java e xml, per in
 	\item[1b.] l'applicazione risponde con un toggle che segnala che alcuni campi sono da compilare e non permette il Sign Up.
 \end{enumerate}
 \begin{enumerate}
-	\item[2a.] l' email inserita dall' utente non esiste;
+	\item[2a.] l'email inserita dall'utente non esiste;
 	\item[2b.] l'applicazione risponde tramite una warning, segnalando all'utente l'insesistenza dell'email inserita, non permettendo la registrazione.
 \end{enumerate}
 \begin{enumerate}
-	\item[3a.] l' email inserita dall' utente è già presente nel database;
+	\item[3a.] l'email inserita dall'utente è già presente nel database;
 	\item[3b.] l'applicazione risponde tramite una warning, segnalando all'utente che la mail non è valida, non permettendo la registrazione.
 \end{enumerate}
 \begin{enumerate}
@@ -505,7 +505,7 @@ I dati inseriti dall'utente sono validi e vengono registrati sul database MySql.
 \end{enumerate}
 \begin{enumerate}
 	\item[2a.] l'utente inserisce un email non presente nel database;
-	\item[2b.] l'applicazione risponde tramite una warning, segnalando all'utente la non presenza dell' email nel database MySql.
+	\item[2b.] l'applicazione risponde tramite una warning, segnalando all'utente la non presenza dell'email nel database MySql.
 \end{enumerate}
 \begin{enumerate}
 	\item[3a.] l'utente inserisce un email presente nel database ma con password scorretta;
@@ -540,7 +540,7 @@ Le credenziali di accesso inserite dall'utente sono valide ed il Log In viene es
 \end{enumerate}
 \begin{enumerate}
 	\item[2a.] l'utente inserisce una data di nascita non valida per il paziente;
-	\item[2b.] l'applicazione risponde tramite una warning, segnalando che la data non è valida e non permettendo l' avvio del gioco.
+	\item[2b.] l'applicazione risponde tramite una warning, segnalando che la data non è valida e non permettendo l'avvio del gioco.
 \end{enumerate}
 \paragraph{Postcondizioni:}
 Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene avviato.
@@ -559,9 +559,9 @@ Le credenziali del paziente inserite dal medico sono corrette ed il gioco viene 
 \paragraph{Precondizioni:} E' necessaria una connessione ad internet.
 \paragraph{Passi principali:}
 \begin{enumerate}
-	\item l'utente avvia l' applicazione;
+	\item l'utente avvia l'applicazione;
 	\item l'utente clicca sul link Update Your Info;
-	\item l'utente sceglie la credenziale di cui vuole fare l' update;
+	\item l'utente sceglie la credenziale di cui vuole fare l'update;
 	\item l'utente effettua il Log In utilizzando le credenziali precenti all'update;
 	\item l'utente inserisce il nuovo valore della credenziale da modificare e clicca Ok.
 \end{enumerate}
@@ -618,7 +618,7 @@ Entrando nel dettaglio della prima componete, l'applicazione Android, offre il s
 I componenti grafici di Android si dividono in due categorie: View e ViewGroup. Una View è un qualunque componente utilizzabile (TextView, EditView, CheckBox, Button, ImageView) in una interfaccia. Una ViewGroup è solitamente un layout che contiene un insieme di View, i più usati sono LinearLayout, RelativeLayout e TableLayout. Un ViewGroup è a sua volta una View, per questo possono essere creati layout complessi annidando a più livelli i vari componenti. View e ViewGroup sono un esempio di pattern composite.
 Le interfacce grafiche in Android possono essere definite in due modi (entrambe sfruttate in Car Racing Cardboard):
 \begin{itemize}
-\item definendo un file xml: ad ogni View corrisponde un tag xml, i ViewGroup sono tag xml che contengono all' interno altri tag;
+\item definendo un file xml: ad ogni View corrisponde un tag xml, i ViewGroup sono tag xml che contengono all'interno altri tag;
 \item scrivendo codice Java: ogni View ha una classe associata, è possibile aggiungere una View a un ViewGroup usando il metodo addView.
 \end{itemize}
 
@@ -663,14 +663,14 @@ L'implementazione del database su cui si appoggia il server per lo storage dei d
 \newpage
 \section{Sequence diagram}\label{sequence}
 \subsection{Funziononamento con log in}
-All'avvio dell'applicazione, se l'utente ha popolato correttamente i campi email e password, nell' interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
+All'avvio dell'applicazione, se l'utente ha popolato correttamente i campi email e password, nell'interfaccia corrente viene visualizzata una \virgolette{rotella} di attesa (dialog ring), mentre in background vengono scatenate una serie di chiamate:
 \begin{itemize}
 	\item alla classe PostCall vengono passate la stringa contentente l'email e quella contenente la password;
 	\item la classe PostCall effettua una chiamata post al server cs.unibg.it, più precisamente al servizio 3d4ambservice.php .
 \end{itemize}
 Il servizio php verifica nel database se l'email e la password sono corrette, e manda un messaggio di risposta alla PostCall, la quale effettua un parsing della risposta e restituisce un messaggio all'interfaccia corrente.\\
-A questo punto la dialog ring viene interrotta, e nello scenario di un' autenticazione corretta, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
-Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un' animazione d'avvio. Viene successivamente avviata la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
+A questo punto la dialog ring viene interrotta, e nello scenario di un'autenticazione corretta, viene lanciata l'activity TutorialActivity, nella quale è presente una breve spiegazione del gioco, gestita tramite un thread.\\
+Terminata la presentazione della TutorialActivity (che può anche essere saltata spuntando un'apposita checkbox) viene lanciata la SplashActivity, la quale contine un'animazione d'avvio. Viene successivamente avviata la SettingsActivity, nella quale viene chiesto qual è l'occhio pigro che si vuole trattare.\\
 Confermata la scelta dell'occhio, si apre la MainActivity contenente il gioco vero e proprio. I thread principali sono tre:
 \begin{enumerate}
 	\item GameThread: che gestisce i nemici e l'auto dell'utente;
@@ -704,11 +704,11 @@ Tutti i dati vengono inviati classe PostCall (con una chiamata analoga a quella 
 %----------------------------------------------------------------------------------------
 
 \chapter{Analisi degli Algoritmi}\label{capitolo_analisi_algoritmi}
-In questo capitolo vengono analizzati gli algoritmi che compongono l' applicazione. Gli algoritmi utilizzati sono: penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), generazione casuale della scena (\ref{generazione_random_scena}),cifratura delle password degli utenti (\ref{cifratura}), servizio web (\ref{servizio_web}), gestione degli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), thread principale del gioco (\ref{game_thread}), gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni per la gestione di una parte della grafica (\ref{asynctask}).
+In questo capitolo vengono analizzati gli algoritmi che compongono l'applicazione. Gli algoritmi utilizzati sono: penalizzazione progressiva delle immagini (\ref{penalizzazione_progressiva}), generazione casuale della scena (\ref{generazione_random_scena}),cifratura delle password degli utenti (\ref{cifratura}), servizio web (\ref{servizio_web}), gestione degli scontri con i nemici (\ref{gestione_dello_scontro_con_nemico}), thread principale del gioco (\ref{game_thread}), gestione delle animazioni (\ref{gestione_animazione}) ed i task asincroni per la gestione di una parte della grafica (\ref{asynctask}).
 
 \section{Penalizzazione progressiva delle immagini}\label{penalizzazione_progressiva}
 La penalizzazione progressiva delle immagini avviene modificando la trasparenza tramite il parametro alpha
-value che può assumere valori tra 0 e 255. Un' immagine con alpha=0 è trasparente, mentre con alpha=255 conserva tutte le sue caratteristiche. Nell'applicazione sviluppata la trasparenza dell'immagine viene aumentata all'aumentare del livello e rimane costante al valore 50 dopo l'ottavo livello. Dall'ottavo livello la difficoltà del gioco viene aumentata in termini di nemici e velocità d'azione. \\
+value che può assumere valori tra 0 e 255. Un'immagine con alpha=0 è trasparente, mentre con alpha=255 conserva tutte le sue caratteristiche. Nell'applicazione sviluppata la trasparenza dell'immagine viene aumentata all'aumentare del livello e rimane costante al valore 50 dopo l'ottavo livello. Dall'ottavo livello la difficoltà del gioco viene aumentata in termini di nemici e velocità d'azione. \\
 \begin{lstlisting}[language=Java]
 	 /**
 	 *
@@ -769,7 +769,7 @@ Inizialmente la corsia viene scelta con un'estrazione random, ma per evitare che
 \end{lstlisting}
 \newpage
 \subsection{Panorama}
-Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l' ambientazione del gioco.\\
+Analogamente ai nemici, anche il panorama viene modificato per rendere più avvincente l'ambientazione del gioco.\\
 
 \begin{lstlisting}[language=java]
 
@@ -792,7 +792,7 @@ public void randomPanorama() {
 \section{Cifratura password}\label{cifratura}
 
 Per garantire la privacy degli utenti le password vengono memorizzate nel database utilizzando l'algoritmo di cifratura sha256.\\
-Solitamente tale algoritmo viene utilizzato per generare un' \virgolette{impronta digitale} di un documento.\MakeUppercase{è} stato utilizzato in questa applicazione poichè in java viene fornito un metodo per la cifratura in sha256.\\
+Solitamente tale algoritmo viene utilizzato per generare un'\virgolette{impronta digitale} di un documento.\MakeUppercase{è} stato utilizzato in questa applicazione poichè in java viene fornito un metodo per la cifratura in sha256.\\
 In seguito è mostrato il codice implementato.\\ 
 \begin{lstlisting}[language=Java]
 	public static String calculateHash(String data) {
@@ -862,7 +862,7 @@ $type = $_POST['type'];
 
 \end{lstlisting}
 
-In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di sign up, log in,log in come dottore, report, reset della password o update dei dati personali, viene eseguito uno 'switch' per intraprendere diverse azioni in base alla procedura scelta.
+In seguito all'inizializzazione del parametro "type", che specifica se è stata richiesta una procedura di sign up, log in,log in come dottore, report, reset della password o update dei dati personali, viene eseguito uno "switch" per intraprendere diverse azioni in base alla procedura scelta.
 
 \newpage
 \subsection*{Log in}La chiamata Post per il log in avviene ogni volta che l'utente preme l'apposito pulsante (Figura \ref{login_post}):
@@ -874,7 +874,7 @@ In seguito all'inizializzazione del parametro "type", che specifica se è stata r
 \end{figure}
 
 Per effettuare il log in vengono inviate al server email e password, che prima di essere inviata viene cifrata (vedi sezione \ref{cifratura}).
-All' utente viene mostrata una finestra in attesa di una risposta dal server (Figura \ref{attesa}):
+All'utente viene mostrata una finestra in attesa di una risposta dal server (Figura \ref{attesa}):
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=45mm]{immagini/attesa}
@@ -1002,7 +1002,7 @@ break;
 
 \end{lstlisting}
 
-Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un' email di benvenuto. Durante questa fase si è utilizzata la funzione 'gmail(\$to, \$subject, \$message)' appartenente alla classe 'SMTP\_validateEmail', in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell' email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell' operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga a quella mostrata in figura \ref{provalist}
+Nella gestione della registrazione utente lato server vengono innanzitutto inizializzate le variabili contenenti i dati dell'utente catturati dalle textBox dell'applicazione. In seguito viene controllato che l'email inserita non sia già presente nel database. I controlli relativi all'inserimento di campi nulli o non validi vengono effettuati direttamente dall'applicazione a lato client. Se i valori inseriti dall'utente sono corretti e l'email non è già presente nel database si procede alla registrazione dell'utente nel database ed all'invio di un'email di benvenuto. Durante questa fase si è utilizzata la funzione "gmail(\$to, \$subject, \$message)" appartenente alla classe "SMTP\_validateEmail", in cui viene eseguito un controllo approfondito sull'esistenza e sulla validità dell'email inserita dall'utente. In caso di esito positivo o negativo, viene sempre restituita una stringa a lato client che specifica l'esito dell'operazione. Se la procedura viene eseguita con successo, l'utente riceve una mail di conferma analoga a quella mostrata in figura \ref{provalist}
 
 \begin{lstlisting}
 Hello dear **********@********, welcome to 3d4Amb!
@@ -1051,7 +1051,7 @@ L'utente può resettare la password premendo sul tasto \virgolette{forgot your pa
 	\label{reset_password}
 \end{figure}
 
-L' operazione di reset della password è gestita a livello server nel seguente modo:
+L'operazione di reset della password è gestita a livello server nel seguente modo:
 \\
 \begin{lstlisting}[language=php]
 	
@@ -1087,12 +1087,12 @@ L' operazione di reset della password è gestita a livello server nel seguente mo
 
 \end{lstlisting}
 
-Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell' identità dell'utente. Sulla base dell' email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti l'operazione di ripristino della password viene eseguita con successo e l' utente riceverà un' email contenente la nuova password.
+Come si può vedere, vengono dapprima catturati i valori relativi alla nuova password (cifrata e non), il valore dell'email ed il valore relativo al colore preferito, necessario per la verifica dell'identità dell'utente. Sulla base dell'email indicata viene poi eseguito un controllo tra il valore di colore inserito e quello indicato in fase di Sign Up. Se i due valori sono congruenti l'operazione di ripristino della password viene eseguita con successo e l'utente riceverà un'email contenente la nuova password.
 \newpage
 \subsection*{Doctor call}
-Nel caso in cui l' utente, effettua l'accesso come dottore, viene reindirizzato ad un' apposita pagina: DoctorActivity. Il dottore può inserire i dati dei pazienti, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
-L' utilizzo dell'applicazione da parte di un dottore prevede inoltre l' avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
-La gestione lato server dell' avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo:
+Nel caso in cui l'utente, effettua l'accesso come dottore, viene reindirizzato ad un'apposita pagina: DoctorActivity. Il dottore può inserire i dati dei pazienti, consentendogli così di gestirli tutti con il suo account su Car Racing Cardboard (vedi anche sezione \ref{guida}).\\
+L'utilizzo dell'applicazione da parte di un dottore prevede inoltre l'avvio del vero proprio gioco con l'identificativo univoco del paziente (id\_user), per il monitoraggio delle prestazioni ed il salvataggio dei dati in modo ordinato nel database.
+La gestione lato server dell'avvio di una partita da parte di un dottore, dopo aver inserito i dati del paziente, è stata realizzata nel seguente modo:
 \\
 \begin{lstlisting}[language=php]
 
@@ -1144,11 +1144,11 @@ case "doctorcall":
 
 \end{lstlisting}
 
-Prima di avviare una partita viene controllato se il paziente è già presente nel database, in tal caso verrà restituito come valore 'id\_user' il valore pescato dal database. In caso si tratti di un nuovo paziente, si procede all'inserimento dei nuovi dati nel database e viene creato un nuovo 'id\_user'.
+Prima di avviare una partita viene controllato se il paziente è già presente nel database, in tal caso verrà restituito come valore "id\_user" il valore pescato dal database. In caso si tratti di un nuovo paziente, si procede all'inserimento dei nuovi dati nel database e viene creato un nuovo "id\_user".
 \newpage
 \subsection*{Report}
 
-Il report generato al termine del gioco differenzia l' utilizzo del gioco da parte di un utente registrato e l' utilizzo del gioco senza registrazione. Nel caso in cui l' utente non sia registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso in cui l'utente è registrato, avviene in automatico il salvataggio e il monitoraggio dei risultati raggiunti (Figura \ref{Gameover}).
+Il report generato al termine del gioco differenzia l'utilizzo del gioco da parte di un utente registrato e l'utilizzo del gioco senza registrazione. Nel caso in cui l'utente non sia registrato, alla fine della partita viene semplicemente visualizzata una finestra contenente i dati relativi ai punteggi raggiunti. Nel caso in cui l'utente è registrato, avviene in automatico il salvataggio e il monitoraggio dei risultati raggiunti (Figura \ref{Gameover}).
 
 \begin{figure}[h]
 	\centering
@@ -1157,7 +1157,7 @@ Il report generato al termine del gioco differenzia l' utilizzo del gioco da par
 	\label{Gameover}
 \end{figure}
 
-A livello di codice, nel thread del gioco (vedi anche sezione \ref{game_thread}), viene lanciata una chiamata post, passando come parametri il punteggio ottenuto, il livello raggiunto e i dati dell' utente.\\
+A livello di codice, nel thread del gioco (vedi anche sezione \ref{game_thread}), viene lanciata una chiamata post, passando come parametri il punteggio ottenuto, il livello raggiunto e i dati dell'utente.\\
 \begin{lstlisting}[language=java]
 	 PostCall postCall= new PostCall(globalData.getScore().toString(),globalData.getLevel().toString(),id_user,t2,true);
 	 postCall.myPostCall(TypeCall.REPORT,activity);
@@ -1222,13 +1222,13 @@ break;
 
 \end{lstlisting}
 
-Come si può vedere, una volta finita la partita, i risultati ottenuti dall' utente vengono inseriti nella tabella 'results'. In seguito viene individuato lo storico dell' utente dal database e viene inviata una mail che notifica i risultati ottenuti fino all' ultima partita effettuata. L' obiettivo è quello di mantenere una cronologia che permetta all' utente di osservare progressivamente i miglioramenti ottenuti.
+Come si può vedere, una volta finita la partita, i risultati ottenuti dall'utente vengono inseriti nella tabella "results". In seguito viene individuato lo storico dell'utente dal database e viene inviata una mail che notifica i risultati ottenuti fino all'ultima partita effettuata. L'obiettivo è quello di mantenere una cronologia che permetta all'utente di osservare progressivamente i miglioramenti ottenuti.
 
 \newpage
 \section{Gestione dello scontro con il nemico}\label{gestione_dello_scontro_con_nemico}
 
-Nel momento in cui si verifica una collisione con un autoveicolo nemico, oltre al decremento del numero di vite a disposizione ed alla gestione di un eventuale Game Over, viene visualizzata a schermo un' esplosione animata nel punto di scontro. Questo effetto è stato progettato basandosi sulle potenzialità dei Thread e sfruttando le potenzialità della classe SurfaceView, messa a disposizione da Android.
-Essa fornisce una superficie di disegno pienamente controllabile che può essere utilizzata per effettuare delle sovrapposizioni grafiche con altre View. L' accesso alla superficie sottostante è fornito tramite l' interfaccia SurfaceHolder, la quale può essere richiamata usando il metodo getHolder(). Nella classe è necessario implementare i  metodi 'surfaceCreated(SurfaceHolder)' e 'surfaceDestroyed(surfaceHolder)' che agiscono quando la superficie viene creata e distrutta. Lo scopo principae della classe SurfaceView è quello di fornire una superficie dove un thread secondario possa renderizzare a schermo. Per questo obiettivo, vengono utilizzate delle Callback sull' oggetto SurfaceHolder che agiscono da filo conduttore tra thread principale e secondario. Di seguito è riportata la classe AnimationExplosionView, che rappresenta l' estensione della classe SurfaceView all'interno dell'applicazione sviluppata.\\
+Nel momento in cui si verifica una collisione con un autoveicolo nemico, oltre al decremento del numero di vite a disposizione ed alla gestione di un eventuale Game Over, viene visualizzata a schermo un'esplosione animata nel punto di scontro. Questo effetto è stato progettato basandosi sulle potenzialità dei Thread e sfruttando le potenzialità della classe SurfaceView, messa a disposizione da Android.
+Essa fornisce una superficie di disegno pienamente controllabile che può essere utilizzata per effettuare delle sovrapposizioni grafiche con altre View. L'accesso alla superficie sottostante è fornito tramite l'interfaccia SurfaceHolder, la quale può essere richiamata usando il metodo getHolder(). Nella classe è necessario implementare i  metodi "surfaceCreated(SurfaceHolder)" e "surfaceDestroyed(surfaceHolder)" che agiscono quando la superficie viene creata e distrutta. Lo scopo principae della classe SurfaceView è quello di fornire una superficie dove un thread secondario possa renderizzare a schermo. Per questo obiettivo, vengono utilizzate delle Callback sull'oggetto SurfaceHolder che agiscono da filo conduttore tra thread principale e secondario. Di seguito è riportata la classe AnimationExplosionView, che rappresenta l'estensione della classe SurfaceView all'interno dell'applicazione sviluppata.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1293,7 +1293,7 @@ public class AnimationExplosionView extends SurfaceView {
 
 \end{lstlisting}
 
-Come si può osservare dal codice, nella classe vengono utilizzati oggetti di tipo Bitmap. Questi oggetti sono molto utili per la rappresentazione di immagini in formato raster. Inoltre viene istanziato anche un oggetto GameLoopThread, il quale ha il compito di richiamare ad intervalli regolari il metodo onDrawAnimationExplosionView(Canvas canvas). Il principio dell' animazione dell' esplosione è dato dallo scorrimento di un vettore diviso in colonne aventi la medesima dimensione. Ogni colonna contiene 'l' evoluzione' dell' animazione e lo scorrimento veloce da parte del thread simula l'effetto dell'esplosione.
+Come si può osservare dal codice, nella classe vengono utilizzati oggetti di tipo Bitmap. Questi oggetti sono molto utili per la rappresentazione di immagini in formato raster. Inoltre viene istanziato anche un oggetto GameLoopThread, il quale ha il compito di richiamare ad intervalli regolari il metodo onDrawAnimationExplosionView(Canvas canvas). Il principio dell'animazione dell'esplosione è dato dallo scorrimento di un vettore diviso in colonne aventi la medesima dimensione. Ogni colonna contiene l'evoluzione dell'animazione e lo scorrimento veloce da parte del thread simula l'effetto dell'esplosione.
 \\
 
 \begin{figure}[h]
@@ -1305,7 +1305,7 @@ Come si può osservare dal codice, nella classe vengono utilizzati oggetti di tip
 
 \newpage
 
-In AnimationExplosionView viene inoltre istanziato l'oggetto spriteExplosion della classe Sprite. Il costruttore della classe Sprite accetta come parametri la SurfaceView , la Bitmap ed il numero di colonne in cui è divisa la bitmap da scorrere. Il metodo richiamato da GameLoopThread 'onDrawAnimationExplosionView(Canvas canvas)' chiama a sua volta il metodo 'onDrawExplosion(Canvas canvas)' sull'oggetto spriteExplosion. Tale metodo va effettivamente a disegnare a schermo la nostra animazione.\\
+In AnimationExplosionView viene inoltre istanziato l'oggetto spriteExplosion della classe Sprite. Il costruttore della classe Sprite accetta come parametri la SurfaceView , la Bitmap ed il numero di colonne in cui è divisa la bitmap da scorrere. Il metodo richiamato da GameLoopThread "onDrawAnimationExplosionView(Canvas canvas)" chiama a sua volta il metodo "onDrawExplosion(Canvas canvas)" sull'oggetto spriteExplosion. Tale metodo va effettivamente a disegnare a schermo la nostra animazione.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1325,7 +1325,7 @@ public void onDrawExplosion(Canvas canvas)
 
 \end{lstlisting}
 
-La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei singoli frame, nel punto specificato dai valori 'xExplosion' e 'yExplosion'. Il metodo updateExplosion() non fa altro che scorrere la nostra immagine sulla base del frame corrente e del numero di colonne specificato in fase di costruzione.\\
+La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei singoli frame, nel punto specificato dai valori "xExplosion" e "yExplosion". Il metodo updateExplosion() non fa altro che scorrere la nostra immagine sulla base del frame corrente e del numero di colonne specificato in fase di costruzione.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1340,7 +1340,7 @@ La bitmap viene disegnata all'interno di un rettangolo avente le dimensioni dei 
 \newpage
 \section{Game Thread}\label{game_thread}
 
-La parte principale dell'applicazione è stata sviluppata all'interno della classe GameThread. Essa estende la classe Thread ed effettua l' override di alcune funzioni, come ad esempio la funzione 'run()', che vedremo in seguito in dettaglio. Nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le immagini (di tipo imageView) relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i layout (di tipo relativeLayout) riguardanti l' occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l' enumerativo che identifica l'occhio scelto. Sono inoltre presenti l'activity da cui parte la chiamata a questo thread, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:\\
+La parte principale dell'applicazione è stata sviluppata all'interno della classe GameThread. Essa estende la classe Thread ed effettua l'override di alcune funzioni, come ad esempio la funzione "run()", che vedremo in seguito in dettaglio. Nel costruttore della classe GameThread vengono accettati ed in seguito istanziati tutti gli oggetti relativi alla composizione grafica del gioco, come ad esempio le immagini (di tipo imageView) relative agli autoveicoli, quelle relative al paesaggio, le textBox principali ed i layout (di tipo relativeLayout) riguardanti l'occhio destro e sinistro, con le relative dimensioni di larghezza ed altezza. Altro importante parametro accettato è l'enumerativo che identifica l'occhio scelto. Sono inoltre presenti l'activity da cui parte la chiamata a questo thread, l'id dell'utente ed il parametro della classe GlobalData, per tenere traccia dei parametri del gioco. Di seguito viene riportata la segnatura del costruttore precedentemente descritto:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1352,7 +1352,7 @@ int width, int height,String id_user) { ... }
 
 \end{lstlisting}
 
-La parte principale della classe GameThread è contenuta all' interno del metodo run(). Le principali azioni vengono lanciate all' interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell' interfaccia utente. Nel thread viene controllato il numero di vite attuale dell' utente. Se il valore delle vite rimaste è pari a '0', vengono eseguite le procedure relative alla fase di GameOver. Se l'utente è registrato viene mostrato il report a schermo e viene inviata la mail contenente lo storico ed i progressi dell'utente, altrimenti verrà visualizzato solo il report. Nel caso in cui il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale immettere il nuovo nemico scelta dall'algoritmo random precedentemente esplicato. Si esegue successivamente un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o nella parte centrale dello schermo. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:\\
+La parte principale della classe GameThread è contenuta all'interno del metodo run(). Le principali azioni vengono lanciate all'interno del metodo runOnUiThread(), il quale esegue le procedure specificate sul thread dell'interfaccia utente. Nel thread viene controllato il numero di vite attuale dell'utente. Se il valore delle vite rimaste è pari a "0", vengono eseguite le procedure relative alla fase di GameOver. Se l'utente è registrato viene mostrato il report a schermo e viene inviata la mail contenente lo storico ed i progressi dell'utente, altrimenti verrà visualizzato solo il report. Nel caso in cui il valore del numero di vite sia maggiore di 0, vengono mantenuti aggiornati i valori di score, level e numero di vite, e viene settata la corsia sul quale immettere il nuovo nemico scelta dall'algoritmo random precedentemente esplicato. Si esegue successivamente un controllo sulla corsia scelta per predisporre le animazioni a destra, a sinistra o nella parte centrale dello schermo. Se ad esempio il nemico viene posto sulla corsia centrale (pick = 2), le azioni intraprese sono le seguenti:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1389,7 +1389,7 @@ if (pick == 2) {
 
 \end{lstlisting}
 
-L' implementazione dell'animazione sull' oggetto animationEnemies verrà descritta più in dettaglio nella sezione \ref{gestione_animazione}. Il metodo onAnimationTimer() implementa i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, la soluzione adottata per far scomparire all'attimo esatto le macchine evitate è stata quella di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l' obiettivo di fare da 'target'. Le imageView che fanno da target hanno visibilità nulla. L' animazione di quest' ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l' esempio di tale implementazione adottato nella corsia centrale:\\
+L'implementazione dell'animazione sull'oggetto animationEnemies verrà descritta più in dettaglio nella sezione \ref{gestione_animazione}. Il metodo onAnimationTimer() implementa i listener contenenti i metodi onAnimationRepeat, onAnimationStart ed onAnimationEnd, necessari per la gestione dei vari eventi rispettivamente a inizio e fine animazione. Dato che non è possibile agire nel momento in cui le animazioni sono in corso, ma soltanto ad inizio o fine, la soluzione adottata per far scomparire all'attimo esatto le macchine evitate è stata quella di creare, oltre alle imageView degli autoveicoli, delle imageView coincidenti, con l'obiettivo di fare da "target". Le imageView che fanno da target hanno visibilità nulla. L'animazione di quest'ultime è rallentata rispetto alle imageView delle auto. In questo modo è possibile agire sulla visibilità delle auto durante gli eventi lanciati e catturati dai listener riferiti ai target. Di seguito si riporta l'esempio di tale implementazione adottato nella corsia centrale:\\
 
 \begin{lstlisting}[language=java]
 
@@ -1429,12 +1429,12 @@ public void onAnimationEnd(Animation animation)
 
 \end{lstlisting}
 
-Come si può vedere, si agisce sugli oggetti animationEnemies sfruttando l' evento onAnimationEnd(Animation animation) generato dal target. In particolare, oltre alla gestione della scomparsa dei veicoli si effettua un controllo sull' eventuale collisione con un auto nemica. Se lo scontro ha luogo, viene lanciata l' animazione dell'esplosione.
+Come si può vedere, si agisce sugli oggetti animationEnemies sfruttando l'evento onAnimationEnd(Animation animation) generato dal target. In particolare, oltre alla gestione della scomparsa dei veicoli si effettua un controllo sull'eventuale collisione con un auto nemica. Se lo scontro ha luogo, viene lanciata l'animazione dell'esplosione.
 
 \newpage
 \section{Gestione animazioni}\label{gestione_animazione}
-La gestione delle animazione relative alle auto nemiche ed al paesaggio, è stata realizzata estendendo la classe Animation messa a disposizione da Android. In seguito verrà presentato l' esempio relativo alle auto nemiche; per quanto rigurda il panorama, è stato applicato il medesimo principio.\\
-Per ogni corsia, è stato necessario creare un 'AnimationSet', ovvero un gruppo di animazioni riproducibile simultaneamente.\\
+La gestione delle animazione relative alle auto nemiche ed al paesaggio, è stata realizzata estendendo la classe Animation messa a disposizione da Android. In seguito verrà presentato l'esempio relativo alle auto nemiche; per quanto rigurda il panorama, è stato applicato il medesimo principio.\\
+Per ogni corsia, è stato necessario creare un "AnimationSet", ovvero un gruppo di animazioni riproducibile simultaneamente.\\
 
 \begin{lstlisting}[language=java]
 
@@ -1464,18 +1464,18 @@ public void animateFrontCarLane1(final ImageView ivLeft, final ImageView 	ivRigh
 
 \end{lstlisting}
 
-Come si può vedere dalla segnatura del medoto, vengono passati i due oggetti relativi alle imageView delle auto della corsia sinistra. In particolare 'ivLeft' si riferisce all' autoveicolo presente nel relativeLayout di sinistra, mentre 'ivRight' all' autoveicolo del relativeLayout destro. Per fare in modo che le animazioni avessero lo stesso comportamento su ogni dispositivo, si è deciso di applicare le trasalazioni e la scala operando sui valori di larghezza ed altezza del display. Per le traslazioni vengono specificati come parametri i punti di partenza relativi alle coordinate 'x' ed 'y' dell'oggetto ed in seguito i punti di arrivo. Per la scala viene specificata la grandezza iniziale dell' imageView ed in seguito è indicato il valore moltiplicativo di scala sull'asse verticale ed orizzontale. Le singole animazioni vengono poi aggiunte all' animationSet tramite il metodo 'addAnimation'. Viene inoltre impostata la durata delle animazioni ed infine vengono avviate utilizzando il metodo 'startAnimation'.
+Come si può vedere dalla segnatura del medoto, vengono passati i due oggetti relativi alle imageView delle auto della corsia sinistra. In particolare "ivLeft" si riferisce all'autoveicolo presente nel relativeLayout di sinistra, mentre "ivRight" all'autoveicolo del relativeLayout destro. Per fare in modo che le animazioni avessero lo stesso comportamento su ogni dispositivo, si è deciso di applicare le trasalazioni e la scala operando sui valori di larghezza ed altezza del display. Per le traslazioni vengono specificati come parametri i punti di partenza relativi alle coordinate "x" ed "y" dell'oggetto ed in seguito i punti di arrivo. Per la scala viene specificata la grandezza iniziale dell'imageView ed in seguito è indicato il valore moltiplicativo di scala sull'asse verticale ed orizzontale. Le singole animazioni vengono poi aggiunte all'animationSet tramite il metodo "addAnimation". Viene inoltre impostata la durata delle animazioni ed infine vengono avviate utilizzando il metodo "startAnimation".
 
 \newpage
 \section{Asynctask}\label{asynctask}
 Per ottimizzare l'utilizzo della memoria del device da parte dell'applicazione sono stati utilizzate i task asincroni (Asynctask) per la gestione di tutta la parte grafica dinamica.\\ 
-In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell' applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall' interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
+In molti framework di sviluppo con interfacce grafiche i task lunghi non devono essere eseguiti nel thread principale dell'applicazione. Infatti il thread principale è quello che si occupa di gestire gli eventi che arrivano dall'interfaccia (per esempio il click di un pulsante), se questo thread è già occupato a eseguire qualcos'altro l'effetto che si ottiene è quello di un ritardo di esecuzione (lag)\cite{asynktask}. 
 \paragraph{I quattro passi:} un Asynctask in android si divide in quattro \virgolette{step}
 \begin{enumerate}
 	\item onPreExecute(), invocato sul thread della UI\footnote{User Interface} prima che il task venga eseguito. Qui viene solitamento messo il setup del task;
 	\item doInBackground(Params...), invocato nel background del thread, subito dopo onPreExecute(). Questo step è usato per eseguire computazioni in background che possono durare molto tempo.
-	Il risultato della computazione deve essere tornato in questo step, e possono essere pubblicati grazie a publishProgress(Progress...). I valori sono passati all' UI thread nello step onProgressUpdate(Progress...);
-	\item onProgressUpdate(Progress...), invocato nell' UI thread dopo aver chiamato publicProgress(Progress...). Questo metodo è usato per mostrare ogni progresso nella UI mentre in backgrond la computazione è ancora in esecuzione;
+	Il risultato della computazione deve essere tornato in questo step, e possono essere pubblicati grazie a publishProgress(Progress...). I valori sono passati all'UI thread nello step onProgressUpdate(Progress...);
+	\item onProgressUpdate(Progress...), invocato nell'UI thread dopo aver chiamato publicProgress(Progress...). Questo metodo è usato per mostrare ogni progresso nella UI mentre in backgrond la computazione è ancora in esecuzione;
 	\item onPostExecute(Result), invocato dopo che la computazione in background è finita.\cite{aos}.
 \end{enumerate}
 In Car Racing Cardboard gli asynctask sono usati per gestire: il movimento del panorama, il sole e le nuvole sullo sfondo. Di seguito un esempio di utilizzo di asynctask, si tratta in questo caso del task asincrono che gestisce il sole.\\
@@ -1507,7 +1507,7 @@ Durante lo sviluppo dell'applicazione sono stati utilizzati i seguenti tool:
 GitHub è stato utilizzato come repository del lavoro svolto.\\
 GitHub è un servizio web di hosting per lo sviluppo di progetti software, che usa il sistema di controllo di versione Git. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili.\\
 GitHub offre diversi piani per repository privati sia a pagamento (utilizzato nel nostro caso, grazie all'account 3D4Amb), sia gratuiti, molto utilizzati per lo sviluppo di progetti open-source.\\
-Grazie alla versione Desktop di GitHub, la gestione del lavoro e l' interazione con il repository è resa ancora più semplificata. I comandi per l' aggiunta, la creazione e la clonazione di un repository sono  direttamente accessibili dall'applicazione (Figura \ref{Pannello dei comandi GitHub Desktop}):
+Grazie alla versione Desktop di GitHub, la gestione del lavoro e l'interazione con il repository è resa ancora più semplificata. I comandi per l'aggiunta, la creazione e la clonazione di un repository sono  direttamente accessibili dall'applicazione (Figura \ref{Pannello dei comandi GitHub Desktop}):
 \newpage
 \begin{figure}[h]
 	\centering
@@ -1525,11 +1525,11 @@ Inoltre è possibile gestire i vari progetti e documenti mantenendo uno storico d
 	\label{Storico GitHub Desktop}
 \end{figure}
 
-Tramite questo tool è quindi possibile creare un account, aggiungere un nuovo progetto ed inviare dati in pochi minuti. Se il progetto venisse inoltre reso open source, sarebbe possibile anche avere un' ampia comunità di sviluppatori che potrebbe osservare il progetto, biforcarlo ed dare un aiuto per migliorarlo.
+Tramite questo tool è quindi possibile creare un account, aggiungere un nuovo progetto ed inviare dati in pochi minuti. Se il progetto venisse inoltre reso open source, sarebbe possibile anche avere un'ampia comunità di sviluppatori che potrebbe osservare il progetto, biforcarlo ed dare un aiuto per migliorarlo.
 
 \newpage
 \section{Crashlitics}\label{crashlitics}
-Per tenere traccia di eventuali problemi all' interno dell'applicazione è stato utilizzato Crashlitics\footnote{https://try.crashlytics.com/}.\\
+Per tenere traccia di eventuali problemi all'interno dell'applicazione è stato utilizzato Crashlitics\footnote{https://try.crashlytics.com/}.\\
 Crashlitics è uno strumento per tenere traccia dei crash all'interno dell'applicazione, segnala in quale activity si è verificato il problema, genera statistihe di utilizzo degli utenti, e consente agli sviluppatori di gestire i bug (marcandoli come risolti o non risolti).\\
 Da quando l'applicazione è stata rilasciata (11 Maggio 2015 per la versione 1.1)
 Si sono verificati in totale 21 crash, molti dei quali(7) dovuti all'assenza di risposta da parte del server.\\
@@ -1599,9 +1599,9 @@ Il sito contiene informazioni sulla strumentazione necessaria per l'utilizzo del
 \chapter{Conclusioni}\label{capitolo_conclusioni}
 
 Lo scopo di questa applicazione è il trattamento dell'ambliopia. Non è necessario avere a disposizione un device costoso, al giorno d'oggi infatti, tutte le persone hanno uno smartphone e Google Cardboard è molto economico. Usando l'applicazione Car Racing Cardboard, le persone che soffrono di ambliopia possono migliorare divertendosi.\\
-Quest' idea di avere una penalizzazione proporzionata alle abilità del giocatore è stata applicata non solo alla quantità di informazioni fornite agli occhi, ma anche alla difficoltà vera e propria del gioco. Infatti, ogni volta che viene superato un livello, la velocità dei  nemici aumenta, in questo modo il gioco viene reso più dinamico, non resta identico fino al gameover, ed inoltre, in base alle prestazioni dell' utente, la difficoltà di gioco aumenta\cite{tesiTZ}.\\
-La tipologia di trattamento proposta da 3D4Amb, punta ad eliminare i rischi della terapia occlusiva, ma può anche essere usata in parallelo con quest' ultima\cite{rehab2015}.\\
-Il progetto Car Racing Cardboard fornisce continuità al lavoro di tesi triennale \virgolette{Progetto e sviluppo di un videogioco basato sulla penalizzazione per il trattamento dell'ambliopia}. Gli aspetti fondamentali del lavoro erano la penalizzazione dinamica delle informazioni visive fornite al giocatore per rendere il trattamento dell' ambliopia equilibrato con le sue capacità, infatti più l'utente si dimostra capace, più viene penalizzato.
+Quest'idea di avere una penalizzazione proporzionata alle abilità del giocatore è stata applicata non solo alla quantità di informazioni fornite agli occhi, ma anche alla difficoltà vera e propria del gioco. Infatti, ogni volta che viene superato un livello, la velocità dei  nemici aumenta, in questo modo il gioco viene reso più dinamico, non resta identico fino al gameover, ed inoltre, in base alle prestazioni dell'utente, la difficoltà di gioco aumenta\cite{tesiTZ}.\\
+La tipologia di trattamento proposta da 3D4Amb, punta ad eliminare i rischi della terapia occlusiva, ma può anche essere usata in parallelo con quest'ultima\cite{rehab2015}.\\
+Il progetto Car Racing Cardboard fornisce continuità al lavoro di tesi triennale \virgolette{Progetto e sviluppo di un videogioco basato sulla penalizzazione per il trattamento dell'ambliopia}. Gli aspetti fondamentali del lavoro erano la penalizzazione dinamica delle informazioni visive fornite al giocatore per rendere il trattamento dell'ambliopia equilibrato con le sue capacità, infatti più l'utente si dimostra capace, più viene penalizzato.
 
 \paragraph{Certificazione contenuti:}
 Le applicazioni pubblicate su Google Play Store sono soggette a certificazioni da parte di enti internazionali. L'applicazione sviluppata ha ottenuto le seguenti certificazioni:
@@ -1629,9 +1629,9 @@ Nell'ambito del progetto Car Racing Cardboard è stata realizzata una pubblicazio
 \begin{lstlisting}
 Dear Angelo Gargantini, 
 
-We have received the reviewers' reports on your paper 25 entitled 
+We have received the reviewers'reports on your paper 25 entitled 
 A Low-cost Virtual Reality Game for Amblyopia Rehabilitation and I am glad to inform you that your paper has been classified as Accepted. 
-For your guidance, reviewers' comments are appended below. I hope these comments 
+For your guidance, reviewers'comments are appended below. I hope these comments 
 can help you to improve the contribution. 
 
 Please note that the deadline for the camera ready is the next September 13th, 2015

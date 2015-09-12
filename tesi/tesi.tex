@@ -640,8 +640,9 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 \label{component_applicazione}
 \end{figure}
 
+\newpage
 \subsection{Il server}
-//TODO: Descrizione server -testo inserito per capire l'impaginazione - scrivere almeno 2 righe testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo  
+Per quanto riguarda il lato server, si è innanzitutto utilizzato il server messo a disposizione dall'università (cs.unibg). In questo modo si è avuto la possibilità di ottenere uno spazio online in  modo gratuito. Il funzionamento della parte server prevede la ricezione di informazioni dall'applicazione lato client ed il loro relativo processamento. I dati vengono ricevuti tramite delle chiamate httpPost. Una volta processati i dati, viene restituita all'applicazione una stringa che specifica l'esito dell'operazione. 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=100mm]{immagini/componentServerPNG}
@@ -649,8 +650,9 @@ Sulle Activity si appoggiano i thread, utilizzati per gestire l'esecuzione del g
 	\label{component server}
 \end{figure}
 
+\newpage
 \subsection{Database} 
-//TODO: Descrizione DB - testo inserito per capire l'impaginazione - scrivere almeno 2 righe testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo testo  
+L'implementazione del database su cui si appoggia il server per lo storage dei dati, è stata pensata in modo da avere le informazioni fondamentali dell'utente ed i dati relativi alle partite giocate. Sono state create a questo scopo le tabelle "users" e "results" all'interno del database "cardboard", strutturate nel seguente modo:
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{immagini/componentDatabasePNG}

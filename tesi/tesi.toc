@@ -67,32 +67,32 @@
 \contentsline {subsection}{\numberline {6.2.5}Database}{49}{subsection.6.2.5}
 \contentsline {section}{\numberline {6.3}Sequence diagram}{50}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Funziononamento con log in}{50}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Funziononamento senza log in}{52}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{52}{subsection.6.3.3}
-\contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{53}{chapter.7}
-\contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{53}{section.7.1}
-\contentsline {section}{\numberline {7.2}Generazione casuale della scena}{55}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Nemici}{55}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Panorama}{56}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Cifratura password}{57}{section.7.3}
-\contentsline {section}{\numberline {7.4}Servizio web}{58}{section.7.4}
-\contentsline {paragraph}{Chiamata post}{58}{section*.54}
-\contentsline {paragraph}{Gestione delle chiamate lato server:}{60}{section*.55}
-\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{80}{section.7.5}
-\contentsline {section}{\numberline {7.6}Game Thread}{85}{section.7.6}
-\contentsline {section}{\numberline {7.7}Gestione animazioni}{90}{section.7.7}
-\contentsline {section}{\numberline {7.8}Asynctask}{92}{section.7.8}
-\contentsline {paragraph}{I quattro passi:}{92}{section*.68}
-\contentsline {chapter}{\numberline {8}Tool utilizzati}{95}{chapter.8}
-\contentsline {section}{\numberline {8.1}GitHub}{95}{section.8.1}
-\contentsline {section}{\numberline {8.2}Crashlitics}{97}{section.8.2}
-\contentsline {part}{IV\hspace {1em}Valutazioni finali}{101}{part.4}
-\contentsline {chapter}{\numberline {9}Social media}{103}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{104}{section*.76}
-\contentsline {chapter}{\numberline {10}Conclusioni}{105}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{106}{section*.78}
-\contentsline {paragraph}{Statistiche:}{106}{section*.80}
-\contentsline {section}{\numberline {10.1}Pubblicazioni scientifiche}{107}{section.10.1}
-\contentsline {paragraph}{Di seguito viene riportato il contenuto del paper, redatto in collaborazione con il Professor Angelo Gargantini e la Dott.ssa Silvia Bonfanti:}{107}{section*.81}
-\contentsline {section}{\numberline {10.2}Sviluppi futuri}{112}{section.10.2}
-\contentsline {chapter}{Bibliografia}{115}{section.10.2}
+\contentsline {subsection}{\numberline {6.3.2}Funziononamento senza log in}{51}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Funziononamento sign up}{51}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Analisi degli Algoritmi}{55}{chapter.7}
+\contentsline {section}{\numberline {7.1}Penalizzazione progressiva delle immagini}{55}{section.7.1}
+\contentsline {section}{\numberline {7.2}Generazione casuale della scena}{57}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Nemici}{57}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Panorama}{58}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Cifratura password}{59}{section.7.3}
+\contentsline {section}{\numberline {7.4}Servizio web}{60}{section.7.4}
+\contentsline {paragraph}{Chiamata post}{60}{section*.54}
+\contentsline {paragraph}{Gestione delle chiamate lato server:}{62}{section*.55}
+\contentsline {section}{\numberline {7.5}Gestione dello scontro con il nemico}{82}{section.7.5}
+\contentsline {section}{\numberline {7.6}Game Thread}{87}{section.7.6}
+\contentsline {section}{\numberline {7.7}Gestione animazioni}{92}{section.7.7}
+\contentsline {section}{\numberline {7.8}Asynctask}{94}{section.7.8}
+\contentsline {paragraph}{I quattro passi:}{94}{section*.68}
+\contentsline {chapter}{\numberline {8}Tool utilizzati}{97}{chapter.8}
+\contentsline {section}{\numberline {8.1}GitHub}{97}{section.8.1}
+\contentsline {section}{\numberline {8.2}Crashlitics}{99}{section.8.2}
+\contentsline {part}{IV\hspace {1em}Valutazioni finali}{103}{part.4}
+\contentsline {chapter}{\numberline {9}Social media}{105}{chapter.9}
+\contentsline {paragraph}{Risultati promozione}{106}{section*.76}
+\contentsline {chapter}{\numberline {10}Conclusioni}{107}{chapter.10}
+\contentsline {paragraph}{Certificazione contenuti:}{108}{section*.78}
+\contentsline {paragraph}{Statistiche:}{108}{section*.80}
+\contentsline {section}{\numberline {10.1}Pubblicazioni scientifiche}{109}{section.10.1}
+\contentsline {paragraph}{Di seguito viene riportato il contenuto del paper, redatto in collaborazione con il Professor Angelo Gargantini e la Dott.ssa Silvia Bonfanti:}{109}{section*.81}
+\contentsline {section}{\numberline {10.2}Sviluppi futuri}{114}{section.10.2}
+\contentsline {chapter}{Bibliografia}{117}{section.10.2}

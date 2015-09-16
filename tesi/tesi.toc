@@ -82,17 +82,17 @@
 \contentsline {section}{\numberline {7.6}Game Thread}{87}{section.7.6}
 \contentsline {section}{\numberline {7.7}Gestione animazioni}{92}{section.7.7}
 \contentsline {section}{\numberline {7.8}Asynctask}{94}{section.7.8}
-\contentsline {paragraph}{I quattro passi:}{94}{section*.68}
+\contentsline {paragraph}{I quattro passi:}{94}{section*.66}
 \contentsline {chapter}{\numberline {8}Tool utilizzati}{97}{chapter.8}
 \contentsline {section}{\numberline {8.1}GitHub}{97}{section.8.1}
 \contentsline {section}{\numberline {8.2}Crashlitics}{99}{section.8.2}
 \contentsline {part}{IV\hspace {1em}Valutazioni finali}{103}{part.4}
 \contentsline {chapter}{\numberline {9}Social media}{105}{chapter.9}
-\contentsline {paragraph}{Risultati promozione}{106}{section*.76}
+\contentsline {paragraph}{Risultati promozione}{106}{section*.74}
 \contentsline {chapter}{\numberline {10}Conclusioni}{107}{chapter.10}
-\contentsline {paragraph}{Certificazione contenuti:}{108}{section*.78}
-\contentsline {paragraph}{Statistiche:}{108}{section*.80}
+\contentsline {paragraph}{Certificazione contenuti:}{108}{section*.76}
+\contentsline {paragraph}{Statistiche:}{108}{section*.78}
 \contentsline {section}{\numberline {10.1}Pubblicazioni scientifiche}{109}{section.10.1}
-\contentsline {paragraph}{Di seguito viene riportato il contenuto del paper, redatto in collaborazione con il Professor Angelo Gargantini e la Dott.ssa Silvia Bonfanti:}{109}{section*.81}
+\contentsline {paragraph}{Di seguito viene riportato il contenuto del paper, redatto in collaborazione con il Professor Angelo Gargantini e la Dott.ssa Silvia Bonfanti:}{109}{section*.79}
 \contentsline {section}{\numberline {10.2}Sviluppi futuri}{114}{section.10.2}
 \contentsline {chapter}{Bibliografia}{117}{section.10.2}

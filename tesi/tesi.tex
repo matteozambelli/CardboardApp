@@ -113,7 +113,7 @@
 \thispagestyle{empty}
 	\vspace{\fill}
 	\begin{flushright}
-		Ringraziamo il Professor Angelo Gargantini per i preziosi insegnamenti, la Dott.ssa Silvia Bonfanti per il supporto nella stesura di questo elaborato, inoltre vogliamo ringraziare le nostre famiglie per il sostegno ed il grande aiuto.\par\bigskip
+		Ringraziamo il Professor Angelo Gargantini per i preziosi insegnamenti, la Dott.ssa Silvia Bonfanti per il supporto nella stesura di questo elaborato e le nostre famiglie per il sostegno ed il grande aiuto.\par\bigskip
 		\textit{Fabio e Matteo}
 		
 	\end{flushright}
@@ -146,19 +146,19 @@
 diagnosi e il trattamento dell'ambliopia. Nell'ambito di questo progetto è stata sviluppata
 un'applicazione Android il cui scopo è quello di effettuare il trattamento della malattia.
 \section{Il progetto 3D4Amb}\label{3d4amb}
-Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Il progetto punta a sviluppare una tecnologia per consentire una facile diagnosi dell'ambliopia e il suo trattamento per mezzo di giochi interattivi e attività di intrattenimento. La soluzione proposta mira ad eliminare i problemi del trattamento classico dell'occlusione, è adatto ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
+Il progetto 3D4Amb sfrutta la tecnologia 3D active shutter per garantire una visione binoculare, cioè per mostrare immagini diverse all'occhio normale e all'occhio pigro. Il progetto punta a sviluppare una tecnologia per consentire una facile diagnosi dell'ambliopia e il suo trattamento, per mezzo di giochi interattivi e attività di intrattenimento. La soluzione proposta mira ad eliminare i problemi del trattamento classico dell'occlusione, è adatta ad un uso domestico, e potrebbe, almeno in parte, sostituire l'occlusione dell'occhio normale.\\                           
 L'obiettivo principale di questo progetto di ricerca, denominato 3D4Amb, è sviluppare un sistema per la diagnosi e il trattamento dell'ambliopia, basato sulla visione binoculare in modo accessibile. Con il termine accessibile si intende: poco costoso, user friendly, adatto per uso domestico e facilmente estendibile.\\
 Tutte le informazioni sul progetto sono reperibili sul sito: http://3d4amb.unibg.it/
-Car Racing Cardboard è un'applicazione per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente ed allo stesso tempo sottoporlo al trattamento per la cura della sua malattia.
+Car Racing Cardboard è un'applicazione per la piattaforma Android, il suo scopo è curare una patologia come l'ambliopia attraverso un gioco, in modo tale da far divertire il paziente e, allo stesso tempo, sottoporlo al trattamento per la cura della sua malattia.
 
 \section{Obiettivo}\label{obiettivo}
 Nell'ambito della tesi di laurea di primo livello è stato migliorato un videogioco desktop, chiamato Space Invaders\footnote{http://3d4amb.unibg.it/software/spaceinvaders.it.html}. \\
-Nel 2013 provare il tipo di trattamento proposta da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
+Nel 2013 provare il tipo di trattamento proposto da 3D4Amb avrebbe implicato l'acquisto di una scheda grafica 3D e di un monitor 3D.\\
 Oggi con Car Racing Cardboard, è sufficiente acquistare un visore 3D come Google Cardboard (reperibile a circa 10\$ online), utilizzare uno smartphone e l'applicazione proposta da 3D4Amb. Questo sistema è in grado di raccogliere un bacino d'utenza molto più ampio.\\
-L'obiettivo della tesi è l'applicazione Car Racing Cardboard, nel corso di questo documento verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
+L'obiettivo della tesi è l'applicazione Car Racing Cardboard. Nel corso di questo documento l'applicazione verrà analizzata a partire da un macro livello, focalizzandosi sull'idea che ha portato alla sua realizzazione, fino al livello di dettaglio implementativo degli algoritmi che la compongono.
 \newpage
 \section{Struttura del documento}\label{struttura_del_documento}
-Il documento è diviso in quattro parti. Nella prima parte viene descritto il progetto nel quale rientra questa applicazione (Capitolo \ref{capitolo_introduzione}), viene approfondita l'alterazione visiva della quale si occupa e le tipologie di trattamento (Capitolo \ref{capitolo_ambliopia}) e viene spiegata la tecnologia adottata per il trattamento (Capitolo \ref{capitolo_tecnologia}). \\
+Il documento è diviso in quattro parti. Nella prima parte viene descritto il progetto nel quale rientra questa applicazione (Capitolo \ref{capitolo_introduzione}), vengono approfondite l'alterazione visiva della quale si occupa e le tipologie di trattamento (Capitolo \ref{capitolo_ambliopia}), ed infine spiegata la tecnologia adottata per il trattamento (Capitolo \ref{capitolo_tecnologia}). \\
 Nella seconda parte di questo elaborato viene approfondito il principio di trattamento tramite il gioco e viene fatta una panoramica sull'applicazione (Capitolo \ref{capitolo_applicazione}).\\
 La terza parte è la più corposa, contiene una panoramica su software e hardware a livello di architettura di sistema, imlementazione software e casi d'uso (Capitolo \ref{capitolo_panoramica}), il design del software (Capitolo \ref{capitolo_software_design}), l'analisi di tutti gli algoritmi presenti nell'applicazione (Capitolo \ref{capitolo_analisi_algoritmi}) ed una descrizione dei tool utilizzati nello sviluppo e nell'analisi (Capitolo \ref{capitolo_tool}).\\
 La quarta ed ultima parte comprende una descrizione della promozione fatta per rendere nota al pubblico l'applicazione (Capitolo \ref{social_media}) e le conclusioni sul lavoro (Capitolo \ref{capitolo_conclusioni}).
@@ -244,7 +244,7 @@ Android Studio è un'alternativa giovane ma molto promettente rispetto ad Eclipse
 \end{figure}
 \newpage
 \section{Google cardboard} \label{sectionGC}
-Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. Creato da  David Coz e Damien Henry, due ingegneri della Google, nel Google Cultural Institute  a Parigi nel loro 20\%  \virgolette{Innovation Time Off} \cite{GCfb}
+Google cardboard è una piattaforma per la realtà virtuale sviluppata da Google. Creato da  David Coz e Damien Henry, due ingegneri della Google, nel Google Cultural Institute a Parigi nel loro 20\%  \virgolette{Innovation Time Off} \cite{GCfb}
 
 \begin{figure}[ht!]
 	\centering
@@ -292,7 +292,7 @@ Grazie quindi all'accessibilità dei Google Cardboard, all'evoluzione del mondo A
 \newpage
 \section{Il gioco}\label{il_gioco}
 \subsection{Obiettivo}
-L'applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono in direzione opposta alla nostra sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. Il livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
+L'applicazione Car Racing Cardboard consiste in un gioco il cui obiettivo è quello di ottenere il maggior punteggio possibile. L'utente ha la possibilità di manovrare un veicolo attraverso tre corsie. Il punteggio del gameplayer incrementa ogni volta che si evita un ostacolo, costituito dalle macchine che pervengono in direzione opposta alla nostra sulle tre corsie. Inizialmente la posizione del veicolo controllato dall'utente è nella corsia centrale, ma non appena inizia il gioco, si ha la possibilità di spostarsi a destra o a sinistra. Lo spostamento del veicolo viene gestito tramite un dispositivo bluetooth collegato allo smartphone o tramite degli auricolari aventi i pulsanti UP, DOWN e PLAY. Oltre al punteggio, esistono altre due variabili dipendenti dal comportamento dell'utente: una che conteggia le vite a disposizione ed una che indica il livello raggiunto. Inizialmente il gameplayer ha a disposizione un totale di tre vite, le quali decrementano nel momento in cui avviene una colluttazione con una macchina proveniente dal verso opposto. I livelli inoltre incrementano col passare del tempo. La difficoltà del gioco, caratterizzata dal numero e dalla velocità dei nemici, incrementa con l'aumentare dei livelli.
 
 \begin{figure}[ht]
 	\centering
@@ -311,7 +311,7 @@ Come si può vedere dall'immagine 5.2, l'applicazione viene realizzata renderizza
 	\label{fig:chooselazyeye_left}
 \end{figure}
 \noindent
-In questo modo l'applicazione tratta l'occhio pigro in modo da svilupparne la visione. In particolare l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare del punteggio e dei livelli raggiunti dall'utente. 
+In questo modo l'applicazione tratta l'occhio pigro in modo da svilupparne la visione. In particolare, l'applicazione andrà a penalizzare l'occhio sano riducendo l'opacità di alcuni elementi che caratterizzano la Viewport, come ad esempio i veicoli nemici o il paesaggio, in modo da stimolare e sforzare l'occhio pigro ad allenarsi. La penalizzazione avviene in modo dinamico ed è la chiave della cura. Essa aumenta con l'aumentare del punteggio e dei livelli raggiunti dall'utente. 
 
 \newpage
 \section{Guida all'utilizzo}\label{guida}
@@ -358,8 +358,8 @@ Nell'eventualità nella quale un utente dimentichi la sua password, dalla scherma
 \end{figure}
 
 Inserendo l'indirizzo email valido ed il colore corretto, il sistema invia una mail con la nuova password, che sarà possibile ri-personalizzare premendo su \virgolette{update your info} (Figura \ref{login_activity}).
-Sempre dalla schermata iniziale è possibile, premendo su \virgolette{?} aprire il sito dedicato a Car Racing Cardboard\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}(vedi anche sezione \ref{social_media}).
-Cliccando su \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questa possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(Figura \ref{cwu}).\\
+Sempre dalla schermata iniziale è possibile, premendo \virgolette{?} aprire il sito dedicato a Car Racing Cardboard\footnote{http://3d4amb.unibg.it/3dcar/cardboard\%20site/}(vedi anche sezione \ref{social_media}).
+Cliccando \virgolette{collaborate with us} è possibile inviare una mail allo staff di 3D4Amb, questa possibilità è stata pensata per collaborazioni con medici e/o centri di ipovisione, interessati a collaborazioni(Figura \ref{cwu}).\\
 
 \begin{figure}[ht]
 	\centering
@@ -382,11 +382,11 @@ In questo caso il dottore inserisce i dati del paziente (nome, cognome e data di
 un utente può anche accedere al gioco senza registrarsi sul nostro sistema, cliccando su \virgolette{PLAY WITHOUT REGISTRATION}, in questo caso però non godrà degli stessi servizi di un utente registrato, questa possibilità è stata pensata per chi volesse provare l'applicazione senza dover fornire i propri dati.
 
 
-\paragraph{Avvio del gioco:}dopo aver effettuato il log in o aver avviato l'applicazione con l'opzione senza registrazione, nel caso di un primo avvio viene visualizzato un video-tutorial per l'utilizzo del gioco, nel quale vengono descritti i comandi per utilizzare lo stesso, è possibile saltare questo video spuntando la checkbox in basso \virgolette{don't show me again}.\\
-A questo punto bisogna inserire lo smarthphone nel visore 3D, ed inserire nel sistema l'occhio al quale si desidera somministrare il trattamento (Figura \ref{fig:chooselazyeye_left}), e premere conferma.\\
+\paragraph{Avvio del gioco:}dopo aver effettuato il log in o aver avviato l'applicazione con l'opzione senza registrazione, nel caso di un primo avvio viene visualizzato un video-tutorial per l'utilizzo del gioco, nel quale vengono descritti i comandi per utilizzare lo stesso. E' possibile saltare questo video spuntando la checkbox in basso \virgolette{don't show me again}.\\
+A questo punto bisogna inserire lo smarthphone nel visore 3D, ed inserire nel sistema l'occhio al quale si desidera somministrare il trattamento (Figura \ref{fig:chooselazyeye_left}), infine premere conferma.\\
 Il gioco vero e proprio ha inizio ora, l'utente può muovere la sua auto a sinistra premendo il tasto \virgolette{+} del controller e a destra premendo il tasto \virgolette{-} (Figura \ref{fig:game}).\\
 La difficoltà aumenta dinamicamente, per rendere via via più stimolante il trattamento. Per ogni sessione di gioco un utente ha tre vite, dopo di che, una volta arrivati al \virgolette{game over}, l'applicazione chiede se si desidera ricevere via mail lo storico con i risultati (Figura \ref{schermata_finale}).\\
-Come accennato in precedenza, tale funzionalità, è accessibile solo dagli utenti registrati, un utente non registratio visualizzarà, una volta terminata la sua partita, la stessa schermata in Figura \ref{schermata_finale}, con solamente l'opzione di riavvio del gioco.
+Come accennato in precedenza, tale funzionalità è accessibile solo dagli utenti registrati. Un utente non registratio visualizzarà, una volta terminata la sua partita, la stessa schermata in Figura \ref{schermata_finale}, con solamente l'opzione di riavvio del gioco.
 
 
 \begin{figure}[!h]
@@ -405,7 +405,7 @@ Come accennato in precedenza, tale funzionalità, è accessibile solo dagli utenti
 %	Panoramica su software e hardware
 %----------------------------------------------------------------------------------------
 \chapter{Panoramica su software e hardware}\label{capitolo_panoramica}
-In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed una breve descrizione sulle scelte dell'hardware (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}) infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
+In questo capitolo troviamo l'architettura di sistema con relativo diagramma ed una breve descrizione sulle scelte dell'hardware (\ref{architettura_di_sistema}), una panoramica sul software sotto forma di vista di implementazione (\ref{vista_di_implementazione_software}), ed infine una serie di scenari e casi d'uso (\ref{scenari_e_casi_d_uso}).
 
 \section{Architettura di sistema}\label{architettura_di_sistema}
 Il sistema prevede le seguenti componenti:
@@ -415,8 +415,8 @@ Il sistema prevede le seguenti componenti:
 	\item auricolari con tasti di controllo del volume;
 	\item server Linux con database MySql.
 \end{itemize}
-Lo smartphone (con S.O. Android) deve essere inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi visore 3D per smartphone il risultato sarà lo stesso.\\
-Al dispositivo vanno collegati gli auricolari con il controllo del volume, saranno necessari  per controllare il movimento della macchinina.
+Lo smartphone (con S.O. Android) deve essere inserito nel visore, ad esempio Google Cardboard, ma qualora si disponesse di un qualsiasi altro visore 3D per smartphone il risultato sarà lo stesso.\\
+Al dispositivo vanno collegati gli auricolari con il controllo del volume, al fine di poter controllare il movimento della macchinina.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=160mm]{immagini/architettura_di_sistema}
@@ -425,15 +425,15 @@ Al dispositivo vanno collegati gli auricolari con il controllo del volume, saran
 \end{figure}
 
 
-\paragraph{La scelta degli auricolari come controller}è nata dopo aver notato che l'utilizzo dell'accelerometro (sensore presente su ogni smartphone) come strumento per catturare i comandi dell'utente, causasse disturbi alla persona dopo pochi minuti di gioco.\\
-Dopo di che si è dovuto scegliere il tipo doi controllore, dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto) per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
+\paragraph{La scelta degli auricolari come controller}è nata dopo aver notato che l'utilizzo dell'accelerometro (sensore presente su ogni smartphone), come strumento per catturare i comandi dell'utente, provoca disturbi alla persona dopo pochi minuti di gioco.\\
+Dopo di che, si è dovuto scegliere il tipo di controllore. Dato che i movimenti da controllare erano solo due (sposta a destra e a sinistra l'auto), per essere coerenti con la scelta di un sistema \textbf{low cost}, la scelta non è ricaduta su un joy-pad, ma sugli auricolari dotati del controllo volume, presenti nella confezione degli smartphone o acquistabili a pochi euro.
 
-\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti; è quindi necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server utilizzato è cs.unibg.it, una macchina Linux che utilizza un database MySql, è installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
+\paragraph{Il server}è utilizzato per salvare lo storico dei risultati di tutti gli utenti che ne hanno espresso il desiderio, in questo modo è possibile tenere traccia dei loro miglioramenti. E' necessario che lo smartphone sia connesso ad internet per poter trasmettere i risultati. Il server utilizzato è cs.unibg.it, una macchina Linux che utilizza un database MySql, installato presso il dipartimento di ingegneria dell'Università degli Studi di Bergamo\footnote{http://www.unibg.it/} a Dalmine(Bg). 
 
 \newpage
 \section{Vista di implementazione software}\label{vista_di_implementazione_software}
 Questo grafico mostra dove sono installate le varie componenti software, in che linguaggio sono scritte e come interagiscono tra di loro (Figura \ref{vista_implementazione_software}).\\
-Tutte le componenti lato client (Android), sono realizzate in java e xml, per interagire con il servizio web, passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire: la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password, la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php viene anche gestito l'invio delle email contenenti: il riepilogo dei dati di gioco, le notifiche di conferma registrazione il cambiamento dei dati o la modifica della password.
+Tutte le componenti lato client (Android), sono realizzate in java e xml. Per interagire con il servizio web passano attraverso una classe che gestisce le chiamate post, rappresentata nel grafico come Post Call Manager. Questa classe lancia una serie di chiamate post, grazie alle quali è possibile gestire la verifica dei dati per il log in, l'inserimento di un nuovo utente tramite il processo di sign up, la modifica dei dati dell'utente e della propria password, e la gestione dei dati di gioco. Tutte queste informazioni vengono memorizzate nel database MySql presente sul server cs.unibg.it. Tramite il servizio web, interamente realizzato in php, viene anche gestito l'invio delle email contenenti il riepilogo dei dati di gioco, le notifiche di conferma registrazione, il cambiamento dei dati o la modifica della password.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=160mm]{immagini/vista_implementazione_software}

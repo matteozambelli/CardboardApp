@@ -29,7 +29,7 @@
 \contentsline {part}{III\hspace {1em}Implementazione}{31}{part.3}
 \contentsline {chapter}{\numberline {5}Panoramica su software e hardware}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Architettura di sistema}{33}{section.5.1}
-\contentsline {paragraph}{La scelta degli auricolari come controller}{33}{section*.19}
+\contentsline {paragraph}{La scelta degli auricolari come controller}{34}{section*.19}
 \contentsline {paragraph}{Il server}{34}{section*.20}
 \contentsline {section}{\numberline {5.2}Vista di implementazione software}{35}{section.5.2}
 \contentsline {section}{\numberline {5.3}Scenari e casi d'uso}{36}{section.5.3}
